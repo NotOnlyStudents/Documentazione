@@ -1,0 +1,51 @@
+\section{Capitolato C1}
+\subsection{Titolo del capitolato}
+Il capitolato in questione si chiama \textit{"BlockCOVID: supporto digitale al contrasto della pandemia"}, il proponente \`e l'azienda \textit{Imola informatica} e i committenti sono \VT{} e \CR{}.
+
+\subsection{Descrizione del capitolo}
+Il capitolato ha come obiettivo finale la realizzazione di un'applicazione in grado di tracciare in modo immutabile e certificato le presenze in tempo reale alle postazioni di lavoro di una stanza e lo stato di pulizia delle stesse. 
+L'applicazione deve essere in grado di inviare le opportune informazioni ad un server dedicato il quale permetterà di gestire più stanze e postazioni per:
+\begin{itemize}
+\item sapere in ogni momento se la postazione \'e occupata, prenotata oppure da pulire;
+\item controllare quali postazioni sono prenotate (da chi) e bloccare le prenotazioni per una determinata stanza;
+\item prevedere una tracciatura autenticata e tutti i cambiamenti di stato relativi alla pulizia della postazione, nonch\'e le informazioni su chi ha igienizzato la postazione, devono essere salvate su memoria immutabile e certificata;
+\item deve essere possibile prenotare una postazione con granularit\'a di 1 ora.
+\end{itemize}
+
+\subsection{Prerequisiti e tecnologie coinvolte}
+L'azienda consiglia di utilizzare:
+
+\begin{itemize}
+\item \glo{Java} (versione 8 o superiori), \glo{Python} o \glo{nodejs} per lo sviluppo del server back-end;
+\item protocolli asincroni per le comunicazioni app mobile-server;
+\item sistema blockchain per salvare con opponibilita\'a a terzi i dati di sanificazione;
+\item \glo{IAAS Kubernetes} o di un \glo{PAAS}, \glo{Openshift} o \glo{Rancher}, per il rilascio delle componenti del server e la gestione della scalabilit\'a orizzontale.
+\end{itemize}
+
+\subsection{Vincoli}
+Per raggiungere gli obiettivi minimi del progetto viene richiesto di:
+
+\begin{itemize}
+\item avere il server che esponga, in aggiunta a eventuali altri protocolli per l’interazione con il servizio specifico, delle \glo{API Rest} attraverso le quali sia possibile utilizzare l'applicativo. In alternativa \'e possibile utilizzare \glo{gRPC} come soluzione alternativa al Rest;
+\item scansione dei codici nel tempo sufficiente a certificare la presenza della persona in postazione. 
+\item avere le componenti applicative correlate da test unitari e d’integrazione. Inoltre, \'e richiesto che il sistema venga testato nella sua interezza tramite test end-to-end.
+\end{itemize}
+
+\subsection{Aspetti positivi}
+\begin{itemize} 
+\item Componenti del gruppo che esprimono Preferenza per questo capitolato: 4/7.
+\item Componenti del gruppo che hanno già sviluppato un API Rest: 3/7.
+\item Componenti del gruppo che hanno già sviluppato in Java: 5/7. 
+\item Componenti del gruppo che hanno già sviluppato in Python: 2/7.
+\item Componenti del gruppo che hanno già sviluppato in nodejs: 2/7.
+\item Componenti del gruppo che hanno già sviluppato almeno un'app Android: 2/7.
+\end{itemize}
+
+\subsection{Aspetti critici}
+\begin{itemize}
+\item E` richiesto il doppio dello sviluppo per l'applicazione mobile visto che ne serve una versione per IOS e una per Android.
+\item Componenti del gruppo che hanno già utilizzato \glo{IAAS Kubernetes} o di un \glo{PAAS}, \glo{Openshift} o \glo{Rancher}: 0/7.
+\item Componenti del gruppo che hanno già sviluppato almeno un'app IOS: 0/7.
+\end{itemize}
+
+\subsection{Conclusioni}
