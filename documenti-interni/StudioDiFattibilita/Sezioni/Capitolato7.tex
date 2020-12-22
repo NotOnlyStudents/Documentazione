@@ -1,0 +1,57 @@
+%\section{Capitolato C7 - SSD:soluzioni di sincronizzazione desktop}
+
+  \subsection{Informazioni generali}
+  \begin{description}
+    \item[Nome] \textit{SSD: soluzioni di sincronizzazione desktop}
+    \item[Proponente] \textit{Zextras}
+    \item[Committente] \VT{}, \CR{}
+  \end{description}
+
+  \subsection{Descrizione del capitolato}
+Il proponente chiede la realizzazione di un algoritmo di sincronizzazione desktop e di un front end. L'interfaccia sviluppata deve essere multipiattaforma e permettere all'utente di accedere in qualsiasi momento ai propri contenuti creati, modificati o che visiona. Il prodotto finale deve essere sviluppato aderendo al pattern Model-view-controller.
+
+  \subsection{Finalità del progetto}
+Il capitolato chiede di soddisfare i seguenti obiettivi:
+  \begin{itemize}
+    \item  sviluppo di un algoritmo solido ed efficiente:  deve essere in grado di garantire il salvataggio in cloud del lavoro e contemporaneamente la sincronizzazione dei cambiamenti presenti in cloud;
+    \item sviluppo di un’interfaccia multipiattaforma: deve fornire l'interfaccia per interagire con le funzionalità offerte dall'algoritmo di sincronizzazione. Inoltre, deve essere utilizzabile sui tre sistemi operativi maggiormente diffusi, ovvero Linux, MacOS, Windows;
+la soluzione sviluppata non deve necessitare dell'installazione, da parte dell'utente, di framework di terze parti per il proprio funzionamento;
+    \item integrazione con Zextras Drive: L'algoritmo di sincronizzazione e l'interfaccia devono essere integrati con il servizio di gestione file Zextras Drive.
+  \end{itemize}
+Altre funzionalità che dovrebbero essere raggiunte sono:
+\begin{itemize}
+\item configurazione e autenticazione dell'utente;
+\item gestione dei file da sincronizzare o ignorare sia dal lato cloud che dal lato desktop e la possibilità di modificare in ogni momento la configurazione;
+\item sincronizzazione costante dei cambiamenti, sia locali che remoti;
+\item sistema di notifica dei cambiamenti;
+\item funzionalità presenti in altre soluzioni attualmente disponibili:
+    \begin{itemize}
+    \item gestione delle condivisioni;
+    \item integrazione con il prodotto web.
+    \end{itemize}
+\end{itemize}
+
+  \subsection{Tecnologie coinvolte}
+ Le seguenti tecnologie possono essere impiegate nello sviluppo del progetto
+\begin{itemize}
+    \item Framework Qt: framework consigliato per lo sviluppo dell'interfaccia grafica basato su C++;
+    \item Python: linguaggio consigliato per lo sviluppo della Business Logic. Supportato dalla maggior parte dei framework per lo sviluppo di interfacce desktop. Semplifica il processo di integrazione con le API di Zextras Drive;
+    \item Zimbra: sistema collaborativo per la gestione della posta elettronica;
+    \item Zextras Drive: sistema di archiviazione e collaborazione in cloud che mette a disposizione le funzionalità di versionamento, di gestione degli accessi, della condivisione dei file e della modifica collaborativa di file. Il servizio espone inoltre delle API sviluppate utilizzando il framework GraphQL;
+%    \item GraphQL: linguaggio di query per API utilizzato dalle API di Zextras Drive;
+%    \item Apollo per GraphQL: implementazione di GraphQL utilizzata dalle API di Zextras Drive.
+\end{itemize}
+
+\subsection{Aspetti positivi}
+\begin{itemize}
+\item Lo scopo del progetto è interessante visto il diffondersi sempre maggiore di tecnologie per la collaborazione a distanza;
+\item Il team ha già familiarità con il framework Qt ed il linguaggio Python.
+\end{itemize}
+
+\subsection{Criticità e fattori di rischio}
+\begin{itemize}
+\item Mancanza di documentazione dettagliata sulle API del prodotto Zextras Drive.
+\end{itemize}
+
+  \subsection{Conclusioni}
+  Dopo aver valutato il capitolato attentamente, il progetto ha entusiasmato l'intero gruppo, tuttavia non tale da considerarlo come prima scelta.

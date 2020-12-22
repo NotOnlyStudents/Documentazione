@@ -1,37 +1,83 @@
-\section{Capitolato C2}
-\subsection{Titolo del capitolato}
-Il capitolato in questione si chiama \textit{"EmporioLambda: piattaforma di e-commerce in stile Serverless"}, il proponente \`e l'azienda \textit{RedBabel} e i committenti sono \VT{} e \CR{}.
+\section{Valutazione del capitolato scelto: C2 - Emporio$\lambda$ambda}
+\subsection{Informazioni sul capitolato}
+\begin{itemize}
+	\item \textbf{Nome:} \textit{Emporio$\lambda$ambda}
+	\item \textbf{Proponente:} \textit{RedBabel}
+	\item \textbf{Committenti:} \textit{\VT{} e \CR{}}
+\end{itemize}
 
-\subsection{Descrizione del capitolo}
-Il capitolato ha come obiettivo finale la realizzazione di una generica piattaforma e-commerce 
+\subsection{Descrizione del capitolato}
+Il capitolato richiede lo sviluppo di una piattaforma di e-commerce generico.
 
-\subsection{Prerequisiti e tecnologie coinvolte}
-La piattaforma dovr\'a essere sviluppata utilizzando la tecnologia \glo{AWS}.
-Per il Back-end e il Front-end viene richiesto l'uso di \glo{Next.js}.
+\subsection{Scopo del capitolato}
+Lo scopo del capitolato consiste nello sviluppo di una piattaforma e-commerce con architettura basata su micro-servizi e serverless.
+La piattaforma consisterà in un sito web che dovrà essere composto dalle seguenti parti:
+\begin{itemize}
+	\item home page;
+	\item pagine di elenco dei prodotti;
+	\item pagine di descrizione del prodotto;
+	\item carrello della spesa;
+	\item pagina di checkout;
+	\item pagina di account.
+\end{itemize}
+
+Dovrà essere in grado di supportare i seguenti ruoli:
+\begin{itemize}
+	\item \textbf{Amministratore}, l'utente con questo ruolo può:
+		\begin{itemize}
+			\item distribuire l'applicazione nel cloud;
+			\item gestire la configurazione delle integrazioni di terze parti.
+		\end{itemize}
+	\item \textbf{Commerciante}, l'utente con questo ruolo può:
+		\begin{itemize}
+			\item avere una panoramica di tutti gli ordini;
+			\item gestire totalmente i vari prodotti da vendere.
+		\end{itemize}
+	\item \textbf{Cliente}, l'utente con questo ruolo può:
+	\begin{itemize}
+		\item cercare, filtrare e aggiungere al carrello come ospite o utente;
+		\item se connesso può aggiornare le informazioni del suo profilo;
+		\item eliminare l'account creato;
+		\item procedere con il pagamento dei prodotti selezionati solo se ha fatto il login.
+	\end{itemize}
+\end{itemize}
+
+\subsection{Tecnologie coinvolte}
+L'azienda consiglia di utilizzare:
+\begin{itemize}
+	\item typescript con approccio async-await, come linguaggio principale sia per il Front-end e sia per il Back-end;
+	\item typescript-eslint per l'analisi statica del codice;
+	\item AWS Lambda come tecnologia serverless con typescript;
+	\item Amazon CloudWatch come servizio di monitoraggio, anche se non è obbligatorio;
+	\item stripe come fornitore del servizio di pagamento, anche se non è obbligatorio.
+\end{itemize}
 
 \subsection{Vincoli}
 Il progetto deve operare in 3 ambienti: Locale, Test e Staging.
 L'ambiente di Staging deve essere accessibile pubblicamente.
 
 Per raggiungere gli obiettivi minimi del progetto viene richiesto che:
-
 \begin{itemize}
-\item il Front-end sia implementato in Next.js;
-\item il Back-end sia implementato in Serverless usando Typescript;
-\item \glo{EML-I} sia implementato in Serveless usando Typescript;
-\item \glo{EML-MON} sia implementato usando Amazon CloudWatch.
+	\item il front-end sia implementato in Next.js;
+	\item il back-end sia implementato in Serverless usando Typescript;
+	\item l'integrazione di servizi di terze parti deve essere implementata con tecnologia Serveless usando Typescript;
+	\item ci sia l'integrazione con un fornitore di servizi di pagamento.
 \end{itemize}
 
 \subsection{Aspetti positivi}
 \begin{itemize}
-\item Componenti del gruppo che esprimono Preferenza per questo capitolato: 5/7.
-\item Componenti del gruppo che hanno già sviluppato usando JavaScript: 3/7.
+	\item 3 componenti del gruppo hanno già sviluppato e conoscono javascript.
+	\item Le tecnologie proposte stimolano i componenti del gruppo ad imparare ed a lavorare con esse.
+	\item Le tecnologie proposte stanno sempre di più prendendo spazio nell'ambito del lavoro, specialmente lo sviluppo serverless e lo sviluppo WEB con typescript.
+	\item L'uso di un'architettura a micro-servizi e serverless favorisce la parallelizzazione dello sviluppo del back-end.
+	\item L'azienda proponente è molto orientata al dialogo e alla comunicazione.
 \end{itemize}
 
 \subsection{Aspetti critici}
 \begin{itemize}
-\item Componenti del gruppo che hanno già sviluppato con AWS: 0/7.
-\item Componenti del gruppo che hanno già sviluppato un Back-End Serverless: 0/7.
+	\item Nessuno dei componenti nel gruppo ha mai utilizzato AWS.
+	\item Nessuno dei componenti nel gruppo ha mai sviluppato un back-end serverless.
 \end{itemize}
 
 \subsection{Conclusioni}
+Il seguente capitolato è stato accolto da tutti i componenti con grande entusiasmo. Le tecnologie proposte, il tipo di progetto e la disponibilità comunicativa data dall'azienda ha generato molto interesse e voglia di lavorare. Per questi motivi è stato approvato come prima scelta.

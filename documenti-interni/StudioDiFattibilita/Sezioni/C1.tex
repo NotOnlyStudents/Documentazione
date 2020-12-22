@@ -1,51 +1,64 @@
-\section{Capitolato C1}
-\subsection{Titolo del capitolato}
-Il capitolato in questione si chiama \textit{"BlockCOVID: supporto digitale al contrasto della pandemia"}, il proponente \`e l'azienda \textit{Imola informatica} e i committenti sono \VT{} e \CR{}.
-
-\subsection{Descrizione del capitolo}
-Il capitolato ha come obiettivo finale la realizzazione di un'applicazione in grado di tracciare in modo immutabile e certificato le presenze in tempo reale alle postazioni di lavoro di una stanza e lo stato di pulizia delle stesse. 
-L'applicazione deve essere in grado di inviare le opportune informazioni ad un server dedicato il quale permetterà di gestire più stanze e postazioni per:
+\section{Capitolato C1 - BlockCOVID}
+\subsection{Informazioni sul capitolato}
 \begin{itemize}
-\item sapere in ogni momento se la postazione \'e occupata, prenotata oppure da pulire;
-\item controllare quali postazioni sono prenotate (da chi) e bloccare le prenotazioni per una determinata stanza;
-\item prevedere una tracciatura autenticata e tutti i cambiamenti di stato relativi alla pulizia della postazione, nonch\'e le informazioni su chi ha igienizzato la postazione, devono essere salvate su memoria immutabile e certificata;
-\item deve essere possibile prenotare una postazione con granularit\'a di 1 ora.
+	\item \textbf{Nome:} \textit{BlockCOVID: supporto digitale al contrasto della pandemia}
+	\item \textbf{Proponente:} \textit{Imola informatica}
+	\item \textbf{Committenti:} \textit{\VT{} e \CR{}}
 \end{itemize}
 
-\subsection{Prerequisiti e tecnologie coinvolte}
-L'azienda consiglia di utilizzare:
+\subsection{Descrizione del capitolato}
+Il capitolato richiede lo sviluppo di un'applicazione, con relativo server, in grado di tracciare, in modo immutabile, certificato e in tempo reale, le presenze alle postazioni di lavoro di una stanza, lo stato di pulizia di esse, la prenotazione di una postazione da remoto e la consultazione dei locali utilizzati dall'ultima igienizzazione.
 
+\subsection{Scopo del capitolato}
+La scopo del capitolato consiste nello sviluppo di un'applicazione (android o IOS) che permetterà le seguenti operazioni:
 \begin{itemize}
-\item \glo{Java} (versione 8 o superiori), \glo{Python} o \glo{nodejs} per lo sviluppo del server back-end;
+	\item recupero lista delle postazioni libere;
+	\item prenotazione di una postazione;
+	\item tracciamento in tempo reale tramite la scanerizzazione del tag RFID relativo ad una specifica postazione;
+	\item segnalazione della pulizia autonoma di una postazione;
+	\item storico delle postazioni occupate;
+	\item storico delle postazioni igienizzate;
+\end{itemize}
+
+Il server, dotato di UI, dovrà ricevere i vari tag RFID dall'applicazione e permetterà di:
+\begin{itemize}
+	\item sapere in ogni momento se la postazione \'e occupata, prenotata oppure da pulire;
+	\item controllare quali postazioni sono prenotate (da chi) e bloccare le prenotazioni per una determinata stanza;
+	\item mostrare una vista a calendario, con l’elenco delle postazioni prenotate e in quali giorni;
+	\item salvare su memoria immutabile e certificata tutti i cambiamenti di stato relativi alla pulizia della postazione, nonch\'e le informazioni su chi l'ha igienizzato;
+	\item prenotare una postazione con granularit\'a di 1 ora;
+	\item creare, modificare o eliminare le utente ai dipendenti e agli addetti delle pulizie;
+	\item creare, modificare o eliminare la definizione delle stanze e delle postazioni.
+\end{itemize}
+
+\subsection{Tecnologie coinvolte}
+L'azienda consiglia di utilizzare:
+\begin{itemize}
+\item Java (versione 8 o superiori), Python o nodejs per lo sviluppo del server back-end;
 \item protocolli asincroni per le comunicazioni app mobile-server;
-\item sistema blockchain per salvare con opponibilita\'a a terzi i dati di sanificazione;
-\item \glo{IAAS Kubernetes} o di un \glo{PAAS}, \glo{Openshift} o \glo{Rancher}, per il rilascio delle componenti del server e la gestione della scalabilit\'a orizzontale.
+\item sistema blockchain per salvare con opponibilit\'a a terzi i dati di sanificazione;
+\item IAAS Kubernetes o di PAAS, Openshift o Rancher, per il rilascio delle componenti del server e la gestione della scalabilit\'a orizzontale.
 \end{itemize}
 
 \subsection{Vincoli}
 Per raggiungere gli obiettivi minimi del progetto viene richiesto di:
-
 \begin{itemize}
-\item avere il server che esponga, in aggiunta a eventuali altri protocolli per l’interazione con il servizio specifico, delle \glo{API Rest} attraverso le quali sia possibile utilizzare l'applicativo. In alternativa \'e possibile utilizzare \glo{gRPC} come soluzione alternativa al Rest;
-\item scansione dei codici nel tempo sufficiente a certificare la presenza della persona in postazione. 
-\item avere le componenti applicative correlate da test unitari e d’integrazione. Inoltre, \'e richiesto che il sistema venga testato nella sua interezza tramite test end-to-end.
+\item avere il server che esponga, in aggiunta a eventuali altri protocolli per l’interazione con il servizio specifico, delle API REST attraverso le quali sia possibile utilizzare l'applicativo. In alternativa \'e possibile utilizzare gRPC come soluzione alternativa a REST;
+\item scansione dei codici nel tempo sufficiente a certificare la presenza della persona in postazione;
+\item avere le componenti applicative correlate da test unitari e d’integrazione. Inoltre, \'e richiesto che il sistema venga testato nella sua interezza tramite test end-to-end e che la copertura dei test unitari sia $\geq$ 80\%.
 \end{itemize}
 
 \subsection{Aspetti positivi}
 \begin{itemize} 
-\item Componenti del gruppo che esprimono Preferenza per questo capitolato: 4/7.
-\item Componenti del gruppo che hanno già sviluppato un API Rest: 3/7.
-\item Componenti del gruppo che hanno già sviluppato in Java: 5/7. 
-\item Componenti del gruppo che hanno già sviluppato in Python: 2/7.
-\item Componenti del gruppo che hanno già sviluppato in nodejs: 2/7.
-\item Componenti del gruppo che hanno già sviluppato almeno un'app Android: 2/7.
+	\item 4 componenti del gruppo hanno già sviluppato e conoscono Java.
+	\item Le tecnologie proposte dal capitolato stimolano i componenti del gruppo ad imparare ed a lavorare con esse.
+	\item Il capitolato può essere molto utile ed interessante per una prospettiva lavorativa, data la complessità, le tecnologie e il tipo di progetto.
 \end{itemize}
 
 \subsection{Aspetti critici}
 \begin{itemize}
-\item E` richiesto il doppio dello sviluppo per l'applicazione mobile visto che ne serve una versione per IOS e una per Android.
-\item Componenti del gruppo che hanno già utilizzato \glo{IAAS Kubernetes} o di un \glo{PAAS}, \glo{Openshift} o \glo{Rancher}: 0/7.
-\item Componenti del gruppo che hanno già sviluppato almeno un'app IOS: 0/7.
+\item \'E richiesto sia lo sviluppo di un'interfaccia WEB per il server e sia lo sviluppo di un'applicazione mobile per i vari tipo di utenti.
 \end{itemize}
 
 \subsection{Conclusioni}
+Dopo un'attenta valutazione e discussione, il gruppo era molto propenso verso la presa in considerazione di questo capitolato come prima scelta, ma data la complessità e la competizione degli altri gruppi si è preferito di non sceglierlo.

@@ -1,37 +1,61 @@
-\section{Capitolato C4}
-\subsection{Titolo del capitolato}
-Il capitolato in questione si chiama \textit{"HD Viz: visualizzazione di dati multidimensionali"}, il proponente \`e l'azienda \textit{Zucchetti} e i committenti sono \VT{} e \CR{}.
+\section{Capitolato C4 - HD VIZ}
+\subsection{Informazioni sul capitolato}
+\begin{itemize}
+	\item \textbf{Nome:} \textit{HD VIZ: visualizzazione di dati con molte dimensioni}
+	\item \textbf{Proponente:} \textit{Zucchetti Software}
+	\item \textbf{Committenti:} \textit{\VT{} e \CR{}}
+\end{itemize}
 
-\subsection{Descrizione del capitolo}
-Il capitolato ha come obiettivo finale la realizzazione di un'applicazione per visualizzare dati con molte dimensioni a supporto della fase esplorativa dell'analisi dei dati utilizzando a supporto la libreria D3.js.
+\subsection{Descrizione del capitolato}
+Il capitolato richiede lo sviluppo di un sito WEB per visualizzare dati con molte dimensioni a supporto della fase esplorativa dell'analisi dei dati.
 
-\subsection{Prerequisiti e tecnologie coinvolte}
-Lo sviluppo sarà prevalentemente in tecnologia HTML/CSS/JavaScript utilizzando la libreria D3.js.
-La parte server di supporto alla presentazione nel browser e alle query ad un database SQL o NoSQL potr\'a essere sviluppata in Java con server Tomcat o in Javascript con server Node.js.
+\subsection{Scopo del capitolato}
+Lo scopo del capitolato consiste nello sviluppo di un sito WEB che mostrerà dei dati presenti in un database o caricati da un file CSV, nelle seguenti visualizzazioni:
+\begin{itemize}
+	\item Scatter plot Matrix (fino ad un massimo di 5 dimensioni);
+	\item Force Field;
+	\item Heat Map;
+	\item Proiezione Lineare Multi Asse.
+\end{itemize}
+Altre funzionalità che dovrebbero essere aggiunte sono:
+\begin{itemize}
+	\item visualizzazione dei dati con altri grafici con più di tre dimensioni;
+	\item utilizzo di funzioni di calcolo della distanza, diverse dalla distanza “Euclidea” in tutte le visualizzazioni che dipendono da tale concetto;
+	\item utilizzo di funzioni di “forza” diverse da quelle previste in automatico dal grafico “force based” di D3;
+	\item l'analisi automatica per evidenziare situazioni di particolare interesse;
+	\item l'utilizzo di algoritmi di preparazione del dato per la visualizzazione, cioè anziché eseguire la trasformazione direttamente nella visualizzazione far precedere un passo di trasformazione.
+\end{itemize}
+
+\subsection{Tecnologie coinvolte}
+Lo sviluppo avverrà prevalentemente con tecnologie HTML/CSS/JavaScript utilizzando la libreria D3.js.
+La parte server, di supporto alla presentazione nel browser e utile all'esecuzione delle query ad un database SQL o NoSQL, potr\'a essere sviluppata in Java con Tomcat o in Javascript con Node.js.
 
 \subsection{Vincoli}
-Per raggiungere gli obiettivi minimi del progetto viene richiesto:
-
+per raggiungere gli obiettivi minimi del progetto viene richiesto che:
 \begin{itemize}
-\item I dati devono poter essere forniti al sistema di visualizzazione sia con query ad un database che da file in formato CSV preparati precedentemente;
-\item dovr\'a presentare almeno le seguenti visualizzazioni:
-\begin{itemize}
-\item jb
-\end{itemize}
-\item Ordinare i punti nel grafico “Heat map” per evidenziare i “cluster” presenti nei dati.
+	\item i dati da visualizzare dovranno poter avere almeno fino a 15 dimensioni, ma deve essere possibile visualizzare anche dati con meno dimensioni;
+	\item i dati devono poter essere forniti al sistema di visualizzazione sia con query ad un database che da file in formato CSV preparati precedentemente;
+	\item dovr\'a presentare almeno le seguenti visualizzazioni:
+	\begin{itemize}
+		\item Scatter plot Matrix: presentazione a riquadri disposti a matrice di tutte le combinazioni di scatter plot;
+		\item Force Field: traduce le distanze nello spazio a molte dimensioni di forze di attrazione e repulsione tra i punti proiettati nello spazio bidimensionale;
+		\item Heat map: trasforma la distanza tra i punti di colori più o meno intensi;
+		\item posiziona i punti dello spazio multidimensionale in un piano
+		cartesiano.
+	\end{itemize}
+	\item Ordinare i punti nel grafico “Heat map” per evidenziare i “cluster” presenti nei dati.
 \end{itemize}
 
 \subsection{Aspetti positivi}
 \begin{itemize}
-\item Componenti del gruppo che esprimono Preferenza per questo capitolato: 5/7.
-\item Componenti del gruppo che hanno già sviluppato usando JavaScript: 7/7.
-\item Componenti del gruppo che hanno già sviluppato usando HTML: 7/7.
-\item Componenti del gruppo che hanno già sviluppato usando CSS: 7/7.
+	\item Tutti i componenti conoscono HTML, CSS e JavaScript impiegate nell'ambito dello sviluppo WEB.
+	\item Tratta un ambito moderno ed affascinante come lo studio dei BigData.
 \end{itemize}
 
 \subsection{Aspetti critici}
 \begin{itemize}
-\item Componenti del gruppo che conoscono la libreria D3.js 0/7
+	\item Il tema trattato e le tecnologie proposte dal capitolato non suscitano l'interesse del gruppo.
 \end{itemize}
 
 \subsection{Conclusioni}
+Dopo un'attenta valutazione e discussione, il gruppo ha deciso di non prendere in considerazione il seguente capitolato dato lo scarso interesse per il tema e le tecnologie proposte.
