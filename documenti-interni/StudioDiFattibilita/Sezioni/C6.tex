@@ -1,36 +1,55 @@
-\section{Capitolato C6}
-\subsection{Titolo del capitolato}
-Il capitolato in questione si chiama \textit{"RGP: Realtime Gaming Platform"}, il proponente \`e l'azienda \textit{ZERO12} e i committenti sono \VT{} e \CR{}.
+\section{Capitolato C6 - Realtime Gaming Platform}
+\subsection{Informazioni sul capitolato}
+\begin{itemize}
+	\item \textbf{Nome:} \textit{RGP: Realtime Gaming Platform}
+	\item \textbf{Proponente:} \textit{zero12}
+	\item \textbf{Committenti:} \textit{\VT{} e \CR{}}
+\end{itemize}
 
-\subsection{Descrizione del capitolo}
-Il capitolato ha come obiettivo finale la realizzazione di un'applicazione mobile che implementa un videogioco a scorrimento verticale con possibilità di giocare in un multiplayer realtime. La parte principale del progetto rappresenta la possibilità di giocare in modalità multiplayer con sfida ad eliminazione, non vi è interazione tra i giocatori. Nella modalità single player il gioco sarà in modalità infinta con livelli di difficoltà crescenti e terminerà quando saranno state perse tutte le vite o quando non si avranno raccolto i powerup per mantenere il proprio oggetto attivo.
+\subsection{Descrizione del capitolato}
+Il capitolato richiede lo sviluppo di un videogioco a scorrimento verticale utilizzabile sia in modalità multiplayer, da 2 a 6 giocatori, che single-player. Il progetto si focalizza maggiormente sulla componente server che, tramite tecnologie Amazon Web Services, permette di gesitre la comunicazione in tempo reale tra i diversi device collegati nella stessa sessione di gioco.
 
-\subsection{Prerequisiti e tecnologie coinvolte}
-Il progetto si basa sulla tecnologia \glo{AWS}.
-Per lo sviluppo di codice è da preferire NodeJS.
-Per lo sviluppo mobile il linguaggio richiesto è Swift/SwiftUI (IOS) o Kotlin (Android).
+\subsection{Scopo del capitolato}
+Lo scopo del capitolato consiste nello sviluppo di un gioco per IOS o Android che soddisfi i seguenti obiettivi:
+\begin{itemize}
+	\item deve essere multiplayer da 2 a 6 giocatori;
+	\item deve avere una modalità fantasma;
+	\item devono essere presenti gli stessi powerup e nemici durante il multiplayer;
+	\item il gioco deve essere infinito;
+	\item il server deve essere realizzato con tecnologie serverless.
+\end{itemize}
+
+\subsection{Tecnologie coinvolte}
+Per questo progetto sono state raccomandate le seguenti tecnologie:
+\begin{itemize}
+	\item AWS GameLift: servizio di hosting per i giochi online;
+	\item AWS appsync: servizio gestito per lo sviluppo rapido di API GraphQL;
+	\item AWS DynamoDB: servizio di database NoSQL rapido e flessibile per il salvataggio dei dati in cloud;
+	\item Node.js come linguaggio utilizzato per lo sviluppo di componenti server;
+	\item Swift e Kotlin come linguaggi di programmazione per lo sviluppo mobile, il primo nel caso si scelga la realizzazione dell'applicativo su iOS mentre il secondo se si opta per Android.
+\end{itemize}
 
 \subsection{Vincoli}
-Per raggiungere gli obiettivi minimi del progetto viene richiesto che:
-
+Per raggiungere gli obiettivi minimi del progetto viene richiesto di:
 \begin{itemize}
-\item l'architettura server sia scalabile;
+	\item svolgere un'attività di analisi per scegliere la migliore tecnologia basata su AWS su cui sviluppare la componente server del progetto fornendo una giustificazione di tale scelta;
+	% \item sviluppare le API in Node.js;
+	\item sviluppare l'intero progetto a micro-servizi;
+	\item sviluppare un'applicazione mobile per testare la correttezza delle dinamiche del gioco in realtime.
 \end{itemize}
 
-
-\subsection{Aspetti positivi}
+ \subsection{Aspetti positivi}
 \begin{itemize}
-\item Componenti del gruppo che hanno già sviluppato in nodejs: 2/7.
-\item Componenti del gruppo che hanno già svilupatto applicazione per l'ambiente Android: 2/7.
+	\item Utilizzo di vari servizi AWS sempre più diffusi.
+	\item L'uso di un'architettura a micro-servizi e serverless favorisce la parallelizzazione dello sviluppo del back-end.
 \end{itemize}
 
-\subsection{Aspetti critici}
-Doppia Applicazione (IOS),AWS.
+ \subsection{Aspetti critici}
 \begin{itemize}
-\item Componenti del gruppo che esprimono Preferenza per questo capitolato: 2/7.
-\item \'E richiesto il doppio dello sviluppo per l'applicazione mobile visto che ne serve una versione per IOS e una per Android.
-\item Componenti del gruppo che hanno gi\'a sviluppato almeno un'app IOS: 0/7.
-\item Componenti del gruppo che hanno gi\'a sviluppato con AWS: 0/7.
+	\item Sviluppare un gioco per iOS è condizionato dal possedere un MacBook o un iMac, inoltre Swift è conosciuto solo da pochi componenti del gruppo e non in modo approfondito.
+	\item Tutti i componenti del gruppo non hanno mai sviluppato un'applicazione.
+	\item Il seguente capitolato non stimola l'interesse di alcun componente del gruppo.
 \end{itemize}
 
 \subsection{Conclusioni}
+Dopo un'attenta valutazione e discussione, si è deciso che questo capitolato, nonostante tocchi delle tecnologie piuttosto interessanti, richiede un dispendio troppo elevato di tempo per l'apprendimento dei linguaggi di programmazione.

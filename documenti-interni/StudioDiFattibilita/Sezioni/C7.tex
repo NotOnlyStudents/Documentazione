@@ -1,41 +1,62 @@
-\section{Capitolato C7}
-\subsection{Titolo del capitolato}
-Il capitolato in questione si chiama \textit{"SSD: soluzioni di sincronizzazione desktop"}, il proponente \`e l'azienda \textit{ZEXTRAS} e i committenti sono \VT{} e \CR{}.
-
-\subsection{Descrizione del capitolo}
-Il capitolato ha come obiettivi la realizzazione di:
+\section{Capitolato C7 - SSD}
+\subsection{Informazioni sul capitolato}
 \begin{itemize}
-\item un algoritmo solido ed efficiente in grado di garantire il salvataggio in cloud del lavoro e contemporaneamente la sincronizzazione dei cambiamenti presenti in cloud;
-\item un’interfaccia multipiattaforma per l’uso dell’algoritmo nei pi\'u importanti sistemi operativi desktop esistenti;
-\item utilizzare l’algoritmo sviluppato per richiedere e fornire i cambiamenti ai contenuti in sincronizzazione verso il prodotto Zextras Drive
+	\item \textbf{Nome:} \textit{SSD: Soluzioni di Sincronizzazione Desktop}
+	\item \textbf{Proponente:} \textit{Zextras}
+	\item \textbf{Committenti:} \textit{\VT{} e \CR{}}
 \end{itemize}
 
-\subsection{Prerequisiti e tecnologie coinvolte}
-L'azienda consiglia di utilizzare:
+\subsection{Descrizione del capitolato}
+Il capitolato richiede la realizzazione di un algoritmo solido ed efficiente in grado di garantire il salvataggio in cloud del lavoro e contemporaneamente la sincronizzazione
+dei cambiamenti avvenuti.
 
+\subsection{Scopo del capitolato}
+Lo scopo del capitolato consiste nello sviluppo di un'applicazione desktop che soddisfi i seguenti obiettivi:
 \begin{itemize}
-\item \glo{Qt} per lo sviluppo dell'interfaccia e del controller d'architettura;
-\item \glo{Python} per lo sviluppo della Business Logic.
+	\item sviluppo di un algoritmo solido ed efficiente: deve essere in grado di garantire il salvataggio in cloud del lavoro e contemporaneamente la sincronizzazione dei cambiamenti presenti in cloud;
+	\item sviluppo di un’interfaccia multipiattaforma: deve fornire l'interfaccia per interagire con le funzionalità offerte dall'algoritmo di sincronizzazione. Inoltre, deve essere utilizzabile sui tre sistemi operativi maggiormente diffusi, ovvero Linux, MacOS, Windows; la soluzione sviluppata non deve necessitare dell'installazione, da parte dell'utente, di framework di terze parti per il proprio funzionamento;
+	\item integrazione con Zextras Drive: l'algoritmo di sincronizzazione e l'interfaccia devono essere integrati con il servizio di gestione file Zextras Drive.
+\end{itemize}
+Altre funzionalità che dovrebbero essere aggiunte sono:
+\begin{itemize}
+	\item configurazione e autenticazione dell'utente;
+	\item gestione dei file da sincronizzare o ignorare sia dal lato cloud che dal lato desktop e la possibilità di modificare in ogni momento la configurazione;
+	\item sincronizzazione costante dei cambiamenti, sia locali che remoti;
+	\item sistema di notifica dei cambiamenti;
+	\item funzionalità presenti in altre soluzioni attualmente disponibili:
+	\begin{itemize}
+		\item gestione delle condivisioni;
+		\item integrazione con il prodotto web.
+	\end{itemize}
+\end{itemize}
+
+\subsection{Tecnologie coinvolte}
+Le seguenti tecnologie possono essere impiegate nello sviluppo del progetto:
+\begin{itemize}
+	\item Framework Qt, consigliato per lo sviluppo dell'interfaccia grafica;
+	\item Python, consigliato come linguaggio per lo sviluppo della Business Logic.
 \end{itemize}
 
 \subsection{Vincoli}
-Per raggiungere gli obiettivi minimi del progetto viene richiesto di:
-
+Per raggiungere gli obiettivi minimi del progetto viene richiesto che:
 \begin{itemize}
-\item sviluppare la soluzione indipendente dall'installazione di framework terzi per funzionare;
-\item scansione dei codici nel tempo sufficiente a certificare la presenza della persona in postazione; 
-\item avere le componenti applicative correlate da test unitari e d’integrazione. Inoltre, \'e richiesto che il sistema venga testato nella sua interezza tramite test end-to-end.
+	\item l'algoritmo di sincronizzazione e l'interfaccia utente devono essere cross-platform senza l'installazione manuale di ulteriori prodotti;
+	\item forte distinzione tra Interfaccia utente e
+	Business Logic;
+	\item l'applicazione desktop deve essere sviluppata seguendo il pattern MVC.
 \end{itemize}
 
 \subsection{Aspetti positivi}
 \begin{itemize}
-\item Componenti del gruppo che hanno già sviluppato in C++ Attraverso Qt: 7/7.
-\item Componenti del gruppo che hanno già sviluppato un'applicazione in Python: 2/7.
+	\item Le tecnologie proposte dal capitolato suscitano interesse nel gruppo.
+	\item Permette di approfondire gli algoritmi per la collaborazione a distanza, i quali sono molto attuali e sempre più diffusi.
+	\item Il team ha già familiarità con il framework Qt ed il linguaggio Python.
 \end{itemize}
 
 \subsection{Aspetti critici}
 \begin{itemize}
-\item Componenti del gruppo che esprimono Preferenza per questo capitolato: 1/7.
+	\item Si ha la paura di incontrare tantissimi problemi durante lo sviluppo cross-platform.
 \end{itemize}
 
 \subsection{Conclusioni}
+Dopo un'attenta valutazione e discussione, il progetto ha entusiasmato l'intero gruppo, ma non in maniera tale da porsi come prima scelta.

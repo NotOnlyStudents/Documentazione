@@ -1,0 +1,51 @@
+%\section{Capitolato C6 - RGP: Realtime Gaming Platform}
+
+  \subsection{Informazioni generali}
+  \begin{description}
+    \item[Nome] \textit{RGP: Realtime Gaming Platform}
+    \item[Proponente] \textit{zero12}
+    \item[Committente] \VT{}, \CR{}
+  \end{description}
+
+  \subsection{Descrizione del capitolato}
+Il capitolato propone la realizzazione di un videogioco a scorrimento verticale utilizzabile sia in modalità multiplayer, da 2 a 6 giocatori, che single-player. Il progetto si focalizza maggiormente sulla componente server che, tramite tecnologie Amazon Web Services, permette di gesitre la comunicazione in tempo reale tra i diversi device collegati nella stessa sessione di gioco.
+
+  \subsection{Finalità del progetto}
+Il capitolato chiede di realizzare i seguenti obiettivi:
+  \begin{itemize}
+    \item implementazione della componente server;
+    \item valutazione delle tecnologie AWS per decidere quale meglio si adatta ad un gioco con requisiti di realtime, raccogliendo le motivazioni che supportano la scelta di una tecnologia rispetto ad un'altra;
+    \item implementazione del gioco per piattaforma mobile.
+  \end{itemize}
+
+  \subsection{Tecnologie coinvolte}
+Per questo progetto sono state raccomandate le seguenti tecnologie
+\begin{itemize}
+    \item AWS GameLift: servizio di hosting\textsuperscript{G} per i giochi online;
+    \item AWS appsync: servizio gestito per lo sviluppo rapido di API GraphQL;
+    \item AWS DynamoDB: servizio di database NoSQL rapido e flessibile per il salvataggio dei dati in cloud;
+    \item Node.js come linguaggio utilizzato per lo sviluppo di componenti server;
+    \item Swift e Kotlin come linguaggi di programmazione per lo sviluppo mobile, il primo nel caso si scelga la realizzazione dell'applicativo su iOS mentre il secondo se si opta per Android.
+\end{itemize}
+
+  \subsection{Vincoli generali}
+\begin{itemize}
+    \item il team di sviluppo deve svolgere un'attività di analisi per scegliere la migliore tecnologi basata su AWS su cui sviluppare la componente server del progetto fornendo una giustificazione di tale scelta;
+    \item le API devono essere sviluppate in Node.js;
+    \item l'intero progetto deve essere sviluppato a micro-servizi;
+    \item lo sviluppo di un'applicazione mobile per testare la correttezza delle dinamiche del gioco in realtime.
+\end{itemize}
+
+  \subsection{Aspetti positivi}
+\begin{itemize}
+    \item l'uso di servizi AWS che sono sempre più diffusi;
+\end{itemize}
+
+  \subsection{Criticità e fattori di rischio}
+\begin{itemize}
+    \item sviluppare un gioco per iOS è condizionato dal possedere un MacBook o un iMac, inoltre Swift è conosciuto solo da pochi componeneti del gruppo e non in modo approfondito;
+    \item sviluppare un gioco per Android significa utilizzare Android Studio, appoggiandosi così a librerie e un linguaggio di programmazione dei quali nessun membro del gruppo ha dimestichezza.
+\end{itemize}
+
+  \subsection{Conclusioni}
+Dopo aver valutato gli aspetti positivi e le criticità, si è deciso che questo capitolato, nonostante tocchi delle tecnologie piuttosto interessanti, richiede, secondo il gruppo, un dispendio troppo elevato di tempo per l'apprendimento dei linguaggi di programmazione.
