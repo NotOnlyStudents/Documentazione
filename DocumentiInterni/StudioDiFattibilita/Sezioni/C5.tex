@@ -7,19 +7,19 @@
 \end{description}
 
 \subsection{Descrizione del capitolato}
-Il capitolato richiede lo sviluppo di un sistema real time in grado di gestire più entità caratterizzate da un punto di partenza, una velocità di crociera ed una lista di punti di interesse da raggiungere.
+Il capitolato richiede lo sviluppo di un sistema \glo{real-time} in grado di gestire più entità caratterizzate da un punto di partenza, una velocità di crociera ed una lista di \glo{punti di interesse} da raggiungere.
 
- \subsection{Scopo del capitolato}
+\subsection{Scopo del capitolato}
 Lo scopo del capitolato consiste nello sviluppare un motore real-time che si occupa di trovare il migliore percorso da far percorrere alla singola unità.
 La componente server deve segnalare ad ogni unità la prossima azione da fare in base ai prossimi punti e alle posizioni delle altre entità. Inoltre, deve essere presente una mappa real-time che consenta la visualizzazione di ogni unità e dei loro movimenti all'interno della struttura.
 Ogni unità dovrà implementare un'interfaccia grafica dove vengono indicate le informazioni caratterizzanti.
 
 \subsection{Tecnologie coinvolte}
-Il capitolato offre libera scelta su come implementare l'applicazione, l'unico limite è nell'utilizzo della tecnologia Docker per il rilascio. Il gruppo aveva pensato di utilizzare le seguenti tecnologie:
+Il capitolato offre libera scelta su come implementare l'applicazione, l'unico limite è nell'utilizzo della tecnologia \glo{Docker} per il rilascio. Il gruppo aveva pensato di utilizzare le seguenti tecnologie:
 \begin{itemize}
-	\item motore real-time: si pensava di usare Java, per la facilità di gestione degli oggetti e dei thread;
-	\item monitor real-time: utilizzo di tomcat e angular per l'interfaccia utente;
-	\item simulatori delle unità operative: si ipotizzava di optare per l'uso di Java così da facilitare la connessione, attraverso socket, al motore real-time.
+	\item motore real-time: si pensava di usare \glo{Java}, per la facilità di gestione degli \glo{oggetti} e dei \glo{thread};
+	\item monitor real-time: utilizzo di \glo{Tomcat} e \glo{Angular} per l'interfaccia utente;
+	\item simulatori delle unità operative: si ipotizzava di optare per l'uso di Java così da facilitare la connessione, attraverso \glo{socket}, al motore real-time.
 \end{itemize}
 
 \subsection{Vincoli}
