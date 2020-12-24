@@ -7,14 +7,14 @@
 \end{itemize}
 
 \subsection{Descrizione del capitolato}
-Il capitolato richiede lo sviluppo di un'applicazione, con relativo server, in grado di tracciare, in modo immutabile, certificato e in tempo reale, le presenze alle postazioni di lavoro di una stanza, lo stato di pulizia di esse, la prenotazione di una postazione da remoto e la consultazione dei locali utilizzati dall'ultima igienizzazione.
+Il \glo{capitolato} richiede lo sviluppo di un'applicazione, con relativo server, in grado di tracciare, in modo immutabile, certificato e in \glo{real-time}, le presenze alle postazioni di lavoro di una stanza, lo stato di pulizia di esse, la prenotazione di una postazione da remoto e la consultazione dei locali utilizzati dall'ultima igienizzazione.
 
 \subsection{Scopo del capitolato}
 La scopo del capitolato consiste nello sviluppo di un'applicazione (android o IOS) che permetterà le seguenti operazioni:
 \begin{itemize}
 	\item recupero lista delle postazioni libere;
 	\item prenotazione di una postazione;
-	\item tracciamento in tempo reale tramite la scanerizzazione del tag RFID relativo ad una specifica postazione;
+	\item tracciamento in tempo reale tramite la scanerizzazione del \glo{tag RFID} relativo ad una specifica postazione;
 	\item segnalazione della pulizia autonoma di una postazione;
 	\item storico delle postazioni occupate;
 	\item storico delle postazioni igienizzate;
@@ -34,18 +34,18 @@ Il server, dotato di UI, dovrà ricevere i vari tag RFID dall'applicazione e per
 \subsection{Tecnologie coinvolte}
 L'azienda consiglia di utilizzare:
 \begin{itemize}
-\item Java (versione 8 o superiori), Python o nodejs per lo sviluppo del server back-end;
-\item protocolli asincroni per le comunicazioni app mobile-server;
-\item sistema blockchain per salvare con opponibilit\'a a terzi i dati di sanificazione;
-\item IAAS Kubernetes o di PAAS, Openshift o Rancher, per il rilascio delle componenti del server e la gestione della scalabilit\'a orizzontale.
+\item \glo{Java} (versione 8 o superiori), \glo{Python} o \glo{Node.js} per lo sviluppo del server \glo{back-end};
+\item protocolli \glo{asincroni} per le comunicazioni app mobile-server;
+\item sistema \glo{Blockchain} per salvare con opponibilit\'a a terzi i dati di sanificazione;
+\item \glo{IAAS Kubernetes} o di \glo{PAAS}, \glo{Openshift} o \glo{Rancher}, per il rilascio delle componenti del server e la gestione della \glo{scalabilit\'a orizzontale}.
 \end{itemize}
 
 \subsection{Vincoli}
 Per raggiungere gli obiettivi minimi del progetto viene richiesto di:
 \begin{itemize}
-\item avere il server che esponga, in aggiunta a eventuali altri protocolli per l’interazione con il servizio specifico, delle API REST attraverso le quali sia possibile utilizzare l'applicativo. In alternativa \'e possibile utilizzare gRPC come soluzione alternativa a REST;
-\item scansione dei codici nel tempo sufficiente a certificare la presenza della persona in postazione;
-\item avere le componenti applicative correlate da test unitari e d’integrazione. Inoltre, \'e richiesto che il sistema venga testato nella sua interezza tramite test end-to-end e che la copertura dei test unitari sia $\geq$ 80\%.
+\item avere il server che esponga, in aggiunta a eventuali altri protocolli per l’interazione con il servizio specifico, delle \glo{API} \glo{REST} attraverso le quali sia possibile utilizzare l'applicativo. In alternativa \'e possibile utilizzare \glo{gRPC} come soluzione alternativa a REST;
+\item scansione dei tag nel tempo sufficiente a certificare la presenza della persona in postazione;
+\item avere le componenti applicative correlate da \glo{test unitari} e \glo{test d’integrazione}. Inoltre, \'e richiesto che il sistema venga testato nella sua interezza tramite \glo{test end-to-end} e che la copertura dei test unitari sia $\geq$ 80\%.
 \end{itemize}
 
 \subsection{Aspetti positivi}
