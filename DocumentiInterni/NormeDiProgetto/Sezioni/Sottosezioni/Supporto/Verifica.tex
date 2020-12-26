@@ -14,18 +14,18 @@ Il \textit{Verificatore} seguirà uno dei seguenti metodi:
 	\item \textbf{Inspection:} procede ad una lettura critica di una parte prodotto in esame, focalizzando la ricerca su problemi che si presentano più frequentemente indicati nella Lista di Controllo all'interno del \PdQv{}.
 \end{itemize}
 
-\myparagraph{Verifica della documentazione}
+\myparagraph{Verifica della documentazione}\label{VerificaDocumentazione}
 Il \textbf{Verificatore} incaricato procede nel seguente modo:
 \begin{itemize}
 	\item Se non ancora creata, crea l'issue in GitHub;
 	\item Sposta l'issue in "IN PROGRESS";
 	\item Rilegge il documento secondo uno dei due metodi previsti, nel caso di Inspection valuta l'aggiornamento della Lista di Controllo;
-	\item Se riscontra problemi logici, avverte il redattore del documento che procederà alla correzione.  L'issue torna in "TO DO" in attesa delle modifiche, a modifiche apportate si torna al punto precedente;
+	\item Se riscontra problemi logici,si accorda con il redattore del documento per la correzione. 
 	\item Procede al controllo ortografico automatico utilizzando \textit{Aspell};
 	\item Sposta l'issue in "DONE".
 \end{itemize}
 
-\myparagraph{Verifica del codice}
+\myparagraph{Verifica del codice}\label{VerificaCodice}
 Il \textit{Verificatore} incaricato procede nel seguente modo:
 \begin{itemize}
 	\item Se non ancora creata, crea l'issue in GitHub;
@@ -41,7 +41,7 @@ Il \textit{Verificatore} incaricato procede nel seguente modo:
 		\item Assicurare che sia stato seguito quanto scritto nelle \NdPv{}\ nella sezione \S\ref{CodificaConvenzioni}.
 	\end{itemize}
 	 Nel caso di Inspection valuta l'aggiornamento della Lista di Controllo;
-	\item Se riscontra problemi, avverte il redattore del documento che procederà alla correzione. L'issue torna in "TO DO" in attesa delle modifiche, a modifiche apportate si torna al punto precedente;
+	\item Se riscontra problemi, si accorda con il redattore del documento per la correzione. 
 	\item Sposta l'issue in "DONE".
 \end{itemize}
 
@@ -70,7 +70,7 @@ Il \textit{Verificatore} incaricato procede nel seguente modo:
 	\item Se non ancora creata, crea l'issue in GitHub;
 	\item Sposta l'issue in "IN PROGRESS";
 	\item Esegue tutti i test previsti;
-	\item Se riscontra problemi, avverte il redattore del codice che procederà alla correzione. L'issue torna in "TO DO" in attesa delle modifiche, a modifiche apportate si torna al punto precedente;
+	\item Se riscontra problemi, si accorda con il redattore del codice per la correzione. 
 	\item Sposta l'issue in "DONE".
 	\item Avverte i redattori incaricati ad aggiornare il \PdQv{} con i risultati ottenuti.
 \end{itemize}
