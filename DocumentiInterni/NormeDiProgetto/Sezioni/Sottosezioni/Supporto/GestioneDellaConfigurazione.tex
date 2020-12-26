@@ -1,5 +1,5 @@
 \subsection{Gestione della configurazione}
-\subsubsection{Scopo dell'attività} 
+\subsubsection{Scopo dell'attività} \label{PSup_GestioneConf_Scopo}
 La Gestione della configurazione ha lo scopo di gestire ordinatamente e sistematicamente la produzione dei documenti e del codice.
 
 \subsubsection{Descrizione della sezione} 
@@ -22,14 +22,14 @@ Il codice di una versione è formato:
 \end{center}
 dove 
 \begin{itemize}
-	\item \textbf{[X]} corrisponde ad una versione del documento approvata dal \Responsabile e pronta al rilascio, la numerazione parte da 0;
+	\item \textbf{[X]} corrisponde ad una versione del documento approvata dal \Responsabile\ e pronta al rilascio, la numerazione parte da 0;
 	\item \textbf{[Y]} corrisponde ad una versione del documento verificata, inizia da 0 e riparte da questo valore ad ogni incremento di X;
 	\item \textbf{[Z]} parte da zero e viene incrementato ad ogni modifica del documento, la numerazione riparte da zero ad ogni incremento di X o Y.
 \end{itemize}
 Il Controllo di versione si appogia su un repository creato in \textit{Github} la cui struttura viene spiegata nella sezione seguente.
 
 \subsubsection{Struttura della repository}
-La repository del gruppo \Gruppo è accessibile all'indirizzo
+La repository del gruppo \Gruppo\ è accessibile all'indirizzo
 \begin{center}
 	\textbf{https://github.com/NotOnlyStudents}
 \end{center}
@@ -38,7 +38,7 @@ All'interno del repository viene divisa la documentazione dal codice software.
 \myparagraph{Repository per la documentazione}
 Il repository per la documentazione è composto da diversi \textbf{branch}:
 \begin{itemize}
-	\item \textbf{master} su cui vengono riportati i documenti approvati dal \Responsabile e pronti nella loro versione definitiva ad essere presentati;
+	\item \textbf{master} su cui vengono riportati i documenti approvati dal \Responsabile\ e pronti nella loro versione definitiva ad essere presentati;
 	\item \textbf{develop} ramo in cui vengono inserite la versioni dei documenti verificati ma non ancora approvati;
 	\item rami dedicati ai singoli documenti in sviluppo non verificati.
 \end{itemize}
@@ -50,5 +50,5 @@ All'interno del repository troviamo le cartelle così organizzate:
 	\item \textbf{DocumentiPubblici}: contiene le cartelle dei documenti di utilità per il gruppo,per il proponente e per i committenti;
 	\item \textbf{Templates}: contiene i file template utilizzati per la redazione dei documenti.
 \end{itemize}
-\myparagraph{Modifiche al repository}
+\myparagraph{Modifiche al repository}\label{ModificaRepo}
 Nel caso fosse necesario modificare file all'interno del ramo master è necessaria una \textit{pull request} con conseguente approvazione da almeno un altro elemento del gruppo.

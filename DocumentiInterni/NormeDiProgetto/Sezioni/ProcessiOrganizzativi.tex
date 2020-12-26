@@ -1,5 +1,5 @@
 \section{Processi Organizzativi}
-\subsection{Descrizione}
+\subsection{Descrizione}\label{PO_Descrizione}
 I Processi Organizzativi comprendono tutti i processi utilizzati per definire e gestire una struttura costituita dal personale e dai processi del ciclo di vita del prodotto, al fine di migliorarne continuamente i processi e la struttura stessa. 
 In questa sezione vengono analizzati:
 \begin{itemize}
@@ -10,7 +10,7 @@ In questa sezione vengono analizzati:
 \end{itemize}
 
 \subsection{Gestione di processo}
-\subsubsection{Scopo del processo}
+\subsubsection{Scopo del processo}\label{PO_GestioneProcesso_Scopo}
 Come stabilito dallo \glo{standard} \glo{ISO/IEC 12207:1995}, comprende le attività e i compiti generici per la gestione dei rispettivi processi. 
 \subsubsection{Descrizione della sezione}
 La sezione definisce le norme stabilite dal gruppo per la Pianificazione e il Coordinamento del lavoro dei componenti del gruppo.
@@ -56,7 +56,7 @@ I suoi compiti principali sono:
 \begin{itemize}
 	\item Studiare il dominio del problema;
 	\item Definire tutti i requisiti del prodotto richiesto;
-	\item Redigere \SdFv e \AdRv.
+	\item Redigere \SdFv\ e \AdRv.
 \end{itemize}
 
 \paragraph*{Progettista}
@@ -82,10 +82,10 @@ I suoi compiti principali sono:
 I suoi compiti principali sono:
 \begin{itemize}
 	\item Controllare che le attività di processo non abbiano causato errori;
-	\item Redigere la parte retrospettiva del \PdQv che descrive l'esito delle verifiche e delle prove effettuate.
+	\item Redigere la parte retrospettiva del \PdQv\ che descrive l'esito delle verifiche e delle prove effettuate.
 \end{itemize}
 
-\myparagraph{Gestione dei compiti}
+\myparagraph{Gestione dei compiti}\label{GestioneCompiti}
 Durante lo sviluppo del progetto spetta al singolo componente stabilire in piena autonomia quali sono i suoi compiti a seconda del proprio ruolo.
 Per permettere di gestire i compiti in modo agevole è stato scelto di utilizzare l'\glo{Issue Tracking System} fornito da \glo{GitHub} per il \glo{repository} usato dal gruppo per il \glo{versionamento} del progetto.
 Il componente del gruppo in base al proprio ruolo crea delle \glo{Issue} che rappresentano dei singoli compiti, che assegna a se stesso o ad altri componenti in seguito a riunioni e secondo accordi, comprendenti le seguenti informazioni:
@@ -103,8 +103,8 @@ Ogni Issue attraversa degli stati che permettono di monitorare l'avanzamento nel
 	\item \textbf{Done:} compito svolto.
 \end{itemize}
 
-\myparagraph{Gestione dei rischi}
-Tutti i rischi che si possono presentare durante la realizzazione del progetto vengono inseriti all'interno del \PdP redatto dal \Responsabile.
+\myparagraph{Gestione dei rischi}\label{GestioneRischi}
+Tutti i rischi che si possono presentare durante la realizzazione del progetto vengono inseriti all'interno del \PdPv\ redatto dal \Responsabile.
 Viene seguita la seguente procedura:
 \begin{itemize}
 	\item Individuazione di nuovi problemi e monitoraggio dei rischi già individuati;
@@ -129,13 +129,19 @@ dove:
 \end{itemize}
 Nel \PdPv  per ogni rischio è presente una tabella indicante:
 \begin{itemize}
-	\item \textbf{Codice identificativo}:
+	\item \textbf{Codice identificativo e titolo}: secondo quanto indicato precedentemente e un breve titolo;
+	\item \textbf{Descrizione};
+	\item \textbf{Conseguenze} causate dal verificarsi del rischio;
+	\item \textbf{Probabilità di occorrenza};
+	\item \textbf{Pericolosità};
+	\item \textbf{Precauzioni};
+	\item \textbf{Piano di contingenza};
 \end{itemize}
 
 \myparagraph{Metriche}
 
 \subsubsection{Coordinamento}
-\myparagraph{Scopo dell'attività}
+\myparagraph{Scopo dell'attività}\label{PO_Coordinamento_Scopo}
 L'attività di Coordinamento ha lo scopo di definire come vengono gestite le comunicazioni all'interno del gruppo \Gruppo e tra il gruppo e soggetti esterni.
 \myparagraph{Descrizione della sezione}
 La sezione presenta le norme che il gruppo segue per le comunicazioni e le riunioni.
@@ -148,9 +154,9 @@ I membri utilizzano per le comunicazioni interne il gruppo Telegram appositament
 \paragraph*{Comunicazioni esterne}
 I soggetti esterni con cui il gruppo può comunicare sono: 
 \begin{itemize}
-	\item \textbf{I committenti} \VT e \CR;
+	\item \textbf{I committenti} \VT\ e \CR;
 	\item \textbf{L'azienda \Proponente} rappresentata da ;
-	\item \textbf{Gruppi concorrenti} che lavorano allo stesso progetto \NomeProgetto individuati in ;
+	\item \textbf{Gruppi concorrenti} che lavorano allo stesso progetto \NomeProgetto\ individuati in \textit{Milo Ertola} e \textit{Alessandro Maccagnan};
 \end{itemize}
 Per le comunicazioni con il proponente si rimanda alla sezione \S\ref{Rapporti RedBabel}. \\
 Le comunicazioni con i committenti avvengono esclusivamente tramite l'email del gruppo
@@ -167,18 +173,18 @@ Se e quando la situazione attuale legata all'emergenza sanitaria migliorerà e s
 Tra un incontro e un altro viene creato un documento condiviso in Google Drive nel quale ogni componente può inserire gli argomenti che vuole trattare nel prossimo incontro, questi costiuiranno l'ordine del giorno della riunione.
 \paragraph*{Incontri esterni}
 Negli incontri esterni, assieme ai membri del gruppo, sono coinvolti anche uno o più rappresentanti dell'azienda proponente.
-Gli incontri esterni con l'azienda proponente avvengono secondo gli accordi (vedi sezione \S\ref{Rapporti RedBabel}). Se si necessita di discutere con i committenti il \Responsabile ha il compito di contattarli e organizzare l'incontro secondo le disponibilità del \VT/\CR
-\myparagraph{Norme generali}
+Gli incontri esterni con l'azienda proponente avvengono secondo gli accordi (vedi sezione \S\ref{Rapporti RedBabel}). Se si necessita di discutere con i committenti il \Responsabile\ ha il compito di contattarli e organizzare l'incontro secondo le disponibilità del \VT\ e del \CR.
+\myparagraph{Norme generali}\label{NormeGenerali}
 I componenti del gruppo si impegnano a:
 \begin{itemize}
 	\item Essere il più possibile reperibili;
 	\item Informare tempestivamente il gruppo in caso di promblemi di salute e/o famigliare che non cosentono il corretto svolgimento dei propri compiti;
-	\item Aggiornare il \Responsabile a intervalli regolari rispetto il lavoro in svolgimento;
+	\item Aggiornare il \Responsabile\ a intervalli regolari rispetto il lavoro in svolgimento;
 	\item Informare tempestivamente il gruppo se si hanno difficoltà nello svolgimento dei compiti di propria competenza.
 \end{itemize}
 
 \subsection{Gestione dell'infrastruttura}
-\subsubsection{Scopo del processo}
+\subsubsection{Scopo del processo}\label{PO_GestioneInfrastruttura_Scopo}
 Il Processo di Gestione dell'infrastruttura ha lo scopo di stabilire tutti gli strumenti utilizzati per gestire l'infrastruttura necessaria per tutti gli altri processi.
 \subsubsection{Descrizione della sezione}
 La sezione indica quali strumenti vengono utilizzati dal gruppo per il coordinamento e la pianificazione del lavoro durante la realizzazione del progetto.
@@ -188,11 +194,13 @@ I componenti del gruppo utilizzano quanto previsto di seguito per operare senza 
 Gli strumenti utilizzati dal gruppo sono:
 \begin{itemize}
 	\item \textbf{\textit{Zoom}}: strumento utilizzato per le video-conferenze tra i membri del gruppo.
-	\item \textbf{\textit{Telegram}}: strumento di messaggistica istantanea basato su cloud, utilizzato dal gruppo \Gruppo per le comunicazioni tra i vari membri.
+	\item \textbf{\textit{Telegram}}: strumento di messaggistica istantanea basato su cloud, utilizzato dal gruppo \Gruppo\ per le comunicazioni tra i vari membri.
 	\item \textbf{\textit{Gmail}}: strumento open-source di posta elettronica, utilizzato per gestire la casella e-mail del gruppo.
 	\item \textbf{\textit{Google Drive}}: servizio web basato su cloud per la memorizzazione e condivisione di file, utilizzato dal gruppo per condividere file utili ai propri membri.
+	\item \textbf{\textit{Google Calendar}}: servizio web basato su cloud utilizzato per avere accesso ad un calendario come in cui segnare incontri e impegni personali.
 	\item \textbf{\textit{Slack}}: strumento collaborativo aziendale, utilizzato per inviare messaggi in modo istantaneo ai membri di un team di lavoro. Come indicato nella sezione \S\ref{Rapporti RedBabel} viene utilizzato per eventuali comunicazioni con il proponente \Proponente.
 	\item \textbf{\textit{Google Meet}}: strumento utilizzato per le video-conferenze tra i membri del gruppo e il proponente \Proponente.
+	\item \textbf{GanttProject}: utilizzato per la Pianificazione e la realizzazione dei \glo{diagrammi di Gantt}. 
 \end{itemize}
 
 \subsection{Miglioramento del processo}
@@ -207,11 +215,8 @@ La sezione analizza le tre attività principali del Processo di Miglioramento, o
 \end{itemize}
 \subsubsection{Aspettative}
 Il gruppo si pone come aspettativa di questo processo la pianificazione del lavoro nel rispetto del principio di miglioramento continuo.
-\subsubsection{Istituzione del processo}
-Viene seguito un meccanismo di controllo per sviluppare, monitorare, controllare e migliorare i processi.
-\subsubsection{Valutazione del processo}
-Per assicurare l'efficacia e l'efficienza dei processi viene eseguita una loro revisione a intervalli regolari.
-\subsubsection{Miglioramento del processo}
+\subsubsection{Norme generali}\label{PO_NormeGenerali}
+All'interno del \PdQv{}\ vengono inseriti gli obiettivi e le metriche di qualità per valutare l'andamento delle attività di ogni processo. Qualora si presentassero problemi il membro del gruppo deve avvertire tempestivamente il gruppo che procederà ad una eventuale modifica di quanto pianificato. Periodicamente vengono calcolate le qualità previste.
 
 \subsection{Formazione del personale}
 \subsubsection{Scopo del processo}
@@ -220,5 +225,5 @@ Il Processo di Formazione consente di pianificare la preparazione dei componenti
 La sezione comprende le norme stabilite dal gruppo per l'autonoma fomazione dei componenti.
 \subsubsection{Aspettative}
 Attraverso questo processo il gruppo intende acquisire le competenze necessarie per poter realizzare il prodotto con la qualità stabilita in modo efficace ed efficiente.
-\subsubsection{Decisioni sulla formazione}
+\subsubsection{Decisioni sulla formazione}\label{DecisioniFormazione}
 I membri del gruppo provvedono ad approfondire le proprie conoscenze e a colmare le proprie lacune sulle tecnologie e sugli strumenti che vengo utilizzati durante tutti i processi. I membri più esperti hanno il compito di condividere le proprie conoscenze per velocizzare il Processo di Formazione secondo il principio di miglioramento continuo. 

@@ -1,5 +1,5 @@
 \subsubsection{Progettazione}
-\myparagraph{Scopo dell'attività} 
+\myparagraph{Scopo dell'attività} \label{PS_Progettazione_Scopo}
 La progettazione ha lo scopo di definire quale sarà l'architettura logica del prodotto, viene svolta dai \textit{Progettisti} prima dell'attività di codifica. Una buona architettura consente di:
 \begin{itemize}
 	\item Ridurre la complessità del prodotto al fine di facilitare l'attività di codifica;
@@ -13,7 +13,7 @@ La sezione contiene le norme relative all'attività di Progettazione che i compo
 \myparagraph{Aspettative}
 Il gruppo per questa attività si aspetta di definire l'architettura logica del prodotto rispettandone le caratteristiche di qualità.
 
-\myparagraph{Qualità dell'attività di Progettazione}
+\myparagraph{Qualità dell'attività di Progettazione}\label{QualitàProgettazione}
 Un'architettura di buona qualità ha come caratteristiche misurabili e osservabili oggettivamente:
 \begin{itemize}
 	\item \textbf{Sufficienza: }capace di soddisfare tutti i requisiti indicati nell'\AdRv;
@@ -28,7 +28,7 @@ Un'architettura di buona qualità ha come caratteristiche misurabili e osservabi
 Le sue componti devono essere semplici, coese nel raggiungimento degli obiettivi, incapsulate e con un basso livello di accoppiamento.
 I \textit{Progettisti} deveno assicurare che l'architettura e le sue componenti presentino le caratteristiche descritte e superino dei test di qualità da loro definiti.
 
-\myparagraph{Periodi della Progettazione}
+\myparagraph{Periodi della Progettazione}\label{PeriodiProgettazione}
 L'attività di Progettazione si articola in due parti: 
 \paragraph*{Progettazione Architetturale} 
 Vengono definite le specifiche dell'architettura e delle componenti del prodotto, delle loro interazioni con le restanti parti del sistema e dei test di integrazione. Al termine di questo periodo di progettazione si ottiene la \textit{\glo{Technology Baseline}} del progetto che conterrà: 
@@ -48,7 +48,7 @@ Vengono definite le specifiche di dettaglio dell'architettura suddividendo il si
 	\item \textbf{Tracciamento delle classi:} associazione tra requisiti e classi che li soddisfano.
 \end{itemize}
 
-\myparagraph{Diagrammi UML 2.0}
+\myparagraph{Diagrammi UML 2.0}\label{DiagrammiUML}
  I Diagrammi UML sono diagrammi realizzati in linguaggio UML, utilizzati per chiarire le scelte progettuali adottate e ridurre eventuali ambiguità. 
 Di seguito vengono analizzati i diagrammi utilizzati.
 \paragraph*{Diagrammi delle classi}
@@ -65,10 +65,10 @@ Gli elementi di un diagramma di classe sono:
 		\begin{itemize}
 			\item -: visibilità privata;
 			\item +: visibilità pubblica;
-			\item +: visibilità protetta;
-			\item +: visibilità di package;
+			\item \#: visibilità protetta;
+			\item $\sim$: visibilità di package;
 		\end{itemize} pubblica, protetta o privata;
-		\item \textbf{Nome:} nome dell'attributo, se l'attributo èe \textit{costante} il nome deve essere scritto in maiuscolo, se di tipo \textit{statico} il nome va sottolineato;
+		\item \textbf{Nome:} nome dell'attributo, se l'attributo è \textit{costante} il nome deve essere scritto in maiuscolo, se di tipo \textit{statico} il nome va sottolineato;
 		\item \textbf{Tipo:} tipo di dato dell'attributo;
 		\item \textbf{Molteplicità:} occorrenze dell'attributo nella classe, il campo è opzionale;
 		\item \textbf{Valore di default:} valore predefinito dell'attributo;
@@ -97,7 +97,7 @@ Le relazioni di dipendenza previste sono:
 			\item \textbf{0..*:} A possiede 0 o più istanze di B;
 			\item \textbf{*:} A possiede più istanze di B;
 		\end{itemize}
-		\item \textbf{Aggregazione:} la classe A possiede un riferimento ad un oggetto di un'altra classe B che può essere condiviso, l'aggregato non ha senso di esistere senza aggregante;
+		\item \textbf{Aggregazione:} la classe A possiede un riferimento ad un oggetto di un'altra classe B che può essere condiviso, l'aggregato B non ha senso di esistere senza l'aggregante A;
 		\item \textbf{Composizione:} la classe A possiede un oggetto di un'altra classe B, solo l'oggetto intero può creare e distruggere le sue parti;
 		\item \textbf{Generalizzazione:} la classe A generalizza un'altra classe B se ogni oggetto di B è anche un oggetto di A.
 		\item \textbf{Subtyping:}  la classe A implementa l'interfaccia B.
@@ -150,7 +150,7 @@ I elementi utilizzati in questi diagrammi sono i seguenti:
 \end{itemize}
 
 \paragraph*{Diagrammi dei casi d'uso}
-Un caso d'uso è un'insieme di scenari (sequenze di azioni) che hanno in comune uno finale per un utente. I diagrammi dei casi d'uso sono una rappresentazione grafica dei casi d'uso analizzati nel documento di \AdRv. Vengono messi in evidenza:
+Un caso d'uso è un'insieme di scenari (sequenze di azioni) che hanno in comune uno scopo finale per un utente. I diagrammi dei casi d'uso sono una rappresentazione grafica dei casi d'uso analizzati nel documento di \AdRv. Vengono messi in evidenza:
 \begin{itemize}
 	\item \textbf{Attori:} rappresentano tutto ciò che è esterno al sistema e interagisce con esso;
 	\item \textbf{Use Case:} rappresentano le attività associate al sistema.

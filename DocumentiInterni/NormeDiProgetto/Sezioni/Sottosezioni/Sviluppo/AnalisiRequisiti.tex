@@ -10,16 +10,16 @@ L'individuazione dei requisiti consente di:
 \end{itemize}
 
 \myparagraph{Descrizione della sezione}
-La sezione contiene le norme relative all'attività di Analisi dei Requisiti e del relativo documento \AdR che i componenti del gruppo, in particolare gli \textit{Analisti}, devono seguire.
+La sezione contiene le norme relative all'attività di Analisi dei Requisiti e del relativo documento \AdRv\ che i componenti del gruppo, in particolare gli \textit{Analisti}, devono seguire.
 
 \myparagraph{Aspettative} 
-L'attività di analisi dei requisiti ha come obiettivo la redazione del documento di \AdR, che comprende in modo formale tutti i requisiti che il prodotto software deve soddisfare.
+L'attività di analisi dei requisiti ha come obiettivo la redazione del documento di \AdRv, che comprende in modo formale tutti i requisiti che il prodotto software deve o è desiderabile soddisfare.
 
 \myparagraph{Struttura del documento}
 La struttura del documento comprenderà:
 \begin{itemize}
 	\item \textbf{Descrizione:} Definisce le caratteristiche, i vincoli e gli obiettivi del prodotto;
-	\item \textbf{Casi d'uso:} Comprende la rappresentazione attraverso i diagrammi UML dei vari scenari che l'utente del prodotto può incontrare, con relative informazioni utili alla loro comprensione.
+	\item \textbf{Casi d'uso:} Contiene tutte le informazioni utili per descrivere gli scenari che l'utente del prodotto può incontrare, comprendendo anche la loro rappresentazione attraverso i diagrami UML.
 	\item \textbf{Requisiti:} Viene inserita una tabella contenente:
 	\begin{itemize}
 		\item Codice identificativo del requisito;
@@ -28,11 +28,11 @@ La struttura del documento comprenderà:
 	\end{itemize} 
 \end{itemize}
 
-\myparagraph{Classificazione dei requisiti}
+\myparagraph{Classificazione dei requisiti}\label{ClassificazioneRequisiti}
 Tutti i requisti sono individuati da un codice identificativo univoco, non modificabile dopo l'assegnazione, rappresentato nel seguente modo:
 
 \begin{center}
-	\textbf{R[Tipologia][Rilevanza][Codice]}
+	\textbf{R[Tipologia][Rilevanza][Numero][\_Codice]}
 \end{center}
 
 \begin{itemize}
@@ -41,17 +41,19 @@ Tutti i requisti sono individuati da un codice identificativo univoco, non modif
 		\item \textbf{V:} requisito di \textit{Vincolo};
 		\item \textbf{F:} requisito \textit{Funzionale};
 		\item \textbf{P:} requisito \textit{Prestazionale};
-		\item \textbf{Q:} requisito di \textit{Qualità};
+		\item \textbf{Q:} requisito di \textit{Qualità}.
 	\end{itemize}
 
 	\item \textbf{Rilevanza:} rappresenta l'utilità del requisito che va negoziata e concordata con il committente, può assumere i seguenti valori:
 	\begin{itemize}
 		\item \textbf{O:} requisito \textit{Obbligatorio}, deve essere soddisfatto perchè irrinunciabile per qualcuno degli stakeholder;
 		\item \textbf{D:} requisito \textit{Desiderabile}, non strettamente necessario ma aumenta la completezza del prodotto. Questi requisiti vengono negoziati con l'azienda \Proponente;
-		\item \textbf{O:} requisito \textit{Opzionale}, relativamente utile anch'esso contrattabile con l'azienda \Proponente;
+		\item \textbf{O:} requisito \textit{Opzionale}, relativamente utile anch'esso contrattabile con l'azienda \Proponente.
 	\end{itemize}
 
-	\item \textbf{Codice:} identifica il caso d'uso generico e gli eventuali sottocasi ad esso associati, è rappresentato da:
+	\item \textbf{Numero:} numero progressivo che parte da 1.
+	
+	\item \textbf{Codice:}opzionale, identifica il caso d'uso generico e gli eventuali sottocasi ad esso associati, è rappresentato da:
 	\begin{center}
 		\textbf{[NumeroCasoBase](.NumeroSottoCaso)*}
 	\end{center}
@@ -72,7 +74,7 @@ Tutti i requisti sono individuati da un codice identificativo univoco, non modif
 	\textcolor{white}{\textbf{Descrizione}}&
 	\textcolor{white}{\textbf{Fonte}}\\	
 	
-	RFO1 & ......... & Capitolato\\
+	RFO1\_1.1 & ......... & Capitolato\\
 	
 \end{tabular}
 \end{table}
@@ -97,8 +99,8 @@ I casi d'uso analizzati comprenderanno:
 	\item \textbf{Descrizione: }breve descrizione testuale del caso d'uso;
 	\item \textbf{Attori: }rappresentano gli utenti che hanno un'interazione con il sistema, si dividono in:
 	\begin{itemize}
-		\item \textbf{Attori primari: }svolgono attivamente il caso d'uso per raggiungere l'obiettivo;
-		\item \textbf{Attori secondari: }sono entità estrene al sistema che supportano gli attori primari nel raggiungere il loro obiettivo.
+		\item \textbf{Attori primari: }svolgono attivamente il caso d'uso;
+		\item \textbf{Attori secondari: }sono entità estrene al sistema che supportano gli attori primari nelle loro attività.
 	\end{itemize}
 	\item \textbf{Pre-condizioni: }condizioni del sistema prima degli eventi che determinano il caso d'uso;
 	\item \textbf{Post-condizioni: }condizioni del sistema dopo il verificarsi degli eventi che hanno determinato il caso d'uso;
@@ -110,7 +112,7 @@ I casi d'uso analizzati comprenderanno:
 	\item \textbf{Generalizzazioni: }opzionali, si ha generalizzazione quando si intende aggiungere o modificare caratteristiche base di un caso d'uso ad un altro caso d'uso;
 \end{itemize}
 
-\myparagraph{Qualità dell'Analisi dei Requisiti}
+\myparagraph{Qualità dell'Analisi dei Requisiti}\label{QualitàAnalisi}
 Come indicato dallo standard IEEE 830-1998, la specifica deve essere:
 \begin{itemize}
 	\item \textbf{Priva di ambiguità:} i requisiti devono rispettare chiaramente i bisogni dell'utente finale del prodotto;
