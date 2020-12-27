@@ -22,8 +22,8 @@ jobs:
     strategy:
       matrix:
         include:
-#           - working_directory: DocumentiInterni/StudioDiFattibilita
-#             root_file: "StudioDiFattibilita_v[0-9]+.[0-9]+.[0-9]+"
+          - working_directory: DocumentiInterni/StudioDiFattibilita
+            root_file: "StudioDiFattibilita_v[0-9]+.[0-9]+.[0-9]+"
               
 #           - working_directory: DocumentiInterni/NormeDiProgetto
 #             root_file: "NormeDiProgetto_v[0-9]+.[0-9]+.[0-9]+"
