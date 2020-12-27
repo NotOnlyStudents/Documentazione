@@ -1,4 +1,4 @@
-\section{Valutazione del capitolato scelto: C2 - \NomeProgetto}
+\section{Valutazione del capitolato scelto: C2 - \NomeProgetto}\label{C2}
 \subsection{Informazioni sul capitolato}
 \begin{itemize}
 	\item \textbf{Nome:} \textit{\NomeProgetto}
@@ -7,38 +7,38 @@
 \end{itemize}
 
 \subsection{Descrizione del capitolato}
-Il \glo{capitolato} richiede lo sviluppo di una piattaforma di \glo{e-commerce} generico.
+Il \glo{capitolato} richiede lo sviluppo di una piattaforma di \glo{e-commerce} generico, in grado di favorire l'incontro tra commercianti e clienti. All'interno di \NomeProgetto\ sarà possibile controllare la gestione dei prodotti da parte dei commercianti registrati, facilitando la ricerca e l'acquisto da parte dei clienti che accedono alla piattaforma come ospiti o utenti registrati.
 
 \subsection{Scopo del capitolato}
 Lo scopo del capitolato consiste nello sviluppo di una piattaforma e-commerce con architettura basata su \glo{micro-servizi} e \glo{Serverless}.
 La piattaforma consisterà in un sito web che dovrà essere composto dalle seguenti parti:
 \begin{itemize}
-	\item home page;
-	\item pagine di elenco dei prodotti;
-	\item pagine di descrizione del prodotto;
-	\item carrello della spesa;
-	\item pagina di checkout;
-	\item pagina di account.
+	\item Home page;
+	\item Pagine di elenco dei prodotti;
+	\item Pagine di descrizione del prodotto;
+	\item Carrello della spesa;
+	\item Pagina di checkout;
+	\item Pagina di account.
 \end{itemize}
 
 Dovrà essere in grado di supportare i seguenti ruoli:
 \begin{itemize}
-	\item Amministratore, l'utente con questo ruolo può:
+	\item \textbf{Amministratore}: l'utente con questo ruolo può:
 		\begin{itemize}
-			\item distribuire l'applicazione nel cloud;
-			\item gestire la configurazione delle integrazioni di terze parti.
+			\item Distribuire l'applicazione nel cloud;
+			\item Gestire la configurazione delle integrazioni di terze parti.
 		\end{itemize}
-	\item Commerciante, l'utente con questo ruolo può:
+	\item \textbf{Commerciante}: l'utente con questo ruolo può:
 		\begin{itemize}
-			\item avere una panoramica di tutti gli ordini;
-			\item gestire totalmente i vari prodotti da vendere.
+			\item Avere una panoramica di tutti gli ordini;
+			\item Gestire totalmente i vari prodotti da vendere.
 		\end{itemize}
-	\item Cliente, l'utente con questo ruolo può:
+	\item \textbf{Cliente}: l'utente con questo ruolo può:
 	\begin{itemize}
-		\item cercare, filtrare e aggiungere al carrello come ospite o utente;
-		\item se connesso può aggiornare le informazioni del suo profilo;
-		\item eliminare l'account creato;
-		\item procedere con il pagamento dei prodotti selezionati solo se ha fatto il login.
+		\item Cercare, filtrare e aggiungere al carrello prodotti come ospite o utente;
+		\item Se connesso può aggiornare le informazioni del suo profilo;
+		\item Eliminare l'account creato;
+		\item Procedere con il pagamento dei prodotti selezionati solo se ha fatto il login.
 	\end{itemize}
 \end{itemize}
 
@@ -53,24 +53,24 @@ L'azienda consiglia di utilizzare:
 \end{itemize}
 
 \subsection{Vincoli}
-Il progetto deve operare in 3 ambienti: \glo{Locale}, \glo{Test} e \glo{Staging}.
-L'ambiente di Staging deve essere accessibile pubblicamente.
+Il progetto deve operare in 3 ambienti: \glo{Locale}, \glo{Test} e \glo{Staging}. L'ambiente di Staging deve essere accessibile pubblicamente.
 
 Per raggiungere gli obiettivi minimi del progetto viene richiesto che:
 \begin{itemize}
-	\item il front-end sia implementato in \glo{Next.js};
-	\item il back-end sia implementato in Serverless usando \glo{Typescript};
-	\item l'integrazione di servizi di terze parti deve essere implementata con tecnologia Serveless usando Typescript;
-	\item il progetto deve essere \glo{production-ready}, predisponendo anche un ambiente opzionale \glo{production};
-	\item ci sia l'integrazione con un fornitore di servizi di pagamento.
+	\item Il front-end sia implementato in \glo{Next.js};
+	\item Il back-end sia implementato in Serverless usando \glo{Typescript};
+	\item L'integrazione di servizi di terze parti deve essere implementata con tecnologia Serveless usando Typescript;
+	\item Il progetto deve essere \glo{production-ready}, predisponendo anche un ambiente opzionale \glo{production};
+	\item Ci sia l'integrazione con un fornitore di servizi di pagamento.
 \end{itemize}
 
 \subsection{Aspetti positivi}
 \begin{itemize}
 	\item 3 componenti del gruppo hanno già sviluppato e conoscono \glo{Javascript}.
-	\item Le tecnologie proposte stimolano i componenti del gruppo ad imparare ed a lavorare con esse.
+	\item Le tecnologie proposte stimolano i componenti del gruppo a imparare e a lavorare con esse.
 	\item Le tecnologie proposte stanno sempre di più prendendo spazio nell'ambito del lavoro, specialmente lo sviluppo Serverless e lo sviluppo WEB con Typescript.
 	\item L'uso di un'architettura a micro-servizi e Serverless favorisce la parallelizzazione dello sviluppo del back-end.
+	\item Il prodotto da realizzare è concreto rispetto alla realtà, oggi gli e-commerce vengono sempre più utilizzati.
 	\item L'azienda proponente è molto orientata al dialogo e alla comunicazione.
 \end{itemize}
 

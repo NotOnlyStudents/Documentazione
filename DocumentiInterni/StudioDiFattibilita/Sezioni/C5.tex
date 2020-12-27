@@ -1,4 +1,4 @@
-\section{Capitolato C5 - PORTACS}
+\section{Capitolato C5 - PORTACS}\label{C5}
 \subsection{Informazioni sul capitolato}
 \begin{description}
 	\item \textbf{Nome:} \textit{PORTACS: piattaforma di controllo mobilità autonoma}
@@ -11,28 +11,28 @@ Il capitolato richiede lo sviluppo di un sistema \glo{real-time} in grado di ges
 
 \subsection{Scopo del capitolato}
 Lo scopo del capitolato consiste nello sviluppare un motore real-time che si occupa di trovare il migliore percorso da far percorrere alla singola unità.
-La componente server deve segnalare ad ogni unità la prossima azione da fare in base ai prossimi punti e alle posizioni delle altre entità. Inoltre, deve essere presente una mappa real-time che consenta la visualizzazione di ogni unità e dei loro movimenti all'interno della struttura.
+La componente server deve segnalare ad ogni unità la prossima azione da fare in base ai prossimi punti e alle posizioni delle altre entità. Deve essere presente una mappa real-time che consenta la visualizzazione di ogni unità e dei loro movimenti all'interno della struttura.
 Ogni unità dovrà implementare un'interfaccia grafica dove vengono indicate le informazioni caratterizzanti.
 
 \subsection{Tecnologie coinvolte}
 Il capitolato offre libera scelta su come implementare l'applicazione, l'unico limite è nell'utilizzo della tecnologia \glo{Docker} per il rilascio. Il gruppo aveva pensato di utilizzare le seguenti tecnologie:
 \begin{itemize}
-	\item motore real-time: si pensava di usare \glo{Java}, per la facilità di gestione degli \glo{oggetti} e dei \glo{thread};
-	\item monitor real-time: utilizzo di \glo{Tomcat} e \glo{Angular} per l'interfaccia utente;
-	\item simulatori delle unità operative: si ipotizzava di optare per l'uso di Java così da facilitare la connessione, attraverso \glo{socket}, al motore real-time.
+	\item Motore real-time: si pensava di usare \glo{Java}, per la facilità di gestione degli \glo{oggetti} e dei \glo{thread};
+	\item Monitor real-time: utilizzo di \glo{Tomcat} e \glo{Angular} per l'interfaccia utente;
+	\item Simulatori delle unità operative: si ipotizzava di optare per l'uso di Java così da facilitare la connessione, attraverso \glo{socket}, al motore real-time.
 \end{itemize}
 
 \subsection{Vincoli}
 Per raggiungere gli obiettivi minimi del progetto viene richiesto che:
 \begin{itemize}
-\item il sistema sviluppato deve essere in real-time;
-\item sia presente una scacchiera o mappa con la definizione delle percorrenze, relativi vincoli e punti di interesse;
-\item le N unità dovranno essere definite da:
+\item Il sistema sviluppato sia in real-time;
+\item Sia presente una scacchiera o mappa con la definizione delle percorrenze, relativi vincoli e punti di interesse;
+\item Le N unità dovranno essere definite da:
 	\begin{itemize}
-	\item identificativo di sistema;
-	\item velocità massima;
-	\item posizione iniziale;
-	\item lista dei punti di interesse da attraversare.
+	\item Identificativo di sistema;
+	\item Velocità massima;
+	\item Posizione iniziale;
+	\item Lista dei punti di interesse da attraversare.
 	\end{itemize}
 \end{itemize}
 
