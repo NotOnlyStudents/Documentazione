@@ -26,16 +26,16 @@ dove
 	\item \textbf{[Y]} corrisponde ad una versione del documento verificata, inizia da 0 e riparte da questo valore ad ogni incremento di X;
 	\item \textbf{[Z]} parte da zero e viene incrementato ad ogni modifica del documento, la numerazione riparte da zero ad ogni incremento di X o Y.
 \end{itemize}
-Il Controllo di versione si appogia su un repository creato in \textit{Github} la cui struttura viene spiegata nella sezione seguente.
+Il Controllo di versione si appoggia su un repository creato in \textit{Github} la cui struttura viene spiegata nella sezione seguente.
 
-\subsubsection{Struttura della repository}
+\subsubsection{Struttura della repository}\label{StrutturaRepo}
 La repository del gruppo \Gruppo\ è accessibile all'indirizzo
 \begin{center}
 	\textbf{https://github.com/NotOnlyStudents}
 \end{center}
-L'utilizzo di questo strumento permette a ciascun componente di lavorare sui configuration items senza rischio di sovrascritture consentendo allo stesso tempo di controllare l'andamento del lavoro. 
+L'utilizzo di questo strumento permette a ciascun componente di lavorare sui \glo{configuration items} senza rischio di sovrascritture consentendo allo stesso tempo di controllare l'andamento del lavoro. 
 All'interno del repository viene divisa la documentazione dal codice software.
-\myparagraph{Repository per la documentazione}
+\myparagraph{Repository per la documentazione}\label{RepoDoc}
 Il repository per la documentazione è composto da diversi \textbf{branch}:
 \begin{itemize}
 	\item \textbf{master} su cui vengono riportati i documenti approvati dal \Responsabile\ e pronti nella loro versione definitiva ad essere presentati;
@@ -45,10 +45,9 @@ Il repository per la documentazione è composto da diversi \textbf{branch}:
 All'interno del repository troviamo le cartelle così organizzate:
 \begin{itemize}
 	\item \textbf{Immagini}: contiene le immagini utilizzate all'interno dei documenti;
-	\item \textbf{Utilities}: contiene file di utilità per la produzione di tutti i documenti;
+	\item \textbf{Utilita}: contiene file di utilità per la produzione di tutti i documenti;
 	\item \textbf{DocumentiInterni}: contiene le cartelle dei documenti di utilità per il gruppo e marginale per proponente e committenti;
-	\item \textbf{DocumentiPubblici}: contiene le cartelle dei documenti di utilità per il gruppo,per il proponente e per i committenti;
-	\item \textbf{Templates}: contiene i file template utilizzati per la redazione dei documenti.
+	\item \textbf{DocumentiPubblici}: contiene le cartelle dei documenti di utilità per il gruppo, per il proponente e per i committenti.
 \end{itemize}
 \myparagraph{Modifiche al repository}\label{ModificaRepo}
 Nel caso fosse necesario modificare file all'interno del ramo master è necessaria una \textit{pull request} con conseguente approvazione da almeno un altro elemento del gruppo.
