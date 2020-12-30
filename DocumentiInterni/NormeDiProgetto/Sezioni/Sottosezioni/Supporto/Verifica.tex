@@ -1,0 +1,79 @@
+\subsection{Verifica}\label{Verifica}
+\subsubsection{Scopo dell'attività} \label{PSup_Verifica_Scopo}
+L'attività di Verifica ha lo scopo di accertare che quanto eseguito durante il periodo preso in considerazione non abbia introdotto errori e quindi che quanto realizzato sia corretto e completo.
+\subsubsection{Descrizione della sezione} 
+La sezione descrive come avviene l'attività di verifica da parte del gruppo \Gruppo\ per la documentazione e il codice.
+\subsubsection{Aspettative}
+Utilizzando le norme presenti il gruppo si aspetta di ottimizzare e uniformare il processo di verifica. 
+L'attività di Verifica viene attuata attraverso l'Analisi Statica e l'Analisi Dinamica. 
+\subsubsection{Analisi Statica}
+L'Analisi Statica studia la documentazione e il codice accertando che siano conformi alle regole stabilite, non vi siano difetti e presentino le proprietà desiderate.
+Il \textit{Verificatore} seguirà uno dei seguenti metodi:
+\begin{itemize}
+	\item \textbf{Walkthrough:} procede ad una lettura critica dell'intero prodotto in esame alla ricerca di difetti;
+	\item \textbf{Inspection:} procede ad una lettura critica di una parte prodotto in esame, focalizzando la ricerca su problemi che si presentano più frequentemente indicati nella Lista di Controllo all'interno del \PdQv{}.
+\end{itemize}
+
+\myparagraph{Verifica della documentazione}\label{VerificaDocumentazione}
+Il \textit{Verificatore} incaricato procede nel seguente modo:
+\begin{itemize}
+	\item Se non ancora creata, crea l'issue in GitHub;
+	\item Sposta l'issue in "IN PROGRESS";
+	\item Rilegge il documento secondo uno dei due metodi previsti, nel caso di Inspection valuta l'aggiornamento della Lista di Controllo;
+	\item Se riscontra problemi logici, si accorda con il redattore del documento per la correzione. 
+	\item Procede al controllo ortografico automatico utilizzando \textit{Aspell};
+	\item Sposta l'issue in "DONE".
+\end{itemize}
+
+\myparagraph{Verifica del codice}\label{VerificaCodice}
+Il \textit{Verificatore} incaricato procede nel seguente modo:
+\begin{itemize}
+	\item Se non ancora creata, crea l'issue in GitHub;
+	\item Sposta l'issue in "IN PROGRESS";
+	\item Rilegge il codice secondo uno dei due metodi previsti al fine di:
+	\begin{itemize}
+		\item Accertare che il codice esegua nella sequenza specificata e sia ben strutturato;
+		\item Localizzare codice non raggiungibile;
+		\item Identificare parti di codice che possano non terminare;
+		\item Accertare che nessun cammino acceda a variabili prive di valore;
+		\item Rilevare anomalie;
+		\item Provare la correttezza del codice sorgente rispetto ai requisiti;
+		\item Assicurare che sia stato seguito quanto scritto nelle \NdPv{}\ nella sezione \S\ref{CodificaConvenzioni}.
+	\end{itemize}
+	 Nel caso di Inspection valuta l'aggiornamento della Lista di Controllo;
+	\item Se riscontra problemi, si accorda con il redattore del documento per la correzione. 
+	\item Sposta l'issue in "DONE".
+\end{itemize}
+
+\subsubsection{Analisi Dinamica}
+L'Analisi Dinamica procede a verificare il programma durante la sua esecuzione. Per procedere a questa attività vengono utilizzati dei test ripetibili e automatizzati con specifici:
+\begin{itemize}
+	\item \textbf{Ambiente di esecuzione};
+	\item \textbf{Input e Output};
+	\item \textbf{Procedure};
+\end{itemize}
+
+\myparagraph{Tipologia di test effettuati}\label{Tests}
+I test permettono di valutare se il programma svolge i tasks per cui è stato sviluppato. Il \PdQv{}\ specifica quali e quanti test effettuare.
+\paragraph*{Test d'unità}
+I test d'unità consistono nell'isolare e testare la parte più piccola di software, chiamata appunto unità. Lo scopo è di valutare la logica interna del codice d'unità in modo da poterne stabilire il corretto funzionamento. 
+\paragraph*{Test d'integrazione}
+Applicati alle componenti della progettazione architetturale, hanno lo scopo di valutare che l'aggregazione delle parti del sistema non introduca errori nel software prodotto.
+\paragraph*{Test di regressione}
+Questi test sono necessari a verificare che la modifica di una parte P di S non causi errori in P, in S o in una parte in relazione con essi. Le modifiche apportate non devono pregiudicare le funzionalità già verificate. 
+\paragraph*{Test di sistema}
+Vengono effettuati per valutare che il prodotto soddisfi tutti i requisiti software previsti.
+
+\myparagraph{Procedura di verifica}\label{ProceduraVerifica}
+Il \textit{Verificatore} incaricato procede nel seguente modo:
+\begin{itemize}
+	\item Se non ancora creata, crea l'issue in GitHub;
+	\item Sposta l'issue in "IN PROGRESS";
+	\item Esegue tutti i test previsti;
+	\item Se riscontra problemi, si accorda con il redattore del codice per la correzione. 
+	\item Sposta l'issue in "DONE".
+	\item Avverte i redattori incaricati ad aggiornare il \PdQv{} con i risultati ottenuti.
+\end{itemize}
+
+
+\subsubsection{Strumenti}
