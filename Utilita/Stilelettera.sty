@@ -1,0 +1,33 @@
+\ProvidesPackage{Stilelettera}	%il pacchetto per le lettere
+\usepackage[utf8]{inputenc}
+\usepackage{graphbox}	% permette di modificare i margini
+\usepackage{hyperref}
+\usepackage[top=2.0cm, bottom=4.0cm, left=2.2cm, right=2.2cm]{geometry}
+
+%%Pacchetto per creare la tabella delle modifiche
+\usepackage{multirow}
+\usepackage[table]{xcolor} 
+\usepackage{longtable}
+
+% Colore Links
+\definecolor{blue}{RGB}{6,69,173}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=blue,
+}
+
+%crea una cella per le tabelle in grado di andare a capo con \newline
+\usepackage{array}
+
+% \usepackage{lastpage} %info sul # dell'ultima pagina del documento in caso dopo la metto
+\usepackage{fancyhdr} %per modificare dimensioni,margini, intestazioni e righe a piè di pagina
+
+%%Separare i vari componenti della tabella
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+%%Colori per le tabelle
+%\definecolor{blue}{RGB}{6,69,173}
+\definecolor{celeste}{RGB}{211, 235, 255}
+\definecolor{darkblue}{RGB}{59,77,95}
