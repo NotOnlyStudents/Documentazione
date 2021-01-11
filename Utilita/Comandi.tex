@@ -48,3 +48,28 @@
 \newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\\}
 
 \setcounter{tocdepth}{5}  \setcounter{secnumdepth}{5}
+
+% Registro modifiche
+
+\newcommand{\registroModifiche}[1]{
+	\section*{Registro modifiche documento}
+	{
+		\rowcolors{2}{white}{celeste}
+		\renewcommand{\arraystretch}{1.5}
+		\centering
+		\begin{longtable}{c c C{2.5cm} c c C{3.5cm}}
+			
+			\rowcolor{darkblue}
+			
+			\textcolor{white}{\textbf{Versione}}&
+			\textcolor{white}{\textbf{Data}}&
+			\textcolor{white}{\textbf{Nominativo}}&
+			\textcolor{white}{\textbf{Ruolo}}&
+			\textcolor{white}{\textbf{Verificatore}}&
+			\textcolor{white}{\textbf{Descrizione}}\\	
+			\endhead
+			
+			#1
+		\end{longtable}
+	}
+}
