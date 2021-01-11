@@ -1,13 +1,13 @@
 \section{Capitolato C4 - HD VIZ}\label{C4}
 \subsection{Informazioni sul capitolato}
 \begin{itemize}
-	\item \textbf{Nome:} \textit{HD VIZ: visualizzazione di dati con molte dimensioni}
-	\item \textbf{Proponente:} \textit{Zucchetti Software}
-	\item \textbf{Committenti:} \textit{\VT{} e \CR{}}
+	\item \textbf{Nome:} \textit{HD VIZ: visualizzazione di dati con molte dimensioni}.
+	\item \textbf{\glo{Proponente}:} \textit{Zucchetti Software}.
+	\item \textbf{Committenti:} \textit{\VT{} e \CR{}}.
 \end{itemize}
 
 \subsection{Descrizione del capitolato}
-Il \glo{capitolato} richiede lo sviluppo di un sito WEB per visualizzare dati con molte dimensioni a supporto della fase esplorativa dell'analisi dei dati.
+Il \glo{capitolato} richiede lo sviluppo di un sito WEB per visualizzare dati con molte dimensioni a supporto della \glo{fase} esplorativa dell'analisi dei dati.
 
 \subsection{Scopo del capitolato}
 Lo scopo del capitolato consiste nello sviluppo di un sito WEB che mostrerà dei dati presenti in un database o caricati da un file \glo{CSV}, nelle seguenti visualizzazioni:
@@ -21,20 +21,20 @@ Altre funzionalità che dovrebbero essere aggiunte sono:
 \begin{itemize}
 	\item Visualizzazione dei dati con altri grafici con più di tre dimensioni;
 	\item Utilizzo di funzioni di calcolo della distanza, diverse dalla \glo{distanza Euclidea} in tutte le visualizzazioni che dipendono da tale concetto;
-	\item Utilizzo di \glo{funzioni di forza} diverse da quelle previste in automatico dal grafico \glo{force based} di \glo{D3.js};
+	\item Utilizzo di \glo{funzioni di forza} diverse da quelle previste in automatico dal grafico \glo{force based} di \textit{\glo{D3.js}};
 	\item L'analisi automatica per evidenziare situazioni di particolare interesse;
 	\item L'utilizzo di algoritmi di preparazione del dato per la visualizzazione, cioè anziché eseguire la trasformazione direttamente nella visualizzazione far precedere un passo di trasformazione.
 \end{itemize}
 
 \subsection{Tecnologie coinvolte}
-Lo sviluppo avverrà prevalentemente con tecnologie \glo{HTML}/\glo{CSS}/\glo{JavaScript} utilizzando la libreria D3.js.
-La parte server, di supporto alla presentazione nel browser e utile all'esecuzione delle query ad un database \glo{SQL} o \glo{NoSQL}, potr\'a essere sviluppata in \glo{Java} con \glo{Tomcat} o in Javascript con \glo{Node.js}.
+Lo sviluppo avverrà prevalentemente con tecnologie \textit{\glo{HTML}/\glo{CSS}/\glo{JavaScript}} utilizzando la libreria \textit{D3.js}.
+La parte server, di supporto alla presentazione nel browser e utile all'esecuzione delle query ad un database \textit{\glo{SQL} o \glo{NoSQL}}, potr\'a essere sviluppata in \textit{\glo{Java} con \glo{Tomcat}} o in \textit{Javascript} con \textit{\glo{Node.js}}.
 
 \subsection{Vincoli}
 Per raggiungere gli obiettivi minimi del progetto viene richiesto che:
 \begin{itemize}
 	\item I dati da visualizzare dovranno poter avere almeno fino a 15 dimensioni, ma deve essere possibile visualizzare anche dati con meno dimensioni;
-	\item I dati devono poter essere forniti al sistema di visualizzazione sia con query ad un database che da file in formato CSV preparati precedentemente;
+	\item I dati devono poter essere forniti al sistema di visualizzazione sia con query ad un database che da file in formato \glo{CSV} preparati precedentemente;
 	\item Dovrà presentare almeno le seguenti visualizzazioni:
 	\begin{itemize}
 		\item Scatter plot Matrix: presentazione a riquadri disposti a matrice di tutte le combinazioni di scatter plot;
@@ -48,7 +48,7 @@ Per raggiungere gli obiettivi minimi del progetto viene richiesto che:
 
 \subsection{Aspetti positivi}
 \begin{itemize}
-	\item Tutti i componenti conoscono HTML, CSS e JavaScript impiegate nell'ambito dello sviluppo WEB.
+	\item Tutti i componenti conoscono \textit{HTML, CSS e JavaScript} impiegate nell'ambito dello sviluppo WEB.
 	\item Tratta un ambito moderno come lo studio dei \glo{BigData}.
 \end{itemize}
 
