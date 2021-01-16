@@ -1,0 +1,27 @@
+\section{Descrizione del prodotto} \label{Desc}
+
+\subsection{Caratteristiche del prodotto}
+Il \glo{prodotto} \NomeProgetto{} commissionato da \Proponente{} consiste nello sviluppare una piattaforma generica di \glo{e-commerce} utilizzabile come prodotto illustrativo da vendere ai negozianti, sotto forma di applicazione web accessibile da browser a tre categorie di utenti: utente non autenticato, \glo{acquirente} e venditore. Le necessità di business non sono solo quelle che verranno implementante durante lo svolgimento del \glo{capitolato} ma cambiano continuamente, questo significa che la piattaforma deve essere predisposta e progettata per potersi evolvere facilmente secondo le richieste dei venditori e deve essere integrabile con servizi di terze parti.
+
+\subsection{Analisi della struttura}
+La struttura del prodotto sarà divisa in:
+\begin{itemize}
+    \item \textbf{\glo{Front end} acquirente}: il front end dell'acquirente dovrà occuparsi di offrire un'interfaccia WEB utilizzabile per cercare e filtrare i prodotti, visualizzarne tutti i dettagli, visualizzare possibili sconti applicati e poterne acquistare una certa quantità. Il front end dovrà essere sviluppato con il \glo{framework} \glo{\textit{Next.js}} utilizzando come linguaggio principale \glo{\textit{Typescript}} e avrà il compito di occuparsi del \glo{SSR} oppure del \glo{SSG}.
+    \item \textbf{Front end venditore}: il front end del venditore dovrà occuparsi di offrire un'interfaccia WEB utilizzabile per aggiungere, modificare e eliminare prodotti dalla piattaforma, rifornire la loro quantità se stanno per terminare, avere una panoramica su tutti gli ordini effettuati dagli utenti ed essere in grado di segnare come evaso un ordine. I requisiti tecnologici sono gli stessi del front end dell'acquirente.
+    \item \textbf{\glo{Back end}}: il back end dovrà esporre i servizi della piattaforma. Dovrà essere sviluppato con tecnologia \glo{\textit{Serverless}}e basato su un'architettura a \glo{microservizi},  \glo{\textit{Typescript}} è il linguaggio principale da utilizzare e il rilascio avviene in \glo{\textit{AWS}} con \glo{\textit{AWS Lambda}} come unità di calcolo. \\
+    Sarà responsabile di:
+    \begin{itemize}
+        \item Implementare la logica di business dell'applicazione;
+        \item Gestire i dati dell'applicazione (es: ordini, informazioni utente, informazioni sul prodotto);
+        \item Gestire lo stato del carrello;
+        \item Integrazione con servizi di terze parti.
+    \end{itemize}
+    \item \textbf{Integrazione:} rappresenta tutti i servizi di terze parti integrati con il back end. A seconda del servizio di terze parti integrato con \NomeProgetto{}, il numero di ambienti di sviluppo potrà variare:
+    \begin{itemize}
+        \item \glo{Identity Manager} avrà \glo{Locale}, \glo{Test} e \glo{Staging};
+        \item Il servizio di pagamento avrà Test e Staging;
+        \item Il servizio \glo{CMS} (opzionale) avrà Locale, Test e Staging.
+    \end{itemize}
+    \item \textbf{Monitoring:} rappresenta tutti gli strumenti utilizzati dall'amministratore per monitorare lo stato della piattaforma. Dovrà essere implementato utilizzando \glo{\textit{Amazon CloudWatch}}.
+    \item \textbf{Database:} rappresenta il luogo dove verranno salvati tutti i dati della piattaforma e dovrà essere sviluppato con una tecnologia integrabile con \textit{AWS}.
+\end{itemize}

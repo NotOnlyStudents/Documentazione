@@ -1,0 +1,55 @@
+\section{Capitolato C5 - PORTACS}\label{C5}
+\subsection{Informazioni sul capitolato}
+\begin{description}
+	\item \textbf{Nome:} \textit{PORTACS: piattaforma di controllo mobilità autonoma}.
+	\item \textbf{\glo{Proponente}:} \textit{Sanmarco Informatica}.
+	\item \textbf{Committente:} \textit{\VT{} e \CR{}}.
+\end{description}
+
+\subsection{Descrizione del capitolato}
+Il \glo{capitolato} richiede lo sviluppo di un sistema \glo{real-time} in grado di gestire più entità caratterizzate da un punto di partenza, una velocità di crociera ed una lista di \glo{punti di interesse} da raggiungere.
+
+\subsection{Scopo del capitolato}
+Lo scopo del capitolato consiste nello sviluppare un motore real-time che si occupa di trovare il migliore percorso da far percorrere alla singola unità.
+La componente server deve segnalare ad ogni unità la prossima azione da fare in base ai prossimi punti e alle posizioni delle altre entità. Deve essere presente una mappa real-time che consenta la visualizzazione di ogni unità e dei loro movimenti all'interno della struttura.
+Ogni unità dovrà implementare un'interfaccia grafica dove vengono indicate le informazioni caratterizzanti.
+
+\subsection{Tecnologie coinvolte}
+Il capitolato offre libera scelta su come implementare l'applicazione, l'unico limite è nell'utilizzo della tecnologia \textit{\glo{Docker}} per il rilascio. Il gruppo aveva pensato di utilizzare le seguenti tecnologie:
+\begin{itemize}
+	\item Motore real-time: si pensava di usare \textit{\glo{Java}}, per la facilità di gestione degli oggetti e dei \glo{thread};
+	\item Monitor real-time: utilizzo di \textit{\glo{Tomcat} e \glo{Angular}} per l'interfaccia utente;
+	\item Simulatori delle unità operative: si ipotizzava di optare per l'uso di \textit{Java} così da facilitare la connessione, attraverso \glo{socket}, al motore real-time.
+\end{itemize}
+
+\subsection{Vincoli}
+Per raggiungere gli obiettivi minimi del progetto viene richiesto che:
+\begin{itemize}
+\item Il sistema sviluppato sia in real-time;
+\item Sia presente una scacchiera o mappa con la definizione delle percorrenze, relativi vincoli e punti di interesse;
+\item Le N unità dovranno essere definite da:
+	\begin{itemize}
+	\item Identificativo di sistema;
+	\item Velocità massima;
+	\item Posizione iniziale;
+	\item Lista dei punti di interesse da attraversare.
+	\end{itemize}
+\end{itemize}
+
+\subsection{Aspetti positivi}
+\begin{itemize}
+	\item Non ci sono restrizioni particolari sulle tecnologie da usare, quindi possiamo scegliere quelle più conosciute dal gruppo.
+	\item Il capitolato è sembrato molto interessante perchè offre un buon punto di partenza per entrare nel mondo della guida autonoma.
+	\item Il capitolato offre la possibilità di utilizzo pratico di ciò che abbiamo studiato durante il corso di Ricerca Operativa.
+\end{itemize}
+
+\subsection{Aspetti critici}
+\begin{itemize}
+	\item Il gruppo ha scarse conoscenze riguardo le tecnologie \textit{Docker}.
+	\item Si ritiene difficile realizzare un prodotto veramente \glo{efficace}.
+	\item La quantità di studio nel rendere efficace l'invio dei dati e su come temporizzare l'acquisizione dei dati è molto elevata.
+	\item Per tutti i membri del gruppo, sia il documento del capitolato che la successiva presentazione sono risultati dispersivi e poco chiari. 
+\end{itemize}
+
+\subsection{Conclusioni}
+Dopo un'attenta valutazione e discussione, il gruppo ha valutato la complessità dell'intero progetto come troppo elevata e per questo motivo si è deciso di escludere il capitolato e di orientarsi verso alternative più stimolanti.
