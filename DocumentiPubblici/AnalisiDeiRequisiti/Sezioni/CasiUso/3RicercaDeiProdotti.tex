@@ -1,0 +1,84 @@
+\subsection{UC5 - Ricerca dei prodotti} \label{UC5}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{Immagini/DiagrammiUC/UC5RicercaDeiProdotti.png}
+    \caption{Diagramma di UC5: Ricerca dei prodotti} 
+    \label{fig:RicercaDeiProdotti}
+\end{figure}
+
+L'utente non autenticato o l'acquirente può ricercare i prodotti dalla home oppure dalla \glo{PLP}.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Acquirente; Utente non autenticato.
+    \item \textbf{Precondizione:} L'attore ha selezionato l'azione della ricerca e inserito le parole per la ricerca del prodotto.
+    \item \textbf{Postcondizione:} L'attore viene spostato alla PLP con i prodotti che contengono almeno una delle parole ricercate nella descrizione o nel nome. 
+    \item \textbf{Scenario Principale:} 
+    \begin{itemize}
+        \item L'attore inserisce le parole per la ricerca del prodotto.
+        \item Preme sull'azione di ricerca.
+        \item Viene portato alla PLP che contiene che contiene tutti i prodotti che hanno almeno una delle parole indicate nella descrizione o il titolo
+    \end{itemize}
+    \item \textbf{Estensioni:} (UC5.1) - Nel caso in cui la ricerca non dia risultati verrà visualizzato un messaggio dove viene segnalato all'attore questo fatto.
+\end{itemize}
+
+\subsubsection{UC5.1 - Visualizzazione messaggio di ricerca o filtraggio senza alcun risultato} \label{UC5.1}
+Nel caso in cui la ricerca o il filtraggio non dia risultati verrà visualizzato un opportuno messaggio.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Acquirente; Utente non autenticato. 
+    \item \textbf{Precondizione:} L'attore ha svolto una ricerca o un filtraggio che non ha prodotto alcun risultato.
+    \item \textbf{Postcondizione:} All'attore verrà mostrato un messaggio che lo informa che la ricerca o il filtraggio non ha prodotto risultati.
+    \item \textbf{Scenario Principale:} L'attore effettua una ricerca oppure ha impostato dei filtri che generano una ricerca senza alcun risultato e viene avvertito.
+\end{itemize}
+
+\subsection{UC6 - Filtraggio prodotti della PLP} \label{UC6}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{Immagini/DiagrammiUC/UC6FiltraggioProdottiDellaPLP.png}
+    \caption{Diagramma di UC6: Filtraggio dei prodotti della PLP} 
+\end{figure}
+
+L'utente non autenticato o l'acquirente filtra i prodotti all'interno della PLP in base alla categoria, per prezzo, per promozioni attive, sconti applicati e se c'è disponibilità nel magazzino.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Acquirente; Utente non autenticato.
+    \item \textbf{Precondizione:} L'attore è nella PLP e ha impostato uno (o più) dei filtri disponibili per i quali cercare.
+    \item \textbf{Postcondizione:} L'attore avrà a disposizione tutti i prodotti che soddisfano tutte le condizioni dei vari filtri impostati.
+    \item \textbf{Scenario Principale:}
+    \begin{itemize}
+        \item L'attore imposta uno (o più) dei filtri seguenti 
+        \begin{itemize}
+            \item (UC6.1) - Impostazione del filtro per categoria.
+            \item (UC6.2) - Impostazione del filtro per prezzo.
+            \item (UC6.3) - Impostazione del filtro per disponibilità nel magazzino.
+        \end{itemize}
+        \item La pagina viene aggiornata con i prodotti che rispettano i filtri applicati
+    \end{itemize}
+    \item \textbf{Scenario Alternativo:} (UC5.1) - Nel caso i filtri selezionati non diano un risultato verrà visualizzato un messaggio dove viene segnalato all'attore questo fatto.
+\end{itemize}
+
+\subsubsection{UC6.1 - Filtro per categorie} \label{UC6.1}
+L'utente non autenticato o l'acquirente può cercare i prodotti in base alla loro categoria, selezionando tra tutte le categorie disponibili.
+\begin{itemize}
+    \item \textbf{Attori Primari:} acquirente; Utente non autenticato.
+    \item \textbf{Precondizione:} L'attore è nella PLP e ha selezionato una (o più) categorie di quelle disponibili per quale filtrare.
+    \item \textbf{Postcondizione:} L'attore avrà a disposizione i prodotti filtrati in base alle categorie selezionate.
+    \item \textbf{Scenario Principale:} L'attore seleziona le categorie per filtrare i prodotti.
+\end{itemize}
+
+\subsubsection{UC6.2 - Filtro per prezzo} \label{UC6.2}
+L'utente non autenticato o l'acquirente può cercare i prodotti in base al loro prezzo.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Acquirente; Utente non autenticato.
+    \item \textbf{Precondizione:} L'attore è nella PLP e ha selezionato uno tra gli intervalli di prezzo disponibili (0 - 20, 20 - 50, 50 - 100, 100 - 200, 200 - 500, più di 500), oppure inserito un intervallo personalizzato.
+    \item \textbf{Postcondizione:} L'attore avrà a disposizione i prodotti filtrati in base all'intervallo di prezzo selezionato.
+    \item \textbf{Scenario Principale:} L'attore seleziona l'intervallo di prezzo oppure ne fornisce uno personalizzato per filtrare i prodotti.
+\end{itemize}
+
+\subsubsection{UC6.3 - Filtro per disponibilità nel magazzino} \label{UC6.3}
+L'utente non autenticato o l'acquirente può cercare i prodotti in base alla loro disponibilità in magazzino.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Acquirente; Utente non autenticato.
+    \item \textbf{Precondizione:} L'attore è nella PLP e ha attivato il filtro per disponibilità in magazzino.
+    \item \textbf{Postcondizione:} L'attore avrà a disposizione i prodotti che sono disponibili in magazzino.
+    \item \textbf{Scenario Principale:} L'attore vuole visualizzare tutti i prodotti che sono disponibili in magazzino.
+\end{itemize}
