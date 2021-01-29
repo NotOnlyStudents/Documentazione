@@ -21,7 +21,7 @@ def main():
 
     if common_path == 0:
         artifact_name = "Documentazione"
-        artifact_path = "."
+        artifact_path = ""
     else:
 	    artifact_name = working_directories[0][common_path];
 	    artifact_path = '/'.join(working_directories[0][1:common_path + 1]);
