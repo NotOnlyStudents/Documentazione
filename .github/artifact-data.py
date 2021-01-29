@@ -19,14 +19,13 @@ def main():
 
         common_path = i
 
-    artifact_name = working_directories[0][common_path];
-    
-    artifact_path = '/'.join(working_directories[0][1:common_path + 1]);
-
-    if not artifact_name:
+    if common_path == 0:
         artifact_name = "Documentazione"
         artifact_path = "."
-
+    else:
+	    artifact_name = working_directories[0][common_path];
+	    artifact_path = '/'.join(working_directories[0][1:common_path + 1]);
+	    
     artifact = { "name": artifact_name, "path": artifact_path }
 
     print(json.dumps(artifact))
