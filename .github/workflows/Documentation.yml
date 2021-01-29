@@ -32,9 +32,6 @@ jobs:
           artifact_name=`echo $artifact_data | jq -r ".name"`
           artifact_path=`echo $artifact_data | jq -r ".path"`
           
-          echo $artifact_name
-          echo $artifact_path
-          
           echo "##[set-output name=artifact_name;]$artifact_name"
           echo "##[set-output name=artifact_path;]$artifact_path"
             
