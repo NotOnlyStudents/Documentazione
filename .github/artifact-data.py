@@ -14,10 +14,10 @@ def main():
         for j in range(len(working_directories) - 1):
             equal = equal and working_directories[j][i] == working_directories[j + 1][i]
 
-        if equal:
-            common_path = i
-        else:
+        if not equal:
             break
+
+        common_path = i
 
     artifact_name = working_directories[0][common_path];
     
