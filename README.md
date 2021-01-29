@@ -1,2 +1,2 @@
 # Documentazione
-![Artifacts](https://github.com/NotOnlyStudents/Documentazione/workflows/Artifacts/badge.svg?branch=develop)
+![Documentation](https://github.com/NotOnlyStudents/Documentazione/workflows/Documentation/badge.svg)
