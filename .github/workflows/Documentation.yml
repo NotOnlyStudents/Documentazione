@@ -13,8 +13,6 @@ jobs:
     
     outputs:
       matrix: ${{ steps.files.outputs.matrix }}
-      artifact_name: ${{ steps.artifact_data.outputs.artifact_name }}
-      artifact_path: ${{ steps.artifact_data.outputs.artifact_path }}
 
     steps:
       - uses: actions/checkout@v2
@@ -22,18 +20,8 @@ jobs:
       - name: Find files and create matrix
         id: files
         run: |
-          matrix=`python3 ./.github/find-and-stop.py .`
+          matrix=`python3 ./.github/find-tex-files.py .`
           echo "##[set-output name=matrix;]$matrix"
-          
-      - name: Generate name and path of artifact
-        id: artifact_data
-        run: |
-          artifact_data=`python3 ./.github/artifact-data.py '${{ steps.files.outputs.matrix }}'`
-          artifact_name=`echo $artifact_data | jq -r ".name"`
-          artifact_path=`echo $artifact_data | jq -r ".path"`
-          
-          echo "##[set-output name=artifact_name;]$artifact_name"
-          echo "##[set-output name=artifact_path;]$artifact_path"
             
   compile_files:
     runs-on: ubuntu-latest
@@ -53,6 +41,6 @@ jobs:
           
       - uses: actions/upload-artifact@v2
         with:
-          name: ${{ needs.find_files.outputs.artifact_name }}
+          name: Documentazione
           path: |
-            ${{ github.workspace }}/${{ needs.find_files.outputs.artifact_path }}/**/*.pdf
+            ${{ github.workspace }}/**/*.pdf
