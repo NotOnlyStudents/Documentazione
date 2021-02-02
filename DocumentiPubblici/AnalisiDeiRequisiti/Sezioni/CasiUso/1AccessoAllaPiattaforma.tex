@@ -1,21 +1,4 @@
-\subsection{UC1 - Accesso alla piattaforma}\label{UC1}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.8]{Immagini/DiagrammiUC/UC1AccessoAllaPiattaforma.png}
-    \caption{Diagramma di UC1: Accesso alla Piattaforma} 
-    \label{fig:AcessoAllaPiattaforma}
-\end{figure}
-
-L'utente che non si è ancora autenticato sulla piattaforma vuole accedere a funzionalità riservate.
-\begin{itemize}
-    \item \textbf{Attori Primari:} Utente non autenticato.
-    \item \textbf{\glo{Precondizione}:} L'utente non è ancora autenticato presso il sistema.
-    \item \textbf{\glo{Postcondizione}:} L'utente viene autenticato all'interno del sistema attraverso registrazione (UC1.1) o autenticazione (UC1.2).
-    \item \textbf{Scenario Principale:} L'utente non identificato può scegliere se registrarsi (UC1.1) e accedere alla piattaforma, se ha già le credenziali autenticarsi (UC1.2) oppure procedere al recupero della password (UC1.3).
-\end{itemize}
-
-\subsubsection{UC1.1 - Registrazione}\label{UC1.1}
+\UC{Registrazione}
 
 \begin{figure}[H]
     \centering
@@ -43,7 +26,7 @@ L'utente non autenticato che non dispone di credenziali può registrarsi e acced
     \end{itemize}
 \end{itemize}
 
-\subsubsection{UC1.2 - Login}\label{UC1.2}
+\UC{Login}
 
 \begin{figure}[H]
     \centering
@@ -68,7 +51,7 @@ L'utente non autenticato che dispone di credenziali può accedere come acquirent
     \end{itemize}
 \end{itemize}
 
-\subsubsection{UC1.3 - Password dimenticata}\label{UC1.3}
+\UC{Password dimenticata}
 
 \begin{figure}[H]
     \centering
@@ -105,7 +88,7 @@ L'utente che dispone di credenziali si è dimenticato la propria password e la v
     \end{itemize}
 \end{itemize}
 
-\subsection{UC2 - Logout dalla piattaforma}\label{UC2}
+\UC{Logout dalla piattaforma}
 L'utente autenticato decide di scollegarsi dalla piattaforma.
 \begin{itemize}
     \item \textbf{Attori Primari:} Utente autenticato.

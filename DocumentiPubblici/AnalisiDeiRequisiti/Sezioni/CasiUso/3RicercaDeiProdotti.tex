@@ -1,4 +1,4 @@
-\subsection{UC5 - Ricerca dei prodotti} \label{UC5}
+\UC{Ricerca dei prodotti}
 
 \begin{figure}[H]
     \centering
@@ -21,7 +21,9 @@ L'utente non autenticato o l'acquirente può ricercare i prodotti dalla home opp
     \item \textbf{Estensioni:} (UC5.1) - Nel caso in cui la ricerca non dia risultati verrà visualizzato un messaggio dove viene segnalato all'attore questo fatto.
 \end{itemize}
 
-\subsubsection{UC5.1 - Visualizzazione messaggio di ricerca o filtraggio senza alcun risultato} \label{UC5.1}
+\resetSubUC
+
+\subUC{Visualizzazione messaggio di ricerca o filtraggio senza alcun risultato}
 Nel caso in cui la ricerca o il filtraggio non dia risultati verrà visualizzato un opportuno messaggio.
 \begin{itemize}
     \item \textbf{Attori Primari:} Acquirente; Utente non autenticato. 
@@ -30,8 +32,7 @@ Nel caso in cui la ricerca o il filtraggio non dia risultati verrà visualizzato
     \item \textbf{Scenario Principale:} L'attore effettua una ricerca oppure ha impostato dei filtri che generano una ricerca senza alcun risultato e viene avvertito.
 \end{itemize}
 
-\subsection{UC6 - Filtraggio prodotti della PLP} \label{UC6}
-
+\UC{Filtraggio prodotti della PLP}
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{Immagini/DiagrammiUC/UC6FiltraggioProdottiDellaPLP.png}
@@ -56,7 +57,9 @@ L'utente non autenticato o l'acquirente filtra i prodotti all'interno della PLP 
     \item \textbf{Scenario Alternativo:} (UC5.1) - Nel caso i filtri selezionati non diano un risultato verrà visualizzato un messaggio dove viene segnalato all'attore questo fatto.
 \end{itemize}
 
-\subsubsection{UC6.1 - Filtro per categorie} \label{UC6.1}
+\resetSubUC
+
+\subUC{Filtro per categorie}
 L'utente non autenticato o l'acquirente può cercare i prodotti in base alla loro categoria, selezionando tra tutte le categorie disponibili.
 \begin{itemize}
     \item \textbf{Attori Primari:} acquirente; Utente non autenticato.
@@ -65,7 +68,7 @@ L'utente non autenticato o l'acquirente può cercare i prodotti in base alla lor
     \item \textbf{Scenario Principale:} L'attore seleziona le categorie per filtrare i prodotti.
 \end{itemize}
 
-\subsubsection{UC6.2 - Filtro per prezzo} \label{UC6.2}
+\subUC{Filtro per prezzo}
 L'utente non autenticato o l'acquirente può cercare i prodotti in base al loro prezzo.
 \begin{itemize}
     \item \textbf{Attori Primari:} Acquirente; Utente non autenticato.
@@ -74,7 +77,7 @@ L'utente non autenticato o l'acquirente può cercare i prodotti in base al loro 
     \item \textbf{Scenario Principale:} L'attore seleziona l'intervallo di prezzo oppure ne fornisce uno personalizzato per filtrare i prodotti.
 \end{itemize}
 
-\subsubsection{UC6.3 - Filtro per disponibilità nel magazzino} \label{UC6.3}
+\subUC{Filtro per disponibilità nel magazzino}
 L'utente non autenticato o l'acquirente può cercare i prodotti in base alla loro disponibilità in magazzino.
 \begin{itemize}
     \item \textbf{Attori Primari:} Acquirente; Utente non autenticato.
