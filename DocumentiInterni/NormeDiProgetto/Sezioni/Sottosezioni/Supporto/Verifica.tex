@@ -13,23 +13,24 @@ L'analisi statica studia la documentazione e il codice accertando che siano conf
 Il \textit{Verificatore} seguirà i seguenti metodi:
 \begin{itemize}
 	\item \glo{\textbf{Walkthrough:}} procede ad una lettura critica dell'intero prodotto in esame alla ricerca di difetti;
-	\item \glo{\textbf{Inspection:}} procede ad una lettura critica di una parte prodotto in esame, focalizzando la ricerca su problemi che si presentano più frequentemente indicati nella Lista di Controllo all'interno del \textit{\PdQ}.
+	\item \glo{\textbf{Inspection:}} procede ad una lettura critica di una parte prodotto in esame, focalizzando la ricerca su problemi che si presentano più frequentemente indicati nella lista di controllo all'interno del \PdQ.
 \end{itemize}
 
-\myparagraph{Verifica della documentazione}\label{VerificaDocumentazione}Ogniqualvolta si redige una sezione o si apporta una modifica al documento, viene effettuata la verifica.
+\myparagraph{Verifica della documentazione}\label{VerificaDocumentazione}
+Ogniqualvolta si redige una sezione o si apporta una modifica al documento, viene effettuata la verifica.
 Il \textit{Verificatore} incaricato procede nel seguente modo:
 \begin{itemize}
-	\item Se non ancora creata, crea l'\glo{issue} in \textit{GitHub};
+	\item Se non ancora creata, crea l'\glo{issue} in GitHub;
 	\item Sposta l'issue in "IN PROGRESS";
 	\item Rilegge l'intero documento segnando gli errori incontrati nella Lista di Controllo;
-	\item Successivamente ad ogni verifica viene applicato il metodo di \textit{Inspection} concentrandosi su una particolare criticità presente nella Lista di Controllo, nel caso emergano sostanziali errori si valuta l'aggiornamento della Lista di Controllo;
+	\item Successivamente ad ogni verifica viene applicato il metodo di Inspection concentrandosi su una particolare criticità presente nella Lista di Controllo, nel caso emergano sostanziali errori si valuta l'aggiornamento della Lista di Controllo;
 	\item Se riscontra problemi logici, si accorda con il redattore del documento per la correzione;
 	\item Sposta l'issue in "DONE".
 \end{itemize}
 
 \myparagraph{Verifica del codice}\label{VerificaCodice}Il \textit{Verificatore} incaricato procede nel seguente modo:
 \begin{itemize}
-	\item Se non ancora creata, crea l'issue in \textit{GitHub};
+	\item Se non ancora creata, crea l'issue in GitHub;
 	\item Sposta l'issue in "IN PROGRESS";
 	\item Rilegge interamente il codice scritto al fine di:
 	\begin{itemize}
@@ -41,7 +42,7 @@ Il \textit{Verificatore} incaricato procede nel seguente modo:
 		\item Provare la correttezza del codice sorgente rispetto ai requisiti;
 		\item Assicurare che sia stato seguito quanto scritto nelle \NdPv\ nella sezione \S\ref{CodificaConvenzioni}.
 	\end{itemize}
-	\item Successivamente ad ogni verifica viene applicato il metodo di \textit{Inspection} concentrandosi su una particolare criticità presente nella Lista di Controllo, nel caso emergano sostanziali errori si valuta l'aggiornamento della Lista di Controllo;
+	\item Successivamente ad ogni verifica viene applicato il metodo di Inspection concentrandosi su una particolare criticità presente nella Lista di Controllo, nel caso emergano sostanziali errori si valuta l'aggiornamento della Lista di Controllo;
 	\item Se riscontra problemi, si accorda con il redattore del documento per la correzione. 
 	\item Sposta l'issue in "DONE".
 \end{itemize}
@@ -65,9 +66,10 @@ Questi test sono necessari a verificare che la modifica di una parte P di S non 
 \paragraph*{Test di sistema}
 Vengono effettuati per valutare che il prodotto soddisfi tutti i requisiti software previsti.
 
-\myparagraph{Procedura di verifica}\label{ProceduraVerifica}Il \textit{Verificatore} incaricato procede nel seguente modo:
+\myparagraph{Procedura di verifica}\label{ProceduraVerifica}
+Il \textit{Verificatore} incaricato procede nel seguente modo:
 \begin{itemize}
-	\item Se non ancora creata, crea l'issue in \textit{GitHub};
+	\item Se non ancora creata, crea l'issue in GitHub;
 	\item Sposta l'issue in "IN PROGRESS";
 	\item Esegue tutti i test previsti;
 	\item Se riscontra problemi, si accorda con il redattore del codice per la correzione. 

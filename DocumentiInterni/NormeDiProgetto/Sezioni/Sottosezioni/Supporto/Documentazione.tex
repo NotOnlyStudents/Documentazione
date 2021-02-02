@@ -1,6 +1,6 @@
 \subsection{Documentazione}
 \subsubsection{Scopo dell'attività} \label{PSup_Documentazione_Scopo}
-Quando si realizza un progetto è di fondamentale importanza documentare processi e \glo{attività} significative per lo sviluppo dello stesso. \\
+Quando si realizza un progetto è di fondamentale importanza documentare processi e \glo{attività} significative per lo sviluppo dello stesso.\\
 La documentazione permette di:
 \begin{itemize}
 	\item Disciplinare ciò che verrà fatto durante il ciclo di vita del software;
@@ -40,15 +40,15 @@ I documenti vengo suddivisi in:
 	Sono documenti pubblici:
 	\begin{itemize}
 		\item \textbf{Glossario:} elenco ordinato di termini utilizzati dal gruppo nei loro documenti e che possono presentare ambiguità nel loro significato;
-		\item \textbf{Studio di Fattibilità:} analisi dei \glo{capitolati} proposti, con le valutazioni da parte dei membri del gruppo;
-		\item \textbf{Piano di Progetto:} espone la pianificazione delle attività di progetto e relative previsioni rispetto a impiego orario dei membri, \glo{preventivo} e \glo{consuntivi} di periodo;
-		\item \textbf{Piano di Qualifica:} presenta i criteri di valutazione della qualità utilizzati dal gruppo;
-		\item \textbf{Analisi dei Requisiti:} contiene tutti i requisiti e le caratteristiche del \glo{prodotto} finale individuati dal gruppo.
+		\item \textbf{Studio di fattibilità:} analisi dei \glo{capitolati} proposti, con le valutazioni da parte dei membri del gruppo;
+		\item \textbf{Piano di progetto:} espone la pianificazione delle attività di progetto e relative previsioni rispetto a impiego orario dei membri, preventivo e consuntivi di periodo;
+		\item \textbf{Piano di qualifica:} presenta i criteri di valutazione della qualità utilizzati dal gruppo;
+		\item \textbf{Analisi dei requisiti:} contiene tutti i requisiti e le caratteristiche del prodotto finale individuati dal gruppo.
 	\end{itemize}
 	\item \textbf{Documenti Interni:} comprendono i documenti di interesse principalmente per i componenti del gruppo.
 	Sono documenti interni:
 	\begin{itemize}
-		\item \textbf{Norme di Progetto:} raccolta delle norme stabilite dal gruppo che tutti i componenti devono seguire durante la realizzazione del progetto;
+		\item \textbf{Norme di progetto:} raccolta delle norme stabilite dal gruppo che tutti i componenti devono seguire durante la realizzazione del progetto;
 		\item \textbf{Verbali:} si suddividono a loro volta in:
 		\begin{itemize}
 			\item \textbf{Interni:} contengono un resoconto sintetico relativo alle riunioni svolte dal gruppo;
@@ -60,12 +60,12 @@ I documenti vengo suddivisi in:
 \subsubsection{Nomenclatura dei documenti} \label{NomenclaturaDoc}
 Tutti i documenti ad eccezione dei verbali seguiranno il seguente schema per la nomenclatura:
 \begin{center}
-	\textbf{[NomeDocumento]\_v[X].[Y].[Z]}
+	\textbf{[NomeDocumento]\_v[X].[Y]}
 \end{center}
 dove:
 \begin{itemize}
 	\item \textbf{[NomeDocumento]} corrisponde al nome ufficiale del documento, non deve presentare spazi e viene utilizzata la notazione \textit{CamelCase}.
-	\item \textbf{v[X].[Y].[Z]} dove v sta per "versione" e X, Y, Z rispettano quanto descritto nella sezione \S\ref{Versionamento}
+	\item \textbf{v[X].[Y]} dove v sta per "versione" e X, Y rispettano quanto descritto nella sezione \S\ref{Versionamento}
 \end{itemize}
 Per quanto riguarda la nomenclatura dei verbali si segue il seguente schema:
 \begin{center}
@@ -113,13 +113,13 @@ Ciascuna voce della tabella riporta:
 	\item \textbf{Ruolo} del componente che ha effettuato la modifica/verifica;
 	\item \textbf{Descrizione} della modifica/verifica effettuata.
 \end{itemize}
-Per garantire la consistenza del registro le sezioni sono etichettate con il comando \LaTeX\ \textit{label}, le sezioni che vengono eliminate sono indicate con il loro titolo.
+Per garantire la consistenza del registro le sezioni sono etichettate con il comando \LaTeX\ \textbf{label}, le sezioni che vengono eliminate sono indicate con il loro titolo.
 
 \item\textbf{Indice}
-Dopo il Registro delle modifiche viene inserito un indice dei contenuti utile a chi utilizza il documento per orientarsi velocemente all'interno dello stesso.
+Dopo il registro delle modifiche viene inserito un indice dei contenuti utile a chi utilizza il documento per orientarsi velocemente all'interno dello stesso.
 
 \item\textbf{Corpo dei documenti}
-Dopo l'Indice dei contenuti è presente il corpo del documento. Gli argomenti sono divisi in sezioni e sottosezioni raggruppati in modo coerente e coeso.\\
+Dopo l'indice dei contenuti è presente il corpo del documento. Gli argomenti sono divisi in sezioni e sottosezioni raggruppati in modo coerente e coeso.\\
 Il corpo dei verbali deve contenere le seguenti sezioni:
 \begin{itemize}
 	\item \textbf{Informazioni generali}, che includono:
@@ -141,24 +141,24 @@ Il corpo dei verbali deve contenere le seguenti sezioni:
 Il gruppo utilizza per la stesura dei documenti il linguaggio \LaTeX. Al fine di mantenere una coerenza nella formattazione dei documenti vengono utilizzati due template permettendo così l'automatizzazione delle scelte tipografiche.\\
 I template utilizzati sono:
 \begin{itemize}
-	\item \textbf{Stilelettera:} template esclusivamente per le \textit{Lettere di Presentazione};
+	\item \textbf{Stilelettera:} template esclusivamente per le \textit{lettere di presentazione};
 	\item \textbf{Stiletemplate:} template per tutti i restanti documenti.
 \end{itemize}
 
 \myparagraph{Termini di glossario}
-I termini il cui significato potrebbe essere ambiguo sono individuati con un apice \ap{G} alla fine della parola, salvo che il suo significato non venga subito spiegato. Tutti i termini da glossario sono stati inseriti nel documento \textit{\Glossario}. Di ogni termine solamente la prima occorrenza per ogni sezione va evidenziata con l'apice \ap{G}.
+I termini il cui significato potrebbe essere ambiguo sono individuati con un apice \ap{G} alla fine della parola, salvo che il suo significato non venga subito spiegato. Tutti i termini da glossario sono stati inseriti nel documento \Glossario. Di ogni termine solamente la prima occorrenza per ogni sezione va evidenziata con l'apice \ap{G}.
 
 \myparagraph{Stile del testo}
 Gli stili di testo adottati nei documenti sono:
 \begin{itemize}
 	\item \textbf{grassetto:} per titoli, sottotitoli, nome degli oggetti negli elenchi puntati, termini importanti secondo il \textit{Redattore};
 	\item \textbf{corsivo:} per i nomi propri di persona, nomi dei ruoli, nome del progetto, nome dei documenti;
-	\item \textbf{maiuscolo:} per i nomi dei file, delle directory e dei processi (convenzione \textit{CamelCase}).	
+	\item \textbf{maiuscolo:} per i nomi dei file, delle directory e dei processi (convenzione \textbf{CamelCase}).	
 \end{itemize}
-Ogni volta che si utilizza il nome di un documento come titolo o in una voce di elenco seguita da una descrizione, tale nome deve seguire la prima convenzione senza utilizzare il corsivo.
+Ogni volta che si utilizza il nome di un documento come titolo o in una voce di elenco seguita da una descrizione, tale nome deve seguire solo la prima convenzione senza utilizzare il corsivo.
 
 \myparagraph{Formattazione di date e orari}
-Per l'indicazione delle date e degli orari si segue quanto sancito dallo \glo{standard} \glo{ISO 8601}.\\
+Per l'indicazione delle date e degli orari si segue quanto sancito dallo \glo{standard} ISO 8601.\\
 Le date vengono indicate secondo il seguente formato:
 \begin{center}
 	\textbf{[YYYY]\_[MM]\_[DD]} 
@@ -182,22 +182,22 @@ dove:
 \myparagraph{Formattazione elementi grafici}
 La sezione definisce le norme per gli elementi grafici all'interno dei documenti.
 \begin{itemize}
-\item\textbf{Immagini}
-Le figure presenti nei documenti vanno centrate rispetto al testo e accompagnate da una didascalia coerente.
-\item\textbf{Grafici UML}
-I grafici in linguaggio \glo{UML} sono inseriti come immagini.
-\item\textbf{Tabelle}
+\item \textbf{Immagini}
+Le figure presenti nei documenti vanno centrate rispetto al testo e accompagnate da una didascalia coerente;
+\item \textbf{Grafici UML}
+I grafici in linguaggio \glo{UML} sono inseriti come immagini;
+\item \textbf{Tabelle}
 Le tabelle vanno accompagnate da una didascalia opportuna.\\
 Nella didascalia viene indicato l'identificativo 
 \begin{center}
 	\textbf{Tabella [X]} 
 \end{center}
 dove [X] indica il numero assoluto della tabella all'interno del documento, segue poi il testo della didascalia.
-A questa prassi fanno eccezione le tabelle del Registro delle modifiche.
+A questa prassi fanno eccezione le tabelle del registro delle modifiche.
 \end{itemize}
 
 \subsubsection{Metriche}\label{MDocumentazione}
-Di seguito vengono presentate le metriche utilizzate per garantire il controllo sulla qualità. Per una descrizione sullo standard di riferimento e un elenco completo di tutte le metriche applicate si rimanda alla sezione \S\ref{9126} dell'Appendice. 
+Di seguito vengono presentate le metriche utilizzate per garantire il controllo sulla qualità. Per una descrizione sullo standard di riferimento e un elenco completo di tutte le metriche applicate si rimanda alla sezione \S\ref{9126} dell'appendice. 
 \begin{itemize}
 	\item\textbf{MPR02: Indice di Gulpease}\hypertarget{MGulpease} \\
 	L'indice permette di stabilire la difficoltà di lettura di un testo.\\
@@ -226,8 +226,7 @@ Di seguito vengono presentate le metriche utilizzate per garantire il controllo 
 Di seguito sono riportati gli strumenti utilizzati durante la redazione della documentazione.
 \begin{itemize}
 	\item \textbf{\LaTeX};
-	\item \textbf{\textit{GanttProject}:} utilizzato per la realizzazione dei \glo{diagrammi di Gantt} all'interno del documento \PdPv{1.0.0};
-	\item \textbf{\textit{Microsoft Excel}:} utilizzato per realizzare i diagrammi all'interno dei documenti;
-	\item \textbf{\textit{Lucidhart}:} utilizzato per la realizzazione dei \glo{diagrammi UML} all'interno del documento \AdRv{1.0.0}.
+	\item \textbf{GanttProject:} utilizzato per la realizzazione dei \glo{diagrammi di Gantt} all'interno del documento \PdPv{1.0.0};
+	\item \textbf{Microsoft Excel:} utilizzato per realizzare i diagrammi all'interno dei documenti;
+	\item \textbf{Lucidhart:} utilizzato per la realizzazione dei \glo{diagrammi UML} all'interno del documento \AdRv{1.0.0}.
 \end{itemize}
-
