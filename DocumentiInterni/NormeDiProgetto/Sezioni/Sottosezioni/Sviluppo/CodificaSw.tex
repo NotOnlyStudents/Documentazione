@@ -33,4 +33,47 @@ I blocchi di codice vanno inseriti tra parentesi graffe, anche se il blocco è v
 Una riga di codice deve essere lunga al massimo 140 caratteri.
 Se possibile è desiderabile definire metodi brevi evitando la ricorsione.
 
+\myparagraph{Metriche}\label{MCodifica}
+Di seguito vengono presentate le metriche utilizzate per garantire il controllo sulla qualità. Per una descrizione sullo standard di riferimento e un elenco completo di tutte le metriche applicate si rimanda alla sezione \S\ref{9126} dell'Appendice. 
+\begin{itemize}
+	\item\textbf{MPDS01: Completezza dell'implementazione}\hypertarget{MCImplementazione}
+	L'indice stabilisce la completezza del prodotto software realizzato nel momento in cui viene calcolato rispetto a tutti i requisiti previsti dall'\AdRv{1.0.0}.\\
+	Viene calcolato nel seguente modo:
+	\begin{center}
+		\textbf{CI=\(1-\frac{FNI}{FI}\)*100}
+	\end{center}
+	dove:
+	\begin{itemize}
+		\item \textbf{FNI} indica il numero di funzionalità non implementate;
+		\item \textbf{FI} indica il numero di funzionalità implementate.
+	\end{itemize}
+\item\textbf{MPDS02: Densità errori} \hypertarget{MErrori}\\
+Rappresenta la percentuale di righe di codice che possono causare errori.\\
+Viene calcolato nel seguente modo:
+\begin{center}
+	\textbf{DE=\(\frac{RB}{RTOT}\)*100}
+\end{center}
+dove:
+\begin{itemize}
+	\item \textbf{RB} indica il numero di linee di codice che possono causare imprevisti o comportamenti diversi da quelli desiderati;
+	\item \textbf{RTOT} indica il numero di linee di codice totali.
+\end{itemize}
 
+\item\textbf{MPDS06: Facilità di comprensione} \hypertarget{MFComprensione}\\
+Il valore indica la facilità di comprensione del codice in base al numero di righe di commento presenti.\\
+Viene calcolato nel seguente modo:
+\begin{center}
+	\textbf{FC=\(\frac{LCOM}{LCOD}\)*100}
+\end{center}
+dove
+\begin{itemize}
+	\item \textbf{LCOM} indica il numero di linee di commento;
+	\item \textbf{LCOD} indica il numero di linee di codice.
+\end{itemize}
+
+\item\textbf{MPDS07: Semplicità delle funzioni}\hypertarget{MSFunzioni}\\
+Il valore stabilisce la semplicità di un metodo basandosi sul numero di parametri a lui necessari.
+
+\item\textbf{MPDS08: Semplicità delle classi}\hypertarget{MSClassi}\\
+Il valore stabilisce la semplicità di una classe basandosi sul numero di metodi al suo interno.
+\end{itemize}

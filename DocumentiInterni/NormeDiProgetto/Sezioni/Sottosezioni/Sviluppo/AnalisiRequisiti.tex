@@ -122,3 +122,19 @@ Come indicato dallo standard \glo{IEEE 830-1998}, la specifica deve essere:
 	\item \textbf{Tracciabile:} l'origine dei requisiti è chiara e facilmente rintracciabile;
 	\item \textbf{Ordinata per rilevanza:} i requisiti devono essere classificati secondo la loro rilevanza rispetto a quanto contrattato con il proponente.
 \end{itemize}
+
+\myparagraph{Metriche}\label{MAnalisi}
+Di seguito vengono presentate le metriche utilizzate per garantire il controllo sulla qualità. Per una descrizione sullo standard di riferimento e un elenco completo di tutte le metriche applicate si rimanda alla sezione \S\ref{9126} dell'Appendice. 
+\begin{itemize}
+\item\textbf{MPR01: Soddisfacimento Requisiti Obbligatori}\hypertarget{MSoddRequisiti} \\
+Indica la percentuale di requisiti obbligatori soddisfatti nel momento in cui viene calcolato.\\
+Viene calcolato nel seguente modo:
+	\begin{center}
+		\textbf{RO=\(\frac{ROC}{RO}\)*100}
+	\end{center}
+	dove:
+	\begin{itemize}
+		\item \textbf{RO} sta per \textit{Requisiti Obbligatori};
+		\item \textbf{ROC} sta per \textit{Requisiti Obbligatori Coperti dall'implementazione}.
+	\end{itemize}
+\end{itemize}

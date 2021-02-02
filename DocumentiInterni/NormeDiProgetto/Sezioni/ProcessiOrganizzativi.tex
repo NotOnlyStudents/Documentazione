@@ -1,7 +1,7 @@
-\section{Processi Organizzativi}
+\section{Processi organizzativi}
 \label{PO}
 \subsection{Descrizione}\label{PO_Descrizione}
-I Processi Organizzativi comprendono tutti i processi utilizzati per definire e gestire una struttura costituita dal personale e dai processi del ciclo di vita del \glo{prodotto}, al fine di migliorarne continuamente la struttura e i processi stessi. 
+I processi organizzativi comprendono tutti i processi utilizzati per definire e gestire una struttura costituita dal personale e dai processi del ciclo di vita del \glo{prodotto}, al fine di migliorarne continuamente la struttura e i processi stessi. 
 In questa sezione vengono analizzati:
 \begin{itemize}
 	\item \textbf{Gestione di processo};
@@ -141,6 +141,47 @@ Nel \PdPv{1.0.0}  per ogni rischio è presente una tabella indicante:
 	\item \textbf{Piano di contingenza}.
 \end{itemize}
 
+\myparagraph{Metriche}\label{MPianificazione}
+Di seguito vengono presentate le metriche utilizzate per garantire il controllo sulla qualità. Per una descrizione sullo standard di riferimento e un elenco completo di tutte le metriche applicate si rimanda alla sezione \S\ref{9126} dell'Appendice. 
+\begin{itemize}
+	\item \textbf{MPR04: Budget at Completion}\hypertarget{MBC}\\
+		Rappresenta il valore previsto per la realizzazione del progetto secondo quanto previsto nel \PdPv{1.0.0}.
+	\item\textbf{MPR05: Actual Cost of Work Performed}\hypertarget{MACWP}\\
+		Corrisponde alla somma di tutte le spese sostenute dal gruppo fino al momento in cui l'indice viene calcolato, il limite superiore dipende da quanto stabilito nel \glo{Preventivo} presente nel \PdPv{1.0.0}.
+	\item\textbf{MPR06: Budget Cost of Work Performed}\hypertarget{MBCWP} \\
+		Valore intero effettivo del prodotto ottenuto fino al momento in cui l'indice viene calcolato.
+	\item\textbf{MPR07: Budget Cost of Work Scheduled} \hypertarget{MBCWS}\\
+		Valore intero corrispondente alla spesa pianificata per l'attività di progetto alla data corrente, reperibile nel \glo{Preventivo} presente nel \PdPv{1.0.0}.
+	\item\textbf{MPR08: Schedule Variance}\hypertarget{MSV} \\
+		Indica se si è in linea, in anticipo o in ritardo rispetto alla schedulazione delle attività di progetto pianificate nella \glo{baseline}.\\
+		Viene calcolato nel seguente modo:
+		\begin{center}
+			\textbf{SV = BCWP – BCWS}
+		\end{center}
+		dove: 
+		\begin{itemize}
+			\item \textbf{BCWP} sta per \textit{Budgeted Cost of Work Performed};
+			\item \textbf{BCWS} sta per \textit{Budgeted Cost of Work Scheduled}.
+		\end{itemize}
+		In base al risultato ottenuto abbiamo:
+		\begin{itemize}
+			\item \textbf{SV>0}: il gruppo sta producendo con maggior velocità rispetto quanto pianificato;
+			\item \textbf{SV=0}: il gruppo sta producendo secondo quanto pianificato;
+			\item \textbf{SV<0}: il gruppo sta producendo con minor velocità rispetto quanto pianificato, è necessaria una revisione di quanto pianificato.
+		\end{itemize}
+		\item\textbf{MPR09: Budget Variance} \hypertarget{MBV}\\
+	Indica se il gruppo rientra nel budget di spesa previsto alla data corrente.\\
+	Viene calcolato nel seguente modo:
+	\begin{center}
+		\textbf{BV = BCWS – ACWP}
+	\end{center}
+	dove:
+	\begin{itemize}
+		\item \textbf{BCWS} sta per \textit{Budgeted Cost of Work Scheduled};
+		\item \textbf{ACWP} sta per \textit{Actual Cost of Work Performed}.
+	\end{itemize}
+	Un valore positivo segnala che i costi sostenuti rientrano nel budget preventivato.
+\end{itemize}
 \subsubsection{Coordinamento}
 \myparagraph{Scopo dell'attività}\label{PO_Coordinamento_Scopo}L'attività di coordinamento ha lo scopo di definire come vengono gestite le comunicazioni all'interno del gruppo {\Gruppo} e tra il gruppo e soggetti esterni.
 \myparagraph{Descrizione della sezione}
@@ -185,7 +226,7 @@ I componenti del gruppo si impegnano a:
 
 \subsection{Gestione dell'infrastruttura}
 \subsubsection{Scopo del processo}\label{PO_GestioneInfrastruttura_Scopo}
-Il processo di Gestione dell'infrastruttura ha lo scopo di stabilire tutti gli strumenti utilizzati per gestire l'infrastruttura necessaria per tutti gli altri processi.
+Il processo di gestione dell'infrastruttura ha lo scopo di stabilire tutti gli strumenti utilizzati per gestire l'infrastruttura necessaria per tutti gli altri processi.
 \subsubsection{Descrizione della sezione}
 La sezione indica quali strumenti vengono utilizzati dal gruppo per il coordinamento e la pianificazione del lavoro durante la realizzazione del progetto.
 \subsubsection{Aspettative}
@@ -205,7 +246,7 @@ Gli strumenti utilizzati dal gruppo sono:
 
 \subsection{Miglioramento del processo}
 \subsubsection{Scopo del processo}
-Il processo di Miglioramento ha lo scopo di stabilire, valutare, misurare, controllare e migliorare il ciclo di vita del software.
+Il processo di miglioramento ha lo scopo di stabilire, valutare, misurare, controllare e migliorare il ciclo di vita del software.
 \subsubsection{Descrizione della sezione}
 La sezione analizza le tre attività principali del processo di Miglioramento, ovvero:
 \begin{itemize}
@@ -217,13 +258,19 @@ La sezione analizza le tre attività principali del processo di Miglioramento, o
 Il gruppo si pone come aspettativa di questo processo la pianificazione del lavoro nel rispetto del principio di miglioramento continuo.
 \subsubsection{Norme generali}\label{PO_NormeGenerali}
 All'interno del \PdQv{}\ vengono inseriti gli obiettivi e le metriche di \glo{qualità} per valutare l'andamento delle attività di ogni processo. Qualora si presentassero problemi, il membro del gruppo deve avvertire tempestivamente gli altri componenti del \glo{team} e si procederà ad una eventuale modifica di quanto pianificato. Periodicamente vengono calcolate le metriche di qualità previste.
+\subsubsection{Metriche}\label{MMiglioramento}
+Di seguito vengono presentate le metriche utilizzate per garantire il controllo sulla qualità. Per una descrizione sullo standard di riferimento e un elenco completo di tutte le metriche applicate si rimanda alla sezione \S\ref{9126} dell'Appendice. 
+\begin{itemize}
+\item\textbf{MPR10: Indice di risoluzione dei problemi}\hypertarget{MProblemi} \\
+L'indice calcola la velocità con cui le \glo{issue} vengono risolte, viene calcolata la media dei numeri di giorni che intercorrono tra l'apertura e la chiusura per ogni issue.
+\end{itemize}
 
 \subsection{Formazione del personale}
 \subsubsection{Scopo del processo}
-Il processo di Formazione consente di pianificare la preparazione dei componenti del gruppo rispetto a tecnologie e strumenti utilizzati durante la realizzazione del progetto.
+Il processo di formazione consente di pianificare la preparazione dei componenti del gruppo rispetto a tecnologie e strumenti utilizzati durante la realizzazione del progetto.
 \subsubsection{Descrizione della sezione}
 La sezione comprende le norme stabilite dal gruppo per l'autonoma formazione dei componenti.
 \subsubsection{Aspettative}
 Attraverso questo processo il gruppo intende acquisire le competenze necessarie per poter realizzare il prodotto con la qualità stabilita in modo \glo{efficace} ed \glo{efficiente}.
 \subsubsection{Decisioni sulla formazione}\label{DecisioniFormazione}
-I membri del gruppo provvedono ad approfondire le proprie conoscenze e a colmare le proprie lacune sulle tecnologie e sugli strumenti che vengono utilizzati durante tutti i processi. I membri più esperti hanno il compito di condividere le proprie conoscenze per velocizzare il processo di Formazione secondo il principio di miglioramento continuo.
+I membri del gruppo provvedono ad approfondire le proprie conoscenze e a colmare le proprie lacune sulle tecnologie e sugli strumenti che vengono utilizzati durante tutti i processi. I membri più esperti hanno il compito di condividere le proprie conoscenze per velocizzare il processo di formazione secondo il principio di miglioramento continuo.

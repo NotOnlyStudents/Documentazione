@@ -26,6 +26,7 @@ Il gruppo per questa attività si aspetta di definire l'architettura logica del 
 Le sue componenti devono essere semplici, coese nel raggiungimento degli obiettivi, incapsulate e con un basso livello di accoppiamento.
 I \textit{Progettisti} devono assicurare che l'architettura e le sue componenti presentino le caratteristiche descritte e superino dei test di qualità da loro definiti.
 
+\newpage
 \myparagraph{Periodi della progettazione}\label{PeriodiProgettazione}L'attività di progettazione si articola in due parti: 
 \paragraph*{Progettazione architetturale} 
 Vengono definite le specifiche dell'architettura e delle componenti del prodotto, delle loro interazioni con le restanti parti del sistema e dei \glo{test di integrazione}. Al termine di questo periodo di progettazione si ottiene la \glo{\textit{Technology Baseline}} del progetto che conterrà: 
@@ -82,7 +83,7 @@ Gli elementi di un diagramma di classe sono:
 		\item \textbf{Proprietà aggiuntive:} eventuali proprietà ritenute importanti, il campo è opzionale.
 	\end{itemize}
 \end{itemize} 
-\newpage \noindent I diagrammi delle classi sono collegati tra loro tramite \textbf{relazioni di dipendenza}, la modifica di un elemento di un diagramma può cambiarne la definizione di un altro.
+ I diagrammi delle classi sono collegati tra loro tramite \textbf{relazioni di dipendenza}, la modifica di un elemento di un diagramma può cambiarne la definizione di un altro.
 Le relazioni di dipendenza previste sono:
 	\begin{itemize}
 		\item \textbf{Dipendenza:} gli oggetti di una classe A utilizzano brevemente gli oggetti di un'altra classe B, l'associazione esiste per un tempo limitato;
@@ -265,6 +266,17 @@ Le eventuali relazioni tra gli use case del sistema rappresentate in questi diag
 	\end{minipage}
 	\end{center}
 \end{itemize} 
+
+\myparagraph{Metriche}\label{MProgettazione}
+Di seguito vengono presentate le metriche utilizzate per garantire il controllo sulla qualità. Per una descrizione sullo standard di riferimento e un elenco completo di tutte le metriche applicate si rimanda alla sezione \S\ref{9126} dell'Appendice. 
+\begin{itemize}
+	\item \textbf{MPDS03: Facilità di utilizzo;}\hypertarget{MFUtilizzo} \\
+	Il valore stabilisce la semplicità per un utente di raggiungere quanto cercato valutando il numero di click medio per raggiungere il contenuto desiderato.
+	\item\textbf{MPDS04: Facilità di apprendimento}\hypertarget{MFApprendimento} \\
+	Il valore stabilisce la semplicità per un utente di raggiungere quanto cercato all'interno del sito calcolando la media dei minuti necessari per raggiungere le pagine ricercate.
+	\item\textbf{MPDS05:  Profondità della gerarchia}\hypertarget{MPGerarchia} \\
+	Il valore risultante viene calcolato individuando la profondità media delle pagine rispetto alla home page.
+\end{itemize}
 
 
 

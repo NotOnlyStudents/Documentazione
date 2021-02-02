@@ -84,123 +84,29 @@ Si applicano alla documentazione e al prodotto non eseguibile, ad esempio il cod
 \paragraph*{Metriche per la qualità d'uso}
 Misurano il grado con cui il prodotto software permette agli utenti di svolgere le proprie attività con efficacia, produttività, soddisfazione e sicurezza.
 
-\section{Metriche} \label{Metriche}
-\subsection{Metriche per la qualità del processo}
-Di seguito sono elencate le metriche utilizzate per misurare il raggiungimento degli obiettivi della qualità di processo.
-\subsubsection{MPR01: Budget at Completion}
-Rappresenta il valore previsto per la realizzazione del progetto secondo quanto previsto nel \PdPv{1.0.0}.
-\subsubsection{MPR02: Actual Cost of Work Performed}
-Corrisponde alla somma di tutte le spese sostenute dal gruppo fino al momento in cui l'indice viene calcolato, il limite superiore dipende da quanto stabilito nel \glo{Preventivo} presente nel \PdPv{1.0.0}.
-\subsubsection{MPR03: Budget Cost of Work Performed}
-Valore intero effettivo del prodotto ottenuto fino al momento in cui l'indice viene calcolato.
-\subsubsection{MPR04: Budget Cost of Work Scheduled}
-Valore intero corrispondente alla spesa pianificata per l'attività di progetto alla data corrente, reperibile nel \glo{Preventivo} presente nel \PdPv{1.0.0}.
-\subsubsection{MPR05: Schedule Variance}
-Indica se si è in linea, in anticipo o in ritardo rispetto alla schedulazione delle attività di progetto pianificate nella \glo{baseline}.\\
-Viene calcolato nel seguente modo:
-\begin{center}
-	\textbf{SV = BCWP – BCWS}
-\end{center}
-dove: 
+\subsection{Elenco delle metriche} \label{Metriche}
+\subsubsection{Metriche per la qualità del processo}
 \begin{itemize}
-	\item \textbf{BCWP} sta per \textit{Budgeted Cost of Work Performed};
-	\item \textbf{BCWS} sta per \textit{Budgeted Cost of Work Scheduled}.
+	\item  \hyperlink{MSoddRequisiti}{MPR01: Soddisfacimento Requisiti Obbligatori;}
+	\item \hyperlink{MGulpease}{MPR02: Indice di Gulpease;}
+	\item  \hyperlink{MOrtografia}{MPR03: Indice di correttezza ortografica;}
+	\item  \hyperlink{MBC}{MPR04: Budget at Completion;}
+	\item  \hyperlink{MACWP}{MPR05: Actual Cost of Work Performed;}
+	\item  \hyperlink{MBCWP}{MPR06: Budget Cost of Work Performed;}
+	\item  \hyperlink{MBCWS}{MPR07: Budget Cost of Work Scheduled;}
+	\item  \hyperlink{MSV}{MPR08: Schedule Variance;}
+	\item  \hyperlink{MBV}{MPR09: Budget Variance;}
+	\item  \hyperlink{MProblemi}{MPR10: Indice di risoluzione dei problemi.} 
 \end{itemize}
-In base al risultato ottenuto abbiamo:
-\begin{itemize}
-	\item \textbf{SV>0}: il gruppo sta producendo con maggior velocità rispetto quanto pianificato;
-	\item \textbf{SV=0}: il gruppo sta producendo secondo quanto pianificato;
-	\item \textbf{SV<0}: il gruppo sta producendo con minor velocità rispetto quanto pianificato, è necessaria una revisione di quanto pianificato.
-\end{itemize}
-\subsubsection{MPR06: Budget Variance}
-Indica se il gruppo rientra nel budget di spesa previsto alla data corrente.\\
-Viene calcolato nel seguente modo:
-\begin{center}
-	\textbf{BV = BCWS – ACWP}
-\end{center}
-dove:
-\begin{itemize}
-	\item \textbf{BCWS} sta per \textit{Budgeted Cost of Work Scheduled};
-	\item \textbf{ACWP} sta per \textit{Actual Cost of Work Performed}.
-\end{itemize}
-Un valore positivo segnala che i costi sostenuti rientrano nel budget preventivato.
-\subsubsection{MPR07: Soddisfacimento Requisiti Obbligatori}
-Indica la percentuale di requisiti obbligatori soddisfatti nel momento in cui viene calcolato.\\
-Viene calcolato nel seguente modo:
-\begin{center}
-	\textbf{RO=\(\frac{ROC}{RO}\)*100}
-\end{center}
-dove:
-\begin{itemize}
-	\item \textbf{RO} sta per \textit{Requisiti Obbligatori};
-	\item \textbf{ROC} sta per \textit{Requisiti Obbligatori Coperti dall'implementazione}.
-\end{itemize}
-\subsubsection{MPR08: Indice di Gulpease}
-L'indice permette di stabilire la difficoltà di lettura di un testo.\\
-Viene calcolato nel seguente modo:
-\begin{center}
-	\(
-	GULP = 89+\frac{300\times\# frasi-10\times\#lettere}{\#parole}
-	\)
-\end{center}
-L'indice può assumere i seguenti valori:
-\begin{itemize}
-	\item \textbf{GULP<80}: indica una leggibilità difficile per un utente con licenza elementare;
-	\item \textbf{GULP<60}: indica una leggibilità difficile per un utente con licenza media;
-	\item \textbf{GULP<40}: indica una leggibilità difficile per un utente con licenza superiore.
-\end{itemize}
-\subsubsection{MPR09: Indice di correttezza ortografica}
-Indica la correttezza ortografica in un documento.\\
-Viene calcolato nel seguente modo:
-\begin{center}
-	\textbf{CORT = \# numero di errori ortografici}
-\end{center}
-Un risultato maggiore di zero indica la presenza di errori nel documento.
-\subsubsection{MPR10: Indice di risoluzione dei problemi}
-L'indice calcola la velocità con cui le \glo{issue} vengono risolte, viene calcolata la media dei numeri di giorni che intercorrono tra l'apertura e la chiusura per ogni issue.
 
-\subsection{Metriche per la qualità di prodotto}
-Di seguito sono elencate le metriche utilizzate per misurare il raggiungimento degli obiettivi della qualità di prodotto.
-\subsubsection{MPDS01: Completezza dell'implementazione}
-L'indice stabilisce la completezza del prodotto software realizzato nel momento in cui viene calcolato rispetto a tutti i requisiti previsti dall'\AdRv{1.0.0}.\\
-Viene calcolato nel seguente modo:
-\begin{center}
-	\textbf{CI=\(1-\frac{FNI}{FI}\)*100}
-\end{center}
-dove:
+\subsubsection{Metriche per la qualità di prodotto}
 \begin{itemize}
-	\item \textbf{FNI} indica il numero di funzionalità non implementate;
-	\item \textbf{FI} indica il numero di funzionalità implementate.
+\item\hyperlink{MCImplementazione}{MPDS01: Completezza dell'implementazione;}
+\item \hyperlink{MErrori}{MPDS02: Densità errori;}
+\item\hyperlink{MFUtilizzo}{MPDS03: Facilità di utilizzo;}
+\item\hyperlink{MFApprendimento}{MPDS04: Facilità di apprendimento;}
+\item \hyperlink{MPGerarchia}{MPDS05:  Profondità della gerarchia;}
+\item \hyperlink{MSFComprensione}{MPDS06: Facilità di comprensione;}
+\item \hyperlink{MSFunzioni}{MPDS07: Semplicità delle funzioni;}
+\item \hyperlink{MSC}{MPDS08: Semplicità delle classi.}
 \end{itemize}
-\subsubsection{MPDS02: Densità errori}
-Rappresenta la percentuale di righe di codice che possono causare errori.\\
-Viene calcolato nel seguente modo:
-\begin{center}
-	\textbf{DE=\(\frac{RB}{RTOT}\)*100}
-\end{center}
-dove:
-\begin{itemize}
-	\item \textbf{RB} indica il numero di linee di codice che possono causare imprevisti o comportamenti diversi da quelli desiderati;
-	\item \textbf{RTOT} indica il numero di linee di codice totali.
-\end{itemize}
-\subsubsection{MPDS03: Facilità di utilizzo}
-Il valore stabilisce la semplicità per un utente di raggiungere quanto cercato valutando il numero di click medio per raggiungere il contenuto desiderato.
-\subsubsection{MPDS04: Facilità di apprendimento}
-Il valore stabilisce la semplicità per un utente di raggiungere quanto cercato all'interno del sito calcolando la media dei minuti necessari per raggiungere le pagine ricercate.
-\subsubsection{MPDS05:  Profondità della gerarchia}
-Il valore risultante viene calcolato individuando la profondità media delle pagine rispetto alla home page.
-\subsubsection{MPDS06: Facilità di comprensione}
-Il valore indica la facilità di comprensione del codice in base al numero di righe di commento presenti.\\
-Viene calcolato nel seguente modo:
-\begin{center}
-	\textbf{FC=\(\frac{LCOM}{LCOD}\)*100}
-\end{center}
-dove
-\begin{itemize}
-	\item \textbf{LCOM} indica il numero di linee di commento;
-	\item \textbf{LCOD} indica il numero di linee di codice.
-\end{itemize}
-\subsubsection{MPDS07: Semplicità delle funzioni}
-Il valore stabilisce la semplicità di un metodo basandosi sul numero di parametri a lui necessari.
-\subsubsection{MPDS08: Semplicità delle classi}
-Il valore stabilisce la semplicità di una classe basandosi sul numero di metodi al suo interno.

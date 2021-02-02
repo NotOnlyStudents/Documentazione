@@ -196,6 +196,32 @@ dove [X] indica il numero assoluto della tabella all'interno del documento, segu
 A questa prassi fanno eccezione le tabelle del Registro delle modifiche.
 \end{itemize}
 
+\subsubsection{Metriche}\label{MDocumentazione}
+Di seguito vengono presentate le metriche utilizzate per garantire il controllo sulla qualità. Per una descrizione sullo standard di riferimento e un elenco completo di tutte le metriche applicate si rimanda alla sezione \S\ref{9126} dell'Appendice. 
+\begin{itemize}
+	\item\textbf{MPR02: Indice di Gulpease}\hypertarget{MGulpease} \\
+	L'indice permette di stabilire la difficoltà di lettura di un testo.\\
+	Viene calcolato nel seguente modo:
+	\begin{center}
+		\(
+		GULP = 89+\frac{300\times\# frasi-10\times\#lettere}{\#parole}
+		\)
+	\end{center}
+	L'indice può assumere i seguenti valori:
+	\begin{itemize}
+		\item \textbf{GULP<80}: indica una leggibilità difficile per un utente con licenza elementare;
+		\item \textbf{GULP<60}: indica una leggibilità difficile per un utente con licenza media;
+		\item \textbf{GULP<40}: indica una leggibilità difficile per un utente con licenza superiore.
+	\end{itemize}
+	\item\textbf{MPR03: Indice di correttezza ortografica} \hypertarget{MOrtografia}\\
+	Indica la correttezza ortografica in un documento.
+	Viene calcolato nel seguente modo:
+	\begin{center}
+		\textbf{CORT = \# numero di errori ortografici}
+	\end{center}
+	Un risultato maggiore di zero indica la presenza di errori nel documento.
+\end{itemize}
+
 \subsubsection{Strumenti} \label{Documentazione_Strumenti}
 Di seguito sono riportati gli strumenti utilizzati durante la redazione della documentazione.
 \begin{itemize}
