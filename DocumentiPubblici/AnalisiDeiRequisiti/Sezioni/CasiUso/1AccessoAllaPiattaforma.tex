@@ -10,7 +10,7 @@
 L'utente non autenticato che non dispone di credenziali può registrarsi e accedere come acquirente nella piattaforma usando l'email e la password.
 \begin{itemize}
     \item \textbf{Attori Primari:} Utente non autenticato.
-    \item \textbf{Precondizione:} L'utente non è ancora presente nella piattaforma e si trova nella vista di registrazione.
+    \item \textbf{Precondizione:} L'utente non è ancora presente nella piattaforma e si trova nella pagina di registrazione.
     \item \textbf{Postcondizione:} L'utente è registrato con un account acquirente ed è autenticato come tale sulla piattaforma.
     \item \textbf{Scenario Principale:} L'utente crea un account compilando tutti i campi del modulo di registrazione nel seguente modo:
     \begin{itemize}
@@ -38,7 +38,7 @@ L'utente non autenticato che non dispone di credenziali può registrarsi e acced
 L'utente non autenticato che dispone di credenziali può accedere come acquirente nella piattaforma usando l'email e la password.
 \begin{itemize}
     \item \textbf{Attori Primari:} Utente non autenticato.
-    \item \textbf{Precondizione:} L'utente è già presente nella piattaforma e si trova nella vista di login.
+    \item \textbf{Precondizione:} L'utente è già presente nella piattaforma e si trova nella pagina di login.
     \item \textbf{Postcondizione:} L'utente è autenticato.
     \item \textbf{Scenario Principale:} L'utente accede alla piattaforma compilando tutti i campi del modulo di login nel seguente modo:
     \begin{itemize}
@@ -63,13 +63,14 @@ L'utente non autenticato che dispone di credenziali può accedere come acquirent
 L'utente che dispone di credenziali si è dimenticato la propria password e la vuole cambiare.
 \begin{itemize}
     \item \textbf{Attori Primari:} Utente non autenticato.
-    \item \textbf{Precondizione:} L'utente non autenticato che dispone di credenziali si trova nella vista per cambiare la password.
+    \item \textbf{Precondizione:} L'utente non autenticato che dispone di credenziali si trova nella pagina per cambiare la password.
     \item \textbf{Postcondizione:} L'utente è autenticato e ha cambiato la password con cui accedere.
     \item \textbf{Scenario Principale:} L'utente che dispone di credenziali si è dimenticato la propria password e per cambiarla deve compiere i seguenti passi:
     \begin{itemize}
-        \item Andare nella vista di cambio password. 
+        \item Andare nella pagina di cambiamento password. 
         \item (UC23.1) - Inserimento email.
-        \item Invio procedura per il cambio della password all'email indicata.
+        \item Invio link per il cambio della password all'email indicata.
+        \item Apertura della pagina per il cambio della password.
         \item (UC23.2) - Inserimento nuova password.
         \item (UC23.3) - Inserimento conferma nuova password.
         \item L'utente è autenticato e ha cambiato la password.
