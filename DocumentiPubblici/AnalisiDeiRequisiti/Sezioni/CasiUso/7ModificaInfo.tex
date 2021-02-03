@@ -13,9 +13,9 @@
 L'acquirente o il venditore vuole modificare le sue informazioni personali.
 \begin{itemize}
     \item \textbf{Attori primari:} Acquirente; Venditore.
-    \item \textbf{Precondizione:} L'attore si trova nella vista personale (UC3.2.1) e ha selezionato l'azione per la modifica delle informazioni.
+    \item \textbf{Precondizione:} L'attore si trova nella pagina personale (UC3.2.1) e ha premuto sul link per la modifica delle informazioni.
     \item \textbf{Postcondizione:} L'attore ha aggiornato le sue informazioni personali.
-    \item \textbf{Scenario Principale:} L'attore ha selezionato l'azione per la modifica delle informazioni personali e può così iniziare a modificarle. I campi che si possono modificare sono:
+    \item \textbf{Scenario Principale:} L'attore ha premuto sul link per la modifica delle informazioni personali e può così iniziare a modificarle. I campi che si possono modificare sono:
     \begin{itemize}
         \item per l'acquirente:
         \begin{itemize}
@@ -51,7 +51,7 @@ L'acquirente o il venditore vuole modificare le sue informazioni personali.
 L'acquirente o il venditore vuole cambiare la password.
 \begin{itemize}
     \item \textbf{Attori primari:} Acquirente; Venditore.
-    \item \textbf{Precondizione:} L'attore ha selezionato l'azione per la modifica della password.
+    \item \textbf{Precondizione:} L'attore ha premuto sul link per la modifica della password.
     \item \textbf{Postcondizione:} L'attore ha modificato la sua password.
     \item \textbf{Scenario Principale:} L'utente autenticato vuole cambiare la password e deve eseguire i seguenti passi:
     \begin{itemize}
@@ -68,7 +68,7 @@ L'acquirente o il venditore vuole cambiare la password.
 L'acquirente può eliminare il proprio account.
 \begin{itemize}
     \item \textbf{Attori Primari:} Acquirente.
-    \item \textbf{Precondizione:} L'acquirente si trova nella propria vista personale (UC3.2.1) e ha selezionato l'azione di cancellazione del proprio account. 
+    \item \textbf{Precondizione:} L'acquirente si trova nella propria pagina personale (UC3.2.1) e ha selezionato l'azione di cancellazione del proprio account. 
     \item \textbf{Postcondizione:} L'account dell'acquirente non è più presente nella piattaforma
     \item \textbf{Scenario Principale:} L'acquirente vuole eliminare il proprio account e compie le seguenti operazioni:
     \begin{itemize}
@@ -76,16 +76,16 @@ L'acquirente può eliminare il proprio account.
         \item Viene visualizzato un messaggio di conferma dell'operazione.
         \item Se conferma viene eliminato l'account.
     \end{itemize}
-    \item \textbf{Scenario Alternativo:} Se non conferma viene riportato alla propria vista personale.
+    \item \textbf{Scenario Alternativo:} Se non conferma viene riportato alla propria pagina personale.
 \end{itemize}
 
 \UC{Visualizzazione ordini effettuati}
 L'acquirente vuole vedere l'elenco degli ordini effettuati sulla piattaforma.
 \begin{itemize}
     \item \textbf{Attori primari:} Acquirente.
-    \item \textbf{Precondizione:} L'acquirente si trova nella vista del suo profilo.
+    \item \textbf{Precondizione:} L'acquirente si trova nella pagina del suo profilo.
     \item \textbf{PostCondizione:} L'acquirente visualizza l'elenco degli ordini.
-    \item \textbf{Scenario Principale:} L'utente, all'interno della vista del profilo, vede l'elenco degli ordini effettuati.
+    \item \textbf{Scenario Principale:} L'utente, all'interno della pagina del profilo, vede l'elenco degli ordini effettuati.
         Per ogni ordine effettuato sono indicati i prodotti inclusi nell'ordine, la loro quantità e il prezzo totale pagato.
     \item \textbf{Scenario Alternativo:} L'utente non ha ancora effettuato ordini, viene visualizzato il messaggio "Nessun ordine effettuato" e sarà data la possibilità all'attore di andare alla home per iniziare gli acquisti.
 \end{itemize}
