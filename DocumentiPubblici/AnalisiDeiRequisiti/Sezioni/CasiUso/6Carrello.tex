@@ -13,9 +13,9 @@
 L'utente vuole visualizzare i prodotti che ha inserito nel carrello.
 \begin{itemize}
     \item \textbf{Attori Primari:} Acquirente; Utente non autenticato.
-    \item \textbf{Precondizione:} L'attore si trova nella pagina del carrello.
+    \item \textbf{Precondizione:} L'attore si trova nella vista del carrello.
     \item \textbf{Postcondizione:} L'attore visualizza l'elenco di prodotti che ha messo nel carrello.
-    \item \textbf{Scenario Principale:} L'utente clicca sull'azione per entrare nella pagina del carrello all'interno del menù (UC3.4) e vede la lista dei prodotti che sono stati inseriti. Da qui potrà svolgere le seguenti operazioni:
+    \item \textbf{Scenario Principale:} L'utente clicca sull'azione per entrare nella vista del carrello all'interno del menù (UC3.4) e vede la lista dei prodotti che sono stati inseriti. Da qui potrà svolgere le seguenti operazioni:
     \begin{itemize}
         \item (UC10.1) - Visualizzare il prezzo totale, tasse ed eventuali sconti.
         \item (UC10.2) - Eliminazione di un prodotto dal carrello.
@@ -31,9 +31,9 @@ L'utente vuole visualizzare i prodotti che ha inserito nel carrello.
 L'utente vuole vedere l'ammontare delle tasse, la presenza di sconti e il prezzo totale della merce nel carrello.
 \begin{itemize}
     \item \textbf{Attori Primari:} Utente non autenticato; Utente autenticato.
-    \item \textbf{Precondizione:} L'attore si trova nella pagina del carrello con almeno un prodotto al suo interno.
+    \item \textbf{Precondizione:} L'attore si trova nella vista del carrello con almeno un prodotto al suo interno.
     \item \textbf{Postcondizione:} Viene calcolato l'ammontare delle tasse, la quantità di sconto e il costo totale e vengono visualizzati dall'utente.
-    \item \textbf{Scenario Principale:} Appena l'utente entra nella pagina del carrello, se vi sono presenti dei prodotti, il sistema calcola l'ammontare delle tasse, la quantità di sconto da applicare (in caso sia stato applicato uno sconto) e il prezzo totale dell'ordine.
+    \item \textbf{Scenario Principale:} Appena l'utente entra nella vista del carrello, se vi sono presenti dei prodotti, il sistema calcola l'ammontare delle tasse, la quantità di sconto da applicare (in caso sia stato applicato uno sconto) e il prezzo totale dell'ordine.
     \item \textbf{Scenario Alternativo:} Non ci sono prodotti all'interno del carrello non verrà calcolato nessun importo e, di conseguenza, non potrà essere visto dall'utente.
 \end{itemize}
 
@@ -41,7 +41,7 @@ L'utente vuole vedere l'ammontare delle tasse, la presenza di sconti e il prezzo
 L'acquirente o l'utente non autenticato può eliminare un prodotto che ha inserito nel carrello.
 \begin{itemize}
     \item \textbf{Attori Primari:} Acquirente; Utente non autenticato.
-    \item \textbf{Precondizione:} L'attore è nella pagina del carrello e ha inserito almeno un prodotto.
+    \item \textbf{Precondizione:} L'attore è nella vista del carrello e ha inserito almeno un prodotto.
     \item \textbf{Postcondizione:} L'attore ha rimosso totalmente il prodotto dal carrello, perciò anche se era selezionato in maggiore quantità.
     \item \textbf{Scenario Principale:} L'attore non vuole più ordinare un prodotto che ha aggiunto nel carrello e, per farlo, svolge le seguenti operazioni:
     \begin{itemize}
@@ -115,18 +115,18 @@ L'acquirente o utente non autenticato modifica la quantità del prodotto che vuo
     \label{fig:Checkout}
 \end{figure}
 
-L'utente si trova nella pagina del carrello e vuole procedere al checkout per acquistare i prodotti scelti.
+L'utente si trova nella vista del carrello e vuole procedere al checkout per acquistare i prodotti scelti.
 \begin{itemize}
     \item \textbf{Attori Primari:} Utente non autenticato; Acquirente e Stripe.
-    \item \textbf{Precondizione:} L'acquirente o l'utente non autenticato si trova nella pagina del carrello.
-    \item \textbf{Postcondizione:} L'utente ha terminato il checkout e si trova nella pagina di riepilogo ordine.
-    \item \textbf{Scenario Principale:} L'attore si trova nella pagina del carrello e clicca sull'azione per iniziare il checkout. In seguito farà i seguenti passi:
+    \item \textbf{Precondizione:} L'acquirente o l'utente non autenticato si trova nella vista del carrello.
+    \item \textbf{Postcondizione:} L'utente ha terminato il checkout e si trova nella vista di riepilogo ordine.
+    \item \textbf{Scenario Principale:} L'attore si trova nella vista del carrello e clicca sull'azione per iniziare il checkout. In seguito farà i seguenti passi:
     \begin{itemize}
         \item (UC13.1) - Inserimento indirizzo di spedizione.
         \item (UC13.2) - Conclusione checkout.
     \end{itemize}
-    \item \textbf{Scenario Alternativo 1:} Se l'attore non è ancora autenticato, viene reindirizzato alla pagina del login (UC1.2) o della registrazione per autenticarsi come acquirente, per poi procede al checkout.
-    \item \textbf{Scenario Alternativo 2:} Se l'utente non autenticato è stato reindirizzato alla pagina di login e accede come venditore, il carrello con i prodotti salvati viene svuotato.
+    \item \textbf{Scenario Alternativo 1:} Se l'attore non è ancora autenticato, viene reindirizzato alla vista del login (UC1.2) o della registrazione per autenticarsi come acquirente, per poi procede al checkout.
+    \item \textbf{Scenario Alternativo 2:} Se l'utente non autenticato è stato reindirizzato alla vista di login e accede come venditore, il carrello con i prodotti salvati viene svuotato.
     \item \textbf{Inclusioni:}
     \begin{itemize}
         \item (UC13.2) - Conclusione checkout.
@@ -146,7 +146,7 @@ L'acquirente inserisce l'indirizzo al quale verrà spedito il pacco con l'ordine
         \item (UC23.4) - L'acquirente inserisce l'indirizzo di spedizione obbligatorio.
         \item Vengono calcolati i costi di spedizione e i dazi doganali.
         \item Vengono mostrati i costi aggiuntivi appena calcolati.
-        \item Dopo aver accettato anche i costi aggiuntivi, verrà reindirizzato alla pagina di Stripe.
+        \item Dopo aver accettato anche i costi aggiuntivi, verrà reindirizzato alla vista di Stripe.
     \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
@@ -155,26 +155,26 @@ L'acquirente inserisce l'indirizzo al quale verrà spedito il pacco con l'ordine
 \end{itemize}
 
 \subUC{Conclusione checkout}
-L'acquirente procede al pagamento attraverso il servizio fornito da Stripe e poi gli viene mostrata una pagina con il resoconto dell'ordine.
+L'acquirente procede al pagamento attraverso il servizio fornito da Stripe e poi gli viene mostrata una vista con il resoconto dell'ordine.
 \begin{itemize}
     \item \textbf{Attori Primari:} Acquirente e Stripe.
     \item \textbf{Precondizione:} L'acquirente non ha ancora pagato e il carrello non è vuoto.
-    \item \textbf{Postcondizione:} L'acquirente ha effettuato il pagamento, il suo carrello è vuoto e si trova sulla pagina di riepilogo dell'ordine.
+    \item \textbf{Postcondizione:} L'acquirente ha effettuato il pagamento, il suo carrello è vuoto e si trova sulla vista di riepilogo dell'ordine.
     \item \textbf{Scenario Principale:}
         \begin{itemize}
-            \item L'acquirente viene indirizzato alla pagina di checkout di Stripe, dove pagherà il costo del carrello più le spese di spedizione e le tasse.
+            \item L'acquirente viene indirizzato alla vista di checkout di Stripe, dove pagherà il costo del carrello più le spese di spedizione e le tasse.
             \item Stripe si occupa del pagamento.
-            \item Quando è avvenuto il pagamento viene svuotato il carrello e gli articoli che lo componevano vengono sottratti nella quantità acquistata da quelli disponibili e poi mostrati nella pagina di riepilogo ordine (UC14).
+            \item Quando è avvenuto il pagamento viene svuotato il carrello e gli articoli che lo componevano vengono sottratti nella quantità acquistata da quelli disponibili e poi mostrati nella vista di riepilogo ordine (UC14).
         \end{itemize}
-    \item \textbf{Scenario Alternativo:} Se il pagamento fallisce l'utente viene riportato alla pagina del carrello, senza che questo venga svuotato.
+    \item \textbf{Scenario Alternativo:} Se il pagamento fallisce l'utente viene riportato alla vista del carrello, senza che questo venga svuotato.
 \end{itemize}
 
-\UC{Pagina di riepilogo ordine}
+\UC{Vista di riepilogo ordine}
 L'acquirente o il venditore vuole vedere i prodotti contenuti in un ordine, le loro quantità, l'indirizzo di spedizione e il prezzo totale di pagamento.
 \begin{itemize}
     \item \textbf{Attori Primari:} Acquirente; Venditore.
     \item \textbf{Precondizione:} L'attore ha premuto sull'azione di visualizzazione del riepilogo di un ordine precedentemente fatto da un acquirente. 
-    \item \textbf{Postcondizione:} Viene aperta la pagina di riepilogo ordine.
+    \item \textbf{Postcondizione:} Viene aperta la vista di riepilogo ordine.
     \item \textbf{Scenario Principale:}
     \begin{itemize}
         \item L'attore preme sull'azione di visualizzazione del riepilogo.
