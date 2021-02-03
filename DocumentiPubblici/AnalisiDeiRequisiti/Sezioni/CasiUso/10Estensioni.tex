@@ -98,6 +98,15 @@ Visualizzazione messaggio di errore che segnala all'utente autenticato o non aut
     \item \textbf{Scenario Principale:} Visualizzazione messaggio di errore che segnala che la quantità inserita è minore o uguale a zero e blocca l'operazione che stava eseguendo.
 \end{itemize}
 
+\UC{Visualizzazione messaggio di ricerca o filtraggio senza alcun risultato}
+Nel caso in cui la ricerca o il filtraggio non dia risultati verrà visualizzato un opportuno messaggio.
+\begin{itemize}
+	\item \textbf{Attori Primari:} Acquirente; Utente non autenticato. 
+	\item \textbf{Precondizione:} L'attore ha svolto una ricerca o un filtraggio che non ha prodotto alcun risultato.
+	\item \textbf{Postcondizione:} All'attore verrà mostrato un messaggio che lo informa che la ricerca o il filtraggio non ha prodotto risultati.
+	\item \textbf{Scenario Principale:} L'attore effettua una ricerca oppure ha impostato dei filtri che generano una ricerca senza alcun risultato e viene avvertito.
+\end{itemize}
+
 \UC{Visualizzazione avviso in caso di prodotto selezionato per l'eliminazione ma non ancora evaso in alcuni ordini}
 Visualizzazione avviso che segnala al venditore che il prodotto che vuole eliminare è presente all'interno di un ordine che non è ancora stato evaso.
 \begin{itemize}
