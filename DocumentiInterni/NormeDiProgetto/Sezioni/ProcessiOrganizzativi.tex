@@ -25,13 +25,20 @@ Le aspettative del gruppo per questo processo sono:
 	\item Monitorare l'andamento del progetto.
 \end{itemize}
 
+
 \subsubsection{Pianificazione}
 \myparagraph{Scopo dell'attività}
 Lo scopo dell'attività di pianificazione è di definire un metodo di lavoro stabilendone la fattibilità e assicurandone la sua esecuzione.
 \myparagraph{Descrizione della sezione}
 Nella sezione vengono stabiliti compiti e ruoli di progetto, gestione dei rischi.
-\myparagraph{Aspettative}
-Con l'attività di pianificazione il gruppo intende definire il metodo di lavoro che viene seguito durante la realizzazione del progetto.
+\myparagraph{Aspettative}\label{AspettativePianificazione}Con l'attività di pianificazione il gruppo intende definire il metodo di lavoro che viene seguito durante la realizzazione del progetto. Per assicurare il raggiungimento degli obiettivi di qualità previsti dal \PdQ\ il gruppo intende:
+\begin{itemize}
+	\item Pianificare le attività da svolgere con precise scadenze;
+	\item Introdurre più \glo{milestone} nel tempo rispetto al numero di revisioni;
+	\item Stabilire ed eventualmente riassegnare le risorse necessarie alla realizzazione delle attività considerando le risorse utilizzate in altre attività;
+	\item Valutare periodicamente il progresso delle attività ed eventualmente modificare quanto pianificato.
+\end{itemize}
+
 \myparagraph{Ruoli del progetto}
 Tutti i componenti del gruppo devono ricoprire tutti i ruoli almeno una volta durante lo svolgimento del progetto.\\
 I ruoli previsti dal progetto sono elencati di seguito.
@@ -90,8 +97,7 @@ I suoi compiti principali sono:
 	\item Redigere la parte retrospettiva del \PdQv\ che descrive l'esito delle verifiche e delle prove effettuate.
 \end{itemize}
 
-\myparagraph{Gestione dei compiti}\label{GestioneCompiti}
-Durante lo sviluppo del progetto spetta al singolo componente stabilire in piena autonomia quali sono i suoi compiti a seconda del proprio ruolo.
+\myparagraph{Gestione dei compiti}\label{GestioneCompiti}Durante lo sviluppo del progetto spetta al singolo componente stabilire in piena autonomia quali sono i suoi compiti a seconda del proprio ruolo.
 Per permettere di gestire i compiti in modo agevole è stato scelto di utilizzare l'\glo{ITS} fornito da \glo{GitHub}: il \glo{repository} usato dal gruppo per il \glo{versionamento} del progetto.
 Il componente del gruppo in base al proprio ruolo crea delle \glo{issue} che rappresentano dei singoli compiti, che assegna a se stesso o ad altri componenti in seguito a riunioni e secondo accordi, comprendenti le seguenti informazioni:
 \begin{itemize}
@@ -105,12 +111,11 @@ Ogni issue attraversa degli stati che permettono di monitorare l'avanzamento nel
 \begin{itemize}
 	\item \textbf{To do:} compito da svolgere;
 	\item \textbf{In progress:} compito in svolgimento;
-	\item \textbf{To be verified:} compito da essere verificato;
-	\item \textbf{Done:} compito svolto.
+	\item \textbf{Verified:} compito svolto.
 \end{itemize}
+Il membro del gruppo dopo aver aperto l'issue relativa all'attività da svolgere, apre un branch di lavoro e sposta l'issue in "In progress" quando inizia il compito. Quando ha concluso l'attività invia una pull request collegando la issue relativa, a questo punto è possibile procedere all'attività di verifica. 
 
-\myparagraph{Gestione dei rischi}\label{GestioneRischi}
-Tutti i rischi che si possono presentare durante la realizzazione del progetto vengono inseriti all'interno del \PdPv\ redatto dal \Responsabile.
+\myparagraph{Gestione dei rischi}\label{GestioneRischi}Tutti i rischi che si possono presentare durante la realizzazione del progetto vengono inseriti all'interno del \PdPv\ redatto dal \Responsabile.
 Viene seguita la seguente procedura:
 \begin{itemize}
 	\item Individuazione di nuovi problemi e monitoraggio dei rischi già individuati;
@@ -144,8 +149,7 @@ Nel \PdPv{1.0.0} per ogni rischio è presente una tabella indicante:
 	\item \textbf{Piano di contingenza}.
 \end{itemize}
 
-\myparagraph{Metriche}\label{MPianificazione}
-Di seguito vengono presentate le metriche utilizzate per garantire il controllo sulla qualità. Per una descrizione sullo standard di riferimento e un elenco completo di tutte le metriche applicate si rimanda alla sezione \S\ref{9126} dell'appendice. 
+\myparagraph{Metriche}\label{MPianificazione}Di seguito vengono presentate le metriche utilizzate per garantire il controllo sulla qualità. Per una descrizione sullo standard di riferimento e un elenco completo di tutte le metriche applicate si rimanda alla sezione \S\ref{9126} dell'appendice. 
 \begin{itemize}
 	\item \textbf{MPR04: Budget at Completion}\hypertarget{MBC}\\
 		Rappresenta il valore previsto per la realizzazione del progetto secondo quanto previsto nel \PdPv{1.0.0}.
@@ -186,8 +190,7 @@ Di seguito vengono presentate le metriche utilizzate per garantire il controllo 
 	Un valore positivo segnala che i costi sostenuti rientrano nel budget preventivato.
 \end{itemize}
 \subsubsection{Coordinamento}
-\myparagraph{Scopo dell'attività}\label{PO_Coordinamento_Scopo}
-L'attività di coordinamento ha lo scopo di definire come vengono gestite le comunicazioni all'interno del gruppo {\Gruppo} e tra il gruppo e soggetti esterni.
+\myparagraph{Scopo dell'attività}\label{PO_Coordinamento_Scopo}L'attività di coordinamento ha lo scopo di definire come vengono gestite le comunicazioni all'interno del gruppo {\Gruppo} e tra il gruppo e soggetti esterni.
 \myparagraph{Descrizione della sezione}
 La sezione presenta le norme che il gruppo segue per le comunicazioni e le riunioni.
 \myparagraph{Aspettative}
@@ -219,8 +222,7 @@ Tra un incontro e un altro viene creato un documento condiviso in Google Drive n
 \paragraph*{Incontri esterni}
 Negli incontri esterni, assieme ai membri del gruppo, sono coinvolti anche uno o più rappresentanti dell'azienda proponente.
 Gli incontri esterni con l'azienda proponente avvengono secondo gli accordi (vedi sezione \S\ref{Rapporti RedBabel}). Se si necessita di discutere con i committenti il \Responsabile\ ha il compito di contattarli e organizzare l'incontro secondo le disponibilità del \VT\ e del \CR.
-\myparagraph{Norme generali}\label{NormeGenerali}
-I componenti del gruppo si impegnano a:
+\myparagraph{Norme generali}\label{NormeGenerali}I componenti del gruppo si impegnano a:
 \begin{itemize}
 	\item Essere il più possibile reperibili;
 	\item Informare tempestivamente il gruppo in caso di problemi di salute e/o famigliari che non consentono il corretto svolgimento dei propri compiti;
@@ -258,8 +260,15 @@ La sezione analizza le tre attività principali del processo di miglioramento, o
 	\item \textbf{Valutazione del processo};
 	\item \textbf{Miglioramento del processo}.
 \end{itemize}
-\subsubsection{Aspettative}
-Il gruppo si pone come aspettativa di questo processo la pianificazione del lavoro nel rispetto del principio di miglioramento continuo.
+\subsubsection{Aspettative}\label{AspettativeMiglioramento}
+Il gruppo si pone come aspettativa di questo processo la pianificazione del lavoro nel rispetto del principio di miglioramento continuo. Per assicurare il raggiungimento degli obiettivi di qualità previsti dal \PdQ\ il gruppo intende:
+\begin{itemize}
+	\item Correggere tempestivamente quanto segnalatoci da committenti e proponente;
+	\item Mantenere traccia dei cambiamenti effettuati come indicato nella sezione \S\ref{GestioneCambiamenti};
+	\item Rendere stabili nel tempo i miglioramenti conseguiti;
+	\item Ridurre al minimo necessario il tempo di gestione delle issue da svolgere.
+\end{itemize}
+
 \subsubsection{Norme generali}\label{PO_NormeGenerali}
 All'interno del \PdQ\ vengono inseriti gli obiettivi e le metriche di \glo{qualità} per valutare l'andamento delle attività di ogni processo. Qualora si presentassero problemi, il membro del gruppo deve avvertire tempestivamente gli altri componenti del team e si procederà ad una eventuale modifica di quanto pianificato. Periodicamente vengono calcolate le metriche di qualità previste.
 \subsubsection{Metriche}\label{MMiglioramento}

@@ -12,8 +12,14 @@ L'individuazione dei requisiti consente di:
 \myparagraph{Descrizione della sezione}
 La sezione contiene le norme relative all'attività di analisi dei requisiti e del relativo documento \AdR\ che i componenti del gruppo, in particolare gli \textit{Analisti}, devono seguire.
 
-\myparagraph{Aspettative} 
-L'attività di analisi dei requisiti ha come obiettivo la redazione del documento di \AdR{} che comprende in modo formale tutti i requisiti che il prodotto software deve o è desiderabile soddisfi.
+\myparagraph{Aspettative}\label{AspettativeAnalisi}L'attività di analisi dei requisiti ha come obiettivo la redazione del documento di \AdR{} che comprende in modo formale tutti i requisiti che il prodotto software deve o è desiderabile soddisfi. Per assicurare il raggiungimento degli obiettivi di qualità previsti dal \PdQ\ il gruppo intende:
+\begin{itemize}
+	\item Coinvolgere frequentemente proponente e committente;
+	\item Studiare prodotti simili a quello richiesto;
+	\item Valutare i possibili scenari immedesimandosi nell'utente del prodotto;
+	\item Individuare requisiti che possono migliorare la qualità del prodotto anche se non obbligatori;
+	\item Assicurare che l'implementazione del prodotto soddisfi i requisiti individuati in modo coerente rispetto al loro significato.
+\end{itemize}
 
 \myparagraph{Struttura del documento}
 La struttura del documento comprenderà:
@@ -28,8 +34,7 @@ La struttura del documento comprenderà:
 	\end{itemize} 
 \end{itemize}
 
-\myparagraph{Classificazione dei requisiti}\label{ClassificazioneRequisiti}
-Tutti i requisti sono individuati da un codice identificativo univoco, non modificabile dopo l'assegnazione, rappresentato nel seguente modo:
+\myparagraph{Classificazione dei requisiti}\label{ClassificazioneRequisiti}Tutti i requisti sono individuati da un codice identificativo univoco, non modificabile dopo l'assegnazione, rappresentato nel seguente modo:
 
 \begin{center}
 	\textbf{R[Tipologia][Rilevanza][Numero][\_Codice]}
@@ -72,7 +77,29 @@ Tutti i requisti sono individuati da un codice identificativo univoco, non modif
 	\textcolor{white}{\textbf{Fonte}}\\	
 
 	RFO1\_1.1 & ......... & Capitolato\\
+	\hline
+\end{tabular}
+\end{table}
 
+\myparagraph{Requisiti di processo}\label{RequisitiProcesso}Dopo un confronto con il \VT\ si è ritenuto opportuno riportare i requisiti presenti nell'\AdR\ ritenuti da noi requisiti di processo all'interno di questo documento. 
+\begin{table}[h]
+	\centering
+	\caption{Requisiti di processo} 
+\rowcolors{2}{white}{celeste} 
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|C{9.5cm} C{2.5cm}|} 
+	
+	\rowcolor{darkblue}
+	\textcolor{white}{\textbf{Descrizione}}&
+	\textcolor{white}{\textbf{Fonte}}\\	
+
+	La piattaforma deve essere sviluppata \glo{production-ready}. & Capitolato \\
+	Il codice sorgente deve essere realizzato con un sistema di \glo{versionamento} e caricato in una \glo{repository} su \glo{GitHub}. & Capitolato\\
+	Il codice sorgente deve essere sottoposto ad analisi statica attraverso lo strumento \glo{Typescript-eslint}. & Capitolato \\
+	Devono essere realizzati test di integrazione per verificare l’integrazione con i sottosistemi. & Capitolato \\
+	Devono essere realizzati test d’unità per verificare le singole componenti del prodotto. & Interna \\
+	E desiderabile avere anche lo stadio di \glo{Production}. & Capitolato \\
+	\hline
 \end{tabular}
 \end{table}
 
@@ -109,8 +136,7 @@ I casi d'uso analizzati comprenderanno:
 	\item \textbf{Generalizzazioni:} opzionali, si ha generalizzazione quando si intende aggiungere o modificare caratteristiche base di un caso d'uso a un altro caso d'uso.
 \end{itemize}
 
-\myparagraph{Qualità dell'analisi dei requisiti}\label{QualitàAnalisi}
-Come indicato dallo standard IEEE 830-1998, la specifica deve essere:
+\myparagraph{Qualità dell'analisi dei requisiti}\label{QualitàAnalisi}Come indicato dallo standard IEEE 830-1998, la specifica deve essere:
 \begin{itemize}
 	\item \textbf{Priva di ambiguità:} i requisiti devono rispettare chiaramente i bisogni dell'utente finale del prodotto;
 	\item \textbf{Corretta:} i requisiti devono essere coerenti rispetto alle richieste degli utenti finali;
@@ -122,8 +148,7 @@ Come indicato dallo standard IEEE 830-1998, la specifica deve essere:
 	\item \textbf{Ordinata per rilevanza:} i requisiti devono essere classificati secondo la loro rilevanza rispetto a quanto contrattato con il proponente.
 \end{itemize}
 
-\myparagraph{Metriche}\label{MAnalisi}
-Di seguito vengono presentate le metriche utilizzate per garantire il controllo sulla qualità. Per una descrizione sullo standard di riferimento e un elenco completo di tutte le metriche applicate si rimanda alla sezione \S\ref{9126} dell'appendice.
+\myparagraph{Metriche}\label{MAnalisi}Di seguito vengono presentate le metriche utilizzate per garantire il controllo sulla qualità. Per una descrizione sullo standard di riferimento e un elenco completo di tutte le metriche applicate si rimanda alla sezione \S\ref{9126} dell'appendice.
 \begin{itemize}
 \item\textbf{MPR01: Soddisfacimento requisiti obbligatori}\hypertarget{MSoddRequisiti}\\
 Indica la percentuale di requisiti obbligatori soddisfatti nel momento in cui viene calcolato.\\

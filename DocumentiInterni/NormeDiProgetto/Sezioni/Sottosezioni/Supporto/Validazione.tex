@@ -11,11 +11,10 @@ Il gruppo si aspetta di procedere alla validazione dei documenti in modo chiaro.
 \subsubsection{Validazione dei documenti}\label{ValidazioneDoc}
 Il \Responsabile\ procede nel seguente modo:
 \begin{itemize}
-	\item Se non ancora creata, crea l'issue in GitHub;
-	\item Sposta l'issue in "IN PROGRESS";
+	\item Se non ancora creata, crea l'issue in GitHub e la sposta in "IN PROGRESS";
 	\item Rilegge il codice e calcola l'\glo{indice di Gulpease};
-	\item Se riscontra problemi, avverte il redattore del documento e il verificatore. L'issue torna in "TO DO" in attesa delle modifiche. Quando queste vengono apportate si torna al secondo punto;
-	\item Sposta l'issue in "DONE" approvando il documento;
+	\item Se riscontra problemi, avverte il redattore del documento e il verificatore. L'issue torna in "TO DO" in attesa delle modifiche. Quando queste vengono apportate si torna al primo punto;
+	\item Sposta l'issue in "VERIFIED" approvando il documento;
 	\item Avverte i redattori incaricati di aggiornare il \PdQv{} con i risultati ottenuti.
 \end{itemize}
 
@@ -25,7 +24,7 @@ Il \textit{Verificatore} incaricato procede nel seguente modo:
 	\item Se non ancora creata, crea l'issue in GitHub;
 	\item Sposta l'issue in "IN PROGRESS";
 	\item Esegue i test descritti nella sezione \S\ref{Tests} così da garantire un software pronto al rilascio;
-	\item Sposta l'issue in "DONE" approvando il documento.
+	\item Sposta l'issue in "VERIFIED" approvando il documento.
 \end{itemize}
 
 \subsubsection{Piano di Qualifica e Test}

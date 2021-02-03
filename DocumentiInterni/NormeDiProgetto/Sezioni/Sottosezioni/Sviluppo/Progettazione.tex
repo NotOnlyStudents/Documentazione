@@ -1,6 +1,5 @@
 \subsubsection{Progettazione}
-\myparagraph{Scopo dell'attività} \label{PS_Progettazione_Scopo}
-La progettazione ha lo scopo di definire quale sarà l'architettura logica del prodotto, viene svolta dai \textit{Progettisti} prima dell'attività di codifica. Una buona architettura consente di:
+\myparagraph{Scopo dell'attività} \label{PS_Progettazione_Scopo}La progettazione ha lo scopo di definire quale sarà l'architettura logica del prodotto, viene svolta dai \textit{Progettisti} prima dell'attività di codifica. Una buona architettura consente di:
 \begin{itemize}
 	\item Ridurre la complessità del prodotto al fine di facilitare l'attività di codifica;
 	\item Organizzare e ripartire le responsabilità di realizzazione;
@@ -10,11 +9,17 @@ La progettazione ha lo scopo di definire quale sarà l'architettura logica del p
 \myparagraph{Descrizione della sezione}
 La sezione contiene le norme relative all'attività di progettazione che i componenti del gruppo, in particolare i \textit{Progettisti}, devono seguire.
 
-\myparagraph{Aspettative}
-Il gruppo per questa attività si aspetta di definire l'architettura logica del prodotto rispettandone le caratteristiche di qualità.
+\myparagraph{Aspettative}\label{AspettativeProgettazione}Il gruppo per questa attività si aspetta di definire l'architettura logica del prodotto rispettandone le caratteristiche di qualità. Per assicurare il raggiungimento degli obiettivi di qualità previsti dal \PdQ\ il gruppo intende:
+\begin{itemize}
+	\item Progettare perseguendo la correttezza per costruzione;
+	\item Organizzare e ripartire le responsabilità di realizzazione considerando la natura a \glo{microservizi} del prodotto da realizzare;
+	\item Realizzare un prototipo del prodotto, il \glo{Proof of Concept}, che comprenda le funzionalità principali per l'utente della piattaforma;
+	\item Documentare quanto progettato attraverso i diagrammi UML;
+	\item Progettare il prodotto sfruttando le qualità delle tecnologie da utilizzare;
+	\item Progettare il prodotto considerando la facilità di utilizzo dello stesso per l'utente.
+\end{itemize}
 
-\myparagraph{Qualità dell'attività di progettazione}\label{QualitàProgettazione}
-Un'architettura di buona qualità ha come caratteristiche misurabili e osservabili oggettivamente:
+\myparagraph{Qualità dell'attività di progettazione}\label{QualitàProgettazione}Un'architettura di buona qualità ha come caratteristiche misurabili e osservabili oggettivamente:
 \begin{itemize}
 	\item \textbf{Sufficienza:} capace di soddisfare tutti i requisiti indicati nell'\AdR; 
 	\item \textbf{Comprensibilità:} capace di essere capita da tutti gli stakeholders;
@@ -29,12 +34,11 @@ Le sue componenti devono essere semplici, coese nel raggiungimento degli obietti
 I \textit{Progettisti} devono assicurare che l'architettura e le sue componenti presentino le caratteristiche descritte e superino dei test di qualità da loro definiti.
 
 \newpage
-\myparagraph{Periodi della progettazione}\label{PeriodiProgettazione}
-L'attività di progettazione si articola in due parti: 
+\myparagraph{Periodi della progettazione}\label{PeriodiProgettazione}L'attività di progettazione si articola in due parti: 
 \paragraph*{Progettazione architetturale} 
 Vengono definite le specifiche dell'architettura e delle componenti del prodotto, delle loro interazioni con le restanti parti del sistema e dei test di integrazione. Al termine di questo periodo di progettazione si ottiene la \glo{\textit{Technology Baseline}} del progetto che conterrà: 
 \begin{itemize}
-	\item \glo{\textbf{Proof of Concept:}} primo eseguibile del sistema in grado di dimostrare che la tecnologia selezionata serve in modo efficace allo sviluppo del prodotto atteso;
+	\item \textbf{Proof of Concept:} primo eseguibile del sistema in grado di dimostrare che la tecnologia selezionata serve in modo efficace allo sviluppo del prodotto atteso;
 	\item \textbf{Tecnologie utilizzate:} descrizione dettagliata delle tecnologie impiegate nello sviluppo del progetto, con particolare enfasi sui pregi e i difetti riscontrati;
 	\item \textbf{Test di integrazione:} definizione dei test eseguiti per verificare che le varie componenti del sistema, una volta integrate insieme, interagiscano in modo corretto e in conformità con quanto richiesto dai requisiti;
 	\item \textbf{Tracciamento delle componenti:} associazione tra requisiti e componenti che li soddisfano.
@@ -49,8 +53,7 @@ Vengono definite le specifiche di dettaglio dell'architettura suddividendo il si
 	\item \textbf{Tracciamento delle classi:} associazione tra requisiti e classi che li soddisfano.
 \end{itemize}
 
-\myparagraph{Diagrammi UML 2.0}\label{DiagrammiUML}
-I diagrammi UML sono diagrammi realizzati in linguaggio UML, utilizzati per chiarire le scelte progettuali adottate e ridurre eventuali ambiguità. 
+\myparagraph{Diagrammi UML 2.0}\label{DiagrammiUML}I diagrammi UML sono diagrammi realizzati in linguaggio UML, utilizzati per chiarire le scelte progettuali adottate e ridurre eventuali ambiguità. 
 Di seguito vengono analizzati i diagrammi utilizzati.
 \paragraph*{Diagrammi delle classi}
 Questi diagrammi descrivono il tipo degli oggetti che fanno parte di un sistema.\\
@@ -271,8 +274,7 @@ Le eventuali relazioni tra gli use case del sistema rappresentate in questi diag
 	\end{center}
 \end{itemize} 
 
-\myparagraph{Metriche}\label{MProgettazione}
-Di seguito vengono presentate le metriche utilizzate per garantire il controllo sulla qualità. Per una descrizione sullo standard di riferimento e un elenco completo di tutte le metriche applicate si rimanda alla sezione \S\ref{9126} dell'appendice. 
+\myparagraph{Metriche}\label{MProgettazione}Di seguito vengono presentate le metriche utilizzate per garantire il controllo sulla qualità. Per una descrizione sullo standard di riferimento e un elenco completo di tutte le metriche applicate si rimanda alla sezione \S\ref{9126} dell'appendice. 
 \begin{itemize}
 	\item \textbf{MPDS03: Facilità di utilizzo;}\hypertarget{MFUtilizzo}\\
 	Il valore stabilisce la semplicità per un utente di raggiungere quanto cercato valutando il numero di click medio per raggiungere il contenuto desiderato.
