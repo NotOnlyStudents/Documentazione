@@ -1,91 +1,67 @@
-\subsection{UC23 - Inserimento campi dati}
-\label{UC23}
-L'utente autenticato o non autenticato desidera inserire un dato attraverso i campi dati.
-\begin{itemize}
-    \item \textbf{Attori Primari:} Utente autenticato; Utente non autenticato.
-    \item \textbf{\glo{Precondizione}:} L'attore ha a disposizione un campo dati.
-    \item \textbf{\glo{Postcondizione}:} L'attore ha riempito il campo dati.
-    \item \textbf{Scenario Principale:} L'attore ha a disposizione un campo dati e lo riempie attraverso una delle possibili azioni:
-    \begin{itemize}
-        \item (UC23.1) - Inserimento email.
-        \item (UC23.2) - Inserimento password.
-        \item (UC23.3) - Conferma password.
-        \item (UC23.4) - Inserimento testo.
-        \item (UC23.5) - Inserimento numero.
-        \item (UC23.6) - Inserimento immagine.
-    \end{itemize}
-\end{itemize}
-
-\subsubsection{UC23.1 - Inserimento email}
-\label{UC23.1}
+\UC{Inserimento email}
 L'utente autenticato o non autenticato inserisce l'email.
 \begin{itemize}
     \item \textbf{Attori Primari:} Utente autenticato; Utente non autenticato.
-    \item \textbf{Precondizione:} L'utente non autenticato non ha ancora fornito un'email.
-    \item \textbf{Postcondizione:} L'utente non autenticato ha fornito un'email.
-    \item \textbf{Scenario Principale:} L'utente non autenticato inserisce un'email valida.
+    \item \textbf{Precondizione:} L'attore non ha ancora fornito un'email e ha a disposizione un campo dati dove inserirla.
+    \item \textbf{Postcondizione:} L'attore ha fornito un'email.
+    \item \textbf{Scenario Principale:} L'attore inserisce un'email valida.
     \item \textbf{Estensione:}
     \begin{itemize}
         \item (UC27) - Visualizzazione messaggio di errore in caso di email non valida.
     \end{itemize}
 \end{itemize}
 
-\subsubsection{UC23.2 - Inserimento password}
-\label{UC23.2}
+\UC{Inserimento password}
 L'utente autenticato o non autenticato inserisce una password.
 \begin{itemize}
     \item \textbf{Attori primari:} Utente autenticato; Utente non autenticato.
-    \item \textbf{Precondizione:} L'attore non ha ancora fornito una password valida.
+    \item \textbf{Precondizione:} L'attore non ha ancora fornito una password valida e ha a disposizione un campo dati dove inserirla.
     \item \textbf{Postcondizione:} L'utente ha inserito una password valida.
-    \item \textbf{Scenario Principale:} L'utente non autenticato inserisce una password che rispetti le condizioni imposte.
+    \item \textbf{Scenario Principale:} L'attore inserisce una password che rispetti le condizioni imposte.
 \end{itemize}
 
-\subsubsection{UC23.3 - Inserimento conferma password}
-\label{UC23.3}
+\UC{Inserimento conferma password}
 L'utente autenticato o non autenticato inserisce la conferma della password.
 \begin{itemize}
     \item \textbf{Attori Primari:} Utente autenticato; Utente non autenticato
-    \item \textbf{Precondizione:} L'utente non è registrato e ha fornito una password.
-    \item \textbf{Postcondizione:} L'utente ha confermato la password reinserendola (deve essere uguale a quella fornita)
-    \item \textbf{Scenario Principale:} L'utente ha confermato la password reinserendola.
+    \item \textbf{Precondizione:} L'attore non è registrato e ha fornito una password.
+    \item \textbf{Postcondizione:} L'attore ha confermato la password reinserendola (deve essere uguale a quella fornita)
+    \item \textbf{Scenario Principale:} L'attore ha confermato la password reinserendola.
     \item \textbf{Estensioni:}
     \begin{itemize}
         \item (UC29) - Visualizzazione messaggio di errore in caso di password e password di conferma diverse.
     \end{itemize}
 \end{itemize}
 
-\subsubsection{UC23.4 - Inserimento testo} 
-\label{UC23.4}
-L'utente autenticato o non autenticato inserisce del testo.
+\UC{Inserimento testo} 
+L'attore autenticato o non autenticato inserisce del testo.
 \begin{itemize}
     \item \textbf{Attori Primari:} Utente autenticato; Utente non autenticato
-    \item \textbf{Precondizione:} L'attore non ha ancora inserito il testo nel campo dati.
+    \item \textbf{Precondizione:} L'attore non ha ancora inserito il testo e ha a disposizione un campo dati dove inserirlo.
     \item \textbf{Postcondizione:} L'attore ha inserito il testo nel campo dati.
-    \item \textbf{Scenario Principale:} Il venditore inserisce il testo nel campo dati.
+    \item \textbf{Scenario Principale:} L'attore inserisce il testo nel campo dati.
 \end{itemize}
 
-\subsubsection{UC23.5 - Inserimento numero} 
-\label{UC23.5}
-L'utente autenticato o non autenticato inserisce un numero.
+\UC{Inserimento numero} 
+L'attore autenticato o non autenticato inserisce un numero.
 \begin{itemize}
     \item \textbf{Attori Primari:} Utente autenticato; Utente non autenticato
-    \item \textbf{Precondizione:} L'attore non ha ancora inserito il numero nel campo dati.
+    \item \textbf{Precondizione:} L'attore non ha ancora inserito il numero nel campo dati e ha a disposizione un campo dati dove inserirlo.
     \item \textbf{Postcondizione:} L'attore ha inserito il numero nel campo dati.
-    \item \textbf{Scenario Principale:} L'utente inserisce il numero nel campo dati. Se il numero è negativo o uguale a zero viene visualizzato un messaggio di errore.
+    \item \textbf{Scenario Principale:} L'attore inserisce il numero nel campo dati
     \item \textbf{Estensioni:}
     \begin{itemize}
         \item (UC33) - Visualizzazione messaggio di errore in caso di quantità minore o uguale a zero.
     \end{itemize}
 \end{itemize}
 
-\subsubsection{UC23.6 - Inserimento immagine} 
-\label{UC23.6}
+\UC{Inserimento immagine} 
 Il venditore inserisce un immagine.
 \begin{itemize}
     \item \textbf{Attori Primari:} Venditore.
-    \item \textbf{Precondizione:} L'attore non ha ancora inserito l'immagine.
-    \item \textbf{Postcondizione:} L'attore ha inserito l'immagine.
-    \item \textbf{Scenario Principale:} L'attore inserisce l'immagine; Il file deve essere di tipo \glo{media-type} altrimenti verrà visualizzato un messaggio di errore.
+    \item \textbf{Precondizione:} Il venditore non ha ancora inserito l'immagine e ha a disposizione un campo dati dove inserirla.
+    \item \textbf{Postcondizione:} Il venditore ha inserito l'immagine.
+    \item \textbf{Scenario Principale:} Il venditore inserisce un file di tipo \glo{media-type}
     \item \textbf{Estensioni:}
     \begin{itemize}
         \item (UC32) - Visualizzazione messaggio di errore in caso che il file non sia del tipo media-type.

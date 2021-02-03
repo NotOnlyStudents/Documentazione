@@ -6,8 +6,7 @@
 %     b. Add the product to the cart;
 %     c. Click the link to redirect to the shopping cart page;
 
-\subsection{UC9 - Apertura PDP}
-\label{UC9}
+\UC{Apertura PDP}
 L'utente non autenticato o l'acquirente può aprire la PDP di un prodotto per visualizzarne i dettagli. 
 \begin{itemize}
     \item \textbf{Attori Primari:} Acquirente; Utente non autenticato.
@@ -30,12 +29,15 @@ L'utente non autenticato o l'acquirente può aprire la PDP di un prodotto per vi
         \end{itemize}
 \end{itemize}
 
-\subsubsection{UC9.1 - Aggiunta prodotto al carrello dalla PDP}
-\label{UC9.1}
+\UC{Aggiunta prodotto al carrello dalla PDP}
 L'utente non autenticato o l'acquirente si trova nella PDP che vuole aggiungere al suo carrello.
 \begin{itemize}
     \item \textbf{Attori Primari:} Acquirente; Utente non autenticato.
     \item \textbf{Precondizione:} L'attore si trova nella pagina di dettaglio del prodotto,
     \item \textbf{Postcondizione:} Il prodotto è stato aggiunto al suo carrello.
-    \item \textbf{Scenario Principale:} L'attore preme sull'azione di aggiunta al carrello del prodotto (UC11).
+    \item \textbf{Scenario Principale:} L'attore vuole comprare il prodotto visualizzato dalla PDP e in tal caso:
+    \begin{itemize}
+        \item Preme sull'azione di aggiunta al carrello del seguente prodotto.
+        \item (UC11) - Aggiunta del prodotto al carrello.
+    \end{itemize}
 \end{itemize}
