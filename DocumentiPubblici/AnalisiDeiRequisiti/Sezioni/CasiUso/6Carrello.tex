@@ -3,16 +3,13 @@
 %    a. Review all the products he selected;
 %    b. Review the the total price and total sales tax;
 %    c. Proceed to the checkout;
-\subsection{UC10 - Visualizzazione prodotti nel carrello}
-\label{UC10}
-
+\UC{Visualizzazione prodotti nel carrello}
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Immagini/DiagrammiUC/UC10VisualizzazioneProdottiNelCarrello.png}
-    \caption{Diagramma di UC10: Visualizzazione prodotti nel carrello} 
+    \caption{Diagramma di \actualUC: Visualizzazione prodotti nel carrello} 
     \label{fig:VisualizzazioneProdottiNelCarrello}
 \end{figure}
-\newpage
 L'utente vuole visualizzare i prodotti che ha inserito nel carrello.
 \begin{itemize}
     \item \textbf{Attori Primari:} Acquirente; Utente non autenticato.
@@ -28,7 +25,9 @@ L'utente vuole visualizzare i prodotti che ha inserito nel carrello.
     \item \textbf{Scenario Alternativo:} Non ci sono prodotti all'interno del carrello, verrà visualizzato il messaggio "Carrello vuoto" e sarà data la possibilità all'attore di andare alla home per iniziare gli acquisti.
 \end{itemize}
 
-\subsubsection{UC10.1 - Visualizzazione prezzo totale, tasse ed eventuali sconti} \label{UC10.1}
+\resetSubUC
+
+\subUC{Visualizzazione prezzo totale, tasse ed eventuali sconti}
 L'utente vuole vedere l'ammontare delle tasse, la presenza di sconti e il prezzo totale della merce nel carrello.
 \begin{itemize}
     \item \textbf{Attori Primari:} Utente non autenticato; Utente autenticato.
@@ -38,8 +37,7 @@ L'utente vuole vedere l'ammontare delle tasse, la presenza di sconti e il prezzo
     \item \textbf{Scenario Alternativo:} Non ci sono prodotti all'interno del carrello non verrà calcolato nessun importo e, di conseguenza, non potrà essere visto dall'utente.
 \end{itemize}
 
-\subsubsection{UC10.2 - Eliminazione di un prodotto dal carrello}
-\label{UC10.2}
+\UC{Eliminazione di un prodotto dal carrello}
 L'acquirente o l'utente non autenticato può eliminare un prodotto che ha inserito nel carrello.
 \begin{itemize}
     \item \textbf{Attori Primari:} Acquirente; Utente non autenticato.
@@ -53,13 +51,11 @@ L'acquirente o l'utente non autenticato può eliminare un prodotto che ha inseri
 \end{itemize}
 
 %% AGGIUNTA DI FILIPPO E LEONARDO v
-\subsection{UC11 - Aggiunta del prodotto al carrello}
-\label{UC11}
-
+\UC{Aggiunta del prodotto al carrello}
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Immagini/DiagrammiUC/UC11AggiuntaProdottoAlCarrello.png}
-    \caption{Diagramma di UC11: Aggiunta del prodotto al carrello} 
+    \caption{Diagramma di \actualUC: Aggiunta del prodotto al carrello} 
     \label{fig:Checkout}
 \end{figure}
 
@@ -81,8 +77,7 @@ L'utente non autenticato o l'acquirente può aggiungere al carrello i prodotti.
     \end{itemize}
 \end{itemize}
 
-\subsection{UC12 - Modifica della quantità del prodotto}
-\label{UC12}
+\UC{Modifica della quantità del prodotto}
 L'acquirente o utente non autenticato modifica la quantità del prodotto che vuole nel carrello.
 \begin{itemize}
     \item \textbf{Attori Primari:} Acquirente; Utente non autenticato.
@@ -112,13 +107,11 @@ L'acquirente o utente non autenticato modifica la quantità del prodotto che vuo
 % In case of successful payment, the application will send the product(s) via email (previously inserted
 % in the checkout process) to the customer;
 
-\subsection{UC13 - \glo{Checkout}}
-\label{UC13}
-
+\UC{\glo{Checkout}}
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.4]{Immagini/DiagrammiUC/UC13Checkout.png}
-    \caption{Diagramma di UC13: Checkout} 
+    \caption{Diagramma di \actualUC: Checkout} 
     \label{fig:Checkout}
 \end{figure}
 
@@ -139,9 +132,10 @@ L'utente si trova nella pagina del carrello e vuole procedere al checkout per ac
         \item (UC13.2) - Conclusione checkout.
     \end{itemize}
 \end{itemize}
-\newpage
-\subsubsection{UC13.1 - Inserimento indirizzo di spedizione}
-\label{UC13.1}
+
+\resetSubUC
+
+\subUC{Inserimento indirizzo di spedizione}
 L'acquirente inserisce l'indirizzo al quale verrà spedito il pacco con l'ordine effettuato.
 \begin{itemize}
     \item \textbf{Attori Primari:} Acquirente.
@@ -160,8 +154,7 @@ L'acquirente inserisce l'indirizzo al quale verrà spedito il pacco con l'ordine
     \end{itemize}
 \end{itemize}
 
-\subsubsection{UC13.2 - Conclusione checkout}
-\label{UC13.2}
+\subUC{Conclusione checkout}
 L'acquirente procede al pagamento attraverso il servizio fornito da Stripe e poi gli viene mostrata una pagina con il resoconto dell'ordine.
 \begin{itemize}
     \item \textbf{Attori Primari:} Acquirente e Stripe.
@@ -176,8 +169,7 @@ L'acquirente procede al pagamento attraverso il servizio fornito da Stripe e poi
     \item \textbf{Scenario Alternativo:} Se il pagamento fallisce l'utente viene riportato alla pagina del carrello, senza che questo venga svuotato.
 \end{itemize}
 
-\subsection{UC14 - Pagina di riepilogo ordine}
-\label{UC14}
+\UC{Pagina di riepilogo ordine}
 L'acquirente o il venditore vuole vedere i prodotti contenuti in un ordine, le loro quantità, l'indirizzo di spedizione e il prezzo totale di pagamento.
 \begin{itemize}
     \item \textbf{Attori Primari:} Acquirente; Venditore.
