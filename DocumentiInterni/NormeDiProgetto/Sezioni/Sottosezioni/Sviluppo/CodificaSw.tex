@@ -5,8 +5,12 @@ L'attività di codifica svolta dai \textit{Programmatori} ha lo scopo di trasfor
 \myparagraph{Descrizione della sezione}
 La sezione tratta le norme da seguire per ogni linguaggio di programmazione utilizzato durante lo svolgimento del progetto.
 
-\myparagraph{Aspettative}
-Con le norme individuate il gruppo si aspetta la realizzazione di codice uniforme.
+\myparagraph{Aspettative}\label{AspettativeCodifica}Con le norme individuate il gruppo si aspetta la realizzazione di codice uniforme. Per assicurare il raggiungimento degli obiettivi di qualità previsti dal \PdQ\ il gruppo intende:
+\begin{itemize}
+	\item Utilizzare i linguaggi sfruttando adeguatamente le loro capacità;
+	\item Ridurre il numero di righe di codice che possono causare errori;
+	\item Redarre il codice affinché risulti essere chiaro nel tempo e facilmente comprensibile anche da altri programmatori.
+\end{itemize}
 
 \myparagraph{Qualità della codifica}
 La codifica è di qualità se: 
@@ -17,20 +21,62 @@ La codifica è di qualità se:
 \end{itemize}
 Queste caratteristiche sono in grado di agevolare manutenzione, verifica e validazione e di conseguenza migliorare la qualità di prodotto.
 
-\myparagraph{Convenzioni generiche}\label{CodificaConvenzioni}Vengono di seguito riportate le norme generiche stabilite per la codifica.
+\myparagraph{Convenzioni generiche}\label{CodificaConvenzioni}
+Vengono di seguito riportate le norme generiche stabilite per la codifica.
 \paragraph*{Intestazione}
 I file sorgenti consegnati presentano la seguente intestazione inserita in un blocco di commento.
 \paragraph*{Nomenclatura}
 Tutte le classi, i metodi, le variabili devono avere un nome univoco, esplicativo e scritto in lingua inglese, in particolare:
 \begin{itemize}
-	\item Per i nomi di cartelle, file e classi viene seguita la convenzione \textit{CamelCase};
+	\item Per i nomi di cartelle, file e classi viene seguita la convenzione \textbf{CamelCase};
 	\item I nomi di variabili e metodi hanno iniziale minuscola, se composti da più parole la prima lettera delle parole successive alla prima è maiuscola;
 	\item Le costanti vengono scritte in maiuscolo.
 \end{itemize}
 \paragraph*{Parentesi}
 I blocchi di codice vanno inseriti tra parentesi graffe, anche se il blocco è vuoto o costituito da una sola riga di codice.
 \paragraph*{Verbosità}
-Una riga di codice deve essere lunga al massimo 140 caratteri.
-Se possibile è desiderabile definire metodi brevi evitando la ricorsione.
+Una riga di codice deve essere lunga al massimo 140 caratteri. Se possibile è desiderabile definire metodi brevi evitando la ricorsione.
 
+\myparagraph{Metriche}\label{MCodifica}Di seguito vengono presentate le metriche utilizzate per garantire il controllo sulla qualità. Per una descrizione sullo standard di riferimento e un elenco completo di tutte le metriche applicate si rimanda alla sezione \S\ref{9126} dell'appendice. 
+\begin{itemize}
+	\item\textbf{MPDS01: Completezza dell'implementazione}\hypertarget{MCImplementazione}\\
+	L'indice stabilisce la completezza del prodotto software realizzato nel momento in cui viene calcolato rispetto a tutti i requisiti previsti dall'\AdRv{1.0.0}.\\
+	Viene calcolato nel seguente modo:
+	\begin{center}
+		\textbf{CI=\(1-\frac{FNI}{FI}\)*100}
+	\end{center}
+	dove:
+	\begin{itemize}
+		\item \textbf{FNI} indica il numero di funzionalità non implementate;
+		\item \textbf{FI} indica il numero di funzionalità implementate.
+	\end{itemize}
+\item\textbf{MPDS02: Densità errori} \hypertarget{MErrori}\\
+Rappresenta la percentuale di righe di codice che possono causare errori.\\
+Viene calcolato nel seguente modo:
+\begin{center}
+	\textbf{DE=\(\frac{RB}{RTOT}\)*100}
+\end{center}
+dove:
+\begin{itemize}
+	\item \textbf{RB} indica il numero di linee di codice che possono causare imprevisti o comportamenti diversi da quelli desiderati;
+	\item \textbf{RTOT} indica il numero di linee di codice totali.
+\end{itemize}
 
+\item\textbf{MPDS07: Facilità di comprensione} \hypertarget{MFComprensione}\\
+Il valore indica la facilità di comprensione del codice in base al numero di righe di commento presenti.\\
+Viene calcolato nel seguente modo:
+\begin{center}
+	\textbf{FC=\(\frac{LCOM}{LCOD}\)*100}
+\end{center}
+dove
+\begin{itemize}
+	\item \textbf{LCOM} indica il numero di linee di commento;
+	\item \textbf{LCOD} indica il numero di linee di codice.
+\end{itemize}
+
+\item\textbf{MPDS08: Semplicità delle funzioni}\hypertarget{MSFunzioni}\\
+Il valore stabilisce la semplicità di un metodo basandosi sul numero di parametri a lui necessari.
+
+\item\textbf{MPDS09: Semplicità delle classi}\hypertarget{MSClassi}\\
+Il valore stabilisce la semplicità di una classe basandosi sul numero di metodi al suo interno.
+\end{itemize}
