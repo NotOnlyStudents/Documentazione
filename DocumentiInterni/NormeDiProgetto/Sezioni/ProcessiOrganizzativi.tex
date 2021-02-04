@@ -1,7 +1,7 @@
 \section{Processi organizzativi}
 \label{PO}
 \subsection{Descrizione}\label{PO_Descrizione}
-I processi organizzativi comprendono tutti i processi utilizzati per definire e gestire una struttura costituita dal personale e dai processi del ciclo di vita del prodotto, al fine di migliorarne continuamente la struttura e i processi stessi.
+I \glo{processi} organizzativi comprendono tutti i processi utilizzati per definire e gestire una struttura costituita dal personale e dai processi del ciclo di vita del prodotto, al fine di migliorarne continuamente la struttura e i processi stessi.
 In questa sezione vengono analizzati:
 \begin{itemize}
 	\item \textbf{Gestione di processo};
@@ -31,7 +31,7 @@ Le aspettative del gruppo per questo processo sono:
 Lo scopo dell'attività di pianificazione è di definire un metodo di lavoro stabilendone la fattibilità e assicurandone la sua esecuzione.
 \myparagraph{Descrizione della sezione}
 Nella sezione vengono stabiliti compiti e ruoli di progetto, gestione dei rischi.
-\myparagraph{Aspettative}\label{AspettativePianificazione}Con l'attività di pianificazione il gruppo intende definire il metodo di lavoro che viene seguito durante la realizzazione del progetto. Per assicurare il raggiungimento degli obiettivi di qualità previsti dal \PdQ\ il gruppo intende:
+\myparagraph{Aspettative}\label{AspettativePianificazione}Con l'attività di pianificazione il gruppo intende definire il metodo di lavoro che viene seguito durante la realizzazione del progetto. Per assicurare il raggiungimento degli obiettivi di \glo{qualità} previsti dal \PdQ\ il gruppo intende:
 \begin{itemize}
 	\item Pianificare le attività da svolgere con precise scadenze;
 	\item Introdurre più \glo{milestone} nel tempo rispetto al numero di revisioni;
@@ -109,11 +109,11 @@ Il componente del gruppo in base al proprio ruolo crea delle \glo{issue} che rap
 \end{itemize}
 Ogni issue attraversa degli stati che permettono di monitorare l'avanzamento nello svolgimento del compito che essa rappresenta, questi sono:
 \begin{itemize}
-	\item \textbf{To do:} compito da svolgere;
-	\item \textbf{In progress:} compito in svolgimento;
-	\item \textbf{Verified:} compito svolto.
+	\item \textbf{TO DO:} compito da svolgere;
+	\item \textbf{IN PROGRESS:} compito in svolgimento;
+	\item \textbf{VERIFIED:} compito svolto.
 \end{itemize}
-Il membro del gruppo dopo aver aperto l'issue relativa all'attività da svolgere, apre un branch di lavoro e sposta l'issue in "In progress" quando inizia il compito. Quando ha concluso l'attività invia una pull request collegando la issue relativa, a questo punto è possibile procedere all'attività di verifica. 
+Il membro del gruppo dopo aver aperto l'issue relativa all'attività da svolgere, apre un branch di lavoro e sposta l'issue in "IN PROGRESS" quando inizia il compito. Quando ha concluso l'attività invia una pull request collegando la issue relativa, a questo punto è possibile procedere all'attività di verifica. Nel caso in cui l'operazione di verifica vada a buon fine, la pull request viene chiusa insieme alle relative criticità associate. In caso contrario, alla presenza di grosse mancanze all'interno del documento stesso, il \textit{Verificatore} si accorda con il componente del gruppo che ha modificato il documento e lo corregge secondo le indicazioni ricevute e basandosi sulla lista di controllo.
 
 \myparagraph{Gestione dei rischi}\label{GestioneRischi}Tutti i rischi che si possono presentare durante la realizzazione del progetto vengono inseriti all'interno del \PdPv\ redatto dal \Responsabile.
 Viene seguita la seguente procedura:
@@ -156,9 +156,9 @@ Nel \PdPv{1.0.0} per ogni rischio è presente una tabella indicante:
 	\item \textbf{MPR05: Actual Cost of Work Performed}\hypertarget{MACWP}\\
 		Corrisponde alla somma di tutte le spese sostenute dal gruppo fino al momento in cui l'indice viene calcolato, il limite superiore dipende da quanto stabilito nel \glo{Preventivo} presente nel \PdPv{1.0.0}.
 	\item \textbf{MPR06: Budget Cost of Work Performed}\hypertarget{MBCWP}\\
-		Valore intero effettivo del prodotto ottenuto fino al momento in cui l'indice viene calcolato.
+		Valore con virgola effettivo del prodotto ottenuto fino al momento in cui l'indice viene calcolato.
 	\item \textbf{MPR07: Budget Cost of Work Scheduled} \hypertarget{MBCWS}\\
-		Valore intero corrispondente alla spesa pianificata per l'attività di progetto alla data corrente, reperibile nel preventivo presente nel \PdPv{1.0.0}.
+		Valore con virgola corrispondente alla spesa pianificata per l'attività di progetto alla data corrente, reperibile nel preventivo presente nel \PdPv{1.0.0}.
 	\item \textbf{MPR08: Schedule Variance}\hypertarget{MSV}\\
 		Indica se si è in linea, in anticipo o in ritardo rispetto alla schedulazione delle attività di progetto pianificate nella \glo{baseline}.\\
 		Viene calcolato nel seguente modo:
@@ -270,12 +270,12 @@ Il gruppo si pone come aspettativa di questo processo la pianificazione del lavo
 \end{itemize}
 
 \subsubsection{Norme generali}\label{PO_NormeGenerali}
-All'interno del \PdQ\ vengono inseriti gli obiettivi e le metriche di \glo{qualità} per valutare l'andamento delle attività di ogni processo. Qualora si presentassero problemi, il membro del gruppo deve avvertire tempestivamente gli altri componenti del team e si procederà ad una eventuale modifica di quanto pianificato. Periodicamente vengono calcolate le metriche di qualità previste.
+All'interno del \PdQ\ vengono inseriti gli obiettivi e le metriche di qualità per valutare l'andamento delle attività di ogni processo. Qualora si presentassero problemi, il membro del gruppo deve avvertire tempestivamente gli altri componenti del team e si procederà ad una eventuale modifica di quanto pianificato. Periodicamente vengono calcolate le metriche di qualità previste.
 \subsubsection{Metriche}\label{MMiglioramento}
 Di seguito vengono presentate le metriche utilizzate per garantire il controllo sulla qualità. Per una descrizione sullo standard di riferimento e un elenco completo di tutte le metriche applicate si rimanda alla sezione \S\ref{9126} dell'appendice. 
 \begin{itemize}
-\item\textbf{MPR10: Indice di risoluzione dei problemi}\hypertarget{MProblemi} \\
-L'indice calcola la velocità con cui le \glo{issue} vengono risolte, viene calcolata la media dei numeri di giorni che intercorrono tra l'apertura e la chiusura per ogni issue.
+\item\textbf{MPR10: Indice di risoluzione dei problemi}\hypertarget{MProblemi}\\
+L'indice calcola la velocità con cui le issue vengono risolte, viene calcolata la media dei numeri di giorni che intercorrono tra l'apertura e la chiusura per ogni issue.
 \end{itemize}
 
 \subsection{Formazione del personale}
