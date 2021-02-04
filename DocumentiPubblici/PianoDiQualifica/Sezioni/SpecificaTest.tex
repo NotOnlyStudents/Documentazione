@@ -4,11 +4,10 @@ Il gruppo ha deciso di utilizzare il modello a V, come modello di sviluppo del s
 \subsection{Test di sistema}
 Lo scopo dei test di sistema è quello di verificare che i requisiti espressi nel documento \AdR{} vengano rispettati. Di seguito l'elenco di questi test con la loro descrizione.
 \begin{longtable}{|c| C{10cm} |C{3cm}|}
-	\caption{\label{tab:TestSistema1}Descrizione dei test di sistema.}\\
 	\rowcolor{darkblue}
 	\textcolor{white}{\textbf{ID Test}}&
 	\textcolor{white}{\textbf{Descrizione}}&
-	\textcolor{white}{\textbf{Implementato}}\\
+	\textcolor{white}{\textbf{Implementato}}\label{tab:TestSistema1}\\
 	TRFO1 & Viene verificato che l'utente possa registrarsi ed eseguire l'accesso con e-mail e password & Non ancora in sviluppo\\ \hline
 	TRFO2 & Viene verificato che l'utente non autenticato possa essere in grado di fare il reset della password & Non ancora in sviluppo\\ \hline
 	TRFO3 & Viene verificato che l'utente autenticato sia in grado di eseguire il logout dalla piattaforma & Non ancora in sviluppo\\ \hline
@@ -40,13 +39,13 @@ Lo scopo dei test di sistema è quello di verificare che i requisiti espressi ne
     TRFO29 & Viene verificato che l'amministratore possa aggiungere e rimuovere servizi di terze parti alla piattaforma & Non ancora in sviluppo\\ \hline
     TRFO30 & Viene verificato che l'amministratore possa specificare i requisiti minimi di una password & Non ancora in sviluppo\\ \hline
     TRFZ31 & Viene verificato che l'amministratore possa modificare dinamicamente la copia del sito web o cambiare il layout delle pagine PDP o PLP senza ridistribuire l'intero codice ad ogni modifica utilizzando \glo{Contentful} come \glo{CMS} & Non ancora in sviluppo\\ \hline
+    \caption{Descrizione dei test di sistema.}
 \end{longtable}
 \begin{longtable}{|c| C{13cm}|}
 	\rowcolor{white}
-	\caption{\label{tab:TestSistema2}Relazione tra test di sistema e requisiti.}\\
 	\rowcolor{darkblue}
 	\textcolor{white}{\textbf{ID Test}}&
-	\textcolor{white}{\textbf{ID Requisito}}\\
+	\textcolor{white}{\textbf{ID Requisito}}\label{tab:TestSistema2}\\
 	TRFO1 & RFO1\_1, RFO2\_1.1, RFO3\_1.2\\ \hline
 	TRFO2 & RFO4\_1.3\\ \hline
 	TRFO3 & RFO5\_2\\ \hline
@@ -78,6 +77,8 @@ Lo scopo dei test di sistema è quello di verificare che i requisiti espressi ne
 	TRFO29 & RFO69, RFO70\\ \hline
 	TRFO30 & RFO71\\ \hline
 	TRFZ31 & RFZ72\\ \hline
+	\rowcolor{white}
+	\caption{Relazione tra test di sistema e requisiti.}\\
 \end{longtable}
 \newpage
 \subsection{Test di unità}

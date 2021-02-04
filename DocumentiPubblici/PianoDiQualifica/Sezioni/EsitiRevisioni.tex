@@ -3,30 +3,31 @@
 Il gruppo \Gruppo\ ha deciso di dedicare alcuni incontri per discutere sulla valutazione critica del lavoro svolto fino a quel momento in seguito alla pubblicazione delle osservazioni da parte dei committenti e di \Proponente\, oltre alle relative correzioni da apportare ai documenti. È importante riportare e tener traccia delle modifiche svolte per ogni osservazione ricevuta. In questo modo si ha sempre sotto controllo il lavoro svolto dai membri del gruppo e definire una possibile soluzione in maniera univoca. Per dare una struttura coerente con lo stile del documento che faciliti l'individuazione della possibile soluzione abbiamo adottato il formato tabellare.
 \subsection{Revisione dei requisiti}
 	\begin{longtable}{|C{4cm}|C{9cm}|c|}
-		\caption{\label{tab:Criticità}Miglioramenti apportati in seguito alla RR.}\\
 		\rowcolor{darkblue}
 		\textcolor{white}{\textbf{Osservazione}}&
 		\textcolor{white}{\textbf{Soluzione adottata}}&
-		\textcolor{white}{\textbf{ID}}\\ \hline
+		\textcolor{white}{\textbf{ID}}\label{tab:Criticità}\\ \hline
 		\rowcolor{darkblue}
 		\multicolumn{3}{|c|}{\textcolor{white}{\textbf{Criticità generali}}}\\ \hline
-		Insufficiente attenzione nella stesura e nella verifica dei documenti. & Il team ha cercato di migliorare il procedimento di verifica continua eseguendo inoltre le operazioni di verifica con maggior cura. & CAVE01\\ \hline %1-2-3-4
+		Insufficiente attenzione nella stesura e nella verifica dei documenti. & Il team ha cercato di migliorare il procedimento di verifica continua eseguendo le operazioni di verifica con maggior cura. & CAVE01\\ \hline %1-2-3-4
 		"Scatto" di versione in un prodotto soggetto a manutenzione dovrebbe essere associato solo a modifiche verificate e validate. & Ad ogni cambiamento inserito nel registro delle modifiche viene svolta un'\glo{attività} di verifica. I membri del gruppo hanno inoltre deciso di eliminare il terzo valore presente nella versione in modo da indicare con maggiore attenzione che il documento è effettivamente stato verificato e validato. & CADO01\\ \hline %5
 		\rowcolor{darkblue}
 		\multicolumn{3}{|c|}{\textcolor{white}{\textbf{Piano di progetto}}}\\ \hline
 		Adottato un modello di sviluppo ibrido difficile da governare e decifrare. & La stesura dei documenti deve rispecchiare maggiormente la scelta di adottare il modello di sviluppo incrementale inserendo all'interno del \PdP\ i rischi associati a tale modello e le possibili soluzioni. & CPD01\\ \hline %2
-		Il preventivo a finire è un esercizio contabile che non mostra cambiamenti alla pianificazione iniziale. & È possibile inserire una colonna con gli sforamenti avvenuti durante il procedimento di sviluppo. Il gruppo ha deciso poi di scrivere nella sezione della pianificazione \textbf{come} e \textbf{cosa} è cambiato rispetto alla pianificazione iniziale col passare del tempo. & CAPN01\\ \hline %1
+		Il preventivo a finire è un esercizio contabile che non mostra cambiamenti alla pianificazione iniziale. & È possibile inserire una colonna con gli sforamenti avvenuti durante il procedimento di sviluppo. Il gruppo ha deciso poi di scrivere nella sezione della pianificazione \textbf{come} e \textbf{cosa} è cambiato rispetto alla pianificazione iniziale col passare del tempo. & CAPN01\\ \hline \newpage %1 
 		\rowcolor{darkblue}
 		\multicolumn{3}{|c|}{\textcolor{white}{\textbf{Analisi dei requisiti}}}\\ \hline
 		Imprecisioni tecniche nel disegno dei diagrammi dei casi d’uso. & A seguito di uno studio più approfondito e ad una discussione con \CR{}, i diagrammi in questione sono stati corretti. & CPD02\\ \hline %4-5-6-7-8
 		Da approfondire i requisiti funzionali. & Il team ha eseguito un'analisi più profonda del \glo{capitolato} e si sono fissate le metriche per verificare la soddisfazioni di questi. & CAVE02\\ \hline %11
-		Insufficiente attenzione nella stesura del documento. & Alcune sezioni e sotto-sezioni inserite all'interno dell'\AdR\ sarebbero dovute essere presenti invece in altri documenti, di conseguenza sono state eliminate dal documento di partenza e trascritte nei documenti più appropriati. Sistemata la numerazione dei sotto-casi d'uso per renderla più coerente con la gerarchia individuata. & CPD03\\ \hline %2-12
+		Insufficiente attenzione nella stesura del documento. & Rivisto il documento in modo più approfondito. Sistemata la numerazione dei sotto-casi d'uso per renderla più coerente con la gerarchia individuata. & CPD03\\ \hline %2-12
 		Amministratore come ruolo del sistema. & L'amministratore è stato rimosso dagli attori dal momento che tutte le operazioni che questo può compiere non vengono gestite dalla piattaforma \NomeProgetto, ma dalla \glo{dashboard} di \glo{AWS} & CPAN01\\ \hline %1
 		\rowcolor{darkblue}
 		\multicolumn{3}{|c|}{\textcolor{white}{\textbf{Norme di progetto}}}\\ \hline
-		Presenza di circolarità di riferimento all'inizio delle \NdP\. & Rimossi i riferimenti che causavano il ciclo presenti nel \PdP\ e nel \PdQ\. & CPD04\\ \hline %1
+		Presenza di circolarità di riferimento all'inizio delle \NdP\. & Rimossi i riferimenti che causavano il ciclo con \PdP\ e  \PdQ{}. & CPD04\\ \hline %1
 		\rowcolor{darkblue}
 		\multicolumn{3}{|c|}{\textcolor{white}{\textbf{Piano di qualifica}}}\\ \hline
-		Insufficiente allineamento tra le \NdP\ e il \PdQ rispetto agli obiettivi di \glo{qualità}. & Suddivisi i vari processi individuati all'interno del \PdQ\ in \textbf{processi primari}, \textbf{processi di supporto} e \textbf{processi organizzativi}. Corretta la definizione degli obiettivi di qualità e il metodo con cui calcolare le varie metriche all'interno delle \NdP\. Nel \PdQ è stato aggiunto un "cruscotto" che restituisce una valutazione aggiornata sul raggiungimento degli obiettivi prefissati. & CPD05\\ \hline %1
-		Le metriche che si è deciso di adottare non vanno relegate in una appendice dedicata. & Riorganizzata la struttura del \PdQ\. & CPD06\\ \hline %2
+		Insufficiente allineamento tra le \NdP\ e il \PdQ rispetto agli obiettivi di \glo{qualità}. & Suddivisi i vari processi individuati all'interno del \PdQ\ in \textbf{processi primari}, \textbf{processi di supporto} e \textbf{processi organizzativi}. Corretta la definizione degli obiettivi di qualità e il metodo con cui calcolare le varie metriche all'interno delle \NdP{}. Nel \PdQ\ è stato aggiunto un "cruscotto" che restituisce una valutazione aggiornata sul raggiungimento degli obiettivi prefissati. & CPD05\\ \hline %1
+		Le metriche che si è deciso di adottare non vanno relegate in una appendice dedicata. & Riorganizzata la struttura del \PdQ{}. & CPD06\\ \hline %2
+		\rowcolor{white}
+		\caption{Miglioramenti apportati in seguito alla RR.}\\
 	\end{longtable}
