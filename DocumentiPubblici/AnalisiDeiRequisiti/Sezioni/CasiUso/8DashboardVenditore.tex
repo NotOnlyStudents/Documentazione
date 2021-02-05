@@ -1,9 +1,6 @@
-%% LORENZO
-%7. Merchant dashboard. Where the merchant can:
-%    a. Add, refill and remove products
-%    b. Update products description
-%    c. Have an overview of all the orders that has been created on the application
-\UC{Aggiunta Prodotto}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\UC{Aggiunta prodotto}
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.1]{Immagini/DiagrammiUC/UC18AggiuntaProdotto.png}
@@ -18,7 +15,7 @@ Il venditore aggiunge un prodotto alla piattaforma, così da poter essere vendut
     \item \textbf{Postcondizione:} Il venditore ha aggiunto il prodotto nella piattaforma.
     \item \textbf{Scenario Principale:} Il venditore preme sull'azione che porta alla pagina di aggiunta di un prodotto e compie i seguenti passi:
     \begin{itemize}
-        \item (\actualUC.1) - Inserisce il nome del prodotto obbligatorio.
+        \item (\actualUC.1) - Inserimento del nome.
         \item (\actualUC.2) - Inserisce la descrizione del prodotto.
         \item (\actualUC.3) - Inserisce almeno una categoria del prodotto.
         \item (\actualUC.4) - Inserisce il prezzo del prodotto obbligatorio.
@@ -40,14 +37,14 @@ Il venditore aggiunge un prodotto alla piattaforma, così da poter essere vendut
 
 \resetSubUC
 
-\subUC{Inserimento del nome obbligatorio}
-
+\subUC{Inserimento del nome}
+Il venditore inserisce il nome del prodotto da aggiungere.
 
 \begin{itemize}
     \item \textbf{Attori Primari:} Venditore.
-    \item \textbf{Precondizione:} Il venditore si trova nella pagina della \glo{dashboard} e seleziona l'azione per aggiungere un prodotto.
-    \item \textbf{Postcondizione:} Il venditore ha aggiunto il prodotto nella piattaforma.
-    \item \textbf{Scenario Principale:} Il venditore preme sull'azione che porta alla pagina di aggiunta di un prodotto e compie i seguenti passi:
+    \item \textbf{Precondizione:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto.
+    \item \textbf{Postcondizione:} Il venditore ha inserito il nome del prodotto .
+    \item \textbf{Scenario Principale:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto ed inserisce il nome del prodotto.
     \item \textbf{Estensioni:}
     \begin{itemize}
         \item (UC30) - Visualizzazione messaggio nome del prodotto non inserito.
@@ -59,6 +56,7 @@ Il venditore aggiunge un prodotto alla piattaforma, così da poter essere vendut
 \end{itemize}
 
 
+
 \UC{Aggiunta o rimozione prodotto nella sezione dei prodotti in evidenza}
 Il venditore aggiunge o rimuove un prodotto nella sezione dei prodotti in evidenza presente nella home.
 \begin{itemize}
@@ -67,6 +65,8 @@ Il venditore aggiunge o rimuove un prodotto nella sezione dei prodotti in eviden
     \item \textbf{Postcondizione:} Il prodotto viene aggiunto o rimosso, in base al suo stato attuale, nella sezione sezione dei prodotti in evidenza. 
     \item \textbf{Scenario Principale:} Il venditore vuole aggiungere o rimuovere un prodotto nella sezione dei prodotti in evidenza presente nella home e clicca sulla rispettiva azione.
 \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \UC{Modifica prodotto}
 
