@@ -18,14 +18,14 @@ Il venditore aggiunge un prodotto alla piattaforma, così da poter essere vendut
     \item \textbf{Postcondizione:} Il venditore ha aggiunto il prodotto nella piattaforma.
     \item \textbf{Scenario Principale:} Il venditore preme sull'azione che porta alla pagina di aggiunta di un prodotto e compie i seguenti passi:
     \begin{itemize}
-        \item (UC23.4) - Inserisce il nome del prodotto obbligatorio.
-        \item (UC23.4) - Inserisce la descrizione del prodotto.
-        \item (UC23.4) - Inserisce almeno una categoria del prodotto.
-        \item (UC23.5) - Inserisce il prezzo del prodotto obbligatorio.
-        \item (UC23.5) - Inserisce lo sconto percentuale sul prezzo del prodotto.
-        \item (UC23.5) - Inserisce la quantità del prodotto disponibile obbligatoria.
-        \item (UC23.6) - Inserisce almeno una e al massimo quattro foto del prodotto.
-        \item (UC18.1) - Seleziona se il prodotto è da inserire tra quelli in evidenza.
+        \item (\actualUC.1) - Inserisce il nome del prodotto obbligatorio.
+        \item (\actualUC.2) - Inserisce la descrizione del prodotto.
+        \item (\actualUC.3) - Inserisce almeno una categoria del prodotto.
+        \item (\actualUC.4) - Inserisce il prezzo del prodotto obbligatorio.
+        \item (\actualUC.5) - Inserisce lo sconto percentuale sul prezzo del prodotto.
+        \item (\actualUC.6) - Inserisce la quantità del prodotto disponibile obbligatoria.
+        \item (\actualUC.7) - Inserisce almeno una e al massimo quattro foto del prodotto.
+        \item (\actualUC.8) - Seleziona se il prodotto è da inserire tra quelli in evidenza.
         \item Conferma gli inserimenti e aggiunge il prodotto alla piattaforma.
     \end{itemize}
     \item \textbf{Estensioni:}
@@ -39,6 +39,25 @@ Il venditore aggiunge un prodotto alla piattaforma, così da poter essere vendut
 \end{itemize}
 
 \resetSubUC
+
+\subUC{Inserimento del nome obbligatorio}
+
+
+\begin{itemize}
+    \item \textbf{Attori Primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore si trova nella pagina della \glo{dashboard} e seleziona l'azione per aggiungere un prodotto.
+    \item \textbf{Postcondizione:} Il venditore ha aggiunto il prodotto nella piattaforma.
+    \item \textbf{Scenario Principale:} Il venditore preme sull'azione che porta alla pagina di aggiunta di un prodotto e compie i seguenti passi:
+    \item \textbf{Estensioni:}
+    \begin{itemize}
+        \item (UC30) - Visualizzazione messaggio nome del prodotto non inserito.
+        \item (UC30) - Visualizzazione messaggio categoria del prodotto non inserita.
+        \item (UC30) - Visualizzazione messaggio prezzo del prodotto non inserito.
+        \item (UC30) - Visualizzazione messaggio quantità del prodotto non inserita.
+        \item (UC30) - Visualizzazione messaggio foto del prodotto non inserita.
+    \end{itemize}
+\end{itemize}
+
 
 \UC{Aggiunta o rimozione prodotto nella sezione dei prodotti in evidenza}
 Il venditore aggiunge o rimuove un prodotto nella sezione dei prodotti in evidenza presente nella home.
