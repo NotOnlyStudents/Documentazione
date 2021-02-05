@@ -2,65 +2,163 @@
 %5. My profile. Where the registered user can:
 %    a. Update profile information (ie: picture, description, email address);
 %    b. Have an overview of all the orders he made on the website;
-\UC{Modifica informazioni profilo}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{Immagini/DiagrammiUC/UC15ModificaInformazioniProfilo}
-    \caption{Diagramma di \actualUC: Modifica informazioni profilo} 
-    \label{fig:VisualizzazioneProdottiNelCarrello}
-\end{figure}
 
-L'acquirente o il venditore vuole modificare le sue informazioni personali.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\UC{Modifica informazioni acquirente}
+
+L'acquirente vuole modificare le sue informazioni personali.
 \begin{itemize}
-    \item \textbf{Attori primari:} Acquirente; Venditore.
-    \item \textbf{Precondizione:} L'attore si trova nella pagina personale (UC3.2.1) e ha premuto sul link per la modifica delle informazioni.
-    \item \textbf{Postcondizione:} L'attore ha aggiornato le sue informazioni personali.
-    \item \textbf{Scenario Principale:} L'attore ha premuto sul link per la modifica delle informazioni personali e può così iniziare a modificarle. I campi che si possono modificare sono:
+    \item \textbf{Attori primari:} Acquirente.
+    \item \textbf{Precondizione:} L'acquirente si trova nella vista di modifica informazioni personali.
+    \item \textbf{Postcondizione:} L'acquirente ha aggiornato le sue informazioni personali.
+    \item \textbf{Scenario Principale:} L'acquirente ha premuto sull'azione per la modifica delle informazioni personali e, dopo aver compiuto la modifica, potrà confermarle attraverso l'azione di salvataggio. Le informazioni che si possono modificare sono:
     \begin{itemize}
-        \item per l'acquirente:
-        \begin{itemize}
-            \item (UC23.1) - Inserimento nuovo indirizzo e-mail.
-            \item (UC15.1) - Inserimento nuova password.
-        \end{itemize}
-        \item per il venditore:
-        \begin{itemize}
-            \item (UC23.1) - Inserimento nuovo indirizzo e-mail.
-            \item (UC15.1) - Inserimento nuova password.
-            \item (UC23.6) - Inserimento nuova foto profilo.
-            \item (UC23.4) - Inserimento nuova descrizione azienda.
-        \end{itemize}
-    \end{itemize}
-    \item \textbf{Estensioni:}
-    \begin{itemize}
-        \item (UC24) - Visualizzazione messaggio di errore in caso di email già registrata nella piattaforma.
+        \item (\actualUC.1) - Inserimento nuovo indirizzo email.
+        \item (\actualUC.2) - Inserimento nuova password.
     \end{itemize}
 \end{itemize}
 
 \resetSubUC
 
-\UC{Inserimento nuova password}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{Immagini/DiagrammiUC/UC15.1InserimentoNuovaPassword}
-    \caption{Diagramma di \actualUC: Inserimento nuova password} 
-    \label{fig:VisualizzazioneProdottiNelCarrello}
-\end{figure}
-
-L'acquirente o il venditore vuole cambiare la password.
+\subUC{Inserimento nuovo indirizzo email}
+L'acquirente vuole modificare la propria email.
 \begin{itemize}
-    \item \textbf{Attori primari:} Acquirente; Venditore.
-    \item \textbf{Precondizione:} L'attore ha premuto sul link per la modifica della password.
-    \item \textbf{Postcondizione:} L'attore ha modificato la sua password.
-    \item \textbf{Scenario Principale:} L'utente autenticato vuole cambiare la password e deve eseguire i seguenti passi:
-    \begin{itemize}
-        \item (UC23.2) - Inserimento password.
-        \item (UC23.3) - Inserimento conferma password.
-    \end{itemize}
+    \item \textbf{Attori primari:} Acquirente.
+    \item \textbf{Precondizione:} L'acquirente si trova nella vista di modifica informazioni personali e vuole inserire un nuovo indirizzo email.
+    \item \textbf{Postcondizione:} L'acquirente ha aggiornato la sua email.
+    \item \textbf{Scenario Principale:} L'acquirente si trova nella vista di modifica informazioni personali e vuole modificare la propria email attraverso le seguenti azioni:
+        \begin{itemize}
+            \item Si posiziona nel campo di inserimento della nuova email dove è presente quella attualmente utilizzata.
+            \item Inserisce quella nuova o modifica quella attuale.
+            \item Preme sull'azione di salvataggio delle modifiche.
+        \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
-        \item (UC28) - Visualizzazione messaggio di errore in caso di password troppo debole.
+        \item (UC) - Visualizzazione messaggio di errore in caso di email già registrata nella piattaforma.
+        \item (UC) - Visualizzazione messaggio di errore in caso di email non valida.
+        \item (UC) - Visualizzazione messaggio campo dati obbligatorio non inserito.
     \end{itemize}
 \end{itemize}
+
+\subUC{Inserimento nuova password}
+L'acquirente vuole modificare la propria email.
+\begin{itemize}
+    \item \textbf{Attori primari:} Acquirente.
+    \item \textbf{Precondizione:} L'acquirente si trova nella vista di modifica informazioni personali e vuole inserire una nuova password.
+    \item \textbf{Postcondizione:} L'acquirente ha aggiornato la sua password.
+    \item \textbf{Scenario Principale:} L'acquirente si trova nella vista di modifica informazioni personali e vuole modificare la propria password attraverso le seguenti azioni:
+        \begin{itemize}
+            \item Si posiziona nel campo di inserimento vuoto della nuova password.
+            \item La scrive.
+            \item Inserisce la stessa password nel campo di conferma nuova password.
+            \item Preme sull'azione di salvataggio delle modifiche.
+        \end{itemize}
+    \item \textbf{Scenario Alternativo:} L'acquirente non inserisce nessuna password e lascia sia il campo di inserimento nuova password e sia quello di inserimento conferma password vuoti. In questo caso non verrà modificata la password.
+    \item \textbf{Estensioni:}
+    \begin{itemize}
+        \item (UC) - Visualizzazione messaggio di errore in caso di password troppo debole.
+        \item (UC) - Visualizzazione messaggio di errore in caso di password e password di conferma diverse
+    \end{itemize}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\UC{Modifica informazioni venditore}
+
+Il venditore vuole modificare le sue informazioni personali.
+\begin{itemize}
+    \item \textbf{Attori primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore si trova nella pagina personale e ha premuto sull'azione per la modifica delle informazioni.
+    \item \textbf{Postcondizione:} Il venditore ha aggiornato le sue informazioni personali.
+    \item \textbf{Scenario Principale:} Il venditore ha premuto sull'azione per la modifica delle informazioni personali e, dopo aver compiuto la modifica, potrà confermarle attraverso l'azione di salvataggio. Le informazioni che si possono modificare sono:
+    \begin{itemize}
+        \item (\actualUC.1) - Inserimento nuovo indirizzo e-mail.
+        \item (\actualUC.2) - Inserimento nuova password.
+        \item (\actualUC.3) - Inserimento nuova foto profilo.
+        \item (\actualUC.4) - Modifica della descrizione dell'azienda.
+    \end{itemize}
+\end{itemize}
+
+\resetSubUC
+
+\subUC{Inserimento nuovo indirizzo email}
+Il venditore vuole modificare la propria email.
+\begin{itemize}
+    \item \textbf{Attori primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore si trova nella vista di modifica informazioni personali e vuole inserire un nuovo indirizzo email.
+    \item \textbf{Postcondizione:} Il venditore ha aggiornato la sua email.
+    \item \textbf{Scenario Principale:} Il venditore si trova nella vista di modifica informazioni personali e vuole modificare la propria email attraverso le seguenti azioni:
+        \begin{itemize}
+            \item Si posiziona nel campo di inserimento della nuova email dove è presente quella attualmente utilizzata.
+            \item Inserisce quella nuova o modifica quella attuale.
+            \item Preme sull'azione di salvataggio delle modifiche
+        \end{itemize}
+    \item \textbf{Estensioni:}
+    \begin{itemize}
+        \item (UC) - Visualizzazione messaggio di errore in caso di email già registrata nella piattaforma.
+        \item (UC) - Visualizzazione messaggio di errore in caso di email non valida.
+        \item (UC) - Visualizzazione messaggio campo dati obbligatorio non inserito.
+    \end{itemize}
+\end{itemize}
+
+\subUC{Inserimento nuova password}
+Il venditore vuole modificare la propria password.
+\begin{itemize}
+    \item \textbf{Attori primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore si trova nella vista di modifica informazioni personali e vuole inserire una nuova password.
+    \item \textbf{Postcondizione:} Il venditore ha aggiornato la sua password.
+    \item \textbf{Scenario Principale:} Il venditore si trova nella vista di modifica informazioni personali e vuole modificare la propria password attraverso le seguenti azioni:
+        \begin{itemize}
+            \item Si posiziona nel campo di inserimento vuoto della nuova password.
+            \item La scrive.
+            \item Inserisce la stessa password nel campo di conferma nuova password.
+            \item Preme sull'azione di salvataggio delle modifiche.
+        \end{itemize}
+    \item \textbf{Scenario Alternativo:} Il venditore non inserisce nessuna password e lascia sia il campo di inserimento nuova password e sia quello di inserimento conferma password vuoti. In questo caso non verrà modificata la password.
+    \item \textbf{Estensioni:}
+    \begin{itemize}
+        \item (UC) - Visualizzazione messaggio di errore in caso di password troppo debole.
+        \item (UC) - Visualizzazione messaggio di errore in caso di password e password di conferma diverse
+    \end{itemize}
+\end{itemize}
+
+\subUC{Inserimento nuova foto profilo}
+Il venditore vuole modificare la propria foto profilo.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore si trova nella vista di modifica informazioni personali e vuole modificare la sua foto profilo.
+    \item \textbf{Postcondizione:} Il venditore ha inserito una nuova foto profilo.
+    \item \textbf{Scenario Principale:} Il venditore vuole inserire una nuova foto profilo attraverso le seguenti azioni:
+    \begin{itemize}
+        \item Si posiziona nel campo di inserimento della nuova foto profilo.
+        \item Seleziona un'immagine tra quelle disponibili localmente nel proprio computer.
+        \item Viene caricata.
+        \item Preme sull'azione di salvataggio delle modifiche.
+    \end{itemize}
+    \item \textbf{Scenario Alternativo:} Il venditore non seleziona alcun file e la foto profilo non verrà cambiata.
+    \item \textbf{Estensioni:}
+    \begin{itemize}
+        \item (UC32) - Visualizzazione messaggio di errore nel caso in cui il file selezionato non sia del tipo immagine.
+    \end{itemize}
+\end{itemize}
+
+\subUC{Modifica della descrizione dell'azienda}
+Il venditore vuole modificare la descrizione dell'azienda che viene mostrata nella vista home.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore si trova nella vista di modifica informazioni personali e vuole modificare l'attuale descrizione dell'azienda.
+    \item \textbf{Postcondizione:} Il venditore ha modificato l'attuale descrizione dell'azienda.
+    \item \textbf{Scenario Principale:} Il venditore vuole modificare l'attuale descrizione dell'azienda attraverso le seguenti azioni:
+    \begin{itemize}
+        \item Si posiziona nel campo di modifica della descrizione dell'azienda dove è presente quella attualmente inserita.
+        \item La modifica come meglio desidera.
+        \item Preme sull'azione di salvataggio delle modifiche.
+    \end{itemize}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \UC{Eliminazione account}
 L'acquirente può eliminare il proprio account.
