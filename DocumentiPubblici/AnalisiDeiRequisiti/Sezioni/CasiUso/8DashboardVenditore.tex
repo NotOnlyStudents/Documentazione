@@ -1,44 +1,189 @@
-%% LORENZO
-%7. Merchant dashboard. Where the merchant can:
-%    a. Add, refill and remove products
-%    b. Update products description
-%    c. Have an overview of all the orders that has been created on the application
-\UC{Aggiunta Prodotto}
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.1]{Immagini/DiagrammiUC/UC18AggiuntaProdotto.png}
-    \caption{Diagramma di \actualUC: Aggiunta di un prodotto nella piattaforma da parte del venditore} 
-    \label{fig:AggiuntaProdotto}
-\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Il venditore aggiunge un prodotto alla piattaforma, così da poter essere venduto.
+\UC{Aggiunta nuovo prodotto}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[scale=0.1]{Immagini/DiagrammiUC/UC18AggiuntaProdotto.png}
+%     \caption{Diagramma di \actualUC: Aggiunta di un prodotto nella piattaforma da parte del venditore} 
+%     \label{fig:AggiuntaProdotto}
+% \end{figure}
+
+Il venditore aggiunge un nuovo prodotto alla piattaforma, così da poter essere venduto.
 \begin{itemize}
     \item \textbf{Attori Primari:} Venditore.
     \item \textbf{Precondizione:} Il venditore si trova nella pagina della \glo{dashboard} e seleziona l'azione per aggiungere un prodotto.
     \item \textbf{Postcondizione:} Il venditore ha aggiunto il prodotto nella piattaforma.
     \item \textbf{Scenario Principale:} Il venditore preme sull'azione che porta alla pagina di aggiunta di un prodotto e compie i seguenti passi:
     \begin{itemize}
-        \item (UC23.4) - Inserisce il nome del prodotto obbligatorio.
-        \item (UC23.4) - Inserisce la descrizione del prodotto.
-        \item (UC23.4) - Inserisce almeno una categoria del prodotto.
-        \item (UC23.5) - Inserisce il prezzo del prodotto obbligatorio.
-        \item (UC23.5) - Inserisce lo sconto percentuale sul prezzo del prodotto.
-        \item (UC23.5) - Inserisce la quantità del prodotto disponibile obbligatoria.
-        \item (UC23.6) - Inserisce almeno una e al massimo quattro foto del prodotto.
-        \item (UC18.1) - Seleziona se il prodotto è da inserire tra quelli in evidenza.
+        \item (\actualUC.1) - Inserimento del nome del prodotto.
+        \item (\actualUC.2) - Inserimento della descrizione del prodotto.
+        \item (\actualUC.3) - Inserimento delle categorie del prodotto.
+        \item (\actualUC.4) - Inserimento del prezzo del prodotto.
+        \item (\actualUC.5) - Inserimento dello sconto percentuale al prezzo del prodotto.
+        \item (\actualUC.6) - Inserimento della quantità del prodotto disponibile in magazzino.
+        \item (\actualUC.7) - Inserimento delle foto del prodotto.
+        \item (\actualUC.8) - Scelta di aggiunta del prodotto tra quelli in evidenza.
         \item Conferma gli inserimenti e aggiunge il prodotto alla piattaforma.
-    \end{itemize}
-    \item \textbf{Estensioni:}
-    \begin{itemize}
-        \item (UC30) - Visualizzazione messaggio nome del prodotto non inserito.
-        \item (UC30) - Visualizzazione messaggio categoria del prodotto non inserita.
-        \item (UC30) - Visualizzazione messaggio prezzo del prodotto non inserito.
-        \item (UC30) - Visualizzazione messaggio quantità del prodotto non inserita.
-        \item (UC30) - Visualizzazione messaggio foto del prodotto non inserita.
     \end{itemize}
 \end{itemize}
 
 \resetSubUC
+
+\subUC{Inserimento del nome del prodotto}
+Il venditore inserisce il nome del prodotto da aggiungere.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto.
+    \item \textbf{Postcondizione:} Il venditore ha inserito il nome del prodotto .
+    \item \textbf{Scenario Principale:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto ed inserisce il nome del prodotto.
+    \item \textbf{Scenario Alternativo:} Il venditore non inserisce il nome del prodotto. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item Verrà impedita l'aggiunta del nuovo prodotto.
+    \end{itemize}
+    \item \textbf{Estensioni:}
+    \begin{itemize}
+        \item (UC30) - Visualizzazione messaggio campo dati obbligatorio non inserito.
+    \end{itemize}
+\end{itemize}
+
+\subUC{Inserimento della descrizione del prodotto}
+Il venditore inserisce la descrizione del prodotto da aggiungere.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto.
+    \item \textbf{Postcondizione:} Il venditore ha inserito la descrizione del prodotto.
+    \item \textbf{Scenario Principale:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto ed inserisce la descrizione del prodotto.
+    \item \textbf{Scenario Alternativo:} Il venditore non inserisce la descrizione del prodotto. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item Verrà impedita l'aggiunta del nuovo prodotto.
+    \end{itemize}
+    \item \textbf{Estensioni:}
+    \begin{itemize}
+        \item (UC30) - Visualizzazione messaggio campo dati obbligatorio non inserito.
+    \end{itemize}
+\end{itemize}
+
+\subUC{Inserimento delle categorie del prodotto}
+Il venditore inserisce le categorie del prodotto da aggiungere.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto.
+    \item \textbf{Postcondizione:} Il venditore ha inserito le categorie del prodotto.
+    \item \textbf{Scenario Principale:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto ed inserisce le categorie a cui fa parte il prodotto, prendendole dalla lista di categorie disponibili.
+    \item \textbf{Scenario Alternativo:} Il venditore non ha inserito alcuna categoria e il prodotto viene automaticamente categorizzato come senza categoria.
+\end{itemize}
+
+\subUC{Inserimento del prezzo del prodotto}
+Il venditore inserisce il prezzo a cui vendere il prodotto da aggiungere.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto.
+    \item \textbf{Postcondizione:} Il venditore ha inserito il prezzo a cui vendere il prodotto.
+    \item \textbf{Scenario Principale:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto ed inserisce il prezzo a cui vendere il prodotto.
+    \item \textbf{Scenario Alternativo 1:} Il venditore non inserisce il prezzo del prodotto. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item Verrà impedita l'aggiunta del nuovo prodotto.
+    \end{itemize}
+    \item \textbf{Scenario Alternativo 2:} Il venditore inserisce un prezzo minore o uguale a zero. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item Verrà impedita l'aggiunta del nuovo prodotto.
+    \end{itemize}
+    \item \textbf{Estensioni:}
+    \begin{itemize}
+        \item (UC) - Visualizzazione messaggio di errore in caso di prezzo minore o uguale a zero.
+        \item (UC30) - Visualizzazione messaggio campo dati obbligatorio non inserito.
+    \end{itemize}
+\end{itemize}
+
+\subUC{Inserimento dello sconto percentuale al prezzo del prodotto}
+Il venditore inserisce lo sconto percentuale da applicare al prezzo del prodotto da aggiungere.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto.
+    \item \textbf{Postcondizione:} Il venditore ha inserito lo sconto percentuale da applicare al prezzo del prodotto.
+    \item \textbf{Scenario Principale:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto ed inserisce lo sconto percentuale da applicare al prezzo del prodotto. In seguito il prezzo a cui vendere quel prodotto sarà scontato della percentuale applicata.
+    \item \textbf{Scenario Alternativo 1:} Nel caso in cui il venditore non inserica alcunché, allora non verrà applicato alcuno sconto. 
+    \item \textbf{Scenario Alternativo 2:} Il venditore inserisce uno sconto minore di zero. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item Verrà impedita l'aggiunta del nuovo prodotto.
+    \end{itemize}
+    \item \textbf{Estensioni:}
+    \begin{itemize}
+        \item (UC) - Visualizzazione messaggio di errore in caso di sconto minore di zero.
+    \end{itemize}
+\end{itemize}
+
+\subUC{Inserimento della quantità del prodotto disponibile in magazzino}
+Il venditore inserisce la quantità disponibile attualmente in magazzino del prodotto da aggiungere.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto.
+    \item \textbf{Postcondizione:} Il venditore ha inserito la quantità disponibile attualmente in magazzino del prodotto.
+    \item \textbf{Scenario Principale:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto ed inserisce la quantità disponibile attualmente in magazzino del prodotto.
+    \item \textbf{Scenario Alternativo 1:} Nel caso in cui il venditore inserisca 0 come disponibilità attuale, allora il prodotto verrà indicato come non disponibile.
+    \item \textbf{Scenario Alternativo 2:} Il venditore inserisce una quantità minore o uguale a zero. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item Verrà impedita l'aggiunta del nuovo prodotto.
+    \end{itemize}
+    \item \textbf{Scenario Alternativo 3:} Il venditore non inserisce la quantità del prodotto. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item Verrà impedita l'aggiunta del nuovo prodotto.
+    \end{itemize}
+    \item \textbf{Estensioni:}
+        \begin{itemize}
+            \item (UC) - Visualizzazione messaggio di errore in caso di quantità minore o uguale a zero.
+            \item (UC30) - Visualizzazione messaggio campo dati obbligatorio non inserito.
+        \end{itemize}
+\end{itemize}
+
+\subUC{Inserimento foto del prodotto}
+Il venditore inserisce le foto relative al prodotto da aggiungere.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto.
+    \item \textbf{Postcondizione:} Il venditore ha inserito le foto relative al prodotto.
+    \item \textbf{Scenario Principale:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto ed inserisce massimo quattro foto relative al prodotto.
+    \item \textbf{Scenario Alternativo 1:} Il venditore non inserisce alcuna foto del prodotto. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item Verrà impedita l'aggiunta del nuovo prodotto.
+    \end{itemize}
+    \item \textbf{Scenario Alternativo 2:} Il venditore seleziona un file che non è del tipo immagine. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item Verrà impedita l'aggiunta del nuovo prodotto.
+    \end{itemize}
+    \item \textbf{Scenario Alternativo 3:} Il venditore cerca di inserire più di quattro foto relative ad un prodotto. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item Verrà impedita l'aggiunta del nuovo prodotto.
+    \end{itemize}
+    \item \textbf{Estensioni:}
+    \begin{itemize}
+        \item (UC) - Visualizzazione messaggio di errore tentivo di aggiunta di più di quattro foto relative ad un prodotto.
+        \item (UC) - Visualizzazione messaggio di errore nel caso in cui il file selezionato non sia del tipo immagine.
+        \item (UC) - Visualizzazione messaggio di errore nessuna foto inserita.
+    \end{itemize}
+\end{itemize}
+
+\subUC{Scelta di aggiunta del prodotto tra quelli in evidenza}
+Il venditore decide se il prodotto è da inserire tra quelli in evidenza da visualizzare nella home.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto.
+    \item \textbf{Postcondizione:} Il venditore ha deciso se il prodotto è da inserire tra quelli in evidenza oppure no ed agisce di conseguenza.
+    \item \textbf{Scenario Principale:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto e lo aggiunge tra quelli in evidenza da visualizzare nella home.
+    \item \textbf{Scenario Alternativo:} Il venditore decide di non inserire il prodotto tra quelli in evidenza e, per questo motivo, non compie alcuna azione.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \UC{Aggiunta o rimozione prodotto nella sezione dei prodotti in evidenza}
 Il venditore aggiunge o rimuove un prodotto nella sezione dei prodotti in evidenza presente nella home.
@@ -84,6 +229,8 @@ Il venditore modifica uno o più campi di un prodotto della piattaforma.
         \item (UC30) - Visualizzazione messaggio foto del prodotto non inserita.
     \end{itemize}
 \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \UC{Eliminazione prodotto}
 \begin{figure}[H]
