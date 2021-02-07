@@ -36,6 +36,11 @@ Il venditore inserisce il nome del prodotto da aggiungere.
     \item \textbf{Precondizione:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto.
     \item \textbf{Postcondizione:} Il venditore ha inserito il nome del prodotto .
     \item \textbf{Scenario Principale:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto ed inserisce il nome del prodotto.
+    \item \textbf{Scenario Alternativo:} Il venditore non inserisce il nome del prodotto. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item Verrà impedito il proseguimento dell'operazione.
+    \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
         \item (UC30) - Visualizzazione messaggio campo dati obbligatorio non inserito.
@@ -49,6 +54,11 @@ Il venditore inserisce la descrizione del prodotto da aggiungere.
     \item \textbf{Precondizione:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto.
     \item \textbf{Postcondizione:} Il venditore ha inserito la descrizione del prodotto.
     \item \textbf{Scenario Principale:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto ed inserisce la descrizione del prodotto.
+    \item \textbf{Scenario Alternativo:} Il venditore non inserisce la descrizione del prodotto. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item Verrà impedito il proseguimento dell'operazione.
+    \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
         \item (UC30) - Visualizzazione messaggio campo dati obbligatorio non inserito.
@@ -72,11 +82,21 @@ Il venditore inserisce il prezzo a cui vendere il prodotto da aggiungere.
     \item \textbf{Precondizione:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto.
     \item \textbf{Postcondizione:} Il venditore ha inserito il prezzo a cui vendere il prodotto.
     \item \textbf{Scenario Principale:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto ed inserisce il prezzo a cui vendere il prodotto.
+    \item \textbf{Scenario Alternativo 1:} Il venditore non inserisce il prezzo del prodotto. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item Verrà impedito il proseguimento dell'operazione.
+    \end{itemize}
+    \item \textbf{Scenario Alternativo 2:} Il venditore inserisce un prezzo minore o uguale a zero. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item Verrà impedito il proseguimento dell'operazione.
+    \end{itemize}
     \item \textbf{Estensioni:}
-        \begin{itemize}
-            \item (UC) - Visualizzazione messaggio di errore in caso di prezzo minore o uguale a zero.
-            \item (UC30) - Visualizzazione messaggio campo dati obbligatorio non inserito.
-        \end{itemize}
+    \begin{itemize}
+        \item (UC) - Visualizzazione messaggio di errore in caso di prezzo minore o uguale a zero.
+        \item (UC30) - Visualizzazione messaggio campo dati obbligatorio non inserito.
+    \end{itemize}
 \end{itemize}
 
 \subUC{Inserimento dello sconto percentuale al prezzo del prodotto}
@@ -86,11 +106,16 @@ Il venditore inserisce lo sconto percentuale da applicare al prezzo del prodotto
     \item \textbf{Precondizione:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto.
     \item \textbf{Postcondizione:} Il venditore ha inserito lo sconto percentuale da applicare al prezzo del prodotto.
     \item \textbf{Scenario Principale:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto ed inserisce lo sconto percentuale da applicare al prezzo del prodotto. In seguito il prezzo a cui vendere quel prodotto sarà scontato della percentuale applicata.
-    \item \textbf{Scenario Alternativo:} Nel caso in cui il venditore non inserica alcunché, allora non verrà applicato alcuno sconto. 
+    \item \textbf{Scenario Alternativo 1:} Nel caso in cui il venditore non inserica alcunché, allora non verrà applicato alcuno sconto. 
+    \item \textbf{Scenario Alternativo 2:} Il venditore inserisce uno sconto minore di zero. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item Verrà impedito il proseguimento dell'operazione.
+    \end{itemize}
     \item \textbf{Estensioni:}
-        \begin{itemize}
-            \item (UC) - Visualizzazione messaggio di errore in caso di sconto minore di zero.
-        \end{itemize}
+    \begin{itemize}
+        \item (UC) - Visualizzazione messaggio di errore in caso di sconto minore di zero.
+    \end{itemize}
 \end{itemize}
 
 \subUC{Inserimento della quantità del prodotto disponibile in magazzino}
@@ -100,7 +125,17 @@ Il venditore inserisce la quantità disponibile attualmente in magazzino del pro
     \item \textbf{Precondizione:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto.
     \item \textbf{Postcondizione:} Il venditore ha inserito la quantità disponibile attualmente in magazzino del prodotto.
     \item \textbf{Scenario Principale:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto ed inserisce la quantità disponibile attualmente in magazzino del prodotto.
-    \item \textbf{Scenario Alternativo:} Nel caso in cui il venditore inserisca 0 come disponibilità attuale, allora il prodotto verrà indicato come non disponibile.
+    \item \textbf{Scenario Alternativo 1:} Nel caso in cui il venditore inserisca 0 come disponibilità attuale, allora il prodotto verrà indicato come non disponibile.
+    \item \textbf{Scenario Alternativo 2:} Il venditore inserisce una quantità minore o uguale a zero. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item Verrà impedito il proseguimento dell'operazione.
+    \end{itemize}
+    \item \textbf{Scenario Alternativo 3:} Il venditore non inserisce la quantità del prodotto. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item Verrà impedito il proseguimento dell'operazione.
+    \end{itemize}
     \item \textbf{Estensioni:}
         \begin{itemize}
             \item (UC) - Visualizzazione messaggio di errore in caso di quantità minore o uguale a zero.
@@ -115,6 +150,21 @@ Il venditore inserisce le foto relative al prodotto da aggiungere.
     \item \textbf{Precondizione:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto.
     \item \textbf{Postcondizione:} Il venditore ha inserito le foto relative al prodotto.
     \item \textbf{Scenario Principale:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto ed inserisce massimo quattro foto relative al prodotto.
+    \item \textbf{Scenario Alternativo 1:} Il venditore non inserisce alcuna foto del prodotto. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item Verrà impedito il proseguimento dell'operazione.
+    \end{itemize}
+    \item \textbf{Scenario Alternativo 2:} Il venditore seleziona un file che non è del tipo immagine. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item Verrà impedito il proseguimento dell'operazione.
+    \end{itemize}
+    \item \textbf{Scenario Alternativo 3:} Il venditore cerca di inserire più di quattro foto relative ad un prodotto. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item Verrà impedito il proseguimento dell'operazione.
+    \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
         \item (UC) - Visualizzazione messaggio di errore tentivo di aggiunta di più di quattro foto relative ad un prodotto.
