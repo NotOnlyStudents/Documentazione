@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\UC{Aggiunta prodotto}
+\UC{Aggiunta nuovo prodotto}
 % \begin{figure}[H]
 %     \centering
 %     \includegraphics[scale=0.1]{Immagini/DiagrammiUC/UC18AggiuntaProdotto.png}
@@ -8,7 +8,7 @@
 %     \label{fig:AggiuntaProdotto}
 % \end{figure}
 
-Il venditore aggiunge un prodotto alla piattaforma, così da poter essere venduto.
+Il venditore aggiunge un nuovo prodotto alla piattaforma, così da poter essere venduto.
 \begin{itemize}
     \item \textbf{Attori Primari:} Venditore.
     \item \textbf{Precondizione:} Il venditore si trova nella pagina della \glo{dashboard} e seleziona l'azione per aggiungere un prodotto.
@@ -39,7 +39,7 @@ Il venditore inserisce il nome del prodotto da aggiungere.
     \item \textbf{Scenario Alternativo:} Il venditore non inserisce il nome del prodotto. In questo caso:
     \begin{itemize}
         \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
-        \item Verrà impedito il proseguimento dell'operazione.
+        \item Verrà impedita l'aggiunta del nuovo prodotto.
     \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
@@ -57,7 +57,7 @@ Il venditore inserisce la descrizione del prodotto da aggiungere.
     \item \textbf{Scenario Alternativo:} Il venditore non inserisce la descrizione del prodotto. In questo caso:
     \begin{itemize}
         \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
-        \item Verrà impedito il proseguimento dell'operazione.
+        \item Verrà impedita l'aggiunta del nuovo prodotto.
     \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
@@ -85,12 +85,12 @@ Il venditore inserisce il prezzo a cui vendere il prodotto da aggiungere.
     \item \textbf{Scenario Alternativo 1:} Il venditore non inserisce il prezzo del prodotto. In questo caso:
     \begin{itemize}
         \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
-        \item Verrà impedito il proseguimento dell'operazione.
+        \item Verrà impedita l'aggiunta del nuovo prodotto.
     \end{itemize}
     \item \textbf{Scenario Alternativo 2:} Il venditore inserisce un prezzo minore o uguale a zero. In questo caso:
     \begin{itemize}
         \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
-        \item Verrà impedito il proseguimento dell'operazione.
+        \item Verrà impedita l'aggiunta del nuovo prodotto.
     \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
@@ -110,7 +110,7 @@ Il venditore inserisce lo sconto percentuale da applicare al prezzo del prodotto
     \item \textbf{Scenario Alternativo 2:} Il venditore inserisce uno sconto minore di zero. In questo caso:
     \begin{itemize}
         \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
-        \item Verrà impedito il proseguimento dell'operazione.
+        \item Verrà impedita l'aggiunta del nuovo prodotto.
     \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
@@ -129,12 +129,12 @@ Il venditore inserisce la quantità disponibile attualmente in magazzino del pro
     \item \textbf{Scenario Alternativo 2:} Il venditore inserisce una quantità minore o uguale a zero. In questo caso:
     \begin{itemize}
         \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
-        \item Verrà impedito il proseguimento dell'operazione.
+        \item Verrà impedita l'aggiunta del nuovo prodotto.
     \end{itemize}
     \item \textbf{Scenario Alternativo 3:} Il venditore non inserisce la quantità del prodotto. In questo caso:
     \begin{itemize}
         \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
-        \item Verrà impedito il proseguimento dell'operazione.
+        \item Verrà impedita l'aggiunta del nuovo prodotto.
     \end{itemize}
     \item \textbf{Estensioni:}
         \begin{itemize}
@@ -153,17 +153,17 @@ Il venditore inserisce le foto relative al prodotto da aggiungere.
     \item \textbf{Scenario Alternativo 1:} Il venditore non inserisce alcuna foto del prodotto. In questo caso:
     \begin{itemize}
         \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
-        \item Verrà impedito il proseguimento dell'operazione.
+        \item Verrà impedita l'aggiunta del nuovo prodotto.
     \end{itemize}
     \item \textbf{Scenario Alternativo 2:} Il venditore seleziona un file che non è del tipo immagine. In questo caso:
     \begin{itemize}
         \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
-        \item Verrà impedito il proseguimento dell'operazione.
+        \item Verrà impedita l'aggiunta del nuovo prodotto.
     \end{itemize}
     \item \textbf{Scenario Alternativo 3:} Il venditore cerca di inserire più di quattro foto relative ad un prodotto. In questo caso:
     \begin{itemize}
         \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
-        \item Verrà impedito il proseguimento dell'operazione.
+        \item Verrà impedita l'aggiunta del nuovo prodotto.
     \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
