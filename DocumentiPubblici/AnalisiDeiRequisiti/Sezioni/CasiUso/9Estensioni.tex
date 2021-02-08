@@ -116,6 +116,15 @@ Visualizzazione messaggio di errore il quale segnala al venditore che lo sconto 
     \item \textbf{Scenario Principale:} Visualizzazione messaggio di errore il quale segnala che lo sconto inserito è minore di zero e blocca l'operazione che stava eseguendo.
 \end{itemize}
 
+\UC{Visualizzazione messaggio di errore in caso di sconto maggiore di 100\%}
+Visualizzazione messaggio di errore il quale segnala al venditore che lo sconto inserito è maggiore di 100\%.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore inserisce uno sconto maggiore di 100\%.
+    \item \textbf{Postcondizione:} Al venditore viene impedita l'operazione e viene segnalata la causa.
+    \item \textbf{Scenario Principale:} Visualizzazione messaggio di errore il quale segnala che lo sconto inserito è maggiore di 100\% e blocca l'operazione che stava eseguendo.
+\end{itemize}
+
 \UC{Visualizzazione messaggio di errore tentivo di aggiunta di più di quattro foto relative ad un prodotto}
 Visualizzazione messaggio di errore il quale segnala al venditore il tentativo di aggiunta di una nuova foto relativa ad un prodotto, quando si è raggiunto il limite massimo di quattro.
 \begin{itemize}

@@ -11,9 +11,9 @@
 Il venditore aggiunge un nuovo prodotto alla piattaforma, così da poter essere venduto.
 \begin{itemize}
     \item \textbf{Attori Primari:} Venditore.
-    \item \textbf{Precondizione:} Il venditore si trova nella pagina della \glo{dashboard} e seleziona l'azione per aggiungere un prodotto.
+    \item \textbf{Precondizione:} Il venditore si trova nella vista della \glo{dashboard} e seleziona l'azione di aggiunta di un prodotto.
     \item \textbf{Postcondizione:} Il venditore ha aggiunto il prodotto nella piattaforma.
-    \item \textbf{Scenario Principale:} Il venditore preme sull'azione che porta alla pagina di aggiunta di un prodotto e compie i seguenti passi:
+    \item \textbf{Scenario Principale:} Il venditore preme sull'azione che porta alla vista di aggiunta di un prodotto e compie le seguenti azioni:
     \begin{itemize}
         \item (\actualUC.1) - Inserimento del nome del prodotto.
         \item (\actualUC.2) - Inserimento della descrizione del prodotto.
@@ -57,7 +57,7 @@ Il venditore inserisce la descrizione del prodotto da aggiungere.
     \item \textbf{Scenario Alternativo:} Il venditore non inserisce la descrizione del prodotto. In questo caso:
     \begin{itemize}
         \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
-        \item Verrà impedita l'aggiunta del nuovo prodotto.
+        \item Verrà impedita la conferma di aggiunta del prodotto.
     \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
@@ -114,6 +114,7 @@ Il venditore inserisce lo sconto percentuale da applicare al prezzo del prodotto
     \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
+        \item (UC) - Visualizzazione messaggio di errore in caso di sconto maggiore di 100\%.
         \item (UC) - Visualizzazione messaggio di errore in caso di sconto minore di zero.
     \end{itemize}
 \end{itemize}
@@ -194,39 +195,195 @@ Il venditore aggiunge o rimuove un prodotto nella sezione dei prodotti in eviden
     \item \textbf{Scenario Principale:} Il venditore vuole aggiungere o rimuovere un prodotto nella sezione dei prodotti in evidenza presente nella home e clicca sulla rispettiva azione.
 \end{itemize}
 
-\UC{Modifica prodotto}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.1]{Immagini/DiagrammiUC/UC19ModificaProdotto.png}
-    \caption{Diagramma di \actualUC: Modifica di un prodotto nella piattaforma da parte del venditore}
-    \label{fig:ModificaProdotto}
-\end{figure}
+\UC{Modifica informazioni del prodotto}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[scale=0.1]{Immagini/DiagrammiUC/UC19ModificaProdotto.png}
+%     \caption{Diagramma di \actualUC: Modifica di un prodotto nella piattaforma da parte del venditore}
+%     \label{fig:ModificaProdotto}
+% \end{figure}
 
-Il venditore modifica uno o più campi di un prodotto della piattaforma.
+Il venditore modifica uno o più campi di un prodotto che è stato inserito nella piattaforma.
 \begin{itemize}
     \item \textbf{Attori Primari:} Venditore.
-    \item \textbf{Precondizione:} Il venditore si trova nella pagina della dashboard e seleziona un prodotto già presente.
-    \item \textbf{Postcondizione:} Il venditore ha modificato il prodotto con le modifiche selezionato.
-    \item \textbf{Scenario Principale:} Il venditore preme sull'azione che porta alla pagina di modifica di un prodotto e compie zero, o più, dei seguenti passi:
+    \item \textbf{Precondizione:} Il venditore si trova nella PDP di un prodotto e seleziona l'azione di modifica di quel prodotto.
+    \item \textbf{Postcondizione:} Il venditore ha modificato il prodotto con le modifiche compiute.
+    \item \textbf{Scenario Principale:} Il venditore seleziona l'azione che porta alla vista di modifica di un prodotto e compie zero, o più, delle seguenti azioni:
     \begin{itemize}
-        \item (UC23.4) - Inserisce il nuovo nome del prodotto obbligatorio.
-        \item (UC23.4) - Inserisce la nuova descrizione del prodotto.
-        \item (UC23.4) - Inserisce le nuove categorie del prodotto.
-        \item (UC23.5) - Inserisce il nuovo prezzo del prodotto obbligatorio.
-        \item (UC23.5) - Inserisce il nuovo sconto percentuale sul prezzo del prodotto.
-        \item (UC23.5) - Inserisce la nuova quantità del prodotto disponibile obbligatoria.
-        \item (UC23.6) - Aggiunge o rimuove le foto del prodotto, sempre lasciandone almeno una.
-        \item (UC18.1) - Aggiunge o rimuove il prodotto, in base al suo stato attuale, nella sezione dei prodotti in evidenza presente nella home.
-        \item conferma gli inserimenti e il prodotto viene modificato.
+        \item (\actualUC.1) - Modifica del nome del prodotto.
+        \item (\actualUC.2) - Modifica della descrizione del prodotto.
+        \item (\actualUC.3) - Modifica delle categorie del prodotto.
+        \item (\actualUC.4) - Modifica del prezzo del prodotto.
+        \item (\actualUC.5) - Modifica dello sconto percentuale al prezzo del prodotto.
+        \item (\actualUC.6) - Aggiunta di nuove foto del prodotto.
+        \item (\actualUC.7) - Rimozione di foto del prodotto.
+    \end{itemize}
+    In seguito ci sarà la conferma delle modifiche compiute e il prodotto viene modificato.
+    \item \textbf{Scenario Alternativo:} Il venditore non conferma le modifiche effettuate e perciò verranno scartate.
+\end{itemize}
+
+\resetSubUC
+
+\subUC{Modifica del nome del prodotto}
+Il venditore vuole modificare il nome del prodotto.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore si trova nella vista di modifica del prodotto.
+    \item \textbf{Postcondizione:} Il venditore ha modificato il nome del prodotto.
+    \item \textbf{Scenario Principale:} Il venditore si trova nella vista di modifica del prodotto e modifica il nome attraverso i seguenti passi:
+    \begin{itemize}
+        \item Si posiziona nel campo di inserimento del nome del prodotto dove è presente quello attualmente utilizzato.
+        \item Lo modifica.
+    \end{itemize}
+    \item \textbf{Scenario Alternativo:} Il venditore cancella il nome attuale del prodotto e lo lascia vuoto non scrivendone uno nuovo. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito.
+        \item Verrà impedita la conferma delle modifiche al prodotto.
     \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
-        \item (UC30) - Visualizzazione messaggio nome del prodotto non inserito.
-        \item (UC30) - Visualizzazione messaggio categoria del prodotto non inserita.
-        \item (UC30) - Visualizzazione messaggio prezzo del prodotto non inserito.
-        \item (UC30) - Visualizzazione messaggio quantità del prodotto non inserita.
-        \item (UC30) - Visualizzazione messaggio foto del prodotto non inserita.
+        \item (UC30) - Visualizzazione messaggio campo dati obbligatorio non inserito.
+    \end{itemize}
+\end{itemize}
+
+\subUC{Modifica della descrizione del prodotto}
+Il venditore vuole modificare la descrizione del prodotto.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore si trova nella vista di modifica del prodotto.
+    \item \textbf{Postcondizione:} Il venditore ha modificato la descrizione del prodotto.
+    \item \textbf{Scenario Principale:} Il venditore si trova nella vista di modifica del prodotto e modifica la descrizione attraverso i seguenti passi:
+    \begin{itemize}
+        \item Si posiziona nel campo di inserimento della descrizione del prodotto dove è presente quella attualmente utilizzata.
+        \item La modifica.
+    \end{itemize}
+    \item \textbf{Scenario Alternativo:} Il venditore cancella la descrizione attuale del prodotto e la lascia vuota non scrivendone una nuova. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito.
+        \item Verrà impedita la conferma delle modifiche al prodotto.
+    \end{itemize}
+    \item \textbf{Estensioni:}
+    \begin{itemize}
+        \item (UC30) - Visualizzazione messaggio campo dati obbligatorio non inserito.
+    \end{itemize}
+\end{itemize}
+
+\subUC{Modifica delle categorie del prodotto}
+Il venditore modifica le categorie del prodotto.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore si trova nella vista di modifica del prodotto.
+    \item \textbf{Postcondizione:} Il venditore ha modificato le categorie del prodotto.
+    \item \textbf{Scenario Principale:} Il venditore si trova nella vista di modifica del prodotto e modifica le categorie a cui fa parte il prodotto attraverso le possibili azioni:
+    \begin{itemize}
+        \item Aggiunta di una nuova categoria presa dalla lista di categorie disponibili. Questa non deve già contenere il prodotto.
+        \item Rimozione di una categoria attualmente inserita.
+    \end{itemize}
+\end{itemize}
+
+\subUC{Modifica del prezzo del prodotto}
+Il venditore modifica il prezzo a cui vendere il prodotto.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore si trova nella vista di modifica del prodotto.
+    \item \textbf{Postcondizione:} Il venditore ha modificato il prezzo a cui vendere il prodotto.
+    \item \textbf{Scenario Principale:} Il venditore si trova nella vista di modifica del prodotto e modifica il prezzo a cui vendere il prodotto attraverso i seguenti passi:
+    \begin{itemize}
+        \item Si posiziona nel campo di inserimento del prezzo del prodotto dove è presente quello attualmente utilizzato.
+        \item Lo modifica.
+    \end{itemize}
+    \item \textbf{Scenario Alternativo 1:} Il venditore cancella il prezzo attuale del prodotto e lo lascia vuoto non scrivendone uno nuovo. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito.
+        \item Verrà impedita la conferma delle modifiche al prodotto.
+    \end{itemize}
+    \item \textbf{Scenario Alternativo 2:} Il venditore inserisce un nuovo prezzo minore o uguale a zero. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà visualizzato il messaggio di errore in caso di prezzo minore o uguale a zero.
+        \item Verrà impedita la conferma delle modifiche al prodotto.
+    \end{itemize}
+    \item \textbf{Estensioni:}
+        \begin{itemize}
+            \item (UC) - Visualizzazione messaggio di errore in caso di prezzo minore o uguale a zero.
+            \item (UC30) - Visualizzazione messaggio campo dati obbligatorio non inserito.
+        \end{itemize}
+\end{itemize}
+
+\subUC{Modifica dello sconto percentuale al prezzo del prodotto}
+Il venditore modifica lo sconto percentuale da applicare al prezzo del prodotto.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore si trova nella vista di modifica del prodotto.
+    \item \textbf{Postcondizione:} Il venditore ha modificato lo sconto percentuale da applicare al prezzo del prodotto.
+    \item \textbf{Scenario Principale:} Il venditore si trova nella vista di modifica del prodotto e modifica lo sconto percentuale da applicare al prezzo del prodotto, attraverso i seguenti passi:
+    \begin{itemize}
+        \item Si posiziona nel campo di inserimento dello sconto percentuale del prodotto dove è presente quello attualmente utilizzato.
+        \item Lo modifica.
+    \end{itemize}
+    \item \textbf{Scenario Alternativo 1:} Nel caso in cui il venditore cancelli lo sconto attuale e, in seguito, non inserica alcunché, allora non verrà applicato alcuno sconto.
+    \item \textbf{Scenario Alternativo 2:} Il venditore inserisce uno sconto maggiore di 100\%. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà visualizzato il messaggio di errore in caso di sconto maggiore di 100\%.
+        \item Verrà impedita la conferma delle modifiche al prodotto.
+    \end{itemize}
+    \item \textbf{Scenario Alternativo 3:} Il venditore inserisce uno sconto minore di zero. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà visualizzato il messaggio di errore in caso di sconto minore di zero.
+        \item Verrà impedita la conferma delle modifiche al prodotto.
+    \end{itemize}
+    \item \textbf{Estensioni:}
+        \begin{itemize}
+            \item (UC) - Visualizzazione messaggio di errore in caso di sconto maggiore di 100\%.
+            \item (UC) - Visualizzazione messaggio di errore in caso di sconto minore di zero.
+        \end{itemize}
+\end{itemize}
+
+\subUC{Aggiunta di foto al prodotto}
+Il venditore inserisce le foto relative al prodotto.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore si trova nella vista di modifica del prodotto.
+    \item \textbf{Postcondizione:} Il venditore ha inserito le foto relative al prodotto.
+    \item \textbf{Scenario Principale:} Il venditore si trova nella vista di modifica del prodotto una foto relativa al prodotto.
+    \item \textbf{Scenario Alternativo 1:} Il venditore tenta di aggiungere una foto in più oltre il massimo di quattro per prodotto. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà visualizzato il messaggio di errore tentivo di aggiunta di più di quattro foto relative ad un prodotto.
+        \item Verrà impedita la conferma delle modifiche al prodotto.
+    \end{itemize}
+    \item \textbf{Scenario Alternativo 2:} Il venditore seleziona, come foto da aggiungere, un file che non è del tipo immagine. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà visualizzato il messaggio di errore il file selezionato non è del tipo immagine.
+        \item Verrà impedita la conferma delle modifiche al prodotto.
+    \end{itemize}
+    \item \textbf{Estensioni:}
+    \begin{itemize}
+        \item (UC) - Visualizzazione messaggio di errore tentivo di aggiunta di più di quattro foto relative ad un prodotto.
+        \item (UC) - Visualizzazione messaggio di errore nel caso in cui il file selezionato non sia del tipo immagine.
+    \end{itemize}
+\end{itemize}
+
+\subUC{Rimozione di foto dal prodotto}
+Il venditore rimuove le foto relative al prodotto da aggiungere.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore si trova nella vista di modifica del prodotto.
+    \item \textbf{Postcondizione:} Il venditore ha rimmosso le foto relative al prodotto.
+    \item \textbf{Scenario Principale:} Il venditore si trova nella vista di modifica del prodotto e rimuove le foto relative al prodotto attraverso i seguenti passi:
+    \begin{itemize}
+        \item Seleziona la foto che vuole eliminare.
+        \item Seleziona l'azione di eliminazione di quella specifica foto.
+        \item La foto viene eliminata.
+    \end{itemize}
+    \item \textbf{Scenario Alternativo:} Il venditore cancella rimuove tutte le foto relative al prodotto. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito.
+        \item Verrà impedita la conferma delle modifiche al prodotto.
+    \end{itemize}
+    \item \textbf{Estensioni:}
+    \begin{itemize}
+        \item (UC) - Visualizzazione messaggio di errore campo dati obbligatorio non inserito.
     \end{itemize}
 \end{itemize}
 
