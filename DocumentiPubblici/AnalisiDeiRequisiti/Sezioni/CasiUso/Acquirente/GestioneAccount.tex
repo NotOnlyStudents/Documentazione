@@ -1,0 +1,116 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\UC{Modifica informazioni acquirente}
+L'acquirente vuole modificare le sue informazioni personali.
+\begin{itemize}
+    \item \textbf{Attori primari:} Acquirente.
+    \item \textbf{Precondizione:} L'acquirente si trova nella vista di modifica informazioni personali.
+    \item \textbf{Postcondizione:} L'acquirente ha aggiornato le sue informazioni personali.
+    \item \textbf{Scenario Principale:} L'acquirente ha premuto sull'azione per la modifica delle informazioni personali e, dopo aver compiuto la modifica, potrà confermarle attraverso l'azione di salvataggio. Le informazioni che si possono modificare sono:
+    \begin{itemize}
+        \item (\actualUC.1) - Inserimento nuovo indirizzo email.
+        \item (\actualUC.2) - Inserimento nuova password.
+        \item (\actualUC.3) - Inserimento conferma nuova password.
+    \end{itemize}
+    In seguito ci sarà la conferma delle modifiche compiute e le informazioni personali verrano modificate.
+    \item \textbf{Scenario Alternativo:} L'acquirente non conferma le modifiche effettuato e, perciò, non verranno modificate le informazioni personali.
+\end{itemize}
+\resetSubUC
+
+\subUC{Inserimento nuovo indirizzo email}
+L'acquirente vuole modificare la propria email.
+\begin{itemize}
+    \item \textbf{Attori primari:} Acquirente.
+    \item \textbf{Precondizione:} L'acquirente si trova nella vista di modifica informazioni personali e vuole inserire un nuovo indirizzo email.
+    \item \textbf{Postcondizione:} L'acquirente ha aggiornato la sua email.
+    \item \textbf{Scenario Principale:} L'acquirente si trova nella vista di modifica informazioni personali e vuole modificare la propria email attraverso le seguenti azioni:
+        \begin{itemize}
+            \item Si posiziona nel campo di inserimento della nuova email dove è presente quella attualmente utilizzata.
+            \item Inserisce quella nuova o modifica quella attuale.
+        \end{itemize}
+    \item \textbf{Scenario Alternativo 1:} L'acquirente non modifica l'attuale indirizzo email utilizzato e, perciò, non cambierà.
+    \item \textbf{Scenario Alternativo 2:} L'acquirente inserisce un'email già utilizzata nella piattaforma. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item Verrà impedito il proseguimento dell'operazione.
+    \end{itemize}
+    \item \textbf{Scenario Alternativo 3:} L'acquirente inserisce un'email non valida. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item Verrà impedito il proseguimento dell'operazione.
+    \end{itemize}
+    \item \textbf{Scenario Alternativo 4:} L'acquirente non inserisce l'email e lascia il campo di inserimento vuoto. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item Verrà impedito il proseguimento dell'operazione.
+    \end{itemize}
+    \item \textbf{Estensioni:}
+    \begin{itemize}
+        \item (UC) - Visualizzazione messaggio di errore in caso di email già utilizzata nella piattaforma.
+        \item (UC) - Visualizzazione messaggio di errore in caso di email non valida.
+        \item (UC) - Visualizzazione messaggio campo dati obbligatorio non inserito.
+    \end{itemize}
+\end{itemize}
+
+\subUC{Inserimento nuova password}
+L'acquirente vuole modificare la propria password.
+\begin{itemize}
+    \item \textbf{Attori primari:} Acquirente.
+    \item \textbf{Precondizione:} L'acquirente si trova nella vista di modifica informazioni personali e vuole inserire una nuova password.
+    \item \textbf{Postcondizione:} L'acquirente ha inserito la nuova password.
+    \item \textbf{Scenario Principale:} L'acquirente si trova nella vista di modifica informazioni personali e vuole modificare la propria password attraverso le seguenti azioni:
+        \begin{itemize}
+            \item Si posiziona nel campo di inserimento vuoto della nuova password.
+            \item La scrive.
+            \item Inserisce la stessa password nel campo di conferma nuova password.
+        \end{itemize}
+    \item \textbf{Scenario Alternativo 1:} L'acquirente non inserisce alcuna password e lascia il campo di inserimento nuova password vuoto. In questo caso non verrà modificata la password.
+    \item \textbf{Scenario Alternativo 2:} L'acquirente inserisce una password troppo debole. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item Verrà impedito il proseguimento dell'operazione.
+    \end{itemize}
+    \item \textbf{Estensioni:}
+    \begin{itemize}
+        \item (UC) - Visualizzazione messaggio di errore in caso di password troppo debole.
+    \end{itemize}
+\end{itemize}
+
+\subUC{Inserimento conferma nuova password}
+L'acquirente vuole modificare la propria password e deve confermare quella nuova da inserire.
+\begin{itemize}
+    \item \textbf{Attori primari:} Acquirente.
+    \item \textbf{Precondizione:} L'acquirente si trova nella vista di modifica informazioni personali e vuole inserire una nuova password.
+    \item \textbf{Postcondizione:} L'acquirente ha inserito la conferma della nuova password.
+    \item \textbf{Scenario Principale:} L'acquirente si trova nella vista di modifica informazioni personali, ha già inserito la nuova password e la deve confermare attraverso le seguenti azioni:
+        \begin{itemize}
+            \item Si posiziona nel campo di inserimento vuoto della conferma nuova password.
+            \item Inserisce la stessa password che è stata inserita nel campo conferma password.
+        \end{itemize}
+    \item \textbf{Scenario Alternativo 1:} L'acquirente non inserisce alcuna password e lascia il campo di inserimento conferma nuova password vuoto. In questo caso non verrà modificata la password.
+    \item \textbf{Scenario Alternativo 2:} L'acquirente inserisce una password di conferma diversa da quella inserita nel campo di inserimento nuova password. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item Verrà impedito il proseguimento dell'operazione.
+    \end{itemize}
+    \item \textbf{Estensioni:}
+    \begin{itemize}
+        \item (UC) - Visualizzazione messaggio di errore in caso di password e password di conferma diverse
+    \end{itemize}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\UC{Eliminazione account}
+L'acquirente può eliminare il proprio account.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Acquirente.
+    \item \textbf{Precondizione:} L'acquirente si trova nella propria pagina personale (UC3.2.1) e ha selezionato l'azione di cancellazione del proprio account.
+    \item \textbf{Postcondizione:} L'account dell'acquirente non è più presente nella piattaforma
+    \item \textbf{Scenario Principale:} L'acquirente vuole eliminare il proprio account e compie le seguenti operazioni:
+    \begin{itemize}
+        \item Preme sull'azione di cancellazione del proprio account.
+        \item Viene visualizzato un messaggio di conferma dell'operazione.
+        \item Se conferma viene eliminato l'account.
+    \end{itemize}
+    \item \textbf{Scenario Alternativo:} Se non conferma viene riportato alla propria pagina personale.
+\end{itemize}
