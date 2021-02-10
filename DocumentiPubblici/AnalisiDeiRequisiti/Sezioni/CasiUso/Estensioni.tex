@@ -140,7 +140,17 @@ Visualizzazione messaggio di errore il quale segnala al venditore che non è sta
     \item \textbf{Attori Primari:} Venditore.
     \item \textbf{Precondizione:} Il venditore non inserisce alcuna foto relativa al prodotto.
     \item \textbf{Postcondizione:} Al venditore viene impedita l'operazione e viene segnalata la causa.
-    \item \textbf{Scenario Principale:} Visualizzazione messaggio di errore il quale segnala al venditore l'obblogatorietà di inserimento di almeno una foto relativa al prodotto e blocca l'operazione che stava eseguendo.
+    \item \textbf{Scenario Principale:} Visualizzazione messaggio di errore il quale segnala al venditore l'obbligatorietà di inserimento di almeno una foto relativa al prodotto e blocca l'operazione che stava eseguendo.
+\end{itemize}
+
+% Estensioni Categoria
+\UC{Visualizzazione messaggio nome per la categoria già utilizzato}
+Visualizzazione messaggio di errore il quale segnala al venditore che sta cercando di assegnare ad una categoria un nome già utilizzato da un'altra.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore vuole assegnare ad una categoria un nome già utilizzato da un'altra categoria.
+    \item \textbf{Postcondizione:} Al venditore viene impedita l'operazione e viene segnalata la causa.
+    \item \textbf{Scenario Principale:} Visualizzazione messaggio di errore il quale segnala al venditore l'impossibilità di assegnare ad una categoria un nome già utilizzato e blocca l'operazione che stava eseguendo.
 \end{itemize}
 
 % Estensioni dashboard
