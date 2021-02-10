@@ -1,3 +1,5 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \UC{Modifica informazioni venditore}
 Il venditore vuole modificare le sue informazioni personali.
 \begin{itemize}
@@ -13,7 +15,7 @@ Il venditore vuole modificare le sue informazioni personali.
         \item (\actualUC.5) - Rimozione foto profilo.
         \item (\actualUC.6) - Modifica della descrizione dell'azienda.
     \end{itemize}
-    In seguito ci sarà la conferma delle modifiche compiute e le informazioni personali verrano modificate.
+    In seguito ci sarà la conferma delle modifiche compiute e le informazioni personali verranno modificate.
     \item \textbf{Scenario Alternativo:} Il venditore non conferma le modifiche effettuato e, perciò, non verranno modificate le informazioni personali.
 \end{itemize}
 \resetSubUC
@@ -32,18 +34,18 @@ Il venditore vuole modificare la propria email.
     \item \textbf{Scenario Alternativo 1:} Il venditore non modifica l'attuale indirizzo email utilizzato e, perciò, non cambierà.
     \item \textbf{Scenario Alternativo 2:} Il venditore inserisce un'email già utilizzata nella piattaforma. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
-        \item Verrà impedito il proseguimento dell'operazione.
+        \item (UC) - Verrà visualizzato il messaggio di errore in caso di email già registrata nella piattaforma.
+        \item Verrà impedita la modifica delle informazioni.
     \end{itemize}
     \item \textbf{Scenario Alternativo 3:} Il venditore inserisce un'email non valida. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
-        \item Verrà impedito il proseguimento dell'operazione.
+        \item (UC) - Verrà visualizzato il messaggio di errore in caso di email non valida.
+        \item Verrà impedita la modifica delle informazioni.
     \end{itemize}
     \item \textbf{Scenario Alternativo 4:} Il venditore non inserisce l'email e lascia il campo di inserimento vuoto. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
-        \item Verrà impedito il proseguimento dell'operazione.
+        \item (UC) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito.
+        \item Verrà impedita la modifica delle informazioni.
     \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
@@ -68,8 +70,8 @@ Il venditore vuole modificare la propria password.
     \item \textbf{Scenario Alternativo 1:} Il venditore non inserisce alcuna password e lascia il campo di inserimento nuova password vuoto. In questo caso non verrà modificata la password.
     \item \textbf{Scenario Alternativo 2:} Il venditore inserisce una password troppo debole. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
-        \item Verrà impedito il proseguimento dell'operazione.
+        \item (UC) - Verrà visualizzato il messaggio di errore di password troppo debole.
+        \item Verrà impedita la modifica delle informazioni.
     \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
@@ -91,8 +93,8 @@ Il venditore vuole modificare la propria password e deve confermare quella nuova
     \item \textbf{Scenario Alternativo 1:} Il venditore non inserisce alcuna password e lascia il campo di inserimento conferma nuova password vuoto. In questo caso non verrà modificata la password.
     \item \textbf{Scenario Alternativo 2:} Il venditore inserisce una password di conferma diversa da quella inserita nel campo di inserimento nuova password. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
-        \item Verrà impedito il proseguimento dell'operazione.
+        \item (UC) - Verrà visualizzato il messaggio di errore di password e password di conferma diverse.
+        \item Verrà impedita la modifica delle informazioni.
     \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
@@ -115,8 +117,8 @@ Il venditore vuole modificare la propria foto profilo.
     \item \textbf{Scenario Alternativo 1:} Il venditore non seleziona alcun file e la foto profilo non verrà cambiata.
     \item \textbf{Scenario Alternativo 2:} Il venditore seleziona un file del tipo non immagine. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
-        \item Verrà impedito il proseguimento dell'operazione.
+        \item (UC) - Verrà visualizzato il messaggio di errore il quale segnala che il file selezionato non è del tipo immagine.
+        \item Verrà impedita la modifica delle informazioni.
     \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
