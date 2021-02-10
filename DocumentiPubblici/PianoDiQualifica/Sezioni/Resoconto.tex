@@ -1,7 +1,7 @@
 \section{Resoconto delle attività di verifica}
 \label{resoconto}
-\subsection{Periodo di analisi e consolidamento dei requisiti}
-Durante questi periodi, i documenti redatti da presentare in ingresso alla \textbf{Revisione dei Requisiti} sono stati verificati dai \textit{Verificatori} secondo i criteri per l'analisi statica definiti nelle \NdPv{1.0.0}, seguendo le metodologie di \glo{Walkthrough} e di \glo{Inspection}.
+\subsection{Periodo di analisi}
+Durante questo periodo, i documenti redatti da presentare in ingresso alla \textbf{Revisione dei Requisiti} sono stati verificati dai \textit{Verificatori} secondo i criteri per l'analisi statica definiti nelle \NdPv{1.0.0}, seguendo le metodologie di \glo{Walkthrough} e di \glo{Inspection}.
 \subsubsection{Strategia adottata per l'analisi statica}
 Per ciascun documento si è creato inizialmente una struttura di base comune così da evitare possibili conflitti e sprechi di tempo futuri. A questo punto si è applicato il metodo del Walkthrough sulla parte di documento modificata che ha permesso l'individuazione di errori comuni e frequenti all'interno dei documenti che hanno comportato un aggiornamento della lista di controllo. Si è potuto infatti svolgere un’ulteriore esame nei confronti del documento sottoposto a verifica per scoprire gli errori non visti nelle verifiche precedenti tramite un'\glo{attività} di Inspection. Il \textit{Verificatore} valuta la correttezza del documento cercando di individuare eventuali errori e trattandoli nel modo seguente:
 	\begin{itemize}
@@ -9,7 +9,9 @@ Per ciascun documento si è creato inizialmente una struttura di base comune cos
 		\item Inserimento degli errori più ricorrenti nella lista di controllo, redatta durante la \glo{fase} di verifica dei documenti;
 		\item Applicazione del ciclo PDCA per migliorare e velocizzare le verifiche future.
 	\end{itemize}
-\myparagraph{Esiti verifica}
+\subsubsection{Strategia adottata per l'analisi dinamica}
+L'analisi dinamica di ciascun documento è stata eseguita mediante l'utilizzo dello strumento \glo{GitHub} Actions. Questo ha garantito una stesura del codice \LaTeX{} priva di errori semantici. Infatti, tramite questo strumento di verifica continua, è stato possibile individuare errori che potevano essere ignorati durante la compilazione locale del documento da qualche membro del team. Viene inviata una notifica ad ogni componente del gruppo sia in caso di successo che di fallimento portando il \textit{Verificatore} incaricato a dedicarsi alla risoluzione del problema in modo da avere sempre dei documenti compilabili e corretti.
+\subsubsection{Esiti verifica}
 Per ciascun documento redatto si è calcolato l'indice di Gulpease. Per evitare risultati errati nel calcolo di tali misurazioni, si è deciso di non prendere in considerazione:
 \begin{itemize}
 	\item Il frontespizio di ogni documento;
@@ -18,14 +20,77 @@ Per ciascun documento redatto si è calcolato l'indice di Gulpease. Per evitare 
 \end{itemize}
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.6]{Immagini/Gulpease_v1.0.0}
+	\includegraphics[scale=0.6]{Immagini/GulpeaseAnalisi}\\
 	\caption{Indice di Gulpease comprendente l'andamento di tutti i documenti}
+	Tutti i documenti soddisfano pienamente il valore minimo di leggibilità esposto in \hyperlink{MPR02}{MPR02}.
 	\label{fig:gulpease}
 \end{figure}
-\newpage
-\subsubsection{Strategia adottata per l'analisi dinamica}
-L'analisi dinamica di ciascun documento è stata eseguita mediante l'utilizzo dello strumento \glo{GitHub} Actions. Questo ha garantito una stesura del codice \LaTeX{} priva di errori semantici. Infatti, tramite questo strumento di verifica continua, è stato possibile individuare errori che potevano essere ignorati durante la compilazione locale del documento da qualche membro del team. Viene inviata una notifica ad ogni componente del gruppo sia in caso di successo che di fallimento portando il \textit{Verificatore} incaricato a dedicarsi alla risoluzione del problema in modo da avere sempre dei documenti compilabili e corretti.
+Per ciascun documento redatto si è calcolato l'indice di correttezza ortografica. Si è successivamente stilato una tabella contenente i risultati ottenuti. Tutti i documenti soddisfano pienamente l'obiettivo di correttezza ortografica indicato in \hyperlink{MPR03}{MPR03}.
+\begin{table} [H]
+	\begin{center}
+		\begin{tabular}{|C{6cm}|c|c|}
+			\rowcolor{darkblue}
+			\textcolor{white}{\textbf{Prodotto}}&
+			\textcolor{white}{\textbf{Risultato ottenuto}}&
+			\textcolor{white}{\textbf{Valutazione}}\\
+			\NdPv{1.0.0} & 0 & Soddisfatto\\ \hline
+			\SdFv{1.0.0} & 0 & Soddisfatto\\ \hline
+			\AdRv{1.0.0} & 0 & Soddisfatto\\ \hline
+			\PdPv{1.0.0} & 0 & Soddisfatto\\ \hline
+			\PdQv{1.0.0} & 0 & Soddisfatto\\ \hline
+			\Glossariov{1.0.0} & 0 & Soddisfatto\\ \hline
+		\end{tabular}
+	\end{center}
+	\caption{\label{tab:MPR03Analisi}Risultati relativi alla correttezza ortografica.}
+\end{table}\noindent
+Al termine di questo primo periodo si sono calcolati i risultati relativi alla variazione dei costi e della pianificazione. Si sono successivamente stilate due tabelle contenenti i risultati ottenuti.\\Tutti i documenti soddisfano l'obiettivo indicato in \hyperlink{MPR08}{MPR08}.
+\begin{table} [H]
+	\begin{center}
+		\begin{tabular}{|C{6cm}|c|c|}
+			\rowcolor{darkblue}
+			\textcolor{white}{\textbf{Prodotto}}&
+			\textcolor{white}{\textbf{Risultato ottenuto}}&
+			\textcolor{white}{\textbf{Valutazione}}\\
+			\NdPv{1.0.0} & 0 & Soddisfatto\\ \hline
+			\SdFv{1.0.0} & 5 & Soddisfatto\\ \hline
+			\AdRv{1.0.0} & 2 & Soddisfatto\\ \hline
+			\PdPv{1.0.0} & 4 & Soddisfatto\\ \hline
+			\PdQv{1.0.0} & 0 & Soddisfatto\\ \hline
+			\Glossariov{1.0.0} & 6 & Soddisfatto\\ \hline
+		\end{tabular}
+	\end{center}
+	\caption{\label{tab:MPR08Analisi}Risultati relativi alla varianza rispetto allo schedule.}
+\end{table}\noindent
+Nonostante lo sforamento di \textbf{20,00€} si è riusciti a soddisfare pienamente l'obiettivo indicato in \hyperlink{MPR09}{MPR09}.
+\begin{table} [H]
+	\begin{center}
+		\begin{tabular}{|C{6cm}|c|c|}
+			\rowcolor{darkblue}
+			\textcolor{white}{\textbf{Processo}}&
+			\textcolor{white}{\textbf{Risultato ottenuto}}&
+			\textcolor{white}{\textbf{Valutazione}}\\
+			Differenza dei costi tra il consuntivo di periodo ed il consuntivo finale & -20,00€ & Soddisfatto\\ \hline
+		\end{tabular}
+	\end{center}
+	\caption{\label{tab:MPR09Analisi}Risultati relativi alla varianza dei costi.}
+\end{table}\noindent
+Nonostante le difficoltà incontrate nello svolgimento del progetto, si è riusciti a soddisfare pienamente l'obiettivo indicato in \hyperlink{MPR10}{MPR10}.
+\begin{table} [H]
+	\begin{center}
+		\begin{tabular}{|C{6cm}|c|c|}
+			\rowcolor{darkblue}
+			\textcolor{white}{\textbf{Processo}}&
+			\textcolor{white}{\textbf{Risultato ottenuto}}&
+			\textcolor{white}{\textbf{Valutazione}}\\
+			Giorni trascorsi tra l'apertura di una issue e la sua chiusura & 6 & Soddisfatto\\ \hline
+		\end{tabular}
+	\end{center}
+	\caption{\label{tab:MPR10Analisi}Risultati relativi alla varianza dei costi.}
+\end{table}
 
+\subsection{Periodo di consolidamento dei requisiti}
+In questo periodo di consolidamento dei requisiti , il gruppo {\Gruppo} si è preparato alla presentazione per la Revisione dei Requisiti studiando le varie tecnologie necessarie per l'avanzamento del progetto in modo individuale. Dal momento che non è stata eseguita nessuna operazione di verifica o miglioramento riguardante i documenti redatti, non si è ritenuto di alcuna rilevanza calcolare i risultati delle varie metriche associate alla \glo{qualità} dei documenti prodotti dal gruppo.
+ 
 \subsection{Periodo di progettazione architetturale}
 Durante il periodo di progettazione architetturale, come nel periodo precedente, i documenti redatti da presentare in ingresso alla \textbf{Revisione di Progettazione} sono stati sottoposti a verifica secondo i criteri definiti nelle \NdPv{1.0.0}. In questo periodo sono stati valutati attraverso verifica anche i vari processi istanziati.
 \subsubsection{Esiti verifica}
@@ -41,10 +106,11 @@ A partire da questo periodo il gruppo ha applicato retrospettivamente lo standar
 			\textcolor{white}{\textbf{Liv3}}&
 			\textcolor{white}{\textbf{Liv4}}&
 			\textcolor{white}{\textbf{Liv5}}&
-			\textcolor{white}{\textbf{Risultato}} \\
+			\textcolor{white}{\textbf{Risultato}}\\
 				
 			Fornitura & \textbf{PP:} & \textbf{PM:} \textbf{WMP:} & \textbf{PDEF:} \textbf{PDEP:} & \textbf{PC:} \textbf{PME:} &
 			\textbf{PI:} \textbf{PO:} & \textbf{Inizio:} \textbf{Fine:} \\ \hline
+			
 			Documentazione & \textbf{PP:} & \textbf{PM:} \textbf{WMP:} & \textbf{PDEF:} \textbf{PDEP:} & \textbf{PC:} \textbf{PME:} &
 			\textbf{PI:} \textbf{PO:} & \textbf{Inizio:} \textbf{Fine:} \\ \hline
 			
