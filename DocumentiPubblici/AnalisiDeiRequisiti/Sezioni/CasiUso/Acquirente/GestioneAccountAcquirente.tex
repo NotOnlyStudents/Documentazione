@@ -1,4 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \UC{Modifica informazioni acquirente}
 L'acquirente vuole modificare le sue informazioni personali.
 \begin{itemize}
@@ -30,18 +31,18 @@ L'acquirente vuole modificare la propria email.
     \item \textbf{Scenario Alternativo 1:} L'acquirente non modifica l'attuale indirizzo email utilizzato e, perciò, non cambierà.
     \item \textbf{Scenario Alternativo 2:} L'acquirente inserisce un'email già utilizzata nella piattaforma. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
-        \item Verrà impedito il proseguimento dell'operazione.
+        \item (UC) - Verrà visualizzato il messaggio di errore in caso di email già registrata nella piattaforma.
+        \item Verrà impedita la modifica delle informazioni.
     \end{itemize}
     \item \textbf{Scenario Alternativo 3:} L'acquirente inserisce un'email non valida. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
-        \item Verrà impedito il proseguimento dell'operazione.
+        \item (UC) - Verrà visualizzato un messaggio di errore in caso di email non valida.
+        \item Verrà impedita la modifica delle informazioni.
     \end{itemize}
     \item \textbf{Scenario Alternativo 4:} L'acquirente non inserisce l'email e lascia il campo di inserimento vuoto. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
-        \item Verrà impedito il proseguimento dell'operazione.
+        \item (UC) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito.
+        \item Verrà impedita la modifica delle informazioni.
     \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
@@ -66,8 +67,8 @@ L'acquirente vuole modificare la propria password.
     \item \textbf{Scenario Alternativo 1:} L'acquirente non inserisce alcuna password e lascia il campo di inserimento nuova password vuoto. In questo caso non verrà modificata la password.
     \item \textbf{Scenario Alternativo 2:} L'acquirente inserisce una password troppo debole. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
-        \item Verrà impedito il proseguimento dell'operazione.
+        \item (UC) - Verrà visualizzato il messaggio di errore di password troppo debole.
+        \item Verrà impedita la modifica delle informazioni.
     \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
@@ -89,8 +90,8 @@ L'acquirente vuole modificare la propria password e deve confermare quella nuova
     \item \textbf{Scenario Alternativo 1:} L'acquirente non inserisce alcuna password e lascia il campo di inserimento conferma nuova password vuoto. In questo caso non verrà modificata la password.
     \item \textbf{Scenario Alternativo 2:} L'acquirente inserisce una password di conferma diversa da quella inserita nel campo di inserimento nuova password. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
-        \item Verrà impedito il proseguimento dell'operazione.
+        \item (UC) - Verrà visualizzato il messaggio di errore di password e password di conferma diverse.
+        \item Verrà impedita la modifica delle informazioni.
     \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
@@ -112,5 +113,5 @@ L'acquirente può eliminare il proprio account.
         \item Viene visualizzato un messaggio di conferma dell'operazione.
         \item Se conferma viene eliminato l'account.
     \end{itemize}
-    \item \textbf{Scenario Alternativo:} Se non conferma viene riportato alla propria pagina personale.
+    \item \textbf{Scenario Alternativo:} Se non conferma viene riportato alla propria pagina personale e l'account non viene eliminato.
 \end{itemize}

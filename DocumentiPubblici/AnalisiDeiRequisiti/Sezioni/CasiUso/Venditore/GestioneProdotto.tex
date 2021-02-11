@@ -38,7 +38,7 @@ Il venditore inserisce il nome del prodotto da aggiungere.
     \item \textbf{Scenario Principale:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto ed inserisce il nome del prodotto.
     \item \textbf{Scenario Alternativo:} Il venditore non inserisce il nome del prodotto. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item (UC) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito.
         \item Verrà impedita l'aggiunta del nuovo prodotto.
     \end{itemize}
     \item \textbf{Estensioni:}
@@ -56,7 +56,7 @@ Il venditore inserisce la descrizione del prodotto da aggiungere.
     \item \textbf{Scenario Principale:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto ed inserisce la descrizione del prodotto.
     \item \textbf{Scenario Alternativo:} Il venditore non inserisce la descrizione del prodotto. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item (UC) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito.
         \item Verrà impedita la conferma di aggiunta del prodotto.
     \end{itemize}
     \item \textbf{Estensioni:}
@@ -84,12 +84,12 @@ Il venditore inserisce il prezzo a cui vendere il prodotto da aggiungere.
     \item \textbf{Scenario Principale:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto ed inserisce il prezzo a cui vendere il prodotto.
     \item \textbf{Scenario Alternativo 1:} Il venditore non inserisce il prezzo del prodotto. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item (UC) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito.
         \item Verrà impedita l'aggiunta del nuovo prodotto.
     \end{itemize}
     \item \textbf{Scenario Alternativo 2:} Il venditore inserisce un prezzo minore o uguale a zero. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item (UC) - Verrà visualizzato il messaggio di errore prezzo minore o uguale a zero.
         \item Verrà impedita l'aggiunta del nuovo prodotto.
     \end{itemize}
     \item \textbf{Estensioni:}
@@ -106,8 +106,13 @@ Il venditore inserisce lo sconto percentuale da applicare al prezzo del prodotto
     \item \textbf{Precondizione:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto.
     \item \textbf{Postcondizione:} Il venditore ha inserito lo sconto percentuale da applicare al prezzo del prodotto.
     \item \textbf{Scenario Principale:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto ed inserisce lo sconto percentuale da applicare al prezzo del prodotto. In seguito il prezzo a cui vendere quel prodotto sarà scontato della percentuale applicata.
-    \item \textbf{Scenario Alternativo 1:} Nel caso in cui il venditore non inserica alcunché, allora non verrà applicato alcuno sconto. 
-    \item \textbf{Scenario Alternativo 2:} Il venditore inserisce uno sconto minore di zero. In questo caso:
+    \item \textbf{Scenario Alternativo 1:} Nel caso in cui il venditore non inserisca alcunché, allora non verrà applicato alcuno sconto.
+    \item \textbf{Scenario Alternativo 2:} Il venditore inserisce uno sconto maggiore di 100\%. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà visualizzato il messaggio di errore in caso di sconto maggiore di 100\%.
+        \item Verrà impedita l'aggiunta del nuovo prodotto.
+    \end{itemize}
+    \item \textbf{Scenario Alternativo 3:} Il venditore inserisce uno sconto minore di zero. In questo caso:
     \begin{itemize}
         \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
         \item Verrà impedita l'aggiunta del nuovo prodotto.
@@ -129,12 +134,12 @@ Il venditore inserisce la quantità disponibile attualmente in magazzino del pro
     \item \textbf{Scenario Alternativo 1:} Nel caso in cui il venditore inserisca 0 come disponibilità attuale, allora il prodotto verrà indicato come non disponibile.
     \item \textbf{Scenario Alternativo 2:} Il venditore inserisce una quantità minore o uguale a zero. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item (UC) - Verrà visualizzato il messaggio di errore quantità minore o uguale a zero.
         \item Verrà impedita l'aggiunta del nuovo prodotto.
     \end{itemize}
     \item \textbf{Scenario Alternativo 3:} Il venditore non inserisce la quantità del prodotto. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item (UC) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito.
         \item Verrà impedita l'aggiunta del nuovo prodotto.
     \end{itemize}
     \item \textbf{Estensioni:}
@@ -153,22 +158,22 @@ Il venditore inserisce le foto relative al prodotto da aggiungere.
     \item \textbf{Scenario Principale:} Il venditore si trova nella vista di aggiunta di un nuovo prodotto ed inserisce massimo quattro foto relative al prodotto.
     \item \textbf{Scenario Alternativo 1:} Il venditore non inserisce alcuna foto del prodotto. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item (UC) - Verrà visualizzato il messaggio di errore nessuna foto inserita.
         \item Verrà impedita l'aggiunta del nuovo prodotto.
     \end{itemize}
     \item \textbf{Scenario Alternativo 2:} Il venditore seleziona un file che non è del tipo immagine. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item (UC) - Verrà visualizzato il messaggio di errore il quale segnala che il file selezionato non è del tipo immagine.
         \item Verrà impedita l'aggiunta del nuovo prodotto.
     \end{itemize}
     \item \textbf{Scenario Alternativo 3:} Il venditore cerca di inserire più di quattro foto relative ad un prodotto. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item (UC) - Verrà visualizzato il messaggio di errore il quale segnala il tentativo di aggiunta di più quattro foto relativa ad un prodotto.
         \item Verrà impedita l'aggiunta del nuovo prodotto.
     \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
-        \item (UC) - Visualizzazione messaggio di errore tentivo di aggiunta di più di quattro foto relative ad un prodotto.
+        \item (UC) - Visualizzazione messaggio di errore tentativo di aggiunta di più di quattro foto relative ad un prodotto.
         \item (UC) - Visualizzazione messaggio di errore nel caso in cui il file selezionato non sia del tipo immagine.
         \item (UC) - Visualizzazione messaggio di errore nessuna foto inserita.
     \end{itemize}
@@ -338,7 +343,7 @@ Il venditore inserisce le foto relative al prodotto.
     \item \textbf{Scenario Principale:} Il venditore si trova nella vista di modifica del prodotto una foto relativa al prodotto.
     \item \textbf{Scenario Alternativo 1:} Il venditore tenta di aggiungere una foto in più oltre il massimo di quattro per prodotto. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà visualizzato il messaggio di errore tentivo di aggiunta di più di quattro foto relative ad un prodotto.
+        \item (UC) - Verrà visualizzato il messaggio di errore tentativo di aggiunta di più di quattro foto relative ad un prodotto.
         \item Verrà impedita la conferma delle modifiche al prodotto.
     \end{itemize}
     \item \textbf{Scenario Alternativo 2:} Il venditore seleziona, come foto da aggiungere, un file che non è del tipo immagine. In questo caso:
@@ -348,7 +353,7 @@ Il venditore inserisce le foto relative al prodotto.
     \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
-        \item (UC) - Visualizzazione messaggio di errore tentivo di aggiunta di più di quattro foto relative ad un prodotto.
+        \item (UC) - Visualizzazione messaggio di errore tentativo di aggiunta di più di quattro foto relative ad un prodotto.
         \item (UC) - Visualizzazione messaggio di errore nel caso in cui il file selezionato non sia del tipo immagine.
     \end{itemize}
 \end{itemize}
@@ -358,7 +363,7 @@ Il venditore rimuove le foto relative al prodotto da aggiungere.
 \begin{itemize}
     \item \textbf{Attori Primari:} Venditore.
     \item \textbf{Precondizione:} Il venditore si trova nella vista di modifica del prodotto.
-    \item \textbf{Postcondizione:} Il venditore ha rimmosso le foto relative al prodotto.
+    \item \textbf{Postcondizione:} Il venditore ha rimosso le foto relative al prodotto.
     \item \textbf{Scenario Principale:} Il venditore si trova nella vista di modifica del prodotto e rimuove le foto relative al prodotto attraverso i seguenti passi:
     \begin{itemize}
         \item Seleziona la foto che vuole eliminare.
@@ -427,7 +432,7 @@ Il venditore vuole eliminare un prodotto precedentemente inserito.
     \item \textbf{Scenario Alternativo:} Il venditore seleziona per l'eliminazione, un prodotto che è stato ordinato ma non ancora pagato quindi verrà visualizzato un messaggio di errore e viene negata la possibilità di eliminare il prodotto selezionato.
     \item \textbf{Estensioni:}
     \begin{itemize}
-        \item (UC34) - Visualizzazione avviso in caso di prodotto selezionato per l’eliminazione ma non ancora evaso in alcuni ordini.
+        \item (UC34) - Visualizzazione avviso in caso di prodotto selezionato per l'eliminazione ma non ancora evaso in alcuni ordini.
     \end{itemize}
 \end{itemize}
 
