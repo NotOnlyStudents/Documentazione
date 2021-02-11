@@ -175,8 +175,126 @@ Il seguente grafico a torta riassume i dati ottenuti:
     \caption{Areogramma della ripartizione di ore per ruolo in progettazione architetturale}
     \label{fig:Areogramma ripartizione ore, periodo di Progettazione Architetturale}
 \end{figure}
-\newpage
 
+\subsubsection{Specifica dei prospetti}
+Per un maggiore controllo sul periodo di progettazione architetturale, vengono di seguito riportati i prospetti orari ed economici suddivisi per le attività individuate nella sezione \S\ref{progettazione_architetturale}.
+\paragraph{Incremento e verifica documenti}
+\paragraph*{Prospetto orario}
+La distribuzione oraria è la seguente:
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{ |c c c c c c c c| }
+			\rowcolor{darkblue} 
+			\textcolor{white}{\textbf{Nominativo}} & \textcolor{white}{\textbf{Re}} & \textcolor{white}{\textbf{Am}} & \textcolor{white}{\textbf{An}} & \textcolor{white}{\textbf{Pt}} & \textcolor{white}{\textbf{Pr}} & \textcolor{white}{\textbf{Ve}} & \textcolor{white}{\textbf{Ore Complessive}} \\ \hline
+			\BL 	& -  	& -  	& 5 	& - 	& - 	& 4 	& 9 \\ \hline
+			\FF 	& 3  	& -  	& - 	& - 	& - 	& 6  	& 9 \\ \hline
+			\MM 	& -  	& 2  	& 6 	& -	& - 	& 1  	& 9 \\ \hline
+			\PC 	& - 	& -  	& 6 	& - 	& - 	& 3 	& 9 \\ \hline
+			\TG 	& -  	& 2 	& 6 	& - 	& - 	& 1 	& 9 \\ \hline
+			\TL 	& 2  	& 4 	& - 	& - 	& - 	& 3 	& 9 \\ \hline
+			\VD 	& 4  	& 5  	& - 	& - 	& - 	& -  	& 9 \\ \hline
+			\textbf{Ore totali} & \textbf{9} & \textbf{13} & \textbf{23} & \textbf{0} & \textbf{0} & \textbf{18} & \textbf{63} \\ \hline
+		\end{tabular}
+		\caption{Distribuzione delle ore}
+	\end{center}
+\end{table}
+\paragraph*{Prospetto economico}
+Il costo per ogni ruolo è il seguente:
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{ |c c c| }
+			\rowcolor{darkblue} 
+			\textcolor{white}{\textbf{Ruolo}} & \textcolor{white}{\textbf{Ore}} & \textcolor{white}{\textbf{Costo in €}}\\ \hline
+			{\Responsabile} 			& 9 & 270 \\ \hline
+			{\Amministratore} 			& 13 & 260 \\ \hline
+			\textit{Analista} 			& 23 & 575 \\ \hline
+			\textit{Progettista} 		& - & - \\ \hline
+			\textit{Programmatore}  	& - & - \\ \hline
+			\textit{Verificatore} 		& 18 & 270 \\ \hline
+			\textbf{Totale} & \textbf{63} & \textbf{1375} \\ \hline
+		\end{tabular}
+		\caption{Prospetto dei costi per ruoli}
+	\end{center}
+\end{table}
+
+\paragraph{\glo{TB} e \glo{PoC}- Incremento 1}
+\paragraph*{Prospetto orario}
+La distribuzione oraria è la seguente:
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{ |c c c c c c c c| }
+			\rowcolor{darkblue} 
+			\textcolor{white}{\textbf{Nominativo}} & \textcolor{white}{\textbf{Re}} & \textcolor{white}{\textbf{Am}} & \textcolor{white}{\textbf{An}} & \textcolor{white}{\textbf{Pt}} & \textcolor{white}{\textbf{Pr}} & \textcolor{white}{\textbf{Ve}} & \textcolor{white}{\textbf{Ore Complessive}} \\ \hline
+			\BL 	& -  	& -  	& 2 	& 9 	& - 	& - 	& 11 \\ \hline
+			\FF 	& -  	& -  	& - 	& 8 	& 3 	& -  	& 11 \\ \hline
+			\MM 	& -  	& 1  	& 2 	& 4 	& 3 	& 1  	& 11 \\ \hline
+			\PC 	& - 	& -  	& 2 	& - 	& 3 	& 6 	& 11 \\ \hline
+			\TG 	& -  	& - 	& 4 	& 5 	& - 	& 2 	& 11 \\ \hline
+			\TL 	& 2  	& 2 	& - 	& - 	& 3 	& 4 	& 11 \\ \hline
+			\VD 	& 3  	& 2  	& - 	& 6 	& - 	& -  	& 11 \\ \hline
+			\textbf{Ore totali} & \textbf{5} & \textbf{5} & \textbf{10} & \textbf{32} & \textbf{12} & \textbf{13} & \textbf{77} \\ \hline
+		\end{tabular}
+		\caption{Distribuzione delle ore }
+	\end{center}
+\end{table}
+\paragraph*{Prospetto economico}
+Il costo per ogni ruolo è il seguente:
+ \begin{table}[H]
+ 	\begin{center}
+ 		\begin{tabular}{ |c c c| }
+ 			\rowcolor{darkblue} 
+ 			\textcolor{white}{\textbf{Ruolo}} & \textcolor{white}{\textbf{Ore}} & \textcolor{white}{\textbf{Costo in €}}\\ \hline
+ 			{\Responsabile} 			& 5 & 150 \\ \hline
+ 			{\Amministratore} 			& 5 & 100 \\ \hline
+ 			\textit{Analista} 			& 10 & 250 \\ \hline
+ 			\textit{Progettista} 		& 32 & 704\\ \hline
+ 			\textit{Programmatore}  	& 12 & 180 \\ \hline
+ 			\textit{Verificatore} 		& 13 & 195 \\ \hline
+ 			\textbf{Totale} & \textbf{77} & \textbf{1579} \\ \hline
+ 		\end{tabular}
+ 		\caption{Prospetto dei costi per ruoli}
+ 	\end{center}
+ \end{table}
+\paragraph{TB e PoC - Incremento 2}
+\paragraph*{Prospetto orario}
+In questo periodo la distribuzione oraria è la seguente:
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{ |c c c c c c c c| }
+			\rowcolor{darkblue} 
+			\textcolor{white}{\textbf{Nominativo}} & \textcolor{white}{\textbf{Re}} & \textcolor{white}{\textbf{Am}} & \textcolor{white}{\textbf{An}} & \textcolor{white}{\textbf{Pt}} & \textcolor{white}{\textbf{Pr}} & \textcolor{white}{\textbf{Ve}} & \textcolor{white}{\textbf{Ore Complessive}} \\ \hline
+			\BL 	& -  	& -  	& 1 	& 3 	& 3 	& 3	& 10 \\ \hline
+			\FF 	& -  	& -  	& - 	& 8 	& 2 	& -  	& 10 \\ \hline
+			\MM 	& -  	& -  	& 2 	& 4	& 2 	& 2  	& 10 \\ \hline
+			\PC 	& - 	& -  	& 2 	& - 	& 1 	& 7 	& 10 \\ \hline
+			\TG 	& -  	& 1 	& - 	& 8	& - 	& 1 	& 10 \\ \hline
+			\TL 	& 1  	& - 	& - 	& - 	& 1 	& 8 	& 10 \\ \hline
+			\VD 	& 3  	& 1  	& - 	& 6 	& - 	& -  	& 10 \\ \hline
+			\textbf{Ore totali} & \textbf{4} & \textbf{2} & \textbf{5} & \textbf{29} & \textbf{9} & \textbf{21} & \textbf{70} \\ \hline
+		\end{tabular}
+		\caption{Distribuzione delle ore}
+	\end{center}
+\end{table}
+\paragraph*{Prospetto economico}
+Il costo per ogni ruolo è il seguente:
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{ |c c c| }
+			\rowcolor{darkblue} 
+			\textcolor{white}{\textbf{Ruolo}} & \textcolor{white}{\textbf{Ore}} & \textcolor{white}{\textbf{Costo in €}}\\ \hline
+			{\Responsabile} 			& 4 & 120 \\ \hline
+			{\Amministratore} 			& 2 & 40 \\ \hline
+			\textit{Analista} 			& 5 & 125 \\ \hline
+			\textit{Progettista} 		& 29 & 638\\ \hline
+			\textit{Programmatore}  	& 9 & 135 \\ \hline
+			\textit{Verificatore} 		& 21 & 315 \\ \hline
+			\textbf{Totale} & \textbf{70} & \textbf{1373} \\ \hline
+		\end{tabular}
+		\caption{Prospetto dei costi per ruoli}
+	\end{center}
+\end{table}
+
+\newpage
 \subsection{Periodo di progettazione di dettaglio e codifica}
 \subsubsection{Prospetto orario}
 In questo periodo la distribuzione oraria è la seguente:
