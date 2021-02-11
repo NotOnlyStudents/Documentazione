@@ -191,17 +191,6 @@ Il venditore decide se il prodotto è da inserire tra quelli in evidenza da visu
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\UC{Aggiunta o rimozione prodotto nella sezione dei prodotti in evidenza}
-Il venditore aggiunge o rimuove un prodotto nella sezione dei prodotti in evidenza presente nella home.
-\begin{itemize}
-    \item \textbf{Attori Primari:} Venditore.
-    \item \textbf{Precondizione:} Il venditore si trova nella pagina di aggiunta o modifica di un prodotto e ha premuto sull'azione di aggiunta o rimozione del prodotto nella sezione dei prodotti in evidenza.
-    \item \textbf{Postcondizione:} Il prodotto viene aggiunto o rimosso, in base al suo stato attuale, nella sezione sezione dei prodotti in evidenza. 
-    \item \textbf{Scenario Principale:} Il venditore vuole aggiungere o rimuovere un prodotto nella sezione dei prodotti in evidenza presente nella home e clicca sulla rispettiva azione.
-\end{itemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \UC{Modifica informazioni del prodotto}
 % \begin{figure}[H]
 %     \centering
@@ -295,7 +284,7 @@ Il venditore modifica il prezzo a cui vendere il prodotto.
     \item \textbf{Precondizione:} Il venditore si trova nella vista di modifica del prodotto.
     \item \textbf{Postcondizione:} Il venditore ha modificato il prezzo a cui vendere il prodotto.
     \item \textbf{Scenario Principale:} Il venditore si trova nella vista di modifica del prodotto e modifica il prezzo a cui vendere il prodotto attraverso i seguenti passi:
-    \begin{itemize}
+    \begin{itemize} 
         \item Si posiziona nel campo di inserimento del prezzo del prodotto dove è presente quello attualmente utilizzato.
         \item Lo modifica.
     \end{itemize}
@@ -389,6 +378,34 @@ Il venditore rimuove le foto relative al prodotto da aggiungere.
     \item \textbf{Estensioni:}
     \begin{itemize}
         \item (UC) - Visualizzazione messaggio di errore campo dati obbligatorio non inserito.
+    \end{itemize}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\UC{Aggiunta prodotto alla sezione dei prodotti in evidenza}
+Il venditore aggiunge un prodotto alla sezione dei prodotti in evidenza presente nella vista principale.
+\begin{itemize}
+    \item \textbf{Attori primari:} venditore;
+    \item \textbf{Precondizione:} il venditore si trova nella PDP del prodotto ed il prodotto non è stato aggiunto alla sezione dei prodotti in evidenza;
+    \item \textbf{Postcondizione:} il prodotto viene aggiunto alla sezione dei prodotti in evidenza;
+    \item \textbf{Scenario principale:} il venditore vuole aggiungere un prodotto alla sezione dei prodotti in evidenza, per farlo dovrà compiere i seguenti passi:
+    \begin{itemize}
+        \item Posizionarsi nella PDP del prodotto;
+        \item Svolgere l'operazione che lo segnerà come in evidenza.
+    \end{itemize}
+\end{itemize}
+
+\UC{Rimozione prodotto dalla sezione dei prodotti in evidenza}
+Il venditore rimuove un prodotto dalla sezione dei prodotti in evidenza presente nella vista principale.
+\begin{itemize}
+    \item \textbf{Attori primari:} venditore;
+    \item \textbf{Precondizione:} il venditore si trova nella PDP del prodotto ed il prodotto è stato aggiunto alla sezione dei prodotti in evidenza;
+    \item \textbf{Postcondizione:} il prodotto viene rimosso dalla sezione dei prodotti in evidenza; 
+    \item \textbf{Scenario principale:} il venditore vuole rimuovere un prodotto dalla sezione dei prodotti in evidenza, per farlo dovrà compiere i seguenti passi:
+    \begin{itemize}
+        \item Posizionarsi nella PDP del prodotto;
+        \item Svolgere l'operazione che lo segnerà come non in evidenza.
     \end{itemize}
 \end{itemize}
 
