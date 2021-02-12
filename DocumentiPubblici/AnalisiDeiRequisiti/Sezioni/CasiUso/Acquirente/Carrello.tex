@@ -50,51 +50,6 @@ L'acquirente o l'utente non autenticato può eliminare un prodotto che ha inseri
     \end{itemize}
 \end{itemize}
 
-%% AGGIUNTA DI FILIPPO E LEONARDO v
-\UC{Aggiunta del prodotto al carrello}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{Immagini/DiagrammiUC/UC11AggiuntaProdottoAlCarrello.png}
-    \caption{Diagramma di \actualUC: Aggiunta del prodotto al carrello} 
-    \label{fig:Checkout}
-\end{figure}
-
-
-L'utente non autenticato o l'acquirente può aggiungere al carrello i prodotti.
-\begin{itemize}
-    \item \textbf{Attori Primari:} Acquirente; Utente non autenticato
-    \item \textbf{Precondizione:} L'attore richiede di aggiungere una certa quantità del prodotto al carrello. 
-    \item \textbf{Postcondizione:} L'attore ha aggiunto la quantità desiderata di prodotto al carrello.
-    \item \textbf{Scenario Principale:} 
-    \begin{itemize}
-        \item (UC12) - Specifica la quantità di prodotto che desidera.
-        \item L'attore aggiunge il prodotto al carrello.
-        \item Il suo carrello personale viene aggiornato con il nuovo prodotto nella quantità indicata.
-    \end{itemize}
-    \item \textbf{Estensioni}:
-    \begin{itemize}
-        \item (UC31) - Visualizzazione messaggio di errore prodotto non disponibile.
-    \end{itemize}
-\end{itemize}
-
-\UC{Modifica della quantità del prodotto}
-L'acquirente o utente non autenticato modifica la quantità del prodotto che vuole nel carrello.
-\begin{itemize}
-    \item \textbf{Attori Primari:} Acquirente; Utente non autenticato.
-    \item \textbf{Precondizione:} L'attore ha un prodotto che vuole nel carrello e desidera modificare la sua quantità.
-    \item \textbf{Postcondizione:} La nuova quantità di prodotto da inserire nel carrello è aggiornata.
-    \item \textbf{Scenario Principale:}
-        \begin{itemize}
-            \item L'attore chiede di modificare la quantità specificata di un certo prodotto.
-            \item L'attore aumenta o diminuisce la quantità tra 1 e la disponibilità massima di prodotto.
-            \item La nuova quantità di prodotto sarà quella fornita.
-        \end{itemize}
-    \item \textbf{Estensioni}:
-    \begin{itemize}
-        \item (UC32) - Visualizzazione messaggio di errore prodotto non disponibile.
-    \end{itemize}
-\end{itemize}
-
 %% AGGIUNTA DI FILIPPO E LEONARDO ^
 
 % 6. Checkout. The page where the user can:
