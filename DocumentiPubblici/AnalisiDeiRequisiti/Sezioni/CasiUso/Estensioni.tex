@@ -79,7 +79,7 @@ L'utente autenticato o non autenticato richiede un prodotto o la quantità di pr
 \end{itemize}
 
 % Estensioni info personali
-\UC{Visualizzazione messaggio di errore in caso che il file non sia del tipo immagine}
+\UC{Visualizzazione messaggio di errore nel caso in cui il file selezionato non sia del tipo immagine}
 Visualizzazione messaggio di errore che segnala al venditore che il file non è di tipo immagine.
 \begin{itemize}
     \item \textbf{Attori Primari:} Venditore.
@@ -88,15 +88,72 @@ Visualizzazione messaggio di errore che segnala al venditore che il file non è 
     \item \textbf{Scenario Principale:} Visualizzazione messaggio di errore che segnala che il file non è del tipo corretto e ne blocca il caricamento.
 \end{itemize}
 
-% Estensioni dashboard
-\UC{Visualizzazione messaggio di errore in caso di quantità minore o uguale a zero}
-Visualizzazione messaggio di errore che segnala all'utente autenticato o non autenticato che la quantità di prodotto inserita è minore o uguale a zero.
+% Estensioni prodotto
+\UC{Visualizzazione messaggio di errore in caso di prezzo minore o uguale a zero}
+Visualizzazione messaggio di errore il quale segnala al venditore che il prezzo del prodotto inserito è minore o uguale a zero.
 \begin{itemize}
-    \item \textbf{Attori Primari:} Utente autenticato; Utente non autenticato.
-    \item \textbf{Precondizione:} L'utente autenticato o non autenticato inserisce una quantità minore o uguale a zero.
-    \item \textbf{Postcondizione:} All'utente autenticato o non autenticato viene impedito l'operazione e viene segnalata la causa.
-    \item \textbf{Scenario Principale:} Visualizzazione messaggio di errore che segnala che la quantità inserita è minore o uguale a zero e blocca l'operazione che stava eseguendo.
+    \item \textbf{Attori Primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore inserisce un prezzo minore o uguale a zero.
+    \item \textbf{Postcondizione:} Al venditore viene impedita l'operazione e viene segnalata la causa.
+    \item \textbf{Scenario Principale:} Visualizzazione messaggio di errore il quale segnala che il prezzo inserito è minore o uguale a zero e blocca l'operazione che stava eseguendo.
 \end{itemize}
+
+\UC{Visualizzazione messaggio di errore in caso di quantità minore o uguale a zero}
+Visualizzazione messaggio di errore che segnala al venditore che la quantità di prodotto inserita è minore o uguale a zero.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore inserisce una quantità minore o uguale a zero.
+    \item \textbf{Postcondizione:} Al venditore viene impedita l'operazione e viene segnalata la causa.
+    \item \textbf{Scenario Principale:} Visualizzazione messaggio di errore il quale segnala che la quantità inserita è minore o uguale a zero e blocca l'operazione che stava eseguendo.
+\end{itemize}
+
+\UC{Visualizzazione messaggio di errore in caso di sconto minore di zero}
+Visualizzazione messaggio di errore il quale segnala al venditore che lo sconto inserito è minore di zero.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore inserisce uno sconto minore di zero.
+    \item \textbf{Postcondizione:} Al venditore viene impedita l'operazione e viene segnalata la causa.
+    \item \textbf{Scenario Principale:} Visualizzazione messaggio di errore il quale segnala che lo sconto inserito è minore di zero e blocca l'operazione che stava eseguendo.
+\end{itemize}
+
+\UC{Visualizzazione messaggio di errore in caso di sconto maggiore di 100\%}
+Visualizzazione messaggio di errore il quale segnala al venditore che lo sconto inserito è maggiore di 100\%.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore inserisce uno sconto maggiore di 100\%.
+    \item \textbf{Postcondizione:} Al venditore viene impedita l'operazione e viene segnalata la causa.
+    \item \textbf{Scenario Principale:} Visualizzazione messaggio di errore il quale segnala che lo sconto inserito è maggiore di 100\% e blocca l'operazione che stava eseguendo.
+\end{itemize}
+
+\UC{Visualizzazione messaggio di errore tentivo di aggiunta di più di quattro foto relative ad un prodotto}
+Visualizzazione messaggio di errore il quale segnala al venditore il tentativo di aggiunta di una nuova foto relativa ad un prodotto, quando si è raggiunto il limite massimo di quattro.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore aggiunge una nuova foto relativa ad un prodotto, anche quando si è già raggiunto il limite massimo di quattro.
+    \item \textbf{Postcondizione:} Al venditore viene impedita l'operazione e viene segnalata la causa.
+    \item \textbf{Scenario Principale:} Visualizzazione messaggio di errore il quale segnala al venditore il tentativo di aggiunta di una nuova foto relativa ad un prodotto, quando si è già raggiunto il limite massimo di quattro, e blocca l'operazione che stava eseguendo.
+\end{itemize}
+
+\UC{Visualizzazione messaggio di errore nessuna foto inserita}
+Visualizzazione messaggio di errore il quale segnala al venditore che non è stata inserita alcuna foto relativa al prodotto.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore non inserisce alcuna foto relativa al prodotto.
+    \item \textbf{Postcondizione:} Al venditore viene impedita l'operazione e viene segnalata la causa.
+    \item \textbf{Scenario Principale:} Visualizzazione messaggio di errore il quale segnala al venditore l'obbligatorietà di inserimento di almeno una foto relativa al prodotto e blocca l'operazione che stava eseguendo.
+\end{itemize}
+
+% Estensioni Categoria
+\UC{Visualizzazione messaggio nome per la categoria già utilizzato}
+Visualizzazione messaggio di errore il quale segnala al venditore che sta cercando di assegnare ad una categoria un nome già utilizzato da un'altra.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore vuole assegnare ad una categoria un nome già utilizzato da un'altra categoria.
+    \item \textbf{Postcondizione:} Al venditore viene impedita l'operazione e viene segnalata la causa.
+    \item \textbf{Scenario Principale:} Visualizzazione messaggio di errore il quale segnala al venditore l'impossibilità di assegnare ad una categoria un nome già utilizzato e blocca l'operazione che stava eseguendo.
+\end{itemize}
+
+% Estensioni dashboard
 
 \UC{Visualizzazione messaggio di ricerca o filtraggio senza alcun risultato}
 Nel caso in cui la ricerca o il filtraggio non dia risultati verrà visualizzato un opportuno messaggio.
