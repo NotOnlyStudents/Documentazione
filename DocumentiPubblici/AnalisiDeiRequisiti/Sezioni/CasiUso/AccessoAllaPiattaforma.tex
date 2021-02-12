@@ -9,12 +9,12 @@
 L'utente non autenticato che non dispone di credenziali può registrarsi e accedere come acquirente nella piattaforma usando l'email e la password.
 \begin{itemize}
     \item \textbf{Attori primari:} utente non autenticato;
-    \item \textbf{Precondizione:} l'utente non è ancora presente nella piattaforma e si trova nella \glo{vista} di registrazione;
+    \item \textbf{Precondizione:} l'utente non è ancora presente nella piattaforma e si trova nella schermata di registrazione;
     \item \textbf{Postcondizione:} l'utente è registrato con un account acquirente ed è autenticato come tale sulla piattaforma;
     \item \textbf{Scenario principale:} l'utente crea un account compilando tutti i campi del modulo di registrazione nel seguente modo:
     \begin{itemize}
-    	\item Inserimento nome;
-    	\item Inserimento cognome;
+    	\item (UC) - Inserimento nome;
+    	\item (UC) - Inserimento cognome;
         \item (UC) - Inserimento indirizzo e-mail per la registrazione;
         \item (UC) - Inserimento password per la registrazione;
         \item Inserimento conferma password;
@@ -23,17 +23,12 @@ L'utente non autenticato che non dispone di credenziali può registrarsi e acced
     \end{itemize}
 	\item \textbf{Scenario alternativo:} l'utente inserisce un indirizzo email già presente nella piattaforma
 	\begin{itemize}
-		\item (UC Estensione) - Viene mostrato un messaggio d'errore;
-		\item L'utente non può procedere all'autenticazione.
-	\end{itemize}
-	\item \textbf{Scenario alternativo:} l'utente non inserisce una o più informazioni obbligatorie
-	\begin{itemize}
-		\item (UC Estensione) - Viene mostrato un messaggio d'errore;
+		\item (UC Estensione) - Viene mostrato un messaggio d'errore apposito;
 		\item L'utente non può procedere all'autenticazione.
 	\end{itemize}
 	\item \textbf{Scenario alternativo:} l'utente compila i campi dati per la password e la conferma della stessa con due password diverse
 	\begin{itemize}
-		\item (UC Estensione) - Viene mostrato un messaggio d'errore;
+		\item (UC Estensione) - Viene mostrato un messaggio d'errore apposito;
 		\item L'utente non può procedere all'autenticazione.
 	\end{itemize}
 	%\item \textbf{Scenario alternativo:} l'utente prova ad eseguire l'operazione di registrazione senza aver compilato alcun campo dati del modulo per eseguire la registrazione;
@@ -46,8 +41,44 @@ L'utente non autenticato che non dispone di credenziali può registrarsi e acced
     \end{itemize}
 	\item \textbf{Inclusioni:}
 	\begin{itemize}
+		\item (UC) - Inserimento del nome per la registrazione;
+		\item (UC) - Inserimento del cognome per la registrazione; 
 		\item (UC) - Inserimento indirizzo email per la registrazione;
 		\item (UC) - Inserimento password per la registrazione.
+	\end{itemize}
+\end{itemize}
+
+\subUC{Inserimento del nome per la registrazione}
+\begin{itemize}
+	\item \textbf{Attori primari:} utente non autenticato;
+	\item \textbf{Precondizione:} l'utente non è autenticato;
+	\item \textbf{Postcondizione:} l'utente ha inserito il proprio nome;
+	\item \textbf{Scenario principale:} l'utente non autenticato inserisce il proprio nome per la registrazione;
+	\item \textbf{Scenario alternativo:} l'utente non inserisce il cognome, in questo caso:
+	\begin{itemize}
+		\item (UC Estensione) - Viene mostrato un messaggio d'errore apposito;
+		\item L'utente non può procedere con la registrazione.
+	\end{itemize}
+	\item \textbf{Estensioni:}
+	\begin{itemize}
+		\item (UC) - Visualizzazione messaggio campo dati obbligatorio non inserito.
+	\end{itemize}
+\end{itemize}
+
+\subUC{Inserimento del cognome per la registrazione}
+\begin{itemize}
+	\item \textbf{Attori primari:} utente non autenticato;
+	\item \textbf{Precondizione:} l'utente non è autenticato;
+	\item \textbf{Postcondizione:} l'utente ha inserito il proprio cognome;
+	\item \textbf{Scenario principale:} l'utente non autenticato inserisce il proprio cognome per la registrazione;
+	\item \textbf{Scenario alternativo:} l'utente non inserisce il cognome, in questo caso:
+	\begin{itemize}
+		\item (UC Estensione) - Viene mostrato un messaggio d'errore apposito;
+		\item L'utente non può procedere con la registrazione.
+	\end{itemize}
+	\item \textbf{Estensioni:}
+	\begin{itemize}
+		\item (UC) - Visualizzazione messaggio campo dati obbligatorio non inserito.
 	\end{itemize}
 \end{itemize}
 
@@ -55,12 +86,22 @@ L'utente non autenticato che non dispone di credenziali può registrarsi e acced
 L'utente non autenticato inserisce l'indirizzo email.
 \begin{itemize}
 	\item \textbf{Attori primari:} utente non autenticato;
-	\item \textbf{Precondizione:} l'attore non ha ancora fornito un'email e ha a disposizione un campo dati dove inserirla;
+	\item \textbf{Precondizione:} l'utente non autenticato non ha ancora fornito un'email ed ha a disposizione un campo dati dove inserirla;
 	\item \textbf{Postcondizione:} l'utente non autenticato ha fornito un indirizzo email valido;
 	\item \textbf{Scenario principale:} l'utente non autenticato inserisce il proprio indirizzo email per procedere con la registrazione;
-	\item \textbf{Scenario alternativo:} l'utente non autenticato ha inserito un indirizzo email con un formato non corretto;
+	\item \textbf{Scenario alternativo:} l'utente non inserisce l'email:
+	\begin{itemize}
+		\item (UC Estensione) - Viene mostrato un messaggio d'errore apposito;
+		\item L'utente non può procedere con la registrazione.
+	\end{itemize}
+	\item \textbf{Scenario alternativo:} l'utente non autenticato ha inserito un indirizzo email con un formato non corretto, in questo caso
+	\begin{itemize}
+		\item (UC Estensione) - Viene mostrato un messaggio d'errore apposito;
+		\item L'utente non può procedere con la registrazione.
+	\end{itemize}
 	\item \textbf{Estensione:}
 	\begin{itemize}
+		\item (UC) - Visualizzazione messaggio campo dati obbligatorio non inserito;
 		\item (UC) - Visualizzazione messaggio di errore in caso di email non valida.
 	\end{itemize}
 \end{itemize}
@@ -69,12 +110,22 @@ L'utente non autenticato inserisce l'indirizzo email.
 L'utente non autenticato inserisce una password.
 \begin{itemize}
 	\item \textbf{Attori primari:} utente non autenticato;
-	\item \textbf{Precondizione:} l'attore non ha ancora fornito una password valida e ha a disposizione un campo dati dove inserirla;
+	\item \textbf{Precondizione:} l'utente non autenticato non ha ancora fornito una password che rispetta i requisiti di complessità ed ha a disposizione un campo dati dove inserirla;
 	\item \textbf{Postcondizione:} l'utente ha inserito una password valida.
 	\item \textbf{Scenario principale:} l'utente non autenticato inserisce una password che rispetti le condizioni imposte per procedere con la registrazione;
-	\item \textbf{Scenario alternativo:} l'utente non autenticato ha inserito una password con un formato non corretto;
+	\item \textbf{Scenario alternativo:} l'utente non inserisce la password:
+	\begin{itemize}
+		\item (UC Estensione) - Viene mostrato un messaggio d'errore apposito;
+		\item L'utente non può procedere con la registrazione.
+	\end{itemize}
+	\item \textbf{Scenario alternativo:} l'utente non autenticato ha inserito una password con un formato non corretto, in	questo caso:
+	\begin{itemize}
+		\item (UC) - Viene mostrato un messaggio d'errore apposito;
+		\item L'utente non procede con la registrazione.
+	\end{itemize}
 	\item \textbf{Estensione:}
 	\begin{itemize}
+		\item (UC) - Visualizzazione messaggio campo dati obbligatorio non inserito;
 		\item (UC) - Visualizzazione messaggio di errore in caso di password troppo debole.
 	\end{itemize}
 \end{itemize}
@@ -90,7 +141,7 @@ L'utente non autenticato inserisce una password.
 L'utente non autenticato che dispone di credenziali venditore può accedere nella piattaforma usando l'email e la password.
 \begin{itemize}
     \item \textbf{Attori primari:} utente non autenticato;
-    \item \textbf{Precondizione:} l'utente dispone di credenziali venditore e si trova nella vista di login;
+    \item \textbf{Precondizione:} l'utente dispone di credenziali venditore e si trova nella schermata di login;
     \item \textbf{Postcondizione:} l'utente è autenticato come venditore e si trova sulla \glo{dashboard};
     \item \textbf{Scenario principale:} l'utente accede alla piattaforma con delle credenziali in questo modo:
     \begin{itemize}
@@ -109,7 +160,7 @@ L'utente non autenticato che dispone di credenziali venditore può accedere nell
 	Ma le credenziali fornite non appartengono alla piattaforma, quindi:
 	\begin{itemize}
 		\item (UC Estensione) - Viene visualizzato un messaggio di errore apposito;
-		\item L'utente rimane non autenticato e alla pagina di login.
+		\item L'utente rimane non autenticato e alla schermata di login.
 	\end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
@@ -126,7 +177,7 @@ L'utente non autenticato che dispone di credenziali venditore può accedere nell
 \subUC{Inserimento indirizzo email per l'autenticazione}
 \begin{itemize}
 	\item \textbf{Attori primari:} utente non autenticato;
-	\item \textbf{Precondizione:} l'utente non è autenticato;
+	\item \textbf{Precondizione:} l'utente dispone di credenziali venditore e si trova nella schermata di login;
 	\item \textbf{Postcondizione:} l'utente ha inserito il proprio indirizzo email;
 	\item \textbf{Scenario principale:} l'utente non autenticato inserisce l'indirizzo email per l'autenticazione.
 	\item \textbf{Scenario alternativo:} l'utente non inserisce l'email:
@@ -143,7 +194,7 @@ L'utente non autenticato che dispone di credenziali venditore può accedere nell
 \subUC{Inserimento password per l'autenticazione}
 \begin{itemize}
 	\item \textbf{Attori primari:} utente non autenticato;
-	\item \textbf{Precondizione:} l'utente non è autenticato;
+	\item \textbf{Precondizione:} l'utente dispone di credenziali venditore e si trova nella schermata di login;
 	\item \textbf{Postcondizione:} l'utente ha inserito la propria password;
 	\item \textbf{Scenario principale:} l'utente non autenticato inserisce la password per l'autenticazione;
 	\item \textbf{Scenario alternativo:} l'utente non inserisce la password:
@@ -168,15 +219,15 @@ L'utente non autenticato che dispone di credenziali venditore può accedere nell
 L'utente non autenticato che dispone di credenziali acquirente può accedere nella piattaforma usando l'email e la password.
 \begin{itemize}
 	\item \textbf{Attori primari:} utente non autenticato;
-	\item \textbf{Precondizione:} l'utente dispone di credenziali acquirente e si trova nella vista di login;
-	\item \textbf{Postcondizione:} l'utente è autenticato come acquirente e si trova nella vista principale;
+	\item \textbf{Precondizione:} l'utente dispone di credenziali acquirente e si trova nella schermata di login;
+	\item \textbf{Postcondizione:} l'utente è autenticato come acquirente e si trova nella schermata principale;
 	\item \textbf{Scenario principale:} l'utente accede alla piattaforma con delle credenziali in questo modo:
 	\begin{itemize}
 		\item (UC) - Inserimento indirizzo email venditore;
 		\item (UC) - Inserimento password;
 		\item Richiede l'autenticazione;
 		\item L'utente è autenticato come acquirente;
-		\item L'utente viene portato alla vista principale.
+		\item L'utente viene portato alla schermata principale.
 	\end{itemize}
 	\item \textbf{Scenario alternativo:} l'utente compila i campi dati con delle credenziali
 	\begin{itemize}
@@ -187,7 +238,7 @@ L'utente non autenticato che dispone di credenziali acquirente può accedere nel
 	Ma le credenziali fornite non appartengono alla piattaforma, quindi:
 	\begin{itemize}
 		\item (UC Estensione) - Viene visualizzato un messaggio di errore apposito;
-		\item L'utente rimane non autenticato e alla pagina di login.
+		\item L'utente rimane non autenticato e alla schermata di login.
 	\end{itemize}
 	\item \textbf{Estensioni:}
 	\begin{itemize}
@@ -211,13 +262,13 @@ L'utente non autenticato che dispone di credenziali acquirente può accedere nel
 L'utente che dispone di credenziali si è dimenticato la propria password e la vuole cambiare.
 \begin{itemize}
     \item \textbf{Attori primari:} utente non autenticato;
-    \item \textbf{Precondizione:} l'utente non autenticato che dispone di credenziali si trova nella vista per cambiare la password;
+    \item \textbf{Precondizione:} l'utente non autenticato che dispone di credenziali si trova nella schermata per cambiare la password;
     \item \textbf{Postcondizione:} l'utente è autenticato e ha cambiato la password con cui poter effettuare l'accesso alla piattaforma;
     \item \textbf{Scenario principale:} l'utente che dispone di credenziali si è dimenticato la propria password e per cambiarla deve compiere i seguenti passi:
     \begin{itemize}
         \item (UC) - Inserimento indirizzo email;
         \item Invio link per il cambio della password all'indirizzo email indicato;
-        \item Apertura della vista per il cambio della password;
+        \item Apertura della schermata per il cambio della password;
         \item (UC) - Inserimento nuova password;
         \item Inserimento conferma nuova password;
         \item L'utente è autenticato e ha cambiato la password.
@@ -229,20 +280,20 @@ L'utente che dispone di credenziali si è dimenticato la propria password e la v
 	Ma l'indirizzo email non appartiene alla piattaforma, quindi:
 	\begin{itemize}
 		\item (UC Estensione) - Viene visualizzato un messaggio di errore apposito;
-		\item L'utente rimane non autenticato e alla vista di login.
+		\item L'utente rimane non autenticato e alla schermata di login.
 	\end{itemize}
 	\item \textbf{Scenario alternativo:} l'utente compila i campi dati
 	\begin{itemize}
 		\item (UC) - Inserimento indirizzo email;
 		\item Invio link per il cambio della password all'indirizzo email indicato;
-		\item Apertura della vista per il cambio della password;
+		\item Apertura della schermata per il cambio della password;
 		\item (UC Estensione) - Inserimento nuova password;
 		\item Inserimento conferma nuova password;
 	\end{itemize}
-	Ma la password inserita non è valida, quindi:
+	Ma la password inserita non rispetta i requisiti di complessità, quindi:
 	\begin{itemize}
 		\item (UC Estensione) - Viene visualizzato un messaggio di errore apposito;
-		\item L'utente rimane non autenticato e alla vista di login. 
+		\item L'utente rimane non autenticato e alla schermata di login. 
 	\end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
