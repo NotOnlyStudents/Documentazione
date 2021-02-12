@@ -23,12 +23,12 @@ L'utente non autenticato che non dispone di credenziali può registrarsi e acced
     \end{itemize}
 	\item \textbf{Scenario alternativo:} l'utente inserisce un indirizzo email già presente nella piattaforma
 	\begin{itemize}
-		\item (UC Estensione) - Viene mostrato un messaggio d'errore apposito;
+		\item (UC Estensione) - Viene mostrato un messaggio d'errore indirizzo email già registrato nella piattaforma;
 		\item L'utente non può procedere all'autenticazione.
 	\end{itemize}
 	\item \textbf{Scenario alternativo:} l'utente compila i campi dati per la password e la conferma della stessa con due password diverse
 	\begin{itemize}
-		\item (UC Estensione) - Viene mostrato un messaggio d'errore apposito;
+		\item (UC Estensione) - Viene mostrato un messaggio d'errore campi dati password e conferma password diversi;
 		\item L'utente non può procedere all'autenticazione.
 	\end{itemize}
 	%\item \textbf{Scenario alternativo:} l'utente prova ad eseguire l'operazione di registrazione senza aver compilato alcun campo dati del modulo per eseguire la registrazione;
@@ -56,7 +56,7 @@ L'utente non autenticato che non dispone di credenziali può registrarsi e acced
 	\item \textbf{Scenario principale:} l'utente non autenticato inserisce il proprio nome per la registrazione;
 	\item \textbf{Scenario alternativo:} l'utente non inserisce il cognome, in questo caso:
 	\begin{itemize}
-		\item (UC Estensione) - Viene mostrato un messaggio d'errore apposito;
+		\item (UC Estensione) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
 		\item L'utente non può procedere con la registrazione.
 	\end{itemize}
 	\item \textbf{Estensioni:}
@@ -73,7 +73,7 @@ L'utente non autenticato che non dispone di credenziali può registrarsi e acced
 	\item \textbf{Scenario principale:} l'utente non autenticato inserisce il proprio cognome per la registrazione;
 	\item \textbf{Scenario alternativo:} l'utente non inserisce il cognome, in questo caso:
 	\begin{itemize}
-		\item (UC Estensione) - Viene mostrato un messaggio d'errore apposito;
+		\item (UC Estensione) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
 		\item L'utente non può procedere con la registrazione.
 	\end{itemize}
 	\item \textbf{Estensioni:}
@@ -91,12 +91,12 @@ L'utente non autenticato inserisce l'indirizzo email.
 	\item \textbf{Scenario principale:} l'utente non autenticato inserisce il proprio indirizzo email per procedere con la registrazione;
 	\item \textbf{Scenario alternativo:} l'utente non inserisce l'email:
 	\begin{itemize}
-		\item (UC Estensione) - Viene mostrato un messaggio d'errore apposito;
+		\item (UC Estensione) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
 		\item L'utente non può procedere con la registrazione.
 	\end{itemize}
 	\item \textbf{Scenario alternativo:} l'utente non autenticato ha inserito un indirizzo email con un formato non corretto, in questo caso
 	\begin{itemize}
-		\item (UC Estensione) - Viene mostrato un messaggio d'errore apposito;
+		\item (UC Estensione) - Viene mostrato un messaggio d'errore indirizzo email non rispetta il formato;
 		\item L'utente non può procedere con la registrazione.
 	\end{itemize}
 	\item \textbf{Estensione:}
@@ -115,12 +115,12 @@ L'utente non autenticato inserisce una password.
 	\item \textbf{Scenario principale:} l'utente non autenticato inserisce una password che rispetti le condizioni imposte per procedere con la registrazione;
 	\item \textbf{Scenario alternativo:} l'utente non inserisce la password:
 	\begin{itemize}
-		\item (UC Estensione) - Viene mostrato un messaggio d'errore apposito;
+		\item (UC Estensione) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
 		\item L'utente non può procedere con la registrazione.
 	\end{itemize}
-	\item \textbf{Scenario alternativo:} l'utente non autenticato ha inserito una password con un formato non corretto, in	questo caso:
+	\item \textbf{Scenario alternativo:} l'utente non autenticato ha inserito una password con un formato non corretto, in questo caso:
 	\begin{itemize}
-		\item (UC) - Viene mostrato un messaggio d'errore apposito;
+		\item (UC) - Viene mostrato un messaggio d'errore password che non rispetta i requisiti di complessità;
 		\item L'utente non procede con la registrazione.
 	\end{itemize}
 	\item \textbf{Estensione:}
@@ -159,7 +159,7 @@ L'utente non autenticato che dispone di credenziali venditore può accedere nell
     \end{itemize}
 	Ma le credenziali fornite non appartengono alla piattaforma, quindi:
 	\begin{itemize}
-		\item (UC Estensione) - Viene visualizzato un messaggio di errore apposito;
+		\item (UC Estensione) - Viene visualizzato un messaggio di errore credenziali non presenti nella piattaforma;
 		\item L'utente rimane non autenticato e alla schermata di login.
 	\end{itemize}
     \item \textbf{Estensioni:}
@@ -199,7 +199,7 @@ L'utente non autenticato che dispone di credenziali venditore può accedere nell
 	\item \textbf{Scenario principale:} l'utente non autenticato inserisce la password per l'autenticazione;
 	\item \textbf{Scenario alternativo:} l'utente non inserisce la password:
 	\begin{itemize}
-		\item (UC) - Viene mostrato un messaggio d'errore;
+		\item (UC) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
 		\item L'utente non può procedere all'autenticazione.
 	\end{itemize}
 	\item \textbf{Estensioni:}
@@ -237,7 +237,7 @@ L'utente non autenticato che dispone di credenziali acquirente può accedere nel
 	\end{itemize}
 	Ma le credenziali fornite non appartengono alla piattaforma, quindi:
 	\begin{itemize}
-		\item (UC Estensione) - Viene visualizzato un messaggio di errore apposito;
+		\item (UC Estensione) - Viene visualizzato un messaggio di errore credenziali non presenti nella piattaforma;
 		\item L'utente rimane non autenticato e alla schermata di login.
 	\end{itemize}
 	\item \textbf{Estensioni:}
@@ -279,7 +279,7 @@ L'utente che dispone di credenziali si è dimenticato la propria password e la v
 	\end{itemize}
 	Ma l'indirizzo email non appartiene alla piattaforma, quindi:
 	\begin{itemize}
-		\item (UC Estensione) - Viene visualizzato un messaggio di errore apposito;
+		\item (UC Estensione) - Viene visualizzato un messaggio di errore indirizzo email non registrato nella piattaforma;
 		\item L'utente rimane non autenticato e alla schermata di login.
 	\end{itemize}
 	\item \textbf{Scenario alternativo:} l'utente compila i campi dati
@@ -292,7 +292,7 @@ L'utente che dispone di credenziali si è dimenticato la propria password e la v
 	\end{itemize}
 	Ma la password inserita non rispetta i requisiti di complessità, quindi:
 	\begin{itemize}
-		\item (UC Estensione) - Viene visualizzato un messaggio di errore apposito;
+		\item (UC Estensione) - Viene visualizzato un messaggio di errore password che non rispetta i requisiti di complessità;
 		\item L'utente rimane non autenticato e alla schermata di login. 
 	\end{itemize}
     \item \textbf{Estensioni:}
