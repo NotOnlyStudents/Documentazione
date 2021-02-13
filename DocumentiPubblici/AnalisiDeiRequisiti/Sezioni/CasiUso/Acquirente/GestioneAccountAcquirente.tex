@@ -1,53 +1,53 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\UC{Modifica informazioni acquirente}
+\UC{Modifica informazioni}
 L'acquirente vuole modificare le sue informazioni personali.
 \begin{itemize}
-    \item \textbf{Attori primari:} Acquirente.
-    \item \textbf{Precondizione:} L'acquirente si trova nella vista di modifica informazioni personali.
-    \item \textbf{Postcondizione:} L'acquirente ha aggiornato le sue informazioni personali.
-    \item \textbf{Scenario Principale:} L'acquirente ha premuto sull'azione per la modifica delle informazioni personali e, dopo aver compiuto la modifica, potrà confermarle attraverso l'azione di salvataggio. Le informazioni che si possono modificare sono:
+    \item \textbf{Attori primari:} acquirente;
+    \item \textbf{Precondizione:} l'acquirente si trova nella vista di modifica informazioni personali;
+    \item \textbf{Postcondizione:} l'acquirente ha aggiornato le sue informazioni personali;
+    \item \textbf{Scenario principale:} l'acquirente ha premuto sull'azione per la modifica delle informazioni personali e, dopo aver compiuto la modifica, potrà confermarle attraverso l'azione di salvataggio. Le informazioni che si possono modificare sono:
     \begin{itemize}
         \item (\actualUC.1) - Inserimento nuovo indirizzo email.
         \item (\actualUC.2) - Inserimento nuova password.
         \item (\actualUC.3) - Inserimento conferma nuova password.
     \end{itemize}
     In seguito ci sarà la conferma delle modifiche compiute e le informazioni personali verrano modificate.
-    \item \textbf{Scenario Alternativo:} L'acquirente non conferma le modifiche effettuato e, perciò, non verranno modificate le informazioni personali.
+    \item \textbf{Scenario alternativo:} l'acquirente non conferma le modifiche effettuate, perciò non verranno modificate le informazioni personali.
 \end{itemize}
 \resetSubUC
 
 \subUC{Inserimento nuovo indirizzo email}
 L'acquirente vuole modificare la propria email.
 \begin{itemize}
-    \item \textbf{Attori primari:} Acquirente.
-    \item \textbf{Precondizione:} L'acquirente si trova nella vista di modifica informazioni personali e vuole inserire un nuovo indirizzo email.
-    \item \textbf{Postcondizione:} L'acquirente ha aggiornato la sua email.
-    \item \textbf{Scenario Principale:} L'acquirente si trova nella vista di modifica informazioni personali e vuole modificare la propria email attraverso le seguenti azioni:
+    \item \textbf{Attori primari:} acquirente;
+    \item \textbf{Precondizione:} l'acquirente si trova nella schermata di modifica informazioni personali e vuole inserire un nuovo indirizzo email;
+    \item \textbf{Postcondizione:} l'acquirente ha aggiornato la sua email;
+    \item \textbf{Scenario principale:} l'acquirente si trova nella schermata di modifica informazioni personali e vuole modificare la propria email attraverso le seguenti azioni:
         \begin{itemize}
-            \item Si posiziona nel campo di inserimento della nuova email dove è presente quella attualmente utilizzata.
+            \item Si posiziona nel campo di inserimento della nuova email dove è presente quella attualmente utilizzata;
             \item Inserisce quella nuova o modifica quella attuale.
         \end{itemize}
-    \item \textbf{Scenario Alternativo 1:} L'acquirente non modifica l'attuale indirizzo email utilizzato e, perciò, non cambierà.
-    \item \textbf{Scenario Alternativo 2:} L'acquirente inserisce un'email già utilizzata nella piattaforma. In questo caso:
+    \item \textbf{Scenario alternativo 1:} l'acquirente non modifica l'attuale indirizzo email utilizzato, perciò non cambierà.
+    \item \textbf{Scenario alternativo 2:} l'acquirente inserisce un'email già utilizzata nella piattaforma. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà visualizzato il messaggio di errore in caso di email già registrata nella piattaforma.
+        \item (UC) - Verrà visualizzato il messaggio di errore in caso di email già registrata nella piattaforma;
         \item Verrà impedita la modifica delle informazioni.
     \end{itemize}
-    \item \textbf{Scenario Alternativo 3:} L'acquirente inserisce un'email non valida. In questo caso:
+    \item \textbf{Scenario alternativo 3:} l'acquirente inserisce un'email non valida. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà visualizzato un messaggio di errore in caso di email non valida.
+        \item (UC) - Verrà visualizzato un messaggio di errore in caso di email non valida;
         \item Verrà impedita la modifica delle informazioni.
     \end{itemize}
-    \item \textbf{Scenario Alternativo 4:} L'acquirente non inserisce l'email e lascia il campo di inserimento vuoto. In questo caso:
+    \item \textbf{Scenario alternativo 4:} l'acquirente non inserisce l'email e lascia il campo di inserimento vuoto. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito.
+        \item (UC) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito;
         \item Verrà impedita la modifica delle informazioni.
     \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
-        \item (UC) - Visualizzazione messaggio di errore in caso di email già utilizzata nella piattaforma.
-        \item (UC) - Visualizzazione messaggio di errore in caso di email non valida.
+        \item (UC) - Visualizzazione messaggio di errore in caso di email già utilizzata nella piattaforma;
+        \item (UC) - Visualizzazione messaggio di errore in caso di email non valida;
         \item (UC) - Visualizzazione messaggio campo dati obbligatorio non inserito.
     \end{itemize}
 \end{itemize}
@@ -55,19 +55,19 @@ L'acquirente vuole modificare la propria email.
 \subUC{Inserimento nuova password}
 L'acquirente vuole modificare la propria password.
 \begin{itemize}
-    \item \textbf{Attori primari:} Acquirente.
-    \item \textbf{Precondizione:} L'acquirente si trova nella vista di modifica informazioni personali e vuole inserire una nuova password.
-    \item \textbf{Postcondizione:} L'acquirente ha inserito la nuova password.
-    \item \textbf{Scenario Principale:} L'acquirente si trova nella vista di modifica informazioni personali e vuole modificare la propria password attraverso le seguenti azioni:
+    \item \textbf{Attori primari:} acquirente;
+    \item \textbf{Precondizione:} l'acquirente si trova nella schermata di modifica informazioni personali e vuole inserire una nuova password;
+    \item \textbf{Postcondizione:} l'acquirente ha inserito la nuova password;
+    \item \textbf{Scenario principale:} l'acquirente si trova nella schermata di modifica informazioni personali e vuole modificare la propria password attraverso le seguenti azioni:
         \begin{itemize}
-            \item Si posiziona nel campo di inserimento vuoto della nuova password.
-            \item La scrive.
+            \item Si posiziona nel campo di inserimento vuoto della nuova password;
+            \item La scrive;
             \item Inserisce la stessa password nel campo di conferma nuova password.
         \end{itemize}
-    \item \textbf{Scenario Alternativo 1:} L'acquirente non inserisce alcuna password e lascia il campo di inserimento nuova password vuoto. In questo caso non verrà modificata la password.
-    \item \textbf{Scenario Alternativo 2:} L'acquirente inserisce una password troppo debole. In questo caso:
+    \item \textbf{Scenario alternativo 1:} L'acquirente non inserisce alcuna password e lascia il campo di inserimento nuova password vuoto. In questo caso non verrà modificata la password;
+    \item \textbf{Scenario alternativo 2:} L'acquirente inserisce una password troppo debole. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà visualizzato il messaggio di errore di password troppo debole.
+        \item (UC) - Verrà visualizzato il messaggio di errore di password troppo debole;
         \item Verrà impedita la modifica delle informazioni.
     \end{itemize}
     \item \textbf{Estensioni:}
@@ -79,162 +79,162 @@ L'acquirente vuole modificare la propria password.
 \subUC{Inserimento conferma nuova password}
 L'acquirente vuole modificare la propria password e deve confermare quella nuova da inserire.
 \begin{itemize}
-    \item \textbf{Attori primari:} Acquirente.
-    \item \textbf{Precondizione:} L'acquirente si trova nella vista di modifica informazioni personali e vuole inserire una nuova password.
-    \item \textbf{Postcondizione:} L'acquirente ha inserito la conferma della nuova password.
-    \item \textbf{Scenario Principale:} L'acquirente si trova nella vista di modifica informazioni personali, ha già inserito la nuova password e la deve confermare attraverso le seguenti azioni:
+    \item \textbf{Attori primari:} acquirente;
+    \item \textbf{Precondizione:} l'acquirente si trova nella schermata di modifica informazioni personali e vuole inserire una nuova password;
+    \item \textbf{Postcondizione:} l'acquirente ha inserito la conferma della nuova password;
+    \item \textbf{Scenario principale:} l'acquirente si trova nella schermata di modifica informazioni personali, ha già inserito la nuova password e la deve confermare attraverso le seguenti azioni:
         \begin{itemize}
-            \item Si posiziona nel campo di inserimento vuoto della conferma nuova password.
+            \item Si posiziona nel campo di inserimento vuoto della conferma nuova password;
             \item Inserisce la stessa password che è stata inserita nel campo conferma password.
         \end{itemize}
-    \item \textbf{Scenario Alternativo 1:} L'acquirente non inserisce alcuna password e lascia il campo di inserimento conferma nuova password vuoto. In questo caso non verrà modificata la password.
-    \item \textbf{Scenario Alternativo 2:} L'acquirente inserisce una password di conferma diversa da quella inserita nel campo di inserimento nuova password. In questo caso:
+    \item \textbf{Scenario alternativo 1:} l'acquirente non inserisce alcuna password e lascia il campo di inserimento conferma nuova password vuoto. In questo caso non verrà modificata la password.
+    \item \textbf{Scenario alternativo 2:} l'acquirente inserisce una password di conferma diversa da quella inserita nel campo di inserimento nuova password. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà visualizzato il messaggio di errore di password e password di conferma diverse.
+        \item (UC) - Verrà visualizzato il messaggio di errore di password e password di conferma diverse;
         \item Verrà impedita la modifica delle informazioni.
     \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
-        \item (UC) - Visualizzazione messaggio di errore in caso di password e password di conferma diverse
+        \item (UC) - Visualizzazione messaggio di errore in caso di password e password di conferma diverse.
     \end{itemize}
 \end{itemize}
 
 \UC{Inserimento carta pagamento}
 L'acquirente vuole inserire la propria carta di pagamento.
 \begin{itemize}
-    \item \textbf{Attori primari:} Acquirente.
-    \item \textbf{Precondizione:} L'acquirente si trova nella vista di modifica carta pagamento e vuole inserire una nuova carta.
-    \item \textbf{Postcondizione:} L'acquirente ha inserito intestatario, numero carta, CVV e data scadenza della nuova carta.
-    \item \textbf{Scenario Principale:} L'acquirente si trova nella vista di modifica carta pagamento, per inserire la nuova carta di pagamento deve eseguire le seguenti azioni:
+    \item \textbf{Attori primari:} acquirente;
+    \item \textbf{Precondizione:} l'acquirente si trova nella schermata di modifica carta pagamento e vuole inserire una nuova carta;
+    \item \textbf{Postcondizione:} l'acquirente ha inserito intestatario, numero carta, CVV e data scadenza della nuova carta;
+    \item \textbf{Scenario principale:} l'acquirente si trova nella schermata di modifica carta pagamento, per inserire la nuova carta di pagamento deve eseguire le seguenti azioni:
         \begin{itemize}
-            \item Si posiziona nel campo vuoto di inserimento dell'intestatario della carta.
-            \item Inserisce l'intestatario della nuova carta.
-            \item Si posiziona nel campo vuoto di inserimento del numero della carta.
-            \item Inserisce il numero della nuova carta.
-            \item Si posiziona nel campo vuoto di inserimento del CVV della carta.
-            \item Inserisce il CVV della nuova carta.
-            \item Si posiziona nel campo vuoto di inserimento della data di scadenza della carta.
+            \item Si posiziona nel campo vuoto di inserimento dell'intestatario della carta;
+            \item Inserisce l'intestatario della nuova carta;
+            \item Si posiziona nel campo vuoto di inserimento del numero della carta;
+            \item Inserisce il numero della nuova carta;
+            \item Si posiziona nel campo vuoto di inserimento del CVV della carta;
+            \item Inserisce il CVV della nuova carta;
+            \item Si posiziona nel campo vuoto di inserimento della data di scadenza della carta;
             \item Inserisce la data di scadenza della nuova carta.
         \end{itemize}
-    \item \textbf{Scenario Alternativo 1:} L'acquirente non inserisce alcun intestatario di carta. In questo caso la carta non verrà salvata.
-    \item \textbf{Scenario Alternativo 2:} L'acquirente inserisce nel campo intestatario carta dei valori non alfabetici invalidi. In questo caso:
+    \item \textbf{Scenario alternativo 1:} L'acquirente non inserisce alcun intestatario di carta. In questo caso la carta non verrà salvata;
+    \item \textbf{Scenario alternativo 2:} L'acquirente inserisce nel campo intestatario carta dei valori non alfabetici invalidi. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa;
         \item Verrà impedito il proseguimento dell'operazione.
     \end{itemize}    
     \item \textbf{Estensioni:}
     \begin{itemize}
         \item (UC) - Visualizzazione messaggio di errore carta non valida.
     \end{itemize}
-    \item \textbf{Scenario Alternativo 3:} L'acquirente non inserisce alcun numero di carta. In questo caso la carta non verrà salvata.
-    \item \textbf{Scenario Alternativo 4:} L'acquirente inserisce nel campo numero carta dei caratteri non numerici o in quantità diversa da 16 rendendo il numero di carta invalido. In questo caso:
+    \item \textbf{Scenario alternativo 3:} l'acquirente non inserisce alcun numero di carta. In questo caso la carta non verrà salvata;
+    \item \textbf{Scenario alternativo 4:} l'acquirente inserisce nel campo numero carta dei caratteri non numerici o in quantità diversa da 16 rendendo il numero di carta invalido. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa;
         \item Verrà impedito il proseguimento dell'operazione.
     \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
         \item (UC) - Visualizzazione messaggio di errore carta non valida.
     \end{itemize}
-    \item \textbf{Scenario Alternativo 5:} L'acquirente non inserisce il CVV. In questo caso la carta non verrà salvata.
-    \item \textbf{Scenario Alternativo 6:} L'acquirente inserisce nel campo CVV dei caratteri non numerici o in quantità diversa da 3 rendendo il CVV invalido. In questo caso:
+    \item \textbf{Scenario alternativo 5:} L'acquirente non inserisce il CVV. In questo caso la carta non verrà salvata.
+    \item \textbf{Scenario alternativo 6:} L'acquirente inserisce nel campo CVV dei caratteri non numerici o in quantità diversa da 3 rendendo il CVV invalido. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa;
         \item Verrà impedito il proseguimento dell'operazione.
     \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
-        \item (UC) - Visualizzazione messaggio di errore  carta non valida.
+        \item (UC) - Visualizzazione messaggio di errore carta non valida.
     \end{itemize}
-    \item \textbf{Scenario Alternativo 7:} L'acquirente non inserisce una data di scadenza. In questo caso la carta non verrà salvata.
+    \item \textbf{Scenario alternativo 7:} l'acquirente non inserisce una data di scadenza. In questo caso la carta non verrà salvata.
 \end{itemize}
 
 \UC{Modifica carta pagamento}
 L'acquirente vuole modificare la propria carta di pagamento.
 \begin{itemize}
-    \item \textbf{Attori primari:} Acquirente.
-    \item \textbf{Precondizione:} L'acquirente si trova nella vista di modifica carta pagamento e vuole modificare la carta di pagamento già presente.
-    \item \textbf{Postcondizione:} L'acquirente ha inserito intestatario carta, numero carta, CVV e data scadenza della nuova carta da confermare, eliminando quella già presente.
-    \item \textbf{Scenario Principale:} L'acquirente si trova nella vista di modifica carta pagamento, per modificare la carta di pagamento deve eseguire le seguenti azioni:
+    \item \textbf{Attori primari:} acquirente;
+    \item \textbf{Precondizione:} l'acquirente si trova nella schermata di modifica carta pagamento e vuole modificare la carta di pagamento già presente;
+    \item \textbf{Postcondizione:} l'acquirente ha inserito intestatario carta, numero carta, CVV e data scadenza della nuova carta da confermare, eliminando quella già presente;
+    \item \textbf{Scenario principale:} l'acquirente si trova nella schermata di modifica carta pagamento, per modificare la carta di pagamento deve eseguire le seguenti azioni:
         \begin{itemize}
-            \item S posiziona nel campo di inserimento dell'intestatario della carta.
-            \item Inserisce l'intestatario della carta.
-            \item Si posiziona nel campo di inserimento del numero della carta da modificare.
-            \item Inserisce il numero della nuova carta.
-            \item Si posiziona nel campo di inserimento del CVV della carta da modificare.
-            \item Inserisce il CVV della nuova carta.
-            \item Si posiziona nel campo di inserimento della data di scadenza della nuova carta.
+            \item Si posiziona nel campo di inserimento dell'intestatario della carta;
+            \item Inserisce l'intestatario della carta;
+            \item Si posiziona nel campo di inserimento del numero della carta da modificare;
+            \item Inserisce il numero della nuova carta;
+            \item Si posiziona nel campo di inserimento del CVV della carta da modificare;
+            \item Inserisce il CVV della nuova carta;
+            \item Si posiziona nel campo di inserimento della data di scadenza della nuova carta;
             \item Inserisce la data di scadenza della nuova carta.
         \end{itemize}
-    \item \textbf{Scenario Alternativo 1:} L'acquirente non inserisce alcun intestatario di carta. In questo caso la carta non verrà modificata.
-    \item \textbf{Scenario Alternativo 2:} L'acquirente inserisce nel campo intestatario carta dei valori non alfabetici invalidi. In questo caso:
+    \item \textbf{Scenario alternativo 1:} l'acquirente non inserisce alcun intestatario di carta. In questo caso la carta non verrà modificata;
+    \item \textbf{Scenario alternativo 2:} l'acquirente inserisce nel campo intestatario carta dei valori non alfabetici invalidi. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa;
         \item Verrà impedito il proseguimento dell'operazione.
     \end{itemize}    
     \item \textbf{Estensioni:}
     \begin{itemize}
         \item (UC) - Visualizzazione messaggio di errore carta non valida.
     \end{itemize}
-    \item \textbf{Scenario Alternativo 3:} L'acquirente non inserisce alcun numero di carta. In questo caso la carta non verrà modificata.
-    \item \textbf{Scenario Alternativo 4:} L'acquirente inserisce nel campo numero carta dei caratteri non numerici o in quantità diversa da 16 rendendo il numero di carta invalido. In questo caso:
+    \item \textbf{Scenario alternativo 3:} l'acquirente non inserisce alcun numero di carta. In questo caso la carta non verrà modificata;
+    \item \textbf{Scenario alternativo 4:} l'acquirente inserisce nel campo numero carta dei caratteri non numerici o in quantità diversa da 16 rendendo il numero di carta invalido. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa;
         \item Verrà impedito il proseguimento dell'operazione.
     \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
         \item (UC) - Visualizzazione messaggio di errore carta non valida.
     \end{itemize}
-    \item \textbf{Scenario Alternativo 5:} L'acquirente non inserisce il CVV. In questo caso la carta non verrà modificata.
-    \item \textbf{Scenario Alternativo 6:} L'acquirente inserisce nel campo CVV dei caratteri non numerici o in quantità diversa da 3 rendendo il CVV invalido. In questo caso:
+    \item \textbf{Scenario alternativo 5:} l'acquirente non inserisce il CVV. In questo caso la carta non verrà modificata;
+    \item \textbf{Scenario alternativo 6:} l'acquirente inserisce nel campo CVV dei caratteri non numerici o in quantità diversa da 3 rendendo il CVV invalido. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa;
         \item Verrà impedito il proseguimento dell'operazione.
     \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
         \item (UC) - Visualizzazione messaggio di errore  carta non valida.
     \end{itemize}
-    \item \textbf{Scenario Alternativo 7:} L'acquirente non inserisce una data di scadenza. In questo caso la carta non verrà modificata.
+    \item \textbf{Scenario alternativo 7:} L'acquirente non inserisce una data di scadenza. In questo caso la carta non verrà modificata.
 \end{itemize}
 
 \UC{Eliminazione carta pagamento}
 L'acquirente vuole eliminare la propria carta di pagamento.
 \begin{itemize}
-    \item \textbf{Attori primari:} Acquirente.
-    \item \textbf{Precondizione:} L'acquirente si trova nella vista di modifica carta pagamento e vuole eliminare la carta di pagamento già presente.
-    \item \textbf{Postcondizione:} L'acquirente ha confermato l'eliminazione della carta di pagamento.
-    \item \textbf{Scenario Principale:} L'acquirente si trova nella vista di modifica carta pagamento, per eliminare la carta di pagamento deve eseguire le seguenti azioni:
+    \item \textbf{Attori primari:} acquirente;
+    \item \textbf{Precondizione:} l'acquirente si trova nella schermata di modifica carta pagamento e vuole eliminare la carta di pagamento già presente;
+    \item \textbf{Postcondizione:} l'acquirente ha confermato l'eliminazione della carta di pagamento;
+    \item \textbf{Scenario principale:} l'acquirente si trova nella schermata di modifica carta pagamento, per eliminare la carta di pagamento deve eseguire le seguenti azioni:
         \begin{itemize}
-            \item Selezionare la carta da eliminare.
+            \item Selezionare la carta da eliminare;
             \item Confermare la scelta di eliminare la carta.
         \end{itemize}
-    \item \textbf{Scenario Alternativo 1:} L'acquirente non seleziona la carta da eliminare e l'operazione non viene eseguita.
-    \item \textbf{Scenario Alternativo 2:} L'acquirente seleziona la carta da eliminare ma non conferma l'operazione. La carta non viene eliminata.
+    \item \textbf{Scenario alternativo 1:} l'acquirente non seleziona la carta da eliminare e l'operazione non viene eseguita;
+    \item \textbf{Scenario alternativo 2:} l'acquirente seleziona la carta da eliminare ma non conferma l'operazione. La carta non viene eliminata.
 \end{itemize}
 
 \UC{Modifica indirizzo di spedizione}
 L'acquirente vuole modificare l'indirizzo di spedizione.
 \begin{itemize}
-    \item \textbf{Attori primari:} Acquirente.
-    \item \textbf{Precondizione:} L'acquirente si trova nella vista di modifica indirizzo di spedizione e vuole modificare l'indirizzo di spedizione. E' possibile modificare anche solo parzialmente l'indirizzo già salvato.
-    \item \textbf{Postcondizione:} L'acquirente ha inserito il nuovo indirizzo di spedizione da confermare.
-    \item \textbf{Scenario Principale:} L'acquirente si trova nella vista di modifica indirizzo di spedizione, per modificare l'indirizzo deve eseguire le seguenti azioni:
+    \item \textbf{Attori primari:} acquirente;
+    \item \textbf{Precondizione:} l'acquirente si trova nella schermata di modifica indirizzo di spedizione e vuole modificare l'indirizzo di spedizione. E' possibile modificare anche solo parzialmente l'indirizzo già salvato;
+    \item \textbf{Postcondizione:} l'acquirente ha inserito il nuovo indirizzo di spedizione da confermare;
+    \item \textbf{Scenario principale:} l'acquirente si trova nella schermata di modifica indirizzo di spedizione, per modificare l'indirizzo deve eseguire le seguenti azioni:
         \begin{itemize}
-            \item Si posiziona nel campo di inserimento della via da modificare.
-            \item Inserisce la via del nuovo indirizzo.
-            \item Si posiziona nel campo di inserimento del numero civico da modificare.
-            \item Inserisce il nuovo civico.
-            \item Si posiziona nel campo di inserimento del CAP.
+            \item Si posiziona nel campo di inserimento della via da modificare;
+            \item Inserisce la via del nuovo indirizzo;
+            \item Si posiziona nel campo di inserimento del numero civico da modificare;
+            \item Inserisce il nuovo civico;
+            \item Si posiziona nel campo di inserimento del CAP;
             \item Inserisce il nuovo CAP.
         \end{itemize}
-    \item \textbf{Scenario Alternativo 1:} L'acquirente non inserisce alcuna via di spedizione. In questo caso la via non verrà modificata.
-    \item \textbf{Scenario Alternativo 2:} L'acquirente non inserisce alcun numero civico. In questo caso il civico non verrà modificato.
-    \item \textbf{Scenario Alternativo 3:} L'acquirente non inserisce il CAP. In questo caso il CAP non verrà modificato.
-    \item \textbf{Scenario Alternativo 4:} L'acquirente inserisce dei caratteri non numerici o in quantità diversa da 5 rendendo il CAP invalido. In questo caso:
+    \item \textbf{Scenario alternativo 1:} l'acquirente non inserisce alcuna via di spedizione. In questo caso la via non verrà modificata;
+    \item \textbf{Scenario alternativo 2:} l'acquirente non inserisce alcun numero civico. In questo caso il civico non verrà modificato;
+    \item \textbf{Scenario alternativo 3:} l'acquirente non inserisce il CAP. In questo caso il CAP non verrà modificato;
+    \item \textbf{Scenario alternativo 4:} l'acquirente inserisce dei caratteri non numerici o in quantità diversa da 5 rendendo il CAP invalido. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa;
         \item Verrà impedito il proseguimento dell'operazione.
     \end{itemize}
     \item \textbf{Estensioni:}
@@ -246,24 +246,24 @@ L'acquirente vuole modificare l'indirizzo di spedizione.
 \UC{Inserimento indirizzo di spedizione}
 L'acquirente vuole inserire l'indirizzo di spedizione.
 \begin{itemize}
-    \item \textbf{Attori primari:} Acquirente.
-    \item \textbf{Precondizione:} L'acquirente si trova nella vista di modifica indirizzo di spedizione e vuole inserire l'indirizzo.
-    \item \textbf{Postcondizione:} L'acquirente ha inserito il nuovo indirizzo di spedizione da confermare.
-    \item \textbf{Scenario Principale:} L'acquirente si trova nella vista di modifica indirizzo di spedizione, per inserire l'indirizzo deve eseguire le seguenti azioni:
+    \item \textbf{Attori primari:} acquirente;
+    \item \textbf{Precondizione:} l'acquirente si trova nella schermata di modifica indirizzo di spedizione e vuole inserire l'indirizzo;
+    \item \textbf{Postcondizione:} l'acquirente ha inserito il nuovo indirizzo di spedizione da confermare;
+    \item \textbf{Scenario principale:} l'acquirente si trova nella schermata di modifica indirizzo di spedizione, per inserire l'indirizzo deve eseguire le seguenti azioni:
         \begin{itemize}
-            \item Si posiziona nel campo vuoto di inserimento della via da modificare.
-            \item Inserisce la via del nuovo indirizzo.
-            \item Si posiziona nel campo vuoto di inserimento del numero civico da modificare.
-            \item Inserisce il numero civico.
-            \item Si posiziona nel campo vuoto di inserimento del CAP.
+            \item Si posiziona nel campo vuoto di inserimento della via da modificare;
+            \item Inserisce la via del nuovo indirizzo;
+            \item Si posiziona nel campo vuoto di inserimento del numero civico da modificare;
+            \item Inserisce il numero civico;
+            \item Si posiziona nel campo vuoto di inserimento del CAP;
             \item Inserisce il nuovo CAP.
         \end{itemize}
-    \item \textbf{Scenario Alternativo 1:} L'acquirente non inserisce alcuna via di spedizione. In questo caso l'indirizzo non verrà salvato.
-    \item \textbf{Scenario Alternativo 2:} L'acquirente non inserisce alcun numero civico. In questo caso l'indirizzo non verrà salvato.
-    \item \textbf{Scenario Alternativo 3:} L'acquirente non inserisce il CAP. In questo caso l'indirizzo non verrà salvato.
-    \item \textbf{Scenario Alternativo 4:} L'acquirente inserisce dei caratteri non numerici o in quantità diversa da 5 rendendo il CAP invalido. In questo caso:
+    \item \textbf{Scenario alternativo 1:} l'acquirente non inserisce alcuna via di spedizione. In questo caso l'indirizzo non verrà salvato;
+    \item \textbf{Scenario alternativo 2:} l'acquirente non inserisce alcun numero civico. In questo caso l'indirizzo non verrà salvato;
+    \item \textbf{Scenario alternativo 3:} l'acquirente non inserisce il CAP. In questo caso l'indirizzo non verrà salvato;
+    \item \textbf{Scenario alternativo 4:} l'acquirente inserisce dei caratteri non numerici o in quantità diversa da 5 rendendo il CAP invalido. In questo caso:
     \begin{itemize}
-        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa.
+        \item (UC) - Verrà mostrato un messaggio di errore con la segnalazione della causa;
         \item Verrà impedito il proseguimento dell'operazione.
     \end{itemize}
     \item \textbf{Estensioni:}
@@ -275,16 +275,16 @@ L'acquirente vuole inserire l'indirizzo di spedizione.
 \UC{Eliminazione indirizzo di spedizione}
 L'acquirente vuole eliminare l'indirizzo di spedizione attuale.
 \begin{itemize}
-    \item \textbf{Attori primari:} Acquirente.
-    \item \textbf{Precondizione:}  L'acquirente si trova nella vista di modifica indirizzo di spedizione e vuole eliminare l'indirizzo di spedizione.
-    \item \textbf{Postcondizione:} L'acquirente ha confermato l'eliminazione dell'indirizzo di spedizoione.
-    \item \textbf{Scenario Principale:} L'acquirente si trova nella vista di modifica indirizzo di spedizione, per eliminare l'indirizzo deve eseguire le seguenti azioni:
+    \item \textbf{Attori primari:} acquirente;
+    \item \textbf{Precondizione:}  l'acquirente si trova nella schermata di modifica indirizzo di spedizione e vuole eliminare l'indirizzo di spedizione;
+    \item \textbf{Postcondizione:} l'acquirente ha confermato l'eliminazione dell'indirizzo di spedizoione;
+    \item \textbf{Scenario principale:} l'acquirente si trova nella schermata di modifica indirizzo di spedizione, per eliminare l'indirizzo deve eseguire le seguenti azioni:
         \begin{itemize}
-            \item Selezionare l'indirizzo da eliminare.
+            \item Selezionare l'indirizzo da eliminare;
             \item Confermare la scelta di eliminare l'indirizzo.
         \end{itemize}
-    \item \textbf{Scenario Alternativo 1:} L'acquirente non seleziona l'indirizzo da eliminare e l'operazione non viene eseguita.
-    \item \textbf{Scenario Alternativo 2:} L'acquirente seleziona l'indirizzo da eliminare ma non conferma l'operazione. L'indirizzo non viene eliminato.
+    \item \textbf{Scenario alternativo 1:} l'acquirente non seleziona l'indirizzo da eliminare e l'operazione non viene eseguita;
+    \item \textbf{Scenario alternativo 2:} l'acquirente seleziona l'indirizzo da eliminare ma non conferma l'operazione. L'indirizzo non viene eliminato.
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -295,11 +295,11 @@ L'acquirente può eliminare il proprio account.
     \item \textbf{Attori Primari:} Acquirente.
     \item \textbf{Precondizione:} L'acquirente si trova nella propria pagina personale (UC3.2.1) e ha selezionato l'azione di cancellazione del proprio account.
     \item \textbf{Postcondizione:} L'account dell'acquirente non è più presente nella piattaforma
-    \item \textbf{Scenario Principale:} L'acquirente vuole eliminare il proprio account e compie le seguenti operazioni:
+    \item \textbf{Scenario principale:} L'acquirente vuole eliminare il proprio account e compie le seguenti operazioni:
     \begin{itemize}
         \item Preme sull'azione di cancellazione del proprio account.
         \item Viene visualizzato un messaggio di conferma dell'operazione.
         \item Se conferma viene eliminato l'account.
     \end{itemize}
-    \item \textbf{Scenario Alternativo:} Se non conferma viene riportato alla propria pagina personale e l'account non viene eliminato.
+    \item \textbf{Scenario alternativo:} Se non conferma viene riportato alla propria pagina personale e l'account non viene eliminato.
 \end{itemize}
