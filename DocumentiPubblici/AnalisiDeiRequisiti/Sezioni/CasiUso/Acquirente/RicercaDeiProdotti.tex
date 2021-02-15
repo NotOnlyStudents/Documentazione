@@ -18,13 +18,13 @@ L'utente non autenticato o l'acquirente può ricercare i prodotti dalla schermat
 
 \resetSubUC
 
-\subUC{Visualizzazione messaggio di ricerca senza alcun risultato}
-Nel caso in cui la ricerca non dia risultati verrà visualizzato un opportuno messaggio.
+\subUC{Visualizzazione messaggio di ricerca o filtraggio senza alcun risultato}
+Nel caso in cui la ricerca o il filtraggio non dia risultati verrà visualizzato un opportuno messaggio.
 \begin{itemize}
 	\item \textbf{Attori primari:} acquirente, utente non autenticato;
-	\item \textbf{Precondizione:} l'attore ha svolto una ricerca che non ha prodotto alcun risultato;
-	\item \textbf{Postcondizione:} all'attore verrà mostrato un messaggio che lo informa che la ricerca non ha prodotto risultati;
-	\item \textbf{Scenario principale:} l'attore effettua una ricerca senza alcun risultato e viene avvertito.
+	\item \textbf{Precondizione:} l'attore ha svolto una ricerca o un filtraggio che non ha prodotto alcun risultato;
+	\item \textbf{Postcondizione:} all'attore verrà mostrato un messaggio che lo informa che la ricerca o il filtraggio non ha prodotto risultati;
+	\item \textbf{Scenario principale:} l'attore effettua una ricerca o un filtraggio senza alcun risultato e viene avvertito.
 \end{itemize}
 
 \UC{Filtraggio prodotti della PLP}
@@ -49,7 +49,10 @@ L'utente non autenticato o l'acquirente filtra i prodotti all'interno della PLP 
         \end{itemize}
         \item La pagina viene aggiornata con i prodotti che rispettano i filtri applicati
     \end{itemize}
-    \item \textbf{Estensioni:} (UC5.1) - Nel caso la combinazione di filtri impostati non dia risultati verrà visualizzato un messaggio dove viene segnalato all'attore questo fatto.
+    \item \textbf{Estensioni:} Nel caso la combinazione di filtri impostati non dia risultati verrà visualizzato un messaggio dove viene segnalato all'attore questo fatto.
+    \begin{itemize}
+    	\item (UC) - Visualizzazione messaggio di ricerca o filtraggio senza alcun risultato.
+    \end{itemize}
 \end{itemize}
 
 \resetSubUC
@@ -79,13 +82,4 @@ L'utente non autenticato o l'acquirente può cercare i prodotti in base alla lor
     \item \textbf{Precondizione:} L'attore è nella PLP e ha attivato il filtro per disponibilità in magazzino.
     \item \textbf{Postcondizione:} L'attore avrà a disposizione i prodotti che sono disponibili in magazzino.
     \item \textbf{Scenario Principale:} L'attore vuole visualizzare tutti i prodotti che sono disponibili in magazzino.
-\end{itemize}
-
-\subsubsection{UC6.4 - Visualizzazione messaggio di filtraggio senza alcun risultato} \label{UC6.4}
-Nel caso in cui il filtraggio non dia risultati verrà visualizzato un opportuno messaggio.
-\begin{itemize}
-	\item \textbf{Attori primari:} acquirente, utente non autenticato;
-	\item \textbf{Precondizione:} l'attore ha svolto un filtraggio che non ha prodotto alcun risultato;
-	\item \textbf{Postcondizione:} all'attore verrà mostrato un messaggio che lo informa che il filtraggio non ha prodotto risultati;
-	\item \textbf{Scenario principale:} l'attore ha impostato dei filtri che generano una ricerca senza alcun risultato e viene avvertito.
 \end{itemize}
