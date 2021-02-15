@@ -90,25 +90,17 @@ Il venditore modifica uno o più campi di un prodotto della piattaforma.
 \subsection{UC20 - Eliminazione prodotto}
 \label{UC20}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{Immagini/DiagrammiUC/UC20EliminazioneProdotto}
-    \caption{Diagramma di UC20: Eliminazione di un prodotto da parte del venditore} 
-    \label{fig:EliminazioneProdotto}
-\end{figure}
-
 Il venditore vuole eliminare un prodotto precedentemente inserito.
 \begin{itemize}
-    \item \textbf{Attori Primari:} Venditore.
-    \item \textbf{Precondizione:} Il venditore si trova nella pagina della dashboard.
-    \item \textbf{Postcondizione:} Il venditore ha eliminato il prodotto selezionato.
-    \item \textbf{Scenario Principale:} Il venditore seleziona un prodotto dalla lista di quelli che ha inserito nella piattaforma e preme sul link per eliminarlo definitivamente.
+    \item \textbf{Attori primari:} venditore;
+    \item \textbf{Precondizione:} il venditore si trova nella pagina della dashboard;
+    \item \textbf{Postcondizione:} Il venditore ha eliminato il prodotto selezionato;
+    \item \textbf{Scenario principale:} il venditore seleziona un prodotto dalla lista di quelli che ha inserito nella piattaforma ed esegue l'operazione per eliminarlo definitivamente. In questo caso:
     \begin{itemize}
-    \item Il prodotto viene rimosso da PDP, PLP, home, carrelli e dashboard.
+    \item Il prodotto viene rimosso da PDP, PLP, schermata principale, carrelli e dashboard;
     \item Il prodotto rimane negli ordini già effettuati.
     \end{itemize}
-    \item \textbf{Scenario Alternativo:} Il venditore seleziona per l'eliminazione, un prodotto che è stato ordinato ma non ancora pagato quindi verrà visualizzato un messaggio di errore e viene negata la possibilità di eliminare il prodotto selezionato.
-    \item \textbf{Estensioni:}
+    \item \textbf{Estensioni:} il venditore seleziona per l'eliminazione un prodotto presente in un ordine non ancora evaso quindi verrà visualizzato un messaggio di errore e viene negata la possibilità di eliminare il prodotto selezionato.
     \begin{itemize}
         \item (UC34) - Visualizzazione avviso in caso di prodotto selezionato per l’eliminazione ma non ancora evaso in alcuni ordini.
     \end{itemize}
