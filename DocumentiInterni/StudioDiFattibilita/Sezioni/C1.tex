@@ -1,9 +1,9 @@
 \section{Capitolato C1 - BlockCOVID}\label{C1}
 \subsection{Informazioni sul capitolato}
 \begin{itemize}
-	\item \textbf{Nome:} \textit{BlockCOVID: supporto digitale al contrasto della pandemia};
-	\item \textbf{\glo{Proponente}:} \textit{Imola informatica};
-	\item \textbf{Committenti:} \textit{\VT{} e \CR{}}.
+	\item \textbf{Nome:} BlockCOVID: supporto digitale al contrasto della pandemia;
+	\item \textbf{Proponente:} Imola informatica;
+	\item \textbf{Committenti:} \VT{} e \CR{}.
 \end{itemize}
 
 \subsection{Descrizione del capitolato}
@@ -22,11 +22,11 @@ Lo scopo del capitolato consiste nello sviluppo di un'applicazione (Android o iO
 
 Il server, dotato di \glo{UI}, dovrà ricevere i vari tag RFID dall'applicazione e permetterà di:
 \begin{itemize}
-	\item Sapere in ogni momento se la postazione \'e occupata, prenotata oppure da pulire;
+	\item Sapere in ogni momento se la postazione è occupata, prenotata oppure da pulire;
 	\item Controllare quali postazioni sono prenotate (da chi) e bloccare le prenotazioni per una determinata stanza;
 	\item Mostrare una vista a calendario, con l’elenco delle postazioni prenotate e in quali giorni;
 	\item Salvare su memoria immutabile e certificata tutti i cambiamenti di stato relativi alla pulizia della postazione, nonch\'e le informazioni su chi l'ha igienizzata;
-	\item Prenotare una postazione con granularit\'a di 1 ora;
+	\item Prenotare una postazione con granularità di 1 ora;
 	\item Creare, modificare o eliminare le utenze ai dipendenti e agli addetti delle pulizie;
 	\item Creare, modificare o eliminare la definizione delle stanze e delle postazioni.
 \end{itemize}
@@ -34,30 +34,30 @@ Il server, dotato di \glo{UI}, dovrà ricevere i vari tag RFID dall'applicazione
 \subsection{Tecnologie coinvolte}
 L'azienda consiglia di utilizzare:
 \begin{itemize}
-\item \textit{\glo{Java}} (versione 8 o superiori), \textit{\glo{Python} o \glo{Node.js}} per lo sviluppo del server \glo{back-end};
+\item \glo{Java} (versione 8 o superiori), \glo{Python} o \glo{Node.js} per lo sviluppo del server \glo{back end};
 \item Protocolli \glo{asincroni} per le comunicazioni app mobile-server;
-\item Sistema \glo{\textit{Blockchain}} per salvare con opponibilit\'a a terzi i dati di sanificazione;
-\item \textit{\glo{IAAS Kubernetes} o di \glo{PAAS}, \glo{Openshift} o \glo{Rancher}}, per il rilascio delle componenti del server e la gestione della \glo{scalabilit\'a orizzontale}.
+\item Sistema \glo{blockchain} per salvare con opponibilità ai terzi i dati di sanificazione;
+\item \glo{IAAS Kubernetes} o di \glo{PAAS}, \glo{Openshift} o \glo{Rancher}, per il rilascio delle componenti del server e la gestione della \glo{scalabilità orizzontale}.
 \end{itemize}
 
 \subsection{Vincoli}
 Per raggiungere gli obiettivi minimi del progetto viene richiesto di:
 \begin{itemize}
-\item Avere il server che esponga, in aggiunta a eventuali altri protocolli per l’interazione con il servizio specifico, delle \glo{API} \textit{\glo{REST}} attraverso le quali sia possibile utilizzare l'applicativo. In alternativa \'e possibile utilizzare \glo{gRPC} come soluzione alternativa a \textit{REST};
+\item Avere il server che esponga, in aggiunta a eventuali altri protocolli per l’interazione con il servizio specifico, delle \glo{API} \glo{REST} attraverso le quali sia possibile utilizzare l'applicativo. In alternativa è possibile utilizzare gRPC come soluzione alternativa a REST;
 \item Scansione dei tag nel tempo sufficiente a certificare la presenza della persona in postazione;
-\item Avere le componenti applicative correlate da \glo{test d'unità} e \glo{test d’integrazione}. Viene inoltre richiesto che il sistema sia testato nella sua interezza tramite \glo{test end-to-end} e che la copertura dei test d'unità sia $\geq$ 80\%.
+\item Avere le componenti applicative correlate da test d'unità e test d’integrazione. Viene inoltre richiesto che il sistema sia testato nella sua interezza tramite \glo{test end-to-end} e che la copertura dei test d'unità sia $\geq$ 80\%.
 \end{itemize}
 
 \subsection{Aspetti positivi}
 \begin{itemize} 
-	\item 4 componenti del gruppo hanno già sviluppato e conoscono \glo{\textit{Java}}.
-	\item Le tecnologie proposte dal capitolato stimolano i componenti del gruppo a imparare e a lavorare con esse.
+	\item 4 componenti del gruppo hanno già sviluppato e conoscono \glo{Java};
+	\item Le tecnologie proposte dal capitolato stimolano i componenti del gruppo a imparare e a lavorare con esse;
 	\item Il capitolato può essere molto utile e interessante per una prospettiva lavorativa, data la complessità, le tecnologie e il tipo di progetto.
 \end{itemize}
 
 \subsection{Aspetti critici}
 \begin{itemize}
-\item \'E richiesto sia lo sviluppo di un'interfaccia web per il server sia lo sviluppo di un'applicazione mobile per i vari tipo di utenti.
+\item È richiesto sia lo sviluppo di un'interfaccia web per il server sia lo sviluppo di un'applicazione mobile per i vari tipo di utenti.
 \end{itemize}
 
 \subsection{Conclusioni}

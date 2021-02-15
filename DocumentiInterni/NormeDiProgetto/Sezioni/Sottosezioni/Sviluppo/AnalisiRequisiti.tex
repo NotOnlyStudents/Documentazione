@@ -1,7 +1,7 @@
 \subsubsection{Analisi dei requisiti}
 \myparagraph{Scopo dell'attività} 
 L'attività di analisi dei requisti viene svolta dagli \textit{Analisti} incaricati per individuare i requisiti che il prodotto deve soddisfare.
-I requisiti possono essere esplicitamente richiesti dal proponente o individuati implicitamente tramite l'attività di analisi, possono essere individuati direttamente o indirettamente perché dipendono da altri requisiti. \\
+I requisiti possono essere esplicitamente richiesti dal proponente o individuati implicitamente tramite l'attività di analisi, possono essere individuati direttamente o indirettamente perché dipendono da altri requisiti.\\
 L'individuazione dei requisiti consente di:
 \begin{itemize}
 	\item Realizzare un prodotto software che soddisfi i bisogni del proponente;
@@ -10,17 +10,23 @@ L'individuazione dei requisiti consente di:
 \end{itemize}
 
 \myparagraph{Descrizione della sezione}
-La sezione contiene le norme relative all'attività di analisi dei requisiti e del relativo documento \AdRv\ che i componenti del gruppo, in particolare gli \textit{Analisti}, devono seguire.
+La sezione contiene le norme relative all'attività di analisi dei requisiti e del relativo documento \AdR\ che i componenti del gruppo, in particolare gli \textit{Analisti}, devono seguire.
 
-\myparagraph{Aspettative} 
-L'attività di analisi dei requisiti ha come obiettivo la redazione del documento di \AdRv che comprende in modo formale tutti i requisiti che il prodotto software deve o è desiderabile soddisfi.
+\myparagraph{Aspettative}\label{AspettativeAnalisi}L'attività di analisi dei requisiti ha come obiettivo la redazione del documento di \AdR{} che comprende in modo formale tutti i requisiti che il prodotto software deve o è desiderabile soddisfi. Per assicurare il raggiungimento degli obiettivi di qualità previsti dal \PdQ\ il gruppo intende:
+\begin{itemize}
+	\item Coinvolgere frequentemente proponente e committente;
+	\item Studiare prodotti simili a quello richiesto;
+	\item Valutare i possibili scenari immedesimandosi nell'utente del prodotto;
+	\item Individuare requisiti che possono migliorare la qualità del prodotto anche se non obbligatori;
+	\item Assicurare che l'implementazione del prodotto soddisfi i requisiti individuati in modo coerente rispetto al loro significato.
+\end{itemize}
 
 \myparagraph{Struttura del documento}
 La struttura del documento comprenderà:
 \begin{itemize}
-	\item \textbf{Descrizione:} Definisce le caratteristiche, i vincoli e gli obiettivi del prodotto;
-	\item \textbf{Casi d'uso:} Contiene tutte le informazioni utili per descrivere gli scenari che l'utente del prodotto può incontrare, comprendendo anche la loro rappresentazione attraverso i diagrammi UML;
-	\item \textbf{Requisiti:} Viene inserita una tabella contenente:
+	\item \textbf{Descrizione:} definisce le caratteristiche, i vincoli e gli obiettivi del prodotto;
+	\item \textbf{Casi d'uso:} contiene tutte le informazioni utili per descrivere gli scenari che l'utente del prodotto può incontrare, comprendendo anche la loro rappresentazione attraverso i diagrammi UML;
+	\item \textbf{Requisiti:} viene inserita una tabella contenente:
 	\begin{itemize}
 		\item Codice identificativo del requisito;
 		\item Descrizione del requisito;
@@ -28,7 +34,7 @@ La struttura del documento comprenderà:
 	\end{itemize} 
 \end{itemize}
 
-\myparagraph{Classificazione dei requisiti}\label{ClassificazioneRequisiti}Tutti i requisti sono individuati da un codice identificativo univoco, non modificabile dopo l'assegnazione, rappresentato nel seguente modo:
+\myparagraph{Classificazione dei requisiti}\label{ClassificazioneRequisiti}Tutti i requisti sono individuati da un codice identificativo univoco rappresentato nel seguente modo:
 
 \begin{center}
 	\textbf{R[Tipologia][Rilevanza][Numero][\_Codice]}
@@ -37,25 +43,23 @@ La struttura del documento comprenderà:
 \begin{itemize}
 	\item \textbf{Tipologia:} rappresenta il tipo di requisito, può assumere i seguenti valori:
 	\begin{itemize}
-		\item \textbf{V:} requisito di \textit{Vincolo};
-		\item \textbf{F:} requisito \textit{Funzionale};
-		\item \textbf{P:} requisito \textit{Prestazionale};
-		\item \textbf{Q:} requisito di \textit{Qualità}.
+		\item \textbf{V:} requisito di \textbf{vincolo};
+		\item \textbf{F:} requisito \textbf{funzionale};
+		\item \textbf{P:} requisito \textbf{prestazionale};
+		\item \textbf{Q:} requisito di \textbf{qualità}.
 	\end{itemize}
-
 	\item \textbf{Rilevanza:} rappresenta l'utilità del requisito che va negoziata e concordata con il committente, può assumere i seguenti valori:
 	\begin{itemize}
-		\item \textbf{O:} requisito \textit{Obbligatorio}, deve essere soddisfatto perché irrinunciabile per qualcuno degli \glo{stakeholder};
-		\item \textbf{D:} requisito \textit{Desiderabile}, non strettamente necessario ma aumenta la completezza del prodotto. Questi requisiti vengono negoziati con l'azienda \Proponente;
-		\item \textbf{Z:} requisito \textit{Opzionale}, relativamente utile anch'esso ed è contrattabile con l'azienda \Proponente.
+		\item \textbf{O:} requisito \textbf{obbligatorio}, deve essere soddisfatto perché irrinunciabile per qualcuno degli \glo{stakeholder};
+		\item \textbf{D:} requisito \textbf{desiderabile}, non strettamente necessario ma aumenta la completezza del prodotto. Questi requisiti vengono negoziati con l'azienda \Proponente;
+		\item \textbf{Z:} requisito \textbf{opzionale}, relativamente utile anch'esso ed è contrattabile con l'azienda \Proponente.
 	\end{itemize}
-
 	\item \textbf{Numero:} numero progressivo che parte da 1.
 	\item \textbf{Codice:} opzionale, identifica il caso d'uso generico e gli eventuali sotto-casi ad esso associati, è rappresentato da:
 	\begin{center}
 		\textbf{[NumeroCasoBase](.NumeroSottoCaso)*}
 	\end{center}
-	dove NumeroCasoBase e NumeroSottoCaso sono rappresentati da numeri progressivi. \\
+	dove NumeroCasoBase e NumeroSottoCaso sono rappresentati da numeri progressivi.\\
 	I sotto-casi possono ramificarsi ulteriormente portandoli ad avere a loro volta altri sotto-casi.
 \end{itemize}
 
@@ -73,12 +77,34 @@ La struttura del documento comprenderà:
 	\textcolor{white}{\textbf{Fonte}}\\	
 
 	RFO1\_1.1 & ......... & Capitolato\\
+	\hline
+\end{tabular}
+\end{table}
 
+\myparagraph{Requisiti di processo}\label{RequisitiProcesso}Dopo un confronto con il \VT\ si è ritenuto opportuno riportare i requisiti presenti nell'\AdR\ ritenuti da noi requisiti di processo all'interno di questo documento.\\
+\begin{table}[h]
+	\centering
+	\caption{Requisiti di processo} 
+\rowcolors{2}{white}{celeste} 
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|C{9.5cm} C{2.5cm}|} 
+	
+	\rowcolor{darkblue}
+	\textcolor{white}{\textbf{Descrizione}}&
+	\textcolor{white}{\textbf{Fonte}}\\	
+
+	La piattaforma deve essere sviluppata \glo{production-ready}. & Capitolato\\
+	Il codice sorgente deve essere realizzato con un sistema di \glo{versionamento} e caricato in una \glo{repository} su \glo{GitHub}. & Capitolato\\
+	Il codice sorgente deve essere sottoposto ad analisi statica attraverso lo strumento \glo{Typescript-eslint}. & Capitolato\\
+	Devono essere realizzati test di integrazione per verificare l’integrazione con i sottosistemi. & Capitolato\\
+	Devono essere realizzati test d’unità per verificare le singole componenti del prodotto. & Interna\\
+	E desiderabile avere anche lo stadio di \glo{Production}. & Capitolato\\
+	\hline
 \end{tabular}
 \end{table}
 
 \myparagraph{Classificazione dei casi d'uso}
-Tutti i casi d'uso analizzati sono individuati da un codice identificativo univoco, non modificabile dopo l'assegnazione, rappresentato nel seguente modo:
+Tutti i casi d'uso analizzati sono individuati da un codice identificativo univoco rappresentato nel seguente modo:
 
 \begin{center}
 	\textbf{UC[NumeroCasoBase](.NumeroSottoCaso)*}
@@ -92,8 +118,8 @@ I sotto-casi possono avere a loro volta altri sotto-casi.\\
 I casi d'uso analizzati comprenderanno:
 \begin{itemize}
 	\item \textbf{Codice identificativo:} assegnato secondo quanto stabilito precedentemente;
-	\item \textbf{Nome:} titolo assegnato al caso d'uso e indicato dopo il codice identificativo; 
-	\item \textbf{Rappresentazione grafica:} descrizione grafica del caso d'uso attraverso lo standard \glo{\textit{UML}};
+	\item \textbf{Nome:} titolo assegnato al caso d'uso e indicato dopo il codice identificativo;
+	\item \textbf{Rappresentazione grafica:} descrizione grafica del caso d'uso attraverso lo standard \glo{UML};
 	\item \textbf{Descrizione:} breve descrizione testuale del caso d'uso;
 	\item \textbf{Attori:} rappresentano gli utenti che hanno un'interazione con il sistema, si dividono in:
 	\begin{itemize}
@@ -105,13 +131,12 @@ I casi d'uso analizzati comprenderanno:
 	\item \textbf{Trigger:} opzionale, evento scatenante del caso d'uso;
 	\item \textbf{Scenario principale:} elenco del flusso di eventi del caso d'uso;
 	\item \textbf{Scenario alternativo:} opzionale, elenco delle azioni che si verificano allo scatenarsi di un evento non previsto rispetto allo scenario principale del caso d'uso;
-	\item \textbf{Inclusioni:} opzionali, si ha inclusione quando un caso d'uso è incondizionatamente incluso nell'esecuzione del caso d'uso in esame;	
+	\item \textbf{Inclusioni:} opzionali, si ha inclusione quando un caso d'uso è incondizionatamente incluso nell'esecuzione del caso d'uso in esame;
 	\item \textbf{Estensioni:} opzionali, si ha estensione quando l'esecuzione di un caso d'uso interrompe l'esecuzione del caso d'uso in esame;
 	\item \textbf{Generalizzazioni:} opzionali, si ha generalizzazione quando si intende aggiungere o modificare caratteristiche base di un caso d'uso a un altro caso d'uso.
 \end{itemize}
 
-\myparagraph{Qualità dell'analisi dei requisiti}\label{QualitàAnalisi}
-Come indicato dallo standard \glo{IEEE 830-1998}, la specifica deve essere:
+\myparagraph{Qualità dell'analisi dei requisiti}\label{QualitàAnalisi}Come indicato dallo standard IEEE 830-1998, la specifica deve essere:
 \begin{itemize}
 	\item \textbf{Priva di ambiguità:} i requisiti devono rispettare chiaramente i bisogni dell'utente finale del prodotto;
 	\item \textbf{Corretta:} i requisiti devono essere coerenti rispetto alle richieste degli utenti finali;
@@ -121,4 +146,19 @@ Come indicato dallo standard \glo{IEEE 830-1998}, la specifica deve essere:
 	\item \textbf{Modificabile:} i requisiti devono poter essere modificati senza perdita di consistenza e completezza;
 	\item \textbf{Tracciabile:} l'origine dei requisiti è chiara e facilmente rintracciabile;
 	\item \textbf{Ordinata per rilevanza:} i requisiti devono essere classificati secondo la loro rilevanza rispetto a quanto contrattato con il proponente.
+\end{itemize}
+
+\myparagraph{Metriche}\label{MAnalisi}Di seguito vengono presentate le metriche utilizzate per garantire il controllo sulla qualità. Per una descrizione sullo standard di riferimento e un elenco completo di tutte le metriche applicate si rimanda alla sezione \S\ref{9126} dell'appendice.
+\begin{itemize}
+\item\textbf{MPR01: Soddisfacimento requisiti obbligatori}\hypertarget{MSoddRequisiti}\\
+Indica la percentuale di requisiti obbligatori soddisfatti nel momento in cui viene calcolato.\\
+Viene calcolato nel seguente modo:
+	\begin{center}
+		\textbf{RO=\(\frac{ROC}{RO}\)*100}
+	\end{center}
+	dove:
+	\begin{itemize}
+		\item \textbf{RO} sta per \textbf{requisiti obbligatori};
+		\item \textbf{ROC} sta per \textbf{requisiti obbligatori coperti dall'implementazione}.
+	\end{itemize}
 \end{itemize}

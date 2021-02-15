@@ -1,0 +1,43 @@
+%% 3 LEONARDO
+% 3. PDP. A dynamically generated web page where the customer can read all the information related to
+% the selected product. In addition the user can add the product to his cart. In the PDP page the user
+% can:
+%     a. View the product information (e.g.: description, images, price, ...);
+%     b. Add the product to the cart;
+%     c. Click the link to redirect to the shopping cart page;
+
+\UC{Apertura PDP}
+L'utente non autenticato o l'acquirente può aprire la PDP di un prodotto per visualizzarne i dettagli. 
+\begin{itemize}
+    \item \textbf{Attori Primari:} Acquirente; Utente non autenticato.
+    \item \textbf{Precondizione:} L'attore si trova nella PLP, dalla pagina del carrello nella home.
+    \item \textbf{Postcondizione:} L'attore si trova sulla pagina di dettaglio del prodotto.
+    \item \textbf{Scenario Principale:}
+        \begin{itemize}
+            \item L'attore seleziona un prodotto tra quelli che visualizza.
+            \item L'attore viene portato sulla PDP del prodotto selezionato, dove visualizza i seguenti dettagli:
+            \begin{itemize}
+                \item Il nome del prodotto;
+                \item La descrizione del prodotto;
+                \item Le categorie del prodotto;
+                \item Il prezzo del prodotto;
+                \item Lo sconto percentuale sul prezzo del prodotto, il prezzo scontato e il prezzo originale;
+                \item La quantità del prodotto disponibile;
+                \item Le foto del prodotto.
+            \end{itemize}
+            \item (UC9.1) - L'attore è in grado di aggiungere una certa quantità del prodotto al carrello direttamente dalla PDP. 
+        \end{itemize}
+\end{itemize}
+
+\UC{Aggiunta prodotto al carrello dalla PDP}
+L'utente non autenticato o l'acquirente si trova nella PDP che vuole aggiungere al suo carrello.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Acquirente; Utente non autenticato.
+    \item \textbf{Precondizione:} L'attore si trova nella pagina di dettaglio del prodotto,
+    \item \textbf{Postcondizione:} Il prodotto è stato aggiunto al suo carrello.
+    \item \textbf{Scenario Principale:} L'attore vuole comprare il prodotto visualizzato dalla PDP e in tal caso:
+    \begin{itemize}
+        \item Preme sull'azione di aggiunta al carrello del seguente prodotto.
+        \item (UC11) - Aggiunta del prodotto al carrello.
+    \end{itemize}
+\end{itemize}

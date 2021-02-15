@@ -1,0 +1,150 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\UC{Modifica informazioni venditore}
+Il venditore vuole modificare le sue informazioni personali.
+\begin{itemize}
+    \item \textbf{Attori primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore si trova nella pagina personale e ha premuto sull'azione per la modifica delle informazioni.
+    \item \textbf{Postcondizione:} Il venditore ha aggiornato le sue informazioni personali.
+    \item \textbf{Scenario Principale:} Il venditore ha premuto sull'azione per la modifica delle informazioni personali e, dopo aver compiuto la modifica, potrà confermarle attraverso l'azione di salvataggio. Le informazioni che si possono modificare sono:
+    \begin{itemize}
+        \item (\actualUC.1) - Inserimento nuovo indirizzo e-mail.
+        \item (\actualUC.2) - Inserimento nuova password.
+        \item (\actualUC.3) - Inserimento conferma nuova password.
+        \item (\actualUC.4) - Inserimento nuova foto profilo.
+        \item (\actualUC.5) - Rimozione foto profilo.
+        \item (\actualUC.6) - Modifica della descrizione dell'azienda.
+    \end{itemize}
+    In seguito ci sarà la conferma delle modifiche compiute e le informazioni personali verranno modificate.
+    \item \textbf{Scenario Alternativo:} Il venditore non conferma le modifiche effettuato e, perciò, non verranno modificate le informazioni personali.
+\end{itemize}
+\resetSubUC
+
+\subUC{Inserimento nuovo indirizzo email}
+Il venditore vuole modificare la propria email.
+\begin{itemize}
+    \item \textbf{Attori primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore si trova nella vista di modifica informazioni personali e vuole inserire un nuovo indirizzo email.
+    \item \textbf{Postcondizione:} Il venditore ha aggiornato la sua email.
+    \item \textbf{Scenario Principale:} Il venditore si trova nella vista di modifica informazioni personali e vuole modificare la propria email attraverso le seguenti azioni:
+    \begin{itemize}
+        \item Si posiziona nel campo di inserimento della nuova email dove è presente quella attualmente utilizzata.
+        \item Inserisce quella nuova o modifica quella attuale.
+    \end{itemize}
+    \item \textbf{Scenario Alternativo 1:} Il venditore non modifica l'attuale indirizzo email utilizzato e, perciò, non cambierà.
+    \item \textbf{Scenario Alternativo 2:} Il venditore inserisce un'email già utilizzata nella piattaforma. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà visualizzato il messaggio di errore in caso di email già registrata nella piattaforma.
+        \item Verrà impedita la modifica delle informazioni.
+    \end{itemize}
+    \item \textbf{Scenario Alternativo 3:} Il venditore inserisce un'email non valida. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà visualizzato il messaggio di errore in caso di email non valida.
+        \item Verrà impedita la modifica delle informazioni.
+    \end{itemize}
+    \item \textbf{Scenario Alternativo 4:} Il venditore non inserisce l'email e lascia il campo di inserimento vuoto. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito.
+        \item Verrà impedita la modifica delle informazioni.
+    \end{itemize}
+    \item \textbf{Estensioni:}
+    \begin{itemize}
+        \item (UC) - Visualizzazione messaggio di errore in caso di email già registrata nella piattaforma.
+        \item (UC) - Visualizzazione messaggio di errore in caso di email non valida.
+        \item (UC) - Visualizzazione messaggio campo dati obbligatorio non inserito.
+    \end{itemize}
+\end{itemize}
+
+\subUC{Inserimento nuova password}
+Il venditore vuole modificare la propria password.
+\begin{itemize}
+    \item \textbf{Attori primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore si trova nella vista di modifica informazioni personali e vuole inserire una nuova password.
+    \item \textbf{Postcondizione:} Il venditore ha inserito la nuova password.
+    \item \textbf{Scenario Principale:} Il venditore si trova nella vista di modifica informazioni personali e vuole modificare la propria password attraverso le seguenti azioni:
+        \begin{itemize}
+            \item Si posiziona nel campo di inserimento vuoto della nuova password.
+            \item La scrive.
+            \item Inserisce la stessa password nel campo di conferma nuova password.
+        \end{itemize}
+    \item \textbf{Scenario Alternativo 1:} Il venditore non inserisce alcuna password e lascia il campo di inserimento nuova password vuoto. In questo caso non verrà modificata la password.
+    \item \textbf{Scenario Alternativo 2:} Il venditore inserisce una password troppo debole. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà visualizzato il messaggio di errore di password troppo debole.
+        \item Verrà impedita la modifica delle informazioni.
+    \end{itemize}
+    \item \textbf{Estensioni:}
+    \begin{itemize}
+        \item (UC) - Visualizzazione messaggio di errore in caso di password troppo debole.
+    \end{itemize}
+\end{itemize}
+
+\subUC{Inserimento conferma nuova password}
+Il venditore vuole modificare la propria password e deve confermare quella nuova da inserire.
+\begin{itemize}
+    \item \textbf{Attori primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore si trova nella vista di modifica informazioni personali e vuole inserire una nuova password.
+    \item \textbf{Postcondizione:} Il venditore ha inserito la conferma della nuova password.
+    \item \textbf{Scenario Principale:} Il venditore si trova nella vista di modifica informazioni personali, ha già inserito la nuova password e la deve confermare attraverso le seguenti azioni:
+        \begin{itemize}
+            \item Si posiziona nel campo di inserimento vuoto della conferma nuova password.
+            \item Inserisce la stessa password che è stata inserita nel campo conferma password.
+        \end{itemize}
+    \item \textbf{Scenario Alternativo 1:} Il venditore non inserisce alcuna password e lascia il campo di inserimento conferma nuova password vuoto. In questo caso non verrà modificata la password.
+    \item \textbf{Scenario Alternativo 2:} Il venditore inserisce una password di conferma diversa da quella inserita nel campo di inserimento nuova password. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà visualizzato il messaggio di errore di password e password di conferma diverse.
+        \item Verrà impedita la modifica delle informazioni.
+    \end{itemize}
+    \item \textbf{Estensioni:}
+    \begin{itemize}
+        \item (UC) - Visualizzazione messaggio di errore in caso di password e password di conferma diverse
+    \end{itemize}
+\end{itemize}
+
+\subUC{Inserimento nuova foto profilo}
+Il venditore vuole modificare la propria foto profilo.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore si trova nella vista di modifica informazioni personali e vuole modificare la sua foto profilo.
+    \item \textbf{Postcondizione:} Il venditore ha inserito una nuova foto profilo.
+    \item \textbf{Scenario Principale:} Il venditore vuole inserire una nuova foto profilo attraverso le seguenti azioni:
+    \begin{itemize}
+        \item Si posiziona nel campo di inserimento della nuova foto profilo.
+        \item Seleziona un'immagine tra quelle disponibili localmente nel proprio computer.
+        \item Viene caricata.
+    \end{itemize}
+    \item \textbf{Scenario Alternativo 1:} Il venditore non seleziona alcun file e la foto profilo non verrà cambiata.
+    \item \textbf{Scenario Alternativo 2:} Il venditore seleziona un file del tipo non immagine. In questo caso:
+    \begin{itemize}
+        \item (UC) - Verrà visualizzato il messaggio di errore il quale segnala che il file selezionato non è del tipo immagine.
+        \item Verrà impedita la modifica delle informazioni.
+    \end{itemize}
+    \item \textbf{Estensioni:}
+    \begin{itemize}
+        \item (UC32) - Visualizzazione messaggio di errore nel caso in cui il file selezionato non sia del tipo immagine.
+    \end{itemize}
+\end{itemize}
+
+\subUC{Rimozione foto profilo}
+Il venditore vuole rimuovere la propria foto profilo.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore si trova nella vista di modifica informazioni personali e ha già inserito una foto profilo.
+    \item \textbf{Postcondizione:} Il venditore ha rimosso la sua foto profilo.
+    \item \textbf{Scenario Principale:} Il venditore rimuove rimuovere la sua foto profilo attraverso l'adeguata azione e come foto profilo verrà utilizzata un'immagine di riempimento.
+\end{itemize}
+
+\subUC{Modifica della descrizione dell'azienda}
+Il venditore vuole modificare la descrizione dell'azienda che viene mostrata nella vista home.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Venditore.
+    \item \textbf{Precondizione:} Il venditore si trova nella vista di modifica informazioni personali e vuole modificare l'attuale descrizione dell'azienda.
+    \item \textbf{Postcondizione:} Il venditore ha modificato l'attuale descrizione dell'azienda.
+    \item \textbf{Scenario Principale:} Il venditore vuole modificare l'attuale descrizione dell'azienda attraverso le seguenti azioni:
+    \begin{itemize}
+        \item Si posiziona nel campo di modifica della descrizione dell'azienda dove è presente quella attualmente inserita.
+        \item La modifica come meglio desidera.
+    \end{itemize}
+    \item \textbf{Scenario Alternativo:} Il venditore non modifica l'attuale descrizione dell'azienda e, perciò, non cambierà.
+\end{itemize}

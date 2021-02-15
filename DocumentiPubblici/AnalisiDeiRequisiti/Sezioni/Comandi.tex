@@ -14,4 +14,66 @@
 
 \newcommand{\pathimg}{../../Immagini/N.O.S.jpg}
 
-\newcommand{\Versionedoc}{1.0.0}
+\newcommand{\Versionedoc}{1.9}
+
+% Counters
+
+\newcounter{UCcounter}
+\newcounter{subUCcounter}
+\newcounter{subSubUCcounter}
+\setcounter{UCcounter}{0}
+
+\newcommand{\UC}[1]{
+	\stepcounter{UCcounter}
+	\subsection{UC\theUCcounter{} - #1}
+	\label{UC\theUCcounter}
+}
+\newcommand{\actualUC}{UC\theUCcounter}
+
+\newcommand{\resetSubUC}{
+	\setcounter{subUCcounter}{0}
+}
+\newcommand{\subUC}[1]{
+	\stepcounter{subUCcounter}
+	\subsubsection{UC\theUCcounter.\thesubUCcounter{} - #1}
+	\label{UC\theUCcounter.\thesubUCcounter}
+}
+\newcommand{\actualSubUC}{UC\theUCcounter.\thesubUCcounter}
+
+\newcommand{\resetSubSubUC}{
+	\setcounter{subSubUCcounter}{0}
+}
+\newcommand{\subSubUC}[1]{
+	\stepcounter{subsubUCcounter}
+	\subsubsection{UC\theUCcounter.\thesubUCcounter.\thesubSubUCcounter{} - #1}
+	\label{UC\theUCcounter.\thesubUCcounter.\thesubSubUCcounter}
+}
+\newcommand{\actualSubSubUC}{UC\theUCcounter.\thesubUCcounter.\thesubSubUCcounter}
+
+\newcounter{rfoCounter}
+\setcounter{rfoCounter}{0}
+\newcommand{\rfun}[2]{
+	\stepcounter{rfoCounter}
+	RF#1\therfoCounter\ifthenelse{\equal{#2}{}}{}{\_#2}
+}
+
+\newcounter{rqCounter}
+\setcounter{rqCounter}{0}
+\newcommand{\rqua}[1]{
+	\stepcounter{rqCounter}
+	RQ#1\therqCounter{}
+}
+
+\newcounter{rvCounter}
+\setcounter{rvCounter}{0}
+\newcommand{\rvin}[1]{
+	\stepcounter{rvCounter}
+	RV#1\thervCounter{}
+}
+
+\newcounter{rpCounter}
+\setcounter{rpCounter}{0}
+\newcommand{\rpre}[1]{
+	\stepcounter{rpCounter}
+	RP#1\therpCounter
+}

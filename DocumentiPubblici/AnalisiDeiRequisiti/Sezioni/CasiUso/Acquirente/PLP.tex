@@ -1,0 +1,37 @@
+% FILIPPO
+% 2. PLP. The customer can:
+%     a. Select multiple product items;
+%     b. Add the selected products to the shopping cart;
+%     c. Navigate to the shopping cart page;
+
+\UC{Ordinamento per prezzo crescente}
+L'utente non autenticato o l'acquirente può ordinare i prodotti risultanti dalla ricerca effettuata in precedenza per prezzo crescente.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Acquirente; Utente non autenticato.
+    \item \textbf{Precondizione:} L'attore è nella PLP e ha selezionato l'ordinamento per prezzo crescente.
+    \item \textbf{Postcondizione:} I prodotti nella pagina vengono ordinati in ordine di prezzo crescente.
+    \item \textbf{Scenario Principale:} L'attore vuole ordinare i prodotti nella pagina così da poterli avere ordinati dal più economico al più costoso.
+\end{itemize}
+
+\UC{Ordinamento per prezzo decrescente}
+L'utente non autenticato o l'acquirente può ordinare i prodotti risultanti dalla ricerca effettuata in precedenza per prezzo decrescente.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Acquirente; Utente non autenticato.
+    \item \textbf{Precondizione:} L'attore è nella PLP e ha selezionato l'ordinamento per prezzo decrescente.
+    \item \textbf{Postcondizione:} I prodotti nella pagina vengono ordinati in ordine di prezzo decrescente.
+    \item \textbf{Scenario Principale:} L'attore vuole ordinare i prodotti nella pagina così da poterli avere ordinati dal più costoso al più economico.
+\end{itemize}
+
+\UC{Aggiunta al carrello dalla PLP}
+L'utente non autenticato o l'acquirente può aggiungere al carrello i prodotti direttamente dalla PLP, senza che debba per forza entrare nella \glo{PDP} specifica del prodotto.
+\begin{itemize}
+    \item \textbf{Attori Primari:} Acquirente; Utente non autenticato.
+    \item \textbf{Precondizione:} L'attore è nella PLP.
+    \item \textbf{Postcondizione:} L'attore rimane nella PLP e al carrello è stato aggiunto il prodotto nella quantità desiderata.
+    \item \textbf{Scenario Principale:} L'attore vuole comprare più quantità di un prodotto e in tal caso:
+    \begin{itemize}
+        \item Sceglie il prodotto dalla PLP.
+        \item Preme sull'azione di aggiunta al carrello del seguente prodotto.
+        \item (UC11) - Aggiunta del prodotto al carrello.
+    \end{itemize}
+\end{itemize}

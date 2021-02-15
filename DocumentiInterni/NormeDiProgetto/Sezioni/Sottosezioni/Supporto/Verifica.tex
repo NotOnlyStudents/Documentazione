@@ -12,25 +12,20 @@ Utilizzando le norme presenti il gruppo si aspetta di ottimizzare e uniformare l
 L'analisi statica studia la documentazione e il codice accertando che siano conformi alle regole stabilite, non vi siano difetti e presentino le proprietà desiderate.
 Il \textit{Verificatore} seguirà i seguenti metodi:
 \begin{itemize}
-	\item \glo{\textbf{Walkthrough:}} procede ad una lettura critica dell'intero prodotto in esame alla ricerca di difetti;
-	\item \glo{\textbf{Inspection:}} procede ad una lettura critica di una parte prodotto in esame, focalizzando la ricerca su problemi che si presentano più frequentemente indicati nella Lista di Controllo all'interno del \textit{\PdQ}.
+	\item \glo{\textbf{Walkthrough:}} procede ad una lettura critica del prodotto in esame alla ricerca di difetti;
+	\item \glo{\textbf{Inspection:}} procede ad una lettura critica del prodotto in esame, focalizzando la ricerca su problemi che si presentano più frequentemente indicati nella lista di controllo all'interno del \PdQ.
 \end{itemize}
 
-\myparagraph{Verifica della documentazione}\label{VerificaDocumentazione}Ogniqualvolta si redige una sezione o si apporta una modifica al documento, viene effettuata la verifica.
-Il \textit{Verificatore} incaricato procede nel seguente modo:
+\myparagraph{Verifica della documentazione}\label{VerificaDocumentazione}Ogniqualvolta si redige una sezione o si apporta una modifica al documento, viene effettuata la verifica. Il \textit{Verificatore} incaricato procede nel seguente modo:
 \begin{itemize}
-	\item Se non ancora creata, crea l'\glo{issue} in \textit{GitHub};
-	\item Sposta l'issue in "IN PROGRESS";
-	\item Rilegge l'intero documento segnando gli errori incontrati nella Lista di Controllo;
-	\item Successivamente ad ogni verifica viene applicato il metodo di \textit{Inspection} concentrandosi su una particolare criticità presente nella Lista di Controllo, nel caso emergano sostanziali errori si valuta l'aggiornamento della Lista di Controllo;
+	\item Rilegge la sezione, nel caso emergano sostanziali errori si valuta l'aggiornamento della lista di controllo;
+	\item Successivamente viene applicato il metodo di Inspection concentrandosi sulle criticità presenti nella lista di controllo;
 	\item Se riscontra problemi logici, si accorda con il redattore del documento per la correzione;
-	\item Sposta l'issue in "DONE".
+	\item Chiude la pull request collegata e automaticamente l'issue associata passa in "VERIFIED".
 \end{itemize}
 
 \myparagraph{Verifica del codice}\label{VerificaCodice}Il \textit{Verificatore} incaricato procede nel seguente modo:
 \begin{itemize}
-	\item Se non ancora creata, crea l'issue in \textit{GitHub};
-	\item Sposta l'issue in "IN PROGRESS";
 	\item Rilegge interamente il codice scritto al fine di:
 	\begin{itemize}
 		\item Accertare che il codice esegua nella sequenza specificata e sia ben strutturato;
@@ -41,21 +36,21 @@ Il \textit{Verificatore} incaricato procede nel seguente modo:
 		\item Provare la correttezza del codice sorgente rispetto ai requisiti;
 		\item Assicurare che sia stato seguito quanto scritto nelle \NdPv\ nella sezione \S\ref{CodificaConvenzioni}.
 	\end{itemize}
-	\item Successivamente ad ogni verifica viene applicato il metodo di \textit{Inspection} concentrandosi su una particolare criticità presente nella Lista di Controllo, nel caso emergano sostanziali errori si valuta l'aggiornamento della Lista di Controllo;
+	Nel caso emergano sostanziali errori si valuta l'aggiornamento della lista di controllo;
+	\item Successivamente ad ogni verifica viene applicato il metodo di Inspection concentrandosi sulle criticità presenti nella lista di controllo;
 	\item Se riscontra problemi, si accorda con il redattore del documento per la correzione. 
-	\item Sposta l'issue in "DONE".
+	\item Chiude la pull request collegata e automaticamente l'issue associata passa in "VERIFIED".
 \end{itemize}
 
 \subsubsection{Analisi dinamica}
-L'analisi dinamica procede a verificare il programma durante la sua esecuzione. Per procedere a questa attività vengono utilizzati dei \glo{test} ripetibili e automatizzati con specifici:
+L'analisi dinamica procede a verificare il programma durante la sua esecuzione. Per procedere a questa attività vengono utilizzati GitHub Actions e dei test ripetibili e automatizzati con specifici:
 \begin{itemize}
 	\item \textbf{Ambiente di esecuzione};
 	\item \textbf{Input e Output};
 	\item \textbf{Procedure};
 \end{itemize}
 
-\myparagraph{Tipologia di test effettuati}\label{Tests}
-I test permettono di valutare se il programma svolge i tasks per cui è stato sviluppato. Il \PdQv{}\ specifica quali e quanti test effettuare.
+\myparagraph{Tipologia di test effettuati}\label{Tests}I test permettono di valutare se il programma svolge i tasks per cui è stato sviluppato. Il \PdQv{}\ specifica quali e quanti test effettuare.
 \paragraph*{Test d'unità}
 I \glo{test d'unità} consistono nell'isolare e testare la parte più piccola di software, chiamata appunto unità. Lo scopo è di valutare la logica interna del codice d'unità in modo da poterne stabilire il corretto funzionamento. 
 \paragraph*{Test d'integrazione}
@@ -67,10 +62,8 @@ Vengono effettuati per valutare che il prodotto soddisfi tutti i requisiti softw
 
 \myparagraph{Procedura di verifica}\label{ProceduraVerifica}Il \textit{Verificatore} incaricato procede nel seguente modo:
 \begin{itemize}
-	\item Se non ancora creata, crea l'issue in \textit{GitHub};
-	\item Sposta l'issue in "IN PROGRESS";
 	\item Esegue tutti i test previsti;
 	\item Se riscontra problemi, si accorda con il redattore del codice per la correzione. 
-	\item Sposta l'issue in "DONE".
+	\item Chiude la pull request collegata e automaticamente l'issue associata passa in "VERIFIED".
 	\item Avverte i redattori incaricati ad aggiornare il \PdQv\ con i risultati ottenuti.
 \end{itemize}
