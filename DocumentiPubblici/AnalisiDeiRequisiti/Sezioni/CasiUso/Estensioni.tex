@@ -64,19 +64,21 @@ Visualizzazione messaggio che segnala all'utente il mancato inserimento di un ca
 \end{itemize}
 
 % Estensioni carrello
+\begin{comment}
 \UC{Visualizzazione messaggio di errore prodotto non disponibile}
-L'utente autenticato o non autenticato richiede un prodotto o la quantità di prodotto che non è disponibile.
+L'acquirente o l'utente non autenticato richiede un prodotto che non è disponibile.
 \begin{itemize}
-    \item \textbf{Attori Primari:} Utente autenticato; Utente non autenticato.
-    \item \textbf{Precondizione:} L'utente richiede di aggiungere al carrello un prodotto o una quantità di prodotto non disponibile. 
-    \item \textbf{Postcondizione:} All'utente viene impedita l'aggiunta al carrello e segnalata la causa.
-    \item \textbf{Scenario Principale:}
+    \item \textbf{Attori primari:} acquirente o utente non autenticato;
+    \item \textbf{Precondizione:} L'attore richiede di aggiungere al carrello un prodotto non disponibile;
+    \item \textbf{Postcondizione:} viene impedita l'aggiunta al carrello e segnalata la causa.
+    \item \textbf{Scenario principale:}
         \begin{itemize}
-            \item L'utente richiede di aggiungere al carrello un prodotto o una quantità di prodotto non disponibile
-            \item viene scartata la modifica, il carrello rimane invariato
-            \item viene visualizzato un visualizzato un errore che indica la non disponibilità del prodotto
+            \item L'utente richiede di aggiungere al carrello un prodotto non disponibile;
+            \item Viene scartata la modifica, il carrello rimane invariato;
+            \item Viene visualizzato un visualizzato un errore che indica la non disponibilità del prodotto.
         \end{itemize}
 \end{itemize}
+\end{comment}
 
 % Estensioni info personali
 \UC{Visualizzazione messaggio di errore nel caso in cui il file selezionato non sia del tipo immagine}
