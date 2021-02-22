@@ -21,7 +21,7 @@ L'utente non autenticato che non dispone di credenziali può registrarsi e acced
 		\item L'utente possiede un account presso il sistema.
 	\end{itemize}
 	\item \textbf{Estensioni:}
-	\begin{enumerate}
+	\begin{enumerate}[label=(\alph*)]
 		\item L'utente inserisce un indirizzo email e l'identity manager segnala che è già presente nella piattaforma
 		\begin{itemize}
 			\item L'utente non viene registrato presso il sistema;
@@ -35,11 +35,6 @@ L'utente non autenticato che non dispone di credenziali può registrarsi e acced
 			\item (UC) - Visualizzazione messaggio di errore in caso di password e password di conferma diverse;
 			\item L'utente può modificare le password inserite.
 		\end{itemize}
-		%\item l'utente prova ad accedere alla piattaforma con i dati inseriti nel modulo senza aver confermato il proprio indirizzo email
-		%\begin{itemize}
-		%	\item (UC) - Visualizzazione messaggio di errore in caso di credenziali sconosciute;
-		%	\item L'utente non possiede un account presso il sistema.
-		%\end{itemize}
 	\end{enumerate}
 \end{itemize}
 
@@ -68,7 +63,7 @@ L'utente compila il modulo per proseguire con la registrazione presso la piattaf
 	\item \textbf{Postcondizione:} l'utente ha inserito il proprio nome;
 	\item \textbf{Scenario principale:} l'utente non autenticato inserisce il proprio nome per la registrazione;
 	\item \textbf{Estensioni:}
-	\begin{enumerate}
+	\begin{enumerate}[label=(\alph*)]
 		\item L'utente non inserisce il nome e l'identity manager controlla il campo dati per il nome che non risulta compilato, in questo caso:
 		\begin{itemize}
 			\item (UC) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
@@ -84,8 +79,8 @@ L'utente compila il modulo per proseguire con la registrazione presso la piattaf
 	\item \textbf{Precondizione:} l'utente non è autenticato;
 	\item \textbf{Postcondizione:} l'utente ha inserito il proprio cognome;
 	\item \textbf{Scenario principale:} l'utente non autenticato inserisce il proprio cognome per la registrazione;
-	\item \textbf{Estensioni:} 
-	\begin{enumerate}
+	\item \textbf{Estensioni:}
+	\begin{enumerate}[label=(\alph*)]
 		\item L'utente non inserisce il cognome e l'identity manager controlla il campo dati per il cognome che non risulta compilato, in questo caso:
 		\begin{itemize}
 			\item (UC) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
@@ -103,7 +98,7 @@ L'utente non autenticato inserisce l'indirizzo email.
 	\item \textbf{Postcondizione:} l'utente non autenticato ha fornito un indirizzo email valido;
 	\item \textbf{Scenario principale:} l'utente non autenticato inserisce il proprio indirizzo email per procedere con la registrazione;
 	\item \textbf{Estensioni:}
-	\begin{enumerate}
+	\begin{enumerate}[label=(\alph*)]
 		\item L'utente non inserisce l'email e l'identity manager controlla il campo dati che risulta essere vuoto, in questo caso:
 		\begin{itemize}
 			\item (UC) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
@@ -125,8 +120,8 @@ L'utente non autenticato inserisce una password.
 	\item \textbf{Precondizione:} l'utente non autenticato non ha ancora fornito una password che rispetta i requisiti di complessità ed ha a disposizione un campo dati dove inserirla;
 	\item \textbf{Postcondizione:} l'utente ha inserito una password valida;
 	\item \textbf{Scenario principale:} l'utente non autenticato inserisce una password che rispetti le condizioni imposte per procedere con la registrazione;
-	\item \textbf{Estensioni:} 
-	\begin{enumerate}
+	\item \textbf{Estensioni:}
+	\begin{enumerate}[label=(\alph*)]
 		\item L'utente non inserisce la password e l'identity manager controlla il campo dati che risulta essere vuoto, in questo caso:
 		\begin{itemize}
 			\item (UC) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
@@ -149,7 +144,7 @@ L'utente non autenticato inserisce una password.
 	\item \textbf{Postcondizione:} l'utente ha inserito una la conferma della password ed è valida.
 	\item \textbf{Scenario principale:} l'utente non autenticato inserisce una password che rispetti le condizioni imposte per procedere con la registrazione;
 	\item \textbf{Estensioni:} 
-	\begin{enumerate}
+	\begin{enumerate}[label=(\alph*)]
 		\item L'utente non inserisce la conferma password e l'identity manager controlla il campo dati che risulta essere vuoto, in questo caso:
 		\begin{itemize}
 			\item (UC) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
@@ -187,7 +182,7 @@ L'utente non autenticato che dispone di credenziali venditore può accedere nell
     	\item L'utente viene portato alla dashboard.
     \end{itemize}
 	\item \textbf{Estensioni:}
-	\begin{enumerate}
+	\begin{enumerate}[label=(\alph*)]
 		\item L'utente compila i campi dati con delle credenziali, richiede l'autenticazione e l'identity manager segnala che le credenziali fornite non appartengono alla piattaforma
 		\begin{itemize}
 			\item L'utente non viene autenticato presso il sistema;
@@ -221,7 +216,7 @@ L'utente non autenticato inserisce l'indirizzo email.
 	\item \textbf{Postcondizione:}  l'utente ha inserito il proprio indirizzo email;
 	\item \textbf{Scenario principale:} l'utente non autenticato inserisce il proprio indirizzo email per procedere con l'autenticazione;
 	\item \textbf{Estensioni:}
-	\begin{enumerate}
+	\begin{enumerate}[label=(\alph*)]
 		\item L'utente non inserisce l'email e l'identity manager controlla il campo dati che risulta essere vuoto, in questo caso:
 		\begin{itemize}
 			\item (UC) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
@@ -239,7 +234,7 @@ L'utente non autenticato inserisce una password.
 	\item \textbf{Postcondizione:} l'utente ha inserito la propria password;
 	\item \textbf{Scenario principale:} l'utente non autenticato inserisce la propria password per procedere con l'autenticazione;
 	\item \textbf{Estensioni:} 
-	\begin{enumerate}
+	\begin{enumerate}[label=(\alph*)]
 		\item L'utente non inserisce la password e l'identity manager controlla il campo dati che risulta essere vuoto, in questo caso:
 		\begin{itemize}
 			\item (UC) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
@@ -272,7 +267,7 @@ L'utente non autenticato che dispone di credenziali acquirente può accedere nel
 		\item L'utente viene portato alla schermata principale della piattaforma.
 	\end{itemize}
 	\item \textbf{Estensioni:}
-	\begin{enumerate}
+	\begin{enumerate}[label=(\alph*)]
 		\item L'utente compila i campi dati con delle credenziali, richiede l'autenticazione e l'identity manager segnala che le credenziali fornite non appartengono alla piattaforma
 		\begin{itemize}
 			\item L'utente non viene autenticato presso il sistema;
@@ -307,8 +302,8 @@ L'utente che dispone di credenziali si è dimenticato la propria password e la v
         \item (UC) - Inserimento conferma nuova password;
         \item L'utente è autenticato e ha cambiato la password.
     \end{itemize}
-	\item \textbf{Estensioni:} 
-	\begin{enumerate}
+	\item \textbf{Estensioni:}
+	\begin{enumerate}[label=(\alph*)]
 		\item L'utente inserisce un indirizzo email e l'identity manager segnala che l'indirizzo email non è presente nella piattaforma
 		\begin{itemize}
 			\item (UC) - Viene visualizzato un messaggio di errore indirizzo email non registrato nella piattaforma;
