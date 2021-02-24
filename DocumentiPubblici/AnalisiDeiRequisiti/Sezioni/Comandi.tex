@@ -14,7 +14,7 @@
 
 \newcommand{\pathimg}{../../Immagini/N.O.S.jpg}
 
-\newcommand{\Versionedoc}{1.9}
+\newcommand{\Versionedoc}{1.11}
 
 % Counters
 
@@ -44,7 +44,7 @@
 	\setcounter{subSubUCcounter}{0}
 }
 \newcommand{\subSubUC}[1]{
-	\stepcounter{subsubUCcounter}
+	\stepcounter{subSubUCcounter}
 	\subsubsection{UC\theUCcounter.\thesubUCcounter.\thesubSubUCcounter{} - #1}
 	\label{UC\theUCcounter.\thesubUCcounter.\thesubSubUCcounter}
 }
@@ -77,3 +77,5 @@
 	\stepcounter{rpCounter}
 	RP#1\therpCounter
 }
+
+\newcommand{\lett}{\textbf{\alph*}.}

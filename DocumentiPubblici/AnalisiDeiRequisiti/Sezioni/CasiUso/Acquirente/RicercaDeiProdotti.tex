@@ -1,26 +1,31 @@
-\UC{Ricerca dei prodotti}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{Immagini/DiagrammiUC/UC5RicercaDeiProdotti.png}
-    \caption{Diagramma di \actualUC: Ricerca dei prodotti} 
-    \label{fig:RicercaDeiProdotti}
-\end{figure}
-
-L'utente non autenticato o l'acquirente può ricercare i prodotti dalla home oppure dalla \glo{PLP}.
+\UC{Ricerca dei prodotti} 
+L'utente non autenticato o l'acquirente può ricercare i prodotti dalla schermata principale oppure dalla \glo{PLP}.
 \begin{itemize}
-    \item \textbf{Attori Primari:} Acquirente; Utente non autenticato.
-    \item \textbf{Precondizione:} L'attore ha selezionato l'azione della ricerca e inserito le parole per la ricerca del prodotto.
-    \item \textbf{Postcondizione:} L'attore viene spostato alla PLP con i prodotti che contengono almeno una delle parole ricercate nella descrizione o nel nome. 
-    \item \textbf{Scenario Principale:} 
+    \item \textbf{Attori primari:} acquirente o utente non autenticato;
+    \item \textbf{Precondizione:} l'attore ha selezionato l'azione della ricerca e inserito le parole per la ricerca del prodotto;
+    \item \textbf{Postcondizione:} l'attore viene spostato alla PLP con i prodotti che contengono almeno una delle parole ricercate nella descrizione o nel nome;
+    \item \textbf{Scenario principale:} 
     \begin{itemize}
-        \item L'attore inserisce le parole per la ricerca del prodotto.
-        \item Preme sull'azione di ricerca.
-        \item Viene portato alla PLP che contiene che contiene tutti i prodotti che hanno almeno una delle parole indicate nella descrizione o il titolo
+        \item L'attore inserisce le parole per la ricerca del prodotto;
+        \item Preme sull'azione di ricerca;
+        \item Viene portato alla PLP che contiene tutti i prodotti che hanno almeno una delle parole indicate nella descrizione o il titolo
     \end{itemize}
-    \item \textbf{Estensioni:} (UC5.1) - Nel caso in cui la ricerca non dia risultati verrà visualizzato un messaggio dove viene segnalato all'attore questo fatto.
+    \item \textbf{Estensioni:} l'utente ricerca dei prodotti non presenti nella piattaforma.
+    \begin{itemize}
+    	\item (\actualUC.1) - Visualizzazione messaggio di ricerca senza alcun risultato.
+    \end{itemize}
 \end{itemize}
 
+\resetSubUC
+
+\subUC{Visualizzazione messaggio di ricerca o filtraggio senza alcun risultato}
+Nel caso in cui la ricerca o il filtraggio non dia risultati verrà visualizzato un opportuno messaggio.
+\begin{itemize}
+	\item \textbf{Attori primari:} acquirente, utente non autenticato;
+	\item \textbf{Precondizione:} l'attore ha svolto una ricerca o un filtraggio che non ha prodotto alcun risultato;
+	\item \textbf{Postcondizione:} all'attore verrà mostrato un messaggio che lo informa che la ricerca o il filtraggio non ha prodotto risultati;
+	\item \textbf{Scenario principale:} l'attore effettua una ricerca o un filtraggio senza alcun risultato e viene avvertito.
+\end{itemize}
 
 \UC{Filtraggio prodotti della PLP}
 \begin{figure}[H]
@@ -38,13 +43,16 @@ L'utente non autenticato o l'acquirente filtra i prodotti all'interno della PLP 
     \begin{itemize}
         \item L'attore imposta uno (o più) dei filtri seguenti 
         \begin{itemize}
-            \item (UC6.1) - Impostazione del filtro per categoria.
-            \item (UC6.2) - Impostazione del filtro per prezzo.
-            \item (UC6.3) - Impostazione del filtro per disponibilità nel magazzino.
+            \item (\actualUC.1) - Impostazione del filtro per categoria.
+            \item (\actualUC.2) - Impostazione del filtro per prezzo.
+            \item (\actualUC.3) - Impostazione del filtro per disponibilità nel magazzino.
         \end{itemize}
         \item La pagina viene aggiornata con i prodotti che rispettano i filtri applicati
     \end{itemize}
-    \item \textbf{Scenario Alternativo:} (UC5.1) - Nel caso i filtri selezionati non diano un risultato verrà visualizzato un messaggio dove viene segnalato all'attore questo fatto.
+    \item \textbf{Estensioni:} Nel caso la combinazione di filtri impostati non dia risultati verrà visualizzato un messaggio dove viene segnalato all'attore questo fatto.
+    \begin{itemize}
+    	\item (UC) - Visualizzazione messaggio di ricerca o filtraggio senza alcun risultato.
+    \end{itemize}
 \end{itemize}
 
 \resetSubUC
@@ -52,10 +60,10 @@ L'utente non autenticato o l'acquirente filtra i prodotti all'interno della PLP 
 \subUC{Filtro per categorie}
 L'utente non autenticato o l'acquirente può cercare i prodotti in base alla loro categoria, selezionando tra tutte le categorie disponibili.
 \begin{itemize}
-    \item \textbf{Attori Primari:} acquirente; Utente non autenticato.
-    \item \textbf{Precondizione:} L'attore è nella PLP e ha selezionato una (o più) categorie di quelle disponibili per quale filtrare.
-    \item \textbf{Postcondizione:} L'attore avrà a disposizione i prodotti filtrati in base alle categorie selezionate.
-    \item \textbf{Scenario Principale:} L'attore seleziona le categorie per filtrare i prodotti.
+    \item \textbf{Attori Primari:} acquirente o utente non autenticato;
+    \item \textbf{Precondizione:} l'attore è nella PLP e ha selezionato una (o più) categorie di quelle disponibili per quale filtrare;
+    \item \textbf{Postcondizione:} l'attore avrà a disposizione i prodotti filtrati in base alle categorie selezionate;
+    \item \textbf{Scenario principale:} l'attore seleziona le categorie per filtrare i prodotti.
 \end{itemize}
 
 \subUC{Filtro per prezzo}
