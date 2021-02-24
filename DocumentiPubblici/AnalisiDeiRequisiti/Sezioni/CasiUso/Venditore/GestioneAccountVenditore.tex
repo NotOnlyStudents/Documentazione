@@ -1,150 +1,266 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \UC{Modifica informazioni venditore}
 Il venditore vuole modificare le sue informazioni personali.
 \begin{itemize}
-    \item \textbf{Attori primari:} Venditore.
-    \item \textbf{Precondizione:} Il venditore si trova nella pagina personale e ha premuto sull'azione per la modifica delle informazioni.
-    \item \textbf{Postcondizione:} Il venditore ha aggiornato le sue informazioni personali.
-    \item \textbf{Scenario Principale:} Il venditore ha premuto sull'azione per la modifica delle informazioni personali e, dopo aver compiuto la modifica, potrà confermarle attraverso l'azione di salvataggio. Le informazioni che si possono modificare sono:
+    \item \textbf{Attori primari:} venditore;
+    \item \textbf{Attori secondari:} \glo{identity manager};
+    \item \textbf{Precondizione:} il venditore ha intenzione di modificare le proprie informazioni;
+    \item \textbf{Postcondizione:} il venditore ha aggiornato le proprie informazioni personali;
+    \item \textbf{Scenario principale:} il venditore si trova nella schermata della propria area personale e può compiere le seguenti azioni:
     \begin{itemize}
-        \item (\actualUC.1) - Inserimento nuovo indirizzo e-mail.
-        \item (\actualUC.2) - Inserimento nuova password.
-        \item (\actualUC.3) - Inserimento conferma nuova password.
-        \item (\actualUC.4) - Inserimento nuova foto profilo.
-        \item (\actualUC.5) - Rimozione foto profilo.
-        \item (\actualUC.6) - Modifica della descrizione dell'azienda.
+    	\item (UC) - Modifica del nome;
+    	\item (UC) - Modifica del cognome;
+        \item (UC) - Modifica dell'indirizzo email;
+        \item (UC) - Modifica della password;
+        \item (UC) - Modifica del logo;
+        \item (UC) - Rimozione del logo;
+        \item (UC) - Modifica nome dell'azienda;
+        \item (UC) - Modifica della descrizione dell'azienda.
     \end{itemize}
-    In seguito ci sarà la conferma delle modifiche compiute e le informazioni personali verranno modificate.
-    \item \textbf{Scenario Alternativo:} Il venditore non conferma le modifiche effettuato e, perciò, non verranno modificate le informazioni personali.
+    Il venditore conferma le modifiche compiute e le informazioni personali verranno modificate;
+    \item \textbf{Scenario alternativo:}
+    \begin{enumerate}[label=\lett]
+    	\item Il venditore non conferma le modifiche effettuate e di conseguenza non verranno aggiornate le informazioni personali;
+    \end{enumerate}
+    \item \textbf{Estensioni:}
+    \begin{enumerate}[label=\lett]
+    	\item Il venditore compila i campi dati per la password e la conferma della stessa con due password diverse, in questo caso:
+    	\begin{itemize}
+    		\item L'identity manager segnala che le due password inserite non coincidono;
+    		\item (UC) - Visualizzazione messaggio di errore in caso di password e password di conferma diverse;
+    		\item Il venditore può modificare le password inserite.
+    	\end{itemize}
+    	\item Il venditore inserisce un indirizzo email e l'identity manager segnala che è già presente nella piattaforma
+    	\begin{itemize}
+    		\item (UC) - Visualizzazione messaggio di errore in caso di email già registrata nella piattaforma;
+    		\item Viene fornita al venditore la possibilità di modificare il proprio indirizzo email inserito.
+    	\end{itemize}
+    \end{enumerate}
 \end{itemize}
 \resetSubUC
 
-\subUC{Inserimento nuovo indirizzo email}
+\subUC{Modifica del nome}
+Il venditore vuole modificare il proprio nome.
+\begin{itemize}
+	\item \textbf{Attori primari:} venditore;
+	\item \textbf{Attori secondari:} identity manager;
+	\item \textbf{Precondizione:} il venditore vuole aggiornare il proprio nome;
+	\item \textbf{Postcondizione:} il venditore ha aggiornato il proprio nome;
+	\item \textbf{Scenario principale:} il venditore modifica il proprio nome;
+	\item \textbf{Scenario alternativo:}
+	\begin{enumerate}[label=\lett]
+		\item Il venditore non modifica l'attuale nome utilizzato e di conseguenza non cambierà.
+	\end{enumerate}
+	\item \textbf{Estensioni:}
+	\begin{enumerate}[label=\lett]
+		\item Il venditore non inserisce il nome e l'identity manager controlla il campo dati che risulta essere vuoto, in questo caso:
+		\begin{itemize}
+			\item (UC) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
+			\item Viene fornita al venditore la possibilità di inserire un nome.
+		\end{itemize}
+	\end{enumerate} 
+\end{itemize}
+
+\subUC{Modifica del cognome}
+Il venditore vuole modificare il proprio cognome.
+\begin{itemize}
+	\item \textbf{Attori primari:} venditore;
+	\item \textbf{Attori secondari:} identity manager;
+	\item \textbf{Precondizione:} il venditore vuole aggiornare il proprio cognome;
+	\item \textbf{Postcondizione:} il venditore ha aggiornato il proprio cognome;
+	\item \textbf{Scenario principale:} il venditore modifica il proprio cognome;
+	\item \textbf{Scenario alternativo:}
+	\begin{enumerate}[label=\lett]
+		\item Il venditore non modifica l'attuale cognome utilizzato e di conseguenza non cambierà.
+	\end{enumerate}
+	\item \textbf{Estensioni:}
+	\begin{enumerate}[label=\lett]
+		\item Il venditore non inserisce il cognome e l'identity manager controlla il campo dati che risulta essere vuoto, in questo caso:
+		\begin{itemize}
+			\item (UC) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
+			\item Viene fornita al venditore la possibilità di inserire un cognome.
+		\end{itemize}
+	\end{enumerate} 
+\end{itemize}
+
+\subUC{Modifica dell'indirizzo email}
 Il venditore vuole modificare la propria email.
 \begin{itemize}
-    \item \textbf{Attori primari:} Venditore.
-    \item \textbf{Precondizione:} Il venditore si trova nella vista di modifica informazioni personali e vuole inserire un nuovo indirizzo email.
-    \item \textbf{Postcondizione:} Il venditore ha aggiornato la sua email.
-    \item \textbf{Scenario Principale:} Il venditore si trova nella vista di modifica informazioni personali e vuole modificare la propria email attraverso le seguenti azioni:
-    \begin{itemize}
-        \item Si posiziona nel campo di inserimento della nuova email dove è presente quella attualmente utilizzata.
-        \item Inserisce quella nuova o modifica quella attuale.
-    \end{itemize}
-    \item \textbf{Scenario Alternativo 1:} Il venditore non modifica l'attuale indirizzo email utilizzato e, perciò, non cambierà.
-    \item \textbf{Scenario Alternativo 2:} Il venditore inserisce un'email già utilizzata nella piattaforma. In questo caso:
-    \begin{itemize}
-        \item (UC) - Verrà visualizzato il messaggio di errore in caso di email già registrata nella piattaforma.
-        \item Verrà impedita la modifica delle informazioni.
-    \end{itemize}
-    \item \textbf{Scenario Alternativo 3:} Il venditore inserisce un'email non valida. In questo caso:
-    \begin{itemize}
-        \item (UC) - Verrà visualizzato il messaggio di errore in caso di email non valida.
-        \item Verrà impedita la modifica delle informazioni.
-    \end{itemize}
-    \item \textbf{Scenario Alternativo 4:} Il venditore non inserisce l'email e lascia il campo di inserimento vuoto. In questo caso:
-    \begin{itemize}
-        \item (UC) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito.
-        \item Verrà impedita la modifica delle informazioni.
-    \end{itemize}
+    \item \textbf{Attori primari:} venditore;
+    \item \textbf{Attori secondari:} identity manager;
+    \item \textbf{Precondizione:} il venditore vuole aggiornare il proprio indirizzo email;
+    \item \textbf{Postcondizione:} il venditore ha aggiornato il suo indirizzo email;
+    \item \textbf{Scenario principale:} il venditore modifica il proprio indirizzo email;
+    \item \textbf{Scenario alternativo:}
+    \begin{enumerate}[label=\lett]
+    	\item Il venditore non modifica l'attuale indirizzo email utilizzato e di conseguenza non cambierà.
+    \end{enumerate}
     \item \textbf{Estensioni:}
-    \begin{itemize}
-        \item (UC) - Visualizzazione messaggio di errore in caso di email già registrata nella piattaforma.
-        \item (UC) - Visualizzazione messaggio di errore in caso di email non valida.
-        \item (UC) - Visualizzazione messaggio campo dati obbligatorio non inserito.
-    \end{itemize}
+    \begin{enumerate}[label=\lett]
+    	\item Il venditore ha inserito un indirizzo email e l'identity manager segnala che non è nel formato non corretto, in questo caso:
+    	\begin{itemize}
+    		\item (UC) - Viene mostrato un messaggio d'errore indirizzo email non rispetta il formato;
+    		\item Viene fornita al venditore la possibilità di modificare l'indirizzo email inserito.
+    	\end{itemize}
+	    \item Il venditore non inserisce l'email e l'identity manager controlla il campo dati che risulta essere vuoto, in questo caso:
+	    \begin{itemize}
+	    	\item (UC) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
+	    	\item Viene fornita al venditore la possibilità di inserire un indirizzo email.
+	    \end{itemize}
+    \end{enumerate} 
 \end{itemize}
 
-\subUC{Inserimento nuova password}
+\subUC{Modifica della password}
 Il venditore vuole modificare la propria password.
 \begin{itemize}
-    \item \textbf{Attori primari:} Venditore.
-    \item \textbf{Precondizione:} Il venditore si trova nella vista di modifica informazioni personali e vuole inserire una nuova password.
-    \item \textbf{Postcondizione:} Il venditore ha inserito la nuova password.
-    \item \textbf{Scenario Principale:} Il venditore si trova nella vista di modifica informazioni personali e vuole modificare la propria password attraverso le seguenti azioni:
+    \item \textbf{Attori primari:} venditore;
+    \item \textbf{Precondizione:} il venditore vuole aggiornare la propria password;
+    \item \textbf{Postcondizione:} il venditore ha inserito la nuova password;
+    \item \textbf{Scenario principale:} Il venditore per poter cambiare la password deve compiere i seguenti passi:
         \begin{itemize}
-            \item Si posiziona nel campo di inserimento vuoto della nuova password.
-            \item La scrive.
-            \item Inserisce la stessa password nel campo di conferma nuova password.
+            \item (UC) - Inserimento password per accedere alla piattaforma; %Il venditore scrive la nuova password che vuole utilizzare per accedere alla piattaforma;
+            \item (UC) - Inserimento conferma password per accedere alla piattaforma. %Il venditore inserisce  la stessa password nel campo di conferma nuova password.
         \end{itemize}
-    \item \textbf{Scenario Alternativo 1:} Il venditore non inserisce alcuna password e lascia il campo di inserimento nuova password vuoto. In questo caso non verrà modificata la password.
-    \item \textbf{Scenario Alternativo 2:} Il venditore inserisce una password troppo debole. In questo caso:
-    \begin{itemize}
-        \item (UC) - Verrà visualizzato il messaggio di errore di password troppo debole.
-        \item Verrà impedita la modifica delle informazioni.
-    \end{itemize}
-    \item \textbf{Estensioni:}
-    \begin{itemize}
-        \item (UC) - Visualizzazione messaggio di errore in caso di password troppo debole.
-    \end{itemize}
+    \item \textbf{Scenari alternativi:}
+    \begin{enumerate}[label=\lett]
+    	\item Il venditore non inserisce alcuna password e lascia i campi per l'inserimento della nuova password e della conferma della stessa vuoti. In questo caso non verrà modificata la password.
+    \end{enumerate}
 \end{itemize}
 
-\subUC{Inserimento conferma nuova password}
+\subSubUC{Inserimento password per la modifica delle informazioni personali}
+Il venditore inserisce una nuova password.
+\begin{itemize}
+	\item \textbf{Attori primari:} venditore;
+	\item \textbf{Attori secondari:} identity manager;
+	\item \textbf{Precondizione:} il venditore non ha ancora fornito una password che rispetta i requisiti di complessità ed ha a disposizione un campo dati dove inserirla;
+	\item \textbf{Postcondizione:} il venditore ha inserito una password valida;
+	\item \textbf{Scenario principale:} il venditore inserisce una password che rispetta le condizioni imposte per procedere con la registrazione;
+	\item \textbf{Estensioni:}
+	\begin{enumerate}[label=\lett]
+		%\item Il venditore inserisce la password e l'identity manager controlla il campo dati che risulta essere vuoto, in questo caso:
+		%\begin{itemize}
+		%	\item (UC) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
+		%	\item Viene fornita all'utente la possibilità di inserire una password.
+		%\end{itemize}
+		\item Il venditore ha inserito una password e l'identity manager segnala che non è nel formato corretto, in questo caso:
+		\begin{itemize}
+			\item (UC) - Viene mostrato un messaggio d'errore password non rispetta i requisiti di complessità;
+			\item Viene fornita al venditore la possibilità di modificare la password inserita.
+		\end{itemize}
+	\end{enumerate} 
+\end{itemize}
+
+\subSubUC{Inserimento conferma password per la modifica delle informazioni personali}
+Il venditore inserisce la conferma della nuova password.
+\begin{itemize}
+	\item \textbf{Attori primari:} venditore;
+	\item \textbf{Attori secondari:} identity manager;
+	\item \textbf{Precondizione:} il venditore non ha ancora fornito una password che rispetta i requisiti di complessità ed ha a disposizione un campo dati dove inserirla;
+	\item \textbf{Postcondizione:} il venditore ha inserito la conferma della password ed è valida;
+	\item \textbf{Scenario principale:} il venditore inserisce una password che rispetta le condizioni imposte per procedere con la registrazione;
+	\item \textbf{Estensioni:}
+	\begin{enumerate}[label=\lett]
+		%\item Il venditore inserisce la password e l'identity manager controlla il campo dati che risulta essere vuoto, in questo caso:
+		%\begin{itemize}
+		%	\item (UC) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
+		%	\item Viene fornita all'utente la possibilità di inserire una password.
+		%\end{itemize}
+		\item Il venditore ha inserito una password e l'identity manager segnala che non è nel formato corretto, in questo caso:
+		\begin{itemize}
+			\item (UC) - Viene mostrato un messaggio d'errore password non rispetta i requisiti di complessità;
+			\item Viene fornita al venditore la possibilità di modificare la password inserita.
+		\end{itemize}
+	\end{enumerate} 
+\end{itemize}
+
+
+\subUC{Inserimento della conferma password}
 Il venditore vuole modificare la propria password e deve confermare quella nuova da inserire.
 \begin{itemize}
-    \item \textbf{Attori primari:} Venditore.
-    \item \textbf{Precondizione:} Il venditore si trova nella vista di modifica informazioni personali e vuole inserire una nuova password.
-    \item \textbf{Postcondizione:} Il venditore ha inserito la conferma della nuova password.
-    \item \textbf{Scenario Principale:} Il venditore si trova nella vista di modifica informazioni personali, ha già inserito la nuova password e la deve confermare attraverso le seguenti azioni:
+    \item \textbf{Attori primari:} venditore;
+    \item \textbf{Precondizione:} il venditore si trova nella vista di modifica informazioni personali e vuole inserire una nuova password;
+    \item \textbf{Postcondizione:} il venditore ha inserito la conferma della nuova password;
+    \item \textbf{Scenario principale:} il venditore si trova nella vista di modifica informazioni personali, ha già inserito la nuova password e la deve confermare attraverso le seguenti azioni:
         \begin{itemize}
             \item Si posiziona nel campo di inserimento vuoto della conferma nuova password.
             \item Inserisce la stessa password che è stata inserita nel campo conferma password.
         \end{itemize}
-    \item \textbf{Scenario Alternativo 1:} Il venditore non inserisce alcuna password e lascia il campo di inserimento conferma nuova password vuoto. In questo caso non verrà modificata la password.
-    \item \textbf{Scenario Alternativo 2:} Il venditore inserisce una password di conferma diversa da quella inserita nel campo di inserimento nuova password. In questo caso:
-    \begin{itemize}
-        \item (UC) - Verrà visualizzato il messaggio di errore di password e password di conferma diverse.
-        \item Verrà impedita la modifica delle informazioni.
-    \end{itemize}
     \item \textbf{Estensioni:}
-    \begin{itemize}
-        \item (UC) - Visualizzazione messaggio di errore in caso di password e password di conferma diverse
-    \end{itemize}
+    \begin{enumerate}
+    	\item Il venditore non inserisce alcuna password e lascia il campo di inserimento conferma nuova password vuoto. In questo caso non verrà modificata la password;
+    	\item Il venditore inserisce una password di conferma diversa da quella inserita nel campo di inserimento nuova password. In questo caso:
+    	\begin{itemize}
+    		\item (UC) - Verrà visualizzato il messaggio di errore di password e password di conferma diverse.
+    		\item Verrà impedita la modifica delle informazioni.
+    	\end{itemize}
+    \end{enumerate}
 \end{itemize}
 
-\subUC{Inserimento nuova foto profilo}
-Il venditore vuole modificare la propria foto profilo.
+\subUC{Modifica del logo}
+Il venditore vuole modificare il proprio logo.
 \begin{itemize}
-    \item \textbf{Attori Primari:} Venditore.
-    \item \textbf{Precondizione:} Il venditore si trova nella vista di modifica informazioni personali e vuole modificare la sua foto profilo.
-    \item \textbf{Postcondizione:} Il venditore ha inserito una nuova foto profilo.
-    \item \textbf{Scenario Principale:} Il venditore vuole inserire una nuova foto profilo attraverso le seguenti azioni:
-    \begin{itemize}
-        \item Si posiziona nel campo di inserimento della nuova foto profilo.
-        \item Seleziona un'immagine tra quelle disponibili localmente nel proprio computer.
-        \item Viene caricata.
-    \end{itemize}
-    \item \textbf{Scenario Alternativo 1:} Il venditore non seleziona alcun file e la foto profilo non verrà cambiata.
-    \item \textbf{Scenario Alternativo 2:} Il venditore seleziona un file del tipo non immagine. In questo caso:
-    \begin{itemize}
-        \item (UC) - Verrà visualizzato il messaggio di errore il quale segnala che il file selezionato non è del tipo immagine.
-        \item Verrà impedita la modifica delle informazioni.
-    \end{itemize}
+    \item \textbf{Attori primari:} venditore;
+    \item \textbf{Precondizione:} il venditore vuole modificare il proprio logo aziendale;
+    \item \textbf{Postcondizione:} il venditore ha inserito un nuovo logo;
+    \item \textbf{Scenario principale:} il venditore modifica il proprio logo aziendale scegliendo un'immagine tra quelle disponibili localmente nel proprio dispositivo;
+    \item \textbf{Scenario alternativo:}
+    \begin{enumerate}[label=\lett]
+    	\item Il venditore non seleziona alcun file ed il logo non verrà cambiato.
+    \end{enumerate}
     \item \textbf{Estensioni:}
-    \begin{itemize}
-        \item (UC32) - Visualizzazione messaggio di errore nel caso in cui il file selezionato non sia del tipo immagine.
-    \end{itemize}
+    \begin{enumerate}[label=\lett]
+    	\item Il venditore seleziona un file del tipo non immagine. In questo caso:
+    	\begin{itemize}
+    		\item (UC) - Verrà visualizzato il messaggio di errore il quale segnala che il file selezionato non è del tipo immagine;
+    		\item Viene fornita al venditore la possibilità di modificare il file inserito.
+    	\end{itemize}
+    \end{enumerate}
 \end{itemize}
 
-\subUC{Rimozione foto profilo}
-Il venditore vuole rimuovere la propria foto profilo.
+\subUC{Rimozione del logo}
+Il venditore vuole rimuovere il proprio logo.
 \begin{itemize}
-    \item \textbf{Attori Primari:} Venditore.
-    \item \textbf{Precondizione:} Il venditore si trova nella vista di modifica informazioni personali e ha già inserito una foto profilo.
-    \item \textbf{Postcondizione:} Il venditore ha rimosso la sua foto profilo.
-    \item \textbf{Scenario Principale:} Il venditore rimuove rimuovere la sua foto profilo attraverso l'adeguata azione e come foto profilo verrà utilizzata un'immagine di riempimento.
+    \item \textbf{Attori primari:} venditore;
+    \item \textbf{Precondizione:} il venditore ha inserito precedentemente un logo aziendale;
+    \item \textbf{Postcondizione:} il venditore ha rimosso il proprio logo;
+    \item \textbf{Scenario principale:} il venditore rimuove il proprio logo attraverso l'adeguata funzionalità e viene utilizzata dalla piattaforma un'immagine di riempimento.
+\end{itemize}
+
+\subUC{Modifica nome dell'azienda}
+Il venditore vuole modificare il nome dell'azienda.
+\begin{itemize}
+	\item \textbf{Attori primari:} venditore;
+	\item \textbf{Attori secondari:} identity manager;
+	\item \textbf{Precondizione:} il venditore vuole aggiornare il nome della propria azienda;
+	\item \textbf{Postcondizione:} il venditore ha aggiornato il nome dell'azienda;
+	\item \textbf{Scenario principale:} il venditore modifica il nome della propria azienda;
+	\item \textbf{Scenario alternativo:}
+	\begin{enumerate}[label=\lett]
+		\item Il venditore non modifica l'attuale nome aziendale utilizzato e di conseguenza non cambierà.
+	\end{enumerate}
+	\item \textbf{Estensioni:}
+	\begin{enumerate}[label=\lett]
+		%\item Il venditore ha inserito un nuovo nome aziendale e l'identity manager segnala che è già presente nella piattaforma, in questo caso:
+		%\begin{itemize}
+			%\item (UC) - Viene mostrato un messaggio d'errore nome aziendale già presente nel sistema;
+			%\item Viene fornita al venditore la possibilità di modificare il nome aziendale inserito.
+		%\end{itemize}
+		\item Il venditore non inserisce il nome aziendale e l'identity manager controlla il campo dati che risulta essere vuoto, in questo caso:
+		\begin{itemize}
+			\item (UC) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
+			\item Viene fornita al venditore la possibilità di inserire un nome aziendale.
+		\end{itemize}
+	\end{enumerate} 
 \end{itemize}
 
 \subUC{Modifica della descrizione dell'azienda}
-Il venditore vuole modificare la descrizione dell'azienda che viene mostrata nella vista home.
+Il venditore vuole modificare la descrizione dell'azienda che viene mostrata nella schermata principale.
 \begin{itemize}
-    \item \textbf{Attori Primari:} Venditore.
-    \item \textbf{Precondizione:} Il venditore si trova nella vista di modifica informazioni personali e vuole modificare l'attuale descrizione dell'azienda.
-    \item \textbf{Postcondizione:} Il venditore ha modificato l'attuale descrizione dell'azienda.
-    \item \textbf{Scenario Principale:} Il venditore vuole modificare l'attuale descrizione dell'azienda attraverso le seguenti azioni:
-    \begin{itemize}
-        \item Si posiziona nel campo di modifica della descrizione dell'azienda dove è presente quella attualmente inserita.
-        \item La modifica come meglio desidera.
-    \end{itemize}
-    \item \textbf{Scenario Alternativo:} Il venditore non modifica l'attuale descrizione dell'azienda e, perciò, non cambierà.
+    \item \textbf{Attori primari:} venditore;
+    \item \textbf{Precondizione:} il venditore vuole modificare l'attuale descrizione dell'azienda;
+    \item \textbf{Postcondizione:} il venditore ha aggiornato la descrizione dell'azienda;
+    \item \textbf{Scenario principale:} il venditore modifica la descrizione dell'azienda;
+    \item \textbf{Scenario alternativo:}
+    \begin{enumerate}[label=\lett]
+    	\item Il venditore non modifica l'attuale descrizione dell'azienda e di conseguenza non cambierà.
+    \end{enumerate}
 \end{itemize}
