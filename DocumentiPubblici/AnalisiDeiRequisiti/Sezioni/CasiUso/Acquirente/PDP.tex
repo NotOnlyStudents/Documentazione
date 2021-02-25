@@ -6,11 +6,12 @@
 %     b. Add the product to the cart;
 %     c. Click the link to redirect to the shopping cart page;
 
+\begin{comment}
 \UC{Apertura PDP}
 L'utente non autenticato o l'acquirente può aprire la PDP di un prodotto per visualizzarne i dettagli. 
 \begin{itemize}
     \item \textbf{Attori Primari:} Acquirente; Utente non autenticato.
-    \item \textbf{Precondizione:} L'attore si trova nella PLP, dalla pagina del carrello nella home.
+    \item \textbf{Precondizione:} L'attore si trova nella PLP o nel carrello.
     \item \textbf{Postcondizione:} L'attore si trova sulla pagina di dettaglio del prodotto.
     \item \textbf{Scenario Principale:}
         \begin{itemize}
@@ -28,6 +29,7 @@ L'utente non autenticato o l'acquirente può aprire la PDP di un prodotto per vi
             \item (UC9.1) - L'attore è in grado di aggiungere una certa quantità del prodotto al carrello direttamente dalla PDP. 
         \end{itemize}
 \end{itemize}
+\end{comment}
 
 \UC{Aggiunta prodotto al carrello dalla PDP}
 L'utente non autenticato o l'acquirente si trova nella PDP che vuole aggiungere al suo carrello.
@@ -37,7 +39,25 @@ L'utente non autenticato o l'acquirente si trova nella PDP che vuole aggiungere 
     \item \textbf{Postcondizione:} Il prodotto è stato aggiunto al suo carrello.
     \item \textbf{Scenario Principale:} L'attore vuole comprare il prodotto visualizzato dalla PDP e in tal caso:
     \begin{itemize}
-        \item Preme sull'azione di aggiunta al carrello del seguente prodotto.
-        \item (UC11) - Aggiunta del prodotto al carrello.
+        \item Preme sull'azione di aggiunta al carrello del seguente prodotto;
+        \item (UC) - Modifica la quantità di prodotto da inserire nel carrello;
+        \item (UC) - Conferma la volontà di aggiungere il prodotto nel carrello con la quantità impostata.
     \end{itemize}
+\end{itemize}
+
+\UC{Modifica della quantità di un prodotto da inserire nel carrello}
+L'acquirente o l'utente non autenticato modifica la quantità del prodotto da inserire nel carrello.
+\begin{itemize}
+	\item \textbf{Attori primari:} acquirente o utente non autenticato;
+	\item \textbf{Precondizione:} l'attore vuole inserire un prodotto nel carrello e desidera modificarne la sua quantità;
+	\item \textbf{Postcondizione:} la quantità di prodotto da inserire nel carrello è aggiornata;
+	\item \textbf{Scenario Principale:}
+	\begin{itemize}
+		\item L'attore aumenta o diminuisce la quantità tra 1 e la disponibilità massima di prodotto;
+		\item La nuova quantità di prodotto sarà quella fornita.
+	\end{itemize}
+	\item \textbf{Estensioni}:
+	\begin{itemize}
+		\item (UC32) - Visualizzazione messaggio di errore prodotto non disponibile.
+	\end{itemize}
 \end{itemize}

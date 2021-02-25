@@ -16,28 +16,18 @@
 	\rfun{O}{1.3} & L'utente non autenticato deve poter essere in grado di fare il reset della password nel caso se la sia dimenticata. & UC1.3 \\
 	
 	\rfun{O}{2} & L'utente autenticato deve essere in grado di fare il logout dalla piattaforma. & UC2 \\\
-
-	\rfun{O}{3.1} & L'utente non autenticato deve avere un menù a disposizione che può accedere facilmente da ogni pagina. & UC3.1 \\
 	
-	\rfun{O}{3.1.1} & L'utente non autenticato deve poter accedere dal menù alla pagina di login. & UC3.1.1 \\
+	\rfun{O}{3.1.1} & L'utente non autenticato deve poter accedere alla login da ogni schermata. & UC3.1.1 \\
 
-	\rfun{O}{3.3} & L'utente non autenticato deve poter accedere dal menù alla home. & UC3.3 \\
+	\rfun{O}{3.3} & L'utente non autenticato deve poter accedere alla schermata principale da ogni schermata. & UC3.3 \\
 
-	\rfun{O}{3.4} & L'utente non autenticato deve poter accedere dal menù alla pagina del carrello. & UC3.4 \\
-
-	\rfun{O}{3.2} & L'acquirente deve avere un menù a disposizione che può accedere facilmente da ogni pagina. & UC3.2 \\
+	\rfun{O}{3.4} & L'utente non autenticato deve poter accedere al carrello da ogni schermata. & UC3.4 \\
 	
-	\rfun{O}{3.2} & L'acquirente deve poter effettuare il logout dal menù. & UC3.2 \\
+	\rfun{O}{3.2} & L'acquirente deve poter effettuare il logout da ogni schermata. & UC3.2 \\
 	
-	\rfun{O}{3.2.1} & L'acquirente deve poter accedere dal menù alla pagina personale. & UC3.2.1 \\
+	\rfun{O}{3.2.1} & L'acquirente deve poter accedere alla pagina personale da ogni schermata. & UC3.2.1 \\
 
-	\rfun{O}{3.3} & L'acquirente deve poter accedere dal menù alla home. & UC3.3 \\
-
-	\rfun{O}{3.4} & L'acquirente deve poter accedere dal menù alla pagina del carrello. & UC3.4 \\
-
-    \rfun{O}{4} & Appena effettuato l'accesso, l'utente deve essere in grado di visualizzare la propria home page con la descrizione dell'azienda. & UC4 \\
-    
-    \rfun{O}{4} & Appena effettuato l'accesso, l'utente deve essere in grado di visualizzare la propria home page con i prodotti in evidenza. & UC4 \\
+    \rfun{O}{4} & Appena effettuato l'accesso, l'utente deve essere in grado di visualizzare la schermata principale.&  \\
 
     \rfun{O}{5} & L'utente non autenticato o l'acquirente deve poter cercare i prodotti per titolo o descrizione. & UC5 \\
     
@@ -59,15 +49,19 @@
     
     \rfun{O}{8} & L'utente non autenticato o l'acquirente può aggiungere prodotti al carrello direttamente dalla PLP nella quantità desiderata. & UC8 \\
     
-    \rfun{O}{9} & L'utente non autenticato o l'acquirente può aprire la \glo{PDP} di un prodotto partendo dalla PLP. & UC9 \\
+    \rfun{O}{9} & L'utente può aprire la \glo{PDP} di un prodotto partendo dalla PLP. & UC9 \\
     
-    \rfun{O}{9} & L'utente non autenticato o l'acquirente può aprire la PDP di un prodotto partendo dalla home dai prodotti in evidenza. & UC9 \\
+    \rfun{O}{9} & L'utente può aprire la PDP di un prodotto in evidenza della schermata principale. & UC9 \\
 
     \rfun{O}{9.1} & L'utente non autenticato o l'acquirente può aggiungere un prodotto nella quantità desiderata al carrello direttamente dalla PDP. & UC9.1 \\
     
     \rfun{O}{10} & L'utente non autenticato o l'acquirente può visualizzare i prodotti che ha inserito nel carrello. & UC10 \\
     
-    \rfun{O}{10} & L'utente non autenticato o l'acquirente può accedere alla PDP di un prodotto dalla pagina del carrello. & UC10 \\
+    \rfun{O}{10} & L'utente non autenticato o l'acquirente può accedere alla PDP dei prodotti presenti nel carrello dalla sua schermata. & UC10 \\
+    
+     \rfun{O}{} & Con la conferma del pagamento deve essere visualizzato il riepilogo dell'ordine. & \\
+    
+    \rfun{O}{10} & L'utente non autenticato o l'acquirente può accedere alla PDP dei prodotti acquistati dal riepilogo ordine. & UC10 \\
     
     \rfun{O}{10.1} & L'utente non autenticato o l'acquirente può visualizzare le informazioni del prezzo totale dei prodotti nel carrello. & UC10.1 \\
     
@@ -133,6 +127,8 @@
     
     \rfun{O}{22} & Il venditore può visualizzare una lista con tutti gli ordini effettuati. & UC22 \\
     
+    \rfun{O}{22} & Il venditore può passare alla pagina di riepilogo degli ordini da gestire da qualunque schermata in cui si trovi. & UC22 \\
+    
     \rfun{O}{} & Il carrello dell'acquirente deve essere salvato in remoto e sincronizzato su più Browser/dispositivi a cui accedere. & \glo{Capitolato} \\
     
     \rfun{O}{} & L'utente non autenticato può aggiungere prodotti nel carrello come ospite e, appena si autentica, vengono aggiunti al suo carrello personale. & Interna \\
@@ -149,6 +145,15 @@
     
     \rfun{O}{} & L'amministratore può specificare i requisiti minimi di una password. & Capitolato \\
     
-    \rfun{Z}{} & L'amministratore può modificare dinamicamente la copia del sito Web o cambiare il layout delle pagine PDP o PLP senza ridistribuire l'intero codice ad ogni modifica utilizzando \glo{\textit{Contentful}} come \glo{CMS}. & Capitolato \\
+    \rfun{Z}{} & L'amministratore può modificare dinamicamente la copia del sito Web o cambiare il layout di PDP o PLP senza ridistribuire l'intero codice ad ogni modifica utilizzando \glo{\textit{Contentful}} come \glo{CMS}. & Capitolato \\
+
+    \rfun{O}{} & Nella schermata principale l'utente deve visualizzare i prodotti in evidenza. &  \\
+    
+    \rfun{O}{} & La ricerca di prodotti deve essere possibile da tutte le schermate. &  \\
+    
+    \rfun{O}{} & Nella PDP di un prodotto si devono visualizzare nome, descrizione, categorie di appartenenza, prezzo, sconto, quantità disponibile e foto dello stesso. & \\
+    
+     \rfun{O}{} & I prodotti nella PLP non disponibili devono essere distinti da quelli che lo sono. & \\
+     
 
 \end{longtable}
