@@ -28,28 +28,25 @@ L'acquirente vuole modificare la propria email.
             \item Si posiziona nel campo di inserimento della nuova email dove è presente quella attualmente utilizzata;
             \item Inserisce quella nuova o modifica quella attuale.
         \end{itemize}
-    \item \textbf{Scenario alternativo 1:} l'acquirente non modifica l'attuale indirizzo email utilizzato, perciò non cambierà.
-    \item \textbf{Scenario alternativo 2:} l'acquirente inserisce un'email già utilizzata nella piattaforma. In questo caso:
+    \item \textbf{Scenario alternativo:} l'acquirente non modifica l'attuale indirizzo email utilizzato, perciò non cambierà;
+    \item \textbf{Estensioni:} 
+     \begin{enumerate}[label=\lett]
+    \item l'acquirente inserisce un'email già utilizzata nella piattaforma. In questo caso:
     \begin{itemize}
         \item (UC) - Verrà visualizzato il messaggio di errore in caso di email già registrata nella piattaforma;
         \item Verrà impedita la modifica delle informazioni.
     \end{itemize}
-    \item \textbf{Scenario alternativo 3:} l'acquirente inserisce un'email non valida. In questo caso:
+    \item l'acquirente inserisce un'email non valida. In questo caso:
     \begin{itemize}
         \item (UC) - Verrà visualizzato un messaggio di errore in caso di email non valida;
         \item Verrà impedita la modifica delle informazioni.
     \end{itemize}
-    \item \textbf{Scenario alternativo 4:} l'acquirente non inserisce l'email e lascia il campo di inserimento vuoto. In questo caso:
+    \item l'acquirente non inserisce l'email e lascia il campo di inserimento vuoto. In questo caso:
     \begin{itemize}
         \item (UC) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito;
         \item Verrà impedita la modifica delle informazioni.
     \end{itemize}
-    \item \textbf{Estensioni:}
-    \begin{itemize}
-        \item (UC) - Visualizzazione messaggio di errore in caso di email già utilizzata nella piattaforma;
-        \item (UC) - Visualizzazione messaggio di errore in caso di email non valida;
-        \item (UC) - Visualizzazione messaggio campo dati obbligatorio non inserito.
-    \end{itemize}
+\end{enumerate}
 \end{itemize}
 
 \subUC{Inserimento nuova password}
@@ -64,16 +61,12 @@ L'acquirente vuole modificare la propria password.
             \item La scrive;
             \item Inserisce la stessa password nel campo di conferma nuova password.
         \end{itemize}
-    \item \textbf{Scenario alternativo 1:} L'acquirente non inserisce alcuna password e lascia il campo di inserimento nuova password vuoto. In questo caso non verrà modificata la password;
-    \item \textbf{Scenario alternativo 2:} L'acquirente inserisce una password troppo debole. In questo caso:
-    \begin{itemize}
+    \item \textbf{Scenario alternativo:} L'acquirente non inserisce alcuna password e lascia il campo di inserimento nuova password vuoto. In questo caso non verrà modificata la password;
+    \item \textbf{Estensioni:} L'acquirente inserisce una password troppo debole. In questo caso:
+    \begin{enumerate}[label=\lett]
         \item (UC) - Verrà visualizzato il messaggio di errore di password troppo debole;
         \item Verrà impedita la modifica delle informazioni.
-    \end{itemize}
-    \item \textbf{Estensioni:}
-    \begin{itemize}
-        \item (UC) - Visualizzazione messaggio di errore in caso di password troppo debole.
-    \end{itemize}
+    \end{enumerate}
 \end{itemize}
 
 \subUC{Inserimento conferma nuova password}
@@ -87,16 +80,14 @@ L'acquirente vuole modificare la propria password e deve confermare quella nuova
             \item Si posiziona nel campo di inserimento vuoto della conferma nuova password;
             \item Inserisce la stessa password che è stata inserita nel campo conferma password.
         \end{itemize}
-    \item \textbf{Scenario alternativo 1:} l'acquirente non inserisce alcuna password e lascia il campo di inserimento conferma nuova password vuoto. In questo caso non verrà modificata la password.
-    \item \textbf{Scenario alternativo 2:} l'acquirente inserisce una password di conferma diversa da quella inserita nel campo di inserimento nuova password. In questo caso:
+    \item \textbf{Scenario alternativo:} l'acquirente non inserisce alcuna password e lascia il campo di inserimento conferma nuova password vuoto. In questo caso non verrà modificata la password.
+    \item \textbf{Estensioni:} \begin{enumerate}[label=\lett] 
+    \item l'acquirente inserisce una password di conferma diversa da quella inserita nel campo di inserimento nuova password. In questo caso:
     \begin{itemize}
         \item (UC) - Verrà visualizzato il messaggio di errore di password e password di conferma diverse;
         \item Verrà impedita la modifica delle informazioni.
     \end{itemize}
-    \item \textbf{Estensioni:}
-    \begin{itemize}
-        \item (UC) - Visualizzazione messaggio di errore in caso di password e password di conferma diverse.
-    \end{itemize}
+\end{enumerate}
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
