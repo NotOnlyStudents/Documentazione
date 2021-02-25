@@ -141,7 +141,7 @@ L'utente non autenticato inserisce una password.
 	\item \textbf{Attori primari:} utente non autenticato;
 	\item \textbf{Attori secondari:} identity manager;
 	\item \textbf{Precondizione:} l'utente non autenticato non ha ancora fornito una password che rispetta i requisiti di complessità ed ha a disposizione un campo dati dove inserirla;
-	\item \textbf{Postcondizione:} l'utente ha inserito la conferma della password ed è valida.
+	\item \textbf{Postcondizione:} l'utente ha inserito la conferma della password ed è valida;
 	\item \textbf{Scenario principale:} l'utente non autenticato inserisce una password che rispetti le condizioni imposte per procedere con la registrazione;
 	\item \textbf{Estensioni:} 
 	\begin{enumerate}[label=\lett]
@@ -283,7 +283,7 @@ L'utente non autenticato che dispone di credenziali acquirente può accedere nel
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.2]{Immagini/DiagrammiUC/UC1.3PasswordDimenticata.png}
-    \caption{Diagramma di \actualUC: Password dimenticata} 
+    \caption{Diagramma di \actualUC: Password dimenticata}
     \label{fig:PasswordDimenticata}
 \end{figure}
 
@@ -304,7 +304,7 @@ L'utente che dispone di credenziali si è dimenticato la propria password e la v
     \end{itemize}
 	\item \textbf{Estensioni:}
 	\begin{enumerate}[label=\lett]
-		\item L'utente inserisce un indirizzo email e l'identity manager segnala che l'indirizzo email non è presente nella piattaforma
+		\item L'utente inserisce un indirizzo email e l'identity manager segnala che l'indirizzo email non è presente nella piattaforma, in questo caso:
 		\begin{itemize}
 			\item (UC) - Viene visualizzato un messaggio di errore indirizzo email non registrato nella piattaforma;
 			\item L'utente rimane non autenticato e alla schermata per cambiare la password.
@@ -319,7 +319,7 @@ L'utente che dispone di credenziali si è dimenticato la propria password e la v
 		\end{itemize}
 		Ma l'identity manager segnala che le due password inserite non coincidono
 		\begin{itemize}
-			\item (UC) - Visualizzazione messaggio di errore in caso di password e password di conferma diverse.
+			\item (UC) - Visualizzazione messaggio di errore in caso di password e password di conferma diverse;
 			\item L'utente può modificare le password inserite.
 		\end{itemize}
 	\end{enumerate}
