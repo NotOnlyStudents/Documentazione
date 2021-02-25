@@ -1,10 +1,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\UC{Inserimento carta per pagamento}
+\UC{Inserimento carta per il pagamento}
 L'acquirente è nella fase del checkout e vuole inserire una nuova carta da utilizzare per il pagamento.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
-    \item \textbf{Precondizione:} l'acquirente è nella fase del checkout e vuole inserire una nuova carta;
+    \item \textbf{Precondizione:} l'acquirente è nella fase del checkout e ha selezionato l'azione di aggiunta di una nuova carta;
     \item \textbf{Postcondizione:} l'acquirente ha aggiunto la nuova carta da utilizzare per il pagamento;
     \item \textbf{Scenario principale:} l'acquirente è nella fase del checkout e vuole inserire una nuova carta. Per poterlo fare dovrà eseguire le seguenti azioni:
     \begin{itemize}
@@ -13,7 +13,7 @@ L'acquirente è nella fase del checkout e vuole inserire una nuova carta da util
     \end{itemize}
     \item \textbf{Scenari alternativi}:
     \begin{enumerate}[label=\lett]
-        \item se non viene confermata l'aggiunta della nuova carta per il pagamento, allora non verrà aggiunta e si andrà a perdere tutti i dati relativi ad essa che sono stati inseriti.
+        \item se non viene confermata l'aggiunta della nuova carta per il pagamento, allora non verrà aggiunta e si andranno a perdere tutti i dati relativi ad essa che sono stati inseriti.
     \end{enumerate}
 \end{itemize}
 
@@ -27,16 +27,16 @@ L'acquirente compila il modulo per aggiungere una nuova carta.
 	\item \textbf{Postcondizione:} l'acquirente ha compilato correttamente tutti i dati della carta e può continuare con l'aggiunta;
 	\item \textbf{Scenario principale:} l'acquirente compila i campi nel seguente modo:
 	\begin{itemize}
-		\item (\actualSubUC.1) - inserimento dell'intestatario della carta;
-		\item (\actualSubUC.2) - inserimento del numero della carta;
-		\item (\actualSubUC.3) - inserimento del CVV della carta;
-		\item (\actualSubUC.4) - inserimento della data di scadenza della carta.
+		\item (\actualSubUC.1) - inserimento dell'intestatario della carta per il pagamento;
+		\item (\actualSubUC.2) - inserimento del numero della carta per il pagamento;
+		\item (\actualSubUC.3) - inserimento del CVV della carta per il pagamento;
+		\item (\actualSubUC.4) - inserimento della data di scadenza della carta per il pagamento.
 	\end{itemize}
 \end{itemize}
 
 \resetSubSubUC
 
-\subSubUC{Inserimento dell'intestatario della carta}
+\subSubUC{Inserimento dell'intestatario della carta per il pagamento}
 L'acquirente inserisce l'intestatario della nuova carta da aggiungere.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
@@ -45,12 +45,12 @@ L'acquirente inserisce l'intestatario della nuova carta da aggiungere.
     \item \textbf{Scenario principale:} l'acquirente inserisce correttamente l'intestatario della carta da aggiungere.
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
-        \item l'utente non inserisce alcun intestatario della carta. In questo caso:
+        \item l'acquirente non inserisce alcun intestatario della carta. In questo caso:
         \begin{itemize}
             \item (UC) - viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
             \item verrà impedita l'aggiunta della carta.
         \end{itemize}
-        \item l'utente inserisce dei caratteri non alfabetici. In questo caso:
+        \item l'acquirente inserisce dei caratteri non alfabetici. In questo caso:
         \begin{itemize}
             \item (UC) - viene mostrato il messaggio d'errore caratteri non alfabetici non permessi;
             \item verrà impedita l'aggiunta della carta.
@@ -58,7 +58,7 @@ L'acquirente inserisce l'intestatario della nuova carta da aggiungere.
     \end{enumerate}
 \end{itemize}
 
-\subSubUC{Inserimento del numero della carta}
+\subSubUC{Inserimento del numero della carta per il pagamento}
 L'acquirente inserisce il numero della nuova carta da aggiungere.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
@@ -67,12 +67,12 @@ L'acquirente inserisce il numero della nuova carta da aggiungere.
     \item \textbf{Scenario principale:} l'acquirente inserisce correttamente il numero della carta da aggiungere;
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
-        \item l'utente non inserisce alcun numero della carta. In questo caso:
+        \item l'acquirente non inserisce alcun numero della carta. In questo caso:
         \begin{itemize}
             \item (UC) - viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
             \item verrà impedita l'aggiunta della carta.
         \end{itemize}
-        \item l'utente non inserisce esattamente 16 numeri compresi tra 0 e 9 come numero della carta. In questo caso:
+        \item l'acquirente non inserisce esattamente 16 numeri compresi tra 0 e 9 come numero della carta. In questo caso:
         \begin{itemize}
             \item (UC) - viene mostrato il messaggio d'errore numero della carta non valido;
             \item verrà impedita l'aggiunta della carta.
@@ -80,7 +80,7 @@ L'acquirente inserisce il numero della nuova carta da aggiungere.
     \end{enumerate}
 \end{itemize}
 
-\subSubUC{Inserimento del CVV della carta}
+\subSubUC{Inserimento del CVV della carta per il pagamento}
 L'acquirente inserisce il CVV della nuova carta da aggiungere.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
@@ -89,12 +89,12 @@ L'acquirente inserisce il CVV della nuova carta da aggiungere.
     \item \textbf{Scenario principale:} l'acquirente inserisce correttamente il CVV della carta da aggiungere.
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
-        \item l'utente non inserisce alcun CVV della carta. In questo caso:
+        \item l'acquirente non inserisce alcun CVV della carta. In questo caso:
         \begin{itemize}
             \item (UC) - viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
             \item verrà impedita l'aggiunta della carta.
         \end{itemize}
-        \item l'utente non inserisce esattamente 3 numeri compresi tra 0 e 9 come CVV della carta. In questo caso:
+        \item l'acquirente non inserisce esattamente 3 numeri compresi tra 0 e 9 come CVV della carta. In questo caso:
         \begin{itemize}
             \item (UC) - viene mostrato il messaggio d'errore CVV della carta non valido;
             \item verrà impedita l'aggiunta della carta.
@@ -102,7 +102,7 @@ L'acquirente inserisce il CVV della nuova carta da aggiungere.
     \end{enumerate}
 \end{itemize}
 
-\subSubUC{Inserimento della data di scadenza della carta}
+\subSubUC{Inserimento della data di scadenza della carta per il pagamento}
 L'acquirente inserisce la data di scadenza della nuova carta da aggiungere.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
@@ -111,12 +111,12 @@ L'acquirente inserisce la data di scadenza della nuova carta da aggiungere.
     \item \textbf{Scenario principale:} l'acquirente inserisce correttamente la data di scadenza della carta da aggiungere.
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
-        \item l'utente non inserisce alcuna data di scadenza della carta. In questo caso:
+        \item l'acquirente non inserisce alcuna data di scadenza della carta. In questo caso:
         \begin{itemize}
             \item (UC) - viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
             \item verrà impedita l'aggiunta della carta.
         \end{itemize}
-        \item l'utente non inserisce una data valida. In questo caso:
+        \item l'acquirente non inserisce una data valida. In questo caso:
         \begin{itemize}
             \item (UC) - viene mostrato il messaggio d'errore di data non valida;
             \item verrà impedita l'aggiunta della carta.
@@ -130,21 +130,25 @@ L'acquirente inserisce la data di scadenza della nuova carta da aggiungere.
 L'acquirente è nella fase del checkout e vuole modificare una carta precedentemente inserita da utilizzare per il pagamento.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
-    \item \textbf{Precondizione:} l'acquirente è nella fase del checkout e vuole modificare una carta precedentemente inserita;
+    \item \textbf{Precondizione:} l'acquirente è nella fase del checkout e ha selezionato l'azione di modifica di una carta precedentemente inserita;
     \item \textbf{Postcondizione:} l'acquirente ha modificato la carta desiderata;
-    \item \textbf{Scenario principale:} l'acquirente è nella fase del checkout e vuole modificare i dati di una carta precedentemente inserita. Le informazioni che potranno essere modificate sono:
+    \item \textbf{Scenario principale:} l'acquirente è nella fase del checkout e ha selezionato l'azione di modifica di una carta precedentemente inserita. Le informazioni che potranno essere modificate sono:
     \begin{itemize}
-        \item (\actualUC.1) - modifica dell'intestatario della carta;
-        \item (\actualUC.2) - modifica del numero della carta;
-        \item (\actualUC.3) - modifica del CVV della carta;
-        \item (\actualUC.4) - modifica della data di scadenza della carta.
+        \item (\actualUC.1) - modifica dell'intestatario della carta per il pagamento per il pagamento;
+        \item (\actualUC.2) - modifica del numero della carta per il pagamento;
+        \item (\actualUC.3) - modifica del CVV della carta per il pagamento;
+        \item (\actualUC.4) - modifica della data di scadenza della carta per il pagamento.
     \end{itemize}
-    In seguito ci sarà la conferma delle modifiche compiute e i dati della carta verranno modificati.
+    In seguito ci sarà la conferma delle modifiche compiute e i dati della carta verranno modificati;
+    \item \textbf{Scenari alternativi}:
+    \begin{enumerate}[label=\lett]
+        \item se non vengono confermate le modifiche compiute, allora non verranno applicate e andranno perse.
+    \end{enumerate}
 \end{itemize}
 
 \resetSubUC
 
-\subUC{Modifica dell'intestatario della carta}
+\subUC{Modifica dell'intestatario della carta per il pagamento}
 L'acquirente vuole modificare l'intestatario di una carta precedentemente inserita.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
@@ -157,16 +161,16 @@ L'acquirente vuole modificare l'intestatario di una carta precedentemente inseri
     \end{itemize}
     \item \textbf{Scenari alternativi}:
     \begin{enumerate}[label=\lett]
-        \item l'utente non modifica l'intestatario della carta attuale e, per questo, non verrà modificato.
+        \item l'acquirente non modifica l'intestatario della carta attuale e, per questo, non verrà modificato.
     \end{enumerate}
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
-        \item l'utente elimina l'attuale intestatario della carta e non ne inserisce uno nuovo. In questo caso:
+        \item l'acquirente elimina l'attuale intestatario della carta e non ne inserisce uno nuovo. In questo caso:
         \begin{itemize}
             \item (UC) - viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
             \item verrà impedita la modifica della carta.
         \end{itemize}
-        \item l'utente modifica l'intestatario della carta inserendo dei caratteri non alfabetici. In questo caso:
+        \item l'acquirente modifica l'intestatario della carta inserendo dei caratteri non alfabetici. In questo caso:
         \begin{itemize}
             \item (UC) - viene mostrato il messaggio d'errore caratteri non alfabetici non permessi;
             \item verrà impedita la modifica della carta.
@@ -174,7 +178,7 @@ L'acquirente vuole modificare l'intestatario di una carta precedentemente inseri
     \end{enumerate}
 \end{itemize}
 
-\subUC{Modifica del numero della carta}
+\subUC{Modifica del numero della carta per il pagamento}
 L'acquirente vuole modificare il numero di una carta precedentemente inserita.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
@@ -187,16 +191,16 @@ L'acquirente vuole modificare il numero di una carta precedentemente inserita.
     \end{itemize}
     \item \textbf{Scenari alternativi}:
     \begin{enumerate}[label=\lett]
-        \item l'utente non modifica il numero della carta attuale e, per questo, non verrà modificato.
+        \item l'acquirente non modifica il numero della carta attuale e, per questo, non verrà modificato.
     \end{enumerate}
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
-        \item l'utente elimina l'attuale numero della carta e non ne inserisce uno nuovo. In questo caso:
+        \item l'acquirente elimina l'attuale numero della carta e non ne inserisce uno nuovo. In questo caso:
         \begin{itemize}
             \item (UC) - viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
             \item verrà impedita la modifica della carta.
         \end{itemize}
-        \item l'utente modifica l'attuale numero della carta in modo tale che non ci siano 16 numeri compresi tra 0 e 9 come numero della carta. In questo caso:
+        \item l'acquirente modifica l'attuale numero della carta in modo tale che non ci siano 16 numeri compresi tra 0 e 9 come numero della carta. In questo caso:
         \begin{itemize}
             \item (UC) - viene mostrato il messaggio d'errore numero della carta non valido;
             \item verrà impedita la modifica della carta.
@@ -204,7 +208,7 @@ L'acquirente vuole modificare il numero di una carta precedentemente inserita.
     \end{enumerate}
 \end{itemize}
 
-\subUC{Modifica del CVV della carta}
+\subUC{Modifica del CVV della carta per il pagamento}
 L'acquirente vuole modificare il CVV di una carta precedentemente inserita.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
@@ -217,16 +221,16 @@ L'acquirente vuole modificare il CVV di una carta precedentemente inserita.
     \end{itemize}
     \item \textbf{Scenari alternativi}:
     \begin{enumerate}[label=\lett]
-        \item l'utente non modifica il CVV della carta attuale e, per questo, non verrà modificato.
+        \item l'acquirente non modifica il CVV della carta attuale e, per questo, non verrà modificato.
     \end{enumerate}
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
-        \item l'utente elimina l'attuale CVV della carta e non ne inserisce uno nuovo. In questo caso:
+        \item l'acquirente elimina l'attuale CVV della carta e non ne inserisce uno nuovo. In questo caso:
         \begin{itemize}
             \item (UC) - viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
             \item verrà impedita la modifica della carta.
         \end{itemize}
-        \item l'utente modifica il CVV della carta in modo tale che non ci siano esattamente 3 numeri compresi tra 0 e 9 come CVV della carta. In questo caso:
+        \item l'acquirente modifica il CVV della carta in modo tale che non ci siano esattamente 3 numeri compresi tra 0 e 9 come CVV della carta. In questo caso:
         \begin{itemize}
             \item (UC) - viene mostrato il messaggio d'errore CVV della carta non valido;
             \item verrà impedita la modifica della carta.
@@ -234,7 +238,7 @@ L'acquirente vuole modificare il CVV di una carta precedentemente inserita.
     \end{enumerate}
 \end{itemize}
 
-\subUC{Modifica della data di scadenza della carta}
+\subUC{Modifica della data di scadenza della carta per il pagamento}
 L'acquirente vuole modificare la data di scadenza di una carta precedentemente inserita.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
@@ -247,16 +251,16 @@ L'acquirente vuole modificare la data di scadenza di una carta precedentemente i
     \end{itemize}
     \item \textbf{Scenari alternativi}:
     \begin{enumerate}[label=\lett]
-        \item l'utente non modifica la data di scadenza della carta attuale e, per questo, non verrà modificata.
+        \item l'acquirente non modifica la data di scadenza della carta attuale e, per questo, non verrà modificata.
     \end{enumerate}
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
-        \item l'utente elimina l'attuale data di scadenza della carta e non ne inserisce una nuova. In questo caso:
+        \item l'acquirente elimina l'attuale data di scadenza della carta e non ne inserisce una nuova. In questo caso:
         \begin{itemize}
             \item (UC) - viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
             \item verrà impedita la modifica della carta.
         \end{itemize}
-        \item l'utente modifica l'attuale data di scadenza in modo tale che non sia più una data valida. In questo caso:
+        \item l'acquirente modifica l'attuale data di scadenza in modo tale che non sia più una data valida. In questo caso:
         \begin{itemize}
             \item (UC) - viene mostrato il messaggio d'errore di data non valida;
             \item verrà impedita la modifica della carta.

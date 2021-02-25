@@ -222,3 +222,14 @@ Nel caso in cui venga inserito un CAP per un indirizzo di consegna non valido, v
 	\item \textbf{Postcondizione:} all'acquirente verrà mostrato un messaggio il quale lo informa della non validità del CAP inserito;
 	\item \textbf{Scenario principale:} l'attore non ha inserito un CAP composto da esattamente 5 numeri compresi tra 0 e 9 e verrà avvisato di ciò.
 \end{itemize}
+
+% Estensioni stripe
+\UC{Visualizzazione messaggio d'errore pagamento non andato a buon fine}
+Nel caso in cui avvenga un errore durante lo svolgimento del pagamento da parte di stripe, questo verrà visualizzato all'acquirente.
+\begin{itemize}
+	\item \textbf{Attori primari:} acquirente;
+	\item \textbf{Attori secondari:} stripe;
+	\item \textbf{Precondizione:} stripe sta svolgendo il pagamento dell'acquirente e si verifica un errore;
+	\item \textbf{Postcondizione:} all'acquirente verrà mostrato un messaggio il quale lo informa della non riuscita del pagamento con il relativo messaggio;
+	\item \textbf{Scenario principale:} stripe sta svolgendo il pagamento dell'acquirente, si verifica un errore e questo verrà visualizzato all'acquirente informandolo di quando accaduto.
+\end{itemize}
