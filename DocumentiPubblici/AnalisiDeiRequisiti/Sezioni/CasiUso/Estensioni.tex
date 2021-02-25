@@ -5,7 +5,7 @@ Visualizzazione messaggio di errore che segnala all'attore il tentativo di regis
     \item \textbf{Attori primari:} utente non autenticato;
     \item \textbf{Precondizione:} l'utente non autenticato sta cercando di registrarsi con un'email già utilizzata nella piattaforma;
     \item \textbf{Postcondizione:} all'attore viene mostrato un messaggio il quale indica l'impossibilità di registrarsi con un'email già utilizzata nella piattaforma;
-    \item \textbf{Scenario principale:} l'attore sta cercando di registrarsi con un'email già utilizzata nella piattaforma e viene avvisato di ciò attraverso un messaggio adeguato.
+    \item \textbf{Scenario principale:} l'attore sta cercando di registrarsi con un'email già utilizzata nella piattaforma e viene avvisato dell'impossibilità di registrarsi con un'email già utilizzata nella piattaforma.
 \end{itemize}
 
 \UC{Visualizzazione messaggio di errore in caso di cambio email con una già utilizzata nella piattaforma}
@@ -14,7 +14,7 @@ Visualizzazione messaggio di errore che segnala all'attore il tentativo di cambi
     \item \textbf{Attori primari:} acquirente o venditore;
     \item \textbf{Precondizione:} l'attore sta cercando di cambiare la propria email con una già utilizzata nella piattaforma;
     \item \textbf{Postcondizione:} all'attore viene mostrato un messaggio il quale indica l'impossibilità di cambiare la propria email attuale con un'email già utilizzata nella piattaforma;
-    \item \textbf{Scenario principale:} l'attore sta cercando di cambiare la propria email attuale con un'email già utilizzata nella piattaforma e viene avvisato di ciò attraverso un messaggio adeguato.
+    \item \textbf{Scenario principale:} l'attore sta cercando di cambiare la propria email attuale con un'email già utilizzata nella piattaforma e viene avvisato dell'impossibilità di cambiare la propria email con una già utilizzata nella piattaforma.
 \end{itemize}
 
 \UC{Visualizzazione messaggio di errore in caso di email non registrata}
@@ -22,8 +22,8 @@ Visualizzazione messaggio di errore che segnala all'attore il tentativo di acces
 \begin{itemize}
     \item \textbf{Attori primari:} utente non autenticato;
     \item \textbf{Precondizione:} l'utente non autenticato ha inserito un'email non registrata nella piattaforma;
-    \item \textbf{Postcondizione:} all'utente non autenticato viene mostrato un messaggio il quale indica l'impossibilità di utilizzare un'email non registrata nella piattaforma;
-    \item \textbf{Scenario principale:} l'utente non autenticato ha inserito un'email non registrata nella piattaforma e viene informato di ciò.
+    \item \textbf{Postcondizione:} all'utente non autenticato viene mostrato un messaggio il quale indica l'impossibilità di inserire un'email non registrata nella piattaforma;
+    \item \textbf{Scenario principale:} l'utente non autenticato ha inserito un'email non registrata nella piattaforma e viene informato dell'impossibilità di inserire un'email non registrata nella piattaforma.
 \end{itemize}
 
 \UC{Visualizzazione messaggio di errore in caso di credenziali non presenti nella piattaforma}
@@ -32,7 +32,7 @@ Visualizzazione messaggio di errore che segnala all'utente il tentativo di acces
     \item \textbf{Attori primari:} utente non autenticato;
     \item \textbf{Precondizione:} l'utente non autenticato tenta di accedere alla piattaforma attraverso delle credenziali non presenti in essa;
     \item \textbf{Postcondizione:} all'utente non autenticato viene mostrato un messaggio il quale lo avvisa dell'utilizzo di credenziali non presenti nella piattaforma;
-    \item \textbf{Scenario principale:} l'utente non autenticato tenta di accedere alla piattaforma attraverso delle credenziali non presenti in essa e viene informato di ciò.
+    \item \textbf{Scenario principale:} l'utente non autenticato tenta di accedere alla piattaforma attraverso delle credenziali non presenti in essa e viene informato dell'utilizzo di credenziali non presenti nella piattaforma.
 \end{itemize}
 
 \UC{Visualizzazione messaggio di errore in caso di email non valida}
@@ -41,7 +41,7 @@ Visualizzazione messaggio di errore che segnala all'utente che l'email inserita 
     \item \textbf{Attori primari:} utente autenticato o utente non autenticato;
     \item \textbf{Precondizione:} l'attore ha inserito un'email nel formato sbagliato;
     \item \textbf{Postcondizione:} all'utente non autenticato viene mostrato un messaggio il quale lo avvisa dell'inserimento di un'email in un formato errato;
-    \item \textbf{Scenario principale:} l'attore ha inserito un'email nel formato sbagliato e viene informato di ciò.
+    \item \textbf{Scenario principale:} l'attore ha inserito un'email nel formato sbagliato e viene informato dell'inserimento di un'email nel formato sbagliato.
 \end{itemize}
 
 % Estensioni password
@@ -51,7 +51,7 @@ Visualizzazione messaggio di errore che segnala all'utente l'inserimento di una 
     \item \textbf{Attori primari:} utente autenticato o utente non autenticato;
     \item \textbf{Precondizione:} l'attore ha inserito una password troppo debole;
     \item \textbf{Postcondizione:} all'attore viene mostrato un messaggio il quale lo avvisa dell'inserimento di una password che non rispetta le condizioni minime per essere accettabile;
-    \item \textbf{Scenario principale:} l'attore ha inserito una password troppo debole che non rispetta le condizioni minime per essere accettabile e viene informato di ciò.
+    \item \textbf{Scenario principale:} l'attore ha inserito una password troppo debole che non rispetta le condizioni minime per essere accettabile e viene informato del non rispetto delle condizioni minime.
 \end{itemize}
 
 \UC{Visualizzazione messaggio di errore in caso di password e password di conferma diverse}
@@ -60,7 +60,7 @@ Visualizzazione messaggio di errore che segnala all'utente la non corrispondenza
     \item \textbf{Attori primari:} utente autenticato o utente non autenticato;
     \item \textbf{Precondizione:} l'attore inserisce una password di conferma che non corrisponde a quella inserita come password da registrare;
     \item \textbf{Postcondizione:} all'attore viene mostrato un messaggio il quale lo avvisa della non corrispondenza tra la password e la password di conferma;
-    \item \textbf{Scenario principale:} l'attore inserisce una password di conferma che non corrisponde a quella inserita come password da registrare e viene informato di ciò.
+    \item \textbf{Scenario principale:} l'attore inserisce una password di conferma che non corrisponde a quella inserita come password da registrare e viene informato della non corrispondenza.
 \end{itemize}
 
 \UC{Visualizzazione messaggio campo dati obbligatorio non inserito}
@@ -69,7 +69,7 @@ Visualizzazione messaggio che segnala all'utente il mancato riempimento di un ca
     \item \textbf{Attori primari:} utente autenticato o utente non autenticato;
     \item \textbf{Precondizione:} l'attore non ha inserito, oppure ha inserito solo caratteri vuoti come spazi o tab, in un campo dati obbligatorio;
     \item \textbf{Postcondizione:} all'attore viene mostrato un messaggio che lo avvisa del mancato riempimento di quel campo dati obbligatorio;
-    \item \textbf{Scenario principale:} l'attore non ha inserito, oppure ha inserito solo caratteri vuoti come spazi o tab, in un campo dati obbligatorio e viene informato di ciò.
+    \item \textbf{Scenario principale:} l'attore non ha inserito, oppure ha inserito solo caratteri vuoti come spazi o tab, in un campo dati obbligatorio e viene informato del mancato riempimento di esso.
 \end{itemize}
 
 % Estensioni carrello
@@ -96,7 +96,7 @@ Visualizzazione messaggio di errore che segnala al venditore che il file inserit
     \item \textbf{Attori primari:} venditore;
     \item \textbf{Precondizione:} il venditore inserisce un file di tipo non immagine;
     \item \textbf{Postcondizione:} all'attore viene mostrato un messaggio il quale lo avvisa che si possono selezionare solo file di tipo immagine;
-    \item \textbf{Scenario principale:} il venditore inserisce un file di tipo non immagine e viene informato di ciò.
+    \item \textbf{Scenario principale:} il venditore inserisce un file di tipo non immagine e viene informato del tipo errato del file.
 \end{itemize}
 
 % Estensioni prodotto
@@ -106,7 +106,7 @@ Visualizzazione messaggio di errore il quale segnala al venditore che il prezzo 
     \item \textbf{Attori primari:} venditore;
     \item \textbf{Precondizione:} il venditore inserisce un prezzo minore o uguale a zero;
     \item \textbf{Postcondizione:} al venditore viene mostrato un messaggio il quale lo avvisa che il prezzo del prodotto inserito è minore o uguale a zero;
-    \item \textbf{Scenario principale:} il venditore inserisce un prezzo minore o uguale a zero e viene informato di ciò.
+    \item \textbf{Scenario principale:} il venditore inserisce un prezzo minore o uguale a zero e viene informato dell'inserimento di un prezzo minore o uguale a zero.
 \end{itemize}
 
 \UC{Visualizzazione messaggio di errore in caso di quantità minore o uguale a zero}
@@ -115,7 +115,7 @@ Visualizzazione messaggio di errore che segnala al venditore che la quantità de
     \item \textbf{Attori primari:} venditore;
     \item \textbf{Precondizione:} il venditore inserisce una quantità del prodotto minore o uguale a zero;
     \item \textbf{Postcondizione:} al venditore viene mostrato un messaggio il quale lo avvisa che la quantità del prodotto inserita è minore o uguale a zero;
-    \item \textbf{Scenario principale:} il venditore inserisce una quantità del prodotto minore o uguale a zero e viene informato di ciò.
+    \item \textbf{Scenario principale:} il venditore inserisce una quantità del prodotto minore o uguale a zero e viene informato dell'inserimento di una quantità minore o uguale a zero.
 \end{itemize}
 
 \UC{Visualizzazione messaggio di errore in caso di sconto minore di zero}
@@ -124,7 +124,7 @@ Visualizzazione messaggio di errore il quale segnala al venditore che lo sconto 
     \item \textbf{Attori primari:} venditore;
     \item \textbf{Precondizione:} il venditore inserisce uno sconto minore di zero;
     \item \textbf{Postcondizione:} al venditore viene mostrato un messaggio il quale lo avvisa che lo sconto appena inserito è minore di zero;
-    \item \textbf{Scenario principale:} il venditore inserisce uno sconto minore di zero e viene informato di ciò.
+    \item \textbf{Scenario principale:} il venditore inserisce uno sconto minore di zero e viene informato dell'inserimento di uno sconto minore di zero.
 \end{itemize}
 
 \UC{Visualizzazione messaggio di errore in caso di sconto maggiore di 100\%}
@@ -133,7 +133,7 @@ Visualizzazione messaggio di errore il quale segnala al venditore che lo sconto 
     \item \textbf{Attori primari:} venditore;
     \item \textbf{Precondizione:} il venditore inserisce uno sconto maggiore di 100\%;
     \item \textbf{Postcondizione:} al venditore viene mostrato un messaggio il quale lo avvisa che lo sconto appena inserito è maggiore di 100\%;
-    \item \textbf{Scenario principale:} il venditore inserisce uno sconto maggiore di 100\% e viene informato di ciò.
+    \item \textbf{Scenario principale:} il venditore inserisce uno sconto maggiore di 100\% e viene informato dell'inserimento di uno sconto maggiore di 100\%.
 \end{itemize}
 
 \UC{Visualizzazione messaggio di errore tentivo di aggiunta di più di quattro foto relative ad un prodotto}
@@ -142,7 +142,7 @@ Visualizzazione messaggio di errore il quale segnala al venditore il tentativo d
     \item \textbf{Attori primari:} venditore;
     \item \textbf{Precondizione:} il venditore cerca di aggiungere una nuova foto relativa ad un prodotto, anche quando si è già raggiunto il limite massimo di quattro;
     \item \textbf{Postcondizione:} al venditore viene mostrato un messaggio il quale lo avvisa che non possono essere inserite più di 4 quattro foto per prodotto;
-    \item \textbf{Scenario principale:} il venditore cerca di aggiungere una nuova foto relativa ad un prodotto, anche quando si è già raggiunto il limite massimo di quattro e viene informato di ciò.
+    \item \textbf{Scenario principale:} il venditore cerca di aggiungere una nuova foto relativa ad un prodotto, anche quando si è già raggiunto il limite massimo di quattro e viene informato del superamento del limite di quattro foto per prodotto.
 \end{itemize}
 
 \UC{Visualizzazione messaggio di errore nessuna foto inserita}
@@ -151,7 +151,7 @@ Visualizzazione messaggio di errore il quale segnala al venditore che non è sta
     \item \textbf{Attori primari:} venditore;
     \item \textbf{Precondizione:} il venditore non inserisce alcuna foto relativa ad un prodotto;
     \item \textbf{Postcondizione:} al venditore viene mostrato un messaggio il quale lo avvisa che bisogna inserire almeno una foto relativa ad un prodotto;
-    \item \textbf{Scenario principale:} il venditore non inserisce alcuna foto relativa ad un prodotto e viene informato di ciò.
+    \item \textbf{Scenario principale:} il venditore non inserisce alcuna foto relativa ad un prodotto e viene informato del mancato inserimento di almeno una foto relativa ad un prodotto.
 \end{itemize}
 
 % Estensioni Categoria
@@ -161,7 +161,7 @@ Visualizzazione messaggio di errore il quale segnala al venditore che sta cercan
     \item \textbf{Attori primari:} venditore;
     \item \textbf{Precondizione:} il venditore vuole assegnare ad una categoria un nome già utilizzato da un'altra categoria;
     \item \textbf{Postcondizione:} al venditore viene mostrato un messaggio il quale lo avvisa che il nome che sta cercando di assegnare ad una categoria è già in uso;
-    \item \textbf{Scenario principale:} il venditore vuole assegnare ad una categoria un nome già utilizzato da un'altra categoria e viene informato di ciò.
+    \item \textbf{Scenario principale:} il venditore vuole assegnare ad una categoria un nome già utilizzato da un'altra categoria e viene informato dell'impossibilità di assegnare ad una categoria un nome già utilizzato da un'altra categoria.
 \end{itemize}
 
 % Estensioni dashboard
@@ -172,7 +172,7 @@ Nel caso in cui la ricerca del prodotto non dia risultati verrà visualizzato un
 	\item \textbf{Attori primari:} acquirente o utente non autenticato;
 	\item \textbf{Precondizione:} l'attore ha svolto una ricerca di un prodotto che non ha dato alcun risultato;
 	\item \textbf{Postcondizione:} all'attore verrà mostrato un messaggio il quale lo informa che la ricerca appena effettuata non ha prodotto alcun risultato;
-	\item \textbf{Scenario principale:} l'attore effettua una ricerca che non ha prodotto alcun risultato e viene informato di ciò.
+	\item \textbf{Scenario principale:} l'attore effettua una ricerca che non ha prodotto alcun risultato e viene informato del mancato risultato della ricerca appena effettuata.
 \end{itemize}
 
 \UC{Visualizzazione messaggio in caso di prodotto selezionato per l'eliminazione ma non ancora evaso in alcuni ordini}
