@@ -1,3 +1,13 @@
+% Estensioni campi dati
+\UC{Visualizzazione messaggio di errore caratteri non alfabetici non permessi}
+Visualizzazione messaggio di errore che segnala all'attore l'inserimento di caratteri non alfabetici.
+\begin{itemize}
+    \item \textbf{Attori primari:} acquirente;
+    \item \textbf{Precondizione:} l'attore ha inserito dei caratteri non alfabetici.
+    \item \textbf{Postcondizione:} all'attore verrà mostrato un messaggio il quale lo informa della presenza di carattere non alfabetici, dove non è permessa la loro presenza;
+    \item \textbf{Scenario principale:} l'attore ha inserito dei caratteri non alfabetici dove non è permessa la loro presenza e verrà avvisato di ciò.
+\end{itemize}
+
 % Estensioni email
 \UC{Visualizzazione messaggio di errore in caso di email già registrata nella piattaforma}
 Visualizzazione messaggio di errore che segnala all'attore il tentativo di registrazione con un'email già utilizzata.
@@ -175,7 +185,6 @@ Visualizzazione avviso che segnala al venditore che il prodotto che vuole elimin
     \item \textbf{Scenario principale:} Visualizzazione avviso che segnala che il prodotto eliminato è presente in un ordine che non è ancora stato evaso.
 \end{itemize}
 
-
 % Estensioni carta per il pagamento
 \UC{Visualizzazione messaggio d'errore numero della carta non valido}
 Nel caso in cui venga inserito un numero di una carta non valido, verrà segnalato attraverso un messaggio di errore opportuno.
@@ -202,4 +211,14 @@ Nel caso in cui venga inserita una data di scadenza di una carta non valida, ver
 	\item \textbf{Precondizione:} l'acquirente ha inserito una data di scadenza di una carta non valida;
 	\item \textbf{Postcondizione:} all'acquirente verrà mostrato un messaggio il quale lo informa della non validità della data di scadenza della carta;
 	\item \textbf{Scenario principale:} l'attore non ha inserito una data di scadenza valida nel seguente formato "mese/anno", dove l'anno sarà composto solo dalle ultime due cifre dell'anno di scadenza, e verrà avvisato di ciò.
+\end{itemize}
+
+% Estensioni indirizzo di consegna
+\UC{Visualizzazione messaggio d'errore CAP non valido}
+Nel caso in cui venga inserito un CAP per un indirizzo di consegna non valido, verrà segnalato attraverso un messaggio di errore opportuno.
+\begin{itemize}
+	\item \textbf{Attori primari:} acquirente;
+	\item \textbf{Precondizione:} l'acquirente ha inserito un CAP per un indirizzo di consegna non valido;
+	\item \textbf{Postcondizione:} all'acquirente verrà mostrato un messaggio il quale lo informa della non validità del CAP inserito;
+	\item \textbf{Scenario principale:} l'attore non ha inserito un CAP composto da esattamente 5 numeri compresi tra 0 e 9 e verrà avvisato di ciò.
 \end{itemize}
