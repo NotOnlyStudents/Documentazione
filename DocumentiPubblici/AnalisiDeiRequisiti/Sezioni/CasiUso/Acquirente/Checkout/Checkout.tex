@@ -17,19 +17,19 @@ L'utente si trova nella schermata del carrello e vuole procedere al checkout per
     \item \textbf{Postcondizione:} l'attore ha terminato il checkout acquistando i prodotti nel carrello, il suo carrello risulterà vuoto e verrà reindirizzato alla pagina di riepilogo dell'ordine;
     \item \textbf{Scenario principale:} l'attore si trova nella schermata del carrello e seleziona la funzionalità per procedere con il checkout. In seguito eseguirà le seguenti azioni:
     \begin{itemize}
-    	\item (\actualUC.1) - selezionare l'indirizzo di consegna;
-    	\item (\actualUC.2) - selezionare la carta con la quale svolgere il pagamento;
-    	\item inserire possibili informazioni aggiuntive per la consegna dell'acquisto;
-        \item (\actualUC.3) - inviare il pagamento.
+    	\item (\actualUC.1) - Selezionare l'indirizzo di consegna;
+    	\item (\actualUC.2) - Selezionare la carta con la quale svolgere il pagamento;
+    	\item Inserire possibili informazioni aggiuntive per la consegna dell'acquisto;
+        \item (\actualUC.3) - Inviare il pagamento.
     \end{itemize}
     Se il pagamento è andato a buon fine, verrà visualizzato un messaggio il quale segnalerà la buona riuscita del pagamento e verrà visualizzata la schermata di riepilogo dell'ordine;
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
-        \item se il pagamento fallisce per un errore di stripe:
+        \item Se il pagamento fallisce per un errore di stripe:
         \begin{itemize}
-            \item (UC) - verrà visualizzato il messaggio di errore pagamento non andato a buon fine;
-            \item il carrello non verrà svuotato;
-            \item l'acquirente verrà reindirizzato alla schermata del carrello.
+            \item (UC) - Verrà visualizzato il messaggio di errore pagamento non andato a buon fine;
+            \item Il carrello non verrà svuotato;
+            \item L'acquirente verrà reindirizzato alla schermata del carrello.
         \end{itemize}
     \end{enumerate}
 \end{itemize}
@@ -45,8 +45,8 @@ L'acquirente seleziona l'indirizzo della consegna, ovvero dove verrà recapitato
     \item \textbf{Scenario principale:} l'acquirente si trova durante la fase di checkout e seleziona uno tra gli indirizzi di consegna precedentemente inseriti;
     \item \textbf{Scenari alternativi:}
     \begin{enumerate}[label=\lett]
-        \item se sono presenti altri indirizzi, l'acquirente ha eseguito almeno un ordine e non seleziona alcun indirizzo per la consegna, allora verrà utilizzato l'indirizzo a cui è stato recapitato l'ultimo ordine;
-        \item se non è presente alcun indirizzo da utilizzare per la consegna, allora verrà mostrato un messaggio il quale indicherà l'obbligo di dover inserire un indirizzo di consegna per poter proseguire con il checkout. In seguito l'indirizzo appena inserito verrà selezionato automaticamente per proseguire con la consegna.
+        \item Se sono presenti altri indirizzi, l'acquirente ha eseguito almeno un ordine e non seleziona alcun indirizzo per la consegna, allora verrà utilizzato l'indirizzo a cui è stato recapitato l'ultimo ordine;
+        \item Se non è presente alcun indirizzo da utilizzare per la consegna, allora verrà mostrato un messaggio il quale indicherà l'obbligo di dover inserire un indirizzo di consegna per poter proseguire con il checkout. In seguito l'indirizzo appena inserito verrà selezionato automaticamente per proseguire con la consegna.
     \end{enumerate}
 \end{itemize}
 
@@ -59,8 +59,8 @@ L'acquirente seleziona la carta con la quale svolgere il pagamento tra quelle in
     \item \textbf{Scenario principale:} l'acquirente si trova durante la fase di checkout e seleziona una tra le carte con la quale svolgere il pagamento tra quelle precedentemente inserite;
     \item \textbf{Scenari alternativi:}
     \begin{enumerate}[label=\lett]
-        \item se sono presenti altre carte, l'acquirente ha eseguito almeno un ordine e non seleziona alcuna carta per il pagamento, allora verrà utilizzata la carta a cui è stato addebitato l'ultimo ordine;
-        \item se non è presente alcuna carta da utilizzare per il pagamento, allora verrà mostrato un messaggio il quale indicherà l'obbligo di dover inserire una carta di pagamento per poter proseguire con il checkout. In seguito la carta appena inserita verrà selezionata automaticamente per proseguire con la consegna.
+        \item Se sono presenti altre carte, l'acquirente ha eseguito almeno un ordine e non seleziona alcuna carta per il pagamento, allora verrà utilizzata la carta a cui è stato addebitato l'ultimo ordine;
+        \item Se non è presente alcuna carta da utilizzare per il pagamento, allora verrà mostrato un messaggio il quale indicherà l'obbligo di dover inserire una carta di pagamento per poter proseguire con il checkout. In seguito la carta appena inserita verrà selezionata automaticamente per proseguire con la consegna.
     \end{enumerate}
 \end{itemize}
 
