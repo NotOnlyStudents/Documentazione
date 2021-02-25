@@ -167,10 +167,10 @@ Visualizzazione messaggio di errore il quale segnala al venditore che sta cercan
 % Estensioni dashboard
 
 \UC{Visualizzazione messaggio di ricerca senza alcun risultato}
-Nel caso in cui la combinazione della ricerca con i vari filtri impostati non dia risultati verrà visualizzato un opportuno messaggio.
+Nel caso in cui la ricerca del prodotto non dia risultati verrà visualizzato un opportuno messaggio.
 \begin{itemize}
 	\item \textbf{Attori primari:} acquirente o utente non autenticato;
-	\item \textbf{Precondizione:} l'attore ha svolto una ricerca che non ha prodotto alcun risultato;
+	\item \textbf{Precondizione:} l'attore ha svolto una ricerca di un prodotto che non ha dato alcun risultato;
 	\item \textbf{Postcondizione:} all'attore verrà mostrato un messaggio il quale lo informa che la ricerca appena effettuata non ha prodotto alcun risultato;
 	\item \textbf{Scenario principale:} l'attore effettua una ricerca che non ha prodotto alcun risultato e viene informato di ciò.
 \end{itemize}
@@ -179,7 +179,7 @@ Nel caso in cui la combinazione della ricerca con i vari filtri impostati non di
 Visualizzazione avviso che segnala al venditore che il prodotto che vuole eliminare è presente all'interno di un ordine che non è ancora stato evaso.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
-    \item \textbf{Precondizione:} il venditore sta cercando di eliminare un prodotto che risulta ordinato in un ordine che non è stato ancora evaso;
-    \item \textbf{Postcondizione:} al venditore viene mostrato un messaggio il quale lo informa che il prodotto che sta cercando di eliminare risulta ordinato in un ordine che non è stato ancora evaso.
-    \item \textbf{Scenario principale:} il venditore sta cercando di eliminare un prodotto che risulta ordinato in un ordine che non è stato ancora evaso e viene informato di ciò.
+    \item \textbf{Precondizione:} il venditore sta cercando di eliminare un prodotto all'interno in un ordine che non è stato ancora evaso;
+    \item \textbf{Postcondizione:} al venditore viene mostrato un messaggio il quale lo informa che il prodotto non può essere eliminato perché è presente in un ordine che non è stato ancora evaso.
+    \item \textbf{Scenario principale:} il venditore sta cercando di eliminare un prodotto presente in un ordine che non è stato ancora evaso, viene quindi informato che per questo motivo non è possibile procedere con l'eliminazione.
 \end{itemize}
