@@ -41,11 +41,11 @@ Il venditore inserisce il nome del prodotto da aggiungere.
 	        \item (UC) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
 	        \item Viene data la possibilità al venditore di modificare il nome del nuovo prodotto inserito.
 	    \end{itemize}
-    	%\item Il venditore inserisce un nome composto da troppi caratteri per il nuovo prodotto. In questo caso:
-    	%\begin{itemize}
-    	%	\item (UC) - Viene visualizzato il messaggio di errore campo dati non valido;
-    	%	\item Viene data la possibilità al venditore di modificare il nome del nuovo prodotto inserito.
-    	%\end{itemize}
+    	\item Il venditore inserisce un nome composto da troppi caratteri per il nuovo prodotto. In questo caso:
+    	\begin{itemize}
+    		\item (UC) - Viene visualizzato il messaggio di errore in caso di inserimento di un numero eccessivo di caratteri;
+    		\item Viene data la possibilità al venditore di modificare il nome del nuovo prodotto inserito.
+    	\end{itemize}
 	\end{enumerate}
 \end{itemize}
 
@@ -64,11 +64,11 @@ Il venditore inserisce la descrizione del prodotto da aggiungere.
     		\item (UC) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
     		\item Viene fornita al venditore la possibilità di modificare la descrizione del nuovo prodotto inserito.
     	\end{itemize}
-        %\item Il venditore inserisce una desrizione composta da troppi caratteri per il nuovo prodotto. In questo caso:
-	    %\begin{itemize}
-	    %	\item (UC) - Viene visualizzato il messaggio di errore campo dati non valido;
-	    %	\item Viene fornita al venditore la possibilità di modificare la descrizione del nuovo prodotto inserito.
-	    %\end{itemize}
+        \item Il venditore inserisce una descrizione composta da troppi caratteri per il nuovo prodotto. In questo caso:
+	    \begin{itemize}
+    		\item (UC) - Viene visualizzato il messaggio di errore in caso di inserimento di un numero eccessivo di caratteri;
+	    	\item Viene fornita al venditore la possibilità di modificare la descrizione del nuovo prodotto inserito.
+	    \end{itemize}
     \end{enumerate}
 \end{itemize}
 
@@ -128,7 +128,7 @@ Il venditore inserisce lo sconto percentuale da applicare al prezzo del prodotto
     	\end{itemize}
     	\item Il venditore inserisce uno sconto minore di 0\%. In questo caso:
     	\begin{itemize}
-    		\item (UC) - Viene mostrato un messaggio di errore che segnala lo sconto minore di 0\%; %zero o 0\%?
+    		\item (UC) - Viene mostrato un messaggio di errore che segnala lo sconto minore di 0\%;
     		\item Viene fornita al venditore la possibilità di modificare lo sconto da applicare al nuovo prodotto.
     	\end{itemize}
     \end{enumerate}
