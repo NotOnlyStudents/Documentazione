@@ -1,11 +1,12 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \UC{Ricerca dei prodotti} 
 L'utente non autenticato o l'acquirente può cercare i prodotti dalla schermata principale oppure dalla PLP.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente o utente non autenticato;
     \item \textbf{Precondizione:} l'attore ha selezionato l'azione della ricerca e inserito le parole per la ricerca del prodotto;
     \item \textbf{Postcondizione:} l'attore viene reindirizzato alla PLP con i prodotti che contengono nella descrizione o nel nome, almeno una delle parole per le quali si è svolta la ricerca;
-    \item \textbf{Scenario principale:} l'attore ha selezionato l'azione della ricerca e inserito le parole per la ricerca del prodotto. In seguito preme sull'azione di ricerca e viene reindirizzato alla PLP che contiene tutti i prodotti che hanno almeno una delle parole indicate nella descrizione o nel nome;
-    \end{itemize}
+    \item \textbf{Scenario principale:} l'attore ha selezionato l'azione della ricerca e inserito le parole per la ricerca del prodotto. In seguito preme sull'azione di ricerca e viene reindirizzato alla PLP che contiene tutti i prodotti che hanno almeno una delle parole indicate, nella descrizione o nel nome;
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
         \item L'attore ha svolto una ricerca che non ha prodotto alcun risultato. In questo caso:
@@ -15,6 +16,8 @@ L'utente non autenticato o l'acquirente può cercare i prodotti dalla schermata 
     \end{enumerate}
 \end{itemize}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \UC{Filtraggio prodotti della PLP}
 \begin{figure}[H]
     \centering
@@ -22,7 +25,7 @@ L'utente non autenticato o l'acquirente può cercare i prodotti dalla schermata 
     \caption{Diagramma di \actualUC: Filtraggio dei prodotti della PLP} 
 \end{figure}
 
-L'utente non autenticato o l'acquirente può filtrare i prodotti all'interno della PLP per categoria, prezzo, promozioni attive, sconti applicati e se c'è disponibilità nel magazzino.
+L'utente non autenticato o l'acquirente può filtrare i prodotti all'interno della PLP per categoria, prezzo e se è disponibile nel magazzino.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente o utente non autenticato;
     \item \textbf{Precondizione:} l'attore è nella PLP e ha impostato uno (o più) dei filtri disponibili per i quali cercare;
@@ -65,7 +68,7 @@ L'utente non autenticato o l'acquirente può cercare i prodotti in base al loro 
     \item \textbf{Precondizione:} l'attore è nella PLP e ha selezionato uno tra gli intervalli di prezzo disponibili (0 - 20, 20 - 50, 50 - 100, 100 - 200, 200 - 500, più di 500), oppure inserito un intervallo personalizzato;
     \item \textbf{Postcondizione:} l'attore visualizzerà nella PLP i prodotti filtrati in base all'intervallo di prezzo selezionato;
     \item \textbf{Scenario principale:} l'attore seleziona l'intervallo di prezzo, oppure ne fornisce uno personalizzato per filtrare i prodotti, e verranno visualizzati i prodotti che entrano nell'intervallo di prezzo selezionato;
-    \item \item \textbf{Scenari alternativi:}
+    \item \textbf{Scenari alternativi:}
     \begin{enumerate}[label=\lett]
         \item Se l'attore non imposta il seguente filtro, allora verranno visualizzati tutti i prodotti a prescindere dal prezzo.
     \end{enumerate}
@@ -83,3 +86,5 @@ L'utente non autenticato o l'acquirente può cercare i prodotti in base alla lor
         \item Se l'attore non imposta il seguente filtro, allora verranno visualizzati tutti i prodotti a prescindere dalla loro disponibilità.
     \end{enumerate}
 \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
