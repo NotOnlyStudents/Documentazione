@@ -1,30 +1,22 @@
 \UC{Ricerca dei prodotti} 
-L'utente non autenticato o l'acquirente può ricercare i prodotti dalla schermata principale oppure dalla \glo{PLP}.
+L'utente non autenticato o l'acquirente può ricercare i prodotti dalla schermata principale oppure dalla PLP.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente o utente non autenticato;
     \item \textbf{Precondizione:} l'attore ha selezionato l'azione della ricerca e inserito le parole per la ricerca del prodotto;
     \item \textbf{Postcondizione:} l'attore viene spostato alla PLP con i prodotti che contengono almeno una delle parole ricercate nella descrizione o nel nome;
     \item \textbf{Scenario principale:} 
     \begin{itemize}
-        \item L'attore inserisce le parole per la ricerca del prodotto;
-        \item Preme sull'azione di ricerca;
-        \item Viene portato alla PLP che contiene tutti i prodotti che hanno almeno una delle parole indicate nella descrizione o il titolo
+        \item l'attore inserisce le parole per la ricerca del prodotto;
+        \item preme sull'azione di ricerca;
+        \item viene portato alla PLP che contiene tutti i prodotti che hanno almeno una delle parole indicate nella descrizione o il titolo
     \end{itemize}
-    \item \textbf{Estensioni:} l'utente ricerca dei prodotti non presenti nella piattaforma.
-    \begin{itemize}
-    	\item (\actualUC.1) - Visualizzazione messaggio di ricerca senza alcun risultato.
-    \end{itemize}
-\end{itemize}
-
-\resetSubUC
-
-\subUC{Visualizzazione messaggio di ricerca o filtraggio senza alcun risultato}
-Nel caso in cui la ricerca o il filtraggio non dia risultati verrà visualizzato un opportuno messaggio.
-\begin{itemize}
-	\item \textbf{Attori primari:} acquirente, utente non autenticato;
-	\item \textbf{Precondizione:} l'attore ha svolto una ricerca o un filtraggio che non ha prodotto alcun risultato;
-	\item \textbf{Postcondizione:} all'attore verrà mostrato un messaggio che lo informa che la ricerca o il filtraggio non ha prodotto risultati;
-	\item \textbf{Scenario principale:} l'attore effettua una ricerca o un filtraggio senza alcun risultato e viene avvertito.
+    \item \textbf{Estensioni:}
+    \begin{enumerate}
+        \item l'attore ha svolto una ricerca che non ha prodotto alcun risultato. In questo caso:
+        \begin{itemize}
+            \item (UC) - viene visualizzato il messaggio di ricerca senza alcun risultato.
+        \end{itemize}
+    \end{enumerate}
 \end{itemize}
 
 \UC{Filtraggio prodotti della PLP}
@@ -41,18 +33,21 @@ L'utente non autenticato o l'acquirente filtra i prodotti all'interno della PLP 
     \item \textbf{Postcondizione:} L'attore avrà a disposizione tutti i prodotti che soddisfano tutte le condizioni dei vari filtri impostati.
     \item \textbf{Scenario Principale:}
     \begin{itemize}
-        \item L'attore imposta uno (o più) dei filtri seguenti 
+        \item l'attore imposta uno (o più) dei filtri seguenti 
         \begin{itemize}
-            \item (\actualUC.1) - Impostazione del filtro per categoria.
-            \item (\actualUC.2) - Impostazione del filtro per prezzo.
-            \item (\actualUC.3) - Impostazione del filtro per disponibilità nel magazzino.
+            \item (\actualUC.1) - impostazione del filtro per categoria;
+            \item (\actualUC.2) - impostazione del filtro per prezzo;
+            \item (\actualUC.3) - impostazione del filtro per disponibilità nel magazzino.
         \end{itemize}
-        \item La pagina viene aggiornata con i prodotti che rispettano i filtri applicati
+        \item la schermata viene aggiornata con i prodotti che rispettano i filtri applicati;
     \end{itemize}
-    \item \textbf{Estensioni:} Nel caso la combinazione di filtri impostati non dia risultati verrà visualizzato un messaggio dove viene segnalato all'attore questo fatto.
-    \begin{itemize}
-    	\item (UC) - Visualizzazione messaggio di ricerca o filtraggio senza alcun risultato.
-    \end{itemize}
+    \item \textbf{Estensioni:}
+    \begin{enumerate}
+        \item l'attore ha impostato i seguenti filtri in modo tale che la combinazione con la ricerca non dia alcun risultato. In questo caso:
+        \begin{itemize}
+            \item (UC) - viene visualizzato il messaggio di ricerca senza alcun risultato.
+        \end{itemize}
+    \end{enumerate}
 \end{itemize}
 
 \resetSubUC
