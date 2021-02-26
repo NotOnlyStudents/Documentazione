@@ -1,3 +1,13 @@
+% Estensioni campi dati
+\UC{Visualizzazione messaggio di errore caratteri non alfabetici non permessi}
+Visualizzazione messaggio di errore che segnala all'attore l'inserimento di caratteri non alfabetici.
+\begin{itemize}
+    \item \textbf{Attori primari:} acquirente;
+    \item \textbf{Precondizione:} l'attore ha inserito dei caratteri non alfabetici;
+    \item \textbf{Postcondizione:} all'attore verrà mostrato un messaggio il quale lo informa della presenza di carattere non alfabetici, dove non è permessa la loro presenza;
+    \item \textbf{Scenario principale:} l'attore ha inserito dei caratteri non alfabetici dove non è permessa la loro presenza e verrà avvisato di ciò.
+\end{itemize}
+
 % Estensioni email
 \UC{Visualizzazione messaggio di errore in caso di registrazione con un'email già utilizzata nella piattaforma}
 Visualizzazione messaggio di errore che segnala all'attore il tentativo di registrazione con un'email già utilizzata nella piattaforma.
@@ -180,6 +190,55 @@ Visualizzazione avviso che segnala al venditore che il prodotto che vuole elimin
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
     \item \textbf{Precondizione:} il venditore sta cercando di eliminare un prodotto all'interno in un ordine che non è stato ancora evaso;
-    \item \textbf{Postcondizione:} al venditore viene mostrato un messaggio il quale lo informa che il prodotto non può essere eliminato perché è presente in un ordine che non è stato ancora evaso.
+    \item \textbf{Postcondizione:} al venditore viene mostrato un messaggio il quale lo informa che il prodotto non può essere eliminato perché è presente in un ordine che non è stato ancora evaso;
     \item \textbf{Scenario principale:} il venditore sta cercando di eliminare un prodotto presente in un ordine che non è stato ancora evaso, viene quindi informato che per questo motivo non è possibile procedere con l'eliminazione.
+\end{itemize}
+
+% Estensioni carta per il pagamento
+\UC{Visualizzazione messaggio d'errore numero della carta non valido}
+Nel caso in cui venga inserito un numero di una carta non valido, verrà segnalato attraverso un messaggio di errore opportuno.
+\begin{itemize}
+	\item \textbf{Attori primari:} acquirente;
+	\item \textbf{Precondizione:} l'acquirente ha inserito un numero di una carta non valido;
+	\item \textbf{Postcondizione:} all'acquirente verrà mostrato un messaggio il quale lo informa della non validità del numero della carta;
+	\item \textbf{Scenario principale:} l'attore non ha inserito esattamente 16 numeri compresi tra 0 e 9 come numero della carta e verrà avvisato della non validità del numero della carta.
+\end{itemize}
+
+\UC{Visualizzazione messaggio d'errore CVV della carta non valido}
+Nel caso in cui venga inserito un CVV di una carta non valido, verrà segnalato attraverso un messaggio di errore opportuno.
+\begin{itemize}
+	\item \textbf{Attori primari:} acquirente;
+	\item \textbf{Precondizione:} l'acquirente ha inserito un CVV di una carta non valido;
+	\item \textbf{Postcondizione:} all'acquirente verrà mostrato un messaggio il quale lo informa della non validità del CVV della carta;
+	\item \textbf{Scenario principale:} l'attore non ha inserito esattamente 3 numeri compresi tra 0 e 9 come CVV della carta e verrà avvisato della non validità del CVV della carta.
+\end{itemize}
+
+\UC{Visualizzazione messaggio d'errore data di scandenza non valida}
+Nel caso in cui venga inserita una data di scadenza di una carta non valida, verrà segnalato attraverso un messaggio di errore opportuno.
+\begin{itemize}
+	\item \textbf{Attori primari:} acquirente;
+	\item \textbf{Precondizione:} l'acquirente ha inserito una data di scadenza di una carta non valida;
+	\item \textbf{Postcondizione:} all'acquirente verrà mostrato un messaggio il quale lo informa della non validità della data di scadenza della carta;
+	\item \textbf{Scenario principale:} l'attore non ha inserito una data di scadenza valida nel seguente formato "mese/anno", dove l'anno sarà composto solo dalle ultime due cifre dell'anno di scadenza, e verrà avvisato della non validità della data di scadenza.
+\end{itemize}
+
+% Estensioni indirizzo di consegna
+\UC{Visualizzazione messaggio d'errore CAP non valido}
+Nel caso in cui venga inserito un CAP per un indirizzo di consegna non valido, verrà segnalato attraverso un messaggio di errore opportuno.
+\begin{itemize}
+	\item \textbf{Attori primari:} acquirente;
+	\item \textbf{Precondizione:} l'acquirente ha inserito un CAP per un indirizzo di consegna non valido;
+	\item \textbf{Postcondizione:} all'acquirente verrà mostrato un messaggio il quale lo informa della non validità del CAP inserito;
+	\item \textbf{Scenario principale:} l'attore non ha inserito un CAP composto da esattamente 5 numeri compresi tra 0 e 9 e verrà avvisato della non validità del CAP.
+\end{itemize}
+
+% Estensioni stripe
+\UC{Visualizzazione messaggio d'errore pagamento non andato a buon fine}
+Nel caso in cui avvenga un errore durante lo svolgimento del pagamento da parte di stripe, questo verrà visualizzato all'acquirente.
+\begin{itemize}
+	\item \textbf{Attori primari:} acquirente;
+	\item \textbf{Attori secondari:} stripe;
+	\item \textbf{Precondizione:} stripe sta svolgendo il pagamento dell'acquirente e si verifica un errore;
+	\item \textbf{Postcondizione:} all'acquirente verrà mostrato un messaggio il quale lo informa della non riuscita del pagamento con il relativo messaggio;
+	\item \textbf{Scenario principale:} stripe sta svolgendo il pagamento dell'acquirente, si verifica un errore e questo verrà visualizzato all'acquirente informandolo dell'errore specifico.
 \end{itemize}
