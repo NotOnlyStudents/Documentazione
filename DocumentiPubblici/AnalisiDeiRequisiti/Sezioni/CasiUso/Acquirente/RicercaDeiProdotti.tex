@@ -4,9 +4,9 @@
 L'utente non autenticato o l'acquirente può cercare i prodotti dalla schermata principale oppure dalla PLP.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente o utente non autenticato;
-    \item \textbf{Precondizione:} l'attore ha selezionato l'azione della ricerca e inserito le parole per la ricerca del prodotto;
+    \item \textbf{Precondizione:} l'attore ha selezionato la funzionalità per la ricerca e l'inserimento delle parole per individuare un prodotto;
     \item \textbf{Postcondizione:} l'attore viene reindirizzato alla PLP con i prodotti che contengono nella descrizione o nel nome, almeno una delle parole per le quali si è svolta la ricerca;
-    \item \textbf{Scenario principale:} l'attore ha selezionato l'azione della ricerca e inserito le parole per la ricerca del prodotto. In seguito preme sull'azione di ricerca e viene reindirizzato alla PLP che contiene tutti i prodotti che hanno almeno una delle parole indicate, nella descrizione o nel nome;
+    \item \textbf{Scenario principale:} l'attore ha selezionato la funzione prevista per la ricerca. Dopo aver inserito le parole per individuare il prodotto, conferma la voltà di procedere e viene quindi reindirizzato alla PLP che contiene tutti i prodotti che hanno almeno una delle parole indicate, nella descrizione o nel nome;
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
         \item L'attore ha svolto una ricerca che non ha prodotto alcun risultato. In questo caso:
@@ -39,7 +39,7 @@ L'utente non autenticato o l'acquirente può filtrare i prodotti all'interno del
     Di seguito la PLP verrà aggiornata con i prodotti che rispettano tutti i filtri applicati;
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
-        \item L'attore ha impostato i seguenti filtri in modo tale che la combinazione con la ricerca non dia alcun risultato. In questo caso:
+        \item L'attore ha impostato i filtri in modo tale che la ricerca con la loro combinazione non dia alcun risultato. In questo caso:
         \begin{itemize}
             \item (UC) - Viene visualizzato il messaggio di ricerca senza alcun risultato.
         \end{itemize}
@@ -49,12 +49,12 @@ L'utente non autenticato o l'acquirente può filtrare i prodotti all'interno del
 \resetSubUC
 
 \subUC{Filtro per categorie}
-L'utente non autenticato o l'acquirente può cercare i prodotti in base alla loro categoria, selezionando quelle per cui cercare tra tutte le categorie disponibili.
+L'utente non autenticato o l'acquirente può cercare i prodotti in base alla loro categoria, selezionando quelle di interesse tra tutte le categorie disponibili.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente o utente non autenticato;
     \item \textbf{Precondizione:} l'attore è nella PLP e ha selezionato una (o più) categorie tra quelle disponibili per quali filtrare;
-    \item \textbf{Postcondizione:} l'attore visualizzerà nella PLP i prodotti che contengono almeno una delle categorie selezionate;
-    \item \textbf{Scenario principale:} l'attore è nella PLP e ha selezionato una (o più) categorie tra quelle disponibili per quali filtrare e di seguito verranno visualizzati i prodotti che contengono almeno una delle categoria selezionate;
+    \item \textbf{Postcondizione:} l'attore visualizzerà nella PLP i prodotti che appartengono ad almeno una delle categorie selezionate;
+    \item \textbf{Scenario principale:} l'attore è nella PLP e ha selezionato una (o più) categorie tra quelle disponibili per quali filtrare e di seguito verranno visualizzati i prodotti che appartengono ad almeno una delle categoria selezionate;
     \item \textbf{Scenari alternativi:}
     \begin{enumerate}[label=\lett]
         \item Se l'attore non imposta il seguente filtro, allora verranno visualizzati tutti i prodotti a prescindere della categoria.
@@ -65,7 +65,7 @@ L'utente non autenticato o l'acquirente può cercare i prodotti in base alla lor
 L'utente non autenticato o l'acquirente può cercare i prodotti in base al loro prezzo.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente o utente non autenticato;
-    \item \textbf{Precondizione:} l'attore è nella PLP e ha selezionato uno tra gli intervalli di prezzo disponibili (0 - 20, 20 - 50, 50 - 100, 100 - 200, 200 - 500, più di 500), oppure inserito un intervallo personalizzato;
+    \item \textbf{Precondizione:} l'attore è nella PLP e ha selezionato uno tra gli intervalli di prezzo disponibili oppure ha inserito un intervallo personalizzato;
     \item \textbf{Postcondizione:} l'attore visualizzerà nella PLP i prodotti filtrati in base all'intervallo di prezzo selezionato;
     \item \textbf{Scenario principale:} l'attore seleziona l'intervallo di prezzo, oppure ne fornisce uno personalizzato per filtrare i prodotti, e verranno visualizzati i prodotti che entrano nell'intervallo di prezzo selezionato;
     \item \textbf{Scenari alternativi:}
