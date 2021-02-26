@@ -1,12 +1,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \UC{Visualizzazione ordini effettuati}
-L'acquirente vuole vedere l'elenco degli ordini effettuati sulla piattaforma.
+L'acquirente può visualizzare l'elenco degli ordini effettuati sulla piattaforma.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
     \item \textbf{Precondizione:} l'acquirente si trova in una qualsiasi altra schermata e seleziona l'azione per accedere all'elenco degli ordini effettuati sulla piattaforma;
-    \item \textbf{PostCondizione:} l'acquirente visualizza l'elenco degli ordini effettuati sulla piattaforma in ordine cronologico decrescente;
-    \item \textbf{Scenario Principale:} l'acquirente si trova in una qualsiasi altra schermata e seleziona l'azione per accedere all'elenco degli ordini effettuati sulla piattaforma. In seguito visualizzerà l'elenco degli ordini effettuati sulla piattaforma, dove è indicato per ogni ordine:
+    \item \textbf{Postcondizione:} l'acquirente visualizza l'elenco degli ordini effettuati sulla piattaforma in ordine cronologico decrescente;
+    \item \textbf{Scenario principale:} l'acquirente si trova in una qualsiasi altra schermata e seleziona l'azione per accedere all'elenco degli ordini effettuati sulla piattaforma. In seguito visualizzerà l'elenco degli ordini effettuati sulla piattaforma, dove è indicato per ogni ordine:
     \begin{itemize}
         \item Se è stato evaso o no;
         \item Il prezzo totale che è stato pagato;
@@ -20,7 +20,7 @@ L'acquirente vuole vedere l'elenco degli ordini effettuati sulla piattaforma.
     \end{itemize}
     \item \textbf{Scenari alternativi:} 
     \begin{enumerate}[label=\lett]
-        \item L'utente non ha ancora effettuato ordini, viene visualizzato il messaggio "Nessun ordine effettuato" e sarà data la possibilità all'attore di andare alla home per iniziare gli acquisti.
+        \item L'acquirente non ha ancora effettuato ordini, viene visualizzato il messaggio "Nessun ordine effettuato" e sarà data la possibilità all'acquirente di tornare alla home per iniziare gli acquisti.
     \end{enumerate}
 \end{itemize}
 
@@ -31,23 +31,30 @@ L'acquirente filtra temporalmente l'elenco degli ordini effettuati sulla piattaf
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
     \item \textbf{Precondizione:} l'acquirente si trova nella schermata di visualizzazione degli ordini effettuati;
-    \item \textbf{PostCondizione:} l'acquirente visualizzerà tutti gli ordini che sono stati fatti tra la data di iniziale e quella finale;
-    \item \textbf{Scenario Principale:} l'acquirente si trova nella schermata di visualizzazione degli ordini effettuati e vuole filtrare gli ordini temporalmente. Per farlo dovrà:
+    \item \textbf{Postcondizione:} l'acquirente visualizzerà tutti gli ordini che sono stati fatti tra la data di iniziale e quella finale;
+    \item \textbf{Scenario principale:} l'acquirente si trova nella schermata di visualizzazione degli ordini effettuati e vuole filtrare gli ordini secondo un intervallo temporale. Per farlo dovrà:
     \begin{itemize}
-        \item (\actualUC.1) - Impostazione della data iniziale;
-        \item (\actualUC.2) - Impostazione della data finale;
+        \item (\actualUC.1) - Impostazione della data iniziale dell'intervallo temporale;
+        \item (\actualUC.2) - Impostazione della data finale dell'intervallo temporale.
     \end{itemize}
+    \item \textbf{Estensioni:}
+    \begin{enumerate}[label=\lett]
+        \item L'acquirente imposta un intervallo temporale nel quale non sono stati effettuati ordini. In questo caso:
+        \begin{itemize}
+            \item (UC) - Verrà visualizzato il messaggio nessun ordine effettuato nell'arco temporale impostato.
+        \end{itemize}
+    \end{enumerate}
 \end{itemize}
 
 \resetSubUC
 
-\subUC{Impostazione della data iniziale}
+\subUC{Impostazione della data iniziale dell'intervallo temporale}
 L'acquirente imposta la data iniziale dell'intervallo per il quale filtrare l'elenco degli ordini effettuati sulla piattaforma.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
     \item \textbf{Precondizione:} l'acquirente si trova nella schermata di visualizzazione degli ordini effettuati;
-    \item \textbf{PostCondizione:} l'acquirente ha impostato la data iniziale dell'intervallo per il quale filtrare l'elenco degli ordini effettuati sulla piattaforma;
-    \item \textbf{Scenario Principale:} l'acquirente si trova nella schermata di visualizzazione degli ordini effettuati e inserisce una data valida e minore o uguale di quella finale, come data iniziale dell'intervallo per il quale filtrare l'elenco degli ordini effettuati;
+    \item \textbf{Postcondizione:} l'acquirente ha impostato la data iniziale dell'intervallo per la quale filtrare l'elenco degli ordini effettuati sulla piattaforma;
+    \item \textbf{Scenario principale:} l'acquirente si trova nella schermata di visualizzazione degli ordini effettuati e inserisce una data valida e minore o uguale a quella finale, come data iniziale dell'intervallo per la quale filtrare l'elenco degli ordini effettuati;
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
         \item L'acquirente inserisce una data iniziale non nel formato corretto. In questo caso:
@@ -63,13 +70,13 @@ L'acquirente imposta la data iniziale dell'intervallo per il quale filtrare l'el
     \end{enumerate}
 \end{itemize}
 
-\subUC{Impostazione della data finale}
+\subUC{Impostazione della data finale dell'intervallo temporale}
 L'acquirente imposta la data finale dell'intervallo per il quale filtrare l'elenco degli ordini effettuati sulla piattaforma.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
     \item \textbf{Precondizione:} l'acquirente si trova nella schermata di visualizzazione degli ordini effettuati;
-    \item \textbf{PostCondizione:} l'acquirente ha impostato la data finale dell'intervallo per il quale filtrare l'elenco degli ordini effettuati sulla piattaforma;
-    \item \textbf{Scenario Principale:} l'acquirente si trova nella schermata di visualizzazione degli ordini effettuati e inserisce una data valida e maggiore o uguale di quella iniziale, come data finale dell'intervallo per il quale filtrare l'elenco degli ordini effettuati;
+    \item \textbf{Postcondizione:} l'acquirente ha impostato la data finale dell'intervallo per la quale filtrare l'elenco degli ordini effettuati sulla piattaforma;
+    \item \textbf{Scenario principale:} l'acquirente si trova nella schermata di visualizzazione degli ordini effettuati e inserisce una data valida e maggiore o uguale di quella iniziale, come data finale dell'intervallo per la quale filtrare l'elenco degli ordini effettuati;
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
         \item L'acquirente inserisce una data finale non nel formato corretto. In questo caso:
