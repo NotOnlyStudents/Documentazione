@@ -32,6 +32,14 @@
     \rfun{O}{5} & L'utente non autenticato o l'acquirente deve poter cercare i prodotti per titolo o descrizione. & UC5 \\
     
     \rfun{O}{5.1} &  L'utente non autenticato o l'acquirente deve essere avvisato se la ricerca appena fatta non fornisce risultati. & UC5.1 \\
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \rfun{O}{} & L'utente non autenticato o l'acquirente visualizzerà i prodotti nella PLP ordinati alfabeticamente come ordinamento predefinito & Capitolato \\
+
+    \rfun{O}{} & L'utente non autenticato o l'acquirente, nella PLP, visualizza il nome del prodotto, la prima immagine disponibile di esso, il suo prezzo per unità e se è disponibile in magazzino o no & Capitolato \\
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     
     \rfun{O}{6} & L'utente non autenticato o l'acquirente deve poter filtrare i prodotti nella \glo{PLP}. & UC6\\
     
@@ -52,22 +60,42 @@
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
     
     \rfun{O}{} & L'utente non autenticato o l'acquirente può accedere alla \glo{PDP} di un prodotto dalla PLP. & Capitolato \\
-    
-    \rfun{O}{} & L'utente non autenticato o l'acquirente può accedere alla PDP di un prodotto in evidenza della schermata principale. & Capitolato \\
-
-    \rfun{O}{} & L'utente non autenticato o l'acquirente può accedere alla PDP di un prodotto che è stato inserito nel carrello. & Capitolato \\
 
     \rfun{O}{} & L'utente non autenticato o l'acquirente può accedere alla PDP di un prodotto acquistato dalla pagina di riepilogo ordine. & Capitolato \\
 
-    \rfun{O}{} & L'utente non autenticato o l'acquirente, nella PDP di un prodotto, visualizza nome, descrizione, categorie di appartenenza, prezzo, sconto e foto dello stesso. & \\
+    \rfun{O}{} & L'utente non autenticato o l'acquirente può accedere alla schermata principale da qualsiasi altra schermata della piattaforma. & Capitolato \\
 
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+    \rfun{O}{} & L'utente non autenticato o l'acquirente può accedere alla schermata del carrello da qualsiasi altra schermata della piattaforma. & Capitolato \\
+
+    \rfun{O}{} & L'utente non autenticato può accedere alla schermata di login da qualsiasi altra schermata della piattaforma. & Capitolato \\
+
+    \rfun{O}{} & L'acquirente può accedere alla schermata con le proprie informazioni da qualsiasi altra schermata della piattaforma. & Capitolato \\
+
+    \rfun{O}{} & L'acquirente può accedere alla schermata con tutti gli ordini effettuati da qualsiasi altra schermata della piattaforma. & Capitolato \\
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \rfun{O}{} & L'utente non autenticato o l'acquirente deve visualizzare la descrizione dell'azienda nella schermata principale. & Capitolato \\
+    
+    \rfun{O}{} & L'utente non autenticato o l'acquirente deve visualizzare i prodotti in evidenza nella schermata principale. & Capitolato \\
+
+    \rfun{O}{} & L'utente non autenticato o l'acquirente può aprire la PDP di un prodotto in evidenza dalla schermata principale. & UC9 \\
+    
+    \rfun{O}{} & L'utente non autenticato o l'acquirente può cercare un prodotto per nome da qualsiasi altra schermata della piattaforma. & Capitolato \\
+    
+    \rfun{O}{} & Nella PDP di un prodotto si devono visualizzare nome, descrizione, categorie di appartenenza, prezzo, sconto, quantità disponibile e foto dello stesso. & Capitolato \\
+    
+    \rfun{O}{} & I prodotti nella PLP non disponibili devono essere distinti da quelli che lo sono. & Capitolato \\
 
     \rfun{O}{9.1} & L'utente non autenticato o l'acquirente può aggiungere un prodotto nella quantità desiderata al carrello direttamente dalla PDP. & UC9.1 \\
     
     \rfun{O}{10} & L'utente non autenticato o l'acquirente può visualizzare i prodotti che ha inserito nel carrello. & UC10 \\
+
+    \rfun{O}{10} & L'utente non autenticato o l'acquirente può accedere alla PDP dei prodotti presenti nel carrello dalla sua schermata. & UC10 \\
     
     \rfun{O}{} & Con la conferma del pagamento deve essere visualizzato il riepilogo dell'ordine. & \\
+    
+    \rfun{O}{10} & L'utente non autenticato o l'acquirente può accedere alla PDP dei prodotti acquistati dal riepilogo ordine. & UC10 \\
     
     \rfun{O}{10.1} & L'utente non autenticato o l'acquirente può visualizzare le informazioni del prezzo totale dei prodotti nel carrello. & UC10.1 \\
     
@@ -139,25 +167,11 @@
     
     \rfun{O}{} & L'utente non autenticato può aggiungere prodotti nel carrello come ospite e, appena si autentica, vengono aggiunti al suo carrello personale. & Interna \\
     
-    \rfun{O}{} & L'amministratore può aggiungere account di venditori. & Capitolato \\
-    
-    \rfun{O}{} & L'amministratore può eliminare account di venditori. & Capitolato \\
-        
-    \rfun{O}{} & L'amministratore può fare il \glo{deploy} del sito. & Capitolato \\
-    
-    \rfun{O}{} & L'amministratore può aggiungere servizi di terze parti alla piattaforma. & Capitolato \\
-    
-    \rfun{O}{} & L'amministratore può rimuovere servizi di terze parti alla piattaforma. & Capitolato \\
-    
-    \rfun{O}{} & L'amministratore può specificare i requisiti minimi di una password. & Capitolato \\
-    
     \rfun{Z}{} & L'amministratore può modificare dinamicamente la copia del sito Web o cambiare il layout di PDP o PLP senza ridistribuire l'intero codice ad ogni modifica utilizzando \glo{\textit{Contentful}} come \glo{CMS}. & Capitolato \\
 
-    \rfun{O}{} & Nella schermata principale l'utente deve visualizzare i prodotti in evidenza. &  \\
-    
-    \rfun{O}{} & La ricerca di prodotti deve essere possibile da tutte le schermate. &  \\
-    
-     \rfun{O}{} & I prodotti nella PLP non disponibili devono essere distinti da quelli che lo sono. & \\
-     
-
 \end{longtable}
+
+   
+\begin{comment}
+\rfun{O}{6} & La ricerca di prodotti deve essere possibile dalla schermata principale e dalla \glo{PLP}. & 
+\end{comment}
