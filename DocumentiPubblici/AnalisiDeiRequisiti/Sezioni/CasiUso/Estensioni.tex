@@ -82,6 +82,25 @@ Visualizzazione messaggio che segnala all'utente il mancato riempimento di un ca
     \item \textbf{Scenario principale:} l'attore non ha inserito, oppure ha inserito solo caratteri vuoti come spazi o tab, in un campo dati obbligatorio e viene informato del mancato riempimento di esso.
 \end{itemize}
 
+% Estensioni ordini
+\UC{Visualizzazione messaggio d'errore data non valida}
+Visualizzazione messaggio di errore che segnala all'attore l'inserimento di una data non valida.
+\begin{itemize}
+    \item \textbf{Attori primari:} utente autenticato o utente non autenticato;
+    \item \textbf{Precondizione:} l'attore ha inserito una data non nel formato corretto;
+    \item \textbf{Postcondizione:} all'attore verrà mostrato un messaggio il quale lo informa dell'inserimento di una data non valida;
+    \item \textbf{Scenario principale:} l'attore ha inserito una data non nel formato giorno/mese/anno e viene informato del formato non valido della data.
+\end{itemize}
+
+\UC{Visualizzazione messaggio d'errore data iniziale maggiore di quella finale}
+Visualizzazione messaggio di errore che segnala all'attore l'inserimento di una data iniziale maggiore di quella finale.
+\begin{itemize}
+    \item \textbf{Attori primari:} utente autenticato o utente non autenticato;
+    \item \textbf{Precondizione:} l'attore ha inserito una data iniziale maggiore di quella finale;
+    \item \textbf{Postcondizione:} all'attore verrà mostrato un messaggio il quale lo informa dell'inserimento di una data iniziale maggiore di quella finale;
+    \item \textbf{Scenario principale:} l'attore ha inserito una data iniziale maggiore di quella finale e viene informato dell'impossibilità di inserire una data iniziale maggiore di quella finale.
+\end{itemize}
+
 % Estensioni carrello
 \begin{comment}
 \UC{Visualizzazione messaggio di errore prodotto non disponibile}
@@ -185,8 +204,17 @@ Nel caso in cui la ricerca del prodotto non dia risultati verrà visualizzato un
 	\item \textbf{Scenario principale:} l'attore effettua una ricerca che non ha prodotto alcun risultato e viene informato del mancato risultato della ricerca appena effettuata.
 \end{itemize}
 
+\UC{Visualizzazione messaggio nessun ordine effettuato nell'arco temporale impostato}
+Visualizzazione di un messaggio il quale segnala all'acquirente che non è stato effettuato alcun ordine nell'arco temporale impostato.
+\begin{itemize}
+    \item \textbf{Attori primari:} acquirente;
+    \item \textbf{Precondizione:} l'acquirente ha inserito un intervallo temporale nel quale non è stato effettuato alcun ordine;
+    \item \textbf{Postcondizione:} all'acquirente verrà mostrato un messaggio il quale lo informa della non effettuazione di alcun ordine nell'arco temporale impostato;
+    \item \textbf{Scenario principale:} l'acquirente ha inserito un intervallo temporale nel quale non è stato effettuato alcun ordine e viene informato della non effettuazione di alcun ordine nell'arco temporale impostato.
+\end{itemize}
+
 \UC{Visualizzazione messaggio in caso di prodotto selezionato per l'eliminazione ma non ancora evaso in alcuni ordini}
-Visualizzazione avviso che segnala al venditore che il prodotto che vuole eliminare è presente all'interno di un ordine che non è ancora stato evaso.
+Visualizzazione messaggio il quale segnala al venditore che il prodotto che vuole eliminare è presente all'interno di un ordine che non è ancora stato evaso.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
     \item \textbf{Precondizione:} il venditore sta cercando di eliminare un prodotto all'interno in un ordine che non è stato ancora evaso;
