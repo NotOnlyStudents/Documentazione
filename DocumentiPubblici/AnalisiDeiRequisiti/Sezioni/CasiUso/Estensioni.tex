@@ -63,22 +63,16 @@ Visualizzazione messaggio che segnala all'utente il mancato inserimento di un ca
     \item \textbf{Scenario Principale:} Visualizzazione messaggio che segnala all'utente il mancato inserimento di un campo dati obbligatorio e blocca la continuazione dell'azione.
 \end{itemize}
 
-% Estensioni carrello
-\begin{comment}
-\UC{Visualizzazione messaggio di errore prodotto non disponibile}
-L'acquirente o l'utente non autenticato richiede un prodotto che non è disponibile.
+% Estensioni PDP
+\UC{Visualizzazione messaggio d'errore quantità del prodotto non valida}
+Visualizzazione messaggio di errore che segnala all'acquirente o all'utente non autenticato che la quantità di prodotto inserita è minore o uguale a zero.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente o utente non autenticato;
-    \item \textbf{Precondizione:} L'attore richiede di aggiungere al carrello un prodotto non disponibile;
-    \item \textbf{Postcondizione:} viene impedita l'aggiunta al carrello e segnalata la causa.
-    \item \textbf{Scenario principale:}
-        \begin{itemize}
-            \item L'utente richiede di aggiungere al carrello un prodotto non disponibile;
-            \item Viene scartata la modifica, il carrello rimane invariato;
-            \item Viene visualizzato un visualizzato un errore che indica la non disponibilità del prodotto.
-        \end{itemize}
+    \item \textbf{Precondizione:} l'attore inserisce una quantità minore o uguale a zero di un prodotto da aggiungere al carrello;
+    \item \textbf{Postcondizione:} all'attore viene visualizzato un messaggio il quale lo informa che la quantità inserita non è valida;
+    \item \textbf{Scenario principale:} l'attore inserisce una quantità minore o uguale a zero di un prodotto da aggiungere al carrello e viene informato della non validità della quantità.
 \end{itemize}
-\end{comment}
+
 
 % Estensioni info personali
 \UC{Visualizzazione messaggio di errore nel caso in cui il file selezionato non sia del tipo immagine}
