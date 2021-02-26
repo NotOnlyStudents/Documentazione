@@ -20,7 +20,7 @@ L'acquirente può visualizzare l'elenco degli ordini effettuati sulla piattaform
     \end{itemize}
     \item \textbf{Scenari alternativi:} 
     \begin{enumerate}[label=\lett]
-        \item L'acquirente non ha ancora effettuato ordini, viene visualizzato il messaggio "Nessun ordine effettuato" e sarà data la possibilità all'acquirente di tornare alla home per iniziare gli acquisti.
+        \item L'acquirente non ha ancora effettuato ordini, viene visualizzato il messaggio "Nessun ordine effettuato" e sarà data la possibilità all'acquirente di tornare alla schermata principale per iniziare gli acquisti.
     \end{enumerate}
 \end{itemize}
 
@@ -31,11 +31,11 @@ L'acquirente filtra temporalmente l'elenco degli ordini effettuati sulla piattaf
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
     \item \textbf{Precondizione:} l'acquirente si trova nella schermata di visualizzazione degli ordini effettuati;
-    \item \textbf{Postcondizione:} l'acquirente visualizzerà tutti gli ordini che sono stati fatti tra la data di iniziale e quella finale;
-    \item \textbf{Scenario principale:} l'acquirente si trova nella schermata di visualizzazione degli ordini effettuati e vuole filtrare gli ordini secondo un intervallo temporale. Per farlo dovrà:
+    \item \textbf{Postcondizione:} l'acquirente visualizzerà tutti gli ordini che sono stati fatti tra la data di inizio e quella di fine impostate;
+    \item \textbf{Scenario principale:} l'acquirente si trova nella schermata di visualizzazione degli ordini effettuati e vuole filtrare gli ordini effettuati durante un certo intervallo temporale. Per farlo dovrà:
     \begin{itemize}
-        \item (\actualUC.1) - Impostazione della data iniziale dell'intervallo temporale;
-        \item (\actualUC.2) - Impostazione della data finale dell'intervallo temporale.
+        \item (\actualUC.1) - Impostare la data iniziale dell'intervallo temporale;
+        \item (\actualUC.2) - Impostare la data finale dell'intervallo temporale.
     \end{itemize}
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
@@ -43,6 +43,11 @@ L'acquirente filtra temporalmente l'elenco degli ordini effettuati sulla piattaf
         \begin{itemize}
             \item (UC) - Verrà visualizzato il messaggio nessun ordine effettuato nell'arco temporale impostato.
         \end{itemize}
+     	\item L'acquirente inserisce una data iniziale maggiore di quella finale. In questo caso:
+    \begin{itemize}
+    	\item (UC) - Verrà visualizzato il messaggio d'errore data iniziale maggiore di quella finale;
+    	\item Non verrà eseguita la ricerca.
+    \end{itemize}
     \end{enumerate}
 \end{itemize}
 
@@ -62,11 +67,6 @@ L'acquirente imposta la data iniziale dell'intervallo per il quale filtrare l'el
             \item (UC) - Verrà visualizzato il messaggio d'errore data non valida;
             \item Non verrà eseguita la ricerca.
         \end{itemize} 
-        \item L'acquirente inserisce una data iniziale maggiore di quella finale. In questo caso:
-        \begin{itemize}
-            \item (UC) - Verrà visualizzato il messaggio d'errore data iniziale maggiore di quella finale;
-            \item Non verrà eseguita la ricerca.
-        \end{itemize}
     \end{enumerate}
 \end{itemize}
 
@@ -84,10 +84,5 @@ L'acquirente imposta la data finale dell'intervallo per il quale filtrare l'elen
             \item (UC) - Verrà visualizzato il messaggio d'errore data non valida;
             \item Non verrà eseguita la ricerca.
         \end{itemize} 
-        \item L'acquirente inserisce una data finale minore di quella iniziale. In questo caso:
-        \begin{itemize}
-            \item (UC) - Verrà visualizzato il messaggio d'errore data finale minore di quella iniziale;
-            \item Non verrà eseguita la ricerca.
-        \end{itemize}
     \end{enumerate}
 \end{itemize}
