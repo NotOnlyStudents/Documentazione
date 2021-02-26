@@ -63,6 +63,34 @@ Visualizzazione messaggio che segnala all'utente il mancato inserimento di un ca
     \item \textbf{Scenario Principale:} Visualizzazione messaggio che segnala all'utente il mancato inserimento di un campo dati obbligatorio e blocca la continuazione dell'azione.
 \end{itemize}
 
+% Estensioni ordini
+\UC{Visualizzazione messaggio d'errore data non valida}
+Visualizzazione messaggio di errore che segnala all'attore l'inserimento di una data non valida.
+\begin{itemize}
+    \item \textbf{Attori primari:} utente autenticato o utente non autenticato;
+    \item \textbf{Precondizione:} l'attore ha inserito una data non nel formato corretto;
+    \item \textbf{Postcondizione:} all'attore verrà mostrato un messaggio il quale lo informa dell'inserimento di una data non valida;
+    \item \textbf{Scenario principale:} l'attore ha inserito una data non nel formato giorno/mese/anno e viene informato del formato non valido della data.
+\end{itemize}
+
+\UC{Visualizzazione messaggio d'errore data iniziale maggiore di quella finale}
+Visualizzazione messaggio di errore che segnala all'attore l'inserimento di una data iniziale maggiore di quella finale.
+\begin{itemize}
+    \item \textbf{Attori primari:} utente autenticato o utente non autenticato;
+    \item \textbf{Precondizione:} l'attore ha inserito una data iniziale maggiore di quella finale;
+    \item \textbf{Postcondizione:} all'attore verrà mostrato un messaggio il quale lo informa dell'inserimento di una data iniziale maggiore di quella finale;
+    \item \textbf{Scenario principale:} l'attore ha inserito una data iniziale maggiore di quella finale e viene informato dell'impossibilità di inserire una data iniziale maggiore di quella finale.
+\end{itemize}
+
+\UC{Visualizzazione messaggio d'errore data finale minore di quella finale}
+Visualizzazione messaggio di errore che segnala all'attore l'inserimento di una data finale minore di quella iniziale.
+\begin{itemize}
+    \item \textbf{Attori primari:} utente autenticato o utente non autenticato;
+    \item \textbf{Precondizione:} l'attore ha inserito una data finale minore di quella iniziale;
+    \item \textbf{Postcondizione:} all'attore verrà mostrato un messaggio il quale lo informa dell'inserimento di una data finale minore di quella iniziale;
+    \item \textbf{Scenario principale:} l'attore ha inserito una data finale minore di quella iniziale e viene informato dell'impossibilità di inserire una data finale minore di quella iniziale.
+\end{itemize}
+
 % Estensioni carrello
 \begin{comment}
 \UC{Visualizzazione messaggio di errore prodotto non disponibile}

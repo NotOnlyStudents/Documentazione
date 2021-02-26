@@ -1,10 +1,86 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \UC{Visualizzazione ordini effettuati}
 L'acquirente vuole vedere l'elenco degli ordini effettuati sulla piattaforma.
 \begin{itemize}
-    \item \textbf{Attori primari:} Acquirente.
-    \item \textbf{Precondizione:} L'acquirente si trova nella pagina del suo profilo.
-    \item \textbf{PostCondizione:} L'acquirente visualizza l'elenco degli ordini.
-    \item \textbf{Scenario Principale:} L'utente, all'interno della pagina del profilo, vede l'elenco degli ordini effettuati.
-        Per ogni ordine effettuato sono indicati i prodotti inclusi nell'ordine, la loro quantità e il prezzo totale pagato.
-    \item \textbf{Scenario Alternativo:} L'utente non ha ancora effettuato ordini, viene visualizzato il messaggio "Nessun ordine effettuato" e sarà data la possibilità all'attore di andare alla home per iniziare gli acquisti.
+    \item \textbf{Attori primari:} acquirente;
+    \item \textbf{Precondizione:} l'acquirente si trova in una qualsiasi altra schermata e seleziona l'azione per accedere all'elenco degli ordini effettuati sulla piattaforma;
+    \item \textbf{PostCondizione:} l'acquirente visualizza l'elenco degli ordini effettuati sulla piattaforma in ordine cronologico decrescente;
+    \item \textbf{Scenario Principale:} l'acquirente si trova in una qualsiasi altra schermata e seleziona l'azione per accedere all'elenco degli ordini effettuati sulla piattaforma. In seguito visualizzerà l'elenco degli ordini effettuati sulla piattaforma, dove è indicato per ogni ordine:
+    \begin{itemize}
+        \item Se è stato evaso o no;
+        \item Il prezzo totale che è stato pagato;
+        \item L'indirizzo a cui è stato consegnato o verrà consegnato;
+        \item Una lista di tutti i prodotti acquistati in quell'ordine, dove per ogni prodotto verrà visualizzato:
+        \begin{itemize}
+            \item Nome del prodotto;
+            \item Quantità acquistata;
+            \item Prezzo totale del prodotto per la quantità.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Scenari alternativi:} 
+    \begin{enumerate}[label=\lett]
+        \item L'utente non ha ancora effettuato ordini, viene visualizzato il messaggio "Nessun ordine effettuato" e sarà data la possibilità all'attore di andare alla home per iniziare gli acquisti.
+    \end{enumerate}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\UC{Filtro temporale per gli ordini effettuati}
+L'acquirente filtra temporalmente l'elenco degli ordini effettuati sulla piattaforma.
+\begin{itemize}
+    \item \textbf{Attori primari:} acquirente;
+    \item \textbf{Precondizione:} l'acquirente si trova nella schermata di visualizzazione degli ordini effettuati;
+    \item \textbf{PostCondizione:} l'acquirente visualizzerà tutti gli ordini che sono stati fatti tra la data di iniziale e quella finale;
+    \item \textbf{Scenario Principale:} l'acquirente si trova nella schermata di visualizzazione degli ordini effettuati e vuole filtrare gli ordini temporalmente. Per farlo dovrà:
+    \begin{itemize}
+        \item (\actualUC.1) - Impostazione della data iniziale;
+        \item (\actualUC.2) - Impostazione della data finale;
+    \end{itemize}
+\end{itemize}
+
+\resetSubUC
+
+\subUC{Impostazione della data iniziale}
+L'acquirente imposta la data iniziale dell'intervallo per il quale filtrare l'elenco degli ordini effettuati sulla piattaforma.
+\begin{itemize}
+    \item \textbf{Attori primari:} acquirente;
+    \item \textbf{Precondizione:} l'acquirente si trova nella schermata di visualizzazione degli ordini effettuati;
+    \item \textbf{PostCondizione:} l'acquirente ha impostato la data iniziale dell'intervallo per il quale filtrare l'elenco degli ordini effettuati sulla piattaforma;
+    \item \textbf{Scenario Principale:} l'acquirente si trova nella schermata di visualizzazione degli ordini effettuati e inserisce una data valida e minore o uguale di quella finale, come data iniziale dell'intervallo per il quale filtrare l'elenco degli ordini effettuati;
+    \item \textbf{Estensioni:}
+    \begin{enumerate}[label=\lett]
+        \item L'acquirente inserisce una data iniziale non nel formato corretto. In questo caso:
+        \begin{itemize}
+            \item (UC) - Verrà visualizzato il messaggio d'errore data non valida;
+            \item Non verrà eseguita la ricerca.
+        \end{itemize} 
+        \item L'acquirente inserisce una data iniziale maggiore di quella finale. In questo caso:
+        \begin{itemize}
+            \item (UC) - Verrà visualizzato il messaggio d'errore data iniziale maggiore di quella finale;
+            \item Non verrà eseguita la ricerca.
+        \end{itemize}
+    \end{enumerate}
+\end{itemize}
+
+\subUC{Impostazione della data finale}
+L'acquirente imposta la data finale dell'intervallo per il quale filtrare l'elenco degli ordini effettuati sulla piattaforma.
+\begin{itemize}
+    \item \textbf{Attori primari:} acquirente;
+    \item \textbf{Precondizione:} l'acquirente si trova nella schermata di visualizzazione degli ordini effettuati;
+    \item \textbf{PostCondizione:} l'acquirente ha impostato la data finale dell'intervallo per il quale filtrare l'elenco degli ordini effettuati sulla piattaforma;
+    \item \textbf{Scenario Principale:} l'acquirente si trova nella schermata di visualizzazione degli ordini effettuati e inserisce una data valida e maggiore o uguale di quella iniziale, come data finale dell'intervallo per il quale filtrare l'elenco degli ordini effettuati;
+    \item \textbf{Estensioni:}
+    \begin{enumerate}[label=\lett]
+        \item L'acquirente inserisce una data finale non nel formato corretto. In questo caso:
+        \begin{itemize}
+            \item (UC) - Verrà visualizzato il messaggio d'errore data non valida;
+            \item Non verrà eseguita la ricerca.
+        \end{itemize} 
+        \item L'acquirente inserisce una data finale minore di quella iniziale. In questo caso:
+        \begin{itemize}
+            \item (UC) - Verrà visualizzato il messaggio d'errore data finale minore di quella iniziale;
+            \item Non verrà eseguita la ricerca.
+        \end{itemize}
+    \end{enumerate}
 \end{itemize}
