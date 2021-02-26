@@ -20,7 +20,7 @@ Il venditore aggiunge un nuovo prodotto alla piattaforma, così da poter essere 
         \item (UC) - Inserimento dello sconto percentuale al prezzo del prodotto;
         \item (UC) - Inserimento della quantità del prodotto disponibile in magazzino;
         \item (UC) - Inserimento delle foto del prodotto;
-        \item (UC) - Scelta di aggiunta del prodotto tra quelli in evidenza;
+        \item Sceglie se aggiungere il prodotto tra quelli in evidenza tramite la funzionalità apposita;
         \item Conferma gli inserimenti e aggiunge il prodotto alla piattaforma.
     \end{itemize}
 \end{itemize}
@@ -188,19 +188,6 @@ Il venditore inserisce le foto relative al prodotto da aggiungere.
     \end{enumerate}
 \end{itemize}
 
-\subUC{Scelta di aggiunta del prodotto tra quelli in evidenza}
-Il venditore decide se il prodotto è da inserire tra quelli in evidenza da visualizzare nella home.
-\begin{itemize}
-	\item \textbf{Attori primari:} venditore;
-    \item \textbf{Precondizione:} il venditore si trova nella schermata di aggiunta di un nuovo prodotto;
-    \item \textbf{Postcondizione:} il venditore ha deciso se il prodotto è da inserire tra quelli in evidenza oppure no ed agisce di conseguenza;
-    \item \textbf{Scenario principale:} il venditore aggiunge il prodotto tra quelli in evidenza da visualizzare nella schermata principale della piattaforma;
-    \item \textbf{Scenari alternativi:}
-    \begin{enumerate}[label=\lett]
-    	\item Il venditore decide di non inserire il prodotto tra quelli in evidenza e, per questo motivo, non compie alcuna azione.
-    \end{enumerate}
-\end{itemize}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \UC{Modifica informazioni del prodotto}
@@ -360,7 +347,7 @@ Il venditore rimuove le foto relative al prodotto da aggiungere.
     \item \textbf{Attori primari:} venditore;
     \item \textbf{Precondizione:} il venditore si trova nella schermata di modifica del prodotto;
     \item \textbf{Postcondizione:} il venditore ha rimosso le foto relative al prodotto;
-    \item \textbf{Scenario principale:} il venditore rimuove le foto relative al prodotto attraverso i seguenti passi:
+    \item \textbf{Scenario principale:} il venditore rimuove le foto relative al prodotto attraverso i seguenti passi: %il venditore rimuove delle foto relative al prodotto selezionato;
     \begin{itemize}
         \item Seleziona la foto che vuole eliminare;
         \item Seleziona l'azione di eliminazione di quella specifica foto;
@@ -376,30 +363,22 @@ Il venditore rimuove le foto relative al prodotto da aggiungere.
     \end{enumerate}
 \end{itemize}
 
-\UC{Aggiunta prodotto alla sezione dei prodotti in evidenza} %Richiamare scelta dell'evidenza?
+\UC{Aggiunta prodotto alla sezione dei prodotti in evidenza}
 Il venditore aggiunge un prodotto alla sezione dei prodotti in evidenza presente nella vista principale.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
     \item \textbf{Precondizione:} il venditore si trova nella PDP del prodotto ed il prodotto non è stato aggiunto alla sezione dei prodotti in evidenza;
     \item \textbf{Postcondizione:} il prodotto viene aggiunto alla sezione dei prodotti in evidenza;
-    \item \textbf{Scenario principale:} il venditore vuole aggiungere un prodotto alla sezione dei prodotti in evidenza, per farlo dovrà compiere i seguenti passi:
-    \begin{itemize}
-        \item Posizionarsi nella PDP del prodotto;
-        \item Svolgere l'operazione che lo segnerà come in evidenza.
-    \end{itemize}
+    \item \textbf{Scenario principale:} il venditore aggiunge un prodotto alla sezione dei prodotti in evidenza tramite la funzionalità adeguata che lo segnerà come in evidenza.
 \end{itemize}
 
-\UC{Rimozione prodotto dalla sezione dei prodotti in evidenza} %Richiamare scelta dell'evidenza?
+\UC{Rimozione prodotto dalla sezione dei prodotti in evidenza}
 Il venditore rimuove un prodotto dalla sezione dei prodotti in evidenza presente nella vista principale.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
     \item \textbf{Precondizione:} il venditore si trova nella PDP del prodotto ed il prodotto è stato aggiunto alla sezione dei prodotti in evidenza;
     \item \textbf{Postcondizione:} il prodotto viene rimosso dalla sezione dei prodotti in evidenza; 
-    \item \textbf{Scenario principale:} il venditore vuole rimuovere un prodotto dalla sezione dei prodotti in evidenza, per farlo dovrà compiere i seguenti passi:
-    \begin{itemize}
-        \item Posizionarsi nella PDP del prodotto;
-        \item Svolgere l'operazione che lo segnerà come non in evidenza.
-    \end{itemize}
+    \item \textbf{Scenario principale:} il venditore rimuove un prodotto dalla sezione dei prodotti in evidenza tramite la funzionalità adeguata che lo segnerà come non in evidenza.
 \end{itemize}
 
 \UC{Eliminazione prodotto}
@@ -413,7 +392,7 @@ Il venditore rimuove un prodotto dalla sezione dei prodotti in evidenza presente
 Il venditore vuole eliminare un prodotto precedentemente inserito.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
-    \item \textbf{Precondizione:} il venditore si trova nella pagina della dashboard;
+    \item \textbf{Precondizione:} il venditore si trova nella schermata della dashboard;
     \item \textbf{Postcondizione:} il venditore ha eliminato il prodotto selezionato;
     \item \textbf{Scenario Principale:} il venditore seleziona un prodotto dalla lista di quelli che ha inserito nella piattaforma e clicca sulla funzionalità per eliminarlo definitivamente;
     \begin{itemize}

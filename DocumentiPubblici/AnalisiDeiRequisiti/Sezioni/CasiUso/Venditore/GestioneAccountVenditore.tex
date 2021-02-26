@@ -133,14 +133,14 @@ Il venditore inserisce una nuova password.
 	\item \textbf{Attori secondari:} identity manager;
 	\item \textbf{Precondizione:} il venditore non ha ancora fornito una password che rispetta i requisiti di complessità ed ha a disposizione un campo dati dove inserirla;
 	\item \textbf{Postcondizione:} il venditore ha inserito una password valida;
-	\item \textbf{Scenario principale:} il venditore inserisce una password che rispetta le condizioni imposte per procedere con la registrazione;
+	\item \textbf{Scenario principale:} il venditore inserisce una password che rispetta le condizioni imposte;
 	\item \textbf{Estensioni:}
 	\begin{enumerate}[label=\lett]
-		%\item Il venditore inserisce la password e l'identity manager controlla il campo dati che risulta essere vuoto, in questo caso:
-		%\begin{itemize}
-		%	\item (UC) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
-		%	\item Viene fornita all'utente la possibilità di inserire una password.
-		%\end{itemize}
+		\item Il venditore inserisce la password e l'identity manager controlla il campo dati che risulta essere vuoto, in questo caso:
+		\begin{itemize}
+			\item (UC) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
+			\item Viene fornita all'utente la possibilità di inserire una password.
+		\end{itemize}
 		\item Il venditore ha inserito una password e l'identity manager segnala che non è nel formato corretto, in questo caso:
 		\begin{itemize}
 			\item (UC) - Viene mostrato un messaggio d'errore password non rispetta i requisiti di complessità;
@@ -156,14 +156,14 @@ Il venditore inserisce la conferma della nuova password.
 	\item \textbf{Attori secondari:} identity manager;
 	\item \textbf{Precondizione:} il venditore non ha ancora fornito una password che rispetta i requisiti di complessità ed ha a disposizione un campo dati dove inserirla;
 	\item \textbf{Postcondizione:} il venditore ha inserito la conferma della password ed è valida;
-	\item \textbf{Scenario principale:} il venditore inserisce una password che rispetta le condizioni imposte per procedere con la registrazione;
+	\item \textbf{Scenario principale:} il venditore inserisce una password che rispetta le condizioni imposte;
 	\item \textbf{Estensioni:}
 	\begin{enumerate}[label=\lett]
-		%\item Il venditore inserisce la password e l'identity manager controlla il campo dati che risulta essere vuoto, in questo caso:
-		%\begin{itemize}
-		%	\item (UC) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
-		%	\item Viene fornita all'utente la possibilità di inserire una password.
-		%\end{itemize}
+		\item Il venditore inserisce la password e l'identity manager controlla il campo dati che risulta essere vuoto, in questo caso:
+		\begin{itemize}
+			\item (UC) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
+			\item Viene fornita all'utente la possibilità di inserire una password.
+		\end{itemize}
 		\item Il venditore ha inserito una password e l'identity manager segnala che non è nel formato corretto, in questo caso:
 		\begin{itemize}
 			\item (UC) - Viene mostrato un messaggio d'errore password non rispetta i requisiti di complessità;
