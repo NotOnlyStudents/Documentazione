@@ -1,11 +1,15 @@
 \rowcolors{2}{white}{celeste} 
 \renewcommand{\arraystretch}{1.5}
+
+\addcontentsline{lot}{table}{Requisiti di vincolo}
+
 \begin{longtable}{|c C{9.5cm} C{2.5cm}|} 
 	
 	\rowcolor{darkblue}
 	\textcolor{white}{\textbf{Codice Requisito}}&
 	\textcolor{white}{\textbf{Descrizione}}&
 	\textcolor{white}{\textbf{Fonte}}\\
+
 	\rvin{O} & Utilizzo di \glo{Typescript} come principale linguaggio di sviluppo. & \glo{Capitolato} \\
 	
 	\rvin{O} & Uso del \glo{framework} \glo{Serverless} per il controllo centrale dell'applicazione. & Capitolato \\
@@ -27,6 +31,22 @@
 	\rvin{Z} & E' necessario memorizzare le credenziali dell'utente su \glo{Auth0}, un \glo{identity provider} esterno di terze parti, per poter migrare il sito da un'infrastruttura all'altra. & Capitolato \\
 	
 	\rvin{O} & La piattaforma deve essere sviluppata nei seguenti 3 ambienti secondo l'ordine indicato: prima \glo{Locale}, poi \glo{Testing} e dopo \glo{Staging}. & Capitolato \\
+
+	\rvin{O} & La piattaforma deve funzionare correttamente nel browser Google Chrome per desktop dalla versione 88.0.4324.182 in poi. & Interna \\
+
+	\rvin{O} & La piattaforma deve funzionare correttamente nel browser Mozilla Firefox per desktop dalla versione 86.0.0 in poi. & Interna \\
+
+	\rvin{O} & La piattaforma deve funzionare correttamente nel browser Microsoft Edge per desktop dalla versione 88.0.705.68 in poi. & Interna \\
+
+	\rvin{O} & La piattaforma deve funzionare correttamente nel browser Safari per desktop dalla versione 14.0.2 in poi. & Interna \\
+
+	\rvin{O} & La piattaforma deve funzionare correttamente nel browser Google Chrome per mobile dalla versione 88.0.4324.181 in poi. & Interna \\
+
+	\rvin{O} & La piattaforma deve funzionare correttamente nel browser Mozilla Firefox per mobile dalla versione 86.1.1 in poi. & Interna \\
+
+	\rvin{O} & La piattaforma deve funzionare correttamente nel browser Microsoft Edge per mobile dalla versione 46.01.4.5140 in poi. & Interna \\
+
+	\rvin{O} & La piattaforma deve funzionare correttamente nel browser Safari per mobile dalla versione 14.4 in poi. & Interna \\
 	
 	\rvin{D} & È desiderabile avere anche lo stadio di \glo{Production}. & Capitolato \\
 \end{longtable}

@@ -16,7 +16,7 @@
 
 \newcommand{\Versionedoc}{1.14}
 
-% Counters
+% UC Counters
 
 \newcounter{UCcounter}
 \newcounter{subUCcounter}
@@ -50,32 +50,108 @@
 }
 \newcommand{\actualSubSubUC}{UC\theUCcounter.\thesubUCcounter.\thesubSubUCcounter}
 
+% Requirements Counters
+
+% Fun
+\newcounter{rfCounter}
 \newcounter{rfoCounter}
+\newcounter{rfdCounter}
+\newcounter{rfzCounter}
+
+\setcounter{rfCounter}{0}
 \setcounter{rfoCounter}{0}
+\setcounter{rfdCounter}{0}
+\setcounter{rfzCounter}{0}
+
 \newcommand{\rfun}[2]{
-	\stepcounter{rfoCounter}
-	RF#1\therfoCounter\ifthenelse{\equal{#2}{}}{}{\_#2}
+	\stepcounter{rfCounter}
+	RF#1\therfCounter\ifthenelse{\equal{#2}{}}{}{\_#2}
+
+	\ifthenelse{\equal{#1}{O}}{\stepcounter{rfoCounter}}
+	{\ifthenelse{\equal{#1}{D}}{\stepcounter{rfdCounter}}
+	{\ifthenelse{\equal{#1}{Z}}{\stepcounter{rfzCounter}}}}
 }
 
+\newcommand{\actualrfun}{\therfCounter}
+\newcommand{\actualrfunO}{\therfoCounter}
+\newcommand{\actualrfunD}{\therfdCounter}
+\newcommand{\actualrfunZ}{\therfzCounter}
+
+% Qua
 \newcounter{rqCounter}
+\newcounter{rqoCounter}
+\newcounter{rqdCounter}
+\newcounter{rqzCounter}
+
 \setcounter{rqCounter}{0}
+\setcounter{rqoCounter}{0}
+\setcounter{rqdCounter}{0}
+\setcounter{rqzCounter}{0}
+
 \newcommand{\rqua}[1]{
 	\stepcounter{rqCounter}
 	RQ#1\therqCounter{}
+
+	\ifthenelse{\equal{#1}{O}}{\stepcounter{rqoCounter}}
+	{\ifthenelse{\equal{#1}{D}}{\stepcounter{rqdCounter}}
+	{\ifthenelse{\equal{#1}{Z}}{\stepcounter{rqzCounter}}}}
 }
 
+\newcommand{\actualrqua}{\therqCounter}
+\newcommand{\actualrquaO}{\therqoCounter}
+\newcommand{\actualrquaD}{\therqdCounter}
+\newcommand{\actualrquaZ}{\therqzCounter}
+
+% Vin
 \newcounter{rvCounter}
+\newcounter{rvoCounter}
+\newcounter{rvdCounter}
+\newcounter{rvzCounter}
+
 \setcounter{rvCounter}{0}
+\setcounter{rvoCounter}{0}
+\setcounter{rvdCounter}{0}
+\setcounter{rvzCounter}{0}
+
 \newcommand{\rvin}[1]{
 	\stepcounter{rvCounter}
 	RV#1\thervCounter{}
+
+	\ifthenelse{\equal{#1}{O}}{\stepcounter{rvoCounter}}
+	{\ifthenelse{\equal{#1}{D}}{\stepcounter{rvdCounter}}
+	{\ifthenelse{\equal{#1}{Z}}{\stepcounter{rvzCounter}}}}
 }
 
+\newcommand{\actualrvin}{\thervCounter}
+\newcommand{\actualrvinO}{\thervoCounter}
+\newcommand{\actualrvinD}{\thervdCounter}
+\newcommand{\actualrvinZ}{\thervzCounter}
+
+% Pre
 \newcounter{rpCounter}
+\newcounter{rpoCounter}
+\newcounter{rpdCounter}
+\newcounter{rpzCounter}
+
 \setcounter{rpCounter}{0}
+\setcounter{rpoCounter}{0}
+\setcounter{rpdCounter}{0}
+\setcounter{rpzCounter}{0}
+
 \newcommand{\rpre}[1]{
 	\stepcounter{rpCounter}
 	RP#1\therpCounter
+
+	\ifthenelse{\equal{#1}{O}}{\stepcounter{rpoCounter}}
+	{\ifthenelse{\equal{#1}{D}}{\stepcounter{rpdCounter}}
+	{\ifthenelse{\equal{#1}{Z}}{\stepcounter{rpzCounter}}}}
 }
+
+\newcommand{\actualrpre}{\therpCounter}
+\newcommand{\actualrpreO}{\therpoCounter}
+\newcommand{\actualrpreD}{\therpdCounter}
+\newcommand{\actualrpreZ}{\therpzCounter}
+
+% Enumerate
 
 \newcommand{\lett}{\textbf{\alph*}.}
