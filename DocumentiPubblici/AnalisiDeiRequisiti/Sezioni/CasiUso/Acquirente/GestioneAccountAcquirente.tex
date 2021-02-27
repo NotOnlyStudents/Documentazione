@@ -1,52 +1,118 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\UC{Modifica informazioni}
-L'acquirente vuole modificare le sue informazioni personali.
+\UC{Modifica informazioni acquirente}
+L'acquirente può modificare le sue informazioni personali.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
     \item \textbf{Precondizione:} l'acquirente si trova nella vista di modifica informazioni personali;
     \item \textbf{Postcondizione:} l'acquirente ha aggiornato le sue informazioni personali;
-    \item \textbf{Scenario principale:} l'acquirente ha premuto sull'azione per la modifica delle informazioni personali e, dopo aver compiuto la modifica, potrà confermarle attraverso l'azione di salvataggio. Le informazioni che si possono modificare sono:
+    \item \textbf{Scenario principale:} l'acquirente ha selezionato l'azione per la modifica delle informazioni personali e, dopo aver compiuto la modifica, potrà confermarle attraverso l'azione di salvataggio. Le informazioni che si possono modificare sono:
     \begin{itemize}
-        \item (\actualUC.1) - Inserimento nuovo indirizzo email.
-        \item (\actualUC.2) - Inserimento nuova password.
-        \item (\actualUC.3) - Inserimento conferma nuova password.
+        \item (\actualUC.1) - Modifica del nome;
+        \item (\actualUC.1) - Modifica del cognome;
+        \item (\actualUC.3) - Modifica dell'indirizzo email.
+        \item (\actualUC.4) - Inserimento nuova password.
+        \item (\actualUC.5) - Inserimento conferma nuova password.
     \end{itemize}
-    In seguito ci sarà la conferma delle modifiche compiute e le informazioni personali verrano modificate.
+    In seguito ci sarà la conferma delle modifiche compiute e le informazioni personali verranno modificate.
     \item \textbf{Scenario alternativo:} l'acquirente non conferma le modifiche effettuate, perciò non verranno modificate le informazioni personali.
 \end{itemize}
+
 \resetSubUC
 
-\subUC{Inserimento nuovo indirizzo email}
+\subUC{Modifica del nome}
+L'acquirente modifica il proprio nome.
+\begin{itemize}
+    \item \textbf{Attori primari:} acquirente;
+    \item \textbf{Precondizione:} l'acquirente si trova nella schermata di modifica informazioni personali e vuole modificare il proprio nome;
+    \item \textbf{Postcondizione:} l'acquirente ha aggiornato il proprio nome sulla piattaforma;
+    \item \textbf{Scenario principale:} l'acquirente si trova nella schermata di modifica informazioni personali e vuole modificare il proprio nome attraverso le seguenti azioni:
+        \begin{itemize}
+            \item Si posiziona nel campo di inserimento del nome dove è presente quello attualmente utilizzata;
+            \item Inserisce quello nuova o modifica quello attuale.
+        \end{itemize}
+    \item \textbf{Scenari alternativi:} 
+    \begin{enumerate}[label=\lett]
+        \item L'acquirente non modifica il proprio nome attuale e, perciò, non cambierà.
+    \end{enumerate}
+    \item \textbf{Estensioni:} 
+    \begin{enumerate}[label=\lett]
+        \item L'acquirente elimina il proprio nome attuale e non ne inserisce uno nuovo. In questo caso:
+        \begin{itemize}
+            \item (UC) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito;
+            \item Verrà impedita la modifica delle informazioni.
+        \end{itemize}
+        \item L'acquirente modifica il proprio nome inserendogli dei caratteri non alfabetici. In questo caso:
+        \begin{itemize}
+            \item (UC) - Verrà visualizzato il messaggio di errore caratteri non alfabetici non permessi;
+            \item Verrà impedita la modifica delle informazioni.
+        \end{itemize}
+    \end{enumerate}
+\end{itemize}
+
+\subUC{Modifica del cognome}
+L'acquirente modifica il proprio cognome.
+\begin{itemize}
+    \item \textbf{Attori primari:} acquirente;
+    \item \textbf{Precondizione:} l'acquirente si trova nella schermata di modifica informazioni personali e vuole modificare il proprio cognome;
+    \item \textbf{Postcondizione:} l'acquirente ha aggiornato il proprio cognome sulla piattaforma;
+    \item \textbf{Scenario principale:} l'acquirente si trova nella schermata di modifica informazioni personali e vuole modificare il proprio cognome attraverso le seguenti azioni:
+        \begin{itemize}
+            \item Si posiziona nel campo di inserimento del cognome dove è presente quello attualmente utilizzata;
+            \item Inserisce quello nuova o modifica quello attuale.
+        \end{itemize}
+    \item \textbf{Scenari alternativi:} 
+    \begin{enumerate}[label=\lett]
+        \item L'acquirente non modifica il proprio cognome attuale e, perciò, non cambierà.
+    \end{enumerate}
+    \item \textbf{Estensioni:} 
+    \begin{enumerate}[label=\lett]
+        \item L'acquirente elimina il proprio cognome attuale e non ne inserisce uno nuovo. In questo caso:
+        \begin{itemize}
+            \item (UC) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito;
+            \item Verrà impedita la modifica delle informazioni.
+        \end{itemize}
+        \item L'acquirente modifica il proprio cognome inserendogli dei caratteri non alfabetici. In questo caso:
+        \begin{itemize}
+            \item (UC) - Verrà visualizzato il messaggio di errore caratteri non alfabetici non permessi;
+            \item Verrà impedita la modifica delle informazioni.
+        \end{itemize}
+    \end{enumerate}
+\end{itemize}
+
+\subUC{Modifica dell'indirizzo email}
 L'acquirente vuole modificare la propria email.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
-    \item \textbf{Precondizione:} l'acquirente si trova nella schermata di modifica informazioni personali e vuole inserire un nuovo indirizzo email;
+    \item \textbf{Precondizione:} l'acquirente si trova nella schermata di modifica informazioni personali e vuole modificare il proprio indirizzo email;
     \item \textbf{Postcondizione:} l'acquirente ha aggiornato la sua email;
     \item \textbf{Scenario principale:} l'acquirente si trova nella schermata di modifica informazioni personali e vuole modificare la propria email attraverso le seguenti azioni:
         \begin{itemize}
-            \item Si posiziona nel campo di inserimento della nuova email dove è presente quella attualmente utilizzata;
+            \item Si posiziona nel campo di inserimento dell'email dove è presente quella attualmente utilizzata;
             \item Inserisce quella nuova o modifica quella attuale.
         \end{itemize}
-    \item \textbf{Scenario alternativo:} l'acquirente non modifica l'attuale indirizzo email utilizzato, perciò non cambierà;
+    \item \textbf{Scenari alternativi:} 
+    \begin{enumerate}[label=\lett]
+        \item L'acquirente non modifica l'attuale indirizzo email utilizzato e, perciò, non cambierà.
+    \end{enumerate}
     \item \textbf{Estensioni:} 
-     \begin{enumerate}[label=\lett]
-    \item l'acquirente inserisce un'email già utilizzata nella piattaforma. In questo caso:
-    \begin{itemize}
-        \item (UC) - Verrà visualizzato il messaggio di errore in caso di email già registrata nella piattaforma;
-        \item Verrà impedita la modifica delle informazioni.
-    \end{itemize}
-    \item l'acquirente inserisce un'email non valida. In questo caso:
-    \begin{itemize}
-        \item (UC) - Verrà visualizzato un messaggio di errore in caso di email non valida;
-        \item Verrà impedita la modifica delle informazioni.
-    \end{itemize}
-    \item l'acquirente non inserisce l'email e lascia il campo di inserimento vuoto. In questo caso:
-    \begin{itemize}
-        \item (UC) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito;
-        \item Verrà impedita la modifica delle informazioni.
-    \end{itemize}
-\end{enumerate}
+    \begin{enumerate}[label=\lett]
+        \item L'acquirente inserisce un'email già utilizzata nella piattaforma. In questo caso:
+        \begin{itemize}
+            \item (UC) - Verrà visualizzato il messaggio di errore in caso di cambio email con una già utilizzata nella piattaforma;
+            \item Verrà impedita la modifica delle informazioni.
+        \end{itemize}
+        \item L'acquirente inserisce un'email non valida. In questo caso:
+        \begin{itemize}
+            \item (UC) - Verrà visualizzato un messaggio di errore in caso di email non valida;
+            \item Verrà impedita la modifica delle informazioni.
+        \end{itemize}
+        \item L'acquirente elimina la propria email attuale e non ne inserisce una nuova. In questo caso:
+        \begin{itemize}
+            \item (UC) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito;
+            \item Verrà impedita la modifica delle informazioni.
+        \end{itemize}
+    \end{enumerate}
 \end{itemize}
 
 \subUC{Inserimento nuova password}
@@ -56,16 +122,19 @@ L'acquirente vuole modificare la propria password.
     \item \textbf{Precondizione:} l'acquirente si trova nella schermata di modifica informazioni personali e vuole inserire una nuova password;
     \item \textbf{Postcondizione:} l'acquirente ha inserito la nuova password;
     \item \textbf{Scenario principale:} l'acquirente si trova nella schermata di modifica informazioni personali e vuole modificare la propria password attraverso le seguenti azioni:
-        \begin{itemize}
-            \item Si posiziona nel campo di inserimento vuoto della nuova password;
-            \item La scrive;
-            \item Inserisce la stessa password nel campo di conferma nuova password.
-        \end{itemize}
+    \begin{itemize}
+        \item Si posiziona nel campo di inserimento vuoto della nuova password;
+        \item La scrive;
+        \item Inserisce la stessa password nel campo di conferma nuova password.
+    \end{itemize}
     \item \textbf{Scenario alternativo:} L'acquirente non inserisce alcuna password e lascia il campo di inserimento nuova password vuoto. In questo caso non verrà modificata la password;
-    \item \textbf{Estensioni:} L'acquirente inserisce una password troppo debole. In questo caso:
+    \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
-        \item (UC) - Verrà visualizzato il messaggio di errore di password troppo debole;
-        \item Verrà impedita la modifica delle informazioni.
+        \item L'acquirente inserisce una password troppo debole. In questo caso:
+        \begin{itemize}
+            \item (UC) - Verrà visualizzato il messaggio di errore di password troppo debole;
+            \item Verrà impedita la modifica delle informazioni.
+        \end{itemize}
     \end{enumerate}
 \end{itemize}
 
@@ -80,14 +149,18 @@ L'acquirente vuole modificare la propria password e deve confermare quella nuova
             \item Si posiziona nel campo di inserimento vuoto della conferma nuova password;
             \item Inserisce la stessa password che è stata inserita nel campo conferma password.
         \end{itemize}
-    \item \textbf{Scenario alternativo:} l'acquirente non inserisce alcuna password e lascia il campo di inserimento conferma nuova password vuoto. In questo caso non verrà modificata la password.
-    \item \textbf{Estensioni:} \begin{enumerate}[label=\lett] 
-    \item l'acquirente inserisce una password di conferma diversa da quella inserita nel campo di inserimento nuova password. In questo caso:
-    \begin{itemize}
-        \item (UC) - Verrà visualizzato il messaggio di errore di password e password di conferma diverse;
-        \item Verrà impedita la modifica delle informazioni.
-    \end{itemize}
-\end{enumerate}
+    \item \textbf{Scenari alternativi:} 
+    \begin{enumerate}
+        \item L'acquirente non inserisce alcuna password e lascia il campo di inserimento conferma nuova password vuoto. In questo caso non verrà modificata la password.
+    \end{enumerate}
+    \item \textbf{Estensioni:} 
+    \begin{enumerate}[label=\lett] 
+        \item l'acquirente inserisce una password di conferma diversa da quella inserita nel campo di inserimento nuova password. In questo caso:
+        \begin{itemize}
+            \item (UC) - Verrà visualizzato il messaggio di errore di password e password di conferma diverse;
+            \item Verrà impedita la modifica delle informazioni.
+        \end{itemize}
+    \end{enumerate}
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -95,14 +168,12 @@ L'acquirente vuole modificare la propria password e deve confermare quella nuova
 \UC{Eliminazione account}
 L'acquirente può eliminare il proprio account.
 \begin{itemize}
-    \item \textbf{Attori Primari:} Acquirente.
-    \item \textbf{Precondizione:} L'acquirente si trova nella propria pagina personale (UC3.2.1) e ha selezionato l'azione di cancellazione del proprio account.
-    \item \textbf{Postcondizione:} L'account dell'acquirente non è più presente nella piattaforma
-    \item \textbf{Scenario principale:} L'acquirente vuole eliminare il proprio account e compie le seguenti operazioni:
-    \begin{itemize}
-        \item Preme sull'azione di cancellazione del proprio account.
-        \item Viene visualizzato un messaggio di conferma dell'operazione.
-        \item Se conferma viene eliminato l'account.
-    \end{itemize}
-    \item \textbf{Scenario alternativo:} Se non conferma viene riportato alla propria pagina personale e l'account non viene eliminato.
+    \item \textbf{Attori primari:} acquirente;
+    \item \textbf{Precondizione:} l'acquirente si trova nella schermata personale e ha selezionato l'azione di eliminazione del proprio account;
+    \item \textbf{Postcondizione:} l'account dell'acquirente non è più presente nella piattaforma;
+    \item \textbf{Scenario principale:} l'acquirente si trova nella schermata personale e ha selezionato l'azione di eliminazione del proprio account. In seguito verrà visualizzato un messaggio di conferma dell'operazione e, se l'acquirente conferma, viene eliminato l'account;
+    \item \textbf{Scenari alternativi:}
+    \begin{enumerate}[label=\lett]
+        \item Se non conferma viene riportato alla propria pagina personale e l'account non viene eliminato.
+    \end{enumerate}.
 \end{itemize}
