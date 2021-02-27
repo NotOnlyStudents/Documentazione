@@ -1,9 +1,9 @@
 \UC{Modifica informazioni venditore}
-Il venditore vuole modificare le sue informazioni personali.
+Il venditore può modificare le sue informazioni personali.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
     \item \textbf{Attori secondari:} \glo{identity manager};
-    \item \textbf{Precondizione:} il venditore ha intenzione di modificare le proprie informazioni;
+    \item \textbf{Precondizione:} il venditore si trova nella schermata della propria area personale e ha selezionato l'azione di modifica delle proprie informazioni;
     \item \textbf{Postcondizione:} il venditore ha aggiornato le proprie informazioni personali;
     \item \textbf{Scenario principale:} il venditore si trova nella schermata della propria area personale e può compiere le seguenti azioni:
     \begin{itemize}
@@ -17,7 +17,7 @@ Il venditore vuole modificare le sue informazioni personali.
         \item (UC) - Modifica della descrizione dell'azienda.
     \end{itemize}
     Il venditore conferma le modifiche compiute e le informazioni personali verranno modificate;
-    \item \textbf{Scenario alternativo:}
+    \item \textbf{Scenari alternativi:}
     \begin{enumerate}[label=\lett]
     	\item Il venditore non conferma le modifiche effettuate e di conseguenza non verranno aggiornate le informazioni personali;
     \end{enumerate}
@@ -44,10 +44,10 @@ Il venditore vuole modificare il proprio nome.
 \begin{itemize}
 	\item \textbf{Attori primari:} venditore;
 	\item \textbf{Attori secondari:} identity manager;
-	\item \textbf{Precondizione:} il venditore vuole aggiornare il proprio nome;
+	\item \textbf{Precondizione:} il venditore si trova nella schermata di modifica delle proprie informazioni;
 	\item \textbf{Postcondizione:} il venditore ha aggiornato il proprio nome;
 	\item \textbf{Scenario principale:} il venditore modifica il proprio nome;
-	\item \textbf{Scenario alternativo:}
+	\item \textbf{Scenari alternativi:}
 	\begin{enumerate}[label=\lett]
 		\item Il venditore non modifica l'attuale nome utilizzato e di conseguenza non cambierà.
 	\end{enumerate}
@@ -66,10 +66,10 @@ Il venditore vuole modificare il proprio cognome.
 \begin{itemize}
 	\item \textbf{Attori primari:} venditore;
 	\item \textbf{Attori secondari:} identity manager;
-	\item \textbf{Precondizione:} il venditore vuole aggiornare il proprio cognome;
+	\item \textbf{Precondizione:} il venditore si trova nella schermata di modifica delle proprie informazioni;
 	\item \textbf{Postcondizione:} il venditore ha aggiornato il proprio cognome;
 	\item \textbf{Scenario principale:} il venditore modifica il proprio cognome;
-	\item \textbf{Scenario alternativo:}
+	\item \textbf{Scenari alternativi:}
 	\begin{enumerate}[label=\lett]
 		\item Il venditore non modifica l'attuale cognome utilizzato e di conseguenza non cambierà.
 	\end{enumerate}
@@ -88,10 +88,10 @@ Il venditore vuole modificare la propria email.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
     \item \textbf{Attori secondari:} identity manager;
-    \item \textbf{Precondizione:} il venditore vuole aggiornare il proprio indirizzo email;
+    \item \textbf{Precondizione:} il venditore si trova nella schermata di modifica delle proprie informazioni;
     \item \textbf{Postcondizione:} il venditore ha aggiornato il suo indirizzo email;
     \item \textbf{Scenario principale:} il venditore modifica il proprio indirizzo email;
-    \item \textbf{Scenario alternativo:}
+    \item \textbf{Scenari alternativi:}
     \begin{enumerate}[label=\lett]
     	\item Il venditore non modifica l'attuale indirizzo email utilizzato e di conseguenza non cambierà.
     \end{enumerate}
@@ -114,8 +114,8 @@ Il venditore vuole modificare la propria email.
 Il venditore vuole modificare la propria password.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
-    \item \textbf{Precondizione:} il venditore vuole aggiornare la propria password;
-    \item \textbf{Postcondizione:} il venditore ha inserito la nuova password;
+    \item \textbf{Precondizione:} il venditore si trova nella schermata di modifica delle proprie informazioni;
+    \item \textbf{Postcondizione:} il venditore ha modificato la sua password;
     \item \textbf{Scenario principale:} Il venditore per poter cambiare la password deve compiere i seguenti passi:
         \begin{itemize}
             \item (UC) - Inserimento password per accedere alla piattaforma; %Il venditore scrive la nuova password che vuole utilizzare per accedere alla piattaforma;
@@ -126,6 +126,8 @@ Il venditore vuole modificare la propria password.
     	\item Il venditore non inserisce alcuna password e lascia i campi per l'inserimento della nuova password e della conferma della stessa vuoti. In questo caso non verrà modificata la password.
     \end{enumerate}
 \end{itemize}
+
+\resetSubSubUC
 
 \subSubUC{Inserimento password per la modifica delle informazioni personali}
 Il venditore inserisce una nuova password.
@@ -177,10 +179,10 @@ Il venditore inserisce la conferma della nuova password.
 Il venditore vuole modificare il proprio logo.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
-    \item \textbf{Precondizione:} il venditore vuole modificare il proprio logo aziendale;
-    \item \textbf{Postcondizione:} il venditore ha inserito un nuovo logo;
+    \item \textbf{Precondizione:} il venditore si trova nella schermata di modifica delle proprie informazioni;
+    \item \textbf{Postcondizione:} il venditore ha inserito un nuovo logo aziendale;
     \item \textbf{Scenario principale:} il venditore modifica il proprio logo aziendale scegliendo un'immagine tra quelle disponibili localmente nel proprio dispositivo;
-    \item \textbf{Scenario alternativo:}
+    \item \textbf{Scenari alternativi:}
     \begin{enumerate}[label=\lett]
     	\item Il venditore non seleziona alcun file ed il logo non verrà cambiato.
     \end{enumerate}
@@ -198,8 +200,8 @@ Il venditore vuole modificare il proprio logo.
 Il venditore vuole rimuovere il proprio logo.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
-    \item \textbf{Precondizione:} il venditore ha inserito precedentemente un logo aziendale;
-    \item \textbf{Postcondizione:} il venditore ha rimosso il proprio logo;
+    \item \textbf{Precondizione:} il venditore si trova nella schermata di modifica delle proprie informazioni;
+    \item \textbf{Postcondizione:} il venditore ha rimosso il proprio logo aziendale;
     \item \textbf{Scenario principale:} il venditore rimuove il proprio logo attraverso l'adeguata funzionalità e viene utilizzata dalla piattaforma un'immagine di riempimento.
 \end{itemize}
 
@@ -208,10 +210,10 @@ Il venditore vuole modificare il nome dell'azienda.
 \begin{itemize}
 	\item \textbf{Attori primari:} venditore;
 	\item \textbf{Attori secondari:} identity manager;
-	\item \textbf{Precondizione:} il venditore vuole aggiornare il nome della propria azienda;
+	\item \textbf{Precondizione:} il venditore si trova nella schermata di modifica delle proprie informazioni;
 	\item \textbf{Postcondizione:} il venditore ha aggiornato il nome dell'azienda;
 	\item \textbf{Scenario principale:} il venditore modifica il nome della propria azienda;
-	\item \textbf{Scenario alternativo:}
+	\item \textbf{Scenari alternativi:}
 	\begin{enumerate}[label=\lett]
 		\item Il venditore non modifica l'attuale nome aziendale utilizzato e di conseguenza non cambierà.
 	\end{enumerate}
@@ -234,10 +236,10 @@ Il venditore vuole modificare il nome dell'azienda.
 Il venditore vuole modificare la descrizione dell'azienda che viene mostrata nella schermata principale.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
-    \item \textbf{Precondizione:} il venditore vuole modificare l'attuale descrizione dell'azienda;
+    \item \textbf{Precondizione:} il venditore si trova nella schermata di modifica delle proprie informazioni;
     \item \textbf{Postcondizione:} il venditore ha aggiornato la descrizione dell'azienda;
     \item \textbf{Scenario principale:} il venditore modifica la descrizione dell'azienda;
-    \item \textbf{Scenario alternativo:}
+    \item \textbf{Scenari alternativi:}
     \begin{enumerate}[label=\lett]
     	\item Il venditore non modifica l'attuale descrizione dell'azienda e di conseguenza non cambierà.
     \end{enumerate}
