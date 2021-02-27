@@ -86,10 +86,19 @@ Visualizzazione messaggio che segnala all'utente il mancato riempimento di un ca
 \UC{Visualizzazione messaggio d'errore data non valida}
 Visualizzazione messaggio di errore che segnala all'attore l'inserimento di una data non valida.
 \begin{itemize}
-    \item \textbf{Attori primari:} utente autenticato o utente non autenticato;
-    \item \textbf{Precondizione:} l'attore ha inserito una data non nel formato corretto;
+    \item \textbf{Attori primari:} acquirente o venditore;
+    \item \textbf{Precondizione:} l'attore ha inserito una data che non è nel formato corretto;
     \item \textbf{Postcondizione:} all'attore verrà mostrato un messaggio il quale lo informa dell'inserimento di una data non valida;
     \item \textbf{Scenario principale:} l'attore ha inserito una data non nel formato giorno/mese/anno e viene informato del formato non valido della data.
+\end{itemize}
+
+\UC{Visualizzazione messaggio d'errore codice dell'ordine non valido}
+Visualizzazione messaggio di errore che segnala all'attore l'inserimento di caratteri non numerici nel codice per cui cercare.
+\begin{itemize}
+    \item \textbf{Attori primari:} acquirente o venditore;
+    \item \textbf{Precondizione:} l'attore ha inserito dei caratteri non numerici nel codice per cui cercare l'ordine;
+    \item \textbf{Postcondizione:} all'attore verrà mostrato un messaggio il quale lo informa dell'inserimento di un codice non valido;
+    \item \textbf{Scenario principale:} l'attore ha inserito dei caratteri non numerici nel codice per cui cercare e viene informato dell'errore.
 \end{itemize}
 
 \UC{Visualizzazione messaggio d'errore data iniziale maggiore di quella finale}
@@ -99,6 +108,24 @@ Visualizzazione messaggio di errore che segnala all'attore l'inserimento di una 
     \item \textbf{Precondizione:} l'attore ha inserito una data iniziale maggiore di quella finale;
     \item \textbf{Postcondizione:} all'attore verrà mostrato un messaggio il quale lo informa dell'inserimento di una data iniziale maggiore di quella finale;
     \item \textbf{Scenario principale:} l'attore ha inserito una data iniziale maggiore di quella finale e viene informato dell'impossibilità di inserire una data iniziale maggiore di quella finale.
+\end{itemize}
+
+\UC{Visualizzazione messaggio nessun ordine effettuato nell'arco temporale impostato}
+Visualizzazione di un messaggio il quale segnala all'acquirente che non è stato effettuato alcun ordine nell'arco temporale impostato.
+\begin{itemize}
+    \item \textbf{Attori primari:} acquirente;
+    \item \textbf{Precondizione:} l'acquirente ha inserito un intervallo temporale nel quale non è stato effettuato alcun ordine;
+    \item \textbf{Postcondizione:} all'acquirente verrà mostrato un messaggio il quale lo informa della non effettuazione di alcun ordine nell'arco temporale impostato;
+    \item \textbf{Scenario principale:} l'acquirente ha inserito un intervallo temporale nel quale non è stato effettuato alcun ordine e viene informato della non effettuazione di alcun ordine nell'arco temporale impostato.
+\end{itemize}
+
+\UC{Visualizzazione messaggio nessun ordine effettuato a cui corrisponde il codice inserito}
+Visualizzazione di un messaggio il quale segnala all'acquirente che non è stato effettuato alcun ordine a cui corrisponde il codice che ha inserito.
+\begin{itemize}
+    \item \textbf{Attori primari:} acquirente;
+    \item \textbf{Precondizione:} l'acquirente ha inserito un codice a cui non corrisponde alcun ordine;
+    \item \textbf{Postcondizione:} all'acquirente verrà mostrato un messaggio il quale lo informa della non effettuazione di alcun ordine a cui corrisponde il codice che ha inserito;
+    \item \textbf{Scenario principale:} l'acquirente ha inserito un codice a cui non corrisponde alcun ordine e viene informato della non effettuazione di alcun ordine a cui corrisponde il codice.
 \end{itemize}
 
 % Estensioni PDP
@@ -195,15 +222,6 @@ Nel caso in cui la ricerca del prodotto non dia risultati verrà visualizzato un
 	\item \textbf{Precondizione:} l'attore ha svolto una ricerca di un prodotto che non ha dato alcun risultato;
 	\item \textbf{Postcondizione:} all'attore verrà mostrato un messaggio il quale lo informa che la ricerca appena effettuata non ha prodotto alcun risultato;
 	\item \textbf{Scenario principale:} l'attore effettua una ricerca che non ha prodotto alcun risultato e viene informato del mancato risultato della ricerca appena effettuata.
-\end{itemize}
-
-\UC{Visualizzazione messaggio nessun ordine effettuato nell'arco temporale impostato}
-Visualizzazione di un messaggio il quale segnala all'acquirente che non è stato effettuato alcun ordine nell'arco temporale impostato.
-\begin{itemize}
-    \item \textbf{Attori primari:} acquirente;
-    \item \textbf{Precondizione:} l'acquirente ha inserito un intervallo temporale nel quale non è stato effettuato alcun ordine;
-    \item \textbf{Postcondizione:} all'acquirente verrà mostrato un messaggio il quale lo informa della non effettuazione di alcun ordine nell'arco temporale impostato;
-    \item \textbf{Scenario principale:} l'acquirente ha inserito un intervallo temporale nel quale non è stato effettuato alcun ordine e viene informato della non effettuazione di alcun ordine nell'arco temporale impostato.
 \end{itemize}
 
 \UC{Visualizzazione messaggio in caso di prodotto selezionato per l'eliminazione ma non ancora evaso in alcuni ordini}
