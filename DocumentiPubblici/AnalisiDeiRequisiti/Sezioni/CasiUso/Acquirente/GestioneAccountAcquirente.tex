@@ -15,7 +15,18 @@ L'acquirente può modificare le sue informazioni personali.
         \item (\actualUC.5) - Inserimento conferma nuova password.
     \end{itemize}
     In seguito ci sarà la conferma delle modifiche compiute e le informazioni personali verranno modificate.
-    \item \textbf{Scenario alternativo:} l'acquirente non conferma le modifiche effettuate, perciò non verranno modificate le informazioni personali.
+    \item \textbf{Scenari alternativi:}
+    \begin{enumerate}[label=\lett]
+        \item L'acquirente non conferma le modifiche effettuate, perciò non verranno modificate le informazioni personali.
+    \end{enumerate}
+    \item \textbf{Estensioni:} 
+    \begin{enumerate}[label=\lett] 
+        \item L'acquirente inserisce una password di conferma diversa da quella inserita nel campo di inserimento nuova password. In questo caso:
+        \begin{itemize}
+            \item (UC) - Verrà visualizzato il messaggio di errore di password e password di conferma diverse;
+            \item Verrà impedita la modifica delle informazioni.
+        \end{itemize}
+    \end{enumerate}
 \end{itemize}
 
 \resetSubUC
@@ -97,12 +108,12 @@ L'acquirente vuole modificare la propria email.
     \end{enumerate}
     \item \textbf{Estensioni:} 
     \begin{enumerate}[label=\lett]
-        \item L'acquirente inserisce un'email già utilizzata nella piattaforma. In questo caso:
+        \item L'acquirente modifica la propria email con una già utilizzata nella piattaforma. In questo caso:
         \begin{itemize}
             \item (UC) - Verrà visualizzato il messaggio di errore in caso di cambio email con una già utilizzata nella piattaforma;
             \item Verrà impedita la modifica delle informazioni.
         \end{itemize}
-        \item L'acquirente inserisce un'email non valida. In questo caso:
+        \item L'acquirente modifica la propria email con una non valida. In questo caso:
         \begin{itemize}
             \item (UC) - Verrà visualizzato un messaggio di errore in caso di email non valida;
             \item Verrà impedita la modifica delle informazioni.
@@ -124,10 +135,12 @@ L'acquirente vuole modificare la propria password.
     \item \textbf{Scenario principale:} l'acquirente si trova nella schermata di modifica informazioni personali e vuole modificare la propria password attraverso le seguenti azioni:
     \begin{itemize}
         \item Si posiziona nel campo di inserimento vuoto della nuova password;
-        \item La scrive;
-        \item Inserisce la stessa password nel campo di conferma nuova password.
+        \item Inserisce la nuova password;
     \end{itemize}
-    \item \textbf{Scenario alternativo:} L'acquirente non inserisce alcuna password e lascia il campo di inserimento nuova password vuoto. In questo caso non verrà modificata la password;
+    \item \textbf{Scenari alternativi:}
+    \begin{enumerate}[label=\lett]
+        \item L'acquirente non inserisce alcuna password e lascia il campo di inserimento nuova password vuoto. In questo caso non verrà modificata la password.
+    \end{enumerate}
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
         \item L'acquirente inserisce una password troppo debole. In questo caso:
@@ -145,21 +158,13 @@ L'acquirente vuole modificare la propria password e deve confermare quella nuova
     \item \textbf{Precondizione:} l'acquirente si trova nella schermata di modifica informazioni personali e vuole inserire una nuova password;
     \item \textbf{Postcondizione:} l'acquirente ha inserito la conferma della nuova password;
     \item \textbf{Scenario principale:} l'acquirente si trova nella schermata di modifica informazioni personali, ha già inserito la nuova password e la deve confermare attraverso le seguenti azioni:
-        \begin{itemize}
-            \item Si posiziona nel campo di inserimento vuoto della conferma nuova password;
-            \item Inserisce la stessa password che è stata inserita nel campo conferma password.
-        \end{itemize}
-    \item \textbf{Scenari alternativi:} 
+    \begin{itemize}
+        \item Si posiziona nel campo di inserimento vuoto della conferma nuova password;
+        \item Inserisce la stessa password che è stata inserita nel campo conferma password.
+    \end{itemize}
+    \item \textbf{Scenari alternativi:}
     \begin{enumerate}
         \item L'acquirente non inserisce alcuna password e lascia il campo di inserimento conferma nuova password vuoto. In questo caso non verrà modificata la password.
-    \end{enumerate}
-    \item \textbf{Estensioni:} 
-    \begin{enumerate}[label=\lett] 
-        \item l'acquirente inserisce una password di conferma diversa da quella inserita nel campo di inserimento nuova password. In questo caso:
-        \begin{itemize}
-            \item (UC) - Verrà visualizzato il messaggio di errore di password e password di conferma diverse;
-            \item Verrà impedita la modifica delle informazioni.
-        \end{itemize}
     \end{enumerate}
 \end{itemize}
 
