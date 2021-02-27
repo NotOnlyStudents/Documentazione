@@ -64,6 +64,11 @@ L'utente compila il modulo per proseguire con la registrazione presso la piattaf
 	\item \textbf{Scenario principale:} l'utente non autenticato inserisce il proprio nome per la registrazione;
 	\item \textbf{Estensioni:}
 	\begin{enumerate}[label=\lett]
+		\item L'utente inserisce un nome che presenta dei caratteri non alfabetici. In questo caso:
+        \begin{itemize}
+            \item (UC) - Verrà visualizzato il messaggio di errore caratteri non alfabetici non permessi;
+            \item Viene fornita all'utente la possibilità di inserire un nome.
+        \end{itemize}
 		\item L'utente non inserisce il nome e l'identity manager controlla il campo dati per il nome che non risulta compilato, in questo caso:
 		\begin{itemize}
 			\item (UC) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
@@ -81,6 +86,11 @@ L'utente compila il modulo per proseguire con la registrazione presso la piattaf
 	\item \textbf{Scenario principale:} l'utente non autenticato inserisce il proprio cognome per la registrazione;
 	\item \textbf{Estensioni:}
 	\begin{enumerate}[label=\lett]
+		\item L'utente inserisce un cognome che presenta dei caratteri non alfabetici. In questo caso:
+        \begin{itemize}
+            \item (UC) - Verrà visualizzato il messaggio di errore caratteri non alfabetici non permessi;
+            \item Viene fornita all'utente la possibilità di inserire un cognome.
+        \end{itemize}
 		\item L'utente non inserisce il cognome e l'identity manager controlla il campo dati per il cognome che non risulta compilato, in questo caso:
 		\begin{itemize}
 			\item (UC) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
