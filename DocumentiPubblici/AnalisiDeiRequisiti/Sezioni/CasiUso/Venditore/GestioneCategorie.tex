@@ -1,3 +1,22 @@
+\UC{Gestione delle categorie}
+Il venditore ha la possibilità di visualizzare l'elenco delle categorie presenti all'interno della piattaforma e di gestirle secondo le proprie necessità.
+\begin{itemize}
+	\item \textbf{Attori primari:} venditore;
+	\item \textbf{Precondizione:} il venditore si trova nella schermata della dashboard e vuole vedere le categorie presenti all'interno della piattaforma;
+	\item \textbf{Postcondizione:} il venditore viene indirizzato nella schermata di amministrazione delle categorie e vede tutte le categorie presenti all'interno del sistema;
+	\item \textbf{Scenario principale:} il venditore può compiere le seguenti azioni:
+	\begin{itemize}
+		\item (UC) - Aggiunta nuova categoria;
+		\item (UC) - Modifica di una categoria;
+		\item (UC) - Eliminazione di una categoria;
+		\item (UC) - Ricerca categoria.
+	\end{itemize}
+	\item \textbf{Scenari alternativi:}
+	\begin{enumerate}[label=\lett]
+		\item Il venditore non esegue alcuna azione all'interno della propria PLP che rimane invariata.
+	\end{enumerate}
+\end{itemize}
+
 \UC{Aggiunta nuova categoria}
 Il venditore aggiunge una nuova categoria.
 \begin{itemize}
@@ -6,7 +25,7 @@ Il venditore aggiunge una nuova categoria.
     \item \textbf{Postcondizione:} la categoria inserita viene creata;
     \item \textbf{Scenario principale:}
     \begin{itemize}
-    	\item Il venditore si trova nella schermata di visualizzazione di tutte le categorie;
+    	\item Il venditore si trova nella schermata di amministrazione delle categorie;
     	\item Il venditore seleziona la funzionalità per aggiungere una nuova categoria di prodotti;
     	\item (UC) - Inserimento nome della nuova categoria;
     	\item Il venditore conferma la creazione della categoria di prodotti.
@@ -49,7 +68,7 @@ Il venditore modifica una categoria precedentemente inserita.
     \item \textbf{Postcondizione:} la categoria viene aggiornata;
     \item \textbf{Scenario principale:}
     \begin{itemize}
-    	\item Il venditore si trova nella schermata di visualizzazione di tutte le categorie;
+    	\item Il venditore si trova nella schermata di amministrazione delle categorie;
     	\item Il venditore seleziona la funzionalità per modificare una categoria di prodotti;
     	\item (UC) - Modifica nome della categoria;
     	\item Il venditore conferma la modifica della categoria di prodotti.
@@ -92,7 +111,7 @@ Il venditore elimina una categoria precedentemente inserita.
     \item \textbf{Postcondizione:} la categoria viene eliminata;
     \item \textbf{Scenario principale:}
     \begin{itemize}
-    	\item Il venditore si trova nella schermata di visualizzazione di tutte le categorie;
+    	\item Il venditore si trova nella schermata di amministrazione delle categorie;
     	\item Il venditore seleziona la funzionalità per eliminare una categoria di prodotti;
     	\item Il venditore conferma la rimozione della categoria di prodotti con la conseguente eliminazione anche nei prodotti appartenenti alla categoria indicata.
     \end{itemize}
@@ -100,4 +119,20 @@ Il venditore elimina una categoria precedentemente inserita.
     \begin{enumerate}[label=\lett]
     	\item Durante la visualizzazione del messaggio di conferma, il venditore non da il suo consenso per l'eliminazione e di conseguenza la categoria non verrà eliminata.
     \end{enumerate}
+\end{itemize}
+
+\UC{Ricerca categoria} 
+Il venditore può cercare una categoria dalla propria schermata di amministrazione delle categorie.
+\begin{itemize}
+	\item \textbf{Attori primari:} venditore;
+	\item \textbf{Precondizione:} il venditore ha selezionato la funzionalità per la ricerca e l'inserimento delle parole per individuare una categoria;
+	\item \textbf{Postcondizione:} il venditore visualizza le categorie che contengono nel nome almeno una delle parole per le quali si è svolta la ricerca;
+	\item \textbf{Scenario principale:} il venditore ha selezionato la funzione prevista per la ricerca. Dopo aver inserito le parole per individuare la categoria, conferma la ricerca e viene aggiornata la schermata di amministrazione delle categorie che mostra tutte le categorie che hanno almeno una delle parole indicate nel nome;
+	\item \textbf{Estensioni:}
+	\begin{enumerate}[label=\lett]
+		\item Il venditore ha svolto una ricerca che non ha prodotto alcun risultato. In questo caso:
+		\begin{itemize}
+			\item (UC) - Viene visualizzato il messaggio di ricerca senza alcun risultato.
+		\end{itemize}
+	\end{enumerate}
 \end{itemize}
