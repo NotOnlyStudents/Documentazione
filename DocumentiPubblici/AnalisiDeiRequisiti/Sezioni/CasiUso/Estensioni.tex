@@ -8,32 +8,32 @@ Visualizzazione messaggio di errore che segnala all'attore l'inserimento di cara
     \item \textbf{Scenario principale:} l'attore ha inserito dei caratteri non alfabetici dove non è permessa la loro presenza e verrà avvisato della presenza di caratteri non alfabetici.
 \end{itemize}
 
-% Estensioni email
-\UC{Visualizzazione messaggio di errore in caso di registrazione con un'email già utilizzata nella piattaforma}
-Visualizzazione messaggio di errore che segnala all'attore il tentativo di registrazione con un'email già utilizzata nella piattaforma.
+% Estensioni e-mail
+\UC{Visualizzazione messaggio di errore in caso di registrazione con un'e-mail già utilizzata nella piattaforma}
+Visualizzazione messaggio di errore che segnala all'attore il tentativo di registrazione con un'e-mail già utilizzata nella piattaforma.
 \begin{itemize}
     \item \textbf{Attori primari:} utente non autenticato;
-    \item \textbf{Precondizione:} l'utente non autenticato sta cercando di registrarsi con un'email già utilizzata nella piattaforma;
-    \item \textbf{Postcondizione:} all'attore viene mostrato un messaggio il quale indica l'impossibilità di registrarsi con un'email già utilizzata nella piattaforma;
-    \item \textbf{Scenario principale:} l'attore sta cercando di registrarsi con un'email già utilizzata nella piattaforma e viene avvisato dell'impossibilità di registrarsi con un'email già utilizzata nella piattaforma.
+    \item \textbf{Precondizione:} l'utente non autenticato sta cercando di registrarsi con un'e-mail già utilizzata nella piattaforma;
+    \item \textbf{Postcondizione:} all'attore viene mostrato un messaggio il quale indica l'impossibilità di registrarsi con un'e-mail già utilizzata nella piattaforma;
+    \item \textbf{Scenario principale:} l'attore sta cercando di registrarsi con un'e-mail già utilizzata nella piattaforma e viene avvisato dell'impossibilità di registrarsi con un'e-mail già utilizzata nella piattaforma.
 \end{itemize}
 
-\UC{Visualizzazione messaggio di errore in caso di cambio email con una già utilizzata nella piattaforma}
-Visualizzazione messaggio di errore che segnala all'attore il tentativo di cambio dell'email attuale con un'email già utilizzata nella piattaforma.
+\UC{Visualizzazione messaggio di errore in caso di cambio e-mail con una già utilizzata nella piattaforma}
+Visualizzazione messaggio di errore che segnala all'attore il tentativo di cambio dell'e-mail attuale con un'e-mail già utilizzata nella piattaforma.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente o venditore;
-    \item \textbf{Precondizione:} l'attore sta cercando di cambiare la propria email con una già utilizzata nella piattaforma;
-    \item \textbf{Postcondizione:} all'attore viene mostrato un messaggio il quale indica l'impossibilità di cambiare la propria email attuale con un'email già utilizzata nella piattaforma;
-    \item \textbf{Scenario principale:} l'attore sta cercando di cambiare la propria email attuale con un'email già utilizzata nella piattaforma e viene avvisato dell'impossibilità di cambiare la propria email con una già utilizzata nella piattaforma.
+    \item \textbf{Precondizione:} l'attore sta cercando di cambiare la propria e-mail con una già utilizzata nella piattaforma;
+    \item \textbf{Postcondizione:} all'attore viene mostrato un messaggio il quale indica l'impossibilità di cambiare la propria e-mail attuale con un'e-mail già utilizzata nella piattaforma;
+    \item \textbf{Scenario principale:} l'attore sta cercando di cambiare la propria e-mail attuale con un'e-mail già utilizzata nella piattaforma e viene avvisato dell'impossibilità di cambiare la propria e-mail con una già utilizzata nella piattaforma.
 \end{itemize}
 
-\UC{Visualizzazione messaggio di errore in caso di email non registrata}
-Visualizzazione messaggio di errore che segnala all'attore il tentativo di accesso alla piattaforma con una email non registrata.
+\UC{Visualizzazione messaggio di errore in caso di e-mail non registrata}
+Visualizzazione messaggio di errore che segnala all'attore il tentativo di accesso alla piattaforma con una e-mail non registrata.
 \begin{itemize}
     \item \textbf{Attori primari:} utente non autenticato;
-    \item \textbf{Precondizione:} l'utente non autenticato ha inserito un'email non registrata nella piattaforma;
-    \item \textbf{Postcondizione:} all'utente non autenticato viene mostrato un messaggio il quale indica l'impossibilità di inserire un'email non registrata nella piattaforma;
-    \item \textbf{Scenario principale:} l'utente non autenticato ha inserito un'email non registrata nella piattaforma e viene informato dell'impossibilità di inserire un'email non registrata nella piattaforma.
+    \item \textbf{Precondizione:} l'utente non autenticato ha inserito un'e-mail non registrata nella piattaforma;
+    \item \textbf{Postcondizione:} all'utente non autenticato viene mostrato un messaggio il quale indica l'impossibilità di inserire un'e-mail non registrata nella piattaforma;
+    \item \textbf{Scenario principale:} l'utente non autenticato ha inserito un'e-mail non registrata nella piattaforma e viene informato dell'impossibilità di inserire un'e-mail non registrata nella piattaforma.
 \end{itemize}
 
 \UC{Visualizzazione messaggio di errore in caso di credenziali non presenti nella piattaforma}
@@ -45,13 +45,13 @@ Visualizzazione messaggio di errore che segnala all'utente il tentativo di acces
     \item \textbf{Scenario principale:} l'utente non autenticato tenta di accedere alla piattaforma attraverso delle credenziali non presenti in essa e viene informato dell'utilizzo di credenziali non presenti nella piattaforma.
 \end{itemize}
 
-\UC{Visualizzazione messaggio di errore in caso di email non valida}
-Visualizzazione messaggio di errore che segnala all'utente che l'email inserita non rispetta il formato di un indirizzo email.
+\UC{Visualizzazione messaggio di errore in caso di e-mail non valida}
+Visualizzazione messaggio di errore che segnala all'utente che l'e-mail inserita non rispetta il formato di un indirizzo e-mail.
 \begin{itemize}
     \item \textbf{Attori primari:} utente autenticato o utente non autenticato;
-    \item \textbf{Precondizione:} l'attore ha inserito un'email nel formato sbagliato;
-    \item \textbf{Postcondizione:} all'utente non autenticato viene mostrato un messaggio il quale lo avvisa dell'inserimento di un'email in un formato errato;
-    \item \textbf{Scenario principale:} l'attore ha inserito un'email nel formato sbagliato e viene informato dell'inserimento di un'email nel formato sbagliato.
+    \item \textbf{Precondizione:} l'attore ha inserito un'e-mail nel formato sbagliato;
+    \item \textbf{Postcondizione:} all'utente non autenticato viene mostrato un messaggio il quale lo avvisa dell'inserimento di un'e-mail in un formato errato;
+    \item \textbf{Scenario principale:} l'attore ha inserito un'e-mail nel formato sbagliato e viene informato dell'inserimento di un'e-mail nel formato sbagliato.
 \end{itemize}
 
 % Estensioni password

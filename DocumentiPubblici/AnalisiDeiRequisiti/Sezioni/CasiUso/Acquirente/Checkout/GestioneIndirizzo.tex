@@ -27,74 +27,28 @@ L'acquirente compila il modulo per aggiungere un nuovo indirizzo di consegna.
 	\item \textbf{Postcondizione:} l'acquirente ha compilato correttamente tutti i dati del nuovo indirizzo e può continuare con l'aggiunta;
 	\item \textbf{Scenario principale:} l'acquirente compila i campi nel seguente modo:
 	\begin{itemize}
-		\item (\actualSubUC.1) - Selezione dello stato dell'indirizzo di consegna;
-		\item (\actualSubUC.2) - Inserimento della regione dell'indirizzo di consegna;
-		\item (\actualSubUC.3) - Inserimento della provincia dell'indirizzo di consegna;
-		\item (\actualSubUC.4) - Inserimento del comune dell'indirizzo di consegna;
-		\item (\actualSubUC.5) - Inserimento della via dell'indirizzo di consegna;
-		\item (\actualSubUC.6) - Inserimento del CAP dell'indirizzo di consegna.
+		\item (\actualSubUC.1) - Selezione della nazione dell'indirizzo di consegna;
+		\item (\actualSubUC.2) - Inserimento del comune dell'indirizzo di consegna;
+		\item (\actualSubUC.3) - Inserimento della via dell'indirizzo di consegna;
+		\item (\actualSubUC.4) - Inserimento del CAP dell'indirizzo di consegna.
 	\end{itemize}
 \end{itemize}
 
 \resetSubSubUC
 
-\subSubUC{Selezione dello stato dell'indirizzo di consegna}
-L'acquirente seleziona lo stato dell'indirizzo di consegna.
+\subSubUC{Selezione della nazione dell'indirizzo di consegna}
+L'acquirente seleziona la nazione dell'indirizzo di consegna.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
     \item \textbf{Precondizione:} l'acquirente si trova nella schermata di aggiunta di un nuovo indirizzo di consegna;
-    \item \textbf{Postcondizione:} l'acquirente ha selezionato lo stato del nuovo indirizzo di consegna;
-    \item \textbf{Scenario principale:} l'acquirente seleziona lo stato del nuovo indirizzo di consegna tra quelli disponibili;
+    \item \textbf{Postcondizione:} l'acquirente ha selezionato la nazione del nuovo indirizzo di consegna;
+    \item \textbf{Scenario principale:} l'acquirente seleziona la nazione del nuovo indirizzo di consegna tra quelli disponibili;
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
-        \item L'acquirente non seleziona alcun stato per il nuovo indirizzo di consegna. In questo caso:
+        \item L'acquirente non seleziona alcuna nazione per il nuovo indirizzo di consegna. In questo caso:
         \begin{itemize}
             \item (UC) - Viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
             \item Verrà impedita l'aggiunta del nuovo indirizzo.
-        \end{itemize}
-    \end{enumerate}
-\end{itemize}
-
-\subSubUC{Inserimento della regione dell'indirizzo di consegna}
-L'acquirente inserisce la regione dell'indirizzo di consegna.
-\begin{itemize}
-    \item \textbf{Attori primari:} acquirente;
-    \item \textbf{Precondizione:} l'acquirente si trova nella schermata di aggiunta di un nuovo indirizzo di consegna;
-    \item \textbf{Postcondizione:} l'acquirente ha inserito la regione del nuovo indirizzo di consegna;
-    \item \textbf{Scenario principale:} l'acquirente inserisce correttamente la regione del nuovo indirizzo di consegna;
-    \item \textbf{Estensioni:}
-    \begin{enumerate}[label=\lett]
-        \item L'acquirente non inserisce alcuna regione per il nuovo indirizzo di consegna. In questo caso:
-        \begin{itemize}
-            \item (UC) - Viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
-            \item Verrà impedita l'aggiunta del nuovo indirizzo.
-        \end{itemize}
-        \item L'acquirente inserisce dei caratteri non alfabetici. In questo caso:
-        \begin{itemize}
-            \item (UC) - Viene mostrato il messaggio d'errore caratteri non alfabetici non permessi;
-            \item Verrà impedita l'aggiunta dell'indirizzo di consegna.
-        \end{itemize}
-    \end{enumerate}
-\end{itemize}
-
-\subSubUC{Inserimento della provincia dell'indirizzo di consegna}
-L'acquirente inserisce la provincia dell'indirizzo di consegna.
-\begin{itemize}
-    \item \textbf{Attori primari:} acquirente;
-    \item \textbf{Precondizione:} l'acquirente si trova nella schermata di aggiunta di un nuovo indirizzo di consegna;
-    \item \textbf{Postcondizione:} l'acquirente ha inserito la provincia del nuovo indirizzo di consegna;
-    \item \textbf{Scenario principale:} l'acquirente inserisce correttamente la provincia del nuovo indirizzo di consegna;
-    \item \textbf{Estensioni:}
-    \begin{enumerate}[label=\lett]
-        \item L'acquirente non inserisce alcuna provincia per il nuovo indirizzo di consegna. In questo caso:
-        \begin{itemize}
-            \item (UC) - Viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
-            \item Verrà impedita l'aggiunta del nuovo indirizzo.
-        \end{itemize}
-        \item L'acquirente inserisce dei caratteri non alfabetici. In questo caso:
-        \begin{itemize}
-            \item (UC) - Viene mostrato il messaggio d'errore caratteri non alfabetici non permessi;
-            \item Verrà impedita l'aggiunta dell'indirizzo di consegna.
         \end{itemize}
     \end{enumerate}
 \end{itemize}
@@ -152,7 +106,7 @@ L'acquirente inserisce il CAP dell'indirizzo di consegna.
             \item (UC) - Viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
             \item Verrà impedita l'aggiunta del nuovo indirizzo.
         \end{itemize}
-        \item L'acquirente non inserisce esattamente 5 numeri compresi tra 0 e 9 come CAP. In questo caso:
+        \item L'acquirente non inserisce esattamente 5 numeri come CAP. In questo caso:
         \begin{itemize}
             \item (UC) - Viene mostrato il messaggio d'errore CAP non valido;
             \item Verrà impedita l'aggiunta del nuovo indirizzo.
@@ -171,11 +125,9 @@ L'acquirente è nella fase del checkout e vuole modificare un indirizzo di conse
     \item \textbf{Scenario principale:} l'acquirente è nella fase del checkout e vuole modificare i dati di un indirizzo di consegna precedentemente inserito. Le informazioni che potranno essere modificate sono:
     \begin{itemize}
         \item (\actualUC.1) - Modifica dello stato dell'indirizzo di consegna;
-		\item (\actualUC.2) - Modifica della regione dell'indirizzo di consegna;
-		\item (\actualUC.3) - Modifica della provincia dell'indirizzo di consegna;
-		\item (\actualUC.4) - Modifica del comune dell'indirizzo di consegna;
-		\item (\actualUC.5) - Modifica della via dell'indirizzo di consegna;
-		\item (\actualUC.6) - Modifica del CAP dell'indirizzo di consegna.
+		\item (\actualUC.2) - Modifica del comune dell'indirizzo di consegna;
+		\item (\actualUC.3) - Modifica della via dell'indirizzo di consegna;
+		\item (\actualUC.4) - Modifica del CAP dell'indirizzo di consegna.
     \end{itemize}
     In seguito ci sarà la conferma delle modifiche compiute e i dati dell'indirizzo di consegna verranno modificati.
     \item \textbf{Scenari alternativi}:
@@ -196,66 +148,6 @@ L'acquirente vuole modificare lo stato dell'indirizzo di consegna.
     \item \textbf{Scenari alternativi}:
     \begin{enumerate}[label=\lett]
         \item L'acquirente non modifica lo stato dell'indirizzo di consegna attuale e, per questo, non verrà modificato.
-    \end{enumerate}
-\end{itemize}
-
-\subUC{Modifica della regione dell'indirizzo di consegna}
-L'acquirente vuole modificare la regione dell'indirizzo di consegna.
-\begin{itemize}
-    \item \textbf{Attori primari:} acquirente;
-    \item \textbf{Precondizione:} l'acquirente si trova nella schermata di modifica di un indirizzo di consegna precedentemente inserito;
-    \item \textbf{Postcondizione:} l'acquirente ha modificato la regione dell'indirizzo di consegna;
-    \item \textbf{Scenario principale:} l'acquirente modifica correttamente la regione dell'indirizzo di consegna attraverso le seguenti azioni:
-    \begin{itemize}
-        \item Si posiziona nel campo dove è presente l'attuale regione dell'indirizzo di consegna;
-        \item Modifica la regione dell'indirizzo di consegna.
-    \end{itemize}
-    \item \textbf{Scenari alternativi}:
-    \begin{enumerate}[label=\lett]
-        \item L'acquirente non modifica la regione dell'indirizzo di consegna attuale e, per questo, non verrà modificata.
-    \end{enumerate}
-    \item \textbf{Estensioni:}
-    \begin{enumerate}[label=\lett]
-        \item L'acquirente elimina l'attuale regione dell'indirizzo di consegna e non ne inserisce una nuova. In questo caso:
-        \begin{itemize}
-            \item (UC) - Viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
-            \item Verrà impedita la modifica dell'indirizzo di consegna.
-        \end{itemize}
-        \item L'acquirente modifica la regione dell'indirizzo di consegna inserendo dei caratteri non alfabetici. In questo caso:
-        \begin{itemize}
-            \item (UC) - Viene mostrato il messaggio d'errore caratteri non alfabetici non permessi;
-            \item Verrà impedita la modifica dell'indirizzo di consegna.
-        \end{itemize}
-    \end{enumerate}
-\end{itemize}
-
-\subUC{Modifica della provincia dell'indirizzo di consegna}
-L'acquirente vuole modificare la provincia dell'indirizzo di consegna.
-\begin{itemize}
-    \item \textbf{Attori primari:} acquirente;
-    \item \textbf{Precondizione:} l'acquirente si trova nella schermata di modifica di un indirizzo di consegna precedentemente inserito;
-    \item \textbf{Postcondizione:} l'acquirente ha modificato la provincia dell'indirizzo di consegna;
-    \item \textbf{Scenario principale:} l'acquirente modifica correttamente la provincia dell'indirizzo di consegna attraverso le seguenti azioni:
-    \begin{itemize}
-        \item Si posiziona nel campo dove è presente l'attuale provincia dell'indirizzo di consegna;
-        \item Modifica la provincia dell'indirizzo di consegna.
-    \end{itemize}
-    \item \textbf{Scenari alternativi}:
-    \begin{enumerate}[label=\lett]
-        \item L'acquirente non modifica la provincia dell'indirizzo di consegna attuale e, per questo, non verrà modificata.
-    \end{enumerate}
-    \item \textbf{Estensioni:}
-    \begin{enumerate}[label=\lett]
-        \item L'acquirente elimina l'attuale provincia dell'indirizzo di consegna e non ne inserisce una nuova. In questo caso:
-        \begin{itemize}
-            \item (UC) - Viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
-            \item Verrà impedita la modifica dell'indirizzo di consegna.
-        \end{itemize}
-        \item L'acquirente modifica la provincia dell'indirizzo di consegna inserendo dei caratteri non alfabetici. In questo caso:
-        \begin{itemize}
-            \item (UC) - Viene mostrato il messaggio d'errore caratteri non alfabetici non permessi;
-            \item Verrà impedita la modifica dell'indirizzo di consegna.
-        \end{itemize}
     \end{enumerate}
 \end{itemize}
 
@@ -336,7 +228,7 @@ L'acquirente vuole modificare il CAP dell'indirizzo di consegna.
             \item (UC) - Viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
             \item Verrà impedita la modifica dell'indirizzo di consegna.
         \end{itemize}
-        \item L'acquirente modifica il CAP in modo tale che non sia composto da esattamente 5 numeri compresi tra 0 e 9. In questo caso:
+        \item L'acquirente modifica il CAP in modo tale che non sia composto da esattamente 5 numeri. In questo caso:
         \begin{itemize}
             \item (UC) - Viene mostrato il messaggio d'errore CAP non valido;
             \item Verrà impedita la modifica dell'indirizzo di consegna.
@@ -357,10 +249,10 @@ L'acquirente vuole eliminare un indirizzo di consegna precedentemente inserito.
         \item Seleziona l'indirizzo di consegna da eliminare;
         \item Confermare l'eliminazione della carta.
     \end{itemize}
+    Se l'indirizzo di consegna eliminato è quella attualmente selezionato per la consegna e ci sono altri indirizzi di consegna inseriti, allora verrà selezionato per il proseguimento della consegna l'indirizzo successivo. Se viene eliminato l'ultimo indirizzo di consegna e quindi non esiste un indirizzo successivo, verrà selezionato il primo;
     \item \textbf{Scenari alternativi:}
     \begin{enumerate}[label=\lett]
         \item L'acquirente non conferma l'eliminazione dell'indirizzo di consegna e, per questo motivo, non verrà eliminato;
-        \item Se l'indirizzo di consegna eliminato è quella attualmente selezionato per la consegna e ci sono altri indirizzi di consegna inseriti, allora verrà selezionato per il proseguimento della consegna l'indirizzo successivo. Se viene eliminato l'ultimo indirizzo di consegna e quindi non esiste un indirizzo successivo, verrà selezionato il primo;
         \item Se l'indirizzo di consegna eliminato dall'acquirente è l'unico attualmente inserito, allora verrà mostrato un messaggio con l'obbligo di dover inserire un nuovo indirizzo di consegna per poter proseguire con il checkout.
     \end{enumerate}
 \end{itemize}
