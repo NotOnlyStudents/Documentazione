@@ -1,13 +1,20 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \UC{Aggiunta nuova categoria}
 Il venditore aggiunge una nuova categoria.
 \begin{itemize}
-    \item \textbf{Attori Primari:} Venditore.
-    \item \textbf{Precondizione:} Il venditore si trova nella vista di visualizzazione di tutte le categorie e seleziona l'azione di aggiunta di una nuova categoria.
-    \item \textbf{Postcondizione:} La categoria inserita viene creata.
-    \item \textbf{Scenario Principale:} Il venditore si trova nella vista di visualizzazione di tutte le categorie e seleziona l'azione di aggiunta di una nuova categoria. Per fare ciò dovrà (\actualUC.1) inserire il nome della nuova categoria e dare la conferma della creazione.
-    \item \textbf{Scenario Alternativo:} Il venditore non da la conferma alla creazione della categoria e non verrà aggiunta.
+    \item \textbf{Attori primari:} venditore;
+    \item \textbf{Precondizione:} il venditore si trova nella schermata di amministrazione delle categorie e ha selezionato la funzionalità di aggiunta di una nuova categoria;
+    \item \textbf{Postcondizione:} la categoria inserita è stata creata;
+    \item \textbf{Scenario principale:}
+    \begin{itemize}
+    	\item Il venditore si trova nella schermata di amministrazione delle categorie;
+    	\item Il venditore seleziona la funzionalità per aggiungere una nuova categoria di prodotti;
+    	\item (UC) - Inserimento nome della nuova categoria;
+    	\item Il venditore conferma la creazione della categoria di prodotti.
+    \end{itemize} 
+    \item \textbf{Scenari alternativi:}
+    \begin{enumerate}[label=\lett]
+    	\item Il venditore non conferma la creazione della categoria e di conseguenza questa non verrà aggiunta.
+    \end{enumerate} 
 \end{itemize}
 
 \resetSubUC
@@ -15,38 +22,42 @@ Il venditore aggiunge una nuova categoria.
 \subUC{Inserimento nome della categoria}
 Il venditore inserisce il nome della nuova categoria da aggiungere.
 \begin{itemize}
-    \item \textbf{Attori Primari:} Venditore.
-    \item \textbf{Precondizione:} Il venditore sta eseguendo l'azione di aggiunta di una nuova categoria.
-    \item \textbf{Postcondizione:} Il venditore ha inserito il nome della categoria.
-    \item \textbf{Scenario Principale:} Il venditore sta eseguendo l'azione di aggiunta di una nuova categoria e inserisce un nome, per la categoria, che non è già utilizzato.
-    \item \textbf{Scenario Alternativo 1:} Il venditore non inserisce alcun nome per la nuova categoria. In questo caso:
-    \begin{itemize}
-        \item (UC) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito.
-        \item Verrà impedita l'aggiunta della nuova categoria.
-    \end{itemize}
-    \item \textbf{Scenario Alternativo 2:} Il venditore inserisce un nome per la nuova categoria, che è già assegnato ad un'altra categoria. In questo caso:
-    \begin{itemize}
-        \item (UC) - Verrà visualizzato il messaggio di errore nome per la categoria già utilizzato.
-        \item Verrà impedita l'aggiunta della nuova categoria.
-    \end{itemize}
+    \item \textbf{Attori primari:} venditore;
+    \item \textbf{Precondizione:} il venditore sta eseguendo l'azione di aggiunta di una nuova categoria;
+    \item \textbf{Postcondizione:} il venditore ha inserito il nome della categoria;
+    \item \textbf{Scenario principale:} il venditore compila il modulo per l'aggiunta della nuova categoria inserendo un nome;
     \item \textbf{Estensioni:}
-    \begin{itemize}
-        \item (UC) - Visualizzazione messaggio campo dati obbligatorio non inserito.
-        \item (UC) - Visualizzazione messaggio nome per la categoria già utilizzato.
-    \end{itemize}
+    \begin{enumerate}[label=\lett]
+    	\item Il venditore non inserisce alcun nome per la nuova categoria. In questo caso:
+    	\begin{itemize}
+    		\item (UC) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito;
+    		\item Viene fornita al venditore la possibilità di modificare il nome della nuova categoria di prodotti.
+    	\end{itemize}
+    	\item Il venditore inserisce un nome per la nuova categoria che è già assegnato ad un'altra categoria. In questo caso:
+    	\begin{itemize}
+    		\item (UC) - Verrà visualizzato il messaggio di errore nome per la categoria già utilizzato;
+    		\item Viene fornita al venditore la possibilità di modificare il nome della nuova categoria di prodotti.
+    	\end{itemize}
+    \end{enumerate}
 \end{itemize}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \UC{Modifica di una categoria}
 Il venditore modifica una categoria precedentemente inserita.
 \begin{itemize}
-    \item \textbf{Attori Primari:} Venditore.
-    \item \textbf{Precondizione:} Il venditore si trova nella vista di visualizzazione di tutte le categorie e seleziona l'azione di modifica di una categoria precedentemente inserita.
-    \item \textbf{Postcondizione:} La categoria viene modificata.
-    \item \textbf{Scenario Principale:} Il venditore si trova nella vista di visualizzazione di tutte le categorie e seleziona l'azione di modifica di una categoria precedentemente inserita. Per fare ciò dovrà (\actualUC.1) modificare il nome della categoria e dare la conferma della modifica.
-    \item \textbf{Scenario Alternativo:} Il venditore non da la conferma alle modifiche effettuate e la categoria non verrà modificata.
+    \item \textbf{Attori primari:} venditore;
+    \item \textbf{Precondizione:} il venditore si trova nella schermata di amministrazione delle categorie e ha selezionato la funzionalità di modifica di una categoria precedentemente inserita;
+    \item \textbf{Postcondizione:} la categoria selezionata viene modificata;
+    \item \textbf{Scenario principale:}
+    \begin{itemize}
+    	\item Il venditore si trova nella schermata di amministrazione delle categorie;
+    	\item Il venditore seleziona la funzionalità per modificare una categoria di prodotti;
+    	\item (UC) - Modifica nome della categoria;
+    	\item Il venditore conferma la modifica della categoria di prodotti.
+    \end{itemize}
+    \item \textbf{Scenari alternativi:} 
+    \begin{enumerate}[label=\lett]
+    	\item Il venditore non da la conferma alle modifiche effettuate e di conseguenza la categoria non verrà modificata.
+    \end{enumerate}
 \end{itemize}
 
 \resetSubUC
@@ -54,39 +65,55 @@ Il venditore modifica una categoria precedentemente inserita.
 \subUC{Modifica nome della categoria}
 Il venditore modifica il nome attuale di una categoria precedentemente inserita.
 \begin{itemize}
-    \item \textbf{Attori Primari:} Venditore.
-    \item \textbf{Precondizione:} Il venditore sta eseguendo l'azione di modifica di una categoria.
-    \item \textbf{Postcondizione:} Il venditore ha modificato il nome della categoria.
-    \item \textbf{Scenario Principale:} Il venditore sta eseguendo l'azione di modifica di una categoria e modifica il nome della categoria attraverso le seguenti azioni:
-    \begin{itemize}
-        \item Si posiziona nel campo di inserimento del nome dove è presente quello attualmente utilizzato.
-        \item Inserisce il nome nuovo o modifica quello attuale.
-    \end{itemize}
-    \item \textbf{Scenario Alternativo 1:} Il venditore elimina il nome utilizzato in precedenza non inserendone uno nuovo. In questo caso:
-    \begin{itemize}
-        \item (UC) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito.
-        \item Verrà impedita la modifica della nuova categoria.
-    \end{itemize}
-    \item \textbf{Scenario Alternativo 2:} Il venditore modifica il nome attuale della categoria, con uno già assegnato ad un'altra categoria. In questo caso:
-    \begin{itemize}
-        \item (UC) - Verrà visualizzato il messaggio di errore nome per la categoria già utilizzato.
-        \item Verrà impedita la modifica della nuova categoria.
-    \end{itemize}
+    \item \textbf{Attori primari:} venditore;
+    \item \textbf{Precondizione:} il venditore sta eseguendo l'azione di modifica di una categoria;
+    \item \textbf{Postcondizione:} il venditore ha modificato il nome della categoria;
+    \item \textbf{Scenario principale:} il venditore modifica la categoria inserendo un nuovo nome o modificando quello attuale;
     \item \textbf{Estensioni:}
-    \begin{itemize}
-        \item (UC) - Visualizzazione messaggio campo dati obbligatorio non inserito.
-        \item (UC) - Visualizzazione messaggio nome per la categoria già utilizzato.
-    \end{itemize}
+    \begin{enumerate}[label=\lett]
+    	\item Il venditore elimina il nome utilizzato in precedenza non inserendone uno nuovo. In questo caso:
+    	\begin{itemize}
+    		\item (UC) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito;
+    		\item Viene fornita al venditore la possibilità di modificare il nome della nuova categoria di prodotti.
+    	\end{itemize}
+    	\item Il venditore modifica il nome della categoria con uno che è già assegnato ad un'altra categoria. In questo caso:
+		\begin{itemize}
+			\item (UC) - Verrà visualizzato il messaggio di errore nome per la categoria già utilizzato;
+			\item Viene fornita al venditore la possibilità di modificare il nome della nuova categoria di prodotti.
+		\end{itemize}
+    \end{enumerate}
 \end{itemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \UC{Eliminazione di una categoria}
 Il venditore elimina una categoria precedentemente inserita.
 \begin{itemize}
-    \item \textbf{Attori Primari:} Venditore.
-    \item \textbf{Precondizione:} Il venditore si trova nella vista di visualizzazione di tutte le categorie e seleziona l'azione di eliminazione di una categoria precedentemente inserita.
-    \item \textbf{Postcondizione:} La categoria viene eliminata.
-    \item \textbf{Scenario Principale:} Il venditore si trova nella vista di visualizzazione di tutte le categorie e seleziona l'azione di eliminazione di una categoria. In seguito verrà mostrato un messaggio di conferma con la segnalazione della conseguente eliminazione anche nei prodotti facenti parte di quella specifica categoria. Dopo aver dato la conferma, la categoria verrà eliminata e rimossa anche da tutti i prodotti facenti parte di quella categoria.
-    \item \textbf{Scenario Alternativo:} Durante la visualizzazione del messaggio di conferma, il venditore non da il suo consenso per l'eliminazione e la categoria non verrà eliminata.
+    \item \textbf{Attori primari:} venditore;
+    \item \textbf{Precondizione:} il venditore si trova nella schermata di amministrazione delle categorie e ha selezionato la funzionalità di eliminazione di una categoria precedentemente inserita;
+    \item \textbf{Postcondizione:} la categoria interessata viene eliminata;
+    \item \textbf{Scenario principale:}
+    \begin{itemize}
+    	\item Il venditore si trova nella schermata di amministrazione delle categorie;
+    	\item Il venditore seleziona la funzionalità per eliminare una categoria di prodotti;
+    	\item Il venditore conferma la rimozione della categoria di prodotti con la conseguente eliminazione anche nei prodotti appartenenti alla categoria indicata.
+    \end{itemize}
+    \item \textbf{Scenari alternativi:}
+    \begin{enumerate}[label=\lett]
+    	\item Durante la visualizzazione del messaggio di conferma, il venditore non da il suo consenso per l'eliminazione e di conseguenza la categoria non verrà eliminata.
+    \end{enumerate}
+\end{itemize}
+
+\UC{Ricerca categoria} 
+Il venditore può cercare una categoria dalla propria schermata di amministrazione delle categorie.
+\begin{itemize}
+	\item \textbf{Attori primari:} venditore;
+	\item \textbf{Precondizione:} il venditore ha selezionato la funzionalità per la ricerca;
+	\item \textbf{Postcondizione:} il venditore visualizza le categorie che contengono nel nome almeno una delle parole per le quali si è svolta la ricerca;
+	\item \textbf{Scenario principale:} il venditore ha selezionato la funzione prevista per la ricerca. Dopo aver inserito le parole per le quali individuare la categoria, avvia la ricerca e viene aggiornata la schermata di amministrazione delle categorie la quale visualizzerà tutte le categorie che hanno almeno una delle parole indicate nel nome;
+	\item \textbf{Estensioni:}
+	\begin{enumerate}[label=\lett]
+		\item Il venditore ha svolto una ricerca che non ha prodotto alcun risultato. In questo caso:
+		\begin{itemize}
+			\item (UC) - Viene visualizzato il messaggio di ricerca senza alcun risultato.
+		\end{itemize}
+	\end{enumerate}
 \end{itemize}
