@@ -50,11 +50,6 @@ L'acquirente inserisce l'intestatario della nuova carta da aggiungere.
             \item (UC) - Viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
             \item Verrà impedita l'aggiunta della carta.
         \end{itemize}
-        \item L'acquirente inserisce dei caratteri non alfabetici. In questo caso:
-        \begin{itemize}
-            \item (UC) - Viene mostrato il messaggio d'errore caratteri non alfabetici non permessi;
-            \item Verrà impedita l'aggiunta della carta.
-        \end{itemize}
     \end{enumerate}
 \end{itemize}
 
@@ -72,7 +67,7 @@ L'acquirente inserisce il numero della nuova carta da aggiungere.
             \item (UC) - Viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
             \item Verrà impedita l'aggiunta della carta.
         \end{itemize}
-        \item L'acquirente non inserisce esattamente 16 numeri compresi tra 0 e 9 come numero della carta. In questo caso:
+        \item L'acquirente non inserisce esattamente 16 numeri come numero della carta. In questo caso:
         \begin{itemize}
             \item (UC) - Viene mostrato il messaggio d'errore numero della carta non valido;
             \item Verrà impedita l'aggiunta della carta.
@@ -94,7 +89,7 @@ L'acquirente inserisce il CVV della nuova carta da aggiungere.
             \item (UC) - Viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
             \item Verrà impedita l'aggiunta della carta.
         \end{itemize}
-        \item L'acquirente non inserisce esattamente 3 numeri compresi tra 0 e 9 come CVV della carta. In questo caso:
+        \item L'acquirente non inserisce esattamente 3 numeri come CVV della carta. In questo caso:
         \begin{itemize}
             \item (UC) - Viene mostrato il messaggio d'errore CVV della carta non valido;
             \item Verrà impedita l'aggiunta della carta.
@@ -127,7 +122,7 @@ L'acquirente inserisce la data di scadenza della nuova carta da aggiungere.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \UC{Modifica carta per il pagamento}
-L'acquirente è nella fase del checkout e vuole modificare una carta precedentemente inserita da utilizzare per il pagamento.
+L'acquirente può modificare una carta precedentemente inserita da utilizzare per il pagamento.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
     \item \textbf{Precondizione:} l'acquirente è nella fase del checkout e ha selezionato l'azione di modifica di una carta precedentemente inserita;
@@ -170,11 +165,6 @@ L'acquirente vuole modificare l'intestatario di una carta precedentemente inseri
             \item (UC) - Viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
             \item Verrà impedita la modifica della carta.
         \end{itemize}
-        \item L'acquirente modifica l'intestatario della carta inserendo dei caratteri non alfabetici. In questo caso:
-        \begin{itemize}
-            \item (UC) - Viene mostrato il messaggio d'errore caratteri non alfabetici non permessi;
-            \item Verrà impedita la modifica della carta.
-        \end{itemize}
     \end{enumerate}
 \end{itemize}
 
@@ -200,7 +190,7 @@ L'acquirente vuole modificare il numero di una carta precedentemente inserita.
             \item (UC) - Viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
             \item Verrà impedita la modifica della carta.
         \end{itemize}
-        \item L'acquirente modifica l'attuale numero della carta in modo tale che non ci siano 16 numeri compresi tra 0 e 9 come numero della carta. In questo caso:
+        \item L'acquirente modifica l'attuale numero della carta in modo tale che non ci siano 16 numeri come numero della carta. In questo caso:
         \begin{itemize}
             \item (UC) - Viene mostrato il messaggio d'errore numero della carta non valido;
             \item Verrà impedita la modifica della carta.
@@ -230,7 +220,7 @@ L'acquirente vuole modificare il CVV di una carta precedentemente inserita.
             \item (UC) - Viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
             \item Verrà impedita la modifica della carta.
         \end{itemize}
-        \item L'acquirente modifica il CVV della carta in modo tale che non ci siano esattamente 3 numeri compresi tra 0 e 9 come CVV della carta. In questo caso:
+        \item L'acquirente modifica il CVV della carta in modo tale che non ci siano esattamente 3 numeri come CVV della carta. In questo caso:
         \begin{itemize}
             \item (UC) - Viene mostrato il messaggio d'errore CVV della carta non valido;
             \item Verrà impedita la modifica della carta.
@@ -277,14 +267,14 @@ L'acquirente elimina una carta per il pagamento precedentemente inserita.
     \item \textbf{Precondizione:} l'acquirente è nella fase di checkout;
     \item \textbf{Postcondizione:} l'acquirente ha eliminato la carta per il pagamento desiderata;
     \item \textbf{Scenario principale:} l'acquirente è nella fase di checkout e vuole eliminare una carta per il pagamento precedentemente inserita. Per poterlo fare dovrà svolgere le seguenti azioni:
-        \begin{itemize}
-            \item Seleziona la carta da eliminare;
-            \item Confermare l'eliminazione della carta.
-        \end{itemize}
+    \begin{itemize}
+        \item Seleziona la carta da eliminare;
+        \item Confermare l'eliminazione della carta.
+    \end{itemize}
+    Se la carta eliminata è quella attualmente selezionata per il pagamento e ci sono altre carte inserite, allora verrà selezionata per il proseguimento del pagamento la carta successiva. Se viene eliminata l'ultima carta e quindi non esiste una carta successiva, verrà selezionata la prima;
     \item \textbf{Scenari alternativi:}
     \begin{enumerate}[label=\lett]
         \item L'acquirente non conferma l'eliminazione della carta e, per questo motivo, non verrà eliminata;
-        \item Se la carta eliminata è quella attualmente selezionata per il pagamento e ci sono altre carte inserite, allora verrà selezionata per il proseguimento del pagamento la carta successiva. Se viene eliminata l'ultima carta e quindi non esiste una carta successiva, verrà selezionata la prima;
         \item Se la carta eliminata dall'acquirente è l'unica attualmente inserita, allora verrà mostrato un messaggio con l'obbligo di dover inserire una nuova carta per poter proseguire con il checkout.
     \end{enumerate}
 \end{itemize}

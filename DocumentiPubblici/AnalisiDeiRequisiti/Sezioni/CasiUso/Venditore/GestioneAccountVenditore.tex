@@ -9,7 +9,7 @@ Il venditore può modificare le sue informazioni personali.
     \begin{itemize}
     	\item (UC) - Modifica del nome;
     	\item (UC) - Modifica del cognome;
-        \item (UC) - Modifica dell'indirizzo email;
+        \item (UC) - Modifica dell'indirizzo e-mail;
         \item (UC) - Modifica della password;
         \item (UC) - Modifica del logo;
         \item (UC) - Rimozione del logo;
@@ -29,10 +29,10 @@ Il venditore può modificare le sue informazioni personali.
     		\item (UC) - Visualizzazione messaggio di errore in caso di password e password di conferma diverse;
     		\item Il venditore può modificare le password inserite.
     	\end{itemize}
-    	\item Il venditore cambia il proprio indirizzo email con un'email già presente nella piattaforma e l'identity manager lo segnala. In questo caso:
+    	\item Il venditore cambia il proprio indirizzo e-mail con un'e-mail già presente nella piattaforma e l'identity manager lo segnala. In questo caso:
     	\begin{itemize}
-    		\item (UC) - Visualizzazione messaggio di errore in caso di cambio email con una già utilizzata nella piattaforma;
-    		\item Viene fornita al venditore la possibilità di modificare il proprio indirizzo email inserito.
+    		\item (UC) - Visualizzazione messaggio di errore in caso di cambio e-mail con una già utilizzata nella piattaforma;
+    		\item Viene fornita al venditore la possibilità di modificare il proprio indirizzo e-mail inserito.
     	\end{itemize}
     \end{enumerate}
 \end{itemize}
@@ -83,29 +83,29 @@ Il venditore vuole modificare il proprio cognome.
 	\end{enumerate} 
 \end{itemize}
 
-\subUC{Modifica dell'indirizzo email}
-Il venditore vuole modificare la propria email.
+\subUC{Modifica dell'indirizzo e-mail}
+Il venditore vuole modificare la propria e-mail.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
     \item \textbf{Attori secondari:} identity manager;
     \item \textbf{Precondizione:} il venditore si trova nella schermata di modifica delle proprie informazioni;
-    \item \textbf{Postcondizione:} il venditore ha aggiornato il suo indirizzo email;
-    \item \textbf{Scenario principale:} il venditore modifica il proprio indirizzo email;
+    \item \textbf{Postcondizione:} il venditore ha aggiornato il suo indirizzo e-mail;
+    \item \textbf{Scenario principale:} il venditore modifica il proprio indirizzo e-mail;
     \item \textbf{Scenari alternativi:}
     \begin{enumerate}[label=\lett]
-    	\item Il venditore non modifica l'attuale indirizzo email utilizzato e di conseguenza non cambierà.
+    	\item Il venditore non modifica l'attuale indirizzo e-mail utilizzato e di conseguenza non cambierà.
     \end{enumerate}
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
-    	\item Il venditore ha inserito un indirizzo email e l'identity manager segnala che non è nel formato non corretto, in questo caso:
+    	\item Il venditore ha inserito un indirizzo e-mail e l'identity manager segnala che non è nel formato non corretto, in questo caso:
     	\begin{itemize}
-    		\item (UC) - Viene mostrato un messaggio d'errore indirizzo email non rispetta il formato;
-    		\item Viene fornita al venditore la possibilità di modificare l'indirizzo email inserito.
+    		\item (UC) - Viene mostrato un messaggio d'errore indirizzo e-mail non rispetta il formato;
+    		\item Viene fornita al venditore la possibilità di modificare l'indirizzo e-mail inserito.
     	\end{itemize}
-	    \item Il venditore non inserisce l'email e l'identity manager controlla il campo dati che risulta essere vuoto, in questo caso:
+	    \item Il venditore non inserisce l'e-mail e l'identity manager controlla il campo dati che risulta essere vuoto, in questo caso:
 	    \begin{itemize}
 	    	\item (UC) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
-	    	\item Viene fornita al venditore la possibilità di inserire un indirizzo email.
+	    	\item Viene fornita al venditore la possibilità di inserire un indirizzo e-mail.
 	    \end{itemize}
     \end{enumerate} 
 \end{itemize}
