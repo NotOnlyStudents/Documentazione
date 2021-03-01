@@ -110,24 +110,6 @@ Visualizzazione messaggio di errore che segnala all'attore l'inserimento di una 
     \item \textbf{Scenario principale:} l'attore ha inserito una data iniziale maggiore di quella finale e viene informato dell'impossibilità di inserire una data iniziale maggiore di quella finale.
 \end{itemize}
 
-\UC{Visualizzazione messaggio nessun ordine effettuato nell'arco temporale impostato}
-Visualizzazione di un messaggio il quale segnala all'acquirente che non è stato effettuato alcun ordine nell'arco temporale impostato.
-\begin{itemize}
-    \item \textbf{Attori primari:} acquirente;
-    \item \textbf{Precondizione:} l'acquirente ha inserito un intervallo temporale nel quale non è stato effettuato alcun ordine;
-    \item \textbf{Postcondizione:} all'acquirente verrà mostrato un messaggio il quale lo informa della non effettuazione di alcun ordine nell'arco temporale impostato;
-    \item \textbf{Scenario principale:} l'acquirente ha inserito un intervallo temporale nel quale non è stato effettuato alcun ordine e viene informato della non effettuazione di alcun ordine nell'arco temporale impostato.
-\end{itemize}
-
-\UC{Visualizzazione messaggio nessun ordine effettuato a cui corrisponde il codice inserito}
-Visualizzazione di un messaggio il quale segnala all'acquirente che non è stato effettuato alcun ordine a cui corrisponde il codice che ha inserito.
-\begin{itemize}
-    \item \textbf{Attori primari:} acquirente;
-    \item \textbf{Precondizione:} l'acquirente ha inserito un codice a cui non corrisponde alcun ordine;
-    \item \textbf{Postcondizione:} all'acquirente verrà mostrato un messaggio il quale lo informa della non effettuazione di alcun ordine a cui corrisponde il codice che ha inserito;
-    \item \textbf{Scenario principale:} l'acquirente ha inserito un codice a cui non corrisponde alcun ordine e viene informato della non effettuazione di alcun ordine a cui corrisponde il codice.
-\end{itemize}
-
 % Estensioni PDP
 \UC{Visualizzazione messaggio d'errore quantità del prodotto non valida}
 Visualizzazione messaggio di errore che segnala all'acquirente o all'utente non autenticato che la quantità di prodotto inserita è minore o uguale a zero.
@@ -167,22 +149,22 @@ Visualizzazione messaggio di errore il quale segnala al venditore che il prezzo 
     \item \textbf{Scenario principale:} il venditore inserisce un prezzo minore o uguale a zero e viene informato dell'inserimento di un prezzo minore o uguale a zero.
 \end{itemize}
 
-\UC{Visualizzazione messaggio di errore in caso di quantità minore o uguale a zero}
-Visualizzazione messaggio di errore che segnala al venditore che la quantità del prodotto inserita è minore o uguale a zero.
+\UC{Visualizzazione messaggio di errore in caso di quantità minore a zero}
+Visualizzazione messaggio di errore che segnala al venditore che la quantità del prodotto inserita è minore a zero.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
-    \item \textbf{Precondizione:} il venditore inserisce una quantità del prodotto minore o uguale a zero;
-    \item \textbf{Postcondizione:} al venditore viene mostrato un messaggio il quale lo avvisa che la quantità del prodotto inserita è minore o uguale a zero;
-    \item \textbf{Scenario principale:} il venditore inserisce una quantità del prodotto minore o uguale a zero e viene informato dell'inserimento di una quantità minore o uguale a zero.
+    \item \textbf{Precondizione:} il venditore inserisce una quantità del prodotto minore a zero;
+    \item \textbf{Postcondizione:} al venditore viene mostrato un messaggio il quale lo avvisa che la quantità del prodotto inserita è minore a zero;
+    \item \textbf{Scenario principale:} il venditore inserisce una quantità del prodotto minore a zero e viene informato dell'inserimento di una quantità minore o uguale a zero.
 \end{itemize}
 
-\UC{Visualizzazione messaggio di errore in caso di sconto minore di zero}
-Visualizzazione messaggio di errore il quale segnala al venditore che lo sconto inserito è minore di zero.
+\UC{Visualizzazione messaggio di errore in caso di sconto minore di 0\%}
+Visualizzazione messaggio di errore il quale segnala al venditore che lo sconto inserito è minore di 0\%.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
-    \item \textbf{Precondizione:} il venditore inserisce uno sconto minore di zero;
-    \item \textbf{Postcondizione:} al venditore viene mostrato un messaggio il quale lo avvisa che lo sconto appena inserito è minore di zero;
-    \item \textbf{Scenario principale:} il venditore inserisce uno sconto minore di zero e viene informato dell'inserimento di uno sconto minore di zero.
+    \item \textbf{Precondizione:} il venditore inserisce uno sconto minore di 0\%;
+    \item \textbf{Postcondizione:} al venditore viene mostrato un messaggio il quale lo avvisa che lo sconto appena inserito è minore di 0\%;
+    \item \textbf{Scenario principale:} il venditore inserisce uno sconto minore di 0\% e viene informato dell'inserimento di uno sconto minore di 0\%.
 \end{itemize}
 
 \UC{Visualizzazione messaggio di errore in caso di sconto maggiore di 100\%}
@@ -213,33 +195,13 @@ Visualizzazione messaggio di errore il quale segnala al venditore che non è sta
 \end{itemize}
 
 % Estensioni Categoria
-\UC{Visualizzazione messaggio nome per la categoria già utilizzato}
+\UC{Visualizzazione messaggio di errore nome per la categoria già utilizzato}
 Visualizzazione messaggio di errore il quale segnala al venditore che sta cercando di assegnare ad una categoria un nome già utilizzato da un'altra.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
     \item \textbf{Precondizione:} il venditore vuole assegnare ad una categoria un nome già utilizzato da un'altra categoria;
     \item \textbf{Postcondizione:} al venditore viene mostrato un messaggio il quale lo avvisa che il nome che sta cercando di assegnare ad una categoria è già in uso;
     \item \textbf{Scenario principale:} il venditore vuole assegnare ad una categoria un nome già utilizzato da un'altra categoria e viene informato dell'impossibilità di assegnare ad una categoria un nome già utilizzato da un'altra categoria.
-\end{itemize}
-
-% Estensioni dashboard
-
-\UC{Visualizzazione messaggio di ricerca senza alcun risultato}
-Nel caso in cui la ricerca del prodotto non dia risultati verrà visualizzato un opportuno messaggio.
-\begin{itemize}
-	\item \textbf{Attori primari:} acquirente o utente non autenticato;
-	\item \textbf{Precondizione:} l'attore ha svolto una ricerca di un prodotto che non ha dato alcun risultato;
-	\item \textbf{Postcondizione:} all'attore verrà mostrato un messaggio il quale lo informa che la ricerca appena effettuata non ha prodotto alcun risultato;
-	\item \textbf{Scenario principale:} l'attore effettua una ricerca che non ha prodotto alcun risultato e viene informato del mancato risultato della ricerca appena effettuata.
-\end{itemize}
-
-\UC{Visualizzazione messaggio in caso di prodotto selezionato per l'eliminazione ma non ancora evaso in alcuni ordini}
-Visualizzazione messaggio il quale segnala al venditore che il prodotto che vuole eliminare è presente all'interno di un ordine che non è ancora stato evaso.
-\begin{itemize}
-    \item \textbf{Attori primari:} venditore;
-    \item \textbf{Precondizione:} il venditore sta cercando di eliminare un prodotto all'interno in un ordine che non è stato ancora evaso;
-    \item \textbf{Postcondizione:} al venditore viene mostrato un messaggio il quale lo informa che il prodotto non può essere eliminato perché è presente in un ordine che non è stato ancora evaso;
-    \item \textbf{Scenario principale:} il venditore sta cercando di eliminare un prodotto presente in un ordine che non è stato ancora evaso, viene quindi informato che per questo motivo non è possibile procedere con l'eliminazione.
 \end{itemize}
 
 % Estensioni carta per il pagamento
@@ -249,7 +211,7 @@ Nel caso in cui venga inserito un numero di una carta non valido, verrà segnala
 	\item \textbf{Attori primari:} acquirente;
 	\item \textbf{Precondizione:} l'acquirente ha inserito un numero di una carta non valido;
 	\item \textbf{Postcondizione:} all'acquirente verrà mostrato un messaggio il quale lo informa della non validità del numero della carta;
-	\item \textbf{Scenario principale:} l'attore non ha inserito esattamente 16 numeri compresi tra 0 e 9 come numero della carta e verrà avvisato della non validità del numero della carta.
+	\item \textbf{Scenario principale:} l'attore non ha inserito esattamente 16 numeri come numero della carta e verrà avvisato della non validità del numero della carta.
 \end{itemize}
 
 \UC{Visualizzazione messaggio d'errore CVV della carta non valido}
@@ -258,7 +220,7 @@ Nel caso in cui venga inserito un CVV di una carta non valido, verrà segnalato 
 	\item \textbf{Attori primari:} acquirente;
 	\item \textbf{Precondizione:} l'acquirente ha inserito un CVV di una carta non valido;
 	\item \textbf{Postcondizione:} all'acquirente verrà mostrato un messaggio il quale lo informa della non validità del CVV della carta;
-	\item \textbf{Scenario principale:} l'attore non ha inserito esattamente 3 numeri compresi tra 0 e 9 come CVV della carta e verrà avvisato della non validità del CVV della carta.
+	\item \textbf{Scenario principale:} l'attore non ha inserito esattamente 3 numeri come CVV della carta e verrà avvisato della non validità del CVV della carta.
 \end{itemize}
 
 \UC{Visualizzazione messaggio d'errore data di scandenza non valida}
@@ -277,7 +239,7 @@ Nel caso in cui venga inserito un CAP per un indirizzo di consegna non valido, v
 	\item \textbf{Attori primari:} acquirente;
 	\item \textbf{Precondizione:} l'acquirente ha inserito un CAP per un indirizzo di consegna non valido;
 	\item \textbf{Postcondizione:} all'acquirente verrà mostrato un messaggio il quale lo informa della non validità del CAP inserito;
-	\item \textbf{Scenario principale:} l'attore non ha inserito un CAP composto da esattamente 5 numeri compresi tra 0 e 9 e verrà avvisato della non validità del CAP.
+	\item \textbf{Scenario principale:} l'attore non ha inserito un CAP composto da esattamente 5 numeri e verrà avvisato della non validità del CAP.
 \end{itemize}
 
 % Estensioni stripe
