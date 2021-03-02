@@ -56,7 +56,7 @@ Il venditore modifica una categoria precedentemente inserita.
     \end{itemize}
     \item \textbf{Scenari alternativi:} 
     \begin{enumerate}[label=\lett]
-    	\item Il venditore non da la conferma alle modifiche effettuate e di conseguenza la categoria non verrà modificata.
+    	\item Il venditore non dà la conferma alle modifiche effettuate e di conseguenza la categoria non verrà modificata.
     \end{enumerate}
 \end{itemize}
 
@@ -109,11 +109,8 @@ Il venditore può cercare una categoria dalla propria schermata di amministrazio
 	\item \textbf{Precondizione:} il venditore ha selezionato la funzionalità per la ricerca;
 	\item \textbf{Postcondizione:} il venditore visualizza le categorie che contengono nel nome almeno una delle parole per le quali si è svolta la ricerca;
 	\item \textbf{Scenario principale:} il venditore ha selezionato la funzione prevista per la ricerca. Dopo aver inserito le parole per le quali individuare la categoria, avvia la ricerca e viene aggiornata la schermata di amministrazione delle categorie la quale visualizzerà tutte le categorie che hanno almeno una delle parole indicate nel nome;
-	\item \textbf{Estensioni:}
+	\item \textbf{Scenari alternativi:}
 	\begin{enumerate}[label=\lett]
-		\item Il venditore ha svolto una ricerca che non ha prodotto alcun risultato. In questo caso:
-		\begin{itemize}
-			\item (UC) - Viene visualizzato il messaggio di ricerca senza alcun risultato.
-		\end{itemize}
+		\item Il venditore ha svolto una ricerca che non ha trovato coincidenze con nessuna categoria. In questo caso la schermata di amministrazione delle categorie viene aggiornata mostrando nessun risultato trovato.
 	\end{enumerate}
 \end{itemize}

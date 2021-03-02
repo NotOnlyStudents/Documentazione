@@ -24,13 +24,12 @@ Il venditore aggiunge un nuovo prodotto alla piattaforma, così da poter essere 
 Il venditore inserisce il nome del prodotto da aggiungere.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
-    \item \textbf{Attori secondari:} identity manager;
     \item \textbf{Precondizione:} il venditore si trova nella schermata di aggiunta di un nuovo prodotto;
     \item \textbf{Postcondizione:} il venditore ha inserito il nome del prodotto;
     \item \textbf{Scenario principale:} il venditore aggiunge il nome del prodotto da inserire;
     \item \textbf{Estensioni:} 
     \begin{enumerate}[label=\lett]
-    	\item Il venditore non inserisce il nome del prodotto e l'identity manager controlla il campo dati che risulta essere vuoto. In questo caso:
+    	\item Il venditore non inserisce il nome del prodotto ed il campo dati risulta essere vuoto. In questo caso:
 	    \begin{itemize}
 	        \item (UC) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
 	        \item Viene data la possibilità al venditore di modificare il nome del nuovo prodotto inserito.
@@ -47,13 +46,12 @@ Il venditore inserisce il nome del prodotto da aggiungere.
 Il venditore inserisce la descrizione del prodotto da aggiungere.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
-    \item \textbf{Attori secondari:} identity manager;
     \item \textbf{Precondizione:} il venditore si trova nella schermata di aggiunta di un nuovo prodotto;
     \item \textbf{Postcondizione:} il venditore ha inserito la descrizione del prodotto;
     \item \textbf{Scenario principale:} il venditore aggiunge la descrizione del prodotto da inserire;
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
-    	\item Il venditore non inserisce la descrizione del prodotto e l'identity manager controlla il campo dati che risulta essere vuoto. In questo caso:
+    	\item Il venditore non inserisce la descrizione del prodotto ed il campo dati risulta essere vuoto. In questo caso:
     	\begin{itemize}
     		\item (UC) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
     		\item Viene fornita al venditore la possibilità di modificare la descrizione del nuovo prodotto inserito.
@@ -75,7 +73,7 @@ Il venditore inserisce le categorie del prodotto da aggiungere.
     \item \textbf{Scenario principale:} il venditore inserisce le categorie a cui fa parte il prodotto scegliendole dalla lista di categorie disponibili nella piattaforma;
     \item \textbf{Scenari alternativi:}
     \begin{enumerate}[label=\lett]
-    	\item Il venditore non ha inserito alcuna categoria e il prodotto viene automaticamente categorizzato come senza categoria. %Si può fare o si segnala un errore come campo obbligatorio?
+    	\item Il venditore non ha inserito alcuna categoria e il prodotto viene automaticamente categorizzato come senza categoria.
     \end{enumerate}
 \end{itemize}
 
@@ -83,13 +81,12 @@ Il venditore inserisce le categorie del prodotto da aggiungere.
 Il venditore inserisce il prezzo a cui vendere il prodotto da aggiungere.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
-    \item \textbf{Attori secondari:} identity manager;
     \item \textbf{Precondizione:} il venditore si trova nella schermata di aggiunta di un nuovo prodotto;
     \item \textbf{Postcondizione:} il venditore ha inserito il prezzo a cui vendere il prodotto;
     \item \textbf{Scenario principale:} il venditore inserisce il prezzo a cui vendere il prodotto;
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
-    	\item Il venditore non inserisce il prezzo del prodotto e l'identity manager controlla il campo dati che risulta essere vuoto. In questo caso:
+    	\item Il venditore non inserisce il prezzo del prodotto ed il campo dati risulta essere vuoto. In questo caso:
     	\begin{itemize}
     		\item (UC) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
     		\item Viene fornita al venditore la possibilità di aggiungere un prezzo al nuovo prodotto inserito.
@@ -111,7 +108,7 @@ Il venditore inserisce lo sconto percentuale da applicare al prezzo del prodotto
     \item \textbf{Scenario principale:} il venditore inserisce lo sconto percentuale da applicare al prezzo del prodotto. In seguito il prezzo a cui vendere quel prodotto sarà scontato della percentuale applicata;
     \item \textbf{Scenari alternativi:}
     \begin{enumerate}[label=\lett]
-    	\item Nel caso in cui il venditore non inserisce alcun prodotto, non viene applicato alcuno sconto.
+    	\item Nel caso in cui il venditore non inserisce alcuno sconto, il prezzo non viene modificato in alcun modo.
     \end{enumerate}
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
@@ -132,7 +129,6 @@ Il venditore inserisce lo sconto percentuale da applicare al prezzo del prodotto
 Il venditore inserisce la quantità disponibile attualmente in magazzino del prodotto da aggiungere.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
-    \item \textbf{Attori secondari:} identity manager;
     \item \textbf{Precondizione:} il venditore si trova nella schermata di aggiunta di un nuovo prodotto;
     \item \textbf{Postcondizione:} il venditore ha inserito la quantità disponibile attualmente in magazzino del prodotto;
     \item \textbf{Scenario principale:} il venditore inserisce la quantità disponibile attualmente in magazzino del prodotto;
@@ -147,7 +143,7 @@ Il venditore inserisce la quantità disponibile attualmente in magazzino del pro
     		\item (UC) - Viene visualizzato il messaggio di errore quantità minore di 0;
     		\item Viene fornita la possibilità al venditore di modificare la quantità inserita per il nuovo prodotto.
     	\end{itemize}
-    	\item Il venditore non inserisce la quantità del prodotto e l'identity manager controlla il campo dati che risulta essere vuoto. In questo caso:
+    	\item Il venditore non inserisce la quantità del prodotto ed il campo dati risulta essere vuoto. In questo caso:
     	\begin{itemize}
     		\item (UC) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
     		\item Viene fornita la possibilità al venditore di aggiungere la quantità inserita per il nuovo prodotto.
@@ -161,7 +157,7 @@ Il venditore inserisce le foto relative al prodotto da aggiungere.
     \item \textbf{Attori primari:} venditore;
     \item \textbf{Precondizione:} il venditore si trova nella schermata di aggiunta di un nuovo prodotto;
     \item \textbf{Postcondizione:} il venditore ha inserito le foto relative al prodotto;
-    \item \textbf{Scenario principale:} il venditore inserisce al massimo quattro foto relative al prodotto;
+    \item \textbf{Scenario principale:} il venditore inserisce al più il numero massimo di foto consentite relative al prodotto;
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
     	\item Il venditore non inserisce alcuna foto del prodotto. In questo caso:
@@ -174,9 +170,9 @@ Il venditore inserisce le foto relative al prodotto da aggiungere.
     		\item (UC) - Viene visualizzato il messaggio di errore il quale segnala che il file selezionato non è del tipo immagine;
     		\item Viene fornita la possibilità al venditore di cambiare i file selezionati per il nuovo prodotto.
     	\end{itemize}
-    	\item Il venditore cerca di inserire più di quattro foto relative ad un prodotto. In questo caso:
+    	\item Il venditore cerca di inserire più del massimo numero di foto consentite relative ad un prodotto. In questo caso:
     	\begin{itemize}
-    		\item (UC) - Viene visualizzato il messaggio di errore il quale segnala il tentativo di aggiunta di più quattro foto relativa ad un prodotto;
+    		\item (UC) - Viene visualizzato il messaggio di errore il quale segnala il tentativo di aggiunta di più del numero massimo di foto consentite relative ad un prodotto;
     		\item Viene fornita la possibilità al venditore di rimuovere alcune foto selezionate per il nuovo prodotto da inserire.
     	\end{itemize}
     \end{enumerate}
@@ -219,13 +215,12 @@ Il venditore modifica uno o più campi di un prodotto che è stato inserito nell
 Il venditore vuole modificare il nome del prodotto.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
-    \item \textbf{Attori secondari:} identity manager;
     \item \textbf{Precondizione:} il venditore si trova nella schermata di modifica del prodotto;
     \item \textbf{Postcondizione:} il venditore ha modificato il nome del prodotto;
-    \item \textbf{Scenario Principale:} il venditore aggiorna il nome del prodotto selezionato;
+    \item \textbf{Scenario principale:} il venditore aggiorna il nome del prodotto selezionato;
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
-    	\item Il venditore cancella il nome attuale del prodotto e l'identity manager controlla il campo dati che risulta essere vuoto. In questo caso:
+    	\item Il venditore cancella il nome attuale del prodotto ed il campo dati risulta essere vuoto. In questo caso:
     	\begin{itemize}
     		\item (UC) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
     		\item Viene fornita al venditore la possibilità di inserire un nuovo nome al prodotto selezionato.
@@ -237,13 +232,12 @@ Il venditore vuole modificare il nome del prodotto.
 Il venditore vuole modificare la descrizione del prodotto.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
-    \item \textbf{Attori secondari:} identity manager;
     \item \textbf{Precondizione:} il venditore si trova nella schermata di modifica del prodotto;
     \item \textbf{Postcondizione:} il venditore ha modificato la descrizione del prodotto;
     \item \textbf{Scenario principale:} il venditore modifica la descrizione del prodotto selezionato;
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
-    	\item Il venditore cancella la descrizione attuale del prodotto e l'identity manager controlla il campo dati che risulta essere vuoto. In questo caso:
+    	\item Il venditore cancella la descrizione attuale del prodotto ed il campo dati risulta essere vuoto. In questo caso:
     	\begin{itemize}
     		\item (UC) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
     		\item Viene fornita al venditore la possibilità di inserire una nuova descrizione del prodotto selezionato.
@@ -259,7 +253,7 @@ Il venditore modifica le categorie del prodotto.
     \item \textbf{Postcondizione:} il venditore ha modificato le categorie del prodotto;
     \item \textbf{Scenario Principale:} il venditore modifica le categorie a cui fa parte il prodotto e può compiere le seguenti azioni:
     \begin{itemize}
-        \item Aggiunta di una nuova categoria presa dalla lista di categorie disponibili;% Questa non deve già contenere il prodotto; se scrivo nuova non intendo già non presente in quelle del prodotto? Altrimenti c'è da fare un UC apposito con magari uno scenario alternativo
+        \item Aggiunta di una nuova categoria presa dalla lista di categorie disponibili;
         \item Rimozione di una categoria attualmente inserita.
     \end{itemize}
 \end{itemize}
@@ -268,13 +262,12 @@ Il venditore modifica le categorie del prodotto.
 Il venditore modifica il prezzo a cui vendere il prodotto.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
-    \item \textbf{Attori secondari:} identity manager;
     \item \textbf{Precondizione:} il venditore si trova nella schermata di modifica del prodotto;
     \item \textbf{Postcondizione:} il venditore ha modificato il prezzo a cui vendere il prodotto;
     \item \textbf{Scenario principale:} il venditore modifica il prezzo a cui vendere il prodotto selezionato;
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
-    	\item Il venditore cancella il prezzo attuale del prodotto e l'identity manager controlla il campo dati che risulta essere vuoto. In questo caso:
+    	\item Il venditore cancella il prezzo attuale del prodotto ed il campo dati risulta essere vuoto. In questo caso:
     	\begin{itemize}
     		\item (UC) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
     		\item Viene fornita la possibilità al venditore di inserire un nuovo prezzo per il prodotto selezionato.
@@ -307,7 +300,7 @@ Il venditore modifica lo sconto percentuale da applicare al prezzo del prodotto.
 		\end{itemize}
 		\item Il venditore inserisce uno sconto minore di 0\%. In questo caso:
 		\begin{itemize}
-			\item (UC) - Viene mostrato un messaggio di errore che segnala lo sconto minore di 0\%; %zero o 0\%?
+			\item (UC) - Viene mostrato un messaggio di errore che segnala lo sconto minore di 0\%;
 			\item Viene fornita al venditore la possibilità di modificare lo sconto da applicare al nuovo prodotto.
 		\end{itemize}
     \end{enumerate}
@@ -327,9 +320,9 @@ Il venditore inserisce le foto relative al prodotto.
 			\item (UC) - Viene visualizzato il messaggio di errore il quale segnala che il file selezionato non è del tipo immagine;
 			\item Viene fornita la possibilità al venditore di cambiare i file selezionati per il nuovo prodotto.
 		\end{itemize}
-		\item Il venditore cerca di inserire più di quattro foto relative ad un prodotto. In questo caso:
+		\item Il venditore cerca di inserire più del numero massimo di foto consentite relative ad un prodotto. In questo caso:
 		\begin{itemize}
-			\item (UC) - Viene visualizzato il messaggio di errore il quale segnala il tentativo di aggiunta di più quattro foto relativa ad un prodotto;
+			\item (UC) - Viene visualizzato il messaggio di errore il quale segnala il tentativo di aggiunta di più del numero massimo di foto consentite relative ad un prodotto;
 			\item Viene fornita la possibilità al venditore di rimuovere alcune foto selezionate per il nuovo prodotto da inserire.
 		\end{itemize}
     \end{enumerate}
@@ -341,7 +334,7 @@ Il venditore rimuove le foto relative al prodotto da aggiungere.
     \item \textbf{Attori primari:} venditore;
     \item \textbf{Precondizione:} il venditore si trova nella schermata di modifica del prodotto;
     \item \textbf{Postcondizione:} il venditore ha rimosso le foto relative al prodotto;
-    \item \textbf{Scenario principale:} il venditore rimuove le foto relative al prodotto attraverso i seguenti passi: %il venditore rimuove delle foto relative al prodotto selezionato;
+    \item \textbf{Scenario principale:} il venditore rimuove le foto relative al prodotto attraverso i seguenti passi: 
     \begin{itemize}
         \item Seleziona la foto che vuole eliminare;
         \item Seleziona l'azione di eliminazione di quella specifica foto;
@@ -388,16 +381,22 @@ Il venditore vuole eliminare un prodotto precedentemente inserito.
     \item \textbf{Attori primari:} venditore;
     \item \textbf{Precondizione:} il venditore si trova nella schermata della dashboard;
     \item \textbf{Postcondizione:} il venditore ha eliminato il prodotto selezionato;
-    \item \textbf{Scenario Principale:} il venditore seleziona un prodotto dalla lista di quelli che ha inserito nella piattaforma e clicca sulla funzionalità per eliminarlo definitivamente;
+    \item \textbf{Scenario Principale:} il venditore seleziona un prodotto dalla lista di quelli che ha inserito nella piattaforma, clicca sulla funzionalità per eliminarlo definitivamente e conferma l'eliminazione del prodotto selezionato. Di conseguenza:
     \begin{itemize}
     	\item Il prodotto viene rimosso da PDP, PLP, schermata principale, carrelli e dashboard;
     	\item Il prodotto rimane negli ordini già effettuati.
     \end{itemize}
+	\item \textbf{Scenari alternativi:}
+	\begin{enumerate}[label=\lett]
+		\item Il venditore non conferma l'eliminazione del prodotto selezionato e di conseguenza questo rimarrà presente nella piattaforma.
+	\end{enumerate}
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
-    	\item Il venditore seleziona per l'eliminazione un prodotto che è stato ordinato ma non ancora pagato;
-    	\item (UC) - Viene visualizzato un messaggio di errore in caso di prodotto presente in un ordine non saldato;
-    	\item Viene negato al venditore la possibilità di eliminare il prodotto selezionato.
+    	\item Il venditore seleziona per l'eliminazione un prodotto che è stato ordinato ma non ancora pagato. In questo caso:
+    	\begin{itemize}
+    		\item (UC) - Viene visualizzato un messaggio di errore in caso di prodotto presente in un ordine non saldato;
+    		\item Viene negato al venditore la possibilità di eliminare il prodotto selezionato.
+    	\end{itemize}
     \end{enumerate}
 \end{itemize}
 
@@ -407,11 +406,23 @@ Il venditore vuole rifornire un prodotto precedentemente inserito che sta per es
     \item \textbf{Attori primari:} venditore;
     \item \textbf{Precondizione:} il venditore si trova nella schermata di amministrazione dei prodotti;
     \item \textbf{Postcondizione:} il venditore ha rifornito un prodotto;
-    \item \textbf{Scenario Principale:} il venditore seleziona un prodotto dalla lista di quelli che ha inserito nella piattaforma e preme sulla funzionalità per rifornirlo. Per completare il rifornimento deve svolgere i seguenti passi:
+    \item \textbf{Scenario principale:} il venditore seleziona un prodotto dalla lista di quelli che ha inserito nella piattaforma e preme sulla funzionalità per rifornirlo. Per completare il rifornimento deve svolgere i seguenti passi:
     \begin{itemize}
-        \item (UC) - Inserisce la quantità;
+        \item Inserisce la quantità con cui rifornire il prodotto selezionato;
         \item Conferma il salvataggio della modifica.
     \end{itemize}
+	\item \textbf{Scenari alternativi:}
+	\begin{enumerate}[label=\lett]
+		\item Il venditore inserisce la quantità con cui rifornire le scorte di un prodotto ma non conferma la modifica. In questo caso la quantità del prodotto non subisce alcuna modifica.
+	\end{enumerate}
+	\item \textbf{Estensioni:}
+	\begin{enumerate}[label=\lett]
+		\item Il venditore inserisce un valore inferiore a zero con cui rifornire le scorte di un determinato prodotto. In questo caso:
+		\begin{itemize}
+			\item (UC) - Viene visualizzato un messaggio di errore in caso di quantità minore a zero;
+			\item Viene fornita al venditore la possibilità di modificare il valore inserito per rifornire il prodotto.
+		\end{itemize}
+	\end{enumerate}
 \end{itemize}
 
 \UC{Ricerca dei prodotti del venditore} 
@@ -421,12 +432,9 @@ Il venditore può cercare i prodotti dalla propria PLP.
 	\item \textbf{Precondizione:} il venditore ha selezionato la funzionalità per la ricerca e l'inserimento delle parole per individuare un prodotto;
 	\item \textbf{Postcondizione:} il venditore visualizza i prodotti che contengono nella descrizione o nel nome, almeno una delle parole per le quali si è svolta la ricerca;
 	\item \textbf{Scenario principale:} il venditore ha selezionato la funzione prevista per la ricerca. Dopo aver inserito le parole per individuare il prodotto, conferma la ricerca e viene aggiornata la PLP che mostra tutti i prodotti che hanno almeno una delle parole indicate nella descrizione o nel nome;
-	\item \textbf{Estensioni:}
+	\item \textbf{Scenari alternativi:}
 	\begin{enumerate}[label=\lett]
-		\item Il venditore ha svolto una ricerca che non ha prodotto alcun risultato. In questo caso:
-		\begin{itemize}
-			\item (UC) - Viene visualizzato il messaggio di ricerca senza alcun risultato.
-		\end{itemize}
+		\item Il venditore ha svolto una ricerca in modo tale che questa non dia alcun risultato. In questo caso la PLP del venditore viene aggiornata mostrando nessun risultato trovato.
 	\end{enumerate}
 \end{itemize}
 
@@ -451,18 +459,14 @@ Il venditore può filtrare i prodotti all'interno della PLP per categoria, prezz
 		\item (\actualUC.3) - Impostazione del filtro per disponibilità nel magazzino;
 		\item (\actualUC.4) - Impostazione del filtro per prodotto in evidenza.
 	\end{itemize}
-	Di seguito la PLP verrà aggiornata con i prodotti che rispettano tutti i filtri applicati.
-	%\item \textbf{Estensioni:}
-	%\begin{enumerate}[label=\lett]
-	%	\item Il venditore ha impostato i filtri in modo tale che la ricerca con la loro combinazione non dia alcun risultato. In questo caso:
-	%	\begin{itemize}
-	%		\item (UC) - Viene visualizzato il messaggio di ricerca senza alcun risultato.
-	%	\end{itemize}
-	%\end{enumerate}
+	Di seguito la PLP verrà aggiornata con i prodotti che rispettano tutti i filtri applicati;
+	\item \textbf{Scenari alternativi:}
+	\begin{enumerate}[label=\lett]
+		\item Il venditore ha impostato i filtri in modo tale che la ricerca con la loro combinazione non dia alcun risultato. In questo caso la schermata di riepilogo ordini viene aggiornata mostrando nessun risultato trovato.
+	\end{enumerate}
 \end{itemize}
 
 \resetSubUC
-
 \subUC{Filtro per categorie}
 Il venditore può cercare i prodotti in base alla loro categoria, selezionando quelle di interesse tra tutte le categorie disponibili.
 \begin{itemize}
