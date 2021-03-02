@@ -1,12 +1,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \UC{Inserimento carta per il pagamento}
-L'acquirente è nella fase del checkout e vuole inserire una nuova carta da utilizzare per il pagamento.
+L'acquirente si trova nella fase del checkout oppure nella schermata di gestione delle carte e può inserire una nuova carta da utilizzare per il pagamento.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
-    \item \textbf{Precondizione:} l'acquirente è nella fase del checkout e ha selezionato l'azione di aggiunta di una nuova carta;
+    \item \textbf{Precondizione:} l'acquirente si trova nella fase di checkout oppure nella schermata di gestione delle carte per il pagamento e ha selezionato l'azione di aggiunta di una nuova carta;
     \item \textbf{Postcondizione:} l'acquirente ha aggiunto la nuova carta da utilizzare per il pagamento;
-    \item \textbf{Scenario principale:} l'acquirente è nella fase del checkout e vuole inserire una nuova carta. Per poterlo fare dovrà eseguire le seguenti azioni:
+    \item \textbf{Scenario principale:} l'acquirente si trova nella fase di checkout oppure nella schermata di gestione delle carte per il pagamento e ha selezionato l'azione di aggiunta di una nuova carta. Per poterlo fare dovrà eseguire le seguenti azioni:
     \begin{itemize}
         \item (\actualUC.1) - Inserimento dei dati della carta;
         \item Conferma l'aggiunta della carta.
@@ -125,7 +125,7 @@ L'acquirente inserisce la data di scadenza della nuova carta da aggiungere.
 L'acquirente può modificare una carta precedentemente inserita da utilizzare per il pagamento.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
-    \item \textbf{Precondizione:} l'acquirente è nella fase del checkout e ha selezionato l'azione di modifica di una carta precedentemente inserita;
+    \item \textbf{Precondizione:} l'acquirente si trova nella schermata di gestione delle carte per il pagamento;
     \item \textbf{Postcondizione:} l'acquirente ha modificato la carta desiderata;
     \item \textbf{Scenario principale:} l'acquirente è nella fase del checkout e ha selezionato l'azione di modifica di una carta precedentemente inserita. Le informazioni che potranno essere modificate sono:
     \begin{itemize}
@@ -264,18 +264,17 @@ L'acquirente vuole modificare la data di scadenza di una carta precedentemente i
 L'acquirente elimina una carta per il pagamento precedentemente inserita.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
-    \item \textbf{Precondizione:} l'acquirente è nella fase di checkout;
+    \item \textbf{Precondizione:} l'acquirente si trova nella schermata di gestione delle carte per il pagamento;
     \item \textbf{Postcondizione:} l'acquirente ha eliminato la carta per il pagamento desiderata;
-    \item \textbf{Scenario principale:} l'acquirente è nella fase di checkout e vuole eliminare una carta per il pagamento precedentemente inserita. Per poterlo fare dovrà svolgere le seguenti azioni:
+    \item \textbf{Scenario principale:} l'acquirente si trova nella schermata di gestione delle carte per il pagamento e vuole eliminare una carta per il pagamento precedentemente inserita. Per poterlo fare dovrà svolgere le seguenti azioni:
     \begin{itemize}
         \item Seleziona la carta da eliminare;
+        \item Seleziona l'azione di eliminazione;
         \item Confermare l'eliminazione della carta.
     \end{itemize}
-    Se la carta eliminata è quella attualmente selezionata per il pagamento e ci sono altre carte inserite, allora verrà selezionata per il proseguimento del pagamento la carta successiva. Se viene eliminata l'ultima carta e quindi non esiste una carta successiva, verrà selezionata la prima;
     \item \textbf{Scenari alternativi:}
     \begin{enumerate}[label=\lett]
         \item L'acquirente non conferma l'eliminazione della carta e, per questo motivo, non verrà eliminata;
-        \item Se la carta eliminata dall'acquirente è l'unica attualmente inserita, allora verrà mostrato un messaggio con l'obbligo di dover inserire una nuova carta per poter proseguire con il checkout.
     \end{enumerate}
 \end{itemize}
 
