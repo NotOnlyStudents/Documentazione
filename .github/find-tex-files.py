@@ -39,6 +39,7 @@ def isIncluded(dirpath):
     for includedDirectory in includedDirectories:
         if includedDirectory in dirpath: 
             included = True
+            break
 
     return included
 
