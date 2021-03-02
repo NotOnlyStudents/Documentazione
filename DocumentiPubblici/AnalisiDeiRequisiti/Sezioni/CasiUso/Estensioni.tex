@@ -55,13 +55,13 @@ Visualizzazione messaggio di errore che segnala all'utente che l'e-mail inserita
 \end{itemize}
 
 % Estensioni password
-\UC{Visualizzazione messaggio di errore in caso di password troppo debole}
-Visualizzazione messaggio di errore che segnala all'utente l'inserimento di una password troppo debole che non rispetta le condizioni minime per essere accettabile.
+\UC{Visualizzazione messaggio di errore password non rispetta i requisiti di complessità}
+Visualizzazione messaggio di errore che segnala all'utente l'inserimento di una password che non rispetta le condizioni minime per essere accettabile.
 \begin{itemize}
     \item \textbf{Attori primari:} utente autenticato o utente non autenticato;
-    \item \textbf{Precondizione:} l'attore ha inserito una password troppo debole;
+    \item \textbf{Precondizione:} l'attore ha inserito una password che non rispetta i requisiti di complessità;
     \item \textbf{Postcondizione:} all'attore viene mostrato un messaggio il quale lo avvisa dell'inserimento di una password che non rispetta le condizioni minime per essere accettabile;
-    \item \textbf{Scenario principale:} l'attore ha inserito una password troppo debole che non rispetta le condizioni minime per essere accettabile e viene informato del non rispetto delle condizioni minime.
+    \item \textbf{Scenario principale:} l'attore ha inserito una password troppo debole che non rispetta le condizioni minime per essere accettabile e viene informato dell'errore.
 \end{itemize}
 
 \UC{Visualizzazione messaggio di errore in caso di password e password di conferma diverse}

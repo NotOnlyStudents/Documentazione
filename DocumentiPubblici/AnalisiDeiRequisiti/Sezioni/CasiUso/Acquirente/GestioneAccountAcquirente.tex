@@ -4,15 +4,15 @@
 L'acquirente può modificare le sue informazioni personali.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
+    \item \textbf{Attori secondari:} identity manager;
     \item \textbf{Precondizione:} l'acquirente si trova nella vista di modifica informazioni personali;
     \item \textbf{Postcondizione:} l'acquirente ha aggiornato le sue informazioni personali;
     \item \textbf{Scenario principale:} l'acquirente ha selezionato la funzionalità prevista per la modifica delle informazioni personali e, dopo aver compiuto la modifica, potrà confermarla attraverso la funzione di salvataggio. Le informazioni che si possono modificare sono:
     \begin{itemize}
-        \item (\actualUC.1) - Modifica del nome;
-        \item (\actualUC.1) - Modifica del cognome;
-        \item (\actualUC.3) - Modifica dell'indirizzo e-mail.
-        \item (\actualUC.4) - Inserimento nuova password.
-        \item (\actualUC.5) - Inserimento conferma nuova password.
+        \item (\actualUC.1) - Modifica del nome dell'acquirente;
+        \item (\actualUC.1) - Modifica del cognome dell'acquirente;
+        \item (\actualUC.3) - Modifica dell'indirizzo e-mail dell'acquirente;
+        \item (\actualUC.4) - Modifica della password dell'acquirente.
     \end{itemize}
     In seguito ci sarà la conferma delle modifiche compiute e le informazioni personali verranno modificate.
     \item \textbf{Scenari alternativi:}
@@ -21,12 +21,13 @@ L'acquirente può modificare le sue informazioni personali.
     \end{enumerate}
     \item \textbf{Estensioni:} 
     \begin{enumerate}[label=\lett]
-        \item L'acquirente modifica la propria e-mail con una già utilizzata nella piattaforma. In questo caso:
+        \item L'acquirente modifica la propria e-mail con una già utilizzata nella piattaforma e l'identity manager lo segnala. In questo caso:
         \begin{itemize}
+            \item L'identity manager segnala che le due password inserite non coincidono;
             \item (UC) - Verrà visualizzato il messaggio di errore in caso di cambio e-mail con una già utilizzata nella piattaforma;
             \item Verrà impedita la modifica delle informazioni.
         \end{itemize}
-        \item L'acquirente inserisce una password di conferma diversa da quella inserita nel campo di inserimento nuova password. In questo caso:
+        \item L'acquirente inserisce una password di conferma diversa da quella inserita nel campo di inserimento nuova password e l'identity manager lo segnala. In questo caso:
         \begin{itemize}
             \item (UC) - Verrà visualizzato il messaggio di errore di password e password di conferma diverse;
             \item Verrà impedita la modifica delle informazioni.
@@ -36,10 +37,11 @@ L'acquirente può modificare le sue informazioni personali.
 
 \resetSubUC
 
-\subUC{Modifica del nome}
+\subUC{Modifica del nome dell'acquirente}
 L'acquirente modifica il proprio nome.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
+    \item \textbf{Attori secondari:} identity manager;
     \item \textbf{Precondizione:} l'acquirente si trova nella schermata di modifica informazioni personali e vuole modificare il proprio nome;
     \item \textbf{Postcondizione:} l'acquirente ha aggiornato il proprio nome sulla piattaforma;
     \item \textbf{Scenario principale:} l'acquirente si trova nella schermata di modifica informazioni personali e vuole modificare il proprio nome attraverso le seguenti azioni:
@@ -53,7 +55,7 @@ L'acquirente modifica il proprio nome.
     \end{enumerate}
     \item \textbf{Estensioni:} 
     \begin{enumerate}[label=\lett]
-        \item L'acquirente elimina il proprio nome attuale e non ne inserisce uno nuovo. In questo caso:
+        \item L'acquirente elimina il proprio nome attuale, non ne inserisce uno nuovo e l'identity manager lo segnala. In questo caso:
         \begin{itemize}
             \item (UC) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito;
             \item Verrà impedita la modifica delle informazioni.
@@ -61,10 +63,11 @@ L'acquirente modifica il proprio nome.
     \end{enumerate}
 \end{itemize}
 
-\subUC{Modifica del cognome}
+\subUC{Modifica del cognome dell'acquirente}
 L'acquirente modifica il proprio cognome.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
+    \item \textbf{Attori secondari:} identity manager;
     \item \textbf{Precondizione:} l'acquirente si trova nella schermata di modifica informazioni personali e vuole modificare il proprio cognome;
     \item \textbf{Postcondizione:} l'acquirente ha aggiornato il proprio cognome sulla piattaforma;
     \item \textbf{Scenario principale:} l'acquirente si trova nella schermata di modifica informazioni personali e vuole modificare il proprio cognome attraverso le seguenti azioni:
@@ -78,7 +81,7 @@ L'acquirente modifica il proprio cognome.
     \end{enumerate}
     \item \textbf{Estensioni:} 
     \begin{enumerate}[label=\lett]
-        \item L'acquirente elimina il proprio cognome attuale e non ne inserisce uno nuovo. In questo caso:
+        \item L'acquirente elimina il proprio cognome attuale, non ne inserisce uno nuovo e l'identity manager lo segnala. In questo caso:
         \begin{itemize}
             \item (UC) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito;
             \item Verrà impedita la modifica delle informazioni.
@@ -86,10 +89,11 @@ L'acquirente modifica il proprio cognome.
     \end{enumerate}
 \end{itemize}
 
-\subUC{Modifica dell'indirizzo e-mail}
-L'acquirente vuole modificare la propria e-mail.
+\subUC{Modifica dell'indirizzo e-mail dell'acquirente}
+L'acquirente modifica la propria e-mail.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
+    \item \textbf{Attori secondari:} identity manager;
     \item \textbf{Precondizione:} l'acquirente si trova nella schermata di modifica informazioni personali e vuole modificare il proprio indirizzo e-mail;
     \item \textbf{Postcondizione:} l'acquirente ha aggiornato la sua e-mail;
     \item \textbf{Scenario principale:} l'acquirente si trova nella schermata di modifica informazioni personali e vuole modificare la propria e-mail attraverso le seguenti azioni:
@@ -103,12 +107,12 @@ L'acquirente vuole modificare la propria e-mail.
     \end{enumerate}
     \item \textbf{Estensioni:} 
     \begin{enumerate}[label=\lett]
-        \item L'acquirente modifica la propria e-mail con una non valida. In questo caso:
+        \item L'acquirente modifica la propria e-mail con una non valida e l'identity manager lo segnala. In questo caso:
         \begin{itemize}
             \item (UC) - Verrà visualizzato un messaggio di errore in caso di e-mail non valida;
             \item Verrà impedita la modifica delle informazioni.
         \end{itemize}
-        \item L'acquirente elimina la propria e-mail attuale e non ne inserisce una nuova. In questo caso:
+        \item L'acquirente elimina la propria e-mail attuale, non ne inserisce una nuova e l'identity manager lo segnala. In questo caso:
         \begin{itemize}
             \item (UC) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito;
             \item Verrà impedita la modifica delle informazioni.
@@ -116,31 +120,49 @@ L'acquirente vuole modificare la propria e-mail.
     \end{enumerate}
 \end{itemize}
 
-\subUC{Inserimento nuova password}
+\subUC{Modifica della password dell'acquirente}
 L'acquirente vuole modificare la propria password.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
+    \item \textbf{Attori secondari:} identity manager;
+    \item \textbf{Precondizione:} l'acquirente si trova nella schermata di modifica delle proprie informazioni;
+    \item \textbf{Postcondizione:} l'acquirente ha modificato la sua password;
+    \item \textbf{Scenario principale:} l'acquirente per poter cambiare la password deve compiere i seguenti passi:
+    \begin{itemize}
+        \item (\actualSubUC.1) - Inserimento password per accedere alla piattaforma da parte dell'acquirente;
+        \item (\actualSubUC.2) - Inserimento conferma password per accedere alla piattaforma da parte dell'acquirente.
+    \end{itemize}
+    \item \textbf{Scenari alternativi:}
+    \begin{enumerate}[label=\lett]
+    	\item L'acquirente non inserisce alcuna password e lascia i campi per l'inserimento della nuova password e della conferma della stessa vuoti. In questo caso non verrà modificata la password.
+    \end{enumerate}
+\end{itemize}
+
+\resetSubSubUC
+
+\subSubUC{Inserimento password per accedere alla piattaforma da parte dell'acquirente}
+L'acquirente inserisce una nuova password.
+\begin{itemize}
+    \item \textbf{Attori primari:} acquirente;
+    \item \textbf{Attori secondari:} identity manager;
     \item \textbf{Precondizione:} l'acquirente si trova nella schermata di modifica informazioni personali e vuole inserire una nuova password;
-    \item \textbf{Postcondizione:} l'acquirente ha inserito la nuova password;
+    \item \textbf{Postcondizione:} l'acquirente ha inserito una nuova password valida;
     \item \textbf{Scenario principale:} l'acquirente si trova nella schermata di modifica informazioni personali e vuole modificare la propria password. In questo caso l'acquirente si posiziona nel campo di inserimento vuoto della nuova password e la scrive;
-    \item \textbf{Scenario alternativi:} 
-     \begin{enumerate}[label=\lett]
-     \item L'acquirente non inserisce alcuna password e lascia il campo di inserimento nuova password vuoto. In questo caso non verrà modificata la password;
-     \end{enumerate}
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
-        \item L'acquirente inserisce una password troppo debole. In questo caso:
+        \item L'acquirente inserisce una password che non rispetta i requisiti minimi di complessità e l'identity manager lo segnala. In questo caso:
         \begin{itemize}
-            \item (UC) - Verrà visualizzato il messaggio di errore di password troppo debole;
+            \item (UC) - Verrà visualizzato il messaggio di errore password non rispetta i requisiti di complessità;
             \item Verrà impedita la modifica delle informazioni.
         \end{itemize}
     \end{enumerate}
 \end{itemize}
 
-\subUC{Inserimento conferma nuova password}
+\subSubUC{Inserimento conferma password per accedere alla piattaforma da parte dell'acquirente}
 L'acquirente vuole modificare la propria password e deve confermare quella nuova da inserire.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
+    \item \textbf{Attori secondari:} identity manager;
     \item \textbf{Precondizione:} l'acquirente si trova nella schermata di modifica informazioni personali e vuole inserire una nuova password;
     \item \textbf{Postcondizione:} l'acquirente ha inserito la conferma della nuova password;
     \item \textbf{Scenario principale:} l'acquirente si trova nella schermata di modifica informazioni personali, ha già inserito la nuova password e la deve confermare attraverso le seguenti azioni:
@@ -148,15 +170,11 @@ L'acquirente vuole modificare la propria password e deve confermare quella nuova
         \item Si posiziona nel campo di inserimento vuoto della conferma nuova password;
         \item Inserisce la stessa password che è stata inserita nel campo nuova password.
     \end{itemize}
-    \item \textbf{Scenari alternativi:} 
-    \begin{enumerate}[label=\lett] 
-        \item L'acquirente non inserisce alcuna password e lascia il campo di inserimento conferma nuova password vuoto. In questo caso non verrà modificata la password.
-    \end{enumerate}
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
-        \item L'acquirente inserisce una password troppo debole. In questo caso:
+        \item L'acquirente inserisce una password che non rispetta i requisiti minimi di complessità e l'identity manager lo segnala. In questo caso:
         \begin{itemize}
-            \item (UC) - Verrà visualizzato il messaggio di errore di password troppo debole;
+            \item (UC) - Verrà visualizzato il messaggio di errore password non rispetta i requisiti di complessità;
             \item Verrà impedita la modifica delle informazioni.
         \end{itemize}
     \end{enumerate}
