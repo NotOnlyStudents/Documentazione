@@ -392,9 +392,11 @@ Il venditore vuole eliminare un prodotto precedentemente inserito.
 	\end{enumerate}
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
-    	\item Il venditore seleziona per l'eliminazione un prodotto che è stato ordinato ma non ancora pagato;
-    	\item (UC) - Viene visualizzato un messaggio di errore in caso di prodotto presente in un ordine non saldato;
-    	\item Viene negato al venditore la possibilità di eliminare il prodotto selezionato.
+    	\item Il venditore seleziona per l'eliminazione un prodotto che è stato ordinato ma non ancora pagato. In questo caso:
+    	\begin{itemize}
+    		\item (UC) - Viene visualizzato un messaggio di errore in caso di prodotto presente in un ordine non saldato;
+    		\item Viene negato al venditore la possibilità di eliminare il prodotto selezionato.
+    	\end{itemize}
     \end{enumerate}
 \end{itemize}
 
@@ -414,14 +416,12 @@ Il venditore vuole rifornire un prodotto precedentemente inserito che sta per es
 		\item Il venditore inserisce la quantità con cui rifornire le scorte di un prodotto ma non conferma la modifica. In questo caso la quantità del prodotto non subisce alcuna modifica.
 	\end{enumerate}
 	\item \textbf{Estensioni:}
-	%\item Il venditore non inserisce alcuna quantità per rifornire il prodotto ed il campo dati che risulta essere vuoto. In questo caso:
-	%\begin{itemize}
-	%	\item (UC) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
-	%	\item Viene fornita al venditore la possibilità di inserire un nuovo nome al prodotto selezionato.
-	%\end{itemize}
 	\begin{enumerate}[label=\lett]
-		\item (UC) - Viene visualizzato un messaggio di errore in caso di quantità minore a zero;
-		\item Viene fornita al venditore la possibilità di modificare il valore inserito per rifornire il prodotto.
+		\item Il venditore inserisce un valore inferiore a zero con cui rifornire le scorte di un determinato prodotto. In questo caso:
+		\begin{itemize}
+			\item (UC) - Viene visualizzato un messaggio di errore in caso di quantità minore a zero;
+			\item Viene fornita al venditore la possibilità di modificare il valore inserito per rifornire il prodotto.
+		\end{itemize}
 	\end{enumerate}
 \end{itemize}
 
