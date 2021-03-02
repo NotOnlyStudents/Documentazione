@@ -18,9 +18,8 @@ L'utente si trova nella schermata del carrello e vuole procedere al checkout per
     \item \textbf{Scenario principale:} l'attore si trova nella schermata del carrello e seleziona la funzionalità per procedere con il checkout. In seguito eseguirà le seguenti azioni:
     \begin{itemize}
     	\item (\actualUC.1) - Selezionare l'indirizzo di consegna;
-    	\item (\actualUC.2) - Selezionare la carta con la quale svolgere il pagamento;
     	\item Inserire possibili informazioni aggiuntive per la consegna dell'acquisto;
-        \item (\actualUC.3) - Eseguire il pagamento.
+        \item (\actualUC.2) - Eseguire il pagamento.
     \end{itemize}
     Se il pagamento è andato a buon fine, verrà visualizzato un messaggio il quale segnalerà la buona riuscita del pagamento e verrà visualizzata la schermata di riepilogo dell'ordine;
     \item \textbf{Estensioni:}
@@ -50,28 +49,14 @@ L'acquirente seleziona l'indirizzo della consegna, ovvero dove verrà recapitato
     \end{enumerate}
 \end{itemize}
 
-\subUC{Selezione della carta per il pagamento}
-L'acquirente seleziona la carta con la quale svolgere il pagamento tra quelle inserite precedentemente.
-\begin{itemize}
-    \item \textbf{Attori primari:} acquirente;
-    \item \textbf{Precondizione:} l'acquirente si trova durante la fase di checkout;
-    \item \textbf{Postcondizione:} l'acquirente ha selezionato la carta con la quale svolgere il pagamento;
-    \item \textbf{Scenario principale:} l'acquirente si trova durante la fase di checkout e seleziona una tra le carte con la quale svolgere il pagamento tra quelle precedentemente inserite;
-    \item \textbf{Scenari alternativi:}
-    \begin{enumerate}[label=\lett]
-        \item Se sono presenti altre carte, l'acquirente ha eseguito almeno un ordine e non seleziona alcuna carta per il pagamento, allora verrà utilizzata la carta a cui è stato addebitato l'ultimo ordine;
-        \item Se non è presente alcuna carta da utilizzare per il pagamento, allora verrà mostrato un messaggio il quale indicherà l'obbligo di dover inserire una carta di pagamento per poter proseguire con il checkout. In seguito la carta appena inserita verrà selezionata automaticamente per proseguire con la consegna.
-    \end{enumerate}
-\end{itemize}
-
 \subUC{Esecuzione del pagamento}
 L'acquirente procede al pagamento attraverso il servizio fornito da stripe.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
     \item \textbf{Attori secondari:} stripe;
-    \item \textbf{Precondizione:} l'acquirente è nella fase di checkout e ha selezionato indirizzo e carta con i quali proseguire al checkout;
+    \item \textbf{Precondizione:} l'acquirente è nella fase di checkout e ha selezionato l'indirizzo a cui consegnare l'ordine;
     \item \textbf{Postcondizione:} l'acquirente ha effettuato il pagamento;
-    \item \textbf{Scenario principale:} l'acquirente è nella fase di checkout, ha selezionato indirizzo e carta con i quali proseguire con il checkout e seleziona l'azione del pagamento. A questo punto entrerà in gioco l'attore stripe che si occuperà del pagamento;
+    \item \textbf{Scenario principale:} l'acquirente è nella fase di checkout, ha selezionato l'indirizzo a cui consegnare l'ordine e seleziona l'azione del pagamento. A questo punto entrerà in gioco l'attore secondario stripe che si occuperà di offrire all'acquirente tutto ciò di cui ha bisogno per ultimare l'ordine attraverso il pagamento.
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
