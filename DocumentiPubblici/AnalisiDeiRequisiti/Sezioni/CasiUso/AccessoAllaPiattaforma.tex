@@ -16,7 +16,7 @@ L'utente non autenticato che non dispone di credenziali può registrarsi e acced
 	\begin{itemize}
 		\item L'utente accede al sistema;
 		\item L'utente non autenticato si trova nella schermata di registrazione;
-		\item (UC) - Inserisce tutti i dati per compilare il modulo di registrazione;
+		\item (\actualUC.1) - Inserisce tutti i dati per compilare il modulo di registrazione;
 		\item L'utente non autenticato conferma il proprio indirizzo e-mail inserito;
 		\item L'utente possiede un account presso il sistema.
 	\end{itemize}
@@ -178,7 +178,7 @@ L'utente non autenticato che dispone di credenziali venditore può accedere nell
     \begin{itemize}
     	\item L'utente accede al sistema;
     	\item L'utente non autenticato si trova nella schermata di login;
-    	\item (UC) - Inserisce tutti i dati per compilare il modulo di autenticazione; %Inserisce le credenziali per accedere alla piattaforma
+    	\item (\actualUC.1) - Inserisce tutti i dati per compilare il modulo di autenticazione; %Inserisce le credenziali per accedere alla piattaforma
     	\item L'utente richiede l'autenticazione;
     	\item L'utente è autenticato come venditore all'interno della piattaforma;
     	\item L'utente viene portato alla dashboard.
@@ -266,7 +266,7 @@ L'utente non autenticato che dispone di credenziali acquirente può accedere nel
 	\begin{itemize}
 		\item L'utente accede al sistema;
 		\item L'utente non autenticato si trova nella schermata di login;
-		\item (UC) - Inserisce tutti i dati per compilare il modulo di autenticazione; %Inserisce le credenziali per accedere alla piattaforma
+		\item (UC2.1) - Inserisce tutti i dati per compilare il modulo di autenticazione; %Inserisce le credenziali per accedere alla piattaforma
 		\item L'utente richiede l'autenticazione;
 		\item L'utente è autenticato come acquirente all'interno del sistema;
 		\item L'utente viene portato alla schermata principale della piattaforma.
@@ -300,11 +300,11 @@ L'utente che dispone di credenziali si è dimenticato la propria password e la v
     \item \textbf{Postcondizione:} l'utente è autenticato e ha cambiato la password con cui poter effettuare l'accesso alla piattaforma;
     \item \textbf{Scenario principale:} l'utente che dispone di credenziali si è dimenticato la propria password e per cambiarla deve compiere i seguenti passi:
     \begin{itemize}
-        \item (UC) - Inserimento indirizzo e-mail;
+        \item (\actualUC.1) - Inserimento indirizzo e-mail;
         \item Invio link per il cambio della password all'indirizzo e-mail indicato;
         \item Apertura della schermata per il cambio della password;
-        \item (UC) - Inserimento nuova password;
-        \item (UC) - Inserimento conferma nuova password;
+        \item (\actualUC.2) - Inserimento nuova password;
+        \item (\actualUC.3) - Inserimento conferma nuova password;
         \item L'utente è autenticato e ha cambiato la password.
     \end{itemize}
 	\item \textbf{Estensioni:}
