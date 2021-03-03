@@ -7,7 +7,7 @@
     \label{fig:Registrazione}
 \end{figure}
 
-\subsubsection{Attori Primari}
+\subsubsection{Attori primari}
 \begin{itemize}
     \item \textbf{Utente non autenticato:} utente che può consultare la parte pubblica del sito cercando prodotti e aggiungendoli al carrello, oppure fare il login o registrarsi come acquirente al sito. Non può fare però acquisti sulla piattaforma;
     \item \textbf{Utente autenticato:}
@@ -17,7 +17,8 @@
     \end{itemize}
     % \item \textbf{Amministratore:} l'amministratore è in grado di fare il \glo{Deploy} dell'applicazione sul \glo{cloud}, configurare le integrazioni di componenti di terze parti nella piattaforma e gestire gli utenti di tipo venditore. Questo utente non fa parte di quelli autenticati perché non svolgerà le azioni all'interno della piattaforma ma dove questa è eseguita.
 \end{itemize}
-\subsubsection{Attori Secondari}
+\subsubsection{Attori secondari}
 \begin{itemize}
-\item \textbf{\glo{Stripe}:} servizio per la gestione di transazioni online, che verrà utilizzato per i pagamenti all'interno della piattaforma. Stripe è aderente alle normative per il pagamento online del nord America, Europa e Oceania.
+\item \textbf{Gestore dei pagamenti:} servizio per la gestione di transazioni online, che verrà utilizzato per i pagamenti all'interno della piattaforma.% Stripe è aderente alle normative per il pagamento online del nord America, Europa e Oceania.
+\item \textbf{Identity manager:} sistema integrato di procedure e criteri che è in grado di facilitare e controllare la gestione degli accessi alla piattaforma. 
 \end{itemize}

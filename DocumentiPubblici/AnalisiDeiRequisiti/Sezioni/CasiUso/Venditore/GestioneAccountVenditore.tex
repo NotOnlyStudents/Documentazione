@@ -7,13 +7,14 @@ Il venditore può modificare le sue informazioni personali.
     \item \textbf{Postcondizione:} il venditore ha aggiornato le proprie informazioni personali;
     \item \textbf{Scenario principale:} il venditore si trova nella schermata della propria area personale e può compiere le seguenti azioni:
     \begin{itemize}
-    	\item (\actualUC.1) - Modifica del nome venditore;
-    	\item (\actualUC.2) - Modifica del cognome venditore;
-        \item (\actualUC.3) - Modifica dell'indirizzo e-mail venditore;
-        \item (\actualUC.4) - Modifica della password venditore;
-        \item (\actualUC.5) - Modifica del logo;
-        \item (\actualUC.6) - Modifica nome dell'azienda;
-        \item (\actualUC.7) - Modifica della descrizione dell'azienda.
+    	\item (UC) - Modifica del nome del venditore;
+    	\item (UC) - Modifica del cognome del venditore;
+        \item (UC) - Modifica dell'indirizzo e-mail del venditore;
+        \item (UC) - Modifica della password del venditore;
+        \item (UC) - Modifica del logo;
+        \item (UC) - Rimozione del logo;
+        \item (UC) - Modifica nome dell'azienda;
+        \item (UC) - Modifica della descrizione dell'azienda.
     \end{itemize}
     Il venditore conferma le modifiche compiute e le informazioni personali verranno modificate;
     \item \textbf{Scenari alternativi:}
@@ -38,7 +39,7 @@ Il venditore può modificare le sue informazioni personali.
 
 \resetSubUC
 
-\subUC{Modifica del nome venditore}
+\subUC{Modifica del nome del venditore}
 Il venditore vuole modificare il proprio nome.
 \begin{itemize}
 	\item \textbf{Attori primari:} venditore;
@@ -60,7 +61,7 @@ Il venditore vuole modificare il proprio nome.
 	\end{enumerate} 
 \end{itemize}
 
-\subUC{Modifica del cognome venditore}
+\subUC{Modifica del cognome del venditore}
 Il venditore vuole modificare il proprio cognome.
 \begin{itemize}
 	\item \textbf{Attori primari:} venditore;
@@ -82,7 +83,7 @@ Il venditore vuole modificare il proprio cognome.
 	\end{enumerate} 
 \end{itemize}
 
-\subUC{Modifica dell'indirizzo e-mail venditore}
+\subUC{Modifica dell'indirizzo e-mail del venditore}
 Il venditore vuole modificare la propria e-mail.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
@@ -109,7 +110,7 @@ Il venditore vuole modificare la propria e-mail.
     \end{enumerate} 
 \end{itemize}
 
-\subUC{Modifica della password venditore}
+\subUC{Modifica della password del venditore}
 Il venditore vuole modificare la propria password.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
@@ -117,8 +118,8 @@ Il venditore vuole modificare la propria password.
     \item \textbf{Postcondizione:} il venditore ha modificato la sua password;
     \item \textbf{Scenario principale:} Il venditore per poter cambiare la password deve compiere i seguenti passi:
         \begin{itemize}
-            \item (UC) - Inserimento password per la modifica delle informazioni personali venditore;
-            \item (UC) - Inserimento conferma password per la modifica delle informazioni personali venditore.
+            \item (UC) - Inserimento password per la modifica delle informazioni personali del venditore;
+            \item (UC) - Inserimento conferma password per la modifica delle informazioni personali del venditore.
         \end{itemize}
     \item \textbf{Scenari alternativi:}
     \begin{enumerate}[label=\lett]
@@ -128,7 +129,7 @@ Il venditore vuole modificare la propria password.
 
 \resetSubSubUC
 
-\subSubUC{Inserimento password per la modifica delle informazioni personali venditore}
+\subSubUC{Inserimento password per la modifica delle informazioni personali del venditore}
 Il venditore inserisce una nuova password.
 \begin{itemize}
 	\item \textbf{Attori primari:} venditore;
@@ -151,7 +152,7 @@ Il venditore inserisce una nuova password.
 	\end{enumerate} 
 \end{itemize}
 
-\subSubUC{Inserimento conferma password per la modifica delle informazioni personali venditore}
+\subSubUC{Inserimento conferma password per la modifica delle informazioni personali del venditore}
 Il venditore inserisce la conferma della nuova password.
 \begin{itemize}
 	\item \textbf{Attori primari:} venditore;
