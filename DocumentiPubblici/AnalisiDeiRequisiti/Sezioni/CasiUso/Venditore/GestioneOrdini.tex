@@ -48,10 +48,6 @@ Il venditore può cercare un ordine dalla propria schermata di riepilogo ordini.
 	\begin{enumerate}[label=\lett]
 		\item Il venditore ha svolto una ricerca che non ha trovato coincidenze con nessun ordine ricevuto. In questo caso la schermata di riepilogo ordini viene aggiornata mostrando nessun risultato trovato.
 	\end{enumerate}
-	\item \textbf{Scenari alternativi:}
-	\begin{enumerate}[label=\lett]
-		\item Il venditore ha svolto una ricerca che non ha trovato coincidenze con nessun ordine. In questo caso la schermata di riepilogo ordini viene aggiornata mostrando nessun risultato trovato.
-	\end{enumerate}
 \end{itemize}
 
 \UC{Ricerca di un ordine per cliente}
@@ -84,7 +80,9 @@ Il venditore può filtrare gli ordini nella schermata di riepilogo ordini per lo
 		\item Il venditore ha impostato i filtri in modo tale che la ricerca con la loro combinazione non dia alcun risultato. In questo caso la schermata di riepilogo ordini viene aggiornata mostrando nessun risultato trovato.
 	\end{enumerate}
 \end{itemize}
+
 \resetSubUC
+
 \subUC{Filtro per stato degli ordini ricevuti}
 Il venditore può cercare gli ordini in base al loro stato, selezionando quelle di interesse tra tutti quelli disponibili.
 \begin{itemize}
@@ -94,7 +92,7 @@ Il venditore può cercare gli ordini in base al loro stato, selezionando quelle 
 	\item \textbf{Scenario principale:} il venditore è nella schermata di riepilogo ordini e ha selezionato uno (o più) stati tra quelli disponibili per quali filtrare e di seguito verranno visualizzati gli ordini che appartengono ad almeno uno degli stati selezionati;
 	\item \textbf{Scenari alternativi:}
 	\begin{enumerate}[label=\lett]
-		\item Se il venditore non imposta il seguente filtro, allora verranno visualizzati tutti i prodotti a prescindere della categoria.
+		\item Se il venditore non imposta il seguente filtro, allora verranno visualizzati tutti gli ordini ricevuti.
 	\end{enumerate}
 \end{itemize}
 
@@ -111,10 +109,6 @@ Il venditore filtra temporalmente l'elenco degli ordini a suo carico sulla piatt
 	\end{itemize}
 	\item \textbf{Estensioni:}
 	\begin{enumerate}[label=\lett]
-		\item Il venditore imposta un intervallo temporale nel quale non sono stati effettuati ordini. In questo caso:
-		\begin{itemize}
-			\item (UC) - Viene visualizzato il messaggio nessun ordine effettuato nell'arco temporale impostato.
-		\end{itemize}
 		\item Il venditore inserisce una data iniziale maggiore di quella finale. In questo caso:
 		\begin{itemize}
 			\item (UC) - Viene visualizzato il messaggio d'errore data iniziale maggiore di quella finale;
