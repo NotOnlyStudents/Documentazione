@@ -16,25 +16,25 @@
 
 \section{Ordine del giorno}
 \begin{enumerate}
-	\item Presentazione del \glo{PoC}
+	\item Presentazione del \glo{PoC}.
 \end{enumerate}
 
 \section{Resoconto}
 \subsection{Presentazione del PoC}
 Il gruppo ha presentato il \glo{PoC} realizzato fino a quel momento, le principali critiche riportateci sono:
 \begin{enumerate}
-	\item Serve un maggiore controllo sul flusso del pagamento, ad oggi infatti un client esperto può facilmente modificare il risultato riportato dal gestore dei pagamenti Stripe;
+	\item Serve un maggiore controllo sul flusso del pagamento, ad oggi infatti un client esperto può facilmente modificare il risultato riportato dal gestore dei pagamenti \glo{Stripe};
 	\item Attenzione all'utilizzo di await e della programmazione asincrona;
-	\item Utilizzare di più Typescript assegnando i tipi corretti alle variabili e non any;
+	\item Utilizzare di più \glo{Typescript} assegnando i tipi corretti alle variabili e non any;
 	\item Attenzione al funzionamento del linter;
-	\item Fare i test del codice attraverso i wrapper.
+	\item Ci è stato consigliato di cercare i design \glo{pattern} e \glo{framework} più famosi dedicati allo unit testing delle \glo{AWS lambda}.
 \end{enumerate}
 
 \section{Registro delle decisioni}
 \begin{itemize}
 	\item \textbf{VE\_\Data.1} Rivedere flusso del pagamento.
-   \item \textbf{VE\_\Data.2} Correggere gli errori nell'utilizzo di await.
-   \item \textbf{VE\_\Data.3} Sostituzione dei tipi alle variabili da any al tipo corretto.
-   \item \textbf{VE\_\Data.4} Controllare l'utilizzo di \glo{typescript-eslint}.
-   \item \textbf{VE\_\Data.5} Test d'unità attraverso i wrapper.
+	\item \textbf{VE\_\Data.2} Correggere gli errori nell'utilizzo della programmazione asincrona.
+	\item \textbf{VE\_\Data.3} Sostituzione dei tipi alle variabili da any al tipo corretto.
+	\item \textbf{VE\_\Data.4} Controllare l'utilizzo di \glo{typescript-eslint}.
+	\item \textbf{VE\_\Data.5} Per lo unit testing verrà utilizzato il \glo{framework} \glo{mocha.js} attraverso il plugin che permette l'integrazione con la tecnologia \glo{serverless}.
 \end{itemize}
