@@ -46,11 +46,7 @@ Il venditore può cercare un ordine dalla propria schermata di riepilogo ordini.
 	\item \textbf{Scenario principale:} il venditore ha selezionato la funzione prevista per la ricerca. Dopo aver inserito il codice per individuare l'ordine, conferma la ricerca e viene aggiornata la schermata di riepilogo ordini che mostra solamente l'ordine corrispondente al codice indicato;
 	\item \textbf{Scenari alternativi:}
 	\begin{enumerate}[label=\lett]
-		\item Il venditore ha svolto una ricerca che non ha trovato coincidenze con nessun ordine ricevuto. In questo caso la schermata di riepilogo ordini viene aggiornata mostrando nessun risultato trovato.
-	\end{enumerate}
-	\item \textbf{Scenari alternativi:}
-	\begin{enumerate}[label=\lett]
-		\item Il venditore ha svolto una ricerca che non ha trovato coincidenze con nessun ordine. In questo caso la schermata di riepilogo ordini viene aggiornata mostrando nessun risultato trovato.
+		\item Il venditore ha svolto una ricerca che non ha trovato coincidenze con nessun ordine ricevuto. In questo caso la schermata di riepilogo ordini viene aggiornata mostrando il messaggio nessun ordine trovato.
 	\end{enumerate}
 \end{itemize}
 
@@ -63,7 +59,7 @@ Il venditore può cercare gli ordini in base al cliente che lo ha effettuato.
 	\item \textbf{Scenario principale:} il venditore ha selezionato la funzione prevista per la ricerca. Dopo aver inserito il cliente per individuare gli ordini, conferma la ricerca e viene aggiornata la schermata di riepilogo ordini che mostra solamente gli ordini effettuati dal cliente indicato;
 	\item \textbf{Scenari alternativi:}
 	\begin{enumerate}[label=\lett]
-		\item Il venditore ha svolto una ricerca che non ha trovato coincidenze con nessun cliente. In questo caso la schermata di riepilogo ordini viene aggiornata mostrando nessun risultato trovato.
+		\item Il venditore ha svolto una ricerca che non ha trovato coincidenze con nessun cliente. In questo caso la schermata di riepilogo ordini viene aggiornata mostrando il messaggio nessun ordine trovato.
 	\end{enumerate}
 \end{itemize}
 
@@ -81,10 +77,12 @@ Il venditore può filtrare gli ordini nella schermata di riepilogo ordini per lo
 	Di seguito la schermata di riepilogo ordini verrà aggiornata con gli ordini che rispettano tutti i filtri applicati;
 	\item \textbf{Scenari alternativi:}
 	\begin{enumerate}[label=\lett]
-		\item Il venditore ha impostato i filtri in modo tale che la ricerca con la loro combinazione non dia alcun risultato. In questo caso la schermata di riepilogo ordini viene aggiornata mostrando nessun risultato trovato.
+		\item Il venditore ha impostato i filtri in modo tale che la ricerca con la loro combinazione non dia alcun risultato. In questo caso la schermata di riepilogo ordini viene aggiornata mostrando il messaggio nessun ordine trovato.
 	\end{enumerate}
 \end{itemize}
+
 \resetSubUC
+
 \subUC{Filtro per stato degli ordini ricevuti}
 Il venditore può cercare gli ordini in base al loro stato, selezionando quelle di interesse tra tutti quelli disponibili.
 \begin{itemize}
@@ -94,7 +92,7 @@ Il venditore può cercare gli ordini in base al loro stato, selezionando quelle 
 	\item \textbf{Scenario principale:} il venditore è nella schermata di riepilogo ordini e ha selezionato uno (o più) stati tra quelli disponibili per quali filtrare e di seguito verranno visualizzati gli ordini che appartengono ad almeno uno degli stati selezionati;
 	\item \textbf{Scenari alternativi:}
 	\begin{enumerate}[label=\lett]
-		\item Se il venditore non imposta il seguente filtro, allora verranno visualizzati tutti i prodotti a prescindere della categoria.
+		\item Se il venditore non imposta il seguente filtro, allora verranno visualizzati tutti gli ordini ricevuti.
 	\end{enumerate}
 \end{itemize}
 
@@ -109,12 +107,12 @@ Il venditore filtra temporalmente l'elenco degli ordini a suo carico sulla piatt
 		\item (\actualSubUC.1) - Impostare la data iniziale dell'intervallo temporale;
 		\item (\actualSubUC.2) - Impostare la data finale dell'intervallo temporale.
 	\end{itemize}
+		\item \textbf{Scenari alternativi:}
+	\begin{enumerate}[label=\lett]
+		\item Se il venditore non imposta il seguente filtro, allora verranno visualizzati tutti gli ordini ricevuti dal più al meno recente.
+	\end{enumerate}
 	\item \textbf{Estensioni:}
 	\begin{enumerate}[label=\lett]
-		\item Il venditore imposta un intervallo temporale nel quale non sono stati effettuati ordini. In questo caso:
-		\begin{itemize}
-			\item (UC) - Viene visualizzato il messaggio nessun ordine effettuato nell'arco temporale impostato.
-		\end{itemize}
 		\item Il venditore inserisce una data iniziale maggiore di quella finale. In questo caso:
 		\begin{itemize}
 			\item (UC) - Viene visualizzato il messaggio d'errore data iniziale maggiore di quella finale;
@@ -133,7 +131,7 @@ Il venditore imposta la data iniziale dell'intervallo per il quale filtrare l'el
 	\item \textbf{Scenario principale:} il venditore inserisce una data valida e minore o uguale a quella finale, come data iniziale dell'intervallo per la quale filtrare l'elenco degli ordini ricevuti;
 	\item \textbf{Estensioni:}
 	\begin{enumerate}[label=\lett]
-		\item Il venditore inserisce una data iniziale in un formato non corretto. In questo caso:
+		\item Il venditore inserisce una data iniziale non nel formato corretto. In questo caso:
 		\begin{itemize}
 			\item (UC) - Viene visualizzato il messaggio d'errore data non valida;
 			\item Non verrà eseguita la ricerca.
