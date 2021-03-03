@@ -26,7 +26,6 @@
 \newcommand{\UC}[1]{
 	\stepcounter{UCcounter}
 	\subsection{UC\theUCcounter{} - #1}
-	\label{UC\theUCcounter}
 }
 \newcommand{\actualUC}{UC\theUCcounter}
 
@@ -36,7 +35,6 @@
 \newcommand{\subUC}[1]{
 	\stepcounter{subUCcounter}
 	\subsubsection{UC\theUCcounter.\thesubUCcounter{} - #1}
-	\label{UC\theUCcounter.\thesubUCcounter}
 }
 \newcommand{\actualSubUC}{UC\theUCcounter.\thesubUCcounter}
 
@@ -46,7 +44,6 @@
 \newcommand{\subSubUC}[1]{
 	\stepcounter{subSubUCcounter}
 	\subsubsection{UC\theUCcounter.\thesubUCcounter.\thesubSubUCcounter{} - #1}
-	\label{UC\theUCcounter.\thesubUCcounter.\thesubSubUCcounter}
 }
 \newcommand{\actualSubSubUC}{UC\theUCcounter.\thesubUCcounter.\thesubSubUCcounter}
 
@@ -155,3 +152,9 @@
 % Enumerate
 
 \newcommand{\lett}{\textbf{\alph*}.}
+
+% Custom label
+\makeatletter
+\newcommand{\customlabel}[2]{%
+	\protected@write \@auxout {}{\string \newlabel {#1}{{#2}{}}}}
+\makeatother
