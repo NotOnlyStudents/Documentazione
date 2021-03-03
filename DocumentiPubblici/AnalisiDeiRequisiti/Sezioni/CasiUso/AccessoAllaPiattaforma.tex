@@ -16,7 +16,7 @@ L'utente non autenticato che non dispone di credenziali può registrarsi e acced
 	\begin{itemize}
 		\item L'utente accede al sistema;
 		\item L'utente non autenticato si trova nella schermata di registrazione;
-		\item (UC) - Inserisce tutti i dati per compilare il modulo di registrazione;
+		\item (\actualUC.1) - Inserimento dati per la registrazione;
 		\item L'utente non autenticato conferma il proprio indirizzo e-mail inserito;
 		\item L'utente possiede un account presso il sistema.
 	\end{itemize}
@@ -178,7 +178,7 @@ L'utente non autenticato che dispone di credenziali venditore può accedere nell
     \begin{itemize}
     	\item L'utente accede al sistema;
     	\item L'utente non autenticato si trova nella schermata di login;
-    	\item (UC) - Inserisce tutti i dati per compilare il modulo di autenticazione; %Inserisce le credenziali per accedere alla piattaforma
+    	\item (\actualUC.1) - Inserimento dati per l'autenticazione;% Inserisce le credenziali per accedere alla piattaforma
     	\item L'utente richiede l'autenticazione;
     	\item L'utente è autenticato come venditore all'interno della piattaforma;
     	\item L'utente viene portato alla dashboard.
@@ -266,7 +266,7 @@ L'utente non autenticato che dispone di credenziali acquirente può accedere nel
 	\begin{itemize}
 		\item L'utente accede al sistema;
 		\item L'utente non autenticato si trova nella schermata di login;
-		\item (UC) - Inserisce tutti i dati per compilare il modulo di autenticazione; %Inserisce le credenziali per accedere alla piattaforma
+		\item (UC2.1) - Inserimento dati per l'autenticazione;% Inserisce le credenziali per accedere alla piattaforma
 		\item L'utente richiede l'autenticazione;
 		\item L'utente è autenticato come acquirente all'interno del sistema;
 		\item L'utente viene portato alla schermata principale della piattaforma.
@@ -300,35 +300,109 @@ L'utente che dispone di credenziali si è dimenticato la propria password e la v
     \item \textbf{Postcondizione:} l'utente è autenticato e ha cambiato la password con cui poter effettuare l'accesso alla piattaforma;
     \item \textbf{Scenario principale:} l'utente che dispone di credenziali si è dimenticato la propria password e per cambiarla deve compiere i seguenti passi:
     \begin{itemize}
-        \item (UC) - Inserimento indirizzo e-mail;
+        \item (\actualUC.1) - Inserimento indirizzo e-mail per cambio password;
         \item Invio link per il cambio della password all'indirizzo e-mail indicato;
         \item Apertura della schermata per il cambio della password;
-        \item (UC) - Inserimento nuova password;
-        \item (UC) - Inserimento conferma nuova password;
+        \item (\actualUC.2) - Inserimento nuova password;
+        \item (\actualUC.3) - Inserimento conferma nuova password;
         \item L'utente è autenticato e ha cambiato la password.
     \end{itemize}
+	\item \textbf{Scenari alternativi:}
+	\begin{enumerate}[label=\lett]
+		\item Se l'utente non autenticato non seleziona il link per il cambio della password che gli è stato inviato all'indirizzo e-mail indicato entro un tempo limite, allora non sarà più valido e dovrà compiere nuovamente tutta la procedura per il cambio della password. 
+	\end{enumerate}
 	\item \textbf{Estensioni:}
 	\begin{enumerate}[label=\lett]
-		\item L'utente inserisce un indirizzo e-mail e l'identity manager segnala che l'indirizzo e-mail non è presente nella piattaforma, in questo caso:
+		\item L'utente non autenticato inserisce un indirizzo e-mail e l'identity manager segnala che l'indirizzo e-mail non è presente nella piattaforma, in questo caso:
 		\begin{itemize}
 			\item (UC) - Viene visualizzato un messaggio di errore indirizzo e-mail non registrato nella piattaforma;
 			\item L'utente rimane non autenticato e alla schermata per cambiare la password.
 		\end{itemize}
-		\item L'utente compila i campi dati
-		\begin{itemize}
-			\item (UC) - Inserimento indirizzo e-mail;
-			\item Invio link per il cambio della password all'indirizzo e-mail indicato;
-			\item Apertura della schermata per il cambio della password;
-			\item (UC) - Inserimento nuova password;
-			\item (UC) - Inserimento conferma nuova password.
-		\end{itemize}
-		Ma l'identity manager segnala che le due password inserite non coincidono
+		\item L'utente non autenticato non inserisce la stessa password nei campi di password e conferma password e l'identity manager lo segnala. In questo caso:
 		\begin{itemize}
 			\item (UC) - Visualizzazione messaggio di errore in caso di password e password di conferma diverse;
 			\item L'utente può modificare le password inserite.
 		\end{itemize}
 	\end{enumerate}
 \end{itemize}
+
+\resetSubUC
+
+\subUC{Inserimento indirizzo e-mail per cambio password}
+L'utente che dispone di credenziali si è dimenticato la propria password e inserisce la propria e-mail per poterla cambiare.
+\begin{itemize}
+    \item \textbf{Attori primari:} utente non autenticato;
+    \item \textbf{Autori secondari:} identity manager;
+    \item \textbf{Precondizione:} l'utente non autenticato che dispone di credenziali si trova nella schermata di cambio della password;
+    \item \textbf{Postcondizione:} l'utente non autenticato ha inserito l'email collegata al proprio account acquirente;
+    \item \textbf{Scenario principale:} l'utente non autenticato che dispone di credenziali si trova nella schermata per cambiare la password e ha inserito l'email collegata al proprio account;
+	\item \textbf{Estensioni:}
+	\begin{enumerate}[label=\lett]
+		\item L'utente non inserisce l'e-mail e l'identity manager controlla il campo dati che risulta essere vuoto, in questo caso:
+		\begin{itemize}
+			\item (UC) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
+			\item Viene fornita all'utente la possibilità di inserire un indirizzo e-mail.
+		\end{itemize}
+		\item L'utente non autenticato ha inserito un indirizzo e-mail e l'identity manager segnala che non è nel formato non corretto, in questo caso:
+		\begin{itemize}
+			\item (UC) - Viene mostrato un messaggio d'errore indirizzo e-mail non rispetta il formato;
+			\item Viene fornita all'utente la possibilità di modificare l'indirizzo e-mail inserito.
+		\end{itemize}
+		\item L'utente non autenticato non ha inserito un'e-mail che è registrata nella piattaforma. In questo caso:
+		\begin{itemize}
+			\item (UC) - Viene visualizzato il messaggio di errore e-mail non registrata.
+			\item Non verrà inviata alcuna e-email per il cambio della password.
+		\end{itemize}
+	\end{enumerate}
+\end{itemize}
+
+\subUC{Inserimento nuova password}
+L'utente che dispone di credenziali si è dimenticato la propria password e inserisce la nuova password con la quale si autenticherà.
+\begin{itemize}
+	\item \textbf{Attori primari:} utente non autenticato;
+	\item \textbf{Attori secondari:} identity manager;
+	\item \textbf{Precondizione:} l'utente ha selezionato il link per il cambio della password nell'email ricevuta;
+	\item \textbf{Postcondizione:} l'utente ha inserito la nuova password con la quale si autenticherà;
+	\item \textbf{Scenario principale:} l'utente ha selezionato il link per il cambio della password nell'email ricevuta ed è stato reindirizzato alla schermata dedicata per questo scopo. A quel punto inserirà la nuova password con la quale vorrà autenticarsi;
+	\item \textbf{Estensioni:}
+	\begin{enumerate}[label=\lett]
+		\item L'utente non inserisce la password e l'identity manager controlla il campo dati che risulta essere vuoto, in questo caso:
+		\begin{itemize}
+			\item (UC) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
+			\item Viene fornita all'utente la possibilità di inserire una password.
+		\end{itemize}
+		\item L'utente non autenticato ha inserito una password e l'identity manager segnala che non è nel formato corretto, in questo caso:
+		\begin{itemize}
+			\item (UC) - Viene mostrato un messaggio d'errore password non rispetta i requisiti di complessità;
+			\item Viene fornita all'utente la possibilità di modificare la password inserita.
+		\end{itemize}
+	\end{enumerate}
+\end{itemize}
+
+\subUC{Inserimento conferma nuova password}
+L'utente non autenticato che dispone di credenziali si è dimenticato la propria password e inserisce la conferma della nuova password con la quale si autenticherà.
+\begin{itemize}
+	\item \textbf{Attori primari:} utente non autenticato;
+	\item \textbf{Attori secondari:} identity manager;
+	\item \textbf{Precondizione:} l'utente non autenticato ha selezionato il link per il cambio della password nell'email ricevuta;
+	\item \textbf{Postcondizione:} l'utente non autenticato ha inserito la conferma della nuova password con la quale si autenticherà;
+	\item \textbf{Scenario principale:} l'utente ha selezionato il link per il cambio della password nell'email ricevuta ed è stato reindirizzato alla schermata dedicata a questo scopo. A quel punto inserirà la conferma della nuova password con la quale vorrà autenticarsi;
+	\item \textbf{Estensioni:}
+	\begin{enumerate}[label=\lett]
+		\item L'utente non inserisce la conferma della nuova password e l'identity manager controlla il campo dati che risulta essere vuoto, in questo caso:
+		\begin{itemize}
+			\item (UC) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
+			\item Viene fornita all'utente la possibilità di inserire una password.
+		\end{itemize}
+		\item L'utente non autenticato ha inserito la conferma della nuova password e l'identity manager segnala che non è nel formato corretto, in questo caso:
+		\begin{itemize}
+			\item (UC) - Viene mostrato un messaggio d'errore password non rispetta i requisiti di complessità;
+			\item Viene fornita all'utente la possibilità di modificare la password inserita.
+		\end{itemize}
+	\end{enumerate}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 \UC{Logout dalla piattaforma}
 L'utente autenticato decide di scollegarsi dalla piattaforma.
