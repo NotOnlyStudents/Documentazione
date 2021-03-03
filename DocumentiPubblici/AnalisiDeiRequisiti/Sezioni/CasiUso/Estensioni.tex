@@ -176,13 +176,13 @@ Visualizzazione messaggio di errore il quale segnala al venditore che lo sconto 
     \item \textbf{Scenario principale:} il venditore inserisce uno sconto maggiore di 100\% e viene informato dell'inserimento di uno sconto maggiore di 100\%.
 \end{itemize}
 
-\UC{Visualizzazione messaggio di errore tentivo di aggiunta di più di quattro foto relative ad un prodotto}
-Visualizzazione messaggio di errore il quale segnala al venditore il tentativo di aggiunta di una nuova foto relativa ad un prodotto, quando si è già raggiunto il limite massimo di quattro.
+\UC{Visualizzazione messaggio di errore tentativo di aggiunta di più del numero massimo di foto consentite relative ad un prodotto}
+Visualizzazione messaggio di errore il quale segnala al venditore il tentativo di aggiunta di una nuova foto relativa ad un prodotto, quando si è già raggiunto il limite massimo di foto consentite.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
-    \item \textbf{Precondizione:} il venditore cerca di aggiungere una nuova foto relativa ad un prodotto, anche quando si è già raggiunto il limite massimo di quattro;
-    \item \textbf{Postcondizione:} al venditore viene mostrato un messaggio il quale lo avvisa che non possono essere inserite più di 4 quattro foto per prodotto;
-    \item \textbf{Scenario principale:} il venditore cerca di aggiungere una nuova foto relativa ad un prodotto, anche quando si è già raggiunto il limite massimo di quattro e viene informato del superamento del limite di quattro foto per prodotto.
+    \item \textbf{Precondizione:} il venditore cerca di aggiungere una nuova foto relativa ad un prodotto, anche quando si è già raggiunto il limite massimo di foto consentite per un prodotto;
+    \item \textbf{Postcondizione:} al venditore viene mostrato un messaggio il quale lo avvisa che non possono essere inserite ulteriori foto relative al prodotto;
+    \item \textbf{Scenario principale:} il venditore cerca di aggiungere una nuova foto relativa ad un prodotto, anche quando si è già raggiunto il limite massimo di foto consentite e viene informato del superamento di tale limite.
 \end{itemize}
 
 \UC{Visualizzazione messaggio di errore nessuna foto inserita}
@@ -242,13 +242,13 @@ Nel caso in cui venga inserito un CAP per un indirizzo di consegna non valido, v
 	\item \textbf{Scenario principale:} l'attore non ha inserito un CAP composto da esattamente 5 numeri e verrà avvisato della non validità del CAP.
 \end{itemize}
 
-% Estensioni stripe
+% Estensioni gestore dei pagamenti
 \UC{Visualizzazione messaggio d'errore pagamento non andato a buon fine}
-Nel caso in cui avvenga un errore durante lo svolgimento del pagamento da parte di stripe, questo verrà visualizzato all'acquirente.
+Nel caso in cui avvenga un errore durante lo svolgimento del pagamento fornito dal gestore dei pagamenti, questo verrà visualizzato all'acquirente.
 \begin{itemize}
 	\item \textbf{Attori primari:} acquirente;
-	\item \textbf{Attori secondari:} stripe;
-	\item \textbf{Precondizione:} stripe sta svolgendo il pagamento dell'acquirente e si verifica un errore;
+	\item \textbf{Attori secondari:} gestore dei pagamenti;
+	\item \textbf{Precondizione:} il gestore dei pagamenti sta processando il pagamento dell'acquirente e si verifica un errore;
 	\item \textbf{Postcondizione:} all'acquirente verrà mostrato un messaggio il quale lo informa della non riuscita del pagamento con il relativo messaggio;
-	\item \textbf{Scenario principale:} stripe sta svolgendo il pagamento dell'acquirente, si verifica un errore e questo verrà visualizzato all'acquirente informandolo dell'errore specifico.
+	\item \textbf{Scenario principale:} il gestore dei pagamenti sta processando la transazione dell'acquirente, si verifica un errore e questo verrà visualizzato all'acquirente informandolo dell'errore specifico.
 \end{itemize}
