@@ -35,12 +35,12 @@ Il venditore inserisce il nome del prodotto da aggiungere.
     \begin{enumerate}[label=\lett]
     	\item Il venditore non inserisce il nome del prodotto ed il campo dati risulta essere vuoto. In questo caso:
 	    \begin{itemize}
-	        \item (UC) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
+	        \item (UC52) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
 	        \item Viene data la possibilità al venditore di modificare il nome del nuovo prodotto inserito.
 	    \end{itemize}
     	\item Il venditore inserisce un nome composto da troppi caratteri per il nuovo prodotto. In questo caso:
     	\begin{itemize}
-    		\item (UC) - Viene visualizzato il messaggio di errore in caso di inserimento di un numero eccessivo di caratteri;
+    		\item (UC57) - Viene visualizzato il messaggio di errore in caso di inserimento di un numero eccessivo di caratteri;
     		\item Viene data la possibilità al venditore di modificare il nome del nuovo prodotto inserito.
     	\end{itemize}
 	\end{enumerate}
@@ -57,12 +57,12 @@ Il venditore inserisce la descrizione del prodotto da aggiungere.
     \begin{enumerate}[label=\lett]
     	\item Il venditore non inserisce la descrizione del prodotto ed il campo dati risulta essere vuoto. In questo caso:
     	\begin{itemize}
-    		\item (UC) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
+    		\item (UC52) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
     		\item Viene fornita al venditore la possibilità di modificare la descrizione del nuovo prodotto inserito.
     	\end{itemize}
         \item Il venditore inserisce una descrizione composta da troppi caratteri per il nuovo prodotto. In questo caso:
 	    \begin{itemize}
-    		\item (UC) - Viene visualizzato il messaggio di errore in caso di inserimento di un numero eccessivo di caratteri;
+    		\item (UC57) - Viene visualizzato il messaggio di errore in caso di inserimento di un numero eccessivo di caratteri;
 	    	\item Viene fornita al venditore la possibilità di modificare la descrizione del nuovo prodotto inserito.
 	    \end{itemize}
     \end{enumerate}
@@ -92,12 +92,12 @@ Il venditore inserisce il prezzo a cui vendere il prodotto da aggiungere.
     \begin{enumerate}[label=\lett]
     	\item Il venditore non inserisce il prezzo del prodotto ed il campo dati risulta essere vuoto. In questo caso:
     	\begin{itemize}
-    		\item (UC) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
+    		\item (UC52) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
     		\item Viene fornita al venditore la possibilità di aggiungere un prezzo al nuovo prodotto inserito.
     	\end{itemize}
     	\item Il venditore inserisce un prezzo minore o uguale a zero. In questo caso:
     	\begin{itemize}
-    		\item (UC) - Viene visualizzato il messaggio di errore prezzo minore o uguale a zero;
+    		\item (UC59) - Viene visualizzato il messaggio di errore prezzo minore o uguale a zero;
     		\item Viene fornita al venditore la possibilità di aggiungere un nuovo prezzo al prodotto da inserire.
     	\end{itemize}
     \end{enumerate}
@@ -118,12 +118,12 @@ Il venditore inserisce lo sconto percentuale da applicare al prezzo del prodotto
     \begin{enumerate}[label=\lett]
     	\item Il venditore inserisce uno sconto maggiore di 100\%. In questo caso:
     	\begin{itemize}
-    		\item (UC) - Viene visualizzato il messaggio di errore in caso di sconto maggiore di 100\%;
+    		\item (UC62) - Viene visualizzato il messaggio di errore in caso di sconto maggiore di 100\%;
     		\item Viene fornita al venditore la possibilità di modificare lo sconto da applicare al nuovo prodotto.
     	\end{itemize}
     	\item Il venditore inserisce uno sconto minore di 0\%. In questo caso:
     	\begin{itemize}
-    		\item (UC) - Viene mostrato un messaggio di errore che segnala lo sconto minore di 0\%;
+    		\item (UC61) - Viene mostrato un messaggio di errore che segnala lo sconto minore di 0\%;
     		\item Viene fornita al venditore la possibilità di modificare lo sconto da applicare al nuovo prodotto.
     	\end{itemize}
     \end{enumerate}
@@ -144,12 +144,12 @@ Il venditore inserisce la quantità disponibile attualmente in magazzino del pro
     \begin{enumerate}[label=\lett]
     	\item Il venditore inserisce una quantità minore di 0. In questo caso:
     	\begin{itemize}
-    		\item (UC) - Viene visualizzato il messaggio di errore quantità minore di 0;
+    		\item (UC60) - Viene visualizzato il messaggio di errore quantità minore di 0;
     		\item Viene fornita la possibilità al venditore di modificare la quantità inserita per il nuovo prodotto.
     	\end{itemize}
     	\item Il venditore non inserisce la quantità del prodotto ed il campo dati risulta essere vuoto. In questo caso:
     	\begin{itemize}
-    		\item (UC) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
+    		\item (UC52) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
     		\item Viene fornita la possibilità al venditore di aggiungere la quantità inserita per il nuovo prodotto.
     	\end{itemize}
     \end{enumerate}
@@ -166,17 +166,17 @@ Il venditore inserisce le foto relative al prodotto da aggiungere.
     \begin{enumerate}[label=\lett]
     	\item Il venditore non inserisce alcuna foto del prodotto. In questo caso:
     	\begin{itemize}
-    		\item (UC) - Viene visualizzato il messaggio di errore nessuna foto inserita;
+    		\item (UC64) - Viene visualizzato il messaggio di errore nessuna foto inserita;
     		\item Viene fornita al venditore la possibilità di inserire altre foto relative al nuovo prodotto.
     	\end{itemize}
     	\item Il venditore seleziona un file che non è del tipo immagine. In questo caso:
     	\begin{itemize}
-    		\item (UC) - Viene visualizzato il messaggio di errore il quale segnala che il file selezionato non è del tipo immagine;
+    		\item (UC58) - Viene visualizzato il messaggio di errore il quale segnala che il file selezionato non è del tipo immagine;
     		\item Viene fornita la possibilità al venditore di cambiare i file selezionati per il nuovo prodotto.
     	\end{itemize}
     	\item Il venditore cerca di inserire più del massimo numero di foto consentite relative ad un prodotto. In questo caso:
     	\begin{itemize}
-    		\item (UC) - Viene visualizzato il messaggio di errore il quale segnala il tentativo di aggiunta di più del numero massimo di foto consentite relative ad un prodotto;
+    		\item (UC63) - Viene visualizzato il messaggio di errore il quale segnala il tentativo di aggiunta di più del numero massimo di foto consentite relative ad un prodotto;
     		\item Viene fornita la possibilità al venditore di rimuovere alcune foto selezionate per il nuovo prodotto da inserire.
     	\end{itemize}
     \end{enumerate}
@@ -226,7 +226,7 @@ Il venditore vuole modificare il nome del prodotto.
     \begin{enumerate}[label=\lett]
     	\item Il venditore cancella il nome attuale del prodotto ed il campo dati risulta essere vuoto. In questo caso:
     	\begin{itemize}
-    		\item (UC) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
+    		\item (UC52) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
     		\item Viene fornita al venditore la possibilità di inserire un nuovo nome al prodotto selezionato.
     	\end{itemize}
     \end{enumerate}
@@ -243,7 +243,7 @@ Il venditore vuole modificare la descrizione del prodotto.
     \begin{enumerate}[label=\lett]
     	\item Il venditore cancella la descrizione attuale del prodotto ed il campo dati risulta essere vuoto. In questo caso:
     	\begin{itemize}
-    		\item (UC) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
+    		\item (UC52) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
     		\item Viene fornita al venditore la possibilità di inserire una nuova descrizione del prodotto selezionato.
     	\end{itemize}
     \end{enumerate}
@@ -273,12 +273,12 @@ Il venditore modifica il prezzo a cui vendere il prodotto.
     \begin{enumerate}[label=\lett]
     	\item Il venditore cancella il prezzo attuale del prodotto ed il campo dati risulta essere vuoto. In questo caso:
     	\begin{itemize}
-    		\item (UC) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
+    		\item (UC52) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
     		\item Viene fornita la possibilità al venditore di inserire un nuovo prezzo per il prodotto selezionato.
     	\end{itemize}
     	\item Il venditore inserisce un nuovo prezzo minore o uguale a 0. In questo caso:
     	\begin{itemize}
-    		\item (UC) - Verrà visualizzato il messaggio di errore in caso di prezzo minore o uguale a 0;
+    		\item (UC59) - Verrà visualizzato il messaggio di errore in caso di prezzo minore o uguale a 0;
     		\item Viene fornita la possibilità al venditore di modificare il prezzo per il prodotto selezionato.
     	\end{itemize}
     \end{enumerate}
@@ -299,12 +299,12 @@ Il venditore modifica lo sconto percentuale da applicare al prezzo del prodotto.
     \begin{enumerate}[label=\lett]
     	\item Il venditore inserisce uno sconto maggiore di 100\%. In questo caso:
 		\begin{itemize}
-			\item (UC) - Viene visualizzato il messaggio di errore in caso di sconto maggiore di 100\%;
+			\item (UC62) - Viene visualizzato il messaggio di errore in caso di sconto maggiore di 100\%;
 			\item Viene fornita al venditore la possibilità di modificare lo sconto da applicare al nuovo prodotto.
 		\end{itemize}
 		\item Il venditore inserisce uno sconto minore di 0\%. In questo caso:
 		\begin{itemize}
-			\item (UC) - Viene mostrato un messaggio di errore che segnala lo sconto minore di 0\%;
+			\item (UC61) - Viene mostrato un messaggio di errore che segnala lo sconto minore di 0\%;
 			\item Viene fornita al venditore la possibilità di modificare lo sconto da applicare al nuovo prodotto.
 		\end{itemize}
     \end{enumerate}
@@ -321,12 +321,12 @@ Il venditore inserisce le foto relative al prodotto.
     \begin{enumerate}[label=\lett]
     	\item Il venditore seleziona un file che non è del tipo immagine. In questo caso:
 		\begin{itemize}
-			\item (UC) - Viene visualizzato il messaggio di errore il quale segnala che il file selezionato non è del tipo immagine;
+			\item (UC58) - Viene visualizzato il messaggio di errore il quale segnala che il file selezionato non è del tipo immagine;
 			\item Viene fornita la possibilità al venditore di cambiare i file selezionati per il nuovo prodotto.
 		\end{itemize}
 		\item Il venditore cerca di inserire più del numero massimo di foto consentite relative ad un prodotto. In questo caso:
 		\begin{itemize}
-			\item (UC) - Viene visualizzato il messaggio di errore il quale segnala il tentativo di aggiunta di più del numero massimo di foto consentite relative ad un prodotto;
+			\item (UC63) - Viene visualizzato il messaggio di errore il quale segnala il tentativo di aggiunta di più del numero massimo di foto consentite relative ad un prodotto;
 			\item Viene fornita la possibilità al venditore di rimuovere alcune foto selezionate per il nuovo prodotto da inserire.
 		\end{itemize}
     \end{enumerate}
@@ -348,7 +348,7 @@ Il venditore rimuove le foto relative al prodotto da aggiungere.
     \begin{enumerate}[label=\lett]
     	\item Il venditore cancella tutte le foto relative al prodotto. In questo caso:
     	\begin{itemize}
-    		\item (UC) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
+    		\item (UC52) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
     		\item Viene impedita la conferma delle modifiche al prodotto.
     	\end{itemize}
     \end{enumerate}
@@ -394,14 +394,6 @@ Il venditore vuole eliminare un prodotto precedentemente inserito.
 	\begin{enumerate}[label=\lett]
 		\item Il venditore non conferma l'eliminazione del prodotto selezionato e di conseguenza questo rimarrà presente nella piattaforma.
 	\end{enumerate}
-    \item \textbf{Estensioni:}
-    \begin{enumerate}[label=\lett]
-    	\item Il venditore seleziona per l'eliminazione un prodotto che è stato ordinato ma non ancora pagato. In questo caso:
-    	\begin{itemize}
-    		\item (UC) - Viene visualizzato un messaggio di errore in caso di prodotto presente in un ordine non saldato;
-    		\item Viene negato al venditore la possibilità di eliminare il prodotto selezionato.
-    	\end{itemize}
-    \end{enumerate}
 \end{itemize}
 
 \UC{Rifornimento prodotto}
@@ -423,7 +415,7 @@ Il venditore vuole rifornire un prodotto precedentemente inserito che sta per es
 	\begin{enumerate}[label=\lett]
 		\item Il venditore inserisce un valore inferiore a zero con cui rifornire le scorte di un determinato prodotto. In questo caso:
 		\begin{itemize}
-			\item (UC) - Viene visualizzato un messaggio di errore in caso di quantità minore a zero;
+			\item (UC60) - Viene visualizzato un messaggio di errore in caso di quantità minore a zero;
 			\item Viene fornita al venditore la possibilità di modificare il valore inserito per rifornire il prodotto.
 		\end{itemize}
 	\end{enumerate}
