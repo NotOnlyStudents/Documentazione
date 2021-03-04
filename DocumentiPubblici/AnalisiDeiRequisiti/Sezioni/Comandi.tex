@@ -19,8 +19,9 @@
 % UC Counters
 
 \newcounter{UCcounter}
-\newcounter{subUCcounter}
-\newcounter{subSubUCcounter}
+\newcounter{subUCcounter}[UCcounter]
+\newcounter{subSubUCcounter}[subUCcounter]
+
 \setcounter{UCcounter}{0}
 
 \newcommand{\UC}[1]{
@@ -34,10 +35,6 @@
 
 \renewcommand{\thesubUCcounter}{\theUCcounter.\arabic{subUCcounter}}
 
-\newcommand{\resetSubUC}{
-	\setcounter{subUCcounter}{0}
-}
-
 \newcommand{\subUC}[1]{
 	\refstepcounter{subUCcounter}
 	\subsubsection{UC\thesubUCcounter{} - #1}
@@ -49,10 +46,6 @@
 % SubSubUC
 
 \renewcommand{\thesubSubUCcounter}{\thesubUCcounter.\arabic{subSubUCcounter}}
-
-\newcommand{\resetSubSubUC}{
-	\setcounter{subSubUCcounter}{0}
-}
 
 \newcommand{\subSubUC}[1]{
 	\refstepcounter{subSubUCcounter}
