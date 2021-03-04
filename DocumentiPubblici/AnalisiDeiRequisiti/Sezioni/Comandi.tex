@@ -25,8 +25,12 @@
 \setcounter{UCcounter}{0}
 
 \newcommand{\UC}[1]{
-	\refstepcounter{UCcounter}
+	\stepcounter{UCcounter}
+	
 	\subsection{UC\theUCcounter{} - #1}
+	
+	\addtocounter{UCcounter}{-1}
+	\refstepcounter{UCcounter}
 }
 
 \newcommand{\actualUC}{UC\theUCcounter}
@@ -36,8 +40,12 @@
 \renewcommand{\thesubUCcounter}{\theUCcounter.\arabic{subUCcounter}}
 
 \newcommand{\subUC}[1]{
-	\refstepcounter{subUCcounter}
+	\stepcounter{subUCcounter}
+	
 	\subsubsection{UC\thesubUCcounter{} - #1}
+	
+	\addtocounter{subUCcounter}{-1}
+	\refstepcounter{subUCcounter}
 }
 
 \newcommand{\actualSubUC}{UC\thesubUCcounter}
@@ -48,8 +56,12 @@
 \renewcommand{\thesubSubUCcounter}{\thesubUCcounter.\arabic{subSubUCcounter}}
 
 \newcommand{\subSubUC}[1]{
-	\refstepcounter{subSubUCcounter}
+	\stepcounter{subSubUCcounter}
+	
 	\subsubsection{UC\thesubSubUCcounter{} - #1}
+	
+	\addtocounter{subSubUCcounter}{-1}
+	\refstepcounter{subSubUCcounter}
 }
 
 \newcommand{\actualSubSubUC}{UC\thesubSubUCcounter}
@@ -158,12 +170,3 @@
 
 % Enumerate and itemize
 \newcommand{\lett}{\textbf{\alph*}.}
-
-% Custom label
-\makeatletter
-\newcommand\customlabel[2][]{\phantomsection\def\@currentlabelname{#1}\label{#2}}
-
-% \newcommand{\customlabel}[2]{
-% 	\protected@write \@auxout {}{\string \newlabel {#1}{{#2}{}}}
-% }
-\makeatother

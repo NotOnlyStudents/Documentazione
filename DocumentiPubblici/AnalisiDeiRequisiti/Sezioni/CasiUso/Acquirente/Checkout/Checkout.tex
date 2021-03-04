@@ -1,6 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \UC{Checkout}
+\label{checkout}
 
 \begin{figure}[H]
     \centering
@@ -17,16 +18,16 @@ L'utente si trova nella schermata del carrello e vuole procedere al checkout per
     \item \textbf{Postcondizione:} l'attore ha terminato il checkout acquistando i prodotti nel carrello, il suo carrello risulterà vuoto e verrà reindirizzato alla schermata di riepilogo dell'ordine;
     \item \textbf{Scenario principale:} l'attore si trova nella schermata del carrello e seleziona la funzionalità per procedere con il checkout. In seguito eseguirà le seguenti azioni:
     \begin{itemize}
-    	\item (\actualUC.1) - Selezionare l'indirizzo di consegna;
+    	\item (UC\ref{checkout.indirizzo}) - Selezionare l'indirizzo di consegna;
     	\item Inserire possibili informazioni aggiuntive per la consegna dell'acquisto;
-        \item (\actualUC.2) - Eseguire il pagamento.
+        \item (UC\ref{checkout.pagamento}) - Eseguire il pagamento.
     \end{itemize}
     Se il pagamento è andato a buon fine, verrà visualizzato un messaggio il quale segnalerà la buona riuscita del pagamento e verrà visualizzata la schermata di riepilogo dell'ordine;
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
         \item Se il pagamento fallisce per un errore del gestore dei pagamenti:
         \begin{itemize}
-            \item (UC67) - Verrà visualizzato il messaggio di errore pagamento non andato a buon fine;
+            \item (UC\ref{estensione:pagamento-fallito}) - Verrà visualizzato il messaggio di errore pagamento non andato a buon fine;
             \item Il carrello non verrà svuotato;
             \item L'acquirente verrà reindirizzato alla schermata del carrello.
         \end{itemize}
@@ -34,6 +35,8 @@ L'utente si trova nella schermata del carrello e vuole procedere al checkout per
 \end{itemize}
 
 \subUC{Selezione dell'indirizzo della consegna}
+\label{checkout.indirizzo}
+
 L'acquirente seleziona l'indirizzo della consegna, ovvero dove verrà recapitato l'acquisto, tra gli indirizzi di consegna precedentemente inseriti.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
@@ -48,6 +51,8 @@ L'acquirente seleziona l'indirizzo della consegna, ovvero dove verrà recapitato
 \end{itemize}
 
 \subUC{Esecuzione del pagamento}
+\label{checkout.pagamento}
+
 L'acquirente procede al pagamento attraverso il servizio fornito dal gestore dei pagamenti.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;

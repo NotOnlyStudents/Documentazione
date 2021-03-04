@@ -1,6 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \UC{Visualizzazione del carrello}
+\label{visualizzazione-carrello}
 
 \begin{figure}[H]
     \centering
@@ -30,6 +31,8 @@ L'utente non autenticato o l'acquirente visualizza il proprio carrello.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \UC{Eliminazione di un prodotto dal carrello}
+\label{eliminazione-prodotto-dal-carrello}
+
 L'utente non autenticato o l'acquirente può eliminare un prodotto che ha inserito nel carrello.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente o utente non autenticato;
@@ -41,6 +44,8 @@ L'utente non autenticato o l'acquirente può eliminare un prodotto che ha inseri
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \UC{Modifica della quantità di un prodotto nel carrello}
+\label{modifica-quantita-nel-carrello}
+
 L'utente non autenticato o l'acquirente modifica la quantità di un prodotto già nel carrello.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente o utente non autenticato;
@@ -51,7 +56,7 @@ L'utente non autenticato o l'acquirente modifica la quantità di un prodotto gi�
     \begin{enumerate}[label=\lett]
         \item L'attore modifica la quantità con una minore o uguale a zero. In questo caso:
         \begin{itemize}
-            \item (UC60) - Viene visualizzato il messaggio d'errore quantità del prodotto non valida;
+            \item (UC\ref{estensione:quantita-minore-a-zero}) - Viene visualizzato il messaggio d'errore quantità del prodotto non valida;
             \item Verrà impedita la modifica della quantità nel carrello.
         \end{itemize}
     \end{enumerate}
