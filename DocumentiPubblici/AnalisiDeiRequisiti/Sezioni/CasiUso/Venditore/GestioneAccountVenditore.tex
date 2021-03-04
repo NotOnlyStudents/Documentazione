@@ -26,12 +26,12 @@ Il venditore può modificare le sue informazioni personali.
     	\item Il venditore compila i campi dati per la password e la conferma della stessa con due password diverse, in questo caso:
     	\begin{itemize}
     		\item L'identity manager segnala che le due password inserite non coincidono;
-    		\item (UC) - Visualizzazione messaggio di errore in caso di password e password di conferma diverse;
+    		\item (UC51) - Visualizzazione messaggio di errore in caso di password e password di conferma diverse;
     		\item Il venditore può modificare le password inserite.
     	\end{itemize}
     	\item Il venditore cambia il proprio indirizzo e-mail con un'e-mail già presente nella piattaforma e l'identity manager lo segnala. In questo caso:
     	\begin{itemize}
-    		\item (UC) - Visualizzazione messaggio di errore in caso di cambio e-mail con una già utilizzata nella piattaforma;
+    		\item (UC46) - Visualizzazione messaggio di errore in caso di cambio e-mail con una già utilizzata nella piattaforma;
     		\item Viene fornita al venditore la possibilità di modificare il proprio indirizzo e-mail inserito.
     	\end{itemize}
     \end{enumerate}
@@ -55,7 +55,7 @@ Il venditore vuole modificare il proprio nome.
 	\begin{enumerate}[label=\lett]
 		\item Il venditore non inserisce il nome e l'identity manager controlla il campo dati che risulta essere vuoto, in questo caso:
 		\begin{itemize}
-			\item (UC) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
+			\item (UC52) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
 			\item Viene fornita al venditore la possibilità di inserire un nome.
 		\end{itemize}
 	\end{enumerate} 
@@ -77,7 +77,7 @@ Il venditore vuole modificare il proprio cognome.
 	\begin{enumerate}[label=\lett]
 		\item Il venditore non inserisce il cognome e l'identity manager controlla il campo dati che risulta essere vuoto, in questo caso:
 		\begin{itemize}
-			\item (UC) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
+			\item (UC52) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
 			\item Viene fornita al venditore la possibilità di inserire un cognome.
 		\end{itemize}
 	\end{enumerate} 
@@ -99,12 +99,12 @@ Il venditore vuole modificare la propria e-mail.
     \begin{enumerate}[label=\lett]
     	\item Il venditore ha inserito un indirizzo e-mail e l'identity manager segnala che non è nel formato non corretto, in questo caso:
     	\begin{itemize}
-    		\item (UC) - Viene mostrato un messaggio d'errore indirizzo e-mail non rispetta il formato;
+    		\item (UC49) - Viene mostrato un messaggio d'errore indirizzo e-mail non rispetta il formato;
     		\item Viene fornita al venditore la possibilità di modificare l'indirizzo e-mail inserito.
     	\end{itemize}
 	    \item Il venditore non inserisce l'e-mail e l'identity manager controlla il campo dati che risulta essere vuoto, in questo caso:
 	    \begin{itemize}
-	    	\item (UC) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
+	    	\item (UC52) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
 	    	\item Viene fornita al venditore la possibilità di inserire un indirizzo e-mail.
 	    \end{itemize}
     \end{enumerate} 
@@ -118,8 +118,8 @@ Il venditore vuole modificare la propria password.
     \item \textbf{Postcondizione:} il venditore ha modificato la sua password;
     \item \textbf{Scenario principale:} Il venditore per poter cambiare la password deve compiere i seguenti passi:
         \begin{itemize}
-            \item (UC) - Inserimento password per la modifica delle informazioni personali del venditore;
-            \item (UC) - Inserimento conferma password per la modifica delle informazioni personali del venditore.
+            \item (\actualSubUC.1) - Inserimento password per la modifica delle informazioni personali del venditore;
+            \item (\actualSubUC.2) - Inserimento conferma password per la modifica delle informazioni personali del venditore.
         \end{itemize}
     \item \textbf{Scenari alternativi:}
     \begin{enumerate}[label=\lett]
@@ -141,12 +141,12 @@ Il venditore inserisce una nuova password.
 	\begin{enumerate}[label=\lett]
 		\item Il venditore inserisce la password e l'identity manager controlla il campo dati che risulta essere vuoto, in questo caso:
 		\begin{itemize}
-			\item (UC) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
+			\item (UC52) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
 			\item Viene fornita all'utente la possibilità di inserire una password.
 		\end{itemize}
 		\item Il venditore ha inserito una password e l'identity manager segnala che non è nel formato corretto, in questo caso:
 		\begin{itemize}
-			\item (UC) - Viene mostrato un messaggio d'errore password non rispetta i requisiti di complessità;
+			\item (UC50) - Viene mostrato un messaggio d'errore password non rispetta i requisiti di complessità;
 			\item Viene fornita al venditore la possibilità di modificare la password inserita.
 		\end{itemize}
 	\end{enumerate} 
@@ -164,12 +164,12 @@ Il venditore inserisce la conferma della nuova password.
 	\begin{enumerate}[label=\lett]
 		\item Il venditore inserisce la password e l'identity manager controlla il campo dati che risulta essere vuoto, in questo caso:
 		\begin{itemize}
-			\item (UC) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
+			\item (UC52) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
 			\item Viene fornita all'utente la possibilità di inserire una password.
 		\end{itemize}
 		\item Il venditore ha inserito una password e l'identity manager segnala che non è nel formato corretto, in questo caso:
 		\begin{itemize}
-			\item (UC) - Viene mostrato un messaggio d'errore password non rispetta i requisiti di complessità;
+			\item (UC50) - Viene mostrato un messaggio d'errore password non rispetta i requisiti di complessità;
 			\item Viene fornita al venditore la possibilità di modificare la password inserita.
 		\end{itemize}
 	\end{enumerate} 
@@ -190,7 +190,7 @@ Il venditore vuole modificare il proprio logo.
     \begin{enumerate}[label=\lett]
     	\item Il venditore seleziona un file del tipo non immagine. In questo caso:
     	\begin{itemize}
-    		\item (UC) - Verrà visualizzato il messaggio di errore il quale segnala che il file selezionato non è del tipo immagine;
+    		\item (UC58) - Verrà visualizzato il messaggio di errore il quale segnala che il file selezionato non è del tipo immagine;
     		\item Viene fornita al venditore la possibilità di modificare il file inserito.
     	\end{itemize}
     \end{enumerate}
@@ -212,7 +212,7 @@ Il venditore vuole modificare il nome dell'azienda.
 	\begin{enumerate}[label=\lett]
 		\item Il venditore non inserisce il nome aziendale ed il campo dati risulta essere vuoto. In questo caso:
 		\begin{itemize}
-			\item (UC) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
+			\item (UC52) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
 			\item Viene fornita al venditore la possibilità di inserire un nome aziendale.
 		\end{itemize}
 	\end{enumerate} 

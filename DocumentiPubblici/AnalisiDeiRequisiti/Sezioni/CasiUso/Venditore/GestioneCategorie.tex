@@ -8,13 +8,13 @@ Il venditore aggiunge una nuova categoria.
     \begin{itemize}
     	\item Il venditore si trova nella schermata di amministrazione delle categorie;
     	\item Il venditore seleziona la funzionalità per aggiungere una nuova categoria di prodotti;
-    	\item (UC) - Inserimento nome della nuova categoria;
+    	\item (\actualUC.1) - Inserimento nome della nuova categoria;
     	\item Il venditore conferma la creazione della categoria di prodotti.
     \end{itemize} 
     \item \textbf{Scenari alternativi:}
     \begin{enumerate}[label=\lett]
     	\item Il venditore non conferma la creazione della categoria e di conseguenza questa non verrà aggiunta.
-    \end{enumerate} 
+    \end{enumerate}
 \end{itemize}
 
 \resetSubUC
@@ -30,12 +30,12 @@ Il venditore inserisce il nome della nuova categoria da aggiungere.
     \begin{enumerate}[label=\lett]
     	\item Il venditore non inserisce alcun nome per la nuova categoria. In questo caso:
     	\begin{itemize}
-    		\item (UC) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito;
+    		\item (UC52) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito;
     		\item Viene fornita al venditore la possibilità di modificare il nome della nuova categoria di prodotti.
     	\end{itemize}
     	\item Il venditore inserisce un nome per la nuova categoria che è già assegnato ad un'altra categoria. In questo caso:
     	\begin{itemize}
-    		\item (UC) - Verrà visualizzato il messaggio di errore nome per la categoria già utilizzato;
+    		\item (UC65) - Verrà visualizzato il messaggio di errore nome per la categoria già utilizzato;
     		\item Viene fornita al venditore la possibilità di modificare il nome della nuova categoria di prodotti.
     	\end{itemize}
     \end{enumerate}
@@ -51,7 +51,7 @@ Il venditore modifica una categoria precedentemente inserita.
     \begin{itemize}
     	\item Il venditore si trova nella schermata di amministrazione delle categorie;
     	\item Il venditore seleziona la funzionalità per modificare una categoria di prodotti;
-    	\item (UC) - Modifica nome della categoria;
+    	\item (\actualUC.1) - Modifica nome della categoria;
     	\item Il venditore conferma la modifica della categoria di prodotti.
     \end{itemize}
     \item \textbf{Scenari alternativi:} 
@@ -73,12 +73,12 @@ Il venditore modifica il nome attuale di una categoria precedentemente inserita.
     \begin{enumerate}[label=\lett]
     	\item Il venditore elimina il nome utilizzato in precedenza non inserendone uno nuovo. In questo caso:
     	\begin{itemize}
-    		\item (UC) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito;
+    		\item (UC52) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito;
     		\item Viene fornita al venditore la possibilità di modificare il nome della nuova categoria di prodotti.
     	\end{itemize}
     	\item Il venditore modifica il nome della categoria con uno che è già assegnato ad un'altra categoria. In questo caso:
 		\begin{itemize}
-			\item (UC) - Verrà visualizzato il messaggio di errore nome per la categoria già utilizzato;
+			\item (UC65) - Verrà visualizzato il messaggio di errore nome per la categoria già utilizzato;
 			\item Viene fornita al venditore la possibilità di modificare il nome della nuova categoria di prodotti.
 		\end{itemize}
     \end{enumerate}
@@ -111,6 +111,6 @@ Il venditore può cercare una categoria dalla propria schermata di amministrazio
 	\item \textbf{Scenario principale:} il venditore ha selezionato la funzione prevista per la ricerca. Dopo aver inserito le parole per le quali individuare la categoria, avvia la ricerca e viene aggiornata la schermata di amministrazione delle categorie la quale visualizzerà tutte le categorie che hanno almeno una delle parole indicate nel nome;
 	\item \textbf{Scenari alternativi:}
 	\begin{enumerate}[label=\lett]
-		\item Il venditore ha svolto una ricerca che non ha trovato coincidenze con nessuna categoria. In questo caso la schermata di amministrazione delle categorie viene aggiornata mostrando nessun risultato trovato.
+		\item Il venditore ha svolto una ricerca che non ha trovato coincidenze con nessuna categoria. In questo caso la schermata di amministrazione delle categorie viene aggiornata mostrando il messaggio nessuna categoria trovata.
 	\end{enumerate}
 \end{itemize}
