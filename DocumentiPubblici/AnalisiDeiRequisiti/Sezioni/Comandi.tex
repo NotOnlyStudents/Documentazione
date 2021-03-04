@@ -24,28 +24,42 @@
 \setcounter{UCcounter}{0}
 
 \newcommand{\UC}[1]{
-	\stepcounter{UCcounter}
+	\refstepcounter{UCcounter}
 	\subsection{UC\theUCcounter{} - #1}
 }
+
 \newcommand{\actualUC}{UC\theUCcounter}
+
+% SubUC
+
+\renewcommand{\thesubUCcounter}{\theUCcounter.\arabic{subUCcounter}}
 
 \newcommand{\resetSubUC}{
 	\setcounter{subUCcounter}{0}
 }
+
 \newcommand{\subUC}[1]{
-	\stepcounter{subUCcounter}
-	\subsubsection{UC\theUCcounter.\thesubUCcounter{} - #1}
+	\refstepcounter{subUCcounter}
+	\subsubsection{UC\thesubUCcounter{} - #1}
 }
-\newcommand{\actualSubUC}{UC\theUCcounter.\thesubUCcounter}
+
+\newcommand{\actualSubUC}{UC\thesubUCcounter}
+
+
+% SubSubUC
+
+\renewcommand{\thesubSubUCcounter}{\thesubUCcounter.\arabic{subSubUCcounter}}
 
 \newcommand{\resetSubSubUC}{
 	\setcounter{subSubUCcounter}{0}
 }
+
 \newcommand{\subSubUC}[1]{
-	\stepcounter{subSubUCcounter}
-	\subsubsection{UC\theUCcounter.\thesubUCcounter.\thesubSubUCcounter{} - #1}
+	\refstepcounter{subSubUCcounter}
+	\subsubsection{UC\thesubSubUCcounter{} - #1}
 }
-\newcommand{\actualSubSubUC}{UC\theUCcounter.\thesubUCcounter.\thesubSubUCcounter}
+
+\newcommand{\actualSubSubUC}{UC\thesubSubUCcounter}
 
 % Requirements Counters
 
