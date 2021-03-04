@@ -47,7 +47,7 @@ L'acquirente seleziona la nazione dell'indirizzo di consegna.
     \begin{enumerate}[label=\lett]
         \item L'acquirente non seleziona alcuna nazione per il nuovo indirizzo di consegna. In questo caso:
         \begin{itemize}
-            \item (UC) - Viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
+            \item (UC52) - Viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
             \item Verrà impedita l'aggiunta del nuovo indirizzo.
         \end{itemize}
     \end{enumerate}
@@ -64,12 +64,12 @@ L'acquirente inserisce il comune dell'indirizzo di consegna.
     \begin{enumerate}[label=\lett]
         \item L'acquirente non inserisce alcun comune per il nuovo indirizzo di consegna. In questo caso:
         \begin{itemize}
-            \item (UC) - Viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
+            \item (UC52) - Viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
             \item Verrà impedita l'aggiunta del nuovo indirizzo.
         \end{itemize}
         \item L'acquirente inserisce dei caratteri non alfabetici. In questo caso:
         \begin{itemize}
-            \item (UC) - Viene mostrato il messaggio d'errore caratteri non alfabetici non permessi;
+            \item \hyperlink{CAlfabetici}{(UC44) - Viene mostrato il messaggio d'errore caratteri non alfabetici non permessi;}
             \item Verrà impedita l'aggiunta dell'indirizzo di consegna.
         \end{itemize}
     \end{enumerate}
@@ -86,7 +86,7 @@ L'acquirente inserisce la via dell'indirizzo di consegna, includendo anche il nu
     \begin{enumerate}[label=\lett]
         \item L'acquirente non inserisce alcuna via per il nuovo indirizzo di consegna. In questo caso:
         \begin{itemize}
-            \item (UC) - Viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
+            \item (UC52) - Viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
             \item Verrà impedita l'aggiunta del nuovo indirizzo.
         \end{itemize}
     \end{enumerate}
@@ -103,12 +103,12 @@ L'acquirente inserisce il CAP dell'indirizzo di consegna.
     \begin{enumerate}[label=\lett]
         \item L'acquirente non inserisce alcun CAP per il nuovo indirizzo di consegna. In questo caso:
         \begin{itemize}
-            \item (UC) - Viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
+            \item (UC52) - Viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
             \item Verrà impedita l'aggiunta del nuovo indirizzo.
         \end{itemize}
         \item L'acquirente non inserisce esattamente 5 numeri come CAP. In questo caso:
         \begin{itemize}
-            \item (UC) - Viene mostrato il messaggio d'errore CAP non valido;
+            \item (UC66) - Viene mostrato il messaggio d'errore CAP non valido;
             \item Verrà impedita l'aggiunta del nuovo indirizzo.
         \end{itemize}
     \end{enumerate}
@@ -170,12 +170,12 @@ L'acquirente vuole modificare il comune dell'indirizzo di consegna.
     \begin{enumerate}[label=\lett]
         \item L'acquirente elimina l'attuale comune dell'indirizzo di consegna e non ne inserisce uno nuovo. In questo caso:
         \begin{itemize}
-            \item (UC) - Viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
+            \item (UC52) - Viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
             \item Verrà impedita la modifica dell'indirizzo di consegna.
         \end{itemize}
         \item L'acquirente modifica il comune dell'indirizzo di consegna inserendo dei caratteri non alfabetici. In questo caso:
         \begin{itemize}
-            \item (UC) - Viene mostrato il messaggio d'errore caratteri non alfabetici non permessi;
+            \item \hyperlink{CAlfabetici}{(UC44) - Viene mostrato il messaggio d'errore caratteri non alfabetici non permessi;}
             \item Verrà impedita la modifica dell'indirizzo di consegna.
         \end{itemize}
     \end{enumerate}
@@ -200,7 +200,7 @@ L'acquirente vuole modificare la via dell'indirizzo di consegna.
     \begin{enumerate}[label=\lett]
         \item L'acquirente elimina l'attuale via dell'indirizzo di consegna e non ne inserisce una nuova. In questo caso:
         \begin{itemize}
-            \item (UC) - Viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
+            \item (UC52) - Viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
             \item Verrà impedita la modifica dell'indirizzo di consegna.
         \end{itemize}
     \end{enumerate}
@@ -225,12 +225,12 @@ L'acquirente vuole modificare il CAP dell'indirizzo di consegna.
     \begin{enumerate}[label=\lett]
         \item L'acquirente elimina l'attuale CAP dell'indirizzo di consegna e non ne inserisce uno nuovo. In questo caso:
         \begin{itemize}
-            \item (UC) - Viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
+            \item (UC52) - Viene mostrato il messaggio d'errore campo dati obbligatorio non inserito;
             \item Verrà impedita la modifica dell'indirizzo di consegna.
         \end{itemize}
         \item L'acquirente modifica il CAP in modo tale che non sia composto da esattamente 5 numeri. In questo caso:
         \begin{itemize}
-            \item (UC) - Viene mostrato il messaggio d'errore CAP non valido;
+            \item (UC66) - Viene mostrato il messaggio d'errore CAP non valido;
             \item Verrà impedita la modifica dell'indirizzo di consegna.
         \end{itemize}
     \end{enumerate}
