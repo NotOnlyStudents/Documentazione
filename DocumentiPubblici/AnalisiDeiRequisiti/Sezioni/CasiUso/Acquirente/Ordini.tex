@@ -1,6 +1,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \UC{Visualizzazione ordini effettuati}
+\label{visualizzazione-ordini-effettuati}
+
 L'acquirente può visualizzare l'elenco degli ordini effettuati sulla piattaforma.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
@@ -28,6 +30,8 @@ L'acquirente può visualizzare l'elenco degli ordini effettuati sulla piattaform
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \UC{Ricerca per codice di un ordine effettuato}
+\label{ricerca-codice-ordine-acquirente}
+
 L'acquirente può cercare un ordine sapendo il suo codice numerico.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
@@ -42,7 +46,7 @@ L'acquirente può cercare un ordine sapendo il suo codice numerico.
     \begin{enumerate}[label=\lett]
         \item L'acquirente inserisce dei caratteri non numerici nel codice per cui cercare. In questo caso:
         \begin{itemize}
-            \item (UC54) - Verrà visualizzato il messaggio d'errore codice dell'ordine non valido;
+            \item (UC\ref{estensione:codice-ordine-non-valido}) - Verrà visualizzato il messaggio d'errore codice dell'ordine non valido;
             \item Non verrà eseguita la ricerca.
         \end{itemize}
     \end{enumerate}
@@ -51,6 +55,8 @@ L'acquirente può cercare un ordine sapendo il suo codice numerico.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \UC{Filtro temporale per gli ordini effettuati}
+\label{filtro-temporale-ordini-acquirente}
+
 L'acquirente filtra temporalmente l'elenco degli ordini effettuati sulla piattaforma.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
@@ -58,8 +64,8 @@ L'acquirente filtra temporalmente l'elenco degli ordini effettuati sulla piattaf
     \item \textbf{Postcondizione:} l'acquirente visualizzerà tutti gli ordini che sono stati fatti tra la data di inizio e quella di fine impostate;
     \item \textbf{Scenario principale:} l'acquirente si trova nella schermata di visualizzazione degli ordini effettuati e vuole filtrare gli ordini effettuati durante un certo intervallo temporale. Per farlo dovrà:
     \begin{itemize}
-        \item (\actualUC.1) - Impostare la data iniziale dell'intervallo temporale;
-        \item (\actualUC.2) - Impostare la data finale dell'intervallo temporale.
+        \item (UC\ref{filtro-temporale-ordini-acquirente.data-iniziale}) - Impostare la data iniziale dell'intervallo temporale;
+        \item (UC\ref{filtro-temporale-ordini-acquirente.data-finale}) - Impostare la data finale dell'intervallo temporale.
     \end{itemize}
 	\item \textbf{Scenari alternativi:}
 	\begin{enumerate}[label=\lett]
@@ -70,15 +76,15 @@ L'acquirente filtra temporalmente l'elenco degli ordini effettuati sulla piattaf
     \begin{enumerate}[label=\lett]
         \item L'acquirente inserisce una data iniziale maggiore di quella finale. In questo caso:
         \begin{itemize}
-            \item (UC55) - Verrà visualizzato il messaggio d'errore data iniziale maggiore di quella finale;
+            \item (UC\ref{estensione:data-iniziale-maggiore-data-finale}) - Verrà visualizzato il messaggio d'errore data iniziale maggiore di quella finale;
             \item Non verrà eseguita la ricerca.
         \end{itemize}
     \end{enumerate}
 \end{itemize}
 
-\resetSubUC
-
 \subUC{Impostazione della data iniziale dell'intervallo temporale}
+\label{filtro-temporale-ordini-acquirente.data-iniziale}
+
 L'acquirente imposta la data iniziale dell'intervallo per il quale filtrare l'elenco degli ordini effettuati sulla piattaforma.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
@@ -89,13 +95,15 @@ L'acquirente imposta la data iniziale dell'intervallo per il quale filtrare l'el
     \begin{enumerate}[label=\lett]
         \item L'acquirente inserisce una data iniziale non nel formato corretto. In questo caso:
         \begin{itemize}
-            \item (UC53) - Verrà visualizzato il messaggio d'errore data non valida;
+            \item (UC\ref{estensione:data-non-valida}) - Verrà visualizzato il messaggio d'errore data non valida;
             \item Non verrà eseguita la ricerca.
         \end{itemize} 
     \end{enumerate}
 \end{itemize}
 
 \subUC{Impostazione della data finale dell'intervallo temporale}
+\label{filtro-temporale-ordini-acquirente.data-finale}
+
 L'acquirente imposta la data finale dell'intervallo per il quale filtrare l'elenco degli ordini effettuati sulla piattaforma.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
@@ -106,7 +114,7 @@ L'acquirente imposta la data finale dell'intervallo per il quale filtrare l'elen
     \begin{enumerate}[label=\lett]
         \item L'acquirente inserisce una data finale non nel formato corretto. In questo caso:
         \begin{itemize}
-            \item (UC53) - Verrà visualizzato il messaggio d'errore data non valida;
+            \item (UC\ref{estensione:data-non-valida}) - Verrà visualizzato il messaggio d'errore data non valida;
             \item Non verrà eseguita la ricerca.
         \end{itemize} 
     \end{enumerate}

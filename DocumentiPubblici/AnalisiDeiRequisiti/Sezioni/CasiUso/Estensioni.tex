@@ -1,5 +1,7 @@
 % Estensioni campi dati
-\hypertarget{CAlfabetici}{\UC{Visualizzazione messaggio di errore caratteri non alfabetici non permessi}}
+\UC{Visualizzazione messaggio di errore caratteri non alfabetici non permessi}
+\label{estensione:caratteri-non-alfabetici-non-permessi}
+
 Visualizzazione messaggio di errore che segnala all'attore l'inserimento di caratteri non alfabetici.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
@@ -9,7 +11,9 @@ Visualizzazione messaggio di errore che segnala all'attore l'inserimento di cara
 \end{itemize}
 
 % Estensioni e-mail
-\hypertarget{RegistrazioneEmailPresente}{\UC{Visualizzazione messaggio di errore in caso di registrazione con un'e-mail già utilizzata nella piattaforma}}
+\UC{Visualizzazione messaggio di errore in caso di registrazione con un'e-mail già utilizzata nella piattaforma}
+\label{estensione:registrazione-con-email-non-esistente}
+
 Visualizzazione messaggio di errore che segnala all'attore il tentativo di registrazione con un'e-mail già utilizzata nella piattaforma.
 \begin{itemize}
     \item \textbf{Attori primari:} utente non autenticato;
@@ -18,8 +22,10 @@ Visualizzazione messaggio di errore che segnala all'attore il tentativo di regis
     \item \textbf{Scenario principale:} l'attore sta cercando di registrarsi con un'e-mail già utilizzata nella piattaforma e viene avvisato dell'impossibilità di proseguire con la registrazione alla piattaforma.
 \end{itemize}
 
-\hypertarget{CambioEmailPresente}{\UC{Visualizzazione messaggio di errore in caso di cambio e-mail con una già utilizzata nella piattaforma}}
-Visualizzazione messaggio di errore che segnala all'attore il tentativo di cambio dell'indirizzo e-mail attuale con una già utilizzata nella piattaforma.
+\UC{Visualizzazione messaggio di errore in caso di cambio e-mail con una già utilizzata nella piattaforma}
+\label{estensione:cambio-con-email-esistente}
+
+Visualizzazione messaggio di errore che segnala all'attore il tentativo di cambio dell'indirizzo e-mail attuale con uno già utilizzato nella piattaforma.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente o venditore;
     \item \textbf{Precondizione:} l'attore sta cercando di cambiare la propria e-mail con una già utilizzata nella piattaforma;
@@ -27,7 +33,9 @@ Visualizzazione messaggio di errore che segnala all'attore il tentativo di cambi
     \item \textbf{Scenario principale:} l'attore sta cercando di cambiare la propria e-mail attuale con un'e-mail già utilizzata nella piattaforma e viene avvisato dell'impossibilità di proseguire con il cambio della propria e-mail.
 \end{itemize}
 
-\hypertarget{EmailNonRegistrata}{\UC{Visualizzazione messaggio di errore in caso di e-mail non registrata}}
+\UC{Visualizzazione messaggio di errore in caso di e-mail non registrata}
+\label{estensione:email-non-esistente}
+
 Visualizzazione messaggio di errore che segnala all'attore il tentativo di accesso alla piattaforma con una e-mail non registrata.
 \begin{itemize}
     \item \textbf{Attori primari:} utente non autenticato;
@@ -36,7 +44,9 @@ Visualizzazione messaggio di errore che segnala all'attore il tentativo di acces
     \item \textbf{Scenario principale:} l'utente non autenticato ha inserito un'e-mail non registrata nella piattaforma e viene informato dell'errore commesso.
 \end{itemize}
 
-\hypertarget{CredenzialiNonPresenti}{\UC{Visualizzazione messaggio di errore in caso di credenziali non presenti nella piattaforma}}
+\UC{Visualizzazione messaggio di errore in caso di credenziali non presenti nella piattaforma}
+\label{estensione:credenziali-non-presenti}
+
 Visualizzazione messaggio di errore che segnala all'utente il tentativo di accesso alla piattaforma attraverso delle credenziali non presenti nella piattaforma.
 \begin{itemize}
     \item \textbf{Attori primari:} utente non autenticato;
@@ -45,7 +55,9 @@ Visualizzazione messaggio di errore che segnala all'utente il tentativo di acces
     \item \textbf{Scenario principale:} l'utente non autenticato tenta di accedere alla piattaforma inserendo delle credenziali e viene informato dell'utilizzo di credenziali non presenti nella piattaforma.
 \end{itemize}
 
-\hypertarget{EmailInvalida}{\UC{Visualizzazione messaggio di errore in caso di e-mail non valida}}
+\UC{Visualizzazione messaggio di errore in caso di e-mail non valida}
+\label{estensione:email-non-valida}
+
 Visualizzazione messaggio di errore che segnala all'utente che l'e-mail inserita non rispetta il formato di un indirizzo e-mail.
 \begin{itemize}
     \item \textbf{Attori primari:} utente autenticato o utente non autenticato;
@@ -55,7 +67,9 @@ Visualizzazione messaggio di errore che segnala all'utente che l'e-mail inserita
 \end{itemize}
 
 % Estensioni password
-\hypertarget{PasswordInvalida}{\UC{Visualizzazione messaggio di errore password non rispetta i requisiti di complessità}}
+\UC{Visualizzazione messaggio di errore password non rispetta i requisiti di complessità}
+\label{estensione:password-non-valida}
+
 Visualizzazione messaggio di errore che segnala all'utente l'inserimento di una password che non rispetta le condizioni minime per essere accettabile.
 \begin{itemize}
     \item \textbf{Attori primari:} utente autenticato o utente non autenticato;
@@ -64,7 +78,9 @@ Visualizzazione messaggio di errore che segnala all'utente l'inserimento di una 
     \item \textbf{Scenario principale:} l'attore ha inserito una password troppo debole che non rispetta le condizioni minime per essere accettabile e viene informato dell'errore commesso.
 \end{itemize}
 
-\hypertarget{PasswordsDiverse}{\UC{Visualizzazione messaggio di errore in caso di password e password di conferma diverse}}
+\UC{Visualizzazione messaggio di errore in caso di password e password di conferma diverse}
+\label{estensione:password-conferma-diverse}
+
 Visualizzazione messaggio di errore che segnala all'utente la non corrispondenza della password e della password di conferma inserite.
 \begin{itemize}
     \item \textbf{Attori primari:} utente autenticato o utente non autenticato;
@@ -73,8 +89,10 @@ Visualizzazione messaggio di errore che segnala all'utente la non corrispondenza
     \item \textbf{Scenario principale:} l'attore inserisce una password di conferma che non corrisponde a quella inserita come password da registrare e viene informato della non corrispondenza.
 \end{itemize}
 
-\hypertarget{CampoObbligatorio}{\UC{Visualizzazione messaggio di errore campo dati obbligatorio non inserito}}
-Visualizzazione messaggio di errore che segnala all'utente il mancato riempimento di un campo dati obbligatorio.
+\UC{Visualizzazione messaggio campo dati obbligatorio non inserito}
+\label{estensione:campo-obbligatorio-non-inserito}
+
+Visualizzazione messaggio che segnala all'utente il mancato riempimento di un campo dati obbligatorio.
 \begin{itemize}
     \item \textbf{Attori primari:} utente autenticato o utente non autenticato;
     \item \textbf{Precondizione:} l'attore non ha inserito, oppure ha inserito solo caratteri vuoti come spazi o tab, in un campo dati obbligatorio;
@@ -83,7 +101,9 @@ Visualizzazione messaggio di errore che segnala all'utente il mancato riempiment
 \end{itemize}
 
 % Estensioni ordini
-\hypertarget{DataInvalida}{\UC{Visualizzazione messaggio d'errore data non valida}}
+\UC{Visualizzazione messaggio d'errore data non valida}
+\label{estensione:data-non-valida}
+
 Visualizzazione messaggio di errore che segnala all'attore l'inserimento di una data non valida.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente o venditore;
@@ -92,7 +112,9 @@ Visualizzazione messaggio di errore che segnala all'attore l'inserimento di una 
     \item \textbf{Scenario principale:} l'attore ha inserito una data non nel formato giorno/mese/anno e viene avvisato del formato non valido della data.
 \end{itemize}
 
-\hypertarget{CodiceInvalido}{\UC{Visualizzazione messaggio d'errore codice dell'ordine non valido}}
+\UC{Visualizzazione messaggio d'errore codice dell'ordine non valido}
+\label{estensione:codice-ordine-non-valido}
+
 Visualizzazione messaggio di errore che segnala all'attore l'inserimento di caratteri non numerici nel codice per cui cercare.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente o venditore;
@@ -101,7 +123,9 @@ Visualizzazione messaggio di errore che segnala all'attore l'inserimento di cara
     \item \textbf{Scenario principale:} l'attore ha inserito dei caratteri non numerici nel codice per cui cercare e viene informato dell'errore commesso.
 \end{itemize}
 
-\hypertarget{DateErrate}{\UC{Visualizzazione messaggio d'errore data iniziale maggiore di quella finale}}
+\UC{Visualizzazione messaggio d'errore data iniziale maggiore di quella finale}
+\label{estensione:data-iniziale-maggiore-data-finale}
+
 Visualizzazione messaggio di errore che segnala all'attore l'inserimento di una data iniziale maggiore di quella finale.
 \begin{itemize}
     \item \textbf{Attori primari:} utente autenticato o utente non autenticato;
@@ -111,7 +135,9 @@ Visualizzazione messaggio di errore che segnala all'attore l'inserimento di una 
 \end{itemize}
 
 % Estensioni PDP
-\hypertarget{QuantitàAggiuntaInvalida}{\UC{Visualizzazione messaggio d'errore quantità da aggiungere al carrello non valida}}
+\UC{Visualizzazione messaggio d'errore quantità da aggiungere al carrello non valida}
+\label{estensione:quantita-da-aggiungere-al-carrello-non-valida}
+
 Visualizzazione messaggio di errore che segnala all'acquirente o all'utente non autenticato che la quantità di prodotto inserita è minore o uguale a zero.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente o utente non autenticato;
@@ -120,7 +146,9 @@ Visualizzazione messaggio di errore che segnala all'acquirente o all'utente non 
     \item \textbf{Scenario principale:} l'attore inserisce una quantità minore o uguale a zero di un prodotto da aggiungere al carrello e viene informato della non validità della quantità.
 \end{itemize}
 
-\hypertarget{TroppiCaratteri}{\UC{Visualizzazione messaggio di errore in caso di inserimento di un numero eccessivo di caratteri}}
+\UC{Visualizzazione messaggio di errore in caso di inserimento di un numero eccessivo di caratteri}
+\label{estensione:numero-eccessivo-caratteri}
+
 Visualizzazione messaggio di errore in caso di inserimento di un numero eccessivo di caratteri.
 \begin{itemize}
 	\item \textbf{Attori primari:} venditore;
@@ -130,7 +158,9 @@ Visualizzazione messaggio di errore in caso di inserimento di un numero eccessiv
 \end{itemize}
 
 % Estensioni info personali
-\hypertarget{NoImmagine}{\UC{Visualizzazione messaggio di errore nel caso in cui il file selezionato non sia del tipo immagine}}
+\UC{Visualizzazione messaggio di errore nel caso in cui il file selezionato non sia del tipo immagine}
+\label{estensione:file-no-tipo-immagine}
+
 Visualizzazione messaggio di errore che segnala al venditore che il file inserito non è di tipo immagine.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
@@ -140,7 +170,9 @@ Visualizzazione messaggio di errore che segnala al venditore che il file inserit
 \end{itemize}
 
 % Estensioni prodotto
-\hypertarget{PrezzoErrato}{\UC{Visualizzazione messaggio di errore in caso di prezzo minore o uguale a zero}}
+\UC{Visualizzazione messaggio di errore in caso di prezzo minore o uguale a zero}
+\label{estensione:prezzo-minore-o-uguale-zero}
+
 Visualizzazione messaggio di errore il quale segnala al venditore che il prezzo del prodotto inserito è minore o uguale a zero.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
@@ -149,7 +181,9 @@ Visualizzazione messaggio di errore il quale segnala al venditore che il prezzo 
     \item \textbf{Scenario principale:} il venditore inserisce un prezzo minore o uguale a zero e viene informato dell'errore commesso.
 \end{itemize}
 
-\hypertarget{QuantitàErrata}{\UC{Visualizzazione messaggio di errore in caso di quantità minore a zero}}
+\UC{Visualizzazione messaggio di errore in caso di quantità minore a zero}
+\label{estensione:quantita-minore-a-zero}
+
 Visualizzazione messaggio di errore che segnala al venditore che la quantità del prodotto inserita è minore a zero.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
@@ -159,6 +193,8 @@ Visualizzazione messaggio di errore che segnala al venditore che la quantità de
 \end{itemize}
 
 \UC{Visualizzazione messaggio di errore in caso di sconto minore di 0\%}
+\label{estensione:sconto-minore-zero}
+
 Visualizzazione messaggio di errore il quale segnala al venditore che lo sconto inserito è minore di 0\%.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
@@ -168,6 +204,8 @@ Visualizzazione messaggio di errore il quale segnala al venditore che lo sconto 
 \end{itemize}
 
 \UC{Visualizzazione messaggio di errore in caso di sconto maggiore di 100\%}
+\label{estensione:sconto-maggiore-cento}
+
 Visualizzazione messaggio di errore il quale segnala al venditore che lo sconto inserito è maggiore di 100\%.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
@@ -177,6 +215,8 @@ Visualizzazione messaggio di errore il quale segnala al venditore che lo sconto 
 \end{itemize}
 
 \UC{Visualizzazione messaggio di errore tentativo di aggiunta di più del numero massimo di foto consentite relative ad un prodotto}
+\label{estensione:limite-foto-raggiunto}
+
 Visualizzazione messaggio di errore il quale segnala al venditore il tentativo di aggiunta di una nuova foto relativa ad un prodotto, quando si è già raggiunto il limite massimo di foto consentite.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
@@ -186,6 +226,8 @@ Visualizzazione messaggio di errore il quale segnala al venditore il tentativo d
 \end{itemize}
 
 \UC{Visualizzazione messaggio di errore nessuna foto inserita}
+\label{estensione:nessuna-foto-inserita}
+
 Visualizzazione messaggio di errore il quale segnala al venditore che non è stata inserita alcuna foto relativa al prodotto.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
@@ -196,6 +238,8 @@ Visualizzazione messaggio di errore il quale segnala al venditore che non è sta
 
 % Estensioni Categoria
 \UC{Visualizzazione messaggio di errore nome per la categoria già utilizzato}
+\label{estensione:categoria-esistente}
+
 Visualizzazione messaggio di errore il quale segnala al venditore che sta cercando di assegnare ad una categoria un nome già utilizzato da un'altra.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
@@ -206,6 +250,8 @@ Visualizzazione messaggio di errore il quale segnala al venditore che sta cercan
 
 % Estensioni indirizzo di consegna
 \UC{Visualizzazione messaggio d'errore CAP non valido}
+\label{estensione:cap-non-valido}
+
 Nel caso in cui venga inserito un CAP per un indirizzo di consegna non valido, verrà segnalato attraverso un messaggio di errore opportuno.
 \begin{itemize}
 	\item \textbf{Attori primari:} acquirente;
@@ -216,6 +262,8 @@ Nel caso in cui venga inserito un CAP per un indirizzo di consegna non valido, v
 
 % Estensioni gestore dei pagamenti
 \UC{Visualizzazione messaggio d'errore pagamento non andato a buon fine}
+\label{estensione:pagamento-fallito}
+
 Nel caso in cui avvenga un errore durante lo svolgimento del pagamento fornito dal gestore dei pagamenti, questo verrà visualizzato all'acquirente.
 \begin{itemize}
 	\item \textbf{Attori primari:} acquirente;

@@ -19,36 +19,52 @@
 % UC Counters
 
 \newcounter{UCcounter}
-\newcounter{subUCcounter}
-\newcounter{subSubUCcounter}
+\newcounter{subUCcounter}[UCcounter]
+\newcounter{subSubUCcounter}[subUCcounter]
+
 \setcounter{UCcounter}{0}
 
 \newcommand{\UC}[1]{
 	\stepcounter{UCcounter}
+	
 	\subsection{UC\theUCcounter{} - #1}
-	\label{UC\theUCcounter}
+	
+	\addtocounter{UCcounter}{-1}
+	\refstepcounter{UCcounter}
 }
+
 \newcommand{\actualUC}{UC\theUCcounter}
 
-\newcommand{\resetSubUC}{
-	\setcounter{subUCcounter}{0}
-}
+% SubUC
+
+\renewcommand{\thesubUCcounter}{\theUCcounter.\arabic{subUCcounter}}
+
 \newcommand{\subUC}[1]{
 	\stepcounter{subUCcounter}
-	\subsubsection{UC\theUCcounter.\thesubUCcounter{} - #1}
-	\label{UC\theUCcounter.\thesubUCcounter}
+	
+	\subsubsection{UC\thesubUCcounter{} - #1}
+	
+	\addtocounter{subUCcounter}{-1}
+	\refstepcounter{subUCcounter}
 }
-\newcommand{\actualSubUC}{UC\theUCcounter.\thesubUCcounter}
 
-\newcommand{\resetSubSubUC}{
-	\setcounter{subSubUCcounter}{0}
-}
+\newcommand{\actualSubUC}{UC\thesubUCcounter}
+
+
+% SubSubUC
+
+\renewcommand{\thesubSubUCcounter}{\thesubUCcounter.\arabic{subSubUCcounter}}
+
 \newcommand{\subSubUC}[1]{
 	\stepcounter{subSubUCcounter}
-	\subsubsection{UC\theUCcounter.\thesubUCcounter.\thesubSubUCcounter{} - #1}
-	\label{UC\theUCcounter.\thesubUCcounter.\thesubSubUCcounter}
+	
+	\subsubsection{UC\thesubSubUCcounter{} - #1}
+	
+	\addtocounter{subSubUCcounter}{-1}
+	\refstepcounter{subSubUCcounter}
 }
-\newcommand{\actualSubSubUC}{UC\theUCcounter.\thesubUCcounter.\thesubSubUCcounter}
+
+\newcommand{\actualSubSubUC}{UC\thesubSubUCcounter}
 
 % Requirements Counters
 
@@ -152,6 +168,5 @@
 \newcommand{\actualrpreD}{\therpdCounter}
 \newcommand{\actualrpreZ}{\therpzCounter}
 
-% Enumerate
-
+% Enumerate and itemize
 \newcommand{\lett}{\textbf{\alph*}.}

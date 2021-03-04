@@ -1,4 +1,6 @@
 \UC{Aggiunta nuovo prodotto}
+\label{aggiunta-prodotto}
+
 Il venditore aggiunge un nuovo prodotto alla piattaforma, così da poter essere venduto.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
@@ -6,13 +8,13 @@ Il venditore aggiunge un nuovo prodotto alla piattaforma, così da poter essere 
     \item \textbf{Postcondizione:} il venditore ha inserito il nuovo prodotto nella piattaforma;
     \item \textbf{Scenario principale:} il venditore seleziona la funzionalità per aggiungere un nuovo prodotto e compie le seguenti azioni:
     \begin{itemize}
-        \item (\actualUC.1) - Inserimento del nome del prodotto;
-        \item (\actualUC.2) - Inserimento della descrizione del prodotto;
-        \item (\actualUC.3) - Inserimento delle categorie del prodotto;
-        \item (\actualUC.4) - Inserimento del prezzo del prodotto;
-        \item (\actualUC.5) - Inserimento dello sconto percentuale al prezzo del prodotto;
-        \item (\actualUC.6) - Inserimento della quantità del prodotto disponibile in magazzino;
-        \item (\actualUC.7) - Inserimento delle foto del prodotto;
+        \item (UC\ref{aggiunta-prodotto.nome}) - Inserimento del nome del prodotto;
+        \item (UC\ref{aggiunta-prodotto.descrizione}) - Inserimento della descrizione del prodotto;
+        \item (UC\ref{aggiunta-prodotto.categorie}) - Inserimento delle categorie del prodotto;
+        \item (UC\ref{aggiunta-prodotto.prezzo}) - Inserimento del prezzo del prodotto;
+        \item (UC\ref{aggiunta-prodotto.sconto}) - Inserimento dello sconto percentuale al prezzo del prodotto;
+        \item (UC\ref{aggiunta-prodotto.quantita}) - Inserimento della quantità del prodotto disponibile in magazzino;
+        \item (UC\ref{aggiunta-prodotto.foto}) - Inserimento delle foto del prodotto;
         \item Sceglie se aggiungere il prodotto tra quelli in evidenza tramite la funzionalità apposita;
         \item Conferma gli inserimenti e aggiunge il prodotto alla piattaforma.
     \end{itemize}
@@ -22,9 +24,9 @@ Il venditore aggiunge un nuovo prodotto alla piattaforma, così da poter essere 
 	\end{enumerate}
 \end{itemize}
 
-\resetSubUC
-
 \subUC{Inserimento del nome del prodotto}
+\label{aggiunta-prodotto.nome}
+
 Il venditore inserisce il nome del prodotto da aggiungere.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
@@ -35,18 +37,20 @@ Il venditore inserisce il nome del prodotto da aggiungere.
     \begin{enumerate}[label=\lett]
     	\item Il venditore non inserisce il nome del prodotto ed il campo dati risulta essere vuoto. In questo caso:
 	    \begin{itemize}
-	        \item (UC52) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
+	        \item (UC\ref{estensione:campo-obbligatorio-non-inserito}) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
 	        \item Viene data la possibilità al venditore di modificare il nome del nuovo prodotto inserito.
 	    \end{itemize}
     	\item Il venditore inserisce un nome composto da troppi caratteri per il nuovo prodotto. In questo caso:
     	\begin{itemize}
-    		\item (UC57) - Viene visualizzato il messaggio di errore in caso di inserimento di un numero eccessivo di caratteri;
+    		\item (UC\ref{estensione:numero-eccessivo-caratteri}) - Viene visualizzato il messaggio di errore in caso di inserimento di un numero eccessivo di caratteri;
     		\item Viene data la possibilità al venditore di modificare il nome del nuovo prodotto inserito.
     	\end{itemize}
 	\end{enumerate}
 \end{itemize}
 
 \subUC{Inserimento della descrizione del prodotto}
+\label{aggiunta-prodotto.descrizione}
+
 Il venditore inserisce la descrizione del prodotto da aggiungere.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
@@ -57,18 +61,20 @@ Il venditore inserisce la descrizione del prodotto da aggiungere.
     \begin{enumerate}[label=\lett]
     	\item Il venditore non inserisce la descrizione del prodotto ed il campo dati risulta essere vuoto. In questo caso:
     	\begin{itemize}
-    		\item (UC52) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
+    		\item (UC\ref{estensione:campo-obbligatorio-non-inserito}) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
     		\item Viene fornita al venditore la possibilità di modificare la descrizione del nuovo prodotto inserito.
     	\end{itemize}
         \item Il venditore inserisce una descrizione composta da troppi caratteri per il nuovo prodotto. In questo caso:
 	    \begin{itemize}
-    		\item (UC57) - Viene visualizzato il messaggio di errore in caso di inserimento di un numero eccessivo di caratteri;
+    		\item (UC\ref{estensione:numero-eccessivo-caratteri}) - Viene visualizzato il messaggio di errore in caso di inserimento di un numero eccessivo di caratteri;
 	    	\item Viene fornita al venditore la possibilità di modificare la descrizione del nuovo prodotto inserito.
 	    \end{itemize}
     \end{enumerate}
 \end{itemize}
 
 \subUC{Inserimento delle categorie del prodotto}
+\label{aggiunta-prodotto.categorie}
+
 Il venditore inserisce le categorie del prodotto da aggiungere.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
@@ -82,6 +88,8 @@ Il venditore inserisce le categorie del prodotto da aggiungere.
 \end{itemize}
 
 \subUC{Inserimento del prezzo del prodotto}
+\label{aggiunta-prodotto.prezzo}
+
 Il venditore inserisce il prezzo a cui vendere il prodotto da aggiungere.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
@@ -92,18 +100,20 @@ Il venditore inserisce il prezzo a cui vendere il prodotto da aggiungere.
     \begin{enumerate}[label=\lett]
     	\item Il venditore non inserisce il prezzo del prodotto ed il campo dati risulta essere vuoto. In questo caso:
     	\begin{itemize}
-    		\item (UC52) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
+    		\item (UC\ref{estensione:campo-obbligatorio-non-inserito}) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
     		\item Viene fornita al venditore la possibilità di aggiungere un prezzo al nuovo prodotto inserito.
     	\end{itemize}
     	\item Il venditore inserisce un prezzo minore o uguale a zero. In questo caso:
     	\begin{itemize}
-    		\item (UC59) - Viene visualizzato il messaggio di errore prezzo minore o uguale a zero;
+    		\item (UC\ref{estensione:prezzo-minore-o-uguale-zero}) - Viene visualizzato il messaggio di errore prezzo minore o uguale a zero;
     		\item Viene fornita al venditore la possibilità di aggiungere un nuovo prezzo al prodotto da inserire.
     	\end{itemize}
     \end{enumerate}
 \end{itemize}
 
 \subUC{Inserimento dello sconto percentuale al prezzo del prodotto}
+\label{aggiunta-prodotto.sconto}
+
 Il venditore inserisce lo sconto percentuale da applicare al prezzo del prodotto da aggiungere.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
@@ -118,18 +128,20 @@ Il venditore inserisce lo sconto percentuale da applicare al prezzo del prodotto
     \begin{enumerate}[label=\lett]
     	\item Il venditore inserisce uno sconto maggiore di 100\%. In questo caso:
     	\begin{itemize}
-    		\item (UC62) - Viene visualizzato il messaggio di errore in caso di sconto maggiore di 100\%;
+    		\item (UC\ref{estensione:sconto-maggiore-cento}) - Viene visualizzato il messaggio di errore in caso di sconto maggiore di 100\%;
     		\item Viene fornita al venditore la possibilità di modificare lo sconto da applicare al nuovo prodotto.
     	\end{itemize}
     	\item Il venditore inserisce uno sconto minore di 0\%. In questo caso:
     	\begin{itemize}
-    		\item (UC61) - Viene mostrato un messaggio di errore che segnala lo sconto minore di 0\%;
+    		\item (UC\ref{estensione:sconto-minore-zero}) - Viene mostrato un messaggio di errore che segnala lo sconto minore di 0\%;
     		\item Viene fornita al venditore la possibilità di modificare lo sconto da applicare al nuovo prodotto.
     	\end{itemize}
     \end{enumerate}
 \end{itemize}
 
 \subUC{Inserimento della quantità del prodotto disponibile in magazzino}
+\label{aggiunta-prodotto.quantita}
+
 Il venditore inserisce la quantità disponibile attualmente in magazzino del prodotto da aggiungere.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
@@ -144,18 +156,20 @@ Il venditore inserisce la quantità disponibile attualmente in magazzino del pro
     \begin{enumerate}[label=\lett]
     	\item Il venditore inserisce una quantità minore di 0. In questo caso:
     	\begin{itemize}
-    		\item (UC60) - Viene visualizzato il messaggio di errore quantità minore di 0;
+    		\item (UC\ref{estensione:quantita-minore-a-zero}) - Viene visualizzato il messaggio di errore quantità minore di 0;
     		\item Viene fornita la possibilità al venditore di modificare la quantità inserita per il nuovo prodotto.
     	\end{itemize}
     	\item Il venditore non inserisce la quantità del prodotto ed il campo dati risulta essere vuoto. In questo caso:
     	\begin{itemize}
-    		\item (UC52) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
+    		\item (UC\ref{estensione:campo-obbligatorio-non-inserito}) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
     		\item Viene fornita la possibilità al venditore di aggiungere la quantità inserita per il nuovo prodotto.
     	\end{itemize}
     \end{enumerate}
 \end{itemize}
 
 \subUC{Inserimento foto del prodotto}
+\label{aggiunta-prodotto.foto}
+
 Il venditore inserisce le foto relative al prodotto da aggiungere.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
@@ -166,17 +180,17 @@ Il venditore inserisce le foto relative al prodotto da aggiungere.
     \begin{enumerate}[label=\lett]
     	\item Il venditore non inserisce alcuna foto del prodotto. In questo caso:
     	\begin{itemize}
-    		\item (UC64) - Viene visualizzato il messaggio di errore nessuna foto inserita;
+    		\item (UC\ref{estensione:nessuna-foto-inserita}) - Viene visualizzato il messaggio di errore nessuna foto inserita;
     		\item Viene fornita al venditore la possibilità di inserire altre foto relative al nuovo prodotto.
     	\end{itemize}
     	\item Il venditore seleziona un file che non è del tipo immagine. In questo caso:
     	\begin{itemize}
-    		\item (UC58) - Viene visualizzato il messaggio di errore il quale segnala che il file selezionato non è del tipo immagine;
+    		\item (UC\ref{estensione:file-no-tipo-immagine}) - Viene visualizzato il messaggio di errore il quale segnala che il file selezionato non è del tipo immagine;
     		\item Viene fornita la possibilità al venditore di cambiare i file selezionati per il nuovo prodotto.
     	\end{itemize}
     	\item Il venditore cerca di inserire più del massimo numero di foto consentite relative ad un prodotto. In questo caso:
     	\begin{itemize}
-    		\item (UC63) - Viene visualizzato il messaggio di errore il quale segnala il tentativo di aggiunta di più del numero massimo di foto consentite relative ad un prodotto;
+    		\item (UC\ref{estensione:limite-foto-raggiunto}) - Viene visualizzato il messaggio di errore il quale segnala il tentativo di aggiunta di più del numero massimo di foto consentite relative ad un prodotto;
     		\item Viene fornita la possibilità al venditore di rimuovere alcune foto selezionate per il nuovo prodotto da inserire.
     	\end{itemize}
     \end{enumerate}
@@ -185,6 +199,8 @@ Il venditore inserisce le foto relative al prodotto da aggiungere.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \UC{Modifica informazioni del prodotto}
+\label{modifica-prodotto}
+
 % \begin{figure}[H]
 %     \centering
 %     \includegraphics[scale=0.1]{Immagini/DiagrammiUC/UC19ModificaProdotto.png}
@@ -199,13 +215,13 @@ Il venditore modifica uno o più campi di un prodotto che è stato inserito nell
     \item \textbf{Postcondizione:} il venditore ha modificato il prodotto con le modifiche compiute;
     \item \textbf{Scenario principale:} il venditore può compiere le seguenti azioni:
     \begin{itemize}
-        \item (\actualUC.1) - Modifica del nome del prodotto;
-        \item (\actualUC.2) - Modifica della descrizione del prodotto;
-        \item (\actualUC.3) - Modifica delle categorie del prodotto;
-        \item (\actualUC.4) - Modifica del prezzo del prodotto;
-        \item (\actualUC.5) - Modifica dello sconto percentuale al prezzo del prodotto;
-        \item (\actualUC.6) - Aggiunta di nuove foto del prodotto;
-        \item (\actualUC.7) - Rimozione di foto del prodotto.
+        \item (UC\ref{modifica-prodotto.nome}) - Modifica del nome del prodotto;
+        \item (UC\ref{modifica-prodotto.descrizione}) - Modifica della descrizione del prodotto;
+        \item (UC\ref{modifica-prodotto.categorie}) - Modifica delle categorie del prodotto;
+        \item (UC\ref{modifica-prodotto.prezzo}) - Modifica del prezzo del prodotto;
+        \item (UC\ref{modifica-prodotto.sconto}) - Modifica dello sconto percentuale al prezzo del prodotto;
+        \item (UC\ref{modifica-prodotto.aggiunta-foto}) - Aggiunta di nuove foto del prodotto;
+        \item (UC\ref{modifica-prodotto.rimozione-foto}) - Rimozione di foto del prodotto.
     \end{itemize}
     Il venditore conferma le modifiche compiute modificando in modo definitivo il prodotto selezionato;
     \item \textbf{Scenari alternativi:}
@@ -214,42 +230,55 @@ Il venditore modifica uno o più campi di un prodotto che è stato inserito nell
     \end{enumerate}
 \end{itemize}
 
-\resetSubUC
 \subUC{Modifica del nome del prodotto}
+\label{modifica-prodotto.nome}
+
 Il venditore vuole modificare il nome del prodotto.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
     \item \textbf{Precondizione:} il venditore si trova nella schermata di modifica del prodotto;
     \item \textbf{Postcondizione:} il venditore ha modificato il nome del prodotto;
     \item \textbf{Scenario principale:} il venditore aggiorna il nome del prodotto selezionato;
+    \item \textbf{Scenari alternativi:}
+    \begin{enumerate}[label=\lett]
+		\item Se il venditore non modifica il nome del prodotto, allora non verrà cambiato.
+	\end{enumerate}
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
     	\item Il venditore cancella il nome attuale del prodotto ed il campo dati risulta essere vuoto. In questo caso:
     	\begin{itemize}
-    		\item (UC52) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
+    		\item (UC\ref{estensione:campo-obbligatorio-non-inserito}) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
     		\item Viene fornita al venditore la possibilità di inserire un nuovo nome al prodotto selezionato.
     	\end{itemize}
     \end{enumerate}
 \end{itemize}
 
 \subUC{Modifica della descrizione del prodotto}
+\label{modifica-prodotto.descrizione}
+
 Il venditore vuole modificare la descrizione del prodotto.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
     \item \textbf{Precondizione:} il venditore si trova nella schermata di modifica del prodotto;
     \item \textbf{Postcondizione:} il venditore ha modificato la descrizione del prodotto;
     \item \textbf{Scenario principale:} il venditore modifica la descrizione del prodotto selezionato;
+    \item \textbf{Scenari alternativi:}
+    \begin{enumerate}[label=\lett]
+		\item Se il venditore non modifica la descrizione del prodotto, allora non verrà cambiata.
+	\end{enumerate}
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
     	\item Il venditore cancella la descrizione attuale del prodotto ed il campo dati risulta essere vuoto. In questo caso:
     	\begin{itemize}
-    		\item (UC52) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
+    		\item (UC\ref{estensione:campo-obbligatorio-non-inserito}) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
     		\item Viene fornita al venditore la possibilità di inserire una nuova descrizione del prodotto selezionato.
     	\end{itemize}
     \end{enumerate}
 \end{itemize}
 
 \subUC{Modifica delle categorie del prodotto}
+\label{modifica-prodotto.categorie}
+
 Il venditore modifica le categorie del prodotto.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
@@ -260,31 +289,43 @@ Il venditore modifica le categorie del prodotto.
         \item Aggiunta di una nuova categoria presa dalla lista di categorie disponibili;
         \item Rimozione di una categoria attualmente inserita.
     \end{itemize}
+	\item \textbf{Scenari alternativi:}
+    \begin{enumerate}[label=\lett]
+		\item Se il venditore non modifica alcuna categoria, allora non verranno cambiate.
+	\end{enumerate}
 \end{itemize}
 
 \subUC{Modifica del prezzo del prodotto}
+\label{modifica-prodotto.prezzo}
+
 Il venditore modifica il prezzo a cui vendere il prodotto.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
     \item \textbf{Precondizione:} il venditore si trova nella schermata di modifica del prodotto;
     \item \textbf{Postcondizione:} il venditore ha modificato il prezzo a cui vendere il prodotto;
     \item \textbf{Scenario principale:} il venditore modifica il prezzo a cui vendere il prodotto selezionato;
+    \item \textbf{Scenari alternativi:}
+    \begin{enumerate}[label=\lett]
+		\item Se il venditore non modifica il prezzo del prodotto, allora non verrà cambiato.
+	\end{enumerate}
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
     	\item Il venditore cancella il prezzo attuale del prodotto ed il campo dati risulta essere vuoto. In questo caso:
     	\begin{itemize}
-    		\item (UC52) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
+    		\item (UC\ref{estensione:campo-obbligatorio-non-inserito}) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
     		\item Viene fornita la possibilità al venditore di inserire un nuovo prezzo per il prodotto selezionato.
     	\end{itemize}
     	\item Il venditore inserisce un nuovo prezzo minore o uguale a 0. In questo caso:
     	\begin{itemize}
-    		\item (UC59) - Verrà visualizzato il messaggio di errore in caso di prezzo minore o uguale a 0;
+    		\item (UC\ref{estensione:prezzo-minore-o-uguale-zero}) - Verrà visualizzato il messaggio di errore in caso di prezzo minore o uguale a 0;
     		\item Viene fornita la possibilità al venditore di modificare il prezzo per il prodotto selezionato.
     	\end{itemize}
     \end{enumerate}
 \end{itemize}
 
 \subUC{Modifica dello sconto percentuale al prezzo del prodotto}
+\label{modifica-prodotto.sconto}
+
 Il venditore modifica lo sconto percentuale da applicare al prezzo del prodotto.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
@@ -293,24 +334,27 @@ Il venditore modifica lo sconto percentuale da applicare al prezzo del prodotto.
     \item \textbf{Scenario Principale:} il venditore modifica lo sconto percentuale da applicare al prezzo del prodotto selezionato;
     \item \textbf{Scenari alternativi:}
     \begin{enumerate}[label=\lett]
-    	\item Nel caso in cui il venditore cancella lo sconto attuale senza inserirne uno di nuovo, non viene applicato alcuno sconto.
+    	\item Nel caso in cui il venditore cancella lo sconto attuale senza inserirne uno di nuovo, non viene applicato alcuno sconto;
+    	\item Nel caso in cui il venditore non modifichi lo sconto, allora non cambierà.
     \end{enumerate}
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
     	\item Il venditore inserisce uno sconto maggiore di 100\%. In questo caso:
 		\begin{itemize}
-			\item (UC62) - Viene visualizzato il messaggio di errore in caso di sconto maggiore di 100\%;
+			\item (UC\ref{estensione:sconto-maggiore-cento}) - Viene visualizzato il messaggio di errore in caso di sconto maggiore di 100\%;
 			\item Viene fornita al venditore la possibilità di modificare lo sconto da applicare al nuovo prodotto.
 		\end{itemize}
 		\item Il venditore inserisce uno sconto minore di 0\%. In questo caso:
 		\begin{itemize}
-			\item (UC61) - Viene mostrato un messaggio di errore che segnala lo sconto minore di 0\%;
+			\item (UC\ref{estensione:sconto-minore-zero}) - Viene mostrato un messaggio di errore che segnala lo sconto minore di 0\%;
 			\item Viene fornita al venditore la possibilità di modificare lo sconto da applicare al nuovo prodotto.
 		\end{itemize}
     \end{enumerate}
 \end{itemize}
 
 \subUC{Aggiunta di foto al prodotto}
+\label{modifica-prodotto.aggiunta-foto}
+
 Il venditore inserisce le foto relative al prodotto.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
@@ -321,18 +365,20 @@ Il venditore inserisce le foto relative al prodotto.
     \begin{enumerate}[label=\lett]
     	\item Il venditore seleziona un file che non è del tipo immagine. In questo caso:
 		\begin{itemize}
-			\item (UC58) - Viene visualizzato il messaggio di errore il quale segnala che il file selezionato non è del tipo immagine;
-			\item Viene fornita la possibilità al venditore di cambiare i file selezionati per il nuovo prodotto.
+			\item (UC\ref{estensione:file-no-tipo-immagine}) - Viene visualizzato il messaggio di errore il quale segnala che il file selezionato non è del tipo immagine;
+			\item Viene impedita l'aggiunta di quel file.
 		\end{itemize}
 		\item Il venditore cerca di inserire più del numero massimo di foto consentite relative ad un prodotto. In questo caso:
 		\begin{itemize}
-			\item (UC63) - Viene visualizzato il messaggio di errore il quale segnala il tentativo di aggiunta di più del numero massimo di foto consentite relative ad un prodotto;
-			\item Viene fornita la possibilità al venditore di rimuovere alcune foto selezionate per il nuovo prodotto da inserire.
+			\item (UC\ref{estensione:limite-foto-raggiunto}) - Viene visualizzato il messaggio di errore il quale segnala il tentativo di aggiunta di più del numero massimo di foto consentite relative ad un prodotto;
+			\item La foto selezionata non verrà aggiunta.
 		\end{itemize}
     \end{enumerate}
 \end{itemize}
 
 \subUC{Rimozione di foto dal prodotto}
+\label{modifica-prodotto.rimozione-foto}
+
 Il venditore rimuove le foto relative al prodotto da aggiungere.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
@@ -344,17 +390,23 @@ Il venditore rimuove le foto relative al prodotto da aggiungere.
         \item Seleziona l'azione di eliminazione di quella specifica foto;
         \item Conferma la rimozione della foto selezionata.
     \end{itemize}
+	\item \textbf{Scenari alternativi:}
+	\begin{enumerate}[label=\lett]
+		\item Nel caso in cui il venditore non confermi la rimozione della foto selezionata, allora non verrà eliminata.
+	\end{enumerate}
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
     	\item Il venditore cancella tutte le foto relative al prodotto. In questo caso:
     	\begin{itemize}
-    		\item (UC52) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
+    		\item (UC\ref{estensione:campo-obbligatorio-non-inserito}) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
     		\item Viene impedita la conferma delle modifiche al prodotto.
     	\end{itemize}
     \end{enumerate}
 \end{itemize}
 
 \UC{Aggiunta prodotto alla sezione dei prodotti in evidenza}
+\label{aggiunta-prodotto-evidenza}
+
 Il venditore aggiunge un prodotto alla sezione dei prodotti in evidenza presente nella vista principale.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
@@ -364,6 +416,8 @@ Il venditore aggiunge un prodotto alla sezione dei prodotti in evidenza presente
 \end{itemize}
 
 \UC{Rimozione prodotto dalla sezione dei prodotti in evidenza}
+\label{rimozione-prodotto-evidenza}
+
 Il venditore rimuove un prodotto dalla sezione dei prodotti in evidenza presente nella vista principale.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
@@ -373,6 +427,8 @@ Il venditore rimuove un prodotto dalla sezione dei prodotti in evidenza presente
 \end{itemize}
 
 \UC{Eliminazione prodotto}
+\label{eliminazione-prodotto}
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Immagini/DiagrammiUC/UC20EliminazioneProdotto}
@@ -397,6 +453,8 @@ Il venditore vuole eliminare un prodotto precedentemente inserito.
 \end{itemize}
 
 \UC{Rifornimento prodotto}
+\label{rifornimento-prodotto}
+
 Il venditore vuole rifornire un prodotto precedentemente inserito che sta per esaurire o è esaurito.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
@@ -415,13 +473,15 @@ Il venditore vuole rifornire un prodotto precedentemente inserito che sta per es
 	\begin{enumerate}[label=\lett]
 		\item Il venditore inserisce un valore inferiore a zero con cui rifornire le scorte di un determinato prodotto. In questo caso:
 		\begin{itemize}
-			\item (UC60) - Viene visualizzato un messaggio di errore in caso di quantità minore a zero;
+			\item (UC\ref{estensione:quantita-minore-a-zero}) - Viene visualizzato un messaggio di errore in caso di quantità minore a zero;
 			\item Viene fornita al venditore la possibilità di modificare il valore inserito per rifornire il prodotto.
 		\end{itemize}
 	\end{enumerate}
 \end{itemize}
 
-\UC{Ricerca dei prodotti del venditore} 
+\UC{Ricerca dei prodotti del venditore}
+\label{ricerca-prodotti-venditore}
+
 Il venditore può cercare i prodotti dalla propria PLP attraverso delle parole.
 \begin{itemize}
 	\item \textbf{Attori primari:} venditore;
@@ -437,6 +497,8 @@ Il venditore può cercare i prodotti dalla propria PLP attraverso delle parole.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \UC{Filtraggio prodotti della PLP del venditore}
+\label{filtro-prodotti-venditore}
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.5]{Immagini/DiagrammiUC/UC6FiltraggioProdottiDellaPLP.png}
@@ -450,10 +512,10 @@ Il venditore può filtrare i prodotti all'interno della PLP per categoria, prezz
 	\item \textbf{Postcondizione:} il venditore avrà a disposizione tutti i prodotti che soddisfano tutte le condizioni dei vari filtri impostati;
 	\item \textbf{Scenario principale:} l'attore è nella PLP e ha impostato uno (o più) dei seguenti filtri:
 	\begin{itemize}
-		\item (\actualUC.1) - Impostazione del filtro per categoria;
-		\item (\actualUC.2) - Impostazione del filtro per prezzo;
-		\item (\actualUC.3) - Impostazione del filtro per disponibilità nel magazzino;
-		\item (\actualUC.4) - Impostazione del filtro per prodotto in evidenza.
+		\item (UC\ref{filtro-prodotti-venditore.categoria}) - Impostazione del filtro per categoria;
+		\item (UC\ref{filtro-prodotti-venditore.prezzo}) - Impostazione del filtro per prezzo;
+		\item (UC\ref{filtro-prodotti-venditore.magazzino}) - Impostazione del filtro per disponibilità nel magazzino;
+		\item (UC\ref{filtro-prodotti-venditore.evidenza}) - Impostazione del filtro per prodotto in evidenza.
 	\end{itemize}
 	Di seguito la PLP verrà aggiornata con i prodotti che rispettano tutti i filtri applicati;
 	\item \textbf{Scenari alternativi:}
@@ -462,8 +524,9 @@ Il venditore può filtrare i prodotti all'interno della PLP per categoria, prezz
 	\end{enumerate}
 \end{itemize}
 
-\resetSubUC
 \subUC{Filtro per categorie}
+\label{filtro-prodotti-venditore.categoria}
+
 Il venditore può cercare i prodotti in base alla loro categoria, selezionando quelle di interesse tra tutte le categorie disponibili.
 \begin{itemize}
 	\item \textbf{Attori primari:} venditore;
@@ -477,6 +540,8 @@ Il venditore può cercare i prodotti in base alla loro categoria, selezionando q
 \end{itemize}
 
 \subUC{Filtro per prezzo}
+\label{filtro-prodotti-venditore.prezzo}
+
 Il venditore può cercare i prodotti in base al loro prezzo.
 \begin{itemize}
 	\item \textbf{Attori primari:} venditore;
@@ -490,6 +555,8 @@ Il venditore può cercare i prodotti in base al loro prezzo.
 \end{itemize}
 
 \subUC{Filtro per disponibilità nel magazzino}
+\label{filtro-prodotti-venditore.magazzino}
+
 Il venditore può cercare i prodotti in base alla loro disponibilità in magazzino.
 \begin{itemize}
 	\item \textbf{Attori primari:} venditore;
@@ -503,6 +570,8 @@ Il venditore può cercare i prodotti in base alla loro disponibilità in magazzi
 \end{itemize}
 
 \subUC{Filtro per prodotto in evidenza}
+\label{filtro-prodotti-venditore.evidenza}
+
 Il venditore può cercare i prodotti in base alla loro caratteristica di trovarsi in evidenza o meno nella piattaforma.
 \begin{itemize}
 	\item \textbf{Attori primari:} venditore;

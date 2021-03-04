@@ -1,6 +1,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \UC{Ricerca dei prodotti} 
+\label{ricerca-prodotti-acquirente}
+
 L'utente non autenticato o l'acquirente può cercare i prodotti dalla schermata principale, oppure dalla PLP, attraverso delle parole.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente o utente non autenticato;
@@ -16,6 +18,8 @@ L'utente non autenticato o l'acquirente può cercare i prodotti dalla schermata 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \UC{Filtraggio prodotti della PLP}
+\label{filtro-prodotti-acquirente}
+
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{Immagini/DiagrammiUC/UC6FiltraggioProdottiDellaPLP.png}
@@ -29,9 +33,9 @@ L'utente non autenticato o l'acquirente può filtrare i prodotti all'interno del
     \item \textbf{Postcondizione:} l'attore avrà a disposizione tutti i prodotti che soddisfano tutte le condizioni dei vari filtri impostati;
     \item \textbf{Scenario principale:} l'attore è nella PLP e ha impostato uno (o più) dei seguenti filtri:
     \begin{itemize}
-        \item (\actualUC.1) - Impostazione del filtro per categoria;
-        \item (\actualUC.2) - Impostazione del filtro per prezzo;
-        \item (\actualUC.3) - Impostazione del filtro per disponibilità nel magazzino.
+        \item (UC\ref{filtro-prodotti-acquirente.categoria}) - Impostazione del filtro per categoria;
+        \item (UC\ref{filtro-prodotti-acquirente.prezzo}) - Impostazione del filtro per prezzo;
+        \item (UC\ref{filtro-prodotti-acquirente.magazzino}) - Impostazione del filtro per disponibilità nel magazzino.
     \end{itemize}
     Di seguito la PLP verrà aggiornata con i prodotti che rispettano tutti i filtri applicati;
     \item \textbf{Scenari alternativi:}
@@ -40,9 +44,9 @@ L'utente non autenticato o l'acquirente può filtrare i prodotti all'interno del
     \end{enumerate}
 \end{itemize}
 
-\resetSubUC
-
 \subUC{Filtro per categorie}
+\label{filtro-prodotti-acquirente.categoria}
+
 L'utente non autenticato o l'acquirente può cercare i prodotti in base alla loro categoria, selezionando quelle di interesse tra tutte le categorie disponibili.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente o utente non autenticato;
@@ -56,6 +60,8 @@ L'utente non autenticato o l'acquirente può cercare i prodotti in base alla lor
 \end{itemize}
 
 \subUC{Filtro per prezzo}
+\label{filtro-prodotti-acquirente.prezzo}
+
 L'utente non autenticato o l'acquirente può cercare i prodotti in base al loro prezzo.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente o utente non autenticato;
@@ -69,6 +75,8 @@ L'utente non autenticato o l'acquirente può cercare i prodotti in base al loro 
 \end{itemize}
 
 \subUC{Filtro per disponibilità nel magazzino}
+\label{filtro-prodotti-acquirente.magazzino}
+
 L'utente non autenticato o l'acquirente può cercare i prodotti in base alla loro disponibilità in magazzino.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente o utente non autenticato;

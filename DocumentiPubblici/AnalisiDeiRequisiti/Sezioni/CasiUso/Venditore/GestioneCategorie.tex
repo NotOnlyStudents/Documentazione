@@ -1,4 +1,6 @@
 \UC{Aggiunta nuova categoria}
+\label{aggiunta-categoria}
+
 Il venditore aggiunge una nuova categoria.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
@@ -8,7 +10,7 @@ Il venditore aggiunge una nuova categoria.
     \begin{itemize}
     	\item Il venditore si trova nella schermata di amministrazione delle categorie;
     	\item Il venditore seleziona la funzionalità per aggiungere una nuova categoria di prodotti;
-    	\item (\actualUC.1) - Inserimento nome della nuova categoria;
+    	\item (UC\ref{aggiunta-categoria.nome}) - Inserimento nome della nuova categoria;
     	\item Il venditore conferma la creazione della categoria di prodotti.
     \end{itemize} 
     \item \textbf{Scenari alternativi:}
@@ -17,9 +19,9 @@ Il venditore aggiunge una nuova categoria.
     \end{enumerate}
 \end{itemize}
 
-\resetSubUC
-
 \subUC{Inserimento nome della categoria}
+\label{aggiunta-categoria.nome}
+
 Il venditore inserisce il nome della nuova categoria da aggiungere.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
@@ -30,18 +32,20 @@ Il venditore inserisce il nome della nuova categoria da aggiungere.
     \begin{enumerate}[label=\lett]
     	\item Il venditore non inserisce alcun nome per la nuova categoria. In questo caso:
     	\begin{itemize}
-    		\item (UC52) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito;
+    		\item (UC\ref{estensione:campo-obbligatorio-non-inserito}) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito;
     		\item Viene fornita al venditore la possibilità di modificare il nome della nuova categoria di prodotti.
     	\end{itemize}
     	\item Il venditore inserisce un nome per la nuova categoria che è già assegnato ad un'altra categoria. In questo caso:
     	\begin{itemize}
-    		\item (UC65) - Verrà visualizzato il messaggio di errore nome per la categoria già utilizzato;
+    		\item (UC\ref{estensione:categoria-esistente}) - Verrà visualizzato il messaggio di errore nome per la categoria già utilizzato;
     		\item Viene fornita al venditore la possibilità di modificare il nome della nuova categoria di prodotti.
     	\end{itemize}
     \end{enumerate}
 \end{itemize}
 
 \UC{Modifica di una categoria}
+\label{modifica-categoria}
+
 Il venditore modifica una categoria precedentemente inserita.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
@@ -51,7 +55,7 @@ Il venditore modifica una categoria precedentemente inserita.
     \begin{itemize}
     	\item Il venditore si trova nella schermata di amministrazione delle categorie;
     	\item Il venditore seleziona la funzionalità per modificare una categoria di prodotti;
-    	\item (\actualUC.1) - Modifica nome della categoria;
+    	\item (UC\ref{modifica-categoria.nome}) - Modifica nome della categoria;
     	\item Il venditore conferma la modifica della categoria di prodotti.
     \end{itemize}
     \item \textbf{Scenari alternativi:} 
@@ -60,9 +64,9 @@ Il venditore modifica una categoria precedentemente inserita.
     \end{enumerate}
 \end{itemize}
 
-\resetSubUC
-
 \subUC{Modifica nome della categoria}
+\label{modifica-categoria.nome}
+
 Il venditore modifica il nome attuale di una categoria precedentemente inserita.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
@@ -73,18 +77,20 @@ Il venditore modifica il nome attuale di una categoria precedentemente inserita.
     \begin{enumerate}[label=\lett]
     	\item Il venditore elimina il nome utilizzato in precedenza non inserendone uno nuovo. In questo caso:
     	\begin{itemize}
-    		\item (UC52) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito;
+    		\item (UC\ref{estensione:campo-obbligatorio-non-inserito}) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito;
     		\item Viene fornita al venditore la possibilità di modificare il nome della nuova categoria di prodotti.
     	\end{itemize}
     	\item Il venditore modifica il nome della categoria con uno che è già assegnato ad un'altra categoria. In questo caso:
 		\begin{itemize}
-			\item (UC65) - Verrà visualizzato il messaggio di errore nome per la categoria già utilizzato;
+			\item (UC\ref{estensione:categoria-esistente}) - Verrà visualizzato il messaggio di errore nome per la categoria già utilizzato;
 			\item Viene fornita al venditore la possibilità di modificare il nome della nuova categoria di prodotti.
 		\end{itemize}
     \end{enumerate}
 \end{itemize}
 
 \UC{Eliminazione di una categoria}
+\label{eliminazione-categoria}
+
 Il venditore elimina una categoria precedentemente inserita.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
@@ -102,7 +108,9 @@ Il venditore elimina una categoria precedentemente inserita.
     \end{enumerate}
 \end{itemize}
 
-\UC{Ricerca categoria} 
+\UC{Ricerca categoria}
+\label{ricerca-categoria}
+
 Il venditore può cercare una categoria dalla propria schermata di amministrazione delle categorie.
 \begin{itemize}
 	\item \textbf{Attori primari:} venditore;

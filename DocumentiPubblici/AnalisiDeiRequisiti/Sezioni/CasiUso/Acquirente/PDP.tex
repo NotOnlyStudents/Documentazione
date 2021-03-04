@@ -1,6 +1,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \UC{Aggiunta prodotto al carrello dalla PDP}
+\label{aggiunta-carrello-pdp}
+
 L'acquirente o l'utente non autenticato si trova nella PDP del prodotto che vuole aggiungere al suo carrello.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente o utente non autenticato;
@@ -8,7 +10,7 @@ L'acquirente o l'utente non autenticato si trova nella PDP del prodotto che vuol
     \item \textbf{Postcondizione:} il prodotto è stato aggiunto al carrello dell'attore;
     \item \textbf{Scenario principale:} l'attore vuole comprare il prodotto visualizzato dalla PDP e in tal caso:
     \begin{itemize}
-        \item (UC13) - Modifica la quantità del prodotto da aggiungere nel carrello;
+        \item (UC\ref{modifica-quantita-da-aggiungere-al-carrello}) - Modifica la quantità del prodotto da aggiungere nel carrello;
         \item Seleziona la funzione di aggiunta al carrello del seguente prodotto nella quantità impostata.
     \end{itemize}
 \end{itemize}
@@ -16,6 +18,8 @@ L'acquirente o l'utente non autenticato si trova nella PDP del prodotto che vuol
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 \UC{Modifica della quantità del prodotto da aggiungere nel carrello}
+\label{modifica-quantita-da-aggiungere-al-carrello}
+
 L'acquirente o l'utente non autenticato modifica la quantità del prodotto che vuole aggiungere nel carrello.
 \begin{itemize}
 	\item \textbf{Attori primari:} acquirente o utente non autenticato;
@@ -30,7 +34,7 @@ L'acquirente o l'utente non autenticato modifica la quantità del prodotto che v
 	\begin{enumerate}[label=\lett]
         \item L'attore inserire una quantità minore o uguale a zero. Per questo motivo:
         \begin{itemize}
-            \item (UC56) - Viene visualizzato il messaggio d'errore quantità da aggiungere al carrello non valida;
+            \item (UC\ref{estensione:quantita-da-aggiungere-al-carrello-non-valida}) - Viene visualizzato il messaggio d'errore quantità da aggiungere al carrello non valida;
             \item Verrà impedita l'aggiunta al carrello.
         \end{itemize}
 	\end{enumerate}
