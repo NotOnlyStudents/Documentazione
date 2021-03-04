@@ -149,12 +149,14 @@
 \newcommand{\actualrpreD}{\therpdCounter}
 \newcommand{\actualrpreZ}{\therpzCounter}
 
-% Enumerate
-
+% Enumerate and itemize
 \newcommand{\lett}{\textbf{\alph*}.}
 
 % Custom label
 \makeatletter
-\newcommand{\customlabel}[2]{%
-	\protected@write \@auxout {}{\string \newlabel {#1}{{#2}{}}}}
+\newcommand\customlabel[2][]{\phantomsection\def\@currentlabelname{#1}\label{#2}}
+
+% \newcommand{\customlabel}[2]{
+% 	\protected@write \@auxout {}{\string \newlabel {#1}{{#2}{}}}
+% }
 \makeatother
