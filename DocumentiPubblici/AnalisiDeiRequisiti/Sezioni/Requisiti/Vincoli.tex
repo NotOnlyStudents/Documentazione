@@ -3,14 +3,14 @@
 
 \addcontentsline{lot}{table}{Requisiti di vincolo}
 
-\begin{longtable}{|c C{9.5cm} C{2.5cm}|} 
+\begin{longtable}{c C{9.5cm} C{2.5cm}} 
 	
 	\rowcolor{darkblue}
 	\textcolor{white}{\textbf{Codice Requisito}}&
 	\textcolor{white}{\textbf{Descrizione}}&
 	\textcolor{white}{\textbf{Fonte}}\\
 
-	\rvin{O} & Utilizzo di \glo{Typescript} come principale linguaggio di sviluppo. & \glo{Capitolato} \\
+	\rvin{O} & Utilizzo di \glo{Typescript} come principale linguaggio di sviluppo. & Capitolato \\
 	
 	\rvin{O} & Uso del \glo{framework} \glo{Serverless} per il controllo centrale dell'applicazione. & Capitolato \\
 	
@@ -22,13 +22,13 @@
 	
 	\rvin{O} & Il \glo{front end} va sviluppato con \glo{Next.js}. & Capitolato \\
 	
-	\rvin{O} & Il \glo{front end} deve prevedere il pre-rendering della pagina \glo{HTML5} implementato attraverso uno dei due seguenti approcci: \glo{SSR} o \glo{SSG}. & Capitolato \\
+	\rvin{O} & Il front end deve prevedere il pre-rendering della pagina \glo{HTML5} implementato attraverso uno dei due seguenti approcci: \glo{SSR} o \glo{SSG}. & Capitolato \\
 	
-	\rvin{O} & La piattaforma dovrà integrarsi con il servizio di pagamento Stripe. & Capitolato \\
+	\rvin{O} & La piattaforma dovrà integrarsi con il servizio di pagamento \glo{Stripe}. & Capitolato \\
 	
 	\rvin{O} & La parte di monitoraggio e controllo della piattaforma \glo{Amazon CloudWatch}. & Capitolato \\
 	
-	\rvin{Z} & E' necessario memorizzare le credenziali dell'utente su \glo{Auth0}, un \glo{identity provider} esterno di terze parti, per poter migrare il sito da un'infrastruttura all'altra. & Capitolato \\
+	\rvin{Z} & È necessario memorizzare le credenziali dell'utente su \glo{Auth0}, un \glo{identity provider} esterno di terze parti, per poter migrare il sito da un'infrastruttura all'altra. & Capitolato \\
 	
 	\rvin{O} & La piattaforma deve essere sviluppata nei seguenti 3 ambienti secondo l'ordine indicato: prima \glo{Locale}, poi \glo{Testing} e dopo \glo{Staging}. & Capitolato \\
 
@@ -48,5 +48,6 @@
 
 	\rvin{O} & La piattaforma deve funzionare correttamente nel browser Safari per mobile dalla versione 14.4 in poi. & Interna \\
 	
-	\rvin{D} & È desiderabile avere anche lo stadio di \glo{Production}. & Capitolato \\
+	\rvin{D} & È desiderabile avere anche lo stadio di Production. & Capitolato \\
+	
 \end{longtable}
