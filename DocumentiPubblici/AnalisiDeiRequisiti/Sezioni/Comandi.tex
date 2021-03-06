@@ -81,7 +81,7 @@
 
 \newcommand{\rfun}[2]{
 	\stepcounter{rfCounter}
-	RF#1\therfCounter\ifthenelse{\equal{#2}{}}{}{\_#2}
+	\textbf{RF#1\therfCounter}\ifthenelse{\equal{#2}{}}{}{\_#2}
 
 	\ifthenelse{\equal{#1}{O}}{\stepcounter{rfoCounter}}
 	{\ifthenelse{\equal{#1}{D}}{\stepcounter{rfdCounter}}
@@ -106,7 +106,7 @@
 
 \newcommand{\rqua}[1]{
 	\stepcounter{rqCounter}
-	RQ#1\therqCounter{}
+	\textbf{RQ#1\therqCounter}
 
 	\ifthenelse{\equal{#1}{O}}{\stepcounter{rqoCounter}}
 	{\ifthenelse{\equal{#1}{D}}{\stepcounter{rqdCounter}}
@@ -131,7 +131,7 @@
 
 \newcommand{\rvin}[1]{
 	\stepcounter{rvCounter}
-	RV#1\thervCounter{}
+	\textbf{RV#1\thervCounter}
 
 	\ifthenelse{\equal{#1}{O}}{\stepcounter{rvoCounter}}
 	{\ifthenelse{\equal{#1}{D}}{\stepcounter{rvdCounter}}
@@ -156,7 +156,7 @@
 
 \newcommand{\rpre}[1]{
 	\stepcounter{rpCounter}
-	RP#1\therpCounter
+	\textbf{RP#1\therpCounter}
 
 	\ifthenelse{\equal{#1}{O}}{\stepcounter{rpoCounter}}
 	{\ifthenelse{\equal{#1}{D}}{\stepcounter{rpdCounter}}
