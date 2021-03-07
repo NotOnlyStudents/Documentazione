@@ -1,6 +1,13 @@
 \UC{Aggiunta nuovo prodotto}
 \label{aggiunta-prodotto}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{Immagini/DiagrammiUC/Venditore/AggiuntaProdotto.png}
+    \caption{Diagramma di \actualUC: Aggiunta nuovo prodotto}
+    \label{fig:aggiunta-prodotto}
+\end{figure}
+
 Il venditore aggiunge un nuovo prodotto alla piattaforma, così da poter essere venduto.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
@@ -201,12 +208,12 @@ Il venditore inserisce le foto relative al prodotto da aggiungere.
 \UC{Modifica informazioni del prodotto}
 \label{modifica-prodotto}
 
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[scale=0.1]{Immagini/DiagrammiUC/UC19ModificaProdotto.png}
-%     \caption{Diagramma di \actualUC: Modifica di un prodotto nella piattaforma da parte del venditore}
-%     \label{fig:ModificaProdotto}
-% \end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{Immagini/DiagrammiUC/Venditore/ModificaProdotto.png}
+    \caption{Diagramma di \actualUC: Modifica informazioni del prodotto}
+    \label{fig:modifica-prodotto}
+\end{figure}
 
 Il venditore modifica uno o più campi di un prodotto che è stato inserito nella piattaforma.
 \begin{itemize}
@@ -301,7 +308,8 @@ Il venditore modifica le categorie del prodotto.
     \end{itemize}
 	\item \textbf{Scenari alternativi:}
     \begin{enumerate}[label=\lett]
-		\item Se il venditore non modifica alcuna categoria, allora non verranno cambiate.
+		\item Se il venditore non modifica alcuna categoria, allora non verranno cambiate;
+		\item Se il venditore rimuove tutte le categorie a cui appartiene il prodotto non inserendone delle altre, allora il prodotto verrà categorizzato come senza categoria.
 	\end{enumerate}
 \end{itemize}
 
@@ -408,7 +416,7 @@ Il venditore rimuove le foto relative al prodotto da aggiungere.
     \begin{enumerate}[label=\lett]
     	\item Il venditore cancella tutte le foto relative al prodotto. In questo caso:
     	\begin{itemize}
-    		\item (UC\ref{estensione:campo-obbligatorio-non-inserito}) - Viene visualizzato il messaggio di errore campo dati obbligatorio non inserito;
+    		\item (UC\ref{estensione:nessuna-foto-inserita}) - Viene visualizzato il messaggio di errore nessuna foto inserita;
     		\item Viene impedita la conferma delle modifiche al prodotto.
     	\end{itemize}
     \end{enumerate}
@@ -439,12 +447,12 @@ Il venditore rimuove un prodotto dalla sezione dei prodotti in evidenza presente
 \UC{Eliminazione prodotto}
 \label{eliminazione-prodotto}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{Immagini/DiagrammiUC/UC20EliminazioneProdotto}
-    \caption{Diagramma di \actualUC: Eliminazione di un prodotto da parte del venditore} 
-    \label{fig:EliminazioneProdotto}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=\textwidth]{Immagini/DiagrammiUC/UC20EliminazioneProdotto}
+%     \caption{Diagramma di \actualUC: Eliminazione di un prodotto da parte del venditore} 
+%     \label{fig:EliminazioneProdotto}
+% \end{figure}
 
 Il venditore vuole eliminare un prodotto precedentemente inserito.
 \begin{itemize}
@@ -511,8 +519,9 @@ Il venditore può cercare i prodotti dalla propria PLP attraverso delle parole.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.5]{Immagini/DiagrammiUC/UC6FiltraggioProdottiDellaPLP.png}
-	\caption{Diagramma di \actualUC: Filtraggio dei prodotti della PLP} 
+	\includegraphics[scale=0.8]{Immagini/DiagrammiUC/Venditore/FiltraggioProdottiPLPVenditore.png}
+	\caption{Diagramma di \actualUC: Filtraggio dei prodotti della PLP}
+	\label{fig:filtro-prodotti-venditore}
 \end{figure}
 
 Il venditore può filtrare i prodotti all'interno della PLP per categoria, prezzo, se è disponibile nel magazzino e se il prodotto è in evidenza o meno.

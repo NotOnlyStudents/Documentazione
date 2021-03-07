@@ -1,6 +1,13 @@
 \UC{Modifica informazioni venditore}
 \label{modifica-informazioni-venditore}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{Immagini/DiagrammiUC/Venditore/ModificaInformazioniVenditore.png}
+    \caption{Diagramma di \actualUC: Modifica informazioni venditore}
+    \label{fig:modifica-informazioni-venditore}
+\end{figure}
+
 Il venditore può modificare le sue informazioni personali.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
@@ -118,6 +125,13 @@ Il venditore vuole modificare la propria e-mail.
 \subUC{Modifica della password del venditore}
 \label{modifica-informazioni-venditore.password}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.6]{Immagini/DiagrammiUC/Venditore/ModificaPasswordVenditore.png}
+    \caption{Diagramma di \actualSubUC: Modifica della password del venditore}
+    \label{fig:modifica-informazioni-venditore.password}
+\end{figure}
+
 Il venditore vuole modificare la propria password.
 \begin{itemize}
     \item \textbf{Attori primari:} venditore;
@@ -131,7 +145,7 @@ Il venditore vuole modificare la propria password.
         \end{itemize}
     \item \textbf{Scenari alternativi:}
     \begin{enumerate}[label=\lett]
-    	\item Il venditore non inserisce alcuna password e lascia i campi per l'inserimento della nuova password e della conferma della stessa vuoti. In questo caso non verrà modificata la password.
+    	\item Il venditore non modifica la password attuale e per questo non cambierà.
     \end{enumerate}
 \end{itemize}
 
@@ -147,12 +161,12 @@ Il venditore inserisce una nuova password.
 	\item \textbf{Scenario principale:} il venditore inserisce una password che rispetta le condizioni imposte;
 	\item \textbf{Estensioni:}
 	\begin{enumerate}[label=\lett]
-		\item Il venditore inserisce la password e l'identity manager controlla il campo dati che risulta essere vuoto, in questo caso:
+		\item Il venditore elimina la propria password attuale, non ne inserisce una nuova e l'identity manager lo segnala. In questo caso:
 		\begin{itemize}
 			\item (UC\ref{estensione:campo-obbligatorio-non-inserito}) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
 			\item Viene fornita all'utente la possibilità di inserire una password.
 		\end{itemize}
-		\item Il venditore ha inserito una password e l'identity manager segnala che non è nel formato corretto, in questo caso:
+		\item Il venditore ha inserito una password che non rispetta i requisiti minimi di complessità e l'identity manager lo segnala. In questo caso:
 		\begin{itemize}
 			\item (UC\ref{estensione:password-non-valida}) - Viene mostrato un messaggio d'errore password non rispetta i requisiti di complessità;
 			\item Viene fornita al venditore la possibilità di modificare la password inserita.
@@ -172,12 +186,12 @@ Il venditore inserisce la conferma della nuova password.
 	\item \textbf{Scenario principale:} il venditore inserisce una password che rispetta le condizioni imposte;
 	\item \textbf{Estensioni:}
 	\begin{enumerate}[label=\lett]
-		\item Il venditore inserisce la password e l'identity manager controlla il campo dati che risulta essere vuoto, in questo caso:
+		\item Il venditore elimina la conferma della propria password attuale, non ne inserisce una nuova e l'identity manager lo segnala. In questo caso:
 		\begin{itemize}
 			\item (UC\ref{estensione:campo-obbligatorio-non-inserito}) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
 			\item Viene fornita all'utente la possibilità di inserire una password.
 		\end{itemize}
-		\item Il venditore ha inserito una password e l'identity manager segnala che non è nel formato corretto, in questo caso:
+		\item Il venditore ha inserito una password, come conferma della password, che non rispetta i requisiti minimi di complessità e l'identity manager lo segnala. In questo caso:
 		\begin{itemize}
 			\item (UC\ref{estensione:password-non-valida}) - Viene mostrato un messaggio d'errore password non rispetta i requisiti di complessità;
 			\item Viene fornita al venditore la possibilità di modificare la password inserita.
