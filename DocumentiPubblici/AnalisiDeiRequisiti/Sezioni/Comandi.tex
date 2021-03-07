@@ -81,7 +81,8 @@
 
 \newcommand{\rfun}[2]{
 	\stepcounter{rfCounter}
-	\textbf{RF#1\therfCounter}\ifthenelse{\equal{#2}{}}{}{\_#2}
+	\rfuncode{#1}{\therfCounter}{#2}
+	% \textbf{RF#1\therfCounter}\ifthenelse{\equal{#2}{}}{}{\_#2}
 
 	\ifthenelse{\equal{#1}{O}}{\stepcounter{rfoCounter}}
 	{\ifthenelse{\equal{#1}{D}}{\stepcounter{rfdCounter}}
@@ -97,6 +98,15 @@
 \newcommand{\actualrfunD}{\therfdCounter}
 \newcommand{\actualrfunZ}{\therfzCounter}
 
+\newcounter{tracfunCounter}
+
+\setcounter{tracfunCounter}{0}
+
+\newcommand{\tracfun}[2]{
+	\stepcounter{tracfunCounter}
+	\rfuncode{#1}{\thetracfunCounter}{#2}
+}
+
 % Qua
 \newcounter{rqCounter}
 \newcounter{rqoCounter}
@@ -110,7 +120,7 @@
 
 \newcommand{\rqua}[1]{
 	\stepcounter{rqCounter}
-	\textbf{RQ#1\therqCounter}
+	\rquacode{#1}{\therqCounter}
 
 	\ifthenelse{\equal{#1}{O}}{\stepcounter{rqoCounter}}
 	{\ifthenelse{\equal{#1}{D}}{\stepcounter{rqdCounter}}
@@ -126,6 +136,15 @@
 \newcommand{\actualrquaD}{\therqdCounter}
 \newcommand{\actualrquaZ}{\therqzCounter}
 
+\newcounter{tracquaCounter}
+
+\setcounter{tracquaCounter}{0}
+
+\newcommand{\tracqua}[1]{
+	\stepcounter{tracquaCounter}
+	\rquacode{#1}{\thetracquaCounter}
+}
+
 % Vin
 \newcounter{rvCounter}
 \newcounter{rvoCounter}
@@ -139,7 +158,7 @@
 
 \newcommand{\rvin}[1]{
 	\stepcounter{rvCounter}
-	\textbf{RV#1\thervCounter}
+	\rvincode{#1}{\thervCounter}
 
 	\ifthenelse{\equal{#1}{O}}{\stepcounter{rvoCounter}}
 	{\ifthenelse{\equal{#1}{D}}{\stepcounter{rvdCounter}}
@@ -155,6 +174,15 @@
 \newcommand{\actualrvinD}{\thervdCounter}
 \newcommand{\actualrvinZ}{\thervzCounter}
 
+\newcounter{tracvinCounter}
+
+\setcounter{tracvinCounter}{0}
+
+\newcommand{\tracvin}[1]{
+	\stepcounter{tracvinCounter}
+	\rvincode{#1}{\thetracvinCounter}
+}
+
 % Pre
 \newcounter{rpCounter}
 \newcounter{rpoCounter}
@@ -168,7 +196,7 @@
 
 \newcommand{\rpre}[1]{
 	\stepcounter{rpCounter}
-	\textbf{RP#1\therpCounter}
+	\rprecode{#1}{\therpCounter}
 
 	\ifthenelse{\equal{#1}{O}}{\stepcounter{rpoCounter}}
 	{\ifthenelse{\equal{#1}{D}}{\stepcounter{rpdCounter}}
@@ -183,6 +211,15 @@
 \newcommand{\actualrpreO}{\therpoCounter}
 \newcommand{\actualrpreD}{\therpdCounter}
 \newcommand{\actualrpreZ}{\therpzCounter}
+
+\newcounter{tracpreCounter}
+
+\setcounter{tracpreCounter}{0}
+
+\newcommand{\tracpre}[1]{
+	\stepcounter{tracpreCounter}
+	\rprecode{#1}{\thetracpreCounter}
+}
 
 % Enumerate and itemize
 \newcommand{\lett}{\textbf{\alph*}.}
