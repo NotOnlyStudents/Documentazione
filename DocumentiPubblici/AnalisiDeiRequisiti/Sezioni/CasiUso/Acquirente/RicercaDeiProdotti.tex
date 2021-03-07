@@ -1,28 +1,30 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \UC{Ricerca dei prodotti} 
-L'utente non autenticato o l'acquirente può cercare i prodotti dalla schermata principale oppure dalla PLP.
+\label{ricerca-prodotti-acquirente}
+
+L'utente non autenticato o l'acquirente può cercare i prodotti dalla schermata principale, oppure dalla PLP, attraverso delle parole.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente o utente non autenticato;
-    \item \textbf{Precondizione:} l'attore ha selezionato la funzionalità per la ricerca e l'inserimento delle parole per individuare un prodotto;
+    \item \textbf{Precondizione:} l'attore ha selezionato la funzionalità per la ricerca;
     \item \textbf{Postcondizione:} l'attore viene reindirizzato alla PLP con i prodotti che contengono nella descrizione o nel nome, almeno una delle parole per le quali si è svolta la ricerca;
     \item \textbf{Scenario principale:} l'attore ha selezionato la funzione prevista per la ricerca. Dopo aver inserito le parole per individuare il prodotto, conferma la voltà di procedere e viene quindi reindirizzato alla PLP che contiene tutti i prodotti che hanno almeno una delle parole indicate, nella descrizione o nel nome;
-    \item \textbf{Estensioni:}
+    \item \textbf{Scenari alternativi:}
     \begin{enumerate}[label=\lett]
-        \item L'attore ha svolto una ricerca che non ha prodotto alcun risultato. In questo caso:
-        \begin{itemize}
-            \item (UC) - Viene visualizzato il messaggio di ricerca senza alcun risultato.
-        \end{itemize}
+        \item L'attore ha svolto una ricerca in modo tale che questa non dia alcun risultato. In questo caso la PLP viene aggiornata mostrando il messaggio nessun prodotto trovato.
     \end{enumerate}
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \UC{Filtraggio prodotti della PLP}
+\label{filtro-prodotti-acquirente}
+
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.5]{Immagini/DiagrammiUC/UC6FiltraggioProdottiDellaPLP.png}
-    \caption{Diagramma di \actualUC: Filtraggio dei prodotti della PLP} 
+    \includegraphics[scale=0.8]{Immagini/DiagrammiUC/Acquirente/FiltraggioProdotti.png}
+    \caption{Diagramma di \actualUC: Filtraggio dei prodotti della PLP}
+    \label{fig:filtro-prodotti-acquirente}
 \end{figure}
 
 L'utente non autenticato o l'acquirente può filtrare i prodotti all'interno della PLP per categoria, prezzo e se è disponibile nel magazzino.
@@ -32,23 +34,20 @@ L'utente non autenticato o l'acquirente può filtrare i prodotti all'interno del
     \item \textbf{Postcondizione:} l'attore avrà a disposizione tutti i prodotti che soddisfano tutte le condizioni dei vari filtri impostati;
     \item \textbf{Scenario principale:} l'attore è nella PLP e ha impostato uno (o più) dei seguenti filtri:
     \begin{itemize}
-        \item (\actualUC.1) - Impostazione del filtro per categoria;
-        \item (\actualUC.2) - Impostazione del filtro per prezzo;
-        \item (\actualUC.3) - Impostazione del filtro per disponibilità nel magazzino.
+        \item (UC\ref{filtro-prodotti-acquirente.categoria}) - Impostazione del filtro per categoria;
+        \item (UC\ref{filtro-prodotti-acquirente.prezzo}) - Impostazione del filtro per prezzo;
+        \item (UC\ref{filtro-prodotti-acquirente.magazzino}) - Impostazione del filtro per disponibilità nel magazzino.
     \end{itemize}
     Di seguito la PLP verrà aggiornata con i prodotti che rispettano tutti i filtri applicati;
-    \item \textbf{Estensioni:}
+    \item \textbf{Scenari alternativi:}
     \begin{enumerate}[label=\lett]
-        \item L'attore ha impostato i filtri in modo tale che la ricerca con la loro combinazione non dia alcun risultato. In questo caso:
-        \begin{itemize}
-            \item (UC) - Viene visualizzato il messaggio di ricerca senza alcun risultato.
-        \end{itemize}
+        \item L'attore ha impostato i filtri in modo tale che la ricerca con la loro combinazione non dia alcun risultato. In questo caso la PLP viene aggiornata mostrando il messaggio nessun prodotto trovato.
     \end{enumerate}
 \end{itemize}
 
-\resetSubUC
-
 \subUC{Filtro per categorie}
+\label{filtro-prodotti-acquirente.categoria}
+
 L'utente non autenticato o l'acquirente può cercare i prodotti in base alla loro categoria, selezionando quelle di interesse tra tutte le categorie disponibili.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente o utente non autenticato;
@@ -62,6 +61,8 @@ L'utente non autenticato o l'acquirente può cercare i prodotti in base alla lor
 \end{itemize}
 
 \subUC{Filtro per prezzo}
+\label{filtro-prodotti-acquirente.prezzo}
+
 L'utente non autenticato o l'acquirente può cercare i prodotti in base al loro prezzo.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente o utente non autenticato;
@@ -75,6 +76,8 @@ L'utente non autenticato o l'acquirente può cercare i prodotti in base al loro 
 \end{itemize}
 
 \subUC{Filtro per disponibilità nel magazzino}
+\label{filtro-prodotti-acquirente.magazzino}
+
 L'utente non autenticato o l'acquirente può cercare i prodotti in base alla loro disponibilità in magazzino.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente o utente non autenticato;

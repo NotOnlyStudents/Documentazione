@@ -3,199 +3,322 @@
 
 \addcontentsline{lot}{table}{Tracciamento requisito-fonte}
 
-\begin{longtable}{|C{6cm} C{3cm}|} 
+\begin{longtable}{C{6cm} C{6cm}} 
 	
 	\rowcolor{darkblue}
 	\textcolor{white}{\textbf{Requisiti}} &
 	\textcolor{white}{\textbf{Fonte}} \\
-	
-	RFO1\_1 & UC1 \\
 
-	RFO2\_1.1 & UC1.1 \\
-	
-	RFO3\_1.2 & UC1.2 \\
-	
-	RFO4\_1.3 & UC1.3 \\
-	
-	RFO5\_2 & UC2 \\
+    \tracfun{O}{\ref{registrazione}} & UC\ref{registrazione} \\ 
 
-	RFO6\_3.1 & UC3.1 \\
-	
-	RFO7\_3.1.1 & UC3.1.1 \\
+    \tracfun{O}{\ref{registrazione.modulo.nome}} & UC\ref{registrazione.modulo.nome} \\
 
-	RFO8\_3.3 & UC3.3 \\
+    \tracfun{O}{\ref{registrazione.modulo.cognome}} & UC\ref{registrazione.modulo.cognome} \\
 
-	RFO9\_3.4 & UC3.4 \\
+    \tracfun{O}{\ref{registrazione.modulo.email}} & UC\ref{registrazione.modulo.email} \\
 
-	RFO10\_3.2 & UC3.2 \\
-	
-	RFO11\_3.2 & UC3.2 \\
-	
-	RFO12\_3.2.1 & UC3.2.1 \\
+    \tracfun{O}{\ref{registrazione.modulo.password}} & UC\ref{registrazione.modulo.password} \\
 
-	RFO13\_3.3 & UC3.3 \\
+    \tracfun{O}{\ref{registrazione.modulo.conferma-password}} & UC\ref{registrazione.modulo.conferma-password} \\
 
-	RFO14\_3.4 & UC3.4 \\
+    \tracfun{O}{\ref{autenticazione-venditore}} & UC\ref{autenticazione-venditore} \\
 
-    RFO15\_4 & UC4 \\
-    
-    RFO16\_4 & UC4 \\
+    \tracfun{O}{\ref{autenticazione-acquirente}} & UC\ref{autenticazione-acquirente} \\
 
-    RFO17\_5 & UC5 \\
-    
-    RFO18\_5.1 & UC5.1 \\
-    
-    RFO19\_6 & UC6\\
-    
-    RFO20\_6.1 & UC6.1 \\
-    
-    RFO21\_6.2 & UC6.2 \\
-    
-    RFO22\_6.3 & UC6.3 \\
-    
-    RFO23\_7 & UC7 \\
-    
-    RFO24\_7.1 & UC7.1 \\
-    
-    RFO25\_7.2 & UC 7.2 \\
-    
-    RFO26\_8 & UC8 \\
-    
-    RFO27\_9 & UC9 \\
-    
-    RFO28\_9 & UC9 \\
+    \tracfun{O}{\ref{password-dimenticata}} & UC\ref{password-dimenticata} \\
 
-    RFO29\_9.1 & UC9.1 \\
-    
-    RFO30\_10 & UC10 \\
+    \tracfun{O}{} & Interna \\
 
-    RFO31\_10 & UC10 \\
-    
-    RFO32\_10.1 & UC10.1 \\
-    
-    RFO33\_10.1 & UC10.1 \\
-    
-    RFO34\_10.1 & UC10.1 \\
-    
-    RFO35\_10.2 & UC10.2 \\
-    
-    RFO36\_11 & UC11 \\
-    
-    RFO37\_12 & UC12 \\
-    
-    RFO38\_13 & UC13 \\
-    
-    RFO39\_13 & UC13 \\
-    
-    RFO40\_13.1 & UC13.1 \\
-    
-    RFO41\_13.2 & UC13.2 \\
-    
-    RFO42\_14 & UC14 \\
-    
-    RFO43\_14 & UC14 \\
-    
-    RFO44\_14 & UC14 \\
-    
-    RFO45\_14 & UC14 \\
-    
-    RFO46\_15 & UC15 \\
-    
-    RFO47\_15 & UC15 \\
-    
-    RFO48\_15.1 & UC15.1 \\
-    
-    RFO49\_15 & UC15 \\
-    
-    RFO50\_15 & UC15 \\
-    
-    RFO51\_16 & UC16 \\
-    
-    RFO52\_17 & UC17 \\
-    
-    RFO53\_18 & UC18 \\
-    
-    RFO54\_18 & UC18 \\
-    
-    RFO55\_18 & UC18 \\
-    
-    RFO56\_18 & UC18 \\
-    
-    RFO57\_18 & UC18 \\
-    
-    RFO58\_18.1 & UC18.1 \\
-    
-    RFO59\_18 & UC18 \\
-    
-    RFO60\_19 & UC19 \\
-    
-    RFO61\_20 & UC20 \\
-    
-    RFO62\_21 & UC21 \\
-    
-    RFO63\_22 & UC22 \\
+    \tracfun{O}{\ref{logout}} & UC\ref{logout} \\
 
-    RFO64 & Capitolato \\
-    
-    RFO65 & Interna \\
-    
-    RFO66 & Capitolato \\
-    
-    RFO67 & Capitolato \\
+    \tracfun{O}{\ref{ricerca-prodotti-acquirente}} & UC\ref{ricerca-prodotti-acquirente} \\
+
+    \tracfun{O}{\ref{filtro-prodotti-acquirente}} & UC\ref{filtro-prodotti-acquirente} \\
+
+    \tracfun{O}{\ref{filtro-prodotti-acquirente.categoria}} & UC\ref{filtro-prodotti-acquirente.categoria} \\
+
+    \tracfun{O}{\ref{filtro-prodotti-acquirente.prezzo}} & UC\ref{filtro-prodotti-acquirente.prezzo} \\
+
+    \tracfun{O}{\ref{filtro-prodotti-acquirente.magazzino}} & UC\ref{filtro-prodotti-acquirente.magazzino} \\
+
+    \tracfun{O}{} & Interna \\
+
+    \tracfun{O}{} & Interna \\
+
+    \tracfun{O}{} & Interna \\
+
+    \tracfun{O}{\ref{ordinamento-alfabetico}} & UC\ref{ordinamento-alfabetico} \\
+
+    \tracfun{O}{\ref{ordinamento-prezzo-crescente}} & UC\ref{ordinamento-prezzo-crescente} \\
+
+    \tracfun{O}{\ref{ordinamento-prezzo-decrescente}} & UC\ref{ordinamento-prezzo-decrescente} \\
+
+    \tracfun{O}{\ref{aggiunta-carrello-plp}} & UC\ref{aggiunta-carrello-plp} \\
+
+    \tracfun{O}{} & Interna \\
+
+    \tracfun{O}{} & Interna \\
+
+    \tracfun{O}{} & \glo{Capitolato} \\
+
+    \tracfun{O}{} & Capitolato \\
+
+    \tracfun{O}{} & Interna \\
+
+    \tracfun{O}{\ref{aggiunta-carrello-pdp}} & UC\ref{aggiunta-carrello-pdp} \\
+
+    \tracfun{O}{\ref{modifica-quantita-da-aggiungere-al-carrello}} & UC\ref{modifica-quantita-da-aggiungere-al-carrello} \\
+
+    \tracfun{O}{} & Interna \\
+
+    \tracfun{O}{\ref{visualizzazione-carrello}} & UC\ref{visualizzazione-carrello} \\
+
+    \tracfun{O}{\ref{visualizzazione-carrello}} & UC\ref{visualizzazione-carrello} \\
+
+    \tracfun{O}{\ref{eliminazione-prodotto-dal-carrello}} & UC\ref{eliminazione-prodotto-dal-carrello} \\
+
+    \tracfun{O}{\ref{modifica-quantita-nel-carrello}} & UC\ref{modifica-quantita-nel-carrello} \\
+
+    \tracfun{O}{} & Interna \\
+
+    \tracfun{O}{} & Capitolato \\
+
+    \tracfun{O}{\ref{checkout}} & UC\ref{checkout} \\
+
+    \tracfun{O}{\ref{checkout.indirizzo}} & UC\ref{checkout.indirizzo} \\
+
+    \tracfun{O}{} & Interna \\
+
+    \tracfun{O}{\ref{checkout.pagamento}} & UC\ref{checkout.pagamento} \\
+
+    \tracfun{O}{\ref{inserimento-indirizzo-consegna}} & UC\ref{inserimento-indirizzo-consegna} \\
+
+    \tracfun{O}{\ref{inserimento-indirizzo-consegna.modulo.nazione}} & UC\ref{inserimento-indirizzo-consegna.modulo.nazione} \\
+
+    \tracfun{O}{\ref{inserimento-indirizzo-consegna.modulo.comune}} & UC\ref{inserimento-indirizzo-consegna.modulo.comune} \\
+
+    \tracfun{O}{\ref{inserimento-indirizzo-consegna.modulo.via}} & UC\ref{inserimento-indirizzo-consegna.modulo.via} \\
+
+    \tracfun{O}{\ref{inserimento-indirizzo-consegna.modulo.cap}} & UC\ref{inserimento-indirizzo-consegna.modulo.cap} \\
+
+    \tracfun{O}{\ref{modifica-indirizzo-consegna}} & UC\ref{modifica-indirizzo-consegna} \\
+
+    \tracfun{O}{\ref{modifica-indirizzo-consegna.nazione}} & UC\ref{modifica-indirizzo-consegna.nazione} \\
+
+    \tracfun{O}{\ref{modifica-indirizzo-consegna.comune}} & UC\ref{modifica-indirizzo-consegna.comune} \\
+
+    \tracfun{O}{\ref{modifica-indirizzo-consegna.via}} & UC\ref{modifica-indirizzo-consegna.via} \\
+
+    \tracfun{O}{\ref{modifica-indirizzo-consegna.cap}} & UC\ref{modifica-indirizzo-consegna.cap} \\
+
+    \tracfun{O}{\ref{eliminazione-indirizzo-consegna}} & UC\ref{eliminazione-indirizzo-consegna} \\
+
+    \tracfun{O}{} & Interna \\
+
+    \tracfun{O}{\ref{visualizzazione-ordini-effettuati}} & UC\ref{visualizzazione-ordini-effettuati} \\
+
+    \tracfun{O}{\ref{visualizzazione-ordini-effettuati}} & UC\ref{visualizzazione-ordini-effettuati} \\
+
+    \tracfun{O}{\ref{ricerca-codice-ordine-acquirente}} & UC\ref{ricerca-codice-ordine-acquirente} \\
+
+    \tracfun{O}{\ref{filtro-temporale-ordini-acquirente}} & UC\ref{filtro-temporale-ordini-acquirente} \\
+
+    \tracfun{O}{\ref{filtro-temporale-ordini-acquirente.data-iniziale}} & UC\ref{filtro-temporale-ordini-acquirente.data-iniziale} \\
+
+    \tracfun{O}{\ref{filtro-temporale-ordini-acquirente.data-finale}} & UC\ref{filtro-temporale-ordini-acquirente.data-finale} \\
+
+    \tracfun{O}{} & Interna \\
+
+    \tracfun{O}{} & Capitolato \\
+
+    \tracfun{O}{\ref{modifica-informazioni-acquirente}} & UC\ref{modifica-informazioni-acquirente} \\
+
+    \tracfun{O}{\ref{modifica-informazioni-acquirente.nome}} & UC\ref{modifica-informazioni-acquirente.nome} \\
+
+    \tracfun{O}{\ref{modifica-informazioni-acquirente.cognome}} & UC\ref{modifica-informazioni-acquirente.cognome} \\
+
+    \tracfun{O}{\ref{modifica-informazioni-acquirente.email}} & UC\ref{modifica-informazioni-acquirente.email} \\
+
+    \tracfun{O}{\ref{modifica-informazioni-acquirente.password}} & UC\ref{modifica-informazioni-acquirente.password} \\
+
+    \tracfun{O}{\ref{eliminazione-account-acquirente}} & UC\ref{eliminazione-account-acquirente} \\
+
+    \tracfun{O}{} & Capitolato \\
+
+    \tracfun{O}{} & Interna \\
+
+    \tracfun{O}{\ref{modifica-informazioni-venditore}} & UC\ref{modifica-informazioni-venditore} \\
         
-    RFO68 & Capitolato \\
-    
-    RFO69 & Capitolato \\
-    
-    RFO70 & Capitolato \\
-    
-    RFO71 & Capitolato \\
-    
-    RFZ72 & Capitolato \\
-    
-	RQO1 & Capitolato \\
-	
-	RQD2 & Capitolato \\
-	
-	RQO3 & Capitolato \\
-	
-	RQO4 & Capitolato \\
+    \tracfun{O}{\ref{modifica-informazioni-venditore.nome}} & UC\ref{modifica-informazioni-venditore.nome} \\
+        
+    \tracfun{O}{\ref{modifica-informazioni-venditore.cognome}} & UC\ref{modifica-informazioni-venditore.cognome} \\
+        
+    \tracfun{O}{\ref{modifica-informazioni-venditore.email}} & UC\ref{modifica-informazioni-venditore.email} \\
 
-	RQO5 & Capitolato \\
+    \tracfun{O}{\ref{modifica-informazioni-venditore.password}} & UC\ref{modifica-informazioni-venditore.password} \\
+        
+    \tracfun{O}{\ref{modifica-informazioni-venditore.logo}} & UC\ref{modifica-informazioni-venditore.logo} \\
+        
+    \tracfun{O}{\ref{modifica-informazioni-venditore.nome-azienda}} & UC\ref{modifica-informazioni-venditore.nome-azienda} \\
+        
+    \tracfun{O}{\ref{modifica-informazioni-venditore.descrizione-azienda}} & UC\ref{modifica-informazioni-venditore.descrizione-azienda} \\
 
-	RQO6 & Interna \\
+    \tracfun{O}{} & Interna \\
+        
+    \tracfun{O}{} & Interna \\ 
 
-	RQO7 & Interna  \\
+    \tracfun{O}{} & Interna \\
+
+    \tracfun{O}{} & Interna \\
+
+    \tracfun{O}{} & Interna \\
+
+    \tracfun{O}{} & Interna \\
+
+    \tracfun{O}{} & Capitolato \\
+
+    \tracfun{O}{\ref{aggiunta-prodotto}} & UC\ref{aggiunta-prodotto} \\
+        
+    \tracfun{O}{\ref{aggiunta-prodotto.nome}} & UC\ref{aggiunta-prodotto.nome} \\
+        
+    \tracfun{O}{\ref{aggiunta-prodotto.descrizione}} & UC\ref{aggiunta-prodotto.descrizione} \\
+        
+    \tracfun{O}{\ref{aggiunta-prodotto.categorie}} & UC\ref{aggiunta-prodotto.categorie} \\
+        
+    \tracfun{O}{\ref{aggiunta-prodotto.prezzo}} & UC\ref{aggiunta-prodotto.prezzo} \\
+        
+    \tracfun{O}{\ref{aggiunta-prodotto.sconto}} & UC\ref{aggiunta-prodotto.sconto} \\
+        
+    \tracfun{O}{\ref{aggiunta-prodotto.quantita}} & UC\ref{aggiunta-prodotto.quantita} \\
+        
+    \tracfun{O}{\ref{aggiunta-prodotto.foto}} & UC\ref{aggiunta-prodotto.foto} \\
+        
+    \tracfun{O}{} & Interna \\
+        
+    \tracfun{O}{\ref{modifica-prodotto}} & UC\ref{modifica-prodotto} \\
+        
+    \tracfun{O}{\ref{modifica-prodotto.nome}} & UC\ref{modifica-prodotto.nome} \\
+        
+    \tracfun{O}{\ref{modifica-prodotto.descrizione}} & UC\ref{modifica-prodotto.descrizione} \\
+        
+    \tracfun{O}{\ref{modifica-prodotto.categorie}} & UC\ref{modifica-prodotto.categorie} \\
+        
+    \tracfun{O}{\ref{modifica-prodotto.prezzo}} & UC\ref{modifica-prodotto.prezzo} \\
+        
+    \tracfun{O}{\ref{modifica-prodotto.sconto}} & UC\ref{modifica-prodotto.sconto} \\
+        
+    \tracfun{O}{\ref{modifica-prodotto.aggiunta-foto}} & UC\ref{modifica-prodotto.aggiunta-foto} \\
+        
+    \tracfun{O}{\ref{modifica-prodotto.rimozione-foto}} & UC\ref{modifica-prodotto.rimozione-foto} \\
+        
+    \tracfun{O}{\ref{aggiunta-prodotto-evidenza}} & UC\ref{aggiunta-prodotto-evidenza} \\
+
+    \tracfun{O}{\ref{rimozione-prodotto-evidenza}} & UC\ref{rimozione-prodotto-evidenza} \\
+        
+    \tracfun{O}{\ref{eliminazione-prodotto}} & UC\ref{eliminazione-prodotto} \\
+
+    \tracfun{O}{\ref{rifornimento-prodotto}} & UC\ref{rifornimento-prodotto} \\
+
+    \tracfun{O}{\ref{ricerca-prodotti-venditore}} & UC\ref{ricerca-prodotti-venditore} \\
+
+    \tracfun{O}{\ref{filtro-prodotti-venditore}} & UC\ref{filtro-prodotti-venditore} \\
+
+    \tracfun{O}{\ref{filtro-prodotti-venditore.categoria}} & UC\ref{filtro-prodotti-venditore.categoria} \\
+
+    \tracfun{O}{\ref{filtro-prodotti-venditore.prezzo}} & UC\ref{filtro-prodotti-venditore.prezzo} \\
+
+    \tracfun{O}{\ref{filtro-prodotti-venditore.magazzino}} & UC\ref{filtro-prodotti-venditore.magazzino} \\
+
+    \tracfun{O}{\ref{filtro-prodotti-venditore.evidenza}} & UC\ref{filtro-prodotti-venditore.evidenza} \\
+
+    \tracfun{O}{} & Interna \\
+
+    \tracfun{O}{\ref{aggiunta-categoria}} & UC\ref{aggiunta-categoria} \\
+        
+    \tracfun{O}{\ref{aggiunta-categoria.nome}} & UC\ref{aggiunta-categoria.nome} \\
+        
+    \tracfun{O}{\ref{modifica-categoria}} & UC\ref{modifica-categoria} \\
+        
+    \tracfun{O}{\ref{modifica-categoria.nome}} & UC\ref{modifica-categoria.nome} \\
+
+    \tracfun{O}{\ref{eliminazione-categoria}} & UC\ref{eliminazione-categoria} \\
+
+    \tracfun{O}{\ref{ricerca-categoria}} & UC\ref{ricerca-categoria} \\
+
+    \tracfun{O}{} & Interna \\
+
+    \tracfun{O}{\ref{visualizzazione-ordini-in-gestione}} & UC\ref{visualizzazione-ordini-in-gestione} \\
+
+    \tracfun{O}{\ref{visualizzazione-ordini-in-gestione}} & UC\ref{visualizzazione-ordini-in-gestione} \\
+
+    \tracfun{O}{\ref{modifica-stato-ordine}} & UC\ref{modifica-stato-ordine} \\
+
+    \tracfun{O}{} & Interna \\
+
+    \tracfun{O}{\ref{ricerca-codice-ordine-venditore}} & UC\ref{ricerca-codice-ordine-venditore} \\
+        
+    \tracfun{O}{\ref{ricerca-cliente-ordine-venditore}} & UC\ref{ricerca-cliente-ordine-venditore} \\
+        
+    \tracfun{O}{\ref{filtro-ordini-venditore}} & UC\ref{filtro-ordini-venditore} \\
+        
+    \tracfun{O}{\ref{filtro-ordini-venditore.stato}} & UC\ref{filtro-ordini-venditore.stato} \\
+        
+    \tracfun{O}{\ref{filtro-ordini-venditore.temporale}} & UC\ref{filtro-ordini-venditore.temporale} \\
+        
+    \tracfun{O}{\ref{filtro-ordini-venditore.temporale.data-iniziale}} & UC\ref{filtro-ordini-venditore.temporale.data-iniziale} \\
+        
+    \tracfun{O}{\ref{filtro-ordini-venditore.temporale.data-finale}} & UC\ref{filtro-ordini-venditore.temporale.data-finale} \\
+
+    \tracqua{O} & Capitolato  \\
+
+	\tracqua{O} & Interna \\
+
+	\tracqua{O} & VE\_2020\_12\_28 \\
+
+	\tracqua{O} & VE\_2020\_12\_28 \\
+
+	\tracqua{D} & Capitolato \\
 	
-	RQO8 & VE\_2020\_12\_28 \\
+    \tracvin{O} & Capitolato \\
 	
-	RQO9 & VE\_2020\_12\_28 \\
-	
-	RQO10 & Capitolato \\
-	
-	RVO1 & Capitolato \\
-	
-	RVO2 & Capitolato \\
-	
-	RVO3 & Capitolato \\
-	
-	RVO4 & Capitolato \\
-	
-	RVO5 & Capitolato \\
-	
-	RVO6 & Capitolato \\
-	
-	RVO7 & Capitolato \\
-	
-	RVO8 & Capitolato \\
-	
-	RVO9 & Capitolato \\
-	
-	RVZ10 & Capitolato \\
-	
-	RVO11 & Capitolato \\
-	
-	RVD12 & Capitolato \\
-	
-    RPO1 & Interna \\
+    \tracvin{O} & Capitolato \\
+    
+    \tracvin{O} & Capitolato \\
+    
+    \tracvin{O} & Capitolato \\
+    
+    \tracvin{O} & Capitolato \\
+    
+    \tracvin{O} & Capitolato \\
+    
+    \tracvin{O} & Capitolato \\
+    
+    \tracvin{O} & Capitolato \\
+    
+    \tracvin{O} & Capitolato \\
+    
+    \tracvin{Z} & Capitolato \\
+    
+    \tracvin{O} & Capitolato \\
+    
+    \tracvin{O} & Interna \\
+    
+    \tracvin{O} & Interna \\
+    
+    \tracvin{O} & Interna \\
+    
+    \tracvin{O} & Interna \\
+    
+    \tracvin{O} & Interna \\
+    
+    \tracvin{O} & Interna \\
+    
+    \tracvin{O} & Interna \\
+    
+    \tracvin{O} & Interna \\
+    
+    \tracvin{D} & Capitolato \\
+
+	\tracpre{O} & Interna \\
+    
 \end{longtable}

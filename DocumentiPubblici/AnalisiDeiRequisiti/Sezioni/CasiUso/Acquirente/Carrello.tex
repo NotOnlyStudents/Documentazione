@@ -1,13 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \UC{Visualizzazione del carrello}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{Immagini/DiagrammiUC/UC10VisualizzazioneProdottiNelCarrello.png}
-    \caption{Diagramma di \actualUC: Visualizzazione prodotti nel carrello} 
-    \label{fig:VisualizzazioneProdottiNelCarrello}
-\end{figure}
+\label{visualizzazione-carrello}
 
 L'utente non autenticato o l'acquirente visualizza il proprio carrello.
 \begin{itemize}
@@ -30,6 +24,8 @@ L'utente non autenticato o l'acquirente visualizza il proprio carrello.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \UC{Eliminazione di un prodotto dal carrello}
+\label{eliminazione-prodotto-dal-carrello}
+
 L'utente non autenticato o l'acquirente può eliminare un prodotto che ha inserito nel carrello.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente o utente non autenticato;
@@ -41,7 +37,9 @@ L'utente non autenticato o l'acquirente può eliminare un prodotto che ha inseri
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \UC{Modifica della quantità di un prodotto nel carrello}
-L'utente non autenticato o l'acquirente modifica la quantità di un prodotto già nel carrello.
+\label{modifica-quantita-nel-carrello}
+
+L'utente non autenticato o l'acquirente modifica la quantità di un prodotto precedentemente inserito nel carrello.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente o utente non autenticato;
     \item \textbf{Precondizione:} l'attore è nella pagina del carrello dove ha inserito almeno un prodotto e ha selezionato la funzionalità di modifica della quantità di un prodotto;
@@ -51,7 +49,7 @@ L'utente non autenticato o l'acquirente modifica la quantità di un prodotto gi�
     \begin{enumerate}[label=\lett]
         \item L'attore modifica la quantità con una minore o uguale a zero. In questo caso:
         \begin{itemize}
-            \item (UC) - Viene visualizzato il messaggio d'errore quantità del prodotto non valida;
+            \item (UC\ref{estensione:quantita-da-aggiungere-al-carrello-non-valida}) - Viene visualizzato il messaggio d'errore quantità del prodotto non valida;
             \item Verrà impedita la modifica della quantità nel carrello.
         \end{itemize}
     \end{enumerate}
