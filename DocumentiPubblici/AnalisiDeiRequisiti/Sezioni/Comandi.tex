@@ -88,6 +88,10 @@
 	{\ifthenelse{\equal{#1}{Z}}{\stepcounter{rfzCounter}}}}
 }
 
+\newcommand{\rfuncode}[3]{
+	\textbf{RF#2#1}\ifthenelse{\equal{#3}{}}{}{\_#3}
+}
+
 \newcommand{\actualrfun}{\therfCounter}
 \newcommand{\actualrfunO}{\therfoCounter}
 \newcommand{\actualrfunD}{\therfdCounter}
@@ -111,6 +115,10 @@
 	\ifthenelse{\equal{#1}{O}}{\stepcounter{rqoCounter}}
 	{\ifthenelse{\equal{#1}{D}}{\stepcounter{rqdCounter}}
 	{\ifthenelse{\equal{#1}{Z}}{\stepcounter{rqzCounter}}}}
+}
+
+\newcommand{\rquacode}[2]{
+	\textbf{RQ#2#1}
 }
 
 \newcommand{\actualrqua}{\therqCounter}
@@ -138,6 +146,10 @@
 	{\ifthenelse{\equal{#1}{Z}}{\stepcounter{rvzCounter}}}}
 }
 
+\newcommand{\rvincode}[2]{
+	\textbf{RV#2#1}
+}
+
 \newcommand{\actualrvin}{\thervCounter}
 \newcommand{\actualrvinO}{\thervoCounter}
 \newcommand{\actualrvinD}{\thervdCounter}
@@ -161,6 +173,10 @@
 	\ifthenelse{\equal{#1}{O}}{\stepcounter{rpoCounter}}
 	{\ifthenelse{\equal{#1}{D}}{\stepcounter{rpdCounter}}
 	{\ifthenelse{\equal{#1}{Z}}{\stepcounter{rpzCounter}}}}
+}
+
+\newcommand{\rprecode}[2]{
+	\textbf{RP#2#1}
 }
 
 \newcommand{\actualrpre}{\therpCounter}
