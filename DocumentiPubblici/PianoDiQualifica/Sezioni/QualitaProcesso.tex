@@ -1,76 +1,15 @@
-\section{Qualità di Processo}
+\section{Qualità di processo}
 \label{qualità_processo}
-Il gruppo {\Gruppo} ha deciso di adottare lo standard \glo{SO/IEC 15504}, conosciuto anche con il termine \glo{\textit{SPICE}}, combinato con il miglioramento continuo. Queste scelte sono state prese per garantire lo sviluppo di un prodotto di \glo{qualità} entro i costi ed i tempi stabiliti nel \textit{\PdP}. \\
-Lo standard ISO/IEC 15504 assicura la qualità di tutti i \glo{processi} che compongono lo sviluppo del \glo{prodotto} finale tramite una definizione chiara degli obiettivi di processo e delle soglie da rispettare. Per garantire invece il principio di miglioramento continuo nella qualità di processo, si è deciso di utilizzare il \glo{ciclo di Deming}, noto anche come \glo{\textit{PDCA}}. \\
-Per una descrizione più dettagliata dello standard ISO/IEC 15504 e del \textit{PDCA} si rimanda rispettivamente alle appendici \S{A} e \S{B} presenti nelle \textit{\NdPv{1.0.0}}.
-
-\subsection{Processo di pianificazione}
-
-\subsubsection{Obiettivi}
+Il gruppo {\Gruppo} ha deciso di adottare lo \glo{standard} ISO/IEC 15504, conosciuto anche con il termine \textbf{SPICE}, combinato con il miglioramento continuo. Queste scelte sono state prese per garantire lo sviluppo di un prodotto di \glo{qualità} entro i costi ed i tempi stabiliti nel \PdP{}.\\
+Lo standard ISO/IEC 15504 assicura la qualità di tutti i \glo{processi} che compongono lo sviluppo del prodotto finale tramite una definizione chiara degli obiettivi di processo e delle soglie da rispettare. Per garantire invece il principio di miglioramento continuo nella qualità di processo, si è deciso di utilizzare il ciclo di Deming, noto anche come \textbf{PDCA}.\\
+Per una descrizione più dettagliata dello standard ISO/IEC 15504 e del PDCA si rimanda rispettivamente alle appendici \S{A} e \S{B} presenti nelle \NdPv{1.0.0}.
+\subsection{Processi primari}
+\subsubsection{Processo di sviluppo}
+\myparagraph{Obiettivi dell'analisi dei requisiti}
 \begin{itemize}
-	\item \textbf{OPR01: Attività principali}\\
-	L'obiettivo del processo di pianificazione è di stabilire e organizzare le principali \glo{attività} e compiti di progetto.
+	\item \textbf{OPR01: Comprensione requisiti}\\
+	L'obiettivo dell'analisi dei requisiti è di trasformare i requisiti dati dallo \glo{stakeholder} in requisiti tecnici che indirizzino il team allo sviluppo del prodotto software.
 	\item \textbf{Esiti del processo}\\
-	I risultati di un'attività di pianificazione di \glo{qualità} sono:
-	\begin{itemize}
-		\item Individuazione dello scopo del progetto;
-		\item Identificazione delle risorse umane e temporali a disposizione e pianificazione delle attività da svolgere;
-		\item Definizione di un preventivo e di un consuntivo;
-		\item Stesura di un \textit{\PdP}.
-	\end{itemize}
-\end{itemize}
-
-\subsubsection{Metriche}
-Risulta indispensabile definire delle \glo{metriche} in modo che la qualità dei risultati raggiunti sia quantificabile.
-\begin{table} [H]
-	\begin{center}
-		\begin{tabular}{|c| p{12cm}|}
-			\rowcolor{darkblue}
-			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{MPR01: Budget at Completion}}} \\ \hline
-			Descrizione & L'indice di varianza del costo al completamento del progetto è definito nelle \textit{\NdPv{1.0.0}} alla sezione \S{D1.1}.\\ \hline
-			Risultato & Numero intero calcolato alla fine di ogni \glo{fase}.\\ \hline
-			Valore ottimale & Corrispondente al preventivo.\\ \hline
-			Valore minimale & Totale del preventivo $\pm$ 10\%.\\ \hline
-		\end{tabular}
-	\end{center}
-	\caption{\label{tab:MPR01}Metrica relativa al costo al completamento del progetto.}
-\end{table}
-
-\begin{table} [H]
-	\begin{center}
-		\begin{tabular}{|c| p{12cm}|}
-			\rowcolor{darkblue}
-			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{MPR02: Schedule Variance}}} \\ \hline
-			Descrizione & L'indice di varianza rispetto allo schedule è definito nelle \textit{\NdPv{1.0.0}} alla sezione \S{D1.5}. \\ \hline
-			Risultato & Numero che indica se si è in anticipo o in ritardo nella schedulazione rispetto a quanto pianificato.\\ \hline
-			Valore ottimale & 0 giorni. \\ \hline
-			Valore minimale & $<$ 6 giorni. \\ \hline
-		\end{tabular}
-	\end{center}
-	\caption{\label{tab:MPR02}Metrica relativa allo scostamento rispetto allo schedule.}
-\end{table}
-
-\begin{table} [H]
-	\begin{center}
-		\begin{tabular}{|c| p{12cm}|}
-			\rowcolor{darkblue}
-			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{MPR03: Budget Variance}}} \\ \hline
-			Descrizione & L'indice di varianza dei costi è definito nelle \textit{\NdPv{1.0.0}} alla sezione \S{D1.6}. \\ \hline
-			Risultato & Numero intero che rappresenta l'efficienza e la produttività. \\ \hline
-			Valore ottimale & 0\%. \\ \hline
-			Valore minimale & $<$ 10\%. \\ \hline
-		\end{tabular}
-	\end{center}
-	\caption{\label{tab:MPR03}Metrica relativa ai costi del progetto.}
-\end{table}
-
-\subsection{Processo di sviluppo}
-
-\subsubsection{Obiettivi dell'\AdR{}}
-\begin{itemize}
-	\item \textbf{OPRS02: Comprensione requisiti} \\
-	L'obiettivo dell'\AdR{} è di trasformare i requisiti dati dallo \glo{stakeholder} in requisiti tecnici che indirizzino il \glo{team} allo sviluppo del prodotto software.
-	\item \textbf{Esiti del processo} \\
 	I risultati di un'analisi dei requisiti di qualità sono:
 	\begin{itemize}
 		\item Definizione di una serie di requisiti che descrivano il problema;
@@ -79,29 +18,28 @@ Risulta indispensabile definire delle \glo{metriche} in modo che la qualità dei
 		\item Valutazione delle richieste degli stakeholders per negoziare modifiche, se necessarie.
 	\end{itemize}
 \end{itemize}
-
-\subsubsection{Metriche}
+\myparagraph{Metriche}
+Risulta indispensabile definire delle \glo{metriche} in modo che la qualità dei risultati raggiunti sia quantificabile.
 \begin{table} [H]
 	\begin{center}
 		\begin{tabular}{|c| p{12cm}|}
 			\rowcolor{darkblue}
-			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{MPR04: Soddisfacimento Requisiti Obbligatori}}} \\ \hline
-			Descrizione & La metrica che individua i requisiti obbligatori soddisfatti è definito nelle \textit{\NdPv{1.0.0}} alla sezione \S{D1.7}. \\ \hline
-			Risultato & Percentuale di requisiti obbligatori soddisfatti al momento di calcolo nell'indice. \\ \hline
-			Valore ottimale & 100\%. \\ \hline
-			Valore minimale & 100\%. \\ \hline
+			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{\hypertarget{MPR01}{MPR01}: Soddisfacimento requisiti obbligatori}}} \\ \hline
+			Descrizione & La metrica che individua i requisiti obbligatori soddisfatti è definita nelle \NdPv{2.0} alla sezione \S{2.3.4.9}.\\ \hline
+			Risultato & Percentuale di requisiti obbligatori soddisfatti al momento di calcolo nell'indice.\\ \hline
+			Valore ottimale & 100\%.\\ \hline
+			Valore minimale & 100\%.\\ \hline
 		\end{tabular}
 	\end{center}
-	\caption{\label{tab:MPR04}Metrica relativa al soddisfacimento dei requisiti obbligatori del progetto.}
+	\caption{\label{tab:MPR01}Metrica relativa al soddisfacimento dei requisiti obbligatori del progetto.}
 \end{table}
-
-\subsection{Processo di documentazione}
-
-\subsubsection{Obiettivi}
+\subsection{Processi di supporto}
+\subsubsection{Processo di documentazione}
+\myparagraph{Obiettivi}
 \begin{itemize}
-	\item \textbf{OPRD01: Redazione della documentazione} \\
+	\item \textbf{OPR02: Redazione della documentazione}\\
 	Lo scopo del processo di documentazione è di tracciare e mantenere registrate informazioni e prodotti relativi ai processi.
-	\item \textbf{Esiti del processo} \\
+	\item \textbf{Esiti del processo}\\
 	Il processo di documentazione di qualità implica la produzione di documentazione:
 	\begin{itemize}
 		\item Completa;
@@ -110,59 +48,150 @@ Risulta indispensabile definire delle \glo{metriche} in modo che la qualità dei
 		\item Coerente.
 	\end{itemize}
 \end{itemize}
-
-\subsubsection{Metriche}
+\myparagraph{Metriche}
 \begin{table} [H]
 	\begin{center}
 		\begin{tabular}{|c| p{12cm}|}
 			\rowcolor{darkblue}
-			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{MPR05: Indice di Gulpease}}} \\ \hline
-			Descrizione & L'\glo{indice di Gulpease} è definito nelle \textit{\NdPv{1.0.0}} alla sezione \S{D1.8}. \\ \hline
-			Risultato & Indice compreso tra 0 e 100 che stabilisce la leggibilità del testo in base alla lunghezza delle parole. \\ \hline
-			Valore ottimale & Compreso tra 80 e 100. \\ \hline
-			Valore minimale & Non inferiore a 50. \\ \hline
+			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{\hypertarget{MPR02}{MPR02}: Indice di Gulpease}}}\\ \hline
+			Descrizione & L'indice di Gulpease è definito nelle \NdPv{2.0} alla sezione \S{3.2.10}.\\ \hline
+			Risultato & Indice compreso tra 0 e 100 che stabilisce la leggibilità del testo in base alla lunghezza delle parole.\\ \hline
+			Valore ottimale & Compreso tra 80 e 100.\\ \hline
+			Valore minimale & Non inferiore a 50.\\ \hline
 		\end{tabular}
 	\end{center}
-	\caption{\label{tab:MPR05}Metrica relativa all'indice di Gulpease.}
+	\caption{\label{tab:MPR02}Metrica relativa all'indice di Gulpease.}
 \end{table}
-
 \begin{table} [H]
 	\begin{center}
 		\begin{tabular}{|c| p{12cm}|}
 			\rowcolor{darkblue}
-			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{MPR06: Indice di correttezza ortografica}}} \\ \hline
-			Descrizione & L'indice di correttezza ortografica è definito nelle \textit{\NdPv{1.0.0}} alla sezione \S{D1.9}. \\ \hline
-			Risultato & Numero intero che rappresenta il numero di errori ortografici presenti nel testo. \\ \hline
-			Valore ottimale & 0. \\ \hline
-			Valore minimale & 0. \\ \hline
+			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{\hypertarget{MPR03}{MPR03}: Indice di correttezza ortografica}}}\\ \hline
+			Descrizione & L'indice di correttezza ortografica è definito nelle \NdPv{2.0} alla sezione \S{3.2.10}.\\ \hline
+			Risultato & Numero intero che rappresenta il numero di errori ortografici presenti nel testo.\\ \hline
+			Valore ottimale & 0.\\ \hline
+			Valore minimale & 0.\\ \hline
 		\end{tabular}
 	\end{center}
-	\caption{\label{tab:MPR06}Metrica relativa all'indice di correttezza ortografica.}
-\end{table} 
-
-\subsection{Processo di risoluzione dei problemi}
+	\caption{\label{tab:MPR03}Metrica relativa all'indice di correttezza ortografica.}
+\end{table}
+\subsection{Processi organizzativi}
+\subsubsection{Processo di gestione}
+\myparagraph{Obiettivi}
 \begin{itemize}
-	\item \textbf{OPRS03: Risolvere problemi} \\
+	\item \textbf{OPR03: Attività principali}\\
+	L'obiettivo del processo di pianificazione è di stabilire e organizzare le principali \glo{attività} e compiti di progetto.
+	\item \textbf{Esiti del processo}\\
+	I risultati di un'attività di pianificazione di qualità sono:
+	\begin{itemize}
+		\item Individuazione dello scopo del progetto;
+		\item Identificazione delle risorse umane e temporali a disposizione e pianificazione delle attività da svolgere;
+		\item Definizione di un preventivo e di un consuntivo;
+		\item Stesura di un \PdP{}.
+	\end{itemize}
+\end{itemize}
+\myparagraph{Metriche}
+\begin{table} [H]
+	\begin{center}
+		\begin{tabular}{|c| p{12cm}|}
+			\rowcolor{darkblue}
+			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{MPR04: Budget at Completion}}}\\ \hline
+			Descrizione & L'indice di varianza del costo al completamento del progetto è definito nelle \NdPv{2.0} alla sezione \S{4.2.4.7}.\\ \hline
+			Risultato & Numero intero calcolato al completamento del progetto.\\ \hline
+			Valore ottimale & Corrispondente al preventivo.\\ \hline
+			Valore minimale & Totale del preventivo $\pm$ 10\%.\\ \hline
+		\end{tabular}
+	\end{center}
+	\caption{\label{tab:MPR04}Metrica relativa al costo al completamento del progetto.}
+\end{table}
+\begin{table} [H]
+	\begin{center}
+		\begin{tabular}{|c| p{12cm}|}
+			\rowcolor{darkblue}
+			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{\hypertarget{MPR05}{MPR05}: Actual Cost of Work Performed}}}\\ \hline
+			Descrizione & L'indice della somma delle spese sostenute dal gruppo è definito nelle \NdPv{2.0} alla sezione \S{4.2.4.7}.\\ \hline
+			Risultato & Numero con virgola calcolato ad intervalli regolari.\\ \hline
+			Valore ottimale & Corrispondente al preventivo.\\ \hline
+			Valore minimale & Corrispondente al preventivo $\pm$ 10\%.\\ \hline
+		\end{tabular}
+	\end{center}
+	\caption{\label{tab:MPR05}Metrica relativa al costo attuale del lavoro svolto.}
+\end{table}
+\begin{table} [H]
+	\begin{center}
+		\begin{tabular}{|c| p{12cm}|}
+			\rowcolor{darkblue}
+			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{\hypertarget{MPR06}{MPR06}: Budget Cost of Work Performed}}}\\ \hline
+			Descrizione & Il costo sostenuto per il lavoro svolto è definito nelle \NdPv{2.0} alla sezione \S{4.2.4.7}.\\ \hline
+			Risultato & Numero con virgola calcolato ad intervalli regolari.\\ \hline
+			Valore ottimale & Corrispondente al preventivo.\\ \hline
+			Valore minimale & Corrispondente al preventivo $\pm$ 10\%.\\ \hline
+		\end{tabular}
+	\end{center}
+	\caption{\label{tab:MPR06}Metrica relativa al costo sostenuto per il lavoro svolto.}
+\end{table}
+\begin{table} [H]
+	\begin{center}
+		\begin{tabular}{|c| p{12cm}|}
+			\rowcolor{darkblue}
+			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{\hypertarget{MPR07}{MPR07}: Budget Cost of Work Scheduled}}}\\ \hline
+			Descrizione & L'indice del costo corrispondente alla spesa pianificata per il progetto è definito nelle \NdPv{2.0} alla sezione \S{4.2.4.7}.\\ \hline
+			Risultato & Numero con virgola calcolato ad intervalli regolari.\\ \hline
+			Valore ottimale & Corrispondente al preventivo.\\ \hline
+			Valore minimale & Corrispondente al preventivo $\pm$ 10\%.\\ \hline
+		\end{tabular}
+	\end{center}
+	\caption{\label{tab:MPR07}Metrica relativa al costo pianificato per il lavoro svolto.}
+\end{table}
+\begin{table} [H]
+	\begin{center}
+		\begin{tabular}{|c| p{12cm}|}
+			\rowcolor{darkblue}
+			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{\hypertarget{MPR08}{MPR08}: Schedule Variance}}}\\ \hline
+			Descrizione & L'indice di varianza rispetto allo schedule è definito nelle \NdPv{2.0} alla sezione \S{4.2.4.7}.\\ \hline
+			Risultato & Numero che indica se si è in anticipo o in ritardo nella schedulazione rispetto a quanto pianificato.\\ \hline
+			Valore ottimale & 0 giorni.\\ \hline
+			Valore minimale & $<$ 6 giorni.\\ \hline
+		\end{tabular}
+	\end{center}
+	\caption{\label{tab:MPR08}Metrica relativa allo scostamento rispetto allo schedule.}
+\end{table}
+\begin{table} [H]
+	\begin{center}
+		\begin{tabular}{|c| p{12cm}|}
+			\rowcolor{darkblue}
+			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{\hypertarget{MPR09}{MPR09}: Budget Variance}}}\\ \hline
+			Descrizione & L'indice di varianza dei costi è definito nelle \NdPv{2.0} alla sezione \S{4.2.4.7}.\\ \hline
+			Risultato & Numero intero che rappresenta l'efficienza e la produttività.\\ \hline
+			Valore ottimale & 0\%.\\ \hline
+			Valore minimale & $<$ 10\%.\\ \hline
+		\end{tabular}
+	\end{center}
+	\caption{\label{tab:MPR09}Metrica relativa ai costi del progetto.}
+\end{table}
+\subsubsection{Processo di miglioramento continuo}
+\myparagraph{Obiettivi}
+\begin{itemize}
+	\item \textbf{OPR04: Risoluzione dei problemi}\\
 	Lo scopo del processo di risoluzione dei problemi è di tracciare delle problematiche riscontrate durante lo svolgimento del progetto e di offrire soluzioni.
-	\item \textbf{Esiti del processo} \\
+	\item \textbf{Esiti del processo}\\
 	I risultati di un processo di risoluzione dei problemi di qualità sono:
 	\begin{itemize}
 		\item L'identificazione e l'analisi di problemi riscontrati durante lo svolgimento del progetto;
 		\item La definizione di strategie e procedure per risolverli.
 	\end{itemize}
 \end{itemize}
-
-\subsubsection{Metriche}
+\myparagraph{Metriche}
 \begin{table} [H]
 	\begin{center}
 		\begin{tabular}{|c| p{12cm}|}
 			\rowcolor{darkblue}
-			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{MPR07: Indice di risoluzione dei problemi}}} \\ \hline
-			Descrizione & L'indice di velocità di risoluzione dei problemi è definito nelle \textit{\NdPv{1.0.0}} alla sezione \S{D1.10}. \\ \hline
-			Risultato & Numero intero che rappresenta la quantità di giorni trascorsi tra l'apertura della \glo{issue} e la sua chiusura. \\ \hline
-			Valore ottimale & 1. \\ \hline
-			Valore minimale & 8. \\ \hline
+			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{\hypertarget{MPR10}{MPR10}: Indice di risoluzione dei problemi}}}\\ \hline
+			Descrizione & L'indice di velocità di risoluzione dei problemi è definito nelle \NdPv{2.0} alla sezione \S{4.4.5}.\\ \hline
+			Risultato & Numero medio intero che rappresenta la quantità di giorni trascorsi tra l'apertura della \glo{issue} e la sua chiusura.\\ \hline
+			Valore ottimale & 1.\\ \hline
+			Valore minimale & 8.\\ \hline
 		\end{tabular}
 	\end{center}
-	\caption{\label{tab:MPR07}Metrica relativa all'indice di risoluzione dei problemi.}
+	\caption{\label{tab:MPR10}Metrica relativa all'indice di risoluzione dei problemi.}
 \end{table}

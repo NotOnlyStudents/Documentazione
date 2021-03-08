@@ -114,7 +114,7 @@ acs-*.bib
 *.lzs
 
 # uncomment this for glossaries-extra (will ignore makeindex's style files!)
-# *.ist
+*.ist
 
 # gnuplottex
 *-gnuplottex-*
@@ -317,3 +317,11 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+### vscode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace

@@ -1,0 +1,45 @@
+name: Documentation
+
+on:
+  push:
+    branches: [ 'master', 'develop' ]
+
+  workflow_dispatch:
+
+jobs:
+  find_files:
+    runs-on: ubuntu-latest
+    
+    outputs:
+      matrix: ${{ steps.files.outputs.matrix }}
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Find files and create matrix
+        id: files
+        run: |
+          matrix=`python3 ./.github/find-tex-files.py .`
+          echo "##[set-output name=matrix;]$matrix"
+            
+  compile_files:
+    runs-on: ubuntu-latest
+    needs: [ find_files ]
+    strategy:
+      matrix: ${{fromJson(needs.find_files.outputs.matrix)}}
+    steps:
+      - uses: actions/checkout@v2
+        
+      - name: Compile tex files into pdf
+        uses: xu-cheng/latex-action@v2
+        with:
+          working_directory: ${{ matrix.working_directory }}
+          root_file: ${{ matrix.filename }}
+          post_compile: "latexmk -c"
+          latexmk_shell_escape: true
+          
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Documentazione
+          path: |
+            ${{ github.workspace }}/**/*.pdf

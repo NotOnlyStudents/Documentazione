@@ -1,10 +1,10 @@
 \newcommand{\Titolo}{\AdR}
 
-\newcommand{\Redattori}{\BL \newline \FF \newline \TL \newline \TG \newline \MM}
+\newcommand{\Redattori}{\BL\newline \MM \newline \PC \newline \TG }
 
-\newcommand{\Verificatori}{\TG \newline \TL \newline \BL \newline \FF}
+\newcommand{\Verificatori}{\BL \newline \FF \newline \MM \newline \PC \newline \TG \newline \TL }
 
-\newcommand{\Approvatore}{\PC}
+\newcommand{\Approvatore}{\VD}
 
 \newcommand{\Distribuzione}{\Proponente \newline Gruppo \Gruppo \newline \VT \newline \CR}
 
@@ -14,4 +14,212 @@
 
 \newcommand{\pathimg}{../../Immagini/N.O.S.jpg}
 
-\newcommand{\Versionedoc}{1.0.0}
+\newcommand{\Versionedoc}{2.0}
+
+% UC Counters
+
+\newcounter{UCcounter}
+\newcounter{subUCcounter}[UCcounter]
+\newcounter{subSubUCcounter}[subUCcounter]
+
+\setcounter{UCcounter}{0}
+
+\newcommand{\UC}[1]{
+	\stepcounter{UCcounter}
+	
+	\subsection{UC\theUCcounter{} - #1}
+	
+	\addtocounter{UCcounter}{-1}
+	\refstepcounter{UCcounter}
+}
+
+\newcommand{\actualUC}{UC\theUCcounter}
+
+% SubUC
+
+\renewcommand{\thesubUCcounter}{\theUCcounter.\arabic{subUCcounter}}
+
+\newcommand{\subUC}[1]{
+	\stepcounter{subUCcounter}
+	
+	\subsubsection{UC\thesubUCcounter{} - #1}
+	
+	\addtocounter{subUCcounter}{-1}
+	\refstepcounter{subUCcounter}
+}
+
+\newcommand{\actualSubUC}{UC\thesubUCcounter}
+
+
+% SubSubUC
+
+\renewcommand{\thesubSubUCcounter}{\thesubUCcounter.\arabic{subSubUCcounter}}
+
+\newcommand{\subSubUC}[1]{
+	\stepcounter{subSubUCcounter}
+	
+	\subsubsection{UC\thesubSubUCcounter{} - #1}
+	
+	\addtocounter{subSubUCcounter}{-1}
+	\refstepcounter{subSubUCcounter}
+}
+
+\newcommand{\actualSubSubUC}{UC\thesubSubUCcounter}
+
+% Requirements Counters
+
+% Fun
+\newcounter{rfCounter}
+\newcounter{rfoCounter}
+\newcounter{rfdCounter}
+\newcounter{rfzCounter}
+
+\setcounter{rfCounter}{0}
+\setcounter{rfoCounter}{0}
+\setcounter{rfdCounter}{0}
+\setcounter{rfzCounter}{0}
+
+\newcommand{\rfun}[2]{
+	\stepcounter{rfCounter}
+	\rfuncode{#1}{\therfCounter}{#2}
+	% \textbf{RF#1\therfCounter}\ifthenelse{\equal{#2}{}}{}{\_#2}
+
+	\ifthenelse{\equal{#1}{O}}{\stepcounter{rfoCounter}}
+	{\ifthenelse{\equal{#1}{D}}{\stepcounter{rfdCounter}}
+	{\ifthenelse{\equal{#1}{Z}}{\stepcounter{rfzCounter}}}}
+}
+
+\newcommand{\rfuncode}[3]{
+	\textbf{RF#1#2}\ifthenelse{\equal{#3}{}}{}{\_#3}
+}
+
+\newcommand{\actualrfun}{\therfCounter}
+\newcommand{\actualrfunO}{\therfoCounter}
+\newcommand{\actualrfunD}{\therfdCounter}
+\newcommand{\actualrfunZ}{\therfzCounter}
+
+\newcounter{tracfunCounter}
+
+\setcounter{tracfunCounter}{0}
+
+\newcommand{\tracfun}[2]{
+	\stepcounter{tracfunCounter}
+	\rfuncode{#1}{\thetracfunCounter}{#2}
+}
+
+% Qua
+\newcounter{rqCounter}
+\newcounter{rqoCounter}
+\newcounter{rqdCounter}
+\newcounter{rqzCounter}
+
+\setcounter{rqCounter}{0}
+\setcounter{rqoCounter}{0}
+\setcounter{rqdCounter}{0}
+\setcounter{rqzCounter}{0}
+
+\newcommand{\rqua}[1]{
+	\stepcounter{rqCounter}
+	\rquacode{#1}{\therqCounter}
+
+	\ifthenelse{\equal{#1}{O}}{\stepcounter{rqoCounter}}
+	{\ifthenelse{\equal{#1}{D}}{\stepcounter{rqdCounter}}
+	{\ifthenelse{\equal{#1}{Z}}{\stepcounter{rqzCounter}}}}
+}
+
+\newcommand{\rquacode}[2]{
+	\textbf{RQ#1#2}
+}
+
+\newcommand{\actualrqua}{\therqCounter}
+\newcommand{\actualrquaO}{\therqoCounter}
+\newcommand{\actualrquaD}{\therqdCounter}
+\newcommand{\actualrquaZ}{\therqzCounter}
+
+\newcounter{tracquaCounter}
+
+\setcounter{tracquaCounter}{0}
+
+\newcommand{\tracqua}[1]{
+	\stepcounter{tracquaCounter}
+	\rquacode{#1}{\thetracquaCounter}
+}
+
+% Vin
+\newcounter{rvCounter}
+\newcounter{rvoCounter}
+\newcounter{rvdCounter}
+\newcounter{rvzCounter}
+
+\setcounter{rvCounter}{0}
+\setcounter{rvoCounter}{0}
+\setcounter{rvdCounter}{0}
+\setcounter{rvzCounter}{0}
+
+\newcommand{\rvin}[1]{
+	\stepcounter{rvCounter}
+	\rvincode{#1}{\thervCounter}
+
+	\ifthenelse{\equal{#1}{O}}{\stepcounter{rvoCounter}}
+	{\ifthenelse{\equal{#1}{D}}{\stepcounter{rvdCounter}}
+	{\ifthenelse{\equal{#1}{Z}}{\stepcounter{rvzCounter}}}}
+}
+
+\newcommand{\rvincode}[2]{
+	\textbf{RV#1#2}
+}
+
+\newcommand{\actualrvin}{\thervCounter}
+\newcommand{\actualrvinO}{\thervoCounter}
+\newcommand{\actualrvinD}{\thervdCounter}
+\newcommand{\actualrvinZ}{\thervzCounter}
+
+\newcounter{tracvinCounter}
+
+\setcounter{tracvinCounter}{0}
+
+\newcommand{\tracvin}[1]{
+	\stepcounter{tracvinCounter}
+	\rvincode{#1}{\thetracvinCounter}
+}
+
+% Pre
+\newcounter{rpCounter}
+\newcounter{rpoCounter}
+\newcounter{rpdCounter}
+\newcounter{rpzCounter}
+
+\setcounter{rpCounter}{0}
+\setcounter{rpoCounter}{0}
+\setcounter{rpdCounter}{0}
+\setcounter{rpzCounter}{0}
+
+\newcommand{\rpre}[1]{
+	\stepcounter{rpCounter}
+	\rprecode{#1}{\therpCounter}
+
+	\ifthenelse{\equal{#1}{O}}{\stepcounter{rpoCounter}}
+	{\ifthenelse{\equal{#1}{D}}{\stepcounter{rpdCounter}}
+	{\ifthenelse{\equal{#1}{Z}}{\stepcounter{rpzCounter}}}}
+}
+
+\newcommand{\rprecode}[2]{
+	\textbf{RP#1#2}
+}
+
+\newcommand{\actualrpre}{\therpCounter}
+\newcommand{\actualrpreO}{\therpoCounter}
+\newcommand{\actualrpreD}{\therpdCounter}
+\newcommand{\actualrpreZ}{\therpzCounter}
+
+\newcounter{tracpreCounter}
+
+\setcounter{tracpreCounter}{0}
+
+\newcommand{\tracpre}[1]{
+	\stepcounter{tracpreCounter}
+	\rprecode{#1}{\thetracpreCounter}
+}
+
+% Enumerate and itemize
+\newcommand{\lett}{\textbf{\alph*}.}

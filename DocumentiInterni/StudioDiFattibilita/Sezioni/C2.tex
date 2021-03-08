@@ -1,23 +1,23 @@
 \section{Valutazione del capitolato scelto: C2 - \NomeProgetto}\label{C2}
 \subsection{Informazioni sul capitolato}
 \begin{itemize}
-	\item \textbf{Nome:} \textit{\NomeProgetto}.
-	\item \textbf{\glo{Proponente}:} \textit{RedBabel}.
-	\item \textbf{Committenti:} \textit{\VT{} e \CR{}}.
+	\item \textbf{Nome:} \NomeProgetto{};
+	\item \textbf{Proponente:} \Proponente;
+	\item \textbf{Committenti:} \VT{} e \CR{}.
 \end{itemize}
 
 \subsection{Descrizione del capitolato}
-Il \glo{capitolato} richiede lo sviluppo di una piattaforma di \glo{e-commerce} generico, in grado di favorire l'incontro tra commercianti e clienti. All'interno di \NomeProgetto\ sarà possibile controllare la gestione dei prodotti da parte dei commercianti registrati, facilitando la ricerca e l'acquisto da parte dei clienti che accedono alla piattaforma come ospiti o utenti registrati.
+Il \glo{capitolato} richiede lo sviluppo di una piattaforma di \glo{e-commerce} generica, in grado di favorire l'incontro tra commercianti e clienti. All'interno di \NomeProgetto\ sarà possibile controllare la gestione dei prodotti da parte dei commercianti registrati, facilitando la ricerca e l'acquisto da parte dei clienti che accedono alla piattaforma come ospiti o utenti registrati.
 
 \subsection{Scopo del capitolato}
-Lo scopo del capitolato consiste nello sviluppo di una piattaforma e-commerce con architettura basata su \glo{microservizi} e \glo{\textit{Serverless}}.
-La piattaforma consisterà in un sito web che dovrà essere composto dalle seguenti parti:
+Lo scopo del capitolato consiste nello sviluppo di una piattaforma e-commerce con architettura basata su \glo{microservizi} e \glo{Serverless}.
+La piattaforma consisterà in una \glo{web application} che dovrà essere composta dalle seguenti viste:
 \begin{itemize}
 	\item Home page;
 	\item Pagine di elenco dei prodotti;
 	\item Pagine di descrizione del prodotto;
 	\item Carrello della spesa;
-	\item Pagina di \glo{checkout};
+	\item Pagina di checkout;
 	\item Pagina di account.
 \end{itemize}
 
@@ -45,39 +45,39 @@ Dovrà essere in grado di supportare i seguenti ruoli:
 \subsection{Tecnologie coinvolte}
 L'azienda consiglia di utilizzare:
 \begin{itemize}
-	\item \textit{\glo{Typescript}} con approccio \textit{\glo{async-await}}, come linguaggio principale sia per il \glo{back end} e sia per il \glo{front end};
-	\item \textit{\glo{typescript-eslint}}per l'analisi statica del codice;
-	\item \textit{\glo{AWS Lambda}} come tecnologia \textit{Serverless} con \textit{Typescript};
-	\item \textit{\glo{Amazon CloudWatch}} come servizio di monitoraggio, anche se non è obbligatorio;
-	\item \textit{\glo{Stripe}} come fornitore del servizio di pagamento, anche se non è obbligatorio.
+	\item \glo{Typescript} con approccio \glo{async-await}, come linguaggio principale sia per il \glo{back end} e sia per il \glo{front end};
+	\item \glo{typescript-eslint}per l'analisi statica del codice;
+	\item \glo{AWS Lambda} come tecnologia Serverless con Typescript;
+	\item \glo{Amazon CloudWatch} come servizio di monitoraggio, anche se non è obbligatorio;
+	\item \glo{Stripe} come fornitore del servizio di pagamento, anche se non è obbligatorio.
  \end{itemize}
 
 \subsection{Vincoli}
-Il progetto deve operare in 3 ambienti: \glo{Locale}, \glo{Test} e \glo{Staging}. L'ambiente di Staging deve essere accessibile pubblicamente.
+Il progetto deve operare in 3 ambienti: \glo{Locale}, \glo{Testing} e \glo{Staging}. L'ambiente di Staging deve essere accessibile pubblicamente.
 
 Per raggiungere gli obiettivi minimi del progetto viene richiesto che:
 \begin{itemize}
-	\item Il front end sia implementato in \textit{\glo{Next.js}};
-	\item Il back end sia implementato in \textit{Serverless} usando Typescript;
+	\item Il front end sia implementato in \glo{Next.js};
+	\item Il back end sia implementato in Serverless usando Typescript;
 	\item L'integrazione di servizi di terze parti deve essere implementata con tecnologia Serveless usando Typescript;
-	\item Il progetto deve essere \glo{production-ready}, predisponendo anche un ambiente opzionale \glo{production};
+	\item Il progetto deve essere \glo{production-ready}, predisponendo anche un ambiente opzionale \glo{Production};
 	\item Ci sia l'integrazione con un fornitore di servizi di pagamento.
 \end{itemize}
 
 \subsection{Aspetti positivi}
 \begin{itemize}
-	\item 3 componenti del gruppo hanno già sviluppato e conoscono \textit{\glo{Javascript}}.
-	\item Le tecnologie proposte stimolano i componenti del gruppo a imparare e a lavorare con esse.
-	\item Le tecnologie proposte stanno sempre di più prendendo spazio nell'ambito del lavoro, specialmente lo sviluppo \textit{Serverless} e lo sviluppo WEB con \textit{Typescript}.
-	\item L'uso di un'architettura a microservizi e \textit{Serverless} favorisce la parallelizzazione dello sviluppo del back end.
-	\item Il prodotto da realizzare è concreto rispetto alla realtà, oggi gli e-commerce vengono sempre più utilizzati.
+	\item 3 componenti del gruppo hanno già sviluppato e conoscono \glo{Javascript};
+	\item Le tecnologie proposte stimolano i componenti del gruppo a imparare e a lavorare con esse;
+	\item Le tecnologie proposte stanno sempre di più prendendo spazio nell'ambito del lavoro, specialmente lo sviluppo Serverless e lo sviluppo web con Typescript;
+	\item L'uso di un'architettura a microservizi e Serverless favorisce la parallelizzazione dello sviluppo del back end;
+	\item Il prodotto da realizzare è concreto rispetto alla realtà, oggi gli e-commerce vengono sempre più utilizzati;
 	\item L'azienda proponente è molto orientata al dialogo e alla comunicazione.
 \end{itemize}
 
 \subsection{Aspetti critici}
 \begin{itemize}
-	\item Nessuno dei componenti nel gruppo ha mai utilizzato \textit{\glo{AWS}}.
-	\item Nessuno dei componenti nel gruppo ha mai sviluppato un back end \textit{Serverless}.
+	\item Nessuno dei componenti nel gruppo ha mai utilizzato \glo{AWS};
+	\item Nessuno dei componenti nel gruppo ha mai sviluppato un back end Serverless.
 \end{itemize}
 
 \subsection{Conclusioni}

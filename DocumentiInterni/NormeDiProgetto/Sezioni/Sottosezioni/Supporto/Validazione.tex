@@ -1,6 +1,6 @@
 \subsection{Validazione}\label{PSup_Validazione}
 \subsubsection{Scopo dell'attività}\label{PSup_Validazione_Scopo}
-La validazione stabilisce se il prodotto soddisfa i compiti per cui è stato creato, in particolare permette di garantire che quanto richiesto e stabilito da \Proponente sia soddisfatto.
+La validazione stabilisce se il prodotto soddisfa i compiti per cui è stato creato, in particolare permette di garantire che quanto richiesto e stabilito da \Proponente\ sia soddisfatto.
 
 \subsubsection{Descrizione della sezione} 
 La sezione descrive la procedura seguita per la validazione di quanto viene svolto durante il progetto.
@@ -11,25 +11,23 @@ Il gruppo si aspetta di procedere alla validazione dei documenti in modo chiaro.
 \subsubsection{Validazione dei documenti}\label{ValidazioneDoc}
 Il \Responsabile\ procede nel seguente modo:
 \begin{itemize}
-	\item Se non ancora creata, crea l'issue in \textit{GitHub};
-	\item Sposta l'issue in "IN PROGRESS";
-	\item Rilegge il codice e calcola l'\glo{\textit{indice di Gulpease}};
-	\item Se riscontra problemi, avverte il redattore del documento e il verificatore. L'issue torna in "TO DO" in attesa delle modifiche. Quando queste vengono apportate si torna al punto precedente;
-	\item Sposta l'issue in "DONE" approvando il documento;
-	\item Avverte i redattori incaricati ad aggiornare il \PdQv{} con i risultati ottenuti.
+	\item Se non ancora creata, crea l'issue in GitHub e la sposta in "IN PROGRESS";
+	\item Se riscontra problemi, avverte il redattore del documento e il verificatore. L'issue torna in "TO DO" in attesa delle modifiche. Quando queste vengono apportate si torna al primo punto;
+	\item Sposta l'issue in "VERIFIED" approvando il documento;
+	\item Avverte i redattori incaricati di aggiornare il \PdQv{} con i risultati ottenuti.
 \end{itemize}
 
 \subsubsection{Validazione del codice}\label{ValidazioneCodice}
 Il \textit{Verificatore} incaricato procede nel seguente modo:
 \begin{itemize}
-	\item Se non ancora creata, crea l'issue in \textit{GitHub};
+	\item Se non ancora creata, crea l'issue in GitHub;
 	\item Sposta l'issue in "IN PROGRESS";
 	\item Esegue i test descritti nella sezione \S\ref{Tests} così da garantire un software pronto al rilascio;
-	\item Sposta l'issue in "DONE" approvando il documento.
+	\item Sposta l'issue in "VERIFIED" approvando il documento.
 \end{itemize}
 
 \subsubsection{Piano di Qualifica e Test}
-All'interno del \PdQv{}\ sono inseriti tutti i test pianificati e implementati dai \textit{Progettisti}, eseguiti durante il progetto.\\
+All'interno del \PdQ\ sono inseriti tutti i test pianificati e implementati dai \textit{Progettisti}, eseguiti durante il progetto.\\
 Per ogni test devono essere specificati:
 \begin{itemize}
 	\item Entità sottoposte a verifica;
@@ -48,9 +46,9 @@ Il codice identificativo viene così assegnato:
 \begin{center}
 	\textbf{T[Tipo][ID]}
 \end{center}
-dove
+dove:
 \begin{itemize}
-	\item \textbf{T} indica Test;
+	\item \textbf{T} indica test;
 	\item\textbf{Tipo}: assume i seguenti valori:
 	\begin{itemize}
 		\item \textbf{I}: test d'integrazione;
@@ -60,4 +58,3 @@ dove
 	\end{itemize}
 	\item \textbf{ID}: per i test d'unità, integrazione e regressione rappresenta un numero progressivo, per i test di sistema identifica il codice di un requisito presente all'interno dell'\AdRv{} come indicato nella sezione \S\ref{ClassificazioneRequisiti};
 \end{itemize}
-	

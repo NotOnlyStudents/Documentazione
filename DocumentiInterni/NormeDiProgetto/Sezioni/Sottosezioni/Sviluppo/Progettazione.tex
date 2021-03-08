@@ -1,6 +1,5 @@
 \subsubsection{Progettazione}
-\myparagraph{Scopo dell'attività} \label{PS_Progettazione_Scopo}
-La progettazione ha lo scopo di definire quale sarà l'architettura logica del prodotto, viene svolta dai \textit{Progettisti} prima dell'attività di codifica. Una buona architettura consente di:
+\myparagraph{Scopo dell'attività} \label{PS_Progettazione_Scopo}La progettazione ha lo scopo di definire quale sarà l'architettura logica del prodotto, viene svolta dai \textit{Progettisti} prima dell'attività di codifica. Una buona architettura consente di:
 \begin{itemize}
 	\item Ridurre la complessità del prodotto al fine di facilitare l'attività di codifica;
 	\item Organizzare e ripartire le responsabilità di realizzazione;
@@ -10,13 +9,19 @@ La progettazione ha lo scopo di definire quale sarà l'architettura logica del p
 \myparagraph{Descrizione della sezione}
 La sezione contiene le norme relative all'attività di progettazione che i componenti del gruppo, in particolare i \textit{Progettisti}, devono seguire.
 
-\myparagraph{Aspettative}
-Il gruppo per questa attività si aspetta di definire l'architettura logica del prodotto rispettandone le caratteristiche di qualità.
-
-\myparagraph{Qualità dell'attività di progettazione}\label{QualitàProgettazione}
-Un'architettura di buona qualità ha come caratteristiche misurabili e osservabili oggettivamente:
+\myparagraph{Aspettative}\label{AspettativeProgettazione}Il gruppo per questa attività si aspetta di definire l'architettura logica del prodotto rispettandone le caratteristiche di qualità. Per assicurare il raggiungimento degli obiettivi di qualità previsti dal \PdQ\ il gruppo intende:
 \begin{itemize}
-	\item \textbf{Sufficienza:} capace di soddisfare tutti i requisiti indicati nell'\AdRv;
+	\item Progettare perseguendo la correttezza per costruzione;
+	\item Organizzare e ripartire le responsabilità di realizzazione considerando la natura a \glo{microservizi} del prodotto da realizzare;
+	\item Realizzare un prototipo del prodotto, il \glo{\textbf{Proof of Concept}}, che comprenda le funzionalità principali per l'utente della piattaforma;
+	\item Documentare quanto progettato attraverso i diagrammi UML;
+	\item Progettare il prodotto sfruttando le qualità delle tecnologie da utilizzare;
+	\item Progettare il prodotto considerando la facilità di utilizzo dello stesso per l'utente.
+\end{itemize}
+
+\myparagraph{Qualità dell'attività di progettazione}\label{QualitàProgettazione}Un'architettura di buona qualità ha come caratteristiche misurabili e osservabili oggettivamente:
+\begin{itemize}
+	\item \textbf{Sufficienza:} capace di soddisfare tutti i requisiti indicati nell'\AdR; 
 	\item \textbf{Comprensibilità:} capace di essere capita da tutti gli stakeholders;
 	\item \textbf{Modularità:} suddivisa in parti chiare e ben distinte;
 	\item \textbf{Robustezza:} capace di gestire eventi non previsti causati dall'utente e dall'ambiente;
@@ -28,34 +33,33 @@ Un'architettura di buona qualità ha come caratteristiche misurabili e osservabi
 Le sue componenti devono essere semplici, coese nel raggiungimento degli obiettivi, incapsulate e con un basso livello di accoppiamento.
 I \textit{Progettisti} devono assicurare che l'architettura e le sue componenti presentino le caratteristiche descritte e superino dei test di qualità da loro definiti.
 
-\myparagraph{Periodi della progettazione}\label{PeriodiProgettazione}
-L'attività di progettazione si articola in due parti: 
-\paragraph*{Progettazione Architetturale} 
-Vengono definite le specifiche dell'architettura e delle componenti del prodotto, delle loro interazioni con le restanti parti del sistema e dei \glo{test di integrazione}. Al termine di questo periodo di progettazione si ottiene la \glo{\textit{Technology Baseline}} del progetto che conterrà: 
+\newpage
+\myparagraph{Periodi della progettazione}\label{PeriodiProgettazione}L'attività di progettazione si articola in due parti: 
+\paragraph*{Progettazione architetturale} 
+Vengono definite le specifiche dell'architettura e delle componenti del prodotto, delle loro interazioni con le restanti parti del sistema e dei test di integrazione. Al termine di questo periodo di progettazione si ottiene la \glo{\textbf{Technology Baseline}} del progetto che conterrà: 
 \begin{itemize}
-	\item \glo{\textbf{Proof of Concept:}} primo eseguibile del sistema in grado di dimostrare che la tecnologia selezionata serve in modo efficace allo sviluppo del prodotto atteso;
+	\item \textbf{Proof of Concept:} primo eseguibile del sistema in grado di dimostrare che la tecnologia selezionata serve in modo efficace allo sviluppo del prodotto atteso;
 	\item \textbf{Tecnologie utilizzate:} descrizione dettagliata delle tecnologie impiegate nello sviluppo del progetto, con particolare enfasi sui pregi e i difetti riscontrati;
 	\item \textbf{Test di integrazione:} definizione dei test eseguiti per verificare che le varie componenti del sistema, una volta integrate insieme, interagiscano in modo corretto e in conformità con quanto richiesto dai requisiti;
 	\item \textbf{Tracciamento delle componenti:} associazione tra requisiti e componenti che li soddisfano.
 \end{itemize}
 
 \paragraph*{Progettazione di dettaglio}
-Vengono definite le specifiche di dettaglio dell'architettura suddividendo il sistema fino ad arrivare a singole unità ben definite e realizzabili da un singolo programmatore. Al termine di questo periodo di progettazione si ottiene la \textit{\glo{Product Baseline}} del progetto che conterrà: 
+Vengono definite le specifiche di dettaglio dell'architettura suddividendo il sistema fino ad arrivare a singole unità ben definite e realizzabili da un singolo programmatore. Al termine di questo periodo di progettazione si ottiene la \glo{\textbf{Product Baseline}} del progetto che conterrà: 
 \begin{itemize}
-	\item \glo{\textbf{Design Pattern:}} descrizione dei design pattern utilizzati nella definizione dell'architettura, per la soluzione progettuale a problemi ricorrenti riscontrati; ogni design pattern deve essere opportunamente descritto, con una spiegazione del suo significato, ed accompagnato da un diagramma che ne mostri la struttura;
-	\item \textbf{Diagrammi UML:} diagrammi realizzati in linguaggio \textit{UML} versione 2.0, utilizzati per rendere più chiare le soluzioni progettuali adottate; 
-	\item \glo{\textbf{Test di unità:}} definizione dei test eseguiti per verificare che il funzionamento delle varie classi e metodi che implementano il sistema software sia corretto e conforme ai requisiti;
+	\item \textbf{Design Pattern:} descrizione dei \glo{design pattern} utilizzati nella definizione dell'architettura, per la soluzione progettuale a problemi ricorrenti riscontrati; ogni design pattern deve essere opportunamente descritto, con una spiegazione del suo significato, ed accompagnato da un diagramma che ne mostri la struttura;
+	\item \textbf{Diagrammi UML:} diagrammi realizzati in linguaggio UML versione 2.0, utilizzati per rendere più chiare le soluzioni progettuali adottate; 
+	\item \textbf{Test di unità:} definizione dei test eseguiti per verificare che il funzionamento delle varie classi e metodi che implementano il sistema software sia corretto e conforme ai requisiti;
 	\item \textbf{Tracciamento delle classi:} associazione tra requisiti e classi che li soddisfano.
 \end{itemize}
 
-\myparagraph{Diagrammi UML 2.0}\label{DiagrammiUML}
-I diagrammi UML sono diagrammi realizzati in linguaggio \textit{UML}, utilizzati per chiarire le scelte progettuali adottate e ridurre eventuali ambiguità. 
+\myparagraph{Diagrammi UML 2.0}\label{DiagrammiUML}I diagrammi UML sono diagrammi realizzati in linguaggio UML, utilizzati per chiarire le scelte progettuali adottate e ridurre eventuali ambiguità. 
 Di seguito vengono analizzati i diagrammi utilizzati.
 \paragraph*{Diagrammi delle classi}
 Questi diagrammi descrivono il tipo degli oggetti che fanno parte di un sistema.\\
 Gli elementi di un diagramma di classe sono:
 \begin{itemize}
-	\item \textbf{Nome:} nome della classe scritto in inglese a lettere maiuscole e in grassetto. Nel caso di classe \textit{astratta} il nome deve essere in formato italico, nel caso di un'\textit{interfaccia} deve essere preceduto dalla direttiva \textbf{$\ll$interface$\gg$};
+	\item \textbf{Nome:} nome della classe. Nel caso di un'interfaccia deve essere preceduto dalla direttiva \textbf{$\ll$interface$\gg$};
 	\item \textbf{Attributi:} la definizione di un attributo segue il formato:
 	\begin{center}
 		\textbf{Visibilità nome: tipo [molteplicità] = default [proprietà aggiuntive]}
@@ -68,7 +72,7 @@ Gli elementi di un diagramma di classe sono:
 			\item \#: visibilità protetta;
 			\item $\sim$: visibilità di package.
 		\end{itemize}
-		\item \textbf{Nome:} nome dell'attributo, se l'attributo è \textit{costante} il nome deve essere scritto in maiuscolo, se di tipo \textit{statico} il nome va sottolineato;
+		\item \textbf{Nome:} nome dell'attributo, se l'attributo è costante il nome deve essere scritto in maiuscolo;
 		\item \textbf{Tipo:} tipo di dato dell'attributo;
 		\item \textbf{Molteplicità:} occorrenze dell'attributo nella classe, il campo è opzionale;
 		\item \textbf{Valore di default:} valore predefinito dell'attributo;
@@ -80,12 +84,12 @@ Gli elementi di un diagramma di classe sono:
 	\end{center}
 	\begin{itemize}
 		\item \textbf{Visibilità:} visibilità dell'operazione rispetto ad altre classi indicata come per gli attributi;
-		\item \textbf{Nome:} nome dell'operazione, se l'operazione è \textit{astratta} il nome deve essere scritto in italico, se di tipo \textit{statico} il nome va sottolineato;
-		\item \textbf{Lista-parametri:} lista dei parametri dell'operazione; 
+		\item \textbf{Nome:} nome dell'operazione;
+		\item \textbf{Lista-parametri:} lista dei parametri dell'operazione;
 		\item \textbf{Return-type:} tipo di ritorno dell'operazione;
 		\item \textbf{Proprietà aggiuntive:} eventuali proprietà ritenute importanti, il campo è opzionale.
 	\end{itemize}
-\end{itemize}
+\end{itemize} 
 I diagrammi delle classi sono collegati tra loro tramite \textbf{relazioni di dipendenza}, la modifica di un elemento di un diagramma può cambiarne la definizione di un altro.
 Le relazioni di dipendenza previste sono:
 	\begin{itemize}
@@ -94,7 +98,7 @@ Le relazioni di dipendenza previste sono:
 			\includegraphics[scale=0.4]{Immagini/UML/Dipendenza} \\
 			\captionof{figure}{Dipendenza fra classi}
 		\end{center}
-		\item \textbf{Associazione:} la classe A contiene dei campi dati o delle istanze di un'altra classe B. Le molteplicità possibili sono:
+		\item \textbf{Associazione:} la classe A contiene dei campi dati o delle istanze di un'altra classe B. \\ Le molteplicità possibili sono:
 		\begin{itemize}
 			\item \textbf{1:} A possiede un'istanza di B;
 			\item \textbf{0..1:} A possiede 0 o 1 istanze di B;
@@ -134,14 +138,14 @@ Le relazioni di dipendenza previste sono:
 	\end{itemize}
 
 \paragraph*{Diagrammi dei package}
-Un package rappresenta un raggruppamento di un numero arbitrario di elementi \textit{UML} in una unità di livello più alto, può quindi contenere classi (anche astratte), un altro package e interfacce. Ogni elemento di un package, identificativo di un \glo{namespace}, può avere visibilità pubblica(+) o privata(-) e deve avere un nome completamente qualificato secondo lo schema: 
+Un package rappresenta un raggruppamento di un numero arbitrario di elementi UML in una unità di livello più alto, può quindi contenere classi (anche astratte), un altro package e interfacce. Ogni elemento di un package, identificativo di un \glo{namespace}, può avere visibilità pubblica(+) o privata(-) e deve avere un nome completamente qualificato secondo lo schema: 
 \begin{center}
 	\textbf{package::package::...::classe}
 \end{center}
 I diagrammi dei package documentano le dipendenze tra le classi che dovrebbero seguire tutte la stessa direzione evitando le dipendenze circolari.
 
 \paragraph*{Diagrammi delle attività}
-Questi diagrammi descrivono la logica procedurale e i processi di business, aiutando a descrivere gli aspetti dinamici dei casi d'uso. \\
+Questi diagrammi descrivono la logica procedurale e i processi di business, aiutando a descrivere gli aspetti dinamici dei casi d'uso.\\
 Gli elementi di un diagramma di attività sono:
 \begin{itemize}
 	\item \textbf{Token:} vengono prodotti e consumati durante l'esecuzione;
@@ -177,7 +181,7 @@ Gli elementi di un diagramma di attività sono:
 		\includegraphics[scale=0.4]{Immagini/UML/Pin}
 		\captionof{figure}{Attività che presenta un pin}
 	\end{center}
-	\item \textbf{Fork:} rappresenta un punto d'inizio di un elaborazione parallela all'interno dell'attività, produce un token per ogni processo;
+	\item \textbf{Fork:} rappresenta un punto d'inizio di un'elaborazione parallela all'interno dell'attività, produce un token per ogni processo;
 	\item \textbf{Join:} rappresenta un punto di sincronizzazione tra i processi paralleli, consuma i token in ingresso e ne genera solo uno;
 	\item \textbf{Branch:} rappresenta un punto di decisione tra i possibili percorsi di esecuzione in base alla guardia associata;
 	\item \textbf{Merge:} rappresenta un punto di unione dei diversi percorsi di esecuzione (non paralleli) generati in seguito ad un branch, il token viene solo instradato;
@@ -232,12 +236,12 @@ Gli elementi utilizzati in questi diagrammi sono i seguenti:
 \end{center}
 
 \paragraph*{Diagrammi dei casi d'uso}
-Un caso d'uso è un'insieme di scenari (sequenze di azioni) che hanno in comune uno scopo finale per un utente. I diagrammi dei casi d'uso sono una rappresentazione grafica dei casi d'uso analizzati nel documento di \AdRv. Vengono messi in evidenza:
+Un caso d'uso è un'insieme di scenari (sequenze di azioni) che hanno in comune uno scopo finale per un utente. I diagrammi dei casi d'uso sono una rappresentazione grafica dei casi d'uso analizzati nel documento di \AdR{}. Vengono messi in evidenza:
 \begin{itemize}
 	\item \textbf{Attori:} rappresentano tutto ciò che è esterno al sistema e interagisce con esso;
 	\item \textbf{Use Case:} rappresentano le attività associate al sistema.
 \end{itemize}
-Le eventuali relazioni tra gli Use Case del sistema rappresentate in questi diagrammi sono: 
+Le eventuali relazioni tra gli use case del sistema rappresentate in questi diagrammi sono: 
 \begin{itemize}
 	\item \textbf{Inclusione:} si ha quando vi sono funzionalità comuni fra più casi d'uso, lo use case B è incondizionatamente incluso nell'esecuzione dello use case A;
 	\begin{center}
@@ -270,5 +274,14 @@ Le eventuali relazioni tra gli Use Case del sistema rappresentate in questi diag
 	\end{center}
 \end{itemize} 
 
-
-
+\myparagraph{Metriche}\label{MProgettazione}Di seguito vengono presentate le metriche utilizzate per garantire il controllo sulla qualità. Per una descrizione sullo standard di riferimento e un elenco completo di tutte le metriche applicate si rimanda alla sezione \S\ref{9126} dell'appendice. 
+\begin{itemize}
+	\item \textbf{MPDS03: Tempo di caricamento delle schermate;}\hypertarget{MCViste}\\
+	Il valore stabilisce la velocità con cui le varie schermate del prodotto software vengono caricate e mostrate all'utente, viene calcolato attraverso uno strumento automatico;
+	\item \textbf{MPDS04: Facilità di utilizzo;}\hypertarget{MFUtilizzo}\\
+	Il valore stabilisce la semplicità per un utente di raggiungere quanto cercato valutando il numero di click medio per raggiungere il contenuto desiderato;
+	\item\textbf{MPDS05: Facilità di apprendimento}\hypertarget{MFApprendimento}\\
+	Il valore stabilisce la semplicità per un utente di raggiungere quanto cercato all'interno del sito calcolando la media dei minuti necessari per raggiungere le pagine ricercate;
+	\item\textbf{MPDS06:  Profondità della gerarchia}\hypertarget{MPGerarchia}\\
+	Il valore risultante viene calcolato individuando la profondità della gerarchia delle schermate rispetto alla principale.
+\end{itemize}

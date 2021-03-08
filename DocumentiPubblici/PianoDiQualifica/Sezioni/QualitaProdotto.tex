@@ -1,14 +1,13 @@
-\section{Qualità di Prodotto}
+\section{Qualità di prodotto}
 \label{qualità_prodotto}
-Per valutare la \glo{qualità} di \glo{prodotto}, il gruppo {\Gruppo} ha deciso di far riferimento allo \glo{standard} \glo{ISO/IEC 9126}, descritto in maniera esaustiva all'interno delle \textit{\NdPv{1.0.0}} alla sezione \S{C}. \\
-Il modello di qualità stabilito nello standard, ISO/IEC 9126, è definito da sei caratteristiche generali esposte in modo approfondito nel proseguo del documento e varie sottocaratteristiche misurabili attraverso delle \glo{metriche}. Il \glo{team} di lavoro ha deciso di selezionare solamente alcune di queste sottocaratteristiche, omettendo i parametri ritenuti meno rilevanti ai fini del progetto.
-
+Per valutare la \glo{qualità} di prodotto, il gruppo {\Gruppo} ha deciso di far riferimento allo \glo{standard} ISO/IEC 9126, descritto in maniera esaustiva all'interno delle \NdPv{2.0} alla sezione \S{C}.\\
+Il modello di qualità stabilito nello standard, ISO/IEC 9126, è definito da sei caratteristiche generali esposte in modo approfondito nel proseguo del documento e varie sotto-caratteristiche misurabili attraverso delle \glo{metriche}. Il team di lavoro ha deciso di selezionare solamente alcune di queste sotto-caratteristiche, omettendo i parametri ritenuti meno rilevanti ai fini del progetto.
 \subsection{Funzionalità}
 \subsubsection{Obiettivi}
 \begin{itemize}
-	\item \textbf{OPDS01: Funzionalità} \\
-	É la capacità di un software di fornire funzioni dedicate a soddisfare i bisogni evidenziati nell'\textit{\AdR}, e che permettano di operare sotto  condizioni specifiche.
-	\item \textbf{Caratteristiche da rispettare} \\
+	\item \textbf{OPDS01: Funzionalità}\\
+	È la capacità di un software di fornire funzioni dedicate a soddisfare i bisogni evidenziati nell'\AdR{}, e che permettano di operare sotto  condizioni specifiche.
+	\item \textbf{Caratteristiche da rispettare}\\
 	Le caratteristiche di qualità da rispettare sono:
 	\begin{itemize}
 		\item \textbf{Appropriatezza:} capacità del prodotto software di fornire un insieme di funzioni per i compiti specificati ed obiettivi prefissati all'utente;
@@ -17,28 +16,26 @@ Il modello di qualità stabilito nello standard, ISO/IEC 9126, è definito da se
 		\item \textbf{Interoperabilità:} capacità del prodotto software di interagire ed operare con uno o diversi sistemi specificati.
 	\end{itemize}
 \end{itemize}
-
 \subsubsection{Metriche}
 \begin{table} [H]
 	\begin{center}
 		\begin{tabular}{|c| p{12cm}|}
 			\rowcolor{darkblue}
-			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{MPDS01: Completezza dell'implementazione}}} \\ \hline
-			Descrizione & Il metodo di misura è riportato nelle \textit{\NdPv{1.0.0}} alla sezione \S{D2.1}. \\ \hline
-			Risultato & Indice compreso tra 0 e 100 che stabilisce la completezza del prodotto software. \\ \hline
-			Valore ottimale & 100\%. \\ \hline
-			Valore minimale & 100\%. \\ \hline
+			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{MPDS01: Completezza dell'implementazione}}}\\ \hline
+			Descrizione & Il metodo di misura è riportato nelle \NdPv{2.0} alla sezione \S{2.3.6.6}.\\ \hline
+			Risultato & Indice compreso tra 0 e 100 che stabilisce la completezza del prodotto software.\\ \hline
+			Valore ottimale & 100\%.\\ \hline
+			Valore minimale & 100\%.\\ \hline
 		\end{tabular}
 	\end{center}
 	\caption{\label{tab:MPDS01}Metrica relativa alla completezza dell'implementazione.}
 \end{table} 
-
 \subsection{Affidabilità}
 \subsubsection{Obiettivi}
 \begin{itemize}
-	\item \textbf{OPDS02: Affidabilità} \\
-	É la capacità del prodotto software di mantenere un certo livello di prestazioni quando viene usato in specifiche condizioni per un dato periodo.
-	\item \textbf{Caratteristiche da rispettare} \\
+	\item \textbf{OPDS02: Affidabilità}\\
+	È la capacità del prodotto software di mantenere un certo livello di prestazioni quando viene usato in specifiche condizioni per un dato periodo.
+	\item \textbf{Caratteristiche da rispettare}\\
 	Le caratteristiche di qualità da rispettare sono:
 	\begin{itemize}
 		\item \textbf{Maturità:} capacità di un prodotto software di evitare errori e malfunzionamenti durante la sua esecuzione;
@@ -46,45 +43,53 @@ Il modello di qualità stabilito nello standard, ISO/IEC 9126, è definito da se
 		\item \textbf{Recuperabilità:} capacità di ripristinare prestazioni e dati in caso di errori o malfunzionamenti.
 	\end{itemize}
 \end{itemize}
-
 \subsubsection{Metriche}
 \begin{table} [H]
 	\begin{center}
 		\begin{tabular}{|c| p{12cm}|}
 			\rowcolor{darkblue}
-			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{MPDS02: Densità errori}}} \\ \hline
-			Descrizione & Consiste nella capacità di un prodotto software di resistere ai malfunzionamenti ed è riportato nelle \textit{\NdPv{1.0.0}} alla sezione \S{D2.2}. \\ \hline
-			Risultato & Indice compreso tra 0 e 100. \\ \hline
-			Valore ottimale & Scelto in seguito. \\ \hline
-			Valore minimale & Scelto in seguito. \\ \hline
+			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{MPDS02: Densità errori}}}\\ \hline
+			Descrizione & Consiste nella capacità di un prodotto software di resistere ai malfunzionamenti ed è riportato nelle \NdPv{2.0} alla sezione \S{2.3.6.6}.\\ \hline
+			Risultato & Indice compreso tra 0 e 100.\\ \hline
+			Valore ottimale & Scelto in seguito.\\ \hline
+			Valore minimale & Scelto in seguito.\\ \hline
 		\end{tabular}
 	\end{center}
 	\caption{\label{tab:MPDS02}Metrica relativa alla densità degli errori.}
 \end{table}
-
 \subsection{Efficienza}
 \subsubsection{Obiettivi}
 \begin{itemize}
-	\item \textbf{OPDS03: \glo{Efficienza}} \\
+	\item \textbf{OPDS03: Efficienza}\\
 Capacità di fornire determinate prestazioni relative alla quantità di risorse utilizzate.
-	\item \textbf{Caratteristiche da rispettare} \\
+	\item \textbf{Caratteristiche da rispettare}\\
 	Le caratteristiche di qualità da rispettare sono:
 	\begin{itemize}
 		\item \textbf{Comportamento rispetto al tempo:} capacità di fornire sotto specifiche condizioni adeguati tempi di risposta e di elaborazione;
 		\item \textbf{Utilizzo delle risorse:} capacità di impiegare quantità e tipo di risorse in maniera adeguata;
-		\item \textbf{Conformità:} capacità di aderire a standard e date convenzioni sull'efficienza.
+		\item \textbf{Conformità:} capacità di aderire a standard e date convenzioni sull'\glo{efficienza}.
 	\end{itemize}
 \end{itemize}
-
 \subsubsection{Metriche}
-Il \glo{proponente} {\Proponente} non ha ancora espresso requisiti in termini di efficienza. Si è cosi deciso di non presentare metriche di efficienza in questa sessione. In seguito, questa sezione potrà essere aggiornata.
-
+\begin{table} [H]
+	\begin{center}
+		\begin{tabular}{|c| p{12cm}|}
+			\rowcolor{darkblue}
+			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{MPDS03: Tempo di caricamento delle schermate}}}\\ \hline
+			Descrizione & Consiste nella velocità con cui le varie schermate del prodotto software vengono caricate e mostrate all'utente ed è riportato nelle \NdPv{2.0} alla sezione \S{2.3.5.7}.\\ \hline
+			Risultato & Numero con virgola.\\ \hline
+			Valore ottimale & 1 secondo.\\ \hline
+			Valore minimale & 10 secondi.\\ \hline
+		\end{tabular}
+	\end{center}
+	\caption{\label{tab:MPDS03}Metrica relativa al tempo di caricamento delle schermate.}
+\end{table}
 \subsection{Usabilità}
 \subsubsection{Obiettivi}
 \begin{itemize}
-	\item \textbf{OPDS04: Usabilità} \\
-	É la capacità del prodotto software di essere compreso, appreso e utilizzato dal suo \glo{target} di utenza.
-	\item \textbf{Caratteristiche da rispettare} \\
+	\item \textbf{OPDS04: Usabilità}\\
+	È la capacità del prodotto software di essere compreso, appreso e utilizzato dal suo target di utenza.
+	\item \textbf{Caratteristiche da rispettare}\\
 	Le caratteristiche di qualità da rispettare sono:
 	\begin{itemize}
 		\item \textbf{Comprensibilità:} capacità di essere inequivocabilmente chiaro rispetto alle funzionalità offerte e le modalità di utilizzo;
@@ -94,104 +99,97 @@ Il \glo{proponente} {\Proponente} non ha ancora espresso requisiti in termini di
 		\item \textbf{Conformità:} capacità del software di aderire a standard o convenzioni relativi all'usabilità.
 	\end{itemize}
 \end{itemize}
-
 \subsubsection{Metriche}
 \begin{table} [H]
 	\begin{center}
 		\begin{tabular}{|c| p{12cm}|}
 			\rowcolor{darkblue}
-			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{MPDS03: Facilità di utilizzo}}} \\ \hline
-			Descrizione & Indica la facilità con cui l'utente raggiunge ciò che vuole ed è rappresentata tramite il numero di click necessari per arrivare al contenuto desiderato. È riportato nelle \textit{\NdPv{1.0.0}} alla sezione \S{D2.3}. \\ \hline
-			Risultato & Numero intero che rappresenta i click necessari per raggiungere le schermata di cui si necessita. \\ \hline
-			Valore ottimale & $\leq$ 10. \\ \hline
-			Valore minimale & $\leq$ 15. \\ \hline
+			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{MPDS04: Facilità di utilizzo}}}\\ \hline
+			Descrizione & Indica la facilità con cui l'utente raggiunge ciò che vuole ed è rappresentata tramite il numero di click necessari per arrivare al contenuto desiderato. È riportato nelle \NdPv{2.0} alla sezione \S{2.3.5.7}.\\ \hline
+			Risultato & Numero intero che rappresenta i click necessari per raggiungere le schermata di cui si necessita.\\ \hline
+			Valore ottimale & $\leq$ 10.\\ \hline
+			Valore minimale & $\leq$ 15.\\ \hline
 		\end{tabular}
 	\end{center}
-	\caption{\label{tab:MPDS03}Metrica relativa alla facilità di utilizzo.}
+	\caption{\label{tab:MPDS04}Metrica relativa alla facilità di utilizzo.}
 \end{table}
-
 \begin{table} [H]
 	\begin{center}
 		\begin{tabular}{|c| p{12cm}|}
 			\rowcolor{darkblue}
-			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{MPDS04: Facilità di apprendimento}}} \\ \hline
-			Descrizione & Indica la facilità con cui l'utente riesce ad imparare ad usare le funzionalità del prodotto e viene rappresentata tramite il tempo medio che serve per comprenderle. È riportato nelle \textit{\NdPv{1.0.0}} alla sezione \S{D2.4} \\ \hline
-			Risultato & Numero intero che rappresenta i minuti per raggiungere la pagina desiderata. \\ \hline
-			Valore ottimale & $\leq$ 3. \\ \hline
-			Valore minimale & $\leq$ 5. \\ \hline
+			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{MPDS05: Facilità di apprendimento}}} \\ \hline
+			Descrizione & Indica la facilità con cui l'utente riesce ad imparare ad usare le funzionalità del prodotto e viene rappresentata tramite il tempo medio che serve per comprenderle. È riportato nelle \NdPv{2.0} alla sezione \S{2.3.5.7}.\\ \hline
+			Risultato & Numero intero che rappresenta i minuti per raggiungere la pagina desiderata.\\ \hline
+			Valore ottimale & $\leq$ 3.\\ \hline
+			Valore minimale & $\leq$ 5.\\ \hline
 		\end{tabular}
 	\end{center}
-	\caption{\label{tab:MPDS04}Metrica relativa alla facilità di apprendimento.}
+	\caption{\label{tab:MPDS05}Metrica relativa alla facilità di apprendimento.}
 \end{table}
-
 \begin{table} [H]
 	\begin{center}
 		\begin{tabular}{|c| p{12cm}|}
 			\rowcolor{darkblue}
-			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{MPDS05: Profondità della gerarchia}}} \\ \hline
-			Descrizione & Indica la profondità del sito. Un sito per essere facile da utilizzare non deve essere troppo profondo. È riportato nelle \textit{\NdPv{1.0.0}} alla sezione \S{D2.5} \\ \hline
-			Risultato & Numero intero che rappresenta la profondità delle pagine. \\ \hline
-			Valore ottimale & $\leq$ 4. \\ \hline
-			Valore minimale & $\leq$ 7. \\ \hline
+			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{MPDS06: Profondità della gerarchia}}}\\ \hline
+			Descrizione & Indica la profondità del sito. Un sito per essere facile da utilizzare non deve essere troppo profondo. È riportato nelle \NdPv{2.0} alla sezione \S{2.3.5.7}.\\ \hline
+			Risultato & Numero intero che rappresenta la profondità della gerarchia delle schermate.\\ \hline
+			Valore ottimale & $\leq$ 4.\\ \hline
+			Valore minimale & $\leq$ 7.\\ \hline
 		\end{tabular}
 	\end{center}
-	\caption{\label{tab:MPDS05}Metrica relativa alla profondità della gerarchia.}
+	\caption{\label{tab:MPDS06}Metrica relativa alla profondità della gerarchia.}
 \end{table}
-
 \subsection{Manutenibilità}
 \subsubsection{Obiettivi}
 \begin{itemize}
-	\item \textbf{OPDS05: Manutenibilità} \\
-	É la capacità del software di essere modificato da correzioni, miglioramenti o adattamenti.
-	\item \textbf{Caratteristiche da rispettare} \\
+	\item \textbf{OPDS05: Manutenibilità}\\
+	È la capacità del software di essere modificato da correzioni, miglioramenti o adattamenti.
+	\item \textbf{Caratteristiche da rispettare}\\
 	Le caratteristiche di qualità da rispettare sono:
 	\begin{itemize}
 		\item \textbf{Analizzabilità:} facilità con la quale è possibile analizzare il codice per localizzare un errore;
 		\item \textbf{Modificabilità:} capacità del prodotto software di essere modificato agevolmente a livello di codice, progettazione o documentazione;
 		\item \textbf{Stabilità:} capacità del software di evitare effetti indesiderati in seguito ad una modifica;
-		\item \textbf{\glo{Testabilità}:} capacità del software di essere facilmente sottoposto a \glo{test} per verificare e validare le modifiche apportate.
+		\item \textbf{Testabilità:} capacità del software di essere facilmente sottoposto a test per verificare e validare le modifiche apportate.
 	\end{itemize}
 \end{itemize}
-
 \subsubsection{Metriche}
 \begin{table} [H]
 	\begin{center}
 		\begin{tabular}{|c| p{12cm}|}
 			\rowcolor{darkblue}
-			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{MPDS06: Facilità di comprensione}}} \\ \hline
-			Descrizione & Indica la facilità con cui è possibile comprendere cosa fa il codice ed è rappresentata dal numero di linee di commento nel codice. È riportato nelle \textit{\NdPv{1.0.0}} alla sezione \S{D2.6}. \\ \hline
-			Risultato & Indice compreso tra 0 e 100 che stabilisce la facilità di comprensione del codice. \\ \hline
-			Valore ottimale & Scelto in seguito. \\ \hline
-			Valore minimale & Scelto in seguito. \\ \hline
+			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{MPDS07: Facilità di comprensione}}} \\ \hline
+			Descrizione & Indica la facilità con cui è possibile comprendere cosa fa il codice ed è rappresentata dal numero di linee di commento nel codice. È riportato nelle \NdPv{2.0} alla sezione \S{2.3.6.6}.\\ \hline
+			Risultato & Indice compreso tra 0 e 100 che stabilisce la facilità di comprensione del codice.\\ \hline
+			Valore ottimale & Scelto in seguito.\\ \hline
+			Valore minimale & Scelto in seguito.\\ \hline
 		\end{tabular}
 	\end{center}
-	\caption{\label{tab:MPDS06}Metrica relativa alla facilità di comprensione.}
+	\caption{\label{tab:MPDS07}Metrica relativa alla facilità di comprensione.}
 \end{table}
-
 \begin{table} [H]
 	\begin{center}
 		\begin{tabular}{|c| p{12cm}|}
 			\rowcolor{darkblue}
-			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{MPDS07: Semplicità delle funzioni}}} \\ \hline
-			Descrizione & La semplicità di un metodo può essere rappresentata dal numero di parametri per metodo; meno parametri ha una funzione, più è semplice e intuitiva. È riportato nelle \textit{\NdPv{1.0.0}} alla sezione \S{D2.7} \\ \hline
-			Risultato & Numero intero che rappresenta il numero di parametri di un metodo. \\ \hline
-			Valore ottimale & $\leq$ 3. \\ \hline
-			Valore minimale & $\leq$ 6. \\ \hline
+			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{MPDS08: Semplicità delle funzioni}}}\\ \hline
+			Descrizione & La semplicità di un metodo può essere rappresentata dal numero di parametri per metodo; meno parametri ha una funzione, più è semplice e intuitiva. È riportato nelle \NdPv{2.0} alla sezione \S{2.3.6.6}.\\ \hline
+			Risultato & Numero intero che rappresenta il numero di parametri di un metodo.\\ \hline
+			Valore ottimale & $\leq$ 3.\\ \hline
+			Valore minimale & $\leq$ 6.\\ \hline
 		\end{tabular}
 	\end{center}
-	\caption{\label{tab:MPDS07}Metrica relativa alla semplicità delle funzioni.}
+	\caption{\label{tab:MPDS08}Metrica relativa alla semplicità delle funzioni.}
 \end{table}
-
 \begin{table} [H]
 	\begin{center}
 		\begin{tabular}{|c| p{12cm}|}
 			\rowcolor{darkblue}
-			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{MPDS08: Semplicità delle classi}}} \\ \hline
-			Descrizione & La semplicità di una classe è rappresentata dal numero di metodi che essa contiene; meno metodi ha al suo interno più la classe ha uno scopo ben specifico e comprensibile. È riportato nelle \textit{\NdPv{1.0.0}} alla sezione \S{D2.8} \\ \hline
-			Risultato & Numero intero che rappresenta il numero di metodi all'interno di una classe. \\ \hline
-			Valore ottimale & $\leq$ 10. \\ \hline
-			Valore minimale & $\leq$ 16. \\ \hline
+			\multicolumn{2}{|c|}{\textcolor{white}{\textbf{MPDS09: Semplicità delle classi}}} \\ \hline
+			Descrizione & La semplicità di una classe è rappresentata dal numero di metodi che essa contiene; meno metodi ha al suo interno più la classe ha uno scopo ben specifico e comprensibile. È riportato nelle \NdPv{2.0} alla sezione \S{2.3.6.6}.\\ \hline
+			Risultato & Numero intero che rappresenta il numero di metodi all'interno di una classe.\\ \hline
+			Valore ottimale & $\leq$ 10.\\ \hline
+			Valore minimale & $\leq$ 16.\\ \hline
 		\end{tabular}
 	\end{center}
-	\caption{\label{tab:MPDS08}Metrica relativa alla facilità di comprensione.}
+	\caption{\label{tab:MPDS09}Metrica relativa alla facilità di comprensione.}
 \end{table}

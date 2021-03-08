@@ -1,34 +1,53 @@
 \rowcolors{2}{white}{celeste} 
 \renewcommand{\arraystretch}{1.5}
-\begin{longtable}{|c C{9.5cm} C{2.5cm}|} 
+
+\addcontentsline{lot}{table}{Requisiti di vincolo}
+
+\begin{longtable}{c C{9.5cm} C{2.5cm}} 
 	
 	\rowcolor{darkblue}
 	\textcolor{white}{\textbf{Codice Requisito}}&
 	\textcolor{white}{\textbf{Descrizione}}&
-	\textcolor{white}{\textbf{Fonte}}\\	
+	\textcolor{white}{\textbf{Fonte}}\\
+
+	\rvin{O} & Utilizzo di \glo{Typescript} come principale linguaggio di sviluppo. & Capitolato \\
 	
-	RVO1 & Utilizzo di \glo{\textit{Typescript}} come principale linguaggio di sviluppo. & \glo{Capitolato} \\
+	\rvin{O} & Uso del \glo{framework} \glo{Serverless} per il controllo centrale dell'applicazione. & Capitolato \\
 	
-	RVO2 & Uso del \glo{framework} \glo{\textit{Serverless}} per il controllo centrale dell'applicazione. & Capitolato \\
+	\rvin{O} & Le componenti dell'applicazione devono fornire API basata su \glo{HTTP} o \glo{HTTPS}. & Capitolato \\
 	
-	RVO3 & Le componenti dell'applicazione devono fornire API basata su \glo{\textit{HTTP}} o \glo{\textit{HTTPS}}. & Capitolato \\
+	\rvin{O} & La piattaforma dovrà essere distribuita su \glo{AWS} utilizzando \glo{AWS Lambda} come unità di calcolo. & Capitolato \\
 	
-	RVO4 & La piattaforma dovrà essere distribuita su \glo{\textit{AWS}} utilizzando \glo{\textit{AWS Lambda}} come unità di calcolo. & Capitolato \\
+	\rvin{O} & La piattaforma va sviluppata con un'architettura a \glo{microservizi}. & Capitolato \\
 	
-	RVO5 & La piattaforma va sviluppata con un'architettura a \glo{microservizi}. & Capitolato \\
+	\rvin{O} & Il \glo{front end} va sviluppato con \glo{Next.js}. & Capitolato \\
 	
-	RVO6 & Il \glo{front end} va sviluppato con \glo{\textit{Next.js}}. & Capitolato \\
+	\rvin{O} & Il front end deve prevedere il pre-rendering della pagina \glo{HTML5} implementato attraverso uno dei due seguenti approcci: \glo{SSR} o \glo{SSG}. & Capitolato \\
 	
-	RVO7 & Il \glo{front end} deve prevedere il pre-rendering della pagina \glo{\textit{HTML5}} implementato attraverso uno dei due seguenti approcci: \glo{SSR} o \glo{SSG}. & Capitolato \\
+	\rvin{O} & La piattaforma dovrà integrarsi con il servizio di pagamento \glo{Stripe}. & Capitolato \\
 	
-	RVO8 & La piattaforma dovrà integrarsi con il servizio di pagamento \textit{Stripe}. & Capitolato \\
+	\rvin{O} & La parte di monitoraggio e controllo della piattaforma \glo{Amazon CloudWatch}. & Capitolato \\
 	
-	RVO9 & La parte di monitoraggio e controllo della piattaforma \glo{\textit{Amazon CloudWatch}}. & Capitolato \\
+	\rvin{Z} & È necessario memorizzare le credenziali dell'utente su \glo{Auth0}, un \glo{identity provider} esterno di terze parti, per poter migrare il sito da un'infrastruttura all'altra. & Capitolato \\
 	
-	RVZ10 & E' necessario memorizzare le credenziali dell'utente su \glo{\textit{Auth0}}, un \glo{identity provider} esterno di terze parti, per poter migrare il sito da un'infrastruttura all'altra. & Capitolato \\
+	\rvin{O} & La piattaforma deve essere sviluppata nei seguenti 3 ambienti secondo l'ordine indicato: prima \glo{Locale}, poi \glo{Testing} e dopo \glo{Staging}. & Capitolato \\
+
+	\rvin{O} & La piattaforma deve funzionare correttamente nel browser Google Chrome per desktop dalla versione 88.0.4324.182 in poi. & Interna \\
+
+	\rvin{O} & La piattaforma deve funzionare correttamente nel browser Mozilla Firefox per desktop dalla versione 86.0.0 in poi. & Interna \\
+
+	\rvin{O} & La piattaforma deve funzionare correttamente nel browser Microsoft Edge per desktop dalla versione 88.0.705.68 in poi. & Interna \\
+
+	\rvin{O} & La piattaforma deve funzionare correttamente nel browser Safari per desktop dalla versione 14.0.2 in poi. & Interna \\
+
+	\rvin{O} & La piattaforma deve funzionare correttamente nel browser Google Chrome per mobile dalla versione 88.0.4324.181 in poi. & Interna \\
+
+	\rvin{O} & La piattaforma deve funzionare correttamente nel browser Mozilla Firefox per mobile dalla versione 86.1.1 in poi. & Interna \\
+
+	\rvin{O} & La piattaforma deve funzionare correttamente nel browser Microsoft Edge per mobile dalla versione 46.01.4.5140 in poi. & Interna \\
+
+	\rvin{O} & La piattaforma deve funzionare correttamente nel browser Safari per mobile dalla versione 14.4 in poi. & Interna \\
 	
-	RVO11 & La piattaforma deve essere sviluppata nei seguenti 3 ambienti secondo l'ordine indicato: prima \glo{Locale}, poi \glo{Test} e dopo \glo{Staging}. & Capitolato \\
-	
-	RVD12 & È desiderabile avere anche lo stadio di \glo{Production}. & Capitolato \\
+	\rvin{D} & È desiderabile avere anche lo stadio di Production. & Capitolato \\
 	
 \end{longtable}

@@ -12,21 +12,20 @@ Con queste norme il gruppo intende assicurare una corretta gestione dei document
 Ogni \glo{configuration item} ha un'identità unica che ne consente la chiara individuazione. Per una trattazione precisa si rimanda alla sezione \S\ref{NomenclaturaDoc}.
 
 \subsubsection{Controllo di baseline}
-Per garantire riproducibilità e tracciabilità viene definita una successione di \glo{baseline} associate a una serie di \glo{milestone} specifiche per obiettivi di avanzamento e coerenti con la strategia di progetto. Data l'importanza di controllare lo svolgimento del progetto il numero delle milestone sarà superiore al numero delle Revisioni.
+Per garantire riproducibilità e tracciabilità viene definita una successione di \glo{baseline} associate a una serie di \glo{milestone} specifiche per obiettivi di avanzamento e coerenti con la strategia di progetto. Data l'importanza di controllare lo svolgimento del progetto il numero delle milestone sarà superiore al numero delle revisioni.
 
 \subsubsection{Controllo di versione}\label{Versionamento}
 \myparagraph{Codice di versione per documenti e software}
 Il codice di una versione è formato: 
 \begin{center}
-	\textbf{[X].[Y].[Z]}
+	\textbf{[X].[Y]}
 \end{center}
-dove 
+dove:
 \begin{itemize}
 	\item \textbf{[X]} corrisponde ad una versione del documento approvata dal \Responsabile\ e pronta al rilascio, la numerazione parte da 0;
 	\item \textbf{[Y]} corrisponde ad una versione del documento verificata in tutte le sue parti, inizia da 0 e riparte da questo valore ad ogni incremento di X;
-	\item \textbf{[Z]} parte da zero e viene incrementato ad ogni modifica del documento o verifica di singole parti di esso, la numerazione riparte da zero ad ogni incremento di X o Y.
 \end{itemize}
-Il controllo di versione si appoggia su un repository creato in \glo{\textit{Github}} la cui struttura viene spiegata nella sezione seguente.
+Il controllo di versione si appoggia su un repository creato in \glo{Github} la cui struttura viene spiegata nella sezione seguente.
 
 \subsubsection{Struttura della repository}\label{StrutturaRepo}
 La repository del gruppo \Gruppo\ è accessibile all'indirizzo
@@ -35,8 +34,7 @@ La repository del gruppo \Gruppo\ è accessibile all'indirizzo
 \end{center}
 L'utilizzo di questo strumento permette a ciascun componente di lavorare sui \glo{configuration items} senza rischio di sovrascritture consentendo allo stesso tempo di controllare l'andamento del lavoro. 
 All'interno del repository viene divisa la documentazione dal codice software.
-\myparagraph{Repository per la documentazione}\label{RepoDoc}
-Il repository per la documentazione è composto da diversi \textbf{branch}:
+\myparagraph{Repository per la documentazione}\label{RepoDoc}Il repository per la documentazione è composto da diversi \textbf{branch}:
 \begin{itemize}
 	\item \textbf{master} su cui vengono riportati i documenti approvati dal \Responsabile\ e pronti nella loro versione definitiva ad essere presentati;
 	\item \textbf{develop} ramo in cui vengono inserite la versioni dei documenti verificati ma non ancora approvati;
@@ -44,10 +42,18 @@ Il repository per la documentazione è composto da diversi \textbf{branch}:
 \end{itemize}
 All'interno del repository troviamo le cartelle così organizzate:
 \begin{itemize}
-	\item \textbf{Immagini}: contiene le immagini utilizzate all'interno dei documenti;
-	\item \textbf{Utilita}: contiene file di utilità per la produzione di tutti i documenti;
-	\item \textbf{DocumentiInterni}: contiene le cartelle dei documenti di interesse per il gruppo e marginale per proponente e committenti;
-	\item \textbf{DocumentiPubblici}: contiene le cartelle dei documenti di interesse per il gruppo, per il proponente e per i committenti.
+	\item \textbf{Immagini:} contiene le immagini utilizzate all'interno dei documenti;
+	\item \textbf{Utilita:} contiene file di utilità per la produzione di tutti i documenti;
+	\item \textbf{DocumentiInterni:} contiene le cartelle dei documenti di interesse per il gruppo e marginale per proponente e committenti;
+	\item \textbf{DocumentiPubblici:} contiene le cartelle dei documenti di interesse per il gruppo, per il proponente e per i committenti.
 \end{itemize}
-\myparagraph{Modifiche al repository}\label{ModificaRepo}
-Nel caso fosse necessario modificare file all'interno del ramo master è necessaria una \textit{pull request} con conseguente approvazione da almeno un altro elemento del gruppo.
+
+\myparagraph{Repository per il Poc}\label{RepoPoc}I file con il codice relativi al \glo{back end} e \glo{front end} del \glo{PoC} da realizzare sono stati inseriti rispettivamente in:
+\begin{center}
+	\textbf{https://github.com/NotOnlyStudents/poc-be}
+\end{center}
+\begin{center}
+	\textbf{https://github.com/NotOnlyStudents/poc-fe}
+\end{center}
+
+\myparagraph{Modifiche al repository}\label{ModificaRepo}Nel caso fosse necessario modificare file all'interno del ramo master è necessaria una \textbf{pull request} con conseguente approvazione da almeno un altro elemento del gruppo.
