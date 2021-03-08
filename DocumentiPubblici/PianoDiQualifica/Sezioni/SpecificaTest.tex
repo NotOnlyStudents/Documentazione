@@ -10,73 +10,53 @@ Lo scopo dei test di sistema è quello di verificare che i requisiti espressi ne
 	\textcolor{white}{\textbf{Implementato}}\label{tab:TestSistema1}\\
 	TRFO1 & Viene verificato che l'utente possa registrarsi ed eseguire l'accesso con e-mail e password & Implementato\\ \hline
 	TRFO2 & Viene verificato che l'utente non autenticato possa essere in grado di fare il reset della password & Non ancora in sviluppo\\ \hline
-	TRFO3 & Viene verificato che l'utente autenticato sia in grado di eseguire il logout dalla piattaforma & Implementato\\ \hline
-	TRFO4 & Viene verificato che l'utente non autenticato abbia un menù da cui possa accedere facilmente ad ogni pagina: login, home, carrello & Non ancora in sviluppo\\ \hline
-	TRFO5 & Viene verificato che l'acquirente abbia un menù da cui accedere facilmente alla pagina personale, home, carrello e da cui riesca ad eseguire il logout & Non ancora in sviluppo\\ \hline
-	TRFO6 & Viene verificato che, appena eseguito l'accesso, l'utente sia in grado di visualizzare la propria home page con: descrizione dell'azienda e prodotti in evidenza & Non ancora in sviluppo\\ \hline
-	TRFO7 & Viene verificato che l'utente non autenticato o l'acquirente possa cercare i prodotti per titolo o descrizione, ed avvisato se la ricerca non fornisce risultati & Non ancora in sviluppo\\ \hline
-	TRFO8 & Viene verificato che l'utente non autenticato o l'acquirente sia in grado di filtrare i prodotti nella \glo{PLP} per categoria, prezzo e disponibilità in magazzino & Non ancora in sviluppo\\ \hline
-	TRFO9 & Viene verificato che l'utente non autenticato o l'acquirente sia in grado di cambiare l'ordinamento ed aggiungere i prodotti nella PLP & Non ancora in sviluppo\\ \hline
-	TRFO10 & Viene verificato che l'utente non autenticato o l'acquirente possa aprire la \glo{PDP} di un prodotto partendo dalla PLP o dalla home dei prodotti in evidenza e possa aggiungere un prodotto al carrello direttamente dalla PDP & Non ancora in sviluppo\\ \hline
-	TRFO11 & Viene verificato che l'utente non autenticato o l'acquirente possa accedere alla PDP di un prodotto dalla pagina del carrello & Non ancora in sviluppo\\ \hline
-    TRFO12 & Viene verificato che l'utente non autenticato o l'acquirente possa visualizzare le informazioni, il prezzo totale, le tasse, gli sconti dei prodotti presenti nel carrello & Non ancora in sviluppo\\ \hline
-    TRFO13 & Viene verificato che l'utente non autenticato o l'acquirente possa visualizzare, aggiungere, modificare la quantità ed eliminare i prodotti nel carrello & Non ancora in sviluppo\\ \hline
-    TRFO14 & Viene verificato che l'acquirente possa procedere all'acquisto del carrello & Implementato\\ \hline
-    TRFO15 & Viene verificato che l'utente non autenticato debba autenticarsi prima di procedere con il checkout & Implementato\\ \hline
-    TRFO16 & Viene verificato che l'acquirente possa inserire l'indirizzo di spedizione e possa procedere al pagamento attraverso il servizio fornito da \glo{Stripe} & Implementato\\ \hline
-	TRFO17 & Viene verificato che l'acquirente o il venditore possa visualizzare i prodotti contenuti in un ordine, le loro quantità, l'indirizzo di spedizione e il prezzo totale di pagamento & Implementato\\ \hline
-	TRFO18 & Viene verificato che l'acquirente o il venditore possa modificare le informazioni personali, l'indirizzo email e la password & Non ancora in sviluppo\\ \hline
-	TRFO19 & Viene verificato che il venditore possa inserire una nuova immagine profilo e una nuova descrizione dell'azienda & Non ancora in sviluppo\\ \hline
-	TRFO20 & Viene verificato che l'acquirente possa eliminare il proprio account & Non ancora in sviluppo\\ \hline
-	TRFO21 & Viene verificato che l'acquirente possa vedere l'elenco degli ordini effettuati & Non ancora in sviluppo\\ \hline
-	TRFO22 & Viene verificato che il venditore possa aggiungere un prodotto alla piattaforma, specificando: descrizione, categoria, prezzo, sconti applicati, quantità e se deve essere presente tra i prodotti in evidenza & Non ancora in sviluppo\\ \hline
-    TRFO23 & Viene verificato che il venditore possa modificare, eliminare e rifornire i prodotti & Non ancora in sviluppo\\ \hline
-    TRFO24 & Viene verificato che il venditore possa visualizzare una lista con tutti gli ordini effettuati & Non ancora in sviluppo\\ \hline
-    TRFO25 & Viene verificato che il carrello dell'acquirente possa essere salvato in remoto e sincronizzato su più browser/dispositivi a cui accedere & Non ancora in sviluppo\\ \hline
-    TRFO26 & Viene verificato che l'utente non autenticato possa aggiungere prodotti nel carrello come ospite e, appena si autentica, vengano aggiunti al suo carrello personale & Non ancora in sviluppo\\ \hline
-    TRFO27 & Viene verificato che l'amministratore possa aggiungere ed eliminare account di venditori & Non ancora in sviluppo\\ \hline
-    TRFO28 & Viene verificato che l'amministratore possa fare il \glo{deploy} del sito & Non ancora in sviluppo\\ \hline
-    TRFO29 & Viene verificato che l'amministratore possa aggiungere e rimuovere servizi di terze parti alla piattaforma & Non ancora in sviluppo\\ \hline
-    TRFO30 & Viene verificato che l'amministratore possa specificare i requisiti minimi di una password & Non ancora in sviluppo\\ \hline
-    TRFZ31 & Viene verificato che l'amministratore possa modificare dinamicamente la copia del sito web o cambiare il layout delle pagine PDP o PLP senza ridistribuire l'intero codice ad ogni modifica utilizzando \glo{Contentful} come \glo{CMS} & Non ancora in sviluppo\\ \hline
-    \caption{Descrizione dei test di sistema.}
+	TRFO3 & Viene verificato che l'utente autenticato sia in grado di eseguire il logout dalla piattaforma & Non ancora in sviluppo\\ \hline
+	TRFO4 & Viene verificato che l'utente sia in grado di visualizzare la propria schermata principale con: descrizione dell'azienda e prodotti in evidenza & Non ancora in sviluppo\\ \hline
+	TRFO5 & Viene verificato che l'utente non autenticato o l'acquirente possa cercare i prodotti utilizzando delle parole chiave, e deve essere avvisato se la ricerca non fornisce risultati & Non ancora in sviluppo\\ \hline
+	TRFO6 & Viene verificato che l'utente non autenticato o l'acquirente sia in grado di filtrare i prodotti nella \glo{PLP} per categoria, prezzo e disponibilità in magazzino & Non ancora in sviluppo\\ \hline
+	TRFO7 & Viene verificato che l'utente non autenticato o l'acquirente sia in grado di cambiare l'ordinamento & Non ancora in sviluppo\\ \hline
+	TRFO8 & Viene verificato che l'utente non autenticato o l'acquirente possa aprire la \glo{PDP} di un prodotto partendo dalla PLP, dalla schermata dei prodotti in evidenza e dal riepilogo ordine & Non ancora in sviluppo\\ \hline
+	TRFO9 & Viene verificato che l'utente non autenticato o l'acquirente possa accedere alla PDP di un prodotto dalla pagina del carrello & Non ancora in sviluppo\\ \hline
+  	TRFO10 & Viene verificato che l'utente non autenticato o l'acquirente possa visualizzare le informazioni, il prezzo totale, gli sconti dei prodotti presenti nel carrello & Non ancora in sviluppo\\ \hline
+  	TRFO11 & Viene verificato che l'utente non autenticato o l'acquirente possa visualizzare, aggiungere, modificare la quantità ed eliminare i prodotti nel carrello & Non ancora in sviluppo\\ \hline
+  	TRFO12 & Viene verificato che l'acquirente possa procedere all'acquisto del carrello & Non ancora in sviluppo\\ \hline
+  	TRFO13 & Viene verificato che l'utente non autenticato debba autenticarsi prima di procedere con il checkout & Non ancora in sviluppo\\ \hline
+	TRFO14 & Viene verificato che l'acquirente possa inserire l'indirizzo di spedizione e possa procedere al pagamento attraverso il servizio fornito da \glo{Stripe} & Non ancora in sviluppo\\ \hline
+	TRFO15 & Viene verificato che l'acquirente o il venditore possa visualizzare i prodotti contenuti in un ordine, le loro quantità, l'indirizzo di spedizione e il prezzo totale di pagamento & Non ancora in sviluppo\\ \hline
+	TRFO16 & Viene verificato che l'acquirente o il venditore possa modificare le informazioni personali, l'indirizzo email e la password & Non ancora in sviluppo\\ \hline
+	TRFO17 & Viene verificato che l'acquirente possa eliminare il proprio account & Non ancora in sviluppo\\ \hline
+	TRFO18 & Viene verificato che il venditore possa filtrare l'elenco degli ordini a suo carico & Non ancora in sviluppo\\ \hline
+	TRFO19 & Viene verificato che il venditore possa aggiungere un prodotto alla piattaforma, specificando: descrizione, categoria, prezzo, sconti applicati, quantità e se deve essere presente tra i prodotti in evidenza & Non ancora in sviluppo\\ \hline
+	TRFO20 & Viene verificato che il venditore possa modificare, eliminare e rifornire i prodotti & Non ancora in sviluppo\\ \hline
+	TRFO21 & Viene verificato che il venditore possa visualizzare una lista con tutti gli ordini effettuati & Non ancora in sviluppo\\ \hline
+	TRFO22 & Viene verificato che il carrello dell'acquirente possa essere salvato in remoto e sincronizzato su più browser/dispositivi a cui accedere & Non ancora in sviluppo\\ \hline
+	TRFO23 & Viene verificato che l'utente non autenticato possa aggiungere prodotti nel carrello come ospite e, appena si autentica, vengano aggiunti al suo carrello personale & Non ancora in sviluppo\\ \hline
+  \caption{Descrizione dei test di sistema.}
 \end{longtable}
 \begin{longtable}{|c| C{13cm}|}
 	\rowcolor{white}
 	\rowcolor{darkblue}
 	\textcolor{white}{\textbf{ID Test}}&
 	\textcolor{white}{\textbf{ID Requisito}}\label{tab:TestSistema2}\\
-	TRFO1 & RFO1\_1, RFO2\_1.1, RFO3\_1.2\\ \hline
-	TRFO2 & RFO4\_1.3\\ \hline
-	TRFO3 & RFO5\_2\\ \hline
-	TRFO4 & RFO6\_3.1, RFO7\_3.1.1, RFO8\_3.3, RFO9\_3.4\\ \hline
-	TRFO5 & RFO10\_3.2, RFO11\_3.2, RFO12\_3.2.1, RFO13\_3.3, RFO14\_3.4\\ \hline
-	TRFO6 & RFO15\_4, RFO16\_4\\ \hline
-	TRFO7 & RFO17\_5, RFO18\_5.1\\ \hline
-	TRFO8 & RFO19\_6, RFO20\_6.1, RFO21\_6.2, RFO22\_6.3\\ \hline
-	TRFO9 & RFO23\_7, RFO24\_7.1, RFO25\_7.2, RFO26\_8\\ \hline
-	TRFO10 & RFO27\_9, RFO28\_9, RFO29\_9.1\\ \hline
-	TRFO11 & RFO31\_10\\ \hline
-	TRFO12 & RFO30\_10, RFO32\_10.1, RFO33\_10.1, RFO34\_10.1\\ \hline
-	TRFO13 & RFO35\_10.2, RFO36\_11, RFO37\_12\\ \hline
-	TRFO14 & RFO38\_13\\ \hline
-	TRFO15 & RFO39\_13\\ \hline
-	TRFO16 & RFO40\_13.1, RFO41\_13.2\\ \hline
-	TRFO17 & RFO42\_14, RFO43\_14, RFO44\_14, RFO45\_14\\ \hline
-	TRFO18 & RFO46\_15, RFO47\_15, RFO48\_15.1\\ \hline
-	TRFO19 & RFO49\_15, RFO50\_15\\ \hline
-	TRFO20 & RFO51\_16\\ \hline
-	TRFO21 & RFO52\_17\\ \hline
-	TRFO22 & RFO53\_18, RFO54\_18, RFO55\_18, RFO56\_18, RFO57\_18, RFO58\_18.1, RFO59\_18\\ \hline
-	TRFO23 & RFO60\_19, RFO61\_20, RFO62\_21\\ \hline
-	TRFO24 & RFO63\_22\\ \hline
-	TRFO25 & RFO64\\ \hline
-	TRFO26 & RFO65\\ \hline
-	TRFO27 & RFO66, RFO67\\ \hline
-	TRFO28 & RFO68\\ \hline
-	TRFO29 & RFO69, RFO70\\ \hline
-	TRFO30 & RFO71\\ \hline
-	TRFZ31 & RFZ72\\ \hline
+	TRFO1 & RFO1\_1\\ \hline
+	TRFO2 & RFO9\_4\\ \hline
+	TRFO3 & RFO11\_5\\ \hline
+	TRFO4 & RFO68\\ \hline
+	TRFO5 & RFO12\_6\\\hline
+	TRFO6 & RFO13\_7, RFO14\_7.1, RFO15\_7.2, RFO16\_7.3\\ \hline
+	TRFO7 & RFO20\_8, RFO21\_9, RFO22\_10\\ \hline
+	TRFO8 & RFO24, RFO25, RFO27\\ \hline
+	TRFO9 & RFO26\\ \hline
+	TRFO10 & RFO33\_14\\ \hline
+	TRFO11 & RFO29\_12, RFO30\_13, RFO34\_15, RFO35\_16\\ \hline
+	TRFO12 & RFO38\_17\\ \hline
+	TRFO13 & RFO38\_17\\ \hline
+	TRFO14 & RFO39\_17.1, RFO41\_17.2\\ \hline
+	TRFO16 & RFO70\_26, da RFO70\_26.1 a RFO70\_26.7, RFO62\_24, da RFO62\_24.1 a RFO62\_24.4   \\ \hline
+	TRFO17 & RFO67\_25\\ \hline
+	TRFO18 & RFO126\_43, da RFO126\_43.1 a RFO126\_43.2.2\\ \hline
+	TRFO19 & RFO85\_27, da RFO85\_27.1 a RFO85\_27.7, RFO102\_29\\ \hline
+	TRFO20 & RFO94\_28, da RFO94\_28.1 a RFO94\_28.7, RFO104\_31, RFO105\_32\\ \hline
 	\rowcolor{white}
 	\caption{Relazione tra test di sistema e requisiti.}\\
 \end{longtable}
