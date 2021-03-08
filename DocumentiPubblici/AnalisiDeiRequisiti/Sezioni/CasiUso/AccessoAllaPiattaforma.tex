@@ -3,9 +3,9 @@
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.6]{Immagini/DiagrammiUC/UC1.1Registrazione}
+	\includegraphics[scale=1]{Immagini/DiagrammiUC/Acquirente/Registrazione.png}
 	\caption{Diagramma di \actualUC: Registrazione}
-	\label{fig:RegistrazionePiattaforma}
+	\label{fig:registrazione}
 \end{figure}
 
 L'utente non autenticato che non dispone di credenziali può registrarsi e accedere come acquirente nella piattaforma compilando alcuni campi obbligatori per poter procedere.
@@ -42,6 +42,14 @@ L'utente non autenticato che non dispone di credenziali può registrarsi e acced
 
 \subUC{Inserimento dati per la registrazione}
 \label{registrazione.modulo}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.6]{Immagini/DiagrammiUC/Acquirente/InserimentoDatiRegistrazione.png}
+	\caption{Diagramma di \actualSubUC: Inserimento dati per la registrazione}
+	\label{fig:registrazione.modulo}
+\end{figure}
+
 L'utente compila il modulo per proseguire con la registrazione presso la piattaforma.
 \begin{itemize}
 	\item \textbf{Attori primari:} utente non autenticato;
@@ -178,9 +186,9 @@ L'utente non autenticato inserisce la conferma della password con la quale vuole
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.6]{Immagini/DiagrammiUC/AccessoVenditore.png}
+    \includegraphics[scale=1]{Immagini/DiagrammiUC/Acquirente/AutenticazioneVenditore.png}
     \caption{Diagramma di \actualUC: Autenticazione nella piattaforma con credenziali venditore} 
-    \label{fig:LoginVenditore}
+    \label{fig:autenticazione-venditore}
 \end{figure}
 
 L'utente non autenticato che dispone di credenziali venditore può accedere nella piattaforma usando l'e-mail e la password.
@@ -211,6 +219,13 @@ L'utente non autenticato che dispone di credenziali venditore può accedere nell
 
 \subUC{Inserimento dati per l'autenticazione}
 \label{autenticazione-venditore.modulo}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.8]{Immagini/DiagrammiUC/Acquirente/InserimentoDatiAutenticazione.png}
+	\caption{Diagramma di \actualSubUC: Inserimento dati per l'autenticazione}
+	\label{fig:autenticazione-venditore.modulo}
+\end{figure}
 
 L'utente compila il modulo per proseguire con l'autenticazione presso la piattaforma.
 \begin{itemize}
@@ -269,10 +284,10 @@ L'utente non autenticato inserisce la password collegata al proprio account.
 \label{autenticazione-acquirente}
 
 \begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.6]{Immagini/DiagrammiUC/AccessoAcquirente.png}
-	\caption{Diagramma di \actualUC: Autenticazione nella piattaforma con credenziali acquirente} 
-	\label{fig:LoginAcquirente}
+    \centering
+    \includegraphics[scale=1]{Immagini/DiagrammiUC/Acquirente/AutenticazioneAcquirente.png}
+    \caption{Diagramma di \actualUC: Autenticazione nella piattaforma con credenziali acquirente} 
+    \label{fig:autenticazione-acquirente}
 \end{figure}
 
 L'utente non autenticato che dispone di credenziali acquirente può accedere nella piattaforma usando l'e-mail e la password.
@@ -308,9 +323,9 @@ L'utente non autenticato che dispone di credenziali acquirente può accedere nel
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.2]{Immagini/DiagrammiUC/UC1.3PasswordDimenticata.png}
-    \caption{Diagramma di \actualUC: Password dimenticata}
-    \label{fig:PasswordDimenticata}
+    \includegraphics[scale=0.8]{Immagini/DiagrammiUC/Acquirente/PasswordDimenticata.png}
+    \caption{Diagramma di \actualUC: Password dimenticata} 
+    \label{fig:password-dimenticata}
 \end{figure}
 
 L'utente che dispone di credenziali si è dimenticato la propria password e la vuole cambiare.
@@ -430,6 +445,7 @@ L'utente non autenticato che dispone di credenziali si è dimenticato la propria
 L'utente autenticato decide di scollegarsi dalla piattaforma.
 \begin{itemize}
     \item \textbf{Attori primari:} utente autenticato;
+    \item \textbf{Attori secondari:} identity manager;
     \item \textbf{Precondizione:} l'utente ha eseguito il login precedentemente e vuole scollegarsi dalla piattaforma;
     \item \textbf{Postcondizione:} l'utente autenticato diventa un utente non autenticato;
     \item \textbf{Scenario principale:} l'utente autenticato decide di scollegarsi dalla piattaforma e compie l'azione di scollegamento.

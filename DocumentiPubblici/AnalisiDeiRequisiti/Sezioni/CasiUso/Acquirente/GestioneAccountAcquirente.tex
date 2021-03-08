@@ -3,6 +3,13 @@
 \UC{Modifica informazioni acquirente}
 \label{modifica-informazioni-acquirente}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.6]{Immagini/DiagrammiUC/Acquirente/ModificaInformazioniAcquirente.png}
+    \caption{Diagramma di \actualUC: Modifica informazioni acquirente}
+    \label{fig:modifica-informazioni-acquirente}
+\end{figure}
+
 L'acquirente può modificare le sue informazioni personali.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
@@ -129,7 +136,15 @@ L'acquirente modifica la propria e-mail.
 \subUC{Modifica della password dell'acquirente}
 \label{modifica-informazioni-acquirente.password}
 
-L'acquirente modifica la propria password.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.6]{Immagini/DiagrammiUC/Acquirente/ModificaPasswordAcquirente.png}
+    \caption{Diagramma di \actualSubUC: Modifica della password dell'acquirente}
+    \label{fig:modifica-informazioni-acquirente.password}
+\end{figure}
+
+L'acquirente vuole modificare la propria password.
+
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
     \item \textbf{Attori secondari:} identity manager;
@@ -142,14 +157,14 @@ L'acquirente modifica la propria password.
     \end{itemize}
     \item \textbf{Scenari alternativi:}
     \begin{enumerate}[label=\lett]
-    	\item L'acquirente non inserisce alcuna password e lascia i campi per l'inserimento della nuova password e della conferma della stessa vuoti. In questo caso non verrà modificata la password.
+        \item L'acquirente non modifica la password attuale e per questo non cambierà. 
     \end{enumerate}
 \end{itemize}
 
 \subSubUC{Inserimento password per la modifica delle informazioni personali dell'acquirente}
 \label{modifica-informazioni-acquirente.password.nuova-password}
 
-L'acquirente inserisce una nuova password.
+L'acquirente vuole modificare la propria password e inserisce una nuova password.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente;
     \item \textbf{Attori secondari:} identity manager;
@@ -158,14 +173,14 @@ L'acquirente inserisce una nuova password.
     \item \textbf{Scenario principale:} l'acquirente si trova nella schermata di modifica informazioni personali e vuole modificare la propria password. In questo caso l'acquirente si posiziona nel campo di inserimento vuoto della nuova password e la scrive;
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
-        \item L'acquirente inserisce la password e l'identity manager controlla il campo dati che risulta essere vuoto, in questo caso:
-		\begin{itemize}
-			\item (UC\ref{estensione:campo-obbligatorio-non-inserito}) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
-			\item Viene fornita all'utente la possibilità di inserire una password.
-		\end{itemize}
         \item L'acquirente inserisce una password che non rispetta i requisiti minimi di complessità e l'identity manager lo segnala. In questo caso:
         \begin{itemize}
             \item (UC\ref{estensione:password-non-valida}) - Verrà visualizzato il messaggio di errore password non rispetta i requisiti di complessità;
+            \item Verrà impedita la modifica delle informazioni.
+        \end{itemize}
+        \item L'acquirente elimina la propria password attuale, non ne inserisce una nuova e l'identity manager lo segnala. In questo caso:
+        \begin{itemize}
+            \item (UC\ref{estensione:campo-obbligatorio-non-inserito}) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito;
             \item Verrà impedita la modifica delle informazioni.
         \end{itemize}
     \end{enumerate}
@@ -187,14 +202,14 @@ L'acquirente vuole modificare la propria password e deve confermare quella nuova
     \end{itemize}
     \item \textbf{Estensioni:}
     \begin{enumerate}[label=\lett]
-        \item L'acquirente inserisce la password e l'identity manager controlla il campo dati che risulta essere vuoto, in questo caso:
-		\begin{itemize}
-			\item (UC\ref{estensione:campo-obbligatorio-non-inserito}) - Viene mostrato un messaggio d'errore campo dati obbligatorio non inserito;
-			\item Viene fornita all'utente la possibilità di inserire una password.
-		\end{itemize}
         \item L'acquirente inserisce una password che non rispetta i requisiti minimi di complessità e l'identity manager lo segnala. In questo caso:
         \begin{itemize}
             \item (UC\ref{estensione:password-non-valida}) - Verrà visualizzato il messaggio di errore password non rispetta i requisiti di complessità;
+            \item Verrà impedita la modifica delle informazioni.
+        \end{itemize}
+        \item L'acquirente elimina la conferma della propria password attuale, non ne inserisce una nuova e l'identity manager lo segnala. In questo caso:
+        \begin{itemize}
+            \item (UC\ref{estensione:campo-obbligatorio-non-inserito}) - Verrà visualizzato il messaggio di errore campo dati obbligatorio non inserito;
             \item Verrà impedita la modifica delle informazioni.
         \end{itemize}
     \end{enumerate}
