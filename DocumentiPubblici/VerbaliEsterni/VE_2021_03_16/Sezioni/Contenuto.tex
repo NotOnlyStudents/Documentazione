@@ -18,22 +18,25 @@
 
 \section{Ordine del giorno}
 \begin{enumerate}
-	\item Discutere riguardo la fase di progettazione della product baseline.
+	\item Chiedere degli accorgimenti riguardo l'implementazione delle API.
+	\item Organizzazione degli ambienti per il continuous deployment.
 \end{enumerate}
 
 \section{Resoconto}
-\subsection{Discutere riguardo la fase di progettazione della product Baseline}
-Il gruppo ha discusso insieme ai proponenti varie proposte per come sviluppare la fase di progettazione. In elenco i principali punti:
-\begin{enumerate}
-	\item Accorgimenti riguardo l'utlizzo delle \textit{A.P.I.};
-	\item Attenzione alla parametrizzazione su enviroment di alcune variabili che vengono utilizzate più volte come i nomi delle tabelle utilizzate da dynamoDB;
-	\item Attenzione alla \textit{separation of concerns} durante la progettazione cercando quindi di suddividere i servizi per domini e rendendo possibile la distribuzione di ognuno separatamente;
-	\item Ci è stato consigliato di studiare il funzionamento del \glo{\textit{Domain-driven design}}.
-\end{enumerate}
+\subsection{Chiedere degli accorgimenti riguardo l'implementazione delle API}
+Il gruppo ha discusso insieme ai proponenti varie proposte sull'implementazione delle API. Il consiglio più importante è stato lo studio del \glo{domain driven design}, prestando attenzione alla separation of concerns durante la progettazione, cercando quindi di suddividere i microservizi per domini e rendendo possibile la distribuzione singola di un microservizio o di un dominio intero. Inoltre, ci è stato detto di porre la nostra attenzione alla parametrizzazione di alcune variabili che vengono utilizzate più volte come i nomi delle tabelle.
+
+\subsection{Organizzazione degli ambienti per il continuous deployment}
+Essendo il continuous deployment una fase molto importante dello sviluppo di \NomeProgetto, si è discusso su come implementarlo e del significato dei vari ambienti che ci sono stati richiesti. I proponenti ci hanno esposto le loro esperienze ed è stato deciso di dare agli ambienti richiesti il seguente significato:
+\begin{itemize}
+	\item \glo{Locale}: ambiente privato il quale corrisponde allo sviluppo in locale nella propria macchina da lavoro;
+	\item \glo{Testing}: ambiente pubblico dove tutto ciò che è stato caricato nella repository e si trova nel branch develop viene sottoposto ai vari test opportuni;
+	\item \glo{Staging}: ambiente pubblico dove la prossima versione viene caricata per eseguire gli ultimi test e corrisponde a tutto ciò che si trova nel branch main;
+	\item \glo{Production}: ambiente ufficiale della piattaforma, dove viene caricata la nuova versione per renderla accessibile al pubblico. Corrisponde alla creazione di un nuovo tag nel branch main.
+\end{itemize}
 
 \section{Registro delle decisioni}
 \begin{itemize}
-	\item \textbf{VE\_\Data.1} Correggere quanto segnalato riguardo alle \textit{A.P.I.}; 
-	\item \textbf{VE\_\Data.2} Studio dettagliato del \textit{Domain-driven design}.
-	\item \textbf{VE\_\Data.3} Basare la progettazione sulla \textit{separation of concerns} e prestare attenzione a suddividere i domini
+	\item \textbf{VE\_\Data.1} Studio dettagliato del \glo{domain driven design}.
+	\item \textbf{VE\_\Data.2} Suddivisione degli ambienti come deciso e avere un approccio \glo{production-ready} durante lo sviluppo.
 \end{itemize}
