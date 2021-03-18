@@ -105,20 +105,6 @@
 }
 %%
 
-
-\newcommand{\fancyLeft}{
-\pagestyle{fancy}
-\fancyhf{} %eliminare le cose già presenti nella pagina (numero)
-\fancyfoot[C]{\thepage} % R=DESTRA L=SINISTRA C=CENTRO foot=pie di pagina
-\fancyhead[R]{Piano di Progetto}
-\fancyhead[L]{\includegraphics[scale=0.5]{\pathimg}} %head opposto pie
-\setlength{\headheight}{45pt}
-\renewcommand{\footrulewidth}{0.4pt}
-\raggedright
-}
-%%
-
-
 %%Separare i vari componenti della tabella
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
