@@ -1,7 +1,7 @@
 \appendix
 \section{Attualizzazione dei rischi}
 \label{attualizzazione_dei_rischi}
-In questa sezione viene esposto come il gruppo \Gruppo\ ha affrontato le varie problematiche incontrate durante lo svolgimento del progetto.
+In questa sezione viene esposto come il gruppo \Gruppo\ ha affrontato le varie problematiche incontrate durante lo svolgimento del progetto e quali rischi e soluzioni si aspetta di avere durante i vari periodi.
 \subsection{Rischi legati alle tecnologie}
 \begin{table} [H]
 	\centering
@@ -12,6 +12,8 @@ In questa sezione viene esposto come il gruppo \Gruppo\ ha affrontato le varie p
     Mitigazione & Alcuni membri del gruppo non sono ancora esperti nell'utilizzo di \glo{GitHub} e sono sorti dei leggeri problemi riguardanti la gestione del \glo{repository}. I membri più esperti nell'utilizzo dello strumento hanno dedicato un po' del loro tempo per aiutare i compagni ad imparare ad utilizzare al meglio il repository.\\ \hline
 	Periodo & Progettazione architetturale.\\ \hline
 	Mitigazione & Data la poca esperienza della maggior parte dei componenti del gruppo con le tecnologie da impiegare nello sviluppo del progetto, in particolar modo con \glo{Typescript} e \glo{AWS Lambda}, i membri più esperti nell'utilizzo di queste tecnologie hanno condiviso le loro esperienze con gli altri membri del gruppo. Abbiamo deciso inoltre di dedicare una settimana intera per l'approfondimento individuale.\\ \hline
+	Periodo & Progettazione di dettaglio e codifica.\\ \hline
+	Mitigazione & I componenti che si sono occupati maggiormente dello sviluppo del \glo{PoC} hanno dato supporto al resto dei membri che hanno presentato alcune difficoltà legate all'utilizzo delle tecnologie. Il gruppo ha riscontrato delle difficoltà nell'individuare l'architettura e i relativi \glo{design pattern}. Per risolvere i dubbi si sono effettuate diverse ricerche e i componenti si sono confrontati più volte tra loro. \\ \hline	
 	\end{tabular}
 	\caption{\label{tab:ART1}Attualizzazione dei rischi per inesperienza tecnologica.}
 \end{table}
@@ -20,11 +22,17 @@ In questa sezione viene esposto come il gruppo \Gruppo\ ha affrontato le varie p
 	\centering
     \begin{tabular}{|c|p{11.5cm}|}
     \rowcolor{darkblue} \hline
-    \multicolumn{2}{|c|}{\textcolor{white}{\textbf{RG3 - Inesperienza gestionale}}}\\ \hline
+    \multicolumn{2}{|c|}{\textcolor{white}{\textbf{RG1 - Inesperienza gestionale}}}\\ \hline
     Periodo & Analisi.\\ \hline
     Mitigazione & Data l'inesperienza del gruppo nel coordinare il lavoro e alcuni lievi problemi di comunicazione si è verificato un ritardo riguardante la stesura o la verifica. Il gruppo ha cercato di recuperare eventuali mancanze il prima possibile. Essendo in un periodo iniziale del progetto i brevi ritardi verificatosi non hanno causato problemi allo svolgimento del progetto.\\ \hline
+    Periodo & Progettazione architetturale.\\ \hline
+    Mitigazione & Il gruppo ha dovuto procedere ad una serie di ripianificazioni delle attività per recuperare dei ritardi dati da una errata pianificazione delle risorse.\\ \hline
+    Periodo & Progettazione di dettaglio e codifica.\\ \hline
+    Mitigazione & Per poter evitare di avere dei ritardi come nel precedente periodo, il gruppo ha innanzitutto ricontrollato e corretto la pianificazione delle attività. Durante il periodo si sono inserite più milestone per poter valutare meglio l'andamento del lavoro.  \\ \hline
+    Periodo & Validazione e collaudo.\\ \hline
+    Mitigazione & Il gruppo prima di iniziare con le attività controllerà attentamente quanto pianificato nella sezione \S\ref{validazione_e_collaudo}.\\ \hline
     \end{tabular}
-    \caption{\label{tab:ARG3}Analisi dei rischi per inesperienza nel coordinamento.}
+    \caption{\label{tab:ARG3}Analisi dei rischi per inesperienza gestionale.}
 \end{table}
 \begin{table}[H]
 	\centering
@@ -33,8 +41,12 @@ In questa sezione viene esposto come il gruppo \Gruppo\ ha affrontato le varie p
 	\multicolumn{2}{|c|}{\textcolor{white}{\textbf{RG2 - Disponibilità dei membri}}}\\ \hline
 	Periodo & Progettazione architetturale.\\ \hline
 	Mitigazione & La sessione d'esame si è svolta in contemporanea con il periodo di progettazione architetturale e questo ha impegnato notevolmente alcuni membri del gruppo. Per assicurare il procedere del progetto, le varie \glo{attività} sono state momentaneamente suddivise tra i membri con maggiori disponibilità.\\ \hline
+	Periodo & Progettazione di dettaglio e codifica.\\ \hline
+	Mitigazione & In questo periodo i membri del gruppo si sono preparati per poter sostenere il primo appello scritto dell'esame Ingegneria del software, per assicurare il corretto andamento del progetto si sono effettuati incontri più ravvicinati tra i membri che si occupavano dello stesso ambito.\\ \hline
+	Periodo & Validazione e collaudo.\\ \hline
+	Mitigazione & In questo periodo è prevista l'eventualità che alcuni dei membri inizino lo stage universitario, è importante seguire con attenzione le attività pianificate per questo ci sarà uno stretto controllo sull'andamento del lavoro assegnato a ciascun membro.\\ \hline
 	\end{tabular}
-	\caption{\label{tab:ARG2}Analisi dei rischi per inesperienza nel coordinamento.}
+	\caption{\label{tab:ARG2}Analisi dei rischi per disponibilità dei membri.}
 \end{table}
 \subsection{Rischi legati all'organizzazione del lavoro}
 \begin{table}[H]
@@ -44,19 +56,12 @@ In questa sezione viene esposto come il gruppo \Gruppo\ ha affrontato le varie p
 		\multicolumn{2}{|c|}{\textcolor{white}{\textbf{RO1 - Costi delle attività}}}\\ \hline
 		Periodo & Progettazione architetturale.\\ \hline
 		Mitigazione & Si ha avuto una visione ottimistica nell'apprendimento da parte di tutti i membri delle numerose tecnologie impiegate nello sviluppo del progetto e nella riorganizzazione dell'\AdR{} in seguito alla discussione sostenuta con \CR{}. Per cercare di ridurre al minimo il tempo perso nello svolgimento del progetto, le varie \glo{attività} sono state momentaneamente suddivise tra i membri con maggiori disponibilità e si è deciso di dedicare maggior attenzione alla comprensione delle tecnologie e alla ristrutturazione dei casi d'uso presenti all'interno dell'\AdR{}.\\ \hline
+		Periodo & Progettazione di dettaglio e codifica.\\ \hline
+		Mitigazione & Per evitare ritardi, il gruppo si è diviso per poter inizialmente lavorare parallelamente assegnando ad alcuni membri le attività di sviluppo del front end e ai restanti le attività di sviluppo del back end.\\ \hline
 	\end{tabular}
 	\caption{\label{tab:ARO1}Analisi dei rischi per costi delle attività.}
 \end{table}
-\begin{table}[H]
-	\centering
-	\begin{tabular}{|c|p{11.5cm}|}
-		\rowcolor{darkblue} \hline
-		\multicolumn{2}{|c|}{\textcolor{white}{\textbf{RG2 - Disponibilità dei membri}}}\\ \hline
-		Periodo & Progettazione architetturale.\\ \hline
-		Mitigazione & La sessione d'esame si è svolta in contemporanea con il periodo di progettazione architetturale e questo ha impegnato notevolmente alcuni membri del gruppo. Per assicurare il procedere del progetto, le varie \glo{attività} sono state momentaneamente suddivise tra i membri con maggiori disponibilità.\\ \hline
-	\end{tabular}
-	\caption{\label{tab:ARO2}Analisi dei rischi per inesperienza nel coordinamento.}
-\end{table}
+
 \subsection{Rischi legati ai requisiti}
 \begin{table}[H]
 	\centering
@@ -65,6 +70,8 @@ In questa sezione viene esposto come il gruppo \Gruppo\ ha affrontato le varie p
 		\multicolumn{2}{|c|}{\textcolor{white}{\textbf{RR1 - Analisi dei requisiti imperfetta}}}\\ \hline
 		Periodo & Progettazione architetturale.\\ \hline
 		Mitigazione & A seguito delle osservazioni fatte in seguito alla \textbf{Revisione dei requisiti}, il gruppo {\Gruppo} ha rivisto completamente l'\AdR\ risultata incompleta e con gravi errori di base. Si è provveduto a completare le mancanze segnalate con la massima priorità.\\ \hline
+		Periodo & Progettazione di dettaglio e codifica.\\ \hline
+		Mitigazione & A seguito delle osservazioni fatte con la \textbf{Revisione di progettazione}, è stato raggiunto un buon livello di dettaglio nel documento ma sono stati segnalati nuovi errori che il gruppo ha provveduto a correggere.\\ \hline
 	\end{tabular}
 	\caption{\label{tab:ARR1}Analisi dei rischi per analisi dei requisiti imperfetta.}
 \end{table}
