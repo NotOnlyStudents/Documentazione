@@ -181,30 +181,29 @@ L'utente non autenticato inserisce la conferma della password con la quale vuole
 	\end{enumerate} 
 \end{itemize}
 
-\UC{Autenticazione nella piattaforma con credenziali venditore}
-\label{autenticazione-venditore}
+\UC{Autenticazione nella piattaforma}
+\label{autenticazione-piattaforma}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=1]{Immagini/DiagrammiUC/AccessoAllaPiattaforma/AutenticazioneVenditore.png}
-    \caption{Diagramma di \actualUC: Autenticazione nella piattaforma con credenziali venditore} 
-    \label{fig:autenticazione-venditore}
+    \includegraphics[scale=1]{Immagini/DiagrammiUC/AccessoAllaPiattaforma/AutenticazionePiattaforma.png}
+    \caption{Diagramma di \actualUC: Autenticazione nella piattaforma} 
+    \label{fig:autenticazione-piattaforma}
 \end{figure}
 
-L'utente non autenticato che dispone di credenziali venditore può accedere nella piattaforma usando l'e-mail e la password.
+L'utente non autenticato che dispone di credenziali può accedere nella piattaforma usando l'e-mail e la password.
 \begin{itemize}
     \item \textbf{Attori primari:} utente non autenticato;
     \item \textbf{Attori secondari:} identity manager;
-    \item \textbf{Precondizione:} l'utente dispone di credenziali venditore;
-    \item \textbf{Postcondizione:} l'utente è autenticato come venditore e si trova sulla \glo{dashboard};
+    \item \textbf{Precondizione:} l'utente non autenticato dispone di credenziali;
+    \item \textbf{Postcondizione:} l'utente è autenticato come utente autenticato;
     \item \textbf{Scenario principale:}
     \begin{itemize}
     	\item L'utente accede al sistema;
     	\item L'utente non autenticato si trova nella schermata di login;
-    	\item (UC\ref{autenticazione-venditore.modulo}) - Inserimento dati per l'autenticazione;% Inserisce le credenziali per accedere alla piattaforma
+    	\item (UC\ref{autenticazione-piattaforma.modulo}) - Inserimento dati per l'autenticazione;% Inserisce le credenziali per accedere alla piattaforma
     	\item L'utente richiede l'autenticazione;
-    	\item L'utente è autenticato come venditore all'interno della piattaforma;
-    	\item L'utente viene portato alla dashboard.
+    	\item L'utente è autenticato come utente autenticato;
     \end{itemize}
 	\item \textbf{Estensioni:}
 	\begin{enumerate}[label=\lett]
@@ -218,13 +217,13 @@ L'utente non autenticato che dispone di credenziali venditore può accedere nell
 \end{itemize}
 
 \subUC{Inserimento dati per l'autenticazione}
-\label{autenticazione-venditore.modulo}
+\label{autenticazione-piattaforma.modulo}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.8]{Immagini/DiagrammiUC/AccessoAllaPiattaforma/InserimentoDatiAutenticazione.png}
 	\caption{Diagramma di \actualSubUC: Inserimento dati per l'autenticazione}
-	\label{fig:autenticazione-venditore.modulo}
+	\label{fig:autenticazione-piattaforma.modulo}
 \end{figure}
 
 L'utente compila il modulo per proseguire con l'autenticazione presso la piattaforma.
@@ -235,13 +234,13 @@ L'utente compila il modulo per proseguire con l'autenticazione presso la piattaf
 	\item \textbf{Postcondizione:} l'utente ha compilato il modulo e può procedere con l'autenticazione;
 	\item \textbf{Scenario principale:} l'utente non autenticato compila i campi nel seguente modo:
 	\begin{itemize}
-		\item (UC\ref{autenticazione-venditore.modulo.email}) - Inserimento indirizzo e-mail per l'autenticazione;
-		\item (UC\ref{autenticazione-venditore.modulo.password}) - Inserimento password per l'autenticazione.
+		\item (UC\ref{autenticazione-piattaforma.modulo.email}) - Inserimento indirizzo e-mail per l'autenticazione;
+		\item (UC\ref{autenticazione-piattaforma.modulo.password}) - Inserimento password per l'autenticazione.
 	\end{itemize}
 \end{itemize}
 
 \subSubUC{Inserimento indirizzo e-mail per l'autenticazione}
-\label{autenticazione-venditore.modulo.email}
+\label{autenticazione-piattaforma.modulo.email}
 
 L'utente non autenticato inserisce l'indirizzo e-mail collegato al proprio account.
 \begin{itemize}
@@ -261,7 +260,7 @@ L'utente non autenticato inserisce l'indirizzo e-mail collegato al proprio accou
 \end{itemize}
 
 \subSubUC{Inserimento password per l'autenticazione}
-\label{autenticazione-venditore.modulo.password}
+\label{autenticazione-piattaforma.modulo.password}
 
 L'utente non autenticato inserisce la password collegata al proprio account.
 \begin{itemize}
@@ -280,50 +279,12 @@ L'utente non autenticato inserisce la password collegata al proprio account.
 	\end{enumerate}
 \end{itemize}
 
-\UC{Autenticazione nella piattaforma con credenziali acquirente}
-\label{autenticazione-acquirente}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=1]{Immagini/DiagrammiUC/AccessoAllaPiattaforma/AutenticazioneAcquirente.png}
-    \caption{Diagramma di \actualUC: Autenticazione nella piattaforma con credenziali acquirente} 
-    \label{fig:autenticazione-acquirente}
-\end{figure}
-
-L'utente non autenticato che dispone di credenziali acquirente può accedere nella piattaforma usando l'e-mail e la password.
-\begin{itemize}
-	\item \textbf{Attori primari:} utente non autenticato;
-	\item \textbf{Attori secondari:} identity manager;
-	\item \textbf{Precondizione:} l'utente dispone di credenziali acquirente;
-	\item \textbf{Postcondizione:} l'utente è autenticato come acquirente e si trova nella schermata principale;
-	\item \textbf{Scenario principale:}
-	\begin{itemize}
-		\item L'utente accede al sistema;
-		\item L'utente non autenticato si trova nella schermata di login;
-		\item (UC\ref{autenticazione-venditore.modulo}) - Inserimento dati per l'autenticazione;% Inserisce le credenziali per accedere alla piattaforma
-		\item L'utente richiede l'autenticazione;
-		\item L'utente è autenticato come acquirente all'interno del sistema;
-		\item L'utente viene portato alla schermata principale della piattaforma.
-	\end{itemize}
-	\item \textbf{Estensioni:}
-	\begin{enumerate}[label=\lett]
-		\item L'utente compila i campi dati con delle credenziali, richiede l'autenticazione e l'identity manager segnala che le credenziali fornite non appartengono alla piattaforma
-		\begin{itemize}
-			\item L'utente non viene autenticato presso il sistema;
-			\item (UC\ref{estensione:credenziali-non-presenti}) - Viene visualizzato un messaggio di errore credenziali non presenti nella piattaforma;
-			\item Viene fornita all'utente la possibilità di modificare i valori inseriti nel modulo di autenticazione.
-		\end{itemize}
-	\end{enumerate} 
-\end{itemize}
-
-%Inserimento dati per l'autenticazione, inserimento indirizzo e-mail per l'autenticazione e inserimento password per l'autenticazione sono in comune
-
 \UC{Password dimenticata}
 \label{password-dimenticata}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{Immagini/DiagrammiUC/AccessoAllaPiattaforma/PasswordDimenticata.png}
+    \includegraphics[scale=0.72]{Immagini/DiagrammiUC/AccessoAllaPiattaforma/PasswordDimenticata.png}
     \caption{Diagramma di \actualUC: Password dimenticata} 
     \label{fig:password-dimenticata}
 \end{figure}
