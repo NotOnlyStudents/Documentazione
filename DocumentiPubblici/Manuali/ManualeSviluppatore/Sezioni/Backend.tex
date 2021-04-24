@@ -1,6 +1,5 @@
 \section{Backend}
-
-\subsection{Descrizione generale}
+\subsection{Descrizione generale}\label{beDescrizione}
 Le funzionalità previste dalla piattaforma hanno permesso di individuare i seguenti domini:
 \begin{itemize}
 	\item \textbf{Products;}
@@ -21,14 +20,14 @@ I domini sono stati uniti riflettendo sulle loro interdipendenze al fine di indi
 \end{itemize}
 Lo sviluppo di singoli servizi permette una maggiore possibilità di sviluppo in parallelo dei singoli domini grazie alla loro struttura e all'agilità degli aggiornamenti e la possibilità di gestire i dati in modo decentralizzato.
 
-\subsection{Struttura dei microservizi}
+\subsection{Struttura dei microservizi}\label{StrutturaMicroservizi}
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.4]{Immagini/Backend/layer.png}
 	\caption{layered architecture}
 	\label{fig:layer}
 \end{figure}
-La struttura di ogni singolo servizio si basa su una Layered Architecture dove i componenti sono organizzati in vari strati che comunicano tra loro, il principale vantaggio è che risulta molto più semplice procedere ai test attraverso mock. \\
+La struttura di ogni singolo servizio si basa su una Layered Architecture dove i componenti sono organizzati in vari strati che comunicano tra loro, il principale vantaggio è che risulta molto più semplice procedere ai test attraverso \glo{mock}. \\
 Andando ad analizzare il singolo microservizio abbiamo:
 \begin{center}
 	\begin{minipage}{0.3\textwidth}
@@ -60,6 +59,7 @@ Andando ad analizzare il singolo microservizio abbiamo:
 	\caption{Products-categories service}
 	\label{fig:ProductCategories}
 \end{figure}
+Il microservizio Products-categories fornisce le principali funzionalità per gestire i prodotti e le categorie alle quali vengono assegnati per le funzioni di ricerca. Sono esempi di funzioni usufruibili dall'utente l'inserimento di uno nuovo prodotto, l'eliminazione di un prodotto già presente nella piattaforma o la modifica delle sue specifiche, l'inserimento di una nuova categoria per la classificazione dei vari prodotti in vendita. Oltre all'utilizzo come per i successivi microservizi di AWS API Gateway, AWS Lambda e AWS DynamoDB viene impiegato Amazon S3 bucket per gestire le immagini associate ad un prodotto e Amazon SNS e SQS permettono il controllo della modifica/eliminazione di un prodotto assicurando la corretta validità della quantità disponibile dello stesso.
 
 \subsubsection{Payments-orders service}
 \begin{figure}[H]
@@ -68,6 +68,7 @@ Andando ad analizzare il singolo microservizio abbiamo:
 	\caption{Payments-orders service}
 	\label{fig:Payment-orders}
 \end{figure}
+Il microservizio Payments-orders fornisce le principali funzionalità per gestire il pagamento di un ordine e garantire l'effettivo passaggio da ordine a ordine effettuato. Anche in questo microservizio viene utilizzato Amazon SNS per assicurare il corretto risultato del pagamento, gestito dal servizio esterno Stripe.
 
 \subsubsection{Carts service}
 \begin{figure}[H]
@@ -76,6 +77,7 @@ Andando ad analizzare il singolo microservizio abbiamo:
 	\caption{Carts service}
 	\label{fig:Cart}
 \end{figure}
+Il microservizio Carts fornisce le principali funzionalità per gestire il carrello dell'utente assicurando che eventuali modifiche fatte sui suoi prodotti esternamente, ad esempio il venditore modifica il prezzo di un prodotto, si riflettano anche all'interno dei carrelli degli utenti attraverso l'utilizzo di Amazon SNS e SQS.
 
 \subsubsection{Addresses service}
 \begin{figure}[H]
@@ -84,6 +86,8 @@ Andando ad analizzare il singolo microservizio abbiamo:
 	\caption{Addresses service}
 	\label{fig:Adresses}
 \end{figure}
+Il microservizio Addresses fornisce le principali funzionalità per gestire gli indirizzi di spedizione di un utente come l'aggiunta o la rimozione di un indirizzo. In questo microservizio entrano in gioco solo AWS API Gateway, AWS Lambda e AWS DynamoDB.
+
 \subsubsection{Users service}
 \begin{figure}[H]
 	\centering
@@ -91,23 +95,20 @@ Andando ad analizzare il singolo microservizio abbiamo:
 	\caption{Users service}
 	\label{fig:Users}
 \end{figure} 
+Il microservizio Users fornisce le principali funzionalità per gestire la registrazione e l'autenticazione di un utente alla piattaforma attraverso l'utilizzo di AWS Cognito.
 
-\subsection{Struttura del backend}
+\subsection{Struttura del backend}\label{Strutturabe}
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.4]{Immagini/Backend/AWSArchitecture.png}
 	\caption{Architettura backend}
 	\label{fig:backend}
 \end{figure}
-Per slegare i \glo{microservizi} tra di loro vengono utilizzate due strategie. La prima consiste nel gestire le chiamate asincrone attraverso SNS il servizio che fa da event broker su AWS, eliminando così lo sviluppo di integrazioni tra microservizi e limitandosi a quelle per il message broker.
+Per slegare i microservizi tra di loro vengono utilizzate due strategie. La prima consiste nel gestire le chiamate asincrone attraverso SNS il servizio che fa da \glo{event broker} su AWS, eliminando così lo sviluppo di integrazioni tra microservizi e limitandosi a quelle per il \glo{message broker}.
 La seconda invece è pensata per eliminare le chiamate sincrone tra microservizi, come quelle di validazione. Per far ciò si utilizza la firma digitale legata a un microservizio per verificare l'integrità delle richieste del client, sostituendo così le varie integrazioni necessarie a un semplice check attraverso la chiave pubblica del microservizio.
 
-\subsubsection{Diagrammi di sequenza}
-Di seguito sono riportati due diagrammi di sequenza per due principali operazioni:
-\begin{itemize}
-	\item l'acquisto di un carrello;
-	\item la ricezione di un evento tramite Stripe Hooks.
-\end{itemize}
+\subsection{Diagrammi di sequenza}\label{Diagrammiseq}
+Di seguito sono riportati i diagrammi di sequenza per descrivere il funzionamento delle varie operazioni dei microservizi:
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.5]{Immagini/Backend/Diagrammiseq.png}

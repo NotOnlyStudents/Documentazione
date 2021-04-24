@@ -1,6 +1,6 @@
-\section{Setup della piattaforma}
+\section{Setup della piattaforma}\label{Setup}
 \subsection{Requisiti minimi}
-Per il deploy della piattaforma \NomeProgetto è necessario disporre di un account AWS valido per ottenere le credenziali da includere nella configurazione del profilo del framework serverless.
+Per il deploy della piattaforma \NomeProgetto\ è necessario disporre di un account AWS valido per ottenere le credenziali da includere nella configurazione del profilo del framework serverless.
 Il sistema dove verrà effettuato il deploy deve avere installato:
 \begin{itemize}
 	\item Npm;
@@ -16,9 +16,12 @@ Di seguito sono riportati i sistemi operativi e i browser che supportano la piat
 \subsection{Deploy}
 Per il deploy della piattaforma, seguire i seguenti passi:
 \begin{itemize}
-	\item Aprire una CLI e posizionarsi nella cartella dove sono contenuti i file;
+	\item Aprire una \glo{CLI} e posizionarsi nella cartella dove sono contenuti i file;
 	\item Installare le dipendenze usando il comando \textbf{npm install};
 	\item Creare una nuova applicazione serverless lanciando il comando \textbf{serverless};
-	\item Iniziare il deploy della piattaforma \NomeProgetto lanciando il comando \textbf{serverless deploy}.
-	
+	\item Iniziare il deploy della piattaforma \NomeProgetto\ lanciando il comando \textbf{serverless deploy}.
 \end{itemize}
+
+\subsection{Test}
+L'analisi statica del codice redatto viene effettuata dal linter EsLint.\\
+Per i test di unità è stato impiegato il framework Jest.js.
