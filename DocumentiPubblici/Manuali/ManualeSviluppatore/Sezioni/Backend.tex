@@ -108,10 +108,34 @@ Per slegare i microservizi tra di loro vengono utilizzate due strategie. La prim
 La seconda invece è pensata per eliminare le chiamate sincrone tra microservizi, come quelle di validazione. Per far ciò si utilizza la firma digitale legata a un microservizio per verificare l'integrità delle richieste del client, sostituendo così le varie integrazioni necessarie a un semplice check attraverso la chiave pubblica del microservizio.
 
 \subsection{Diagrammi di sequenza}\label{Diagrammiseq}
-Di seguito sono riportati i diagrammi di sequenza per descrivere il funzionamento delle varie operazioni dei microservizi:
+Di seguito sono riportati i diagrammi di sequenza per descrivere alcune delle principali operazioni effettuabili all'interno della piattaforma:
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.5]{Immagini/Backend/Diagrammiseq.png}
-	\caption{Diagrammi di sequenza}
+	\caption{Nuovo ordine e pagamento dello stesso}
 	\label{fig:Diagrammiseq}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{Immagini/Backend/AggiuntaProdottoAlCarrello.png}
+	\caption{Aggiunta di un prodotto al carrello}
+	\label{fig:DiagrammaCarrello}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{Immagini/Backend/CreazioneProdotto.png}
+	\caption{Creazione di un nuovo prodotto nella piattaforma}
+	\label{fig:DiagrammaCreazioneProdotto}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{Immagini/Backend/EliminazioneProdotto.png}
+	\caption{Eliminazione di un prodotto dalla piattaforma}
+	\label{fig:DiagrammiEliminazioneProdotto}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{Immagini/Backend/ModificaIndirizzo.png}
+	\caption{Modifica di un indirizzo di spedizione}
+	\label{fig:DiagrammaModificaindirizzo}
 \end{figure}
