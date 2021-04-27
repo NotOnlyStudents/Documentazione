@@ -1,9 +1,29 @@
+\newpage
 \section{Frontend}
 \subsection{Descrizione generale}
-L'unico punto di collegamento tra i \glo{microservizi} del backend e il frontend avviene tramite \glo{API}, redatte utilizzando SwaggerHub.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{Immagini/DiagrammaDeiPackage.png}
+	\includegraphics[scale=0.6]{Immagini/Frontend/DiagrammadeiPackage.png}
 	\caption{Diagramma dei package}
 	\label{fig:fe-packages}
 \end{figure}
+Il diagramma rappresenta le dipendenze tra le classi che individuano i \glo{microservizi}. Il package interfaces contiene tutti i tipi che verranno utilizzati dal frontend. La classe HTTPRequest è stata implementata per centralizzare le chiamate Http e permettere il controllo dei tipi, consiste in wrapper della libreria nativa fetch andando a ridefinire i metodi GET/POST/FETCH/DELETE/PUT/PATCH. Ottiene la variabile d'ambiente contenente l'url del server dal file di configurazione relativo di dotenv, dal costruttore gli verrà passato l'url alla specifica \glo{API} il quale verrà aggiunto all'url precedente e su questo sarà possibile invocare i metodi precedentemente dichiarati.
+Il package services rappresenta l'unico punto di collegamento tra i \glo{microservizi} del backend e il frontend, tramite \glo{API} redatte utilizzando SwaggerHub, i vari servizi al suo interno andranno a invocare l'HTTPRequest per comunicare con il backend attraverso i metodi definiti.
+I microservizi individuati e utilizzati per il frontend sono:
+\begin{itemize}
+	\item Product;
+	\item Address;
+	\item Categories;
+	\item Orders;
+	\item Carts.
+\end{itemize}
+\subsubsection{Esempio di funzionamento}
+Di seguito si riporta il diagramma delle classi relativo al funzionamento del microservizio Product. Come si può vedere è presente un'interfaccia ProductService che viene implementata dalla classe ProductServiceFetch e ogni suo metodo istanzia un oggetto HTTPRequest per l'API di interesse. È possibile implementare l'interfaccia ProductService diversamente rispetto a quanto rappresentato senza necessità di modificare il codice utilizzatore, attraverso la modifica della variabile d'ambiente NEXT\_PUBLIC\_SERVICE\_METHOD sarà possibile scegliere quale implementazione utilizzare altrimenti verrà di default selezionata l'implementazione ProductServiceFetch. 
+Per poter procedere con lo sviluppo della parte dei prodotti del frontend parallelamente con il backend, lo sviluppatore ha disposizione la classe ProductServiceMock la quale ritornerà i dati predefiniti senza dover richiamare il server, basterà impostare la variabile NEXT\_PUBLIC\_SERVICE\_METHOD="mock".
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{Immagini/Frontend/ProductService.png}
+	\caption{Microservizio Product}
+	\label{fig:fe-productservice}
+\end{figure}
+
