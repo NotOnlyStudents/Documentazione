@@ -108,19 +108,8 @@ Per slegare i microservizi tra di loro vengono utilizzate due strategie. La prim
 La seconda invece è pensata per eliminare le chiamate sincrone tra microservizi, come quelle di validazione. Per far ciò si utilizza la firma digitale legata a un microservizio per verificare l'integrità delle richieste del client, sostituendo così le varie integrazioni necessarie a un semplice check attraverso la chiave pubblica del microservizio.
 
 \subsection{Diagrammi di sequenza}\label{Diagrammiseq}
-Di seguito sono riportati i diagrammi di sequenza per descrivere alcune delle principali operazioni effettuabili all'interno della piattaforma:
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.5]{Immagini/Backend/Diagrammiseq.png}
-	\caption{Nuovo ordine e pagamento dello stesso}
-	\label{fig:Diagrammiseq}
-\end{figure}
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.5]{Immagini/Backend/AggiuntaProdottoAlCarrello.png}
-	\caption{Aggiunta di un prodotto al carrello}
-	\label{fig:DiagrammaCarrello}
-\end{figure}
+Di seguito sono riportati i diagrammi di sequenza per descrivere alcune delle principali operazioni effettuabili all'interno della piattaforma.
+\subsubsection{Creazione ed eliminazione di un prodotto effettuata dal venditore}
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.5]{Immagini/Backend/CreazioneProdotto.png}
@@ -129,13 +118,34 @@ Di seguito sono riportati i diagrammi di sequenza per descrivere alcune delle pr
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.5]{Immagini/Backend/EliminazioneProdotto.png}
+	\includegraphics[scale=0.47]{Immagini/Backend/EliminazioneProdotto.png}
 	\caption{Eliminazione di un prodotto dalla piattaforma}
 	\label{fig:DiagrammiEliminazioneProdotto}
 \end{figure}
+I diagrammi rappresentano rispettivamente la creazione e l'eliminazione di un prodotto dalla piattaforma, in queste operazioni è necessario prevedere la gestione del salvataggio delle eventuali immagini associate ai prodotti tramite Amazon S3 bucket.
+\subsubsection{Aggiunta di un prodotto al carrello}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{Immagini/Backend/AggiuntaProdottoAlCarrello.png}
+	\caption{Aggiunta di un prodotto al carrello}
+	\label{fig:DiagrammaCarrello}
+\end{figure}
+Il diagramma rappresenta l'interazione delle tecnologie quando l'utente aggiunge un nuovo prodotto al carrello, in questo caso occorre modificare lo stato del carrello.
+\subsubsection{Modifica di un indirizzo di spedizione}
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.5]{Immagini/Backend/ModificaIndirizzo.png}
 	\caption{Modifica di un indirizzo di spedizione}
 	\label{fig:DiagrammaModificaindirizzo}
 \end{figure}
+All'interno della piattaforma l'acquirente può aggiungere, eliminare o modificare gli indirizzi di spedizione inseriti, il diagramma rappresenta la collaborazione delle tecnologie per effettuare quest'ultima operazione.
+\subsubsection{Pagamento e creazione di un ordine}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{Immagini/Backend/Diagrammiseq.png}
+	\caption{Nuovo ordine e pagamento dello stesso}
+	\label{fig:Diagrammiseq}
+\end{figure}
+I precedenti diagrammi rappresentano le tecnologie che entrano in gioco quando l'acquirente della piattaforma effettua un pagamento e, se questo è andato a buon fine, di conseguenza quanto inserito all'interno del carrello verrà trasformato in un'ordine effettuato e di conseguenza visualizzabile dall'utente all'interno dell'elenco degli ordini effettuati.
+
+

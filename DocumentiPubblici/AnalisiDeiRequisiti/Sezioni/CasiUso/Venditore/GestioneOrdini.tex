@@ -8,7 +8,7 @@ Il venditore vuole vedere gli ordini chiusi o da gestire.
     \item \textbf{Postcondizione:} il venditore vede tutti gli ordini a suo carico in ordine cronologico decrescente;
     \item \textbf{Scenario principale:} il venditore vuole vedere tutti gli ordini a suo carico da gestire o già chiusi ed accede alla schermata di riepilogo ordini. Il venditore seleziona la funzionalità per accedere all'elenco degli ordini effettuati sulla piattaforma e visualizza l'elenco degli ordini ricevuti sulla piattaforma, dove è indicato per ogni ordine:
     \begin{itemize}
-    	\item Il codice numerico dell'ordine;
+    	\item Il codice dell'ordine;
     	\item Lo stato dell'ordine;
     	\item Il prezzo totale che è stato pagato;
     	\item L'indirizzo a cui è stato consegnato o verrà consegnato;
@@ -54,6 +54,14 @@ Il venditore può cercare un ordine dalla propria schermata di riepilogo ordini.
 	\begin{enumerate}[label=\lett]
 		\item Il venditore ha svolto una ricerca che non ha trovato coincidenze con nessun ordine ricevuto. In questo caso la schermata di riepilogo ordini viene aggiornata mostrando il messaggio nessun ordine trovato.
 	\end{enumerate}
+ \item \textbf{Estensioni:}
+\begin{enumerate}[label=\lett]
+	\item Il venditore inserisce un codice che non rispetta il formato standard uuid v4. In questo caso:
+	\begin{itemize}
+		\item (UC\ref{estensione:codice-ordine-non-valido}) - Verrà visualizzato il messaggio d'errore codice dell'ordine non valido;
+		\item Non verrà eseguita la ricerca.
+	\end{itemize}
+\end{enumerate}
 \end{itemize}
 
 \UC{Ricerca di un ordine per cliente}

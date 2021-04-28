@@ -115,12 +115,12 @@ Visualizzazione messaggio di errore che segnala all'attore l'inserimento di una 
 \UC{Visualizzazione messaggio d'errore codice dell'ordine non valido}
 \label{estensione:codice-ordine-non-valido}
 
-Visualizzazione messaggio di errore che segnala all'attore l'inserimento di caratteri non numerici nel codice per cui cercare.
+Visualizzazione messaggio di errore che segnala all'attore l'inserimento di un codice che non rispetta il formato standard uuid v4.
 \begin{itemize}
     \item \textbf{Attori primari:} acquirente o venditore;
-    \item \textbf{Precondizione:} l'attore ha inserito dei caratteri non numerici nel codice per cui cercare l'ordine;
+    \item \textbf{Precondizione:} l'attore ha inserito un codice non conforme rispetto al formato uuid v4;
     \item \textbf{Postcondizione:} all'attore verrà mostrato un messaggio il quale lo informa dell'inserimento di un codice non valido;
-    \item \textbf{Scenario principale:} l'attore ha inserito dei caratteri non numerici nel codice per cui cercare e viene informato dell'errore commesso.
+    \item \textbf{Scenario principale:} l'attore ha inserito un codice non corretto rispetto al formato uuid v4 previsto e viene informato dell'errore commesso.
 \end{itemize}
 
 \UC{Visualizzazione messaggio d'errore data iniziale maggiore di quella finale}
