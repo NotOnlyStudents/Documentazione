@@ -22,7 +22,7 @@
 
 \newcommand{\TechnologyVersionLink}[2]{
   \begin{itemize}
-    \item \textbf{Versione utilizzata:} #1
-    \ifthenelse{\equal{#2}{}}{}{\item \textbf{Link:} \href{#2}{#2}}
+    \item \textbf{Versione utilizzata:} #1\ifthenelse{\equal{#2}{}}{.}{;}
+    \ifthenelse{\equal{#2}{}}{}{\item \textbf{Link:} \href{#2}{#2}.}
   \end{itemize}
 }
