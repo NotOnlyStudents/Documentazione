@@ -27,7 +27,7 @@ Lo sviluppo di singoli servizi permette una maggiore possibilità di sviluppo in
 	\caption{Layered architecture}
 	\label{fig:layer}
 \end{figure}
-La struttura di ogni singolo servizio si basa su una Layered Architecture dove i componenti sono organizzati in vari strati che comunicano tra loro, il principale vantaggio è che risulta molto più semplice procedere ai test attraverso \glo{mock}. \\
+La struttura di ogni singolo servizio si basa su una \textbf{layered architecture} dove i componenti sono organizzati in vari strati che comunicano tra loro, il principale vantaggio è che risulta molto più semplice procedere ai test attraverso \glo{mock}.\\
 Andando ad analizzare il singolo microservizio abbiamo:
 \begin{center}
 	\begin{minipage}{0.3\textwidth}
@@ -59,7 +59,14 @@ Andando ad analizzare il singolo microservizio abbiamo:
 	\caption{Products-categories service}
 	\label{fig:ProductCategories}
 \end{figure}
-Il microservizio Products-categories fornisce le principali funzionalità per gestire i prodotti e le categorie alle quali vengono assegnati per le funzioni di ricerca. Sono esempi di funzioni usufruibili dall'utente l'inserimento di uno nuovo prodotto, l'eliminazione di un prodotto già presente nella piattaforma o la modifica delle sue specifiche, l'inserimento di una nuova categoria per la classificazione dei vari prodotti in vendita. Oltre all'utilizzo come per i successivi microservizi di AWS API Gateway, AWS Lambda e AWS DynamoDB viene impiegato Amazon S3 bucket per gestire le immagini associate ad un prodotto e Amazon SNS e SQS permettono il controllo della modifica/eliminazione di un prodotto assicurando la corretta validità della quantità disponibile dello stesso.
+Il microservizio \textbf{products-categories} fornisce le principali funzionalità per gestire i prodotti e le categorie alle quali vengono assegnati per le funzioni di ricerca. Sono esempi di funzioni usufruibili dall'utente:
+\begin{itemize}
+	\item Inserimento di un nuovo prodotto;
+	\item Eliminazione di un prodotto già presente nella piattaforma;
+	\item Modifica delle specifiche di un prodotto;
+	\item Inserimento di una nuova categoria per la classificazione dei vari prodotti in vendita.
+\end{itemize}\noindent
+Oltre all'utilizzo come per i successivi microservizi di AWS API Gateway, AWS Lambda e AWS DynamoDB viene impiegato Amazon S3 bucket per gestire le immagini associate ad un prodotto e Amazon SNS e SQS permettono il controllo della modifica/eliminazione di un prodotto assicurando la corretta validità della quantità disponibile dello stesso.
 
 \subsubsection{Payments-orders service}
 \begin{figure}[H]
@@ -68,7 +75,7 @@ Il microservizio Products-categories fornisce le principali funzionalità per ge
 	\caption{Payments-orders service}
 	\label{fig:Payment-orders}
 \end{figure}
-Il microservizio Payments-orders fornisce le principali funzionalità per gestire il pagamento di un ordine e garantire l'effettivo passaggio da ordine a ordine effettuato. Anche in questo microservizio viene utilizzato Amazon SNS per assicurare il corretto risultato del pagamento, gestito dal servizio esterno Stripe.
+Il microservizio \textbf{payments-orders} fornisce le principali funzionalità per gestire il pagamento di un ordine e garantire la storicizzazione degli ordini effettuati. Anche in questo microservizio viene utilizzato Amazon SNS per assicurare il corretto risultato del pagamento, gestito dal servizio esterno Stripe.
 
 \subsubsection{Carts service}
 \begin{figure}[H]
@@ -77,7 +84,7 @@ Il microservizio Payments-orders fornisce le principali funzionalità per gestir
 	\caption{Carts service}
 	\label{fig:Cart}
 \end{figure}
-Il microservizio Carts fornisce le principali funzionalità per gestire il carrello dell'utente assicurando che eventuali modifiche fatte sui suoi prodotti esternamente, ad esempio il venditore modifica il prezzo di un prodotto, si riflettano anche all'interno dei carrelli degli utenti attraverso l'utilizzo di Amazon SNS e SQS.
+Il microservizio \textbf{carts} fornisce le principali funzionalità per gestire il carrello dell'utente assicurando che eventuali modifiche fatte sui suoi prodotti esternamente, ad esempio il venditore modifica il prezzo di un prodotto, si riflettano anche all'interno dei carrelli degli utenti attraverso l'utilizzo di Amazon SNS e SQS.
 
 \subsubsection{Addresses service}
 \begin{figure}[H]
@@ -86,7 +93,7 @@ Il microservizio Carts fornisce le principali funzionalità per gestire il carre
 	\caption{Addresses service}
 	\label{fig:Adresses}
 \end{figure}
-Il microservizio Addresses fornisce le principali funzionalità per gestire gli indirizzi di spedizione di un utente come l'aggiunta o la rimozione di un indirizzo. In questo microservizio entrano in gioco solo AWS API Gateway, AWS Lambda e AWS DynamoDB.
+Il microservizio \textbf{addresses} fornisce le principali funzionalità per gestire gli indirizzi di spedizione di un utente come l'aggiunta o la rimozione di un indirizzo. In questo microservizio entrano in gioco solo AWS API Gateway, AWS Lambda e AWS DynamoDB.
 
 \subsubsection{Users service}
 \begin{figure}[H]
@@ -95,7 +102,7 @@ Il microservizio Addresses fornisce le principali funzionalità per gestire gli 
 	\caption{Users service}
 	\label{fig:Users}
 \end{figure} 
-Il microservizio Users fornisce le principali funzionalità per gestire la registrazione e l'autenticazione di un utente alla piattaforma attraverso l'utilizzo di AWS Cognito.
+Il microservizio \textbf{users} fornisce le principali funzionalità per gestire la registrazione e l'autenticazione di un utente alla piattaforma attraverso l'utilizzo di AWS Cognito.
 
 \subsection{Struttura del backend}\label{Strutturabe}
 \begin{figure}[H]
@@ -147,5 +154,3 @@ All'interno della piattaforma l'acquirente può aggiungere, eliminare o modifica
 	\label{fig:Diagrammiseq}
 \end{figure}
 I precedenti diagrammi rappresentano le tecnologie che entrano in gioco quando l'acquirente della piattaforma effettua un pagamento e, se questo è andato a buon fine, di conseguenza quanto inserito all'interno del carrello verrà trasformato in un'ordine effettuato e di conseguenza visualizzabile dall'utente all'interno dell'elenco degli ordini effettuati.
-
-

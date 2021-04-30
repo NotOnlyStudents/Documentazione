@@ -1,47 +1,69 @@
 \section{Tecnologie, framework e librerie impiegate}\label{Tecnologie}
-Di seguito vengono descritte tecnologie, framework e servizi di terze parti utilizzati per il progetto.
-\subsection{Swagger}
-Swagger è un linguaggio di descrizione dell'interfaccia per descrivere le \glo{API} \glo{RESTful} espresse utilizzando \glo{JSON}. Swagger viene utilizzato insieme a una serie di strumenti software open source per progettare, creare, documentare e utilizzare i servizi Web RESTful.
-\subsection{AWS Cognito}
-AWS Cognito permette di gestire autenticazione, autorizzazione e gestione degli utenti per le applicazioni Web e mobili. Gli utenti possono accedere direttamente con un nome utente e una password, oppure tramite terze parti, ad esempio Facebook, Amazon, Google o Apple.
-I due componenti principali di Amazon Cognito da utilizzare separatamente o insieme sono i pool di utenti, directory utente che forniscono opzioni di registrazione e di accesso, e i pool di identità che consentono di concedere agli utenti l'accesso ad altri servizi AWS.
-\subsection{AWS DynamoDB} 
-Amazon DynamoDB è un database \glo{NoSQL} che consente agli sviluppatori di scaricare gli oneri legati al funzionamento e al ridimensionamento di un database distribuito in modo da non doversi preoccupare del provisioning, dell'installazione e della configurazione dell'hardware, della replica, delle patch del software o del ridimensionamento del cluster eliminando il carico operativo e la complessità coinvolti nella protezione dei dati sensibili. 
-
-\subsection{AWS API Gateway}
-Amazon API Gateway semplifica per gli sviluppatori la creazione, la pubblicazione, la manutenzione, il monitoraggio e la protezione delle API RESTful su qualsiasi scala. Le API fungono da “porta di entrata” per consentire l’accesso delle applicazioni ai dati, alla logica aziendale o alle funzionalità dai servizi back-end. 
-API Gateway gestisce tutte le attività di accettazione ed elaborazione relative alle chiamate API simultanee, inclusi gestione del traffico, controllo di accessi e autorizzazioni, monitoraggio e gestione delle versioni delle API. 
-
-\subsection{AWS Lambda}
-AWS Lambda è un servizio di elaborazione serverless che permette di eseguire il codice senza effettuare il provisioning o gestire i server, creare una logica di dimensionamento dei cluster in funzione dei carichi di lavoro, mantenere integrazioni degli eventi o gestire i runtime. Con Lambda è possibile eseguire codice per qualsiasi tipo di applicazione o servizio di back-end, senza alcuna amministrazione.  È possibile scrivere le funzioni Lambda nel linguaggio preferiro (Node.js, Python, Go, Java e altri ancora) e utilizzare strumenti per creare, testare e distribuire le funzioni.
-
-\subsection{Amazon S3 Bucket}
-È un servizio di storage di oggetti che offre scalabilità, disponibilità dei dati, sicurezza e prestazioni all'avanguardia nel settore offrendo caratteristiche di gestione semplici da utilizzare che consentono di organizzare i dati e di configurare controlli di accesso ottimizzati per soddisfare requisiti aziendali, di pianificazione e di conformità specifici.
+Di seguito vengono descritte tecnologie, \glo{framework} e servizi di terze parti utilizzati per il progetto.
+\subsection{Amazon SQS}
+Amazon Simple Queue Service (SQS) è un servizio di accodamento messaggi completamente gestito che consente la separazione e la scalabilità di microservizi, sistemi distribuiti e applicazioni serverless. Con SQS, è possibile inviare, memorizzare e ricevere qualsiasi volume di messaggi tra componenti software senza perdite e senza dover impiegare altri servizi per mantenere la disponibilità.
+SQS offre due tipi di code di messaggi: le code standard offrono throughput massimo, ordinamento semplificato e distribuzione di tipo at-least-once mentre le code FIFO sono progettate per garantire che i messaggi vengano elaborati esattamente una sola volta, nell'ordine in cui sono inviati.
 \subsection{Amazon SNS}
 Amazon Simple Notification Service (Amazon SNS) è un servizio di messaggistica completamente gestito per la comunicazione application-to-person (A2P) e application-to-application (A2A).
-Le comunicazioni avvengono in modo asincrono, con un punto di accesso logico e un canale di comunicazione. 
-\subsection{Amazon SQS}
-Amazon Simple Queue Service (SQS) è un servizio di accodamento messaggi completamente gestito che consente la separazione e la scalabilità di microservizi, sistemi distribuiti e applicazioni serverless. Con SQS, è possibile inviare, memorizzare e ricevere qualsiasi volume di messaggi tra componenti software senza perdite e senza dover impiegare altri servizi per mantenere la disponibilità. 
-SQS offre due tipi di code di messaggi: le code standard offrono throughput massimo, ordinamento semplificato e distribuzione di tipo at-least-once mentre le code FIFO sono progettate per garantire che i messaggi vengano elaborati esattamente una sola volta, nell'ordine in cui sono inviati.
-\subsection{Stripe}
-Stripe è una piattaforma esterna per i pagamenti online che consente all'e-commerce di accettare pagamenti con bancomat, carta ricaricabile o carta di credito. È una soluzione sicura e rapida, i pagamenti vengono elaborati utilizzando strumenti ad hoc sviluppati per la gestione dei flussi di pagamento con controlli anti-frode.
-\subsection{NodeJs}
-Node.js è un runtime system open source multipiattaforma orientato agli eventi per l'esecuzione di codice JavaScript, ha un'architettura orientata agli eventi che rende possibile l’I/O asincrono. Questo design punta ad ottimizzare il Throughput e la scalabilità nelle applicazioni web con molte operazioni di input/output. Il modello di networking su cui si basa Node.js è I/O event-driven: ciò vuol dire che Node richiede al sistema operativo di ricevere notifiche al verificarsi di determinati eventi, e rimane quindi in sleep fino alla notifica stessa: solo in tale momento torna attivo per eseguire le istruzioni previste nella funzione di callback, così chiamata perché da eseguire una volta ricevuta la notifica che il risultato dell'elaborazione del sistema operativo è disponibile.
-\subsection{Npm}
-Npm è un package manager per il linguaggio di programmazione JavaScript, il predefinito per l'ambiente di runtime JavaScript Node.js. Consiste in un client da linea di comando, chiamato anch'esso npm, e un database online di moduli pubblici e privati che offrono diverse funzionalità: dalla gestione dell’upload di file, ai database MySQL o a Redis, attraverso framework, sistemi di template e la gestione della comunicazione in tempo reale con i visitatori.
-\subsection{TypeScript}
-TypeScript è un linguaggio di programmazione open source sviluppato da Microsoft che estende la sintassi di JavaScript, aggiungendo o rendendo più flessibili e potenti varie sue caratteristiche, in modo che qualunque programma scritto in JavaScript sia anche in grado di funzionare con TypeScript senza nessuna modifica. 
-\subsection{Next.js}
-Next.js è un framework JavaScript back-end per applicazioni React che non richiede alcun setup e che consente il rendering automatico lato server (SSR, server side rendering).
-Con Next.js si possono sviluppare applicazioni web, app mobile, desktop e web app progressive: è costruito secondo il principio di “Build once, run anywhere“.
-Altre caratteristiche di Next.js sono suddivisione automatica del codice, routing automatico, hot code reloading (viene ricaricato solo il codice modificato) ed esportazione statica (con un solo comando può esportare un sito statico).
-\subsection{Jest.js}
-Jest.js è un framework di test JavaScript con particolare attenzione alla semplicità e al supporto per applicazioni web di grandi dimensioni.  Fornisce diverse funzionalità come la creazione automatizzata di mock, l'esecuzione di test in parallelo per aumentarne la velocità e la possibilità di testare il codice asincrono in modo sincrono. Jest trova automaticamente i test da eseguire nel codice sorgente, e funziona su progetti JS che includono React, Babel, TypeScript, Node, Angular, Vue.
-\subsection{ESLint}
-ESLint è uno strumento di analisi del codice statico per identificare pattern problematici o codice che non rispetta certe linee guida predefinite nel codice JavaScript senza eseguirlo. Le regole in ESLint sono configurabili e le regole personalizzate possono essere definite e caricate. ESLint è scritto usando Node.js per fornire un ambiente a runtime veloce e di facile installazione attraverso npm.
-\subsection{Material-UI}
-Material-UI è una libreria di componenti React per sviluppare il design del proprio progetto o per poter utilizzare tutta una serie di componenti stabili predefiniti.
-\subsection{Serverless Framework}
-Serverless Framework è un framework Web gratuito e open source scritto utilizzando Node.js, sviluppato per la creazione di applicazioni su AWS Lambda. Il Serverless Framework è costituito da una \glo{CLI} open source e da una dashboard che insieme, forniscono una gestione completa del ciclo di vita delle applicazioni serverless.
+Le comunicazioni avvengono in modo \glo{asincrono}, con un punto di accesso logico e un canale di comunicazione.
+\subsection{AWS Cognito}
+AWS Cognito permette di gestire autenticazione, autorizzazione e gestione degli utenti per le applicazioni web e mobili. Gli utenti possono accedere direttamente con un nome utente e una password, oppure tramite terze parti, ad esempio Facebook, Amazon, Google o Apple.
+I due componenti principali di Amazon Cognito da utilizzare separatamente o insieme sono i pool di utenti, directory utente che forniscono opzioni di registrazione e di accesso, e i pool di identità che consentono di concedere agli utenti l'accesso ad altri servizi AWS.
+\subsection{AWS DynamoDB}
+Amazon DynamoDB è un database \glo{NoSQL} che consente agli sviluppatori di scaricare gli oneri legati al funzionamento e al ridimensionamento di un database distribuito in modo da non doversi preoccupare del provisioning, dell'installazione e della configurazione dell'hardware, della replica, delle patch del software o del ridimensionamento del \glo{cluster} eliminando il carico operativo e la complessità coinvolti nella protezione dei dati sensibili.
+\subsection{AWS API Gateway}
+Amazon API Gateway semplifica per gli sviluppatori la creazione, la pubblicazione, la manutenzione, il monitoraggio e la protezione delle API RESTful su qualsiasi scala. Le API fungono da “porta di entrata” per consentire l’accesso delle applicazioni ai dati, alla logica aziendale o alle funzionalità dai servizi \glo{back end}.
+API Gateway gestisce tutte le attività di accettazione ed elaborazione relative alle chiamate API simultanee, inclusi gestione del traffico, controllo di accessi e autorizzazioni, monitoraggio e gestione delle versioni delle API.
+\subsection{AWS Lambda}
+AWS Lambda è un servizio di elaborazione serverless che permette di eseguire il codice senza effettuare il provisioning o gestire i server, creare una logica di dimensionamento dei cluster in funzione dei carichi di lavoro, mantenere integrazioni degli eventi o gestire i runtime.
+Con Lambda è possibile eseguire codice per qualsiasi tipo di applicazione o servizio di back end, senza alcuna amministrazione.  È possibile scrivere le funzioni Lambda nel linguaggio preferiro (Node.js, Python, Go, Java e altri ancora) e utilizzare strumenti per creare, testare e distribuire le funzioni.
+\subsection{Amazon S3 Bucket}
+È un servizio di storage di oggetti che offre scalabilità, disponibilità dei dati, sicurezza e prestazioni all'avanguardia nel settore offrendo caratteristiche di gestione semplici da utilizzare che consentono di organizzare i dati e di configurare controlli di accesso ottimizzati per soddisfare requisiti aziendali, di pianificazione e di conformità specifici.
 \subsection{Dotenv}
 È un modulo a dipendenza zero che carica le variabili di ambiente da un file .env in process.env. La memorizzazione della configurazione nell'ambiente separato dal codice si basa sulla metodologia The Twelve-Factor App, dove le variabili d'ambiente non vengono mai raggruppate come "ambienti", ma vengono invece gestite in modo indipendente per ogni distribuzione.
+\subsection{ESLint}
+ESLint è uno strumento di analisi statica del codice per identificare pattern problematici o codice che non rispetta certe linee guida predefinite nel codice JavaScript senza eseguirlo.
+Le regole in ESLint sono configurabili e le regole personalizzate possono essere definite e caricate. ESLint è scritto usando Node.js per fornire un ambiente a runtime veloce e di facile installazione attraverso npm.
+\begin{itemize}
+    \item \textbf{Versione utilizzata:} 7.23.0
+\end{itemize}
+\subsection{Jest.js}
+Jest.js è un framework di test JavaScript con particolare attenzione alla semplicità e al supporto per applicazioni web di grandi dimensioni. Fornisce diverse funzionalità come la creazione automatizzata di mock, l'esecuzione di test in parallelo per aumentarne la velocità e la possibilità di testare il codice asincrono in modo sincrono.
+Jest trova automaticamente i test da eseguire nel codice sorgente, e funziona su progetti JavaScript che includono React, Babel, TypeScript, Node, Angular e Vue.
+\subsection{Material-UI}
+Material-UI è una libreria di componenti React per sviluppare il design del proprio progetto o per poter utilizzare tutta una serie di componenti stabili predefiniti.
+\subsection{Next.js}
+Next.js è un framework JavaScript back end per applicazioni React che non richiede alcun setup e che consente il rendering automatico lato server (SSR, server side rendering).
+Con Next.js si possono sviluppare applicazioni web, app mobile, desktop e web app progressive: è costruito secondo il principio di “Build once, run anywhere“.
+Altre caratteristiche di Next.js sono suddivisione automatica del codice, routing automatico, hot code reloading (viene ricaricato solo il codice modificato) ed esportazione statica (con un solo comando può esportare un sito statico).
+\begin{itemize}
+    \item \textbf{Versione utilizzata:} 10.1.3
+\end{itemize}
+\subsection{NodeJs}
+Node.js è un runtime system open source multipiattaforma orientato agli eventi per l'esecuzione di codice JavaScript, ha un'architettura orientata agli eventi che rende possibile l’I/O asincrono. Questo design punta ad ottimizzare il throughput e la scalabilità nelle applicazioni web con molte operazioni di input/output.
+Il modello di networking su cui si basa Node.js è I/O event-driven: ciò vuol dire che Node richiede al sistema operativo di ricevere notifiche al verificarsi di determinati eventi, e rimane quindi in sleep fino alla notifica stessa: solo in tale momento torna attivo per eseguire le istruzioni previste nella funzione di callback, così chiamata perché da eseguire una volta ricevuta la notifica che il risultato dell'elaborazione del sistema operativo è disponibile.
+\begin{itemize}
+    \item \textbf{Versione utilizzata:} 14.16.1
+\end{itemize}
+\subsection{Npm}
+Npm è un package manager per il linguaggio di programmazione JavaScript, il predefinito per l'ambiente di runtime Node.js. Consiste in un client da linea di comando, chiamato anch'esso npm, e un database online di moduli pubblici e privati che offrono diverse funzionalità: dalla gestione dell’upload di file, ai database MySQL, attraverso framework, sistemi di template e la gestione della comunicazione in tempo reale con i visitatori.
+\subsection{React}
+React è una libreria Javascript open source utilizzata per creare interfacce utente o componenti UI. Può essere usato come base nello svillupo di applicazioni a pagina singola o mobile.
+React si occupa solamente della gestione dello stato e del rendering di tale stato nel DOM, quindi solitamente la creazione di applicazioni React richiede l'uso di librerie aggiuntive per il routing oltre ad alcune funzionalità lato client.
+\begin{itemize}
+    \item \textbf{Versione utilizzata:} 17.0.2
+\end{itemize}
+\subsection{Serverless Framework}
+Serverless Framework è un framework web open source e gratuito scritto utilizzando Node.js, sviluppato per la creazione di applicazioni su AWS Lambda. Il Serverless Framework è costituito da una \glo{CLI} open source e da una dashboard che insieme, forniscono una gestione completa del ciclo di vita delle applicazioni serverless.
+\subsection{Stripe}
+Stripe è una piattaforma esterna per i pagamenti online che consente all'e-commerce di accettare pagamenti con bancomat, carta ricaricabile o carta di credito. È una soluzione sicura e rapida, i pagamenti vengono elaborati utilizzando strumenti ad hoc sviluppati per la gestione dei flussi di pagamento con controlli anti-frode.
+\begin{itemize}
+    \item \textbf{Versione utilizzata:} 8.137.0
+\end{itemize}
+\subsection{Swagger}
+Swagger è un linguaggio di descrizione dell'interfaccia per descrivere le \glo{API} \glo{RESTful} espresse utilizzando \glo{JSON}. Swagger viene utilizzato insieme a una serie di strumenti software \glo{open source} per progettare, creare, documentare e utilizzare i servizi web RESTful.
+\subsection{TypeScript}
+TypeScript è un linguaggio di programmazione open source sviluppato da Microsoft che estende la sintassi di JavaScript, aggiungendo o rendendo più flessibili e potenti varie sue caratteristiche, in modo che qualunque programma scritto in JavaScript sia anche in grado di funzionare con TypeScript senza nessuna modifica.
+\begin{itemize}
+    \item \textbf{Versione utilizzata:} 4.0
+\end{itemize}
