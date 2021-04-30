@@ -4,7 +4,7 @@ All'accesso della piattaforma l'utente visualizzerà la schermata principale con
 	\item Descrizione dell'azienda;
 	\item Prodotti in evidenza;
 	\item Barra per la ricerca dei prodotti;
-	\item Icona del menù. 
+	\item \glo{Icona} del menù. 
 \end{enumerate} 
 \begin{figure}[H]
 	\centering
@@ -23,10 +23,11 @@ Cliccando sull'icona del menù (4) appariranno due icone cliccabili dall'utente 
 	\includegraphics[scale=0.7]{Immagini/Acquirente/login.png}\quad
 	\includegraphics[scale=0.6]{Immagini/Acquirente/createAccount.png}
 \end{figure}
+\newpage
 \section{Acquirente}\label{Acquirente}
 La schermata principale visualizzata comprenderà nuovamente descrizione dell'azienda, prodotti in evidenza e:
 \begin{enumerate}
-	\item Icona per accedere al carrello;
+	\item \glo{Icona} per accedere al carrello;
 	\item Icona per effettuare il logout. 
 \end{enumerate} 
 \begin{figure}[H]
@@ -115,4 +116,83 @@ Premendo sull'icona del carrello presente in ogni schermata è possibile per l'u
 	\includegraphics[scale=0.25]{Immagini/Acquirente/Cart.JPG}
 	\caption{Carrello}
 	\label{fig:Carrello}
+\end{figure}
+\subsection{Pagamento e gestione della spedizione}
+Dopo aver cliccato sull'icona per procedere al pagamento si verrà reindirizzati ad una schermata di riepilogo prima di procedere con l'effettivo checkout.
+Nella schermata sarà possibile visualizzare nuovamente l'elenco dei vari prodotti presenti nel carrello cliccando sull'apposita icona. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.25]{Immagini/Acquirente/payment.cartproduct.png}
+	\caption{Schermata di riepilogo prima del checkout}
+	\label{fig:CartProduct}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.25]{Immagini/Acquirente/payment-products-open.customer.png}
+	\caption{Schermata elenco prodotti nel carrello}
+	\label{fig:CartProductElenco}
+\end{figure}
+Potranno essere inserite delle informazioni aggiuntive per il venditore.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.25]{Immagini/Acquirente/payment.addinfo.png}
+	\caption{Schermata elenco di riepilogo prima del checkout con \glo{form} per inserimento informazioni aggiuntive}
+	\label{fig:CartAddinfo}
+\end{figure}
+Nella stessa schermata sarà possibile gestire gli indirizzi di spedizione precedentemente inseriti, inserirne uno nuovo e selezionare l'indirizzo prescelto per l'ordine.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.25]{Immagini/Acquirente/payment.customer.png}
+	\caption{Schermata di riepilogo prima del checkout in cui gestire gli indirizzi}
+	\label{fig:CartAddress}
+\end{figure}
+\subsubsection{Inserimento nuovo indirizzo}
+Per inserire un nuovo indirizzo l'utente deve premere sulla scritta apposita, apparirà un \glo{form} in cui potrà inserire i vari dati relativi al nuovo indirizzo
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.25]{Immagini/Acquirente/payment.addressnew.png}
+	\caption{Schermata di riepilogo prima del checkout per inserire nuovo indirizzo}
+	\label{fig:NewAddress}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.25]{Immagini/Acquirente/payment-new-address.customer.png}
+	\caption{Form di inserimento nuovo indirizzo}
+	\label{fig:CartnewAddress}
+\end{figure}
+\subsubsection{Eliminazione di un indirizzo inserito precedentemente}
+Per eliminare un indirizzo precedentemente inserito l'utente deve cliccare sull'icona del cestino e confermare l'eliminazione.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.25]{Immagini/Acquirente/payment.addressdelete.png}
+	\caption{Schermata di riepilogo prima del checkout per eliminare un indirizzo}
+	\label{fig:DeleteAddress}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.25]{Immagini/Acquirente/payment-delete-address.customer.png}
+	\caption{Form di conferma eliminazione indirizzo}
+	\label{fig:CartDeleteAddress}
+\end{figure}
+\subsubsection{Modifica di indirizzo inserito precedentemente}
+Per modificare un indirizzo precedentemente inserito l'utente deve cliccare sull'icona della penna, si aprirà il form per modificare l'indirizzo.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.25]{Immagini/Acquirente/payment.addressmodify.png}
+	\caption{Schermata di riepilogo prima del checkout per modificare un indirizzo}
+	\label{fig:EditAddress}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.25]{Immagini/Acquirente/payment-edit-address.customer.png}
+	\caption{Form per modificare l'indirizzo}
+	\label{fig:CartEditAddress}
+\end{figure}
+\subsubsection{Procedere con il checkout}
+Per procedere con il pagamento è necessario cliccare sull'apposito bottone, l'utente verrà reindirizzato alla schermata in cui inserire i dati per il pagamento e completare l'ordine.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.25]{Immagini/Acquirente/payment.checkout.png}
+	\caption{Schermata di riepilogo prima del checkout con icona per procedere con il pagamento}
+	\label{fig:CartCheckout}
 \end{figure}
