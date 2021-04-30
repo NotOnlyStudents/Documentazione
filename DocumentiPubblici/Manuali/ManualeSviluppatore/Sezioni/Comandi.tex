@@ -1,0 +1,28 @@
+\newcommand{\Titolo}{\textit{Manuale sviluppatore}}
+
+\newcommand{\Redattori}{\BL \newline \FF \newline \PC \newline \TL}
+
+\newcommand{\Verificatori}{\TG}
+
+\newcommand{\Approvatore}{\VD}
+
+\newcommand{\Distribuzione}{\Proponente \newline \VT \newline \CR \newline Gruppo \Gruppo}
+
+\newcommand{\Uso}{Esterno}
+
+\newcommand{\DescrizioneDoc}{Il documento presenta le tecnologie e l'architettura della piattaforma agli sviluppatori interessati al prodotto \NomeProgetto.}
+
+\newcommand{\pathimg}{../../../Immagini/N.O.S.jpg}
+
+\newcommand{\Versionedoc}{1.0}
+
+\newcommand{\TermineGlossario}[1]{\textbf{#1} \newline}
+
+\newcommand{\DefinizioneGlossario}[1]{#1 \newline}
+
+\newcommand{\TechnologyVersionLink}[2]{
+  \begin{itemize}
+    \item \textbf{Versione utilizzata:} #1\ifthenelse{\equal{#2}{}}{.}{;}
+    \ifthenelse{\equal{#2}{}}{}{\item \textbf{Link:} \href{#2}{#2}.}
+  \end{itemize}
+}
