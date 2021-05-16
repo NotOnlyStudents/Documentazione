@@ -1,11 +1,11 @@
 \section{Resoconto delle attività di verifica}
 \label{resoconto}
 \subsection{Periodo di analisi}
-Durante questo periodo, i documenti redatti da presentare in ingresso alla \textbf{Revisione dei Requisiti} sono stati verificati dai \textit{Verificatori} secondo i criteri per l'analisi statica definiti nelle \NdPv{2.0}, seguendo le metodologie di \glo{Walkthrough} e di \glo{Inspection}.
+Durante questo periodo, i documenti redatti da presentare in ingresso alla \glo{\textbf{RR}} sono stati verificati dai \textit{Verificatori} secondo i criteri per l'analisi statica definiti nelle \NdPv{2.0}, seguendo le metodologie di \glo{Walkthrough} e di \glo{Inspection}.
 \subsubsection{Strategia adottata per l'analisi statica}
 Per ciascun documento si è creato inizialmente una struttura di base comune così da evitare possibili conflitti e sprechi di tempo futuri. A questo punto si è applicato il metodo del Walkthrough sulla parte di documento modificata che ha permesso l'individuazione di errori comuni e frequenti all'interno dei documenti che hanno comportato un aggiornamento della lista di controllo. Si è potuto infatti svolgere un'ulteriore esame nei confronti del documento sottoposto a verifica per scoprire gli errori non visti nelle verifiche precedenti tramite un'\glo{attività} di Inspection. Il \textit{Verificatore} valuta la correttezza del documento cercando di individuare eventuali errori e trattandoli nel modo seguente:
 	\begin{itemize}
-		\item Correzione degli errori ortografici e sintattici o di eventuali violazioni delle norme tipografiche stabilite nelle \NdPv{2.0};
+		\item Correzione degli errori ortografici e sintattici o di eventuali violazioni delle norme tipografiche stabilite nelle \NdPv{3.0};
 		\item Inserimento degli errori più ricorrenti nella lista di controllo, redatta durante la \glo{fase} di verifica dei documenti;
 		\item Applicazione del ciclo PDCA per migliorare e velocizzare le verifiche future.
 	\end{itemize}
@@ -74,7 +74,7 @@ Nonostante le difficoltà incontrate nello svolgimento del progetto, si è riusc
 In questo periodo di consolidamento dei requisiti, il gruppo {\Gruppo} si è preparato alla presentazione per la Revisione dei Requisiti studiando le varie tecnologie necessarie per l'avanzamento del progetto in modo individuale. Dal momento che non è stata eseguita nessuna operazione di verifica o miglioramento riguardante i documenti redatti, non si è ritenuto di alcuna rilevanza calcolare i risultati delle varie metriche associate alla \glo{qualità} dei documenti prodotti dal gruppo.
  
 \subsection{Periodo di progettazione architetturale} \label{ResocontoPArchitetturale}
-Durante il periodo di progettazione architetturale, come nel periodo precedente, i documenti redatti da presentare in ingresso alla \textbf{Revisione di Progettazione} sono stati sottoposti a verifica secondo i criteri definiti nelle \NdPv{1.0.0}. In questo periodo sono stati valutati attraverso verifica anche i vari processi istanziati.
+Durante il periodo di progettazione architetturale, come nel periodo precedente, i documenti redatti da presentare in ingresso alla \glo{\textbf{RP}} sono stati sottoposti a verifica secondo i criteri definiti nelle \NdPv{2.0}. In questo periodo sono stati valutati attraverso verifica anche i vari processi istanziati.
 \subsubsection{Esiti verifica}
 \myparagraph{Documentazione}
 Di seguito si riportano gli esiti delle metriche relative alla documentazione.
@@ -118,4 +118,67 @@ Di seguito si riportano gli esiti delle metriche relative al miglioramento del p
 	\includegraphics[scale=0.6]{Immagini/MPR10_rproblemi.png}
 	\caption{Risoluzione problemi progettazione architetturale}
 	\label{fig:MPR10}
+\end{figure}
+
+\subsection{Periodo di progettazione di dettaglio e codifica} \label{ResocontoPDettaglio}
+Durante il periodo di progettazione di dettaglio, come nel periodo precedente, i documenti redatti da presentare in ingresso alla \glo{\textbf{RQ}} sono stati sottoposti a verifica secondo i criteri definiti nelle \NdPv{3.0}. In questo periodo sono stati valutati attraverso verifica anche i vari processi istanziati.
+\newpage
+\subsubsection{Esiti verifica}
+\myparagraph{Documentazione}
+Di seguito si riportano gli esiti delle metriche relative alla documentazione.
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{Immagini/GulpeaseDettaglio}\\
+	\caption{Indice di Gulpease}
+	\label{fig:GulpeasePDettaglio}
+\end{figure}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.6]{Immagini/MPR03_cortograficadettaglio.png}\\
+	\caption{Correttezza ortografica documenti progettazione di dettaglio e codifica}
+	\label{fig:CortOrtograficaPDettaglio}
+\end{figure}
+\newpage
+\myparagraph{Pianificazione}
+Di seguito si riportano gli esiti delle metriche relative alla pianificazione.
+\begin{figure}[h!]
+	\includegraphics[scale=0.6]{Immagini/ACWP_PDettaglio.png}\quad
+	\includegraphics[scale=0.6]{Immagini/BCWP_PDettaglio.png}
+	\caption{ACWP e BCWP progettazione di dettaglio e codifica}
+	\label{fig:BCWP_PDettaglio}
+\end{figure}
+\begin{figure}[h!]
+	\includegraphics[scale=0.5]{Immagini/BCWS_PDettaglio.png}\quad
+	\includegraphics[scale=0.6]{Immagini/SV_PDettaglio.png}
+	\caption{BCWS e SV progettazione di dettaglio e codifica}
+	\label{fig:SV_PDettaglio}
+\end{figure}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.6]{Immagini/BV_PDettaglio.png}
+	\caption{BV progettazione di dettaglio e codifica}
+	\label{fig:BV_PDettaglio}
+\end{figure}
+\myparagraph{Codifica}
+Di seguito si riportano gli esiti delle metriche relative alla pianificazione.
+\begin{figure}[h!]
+	\includegraphics[scale=0.6]{Immagini/MPDS01_CompletezzaImpl.png}\quad
+	\includegraphics[scale=0.6]{Immagini/MPDS02_DErrori.png}
+	\caption{Correttezza dell'implementazione e densità degli errori}
+	\label{fig:DensitàErr}
+\end{figure}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.6]{Immagini/MPDS07_FComprensione.png}
+	\caption{Facilità di comprensione del codice}
+	\label{fig:FacilitàCodice}
+\end{figure}
+
+\myparagraph{Miglioramento del processo}
+Di seguito si riportano gli esiti delle metriche relative al miglioramento del processo.
+\begin{figure}[h!]
+	\includegraphics[scale=0.58]{Immagini/MPR01_RObbligatori.png}\quad
+	\includegraphics[scale=0.58]{Immagini/MPR10_rproblemidettaglio.png}
+	\caption{Risoluzione problemi progettazione di dettaglio e codifica}
+	\label{fig:MPR10codifica}
 \end{figure}

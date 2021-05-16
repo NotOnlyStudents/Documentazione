@@ -1,8 +1,8 @@
 \newcommand{\Titolo}{\AdR}
 
-\newcommand{\Redattori}{\BL\newline \MM \newline \PC \newline \TG }
+\newcommand{\Redattori}{\FF}
 
-\newcommand{\Verificatori}{\BL \newline \FF \newline \MM \newline \PC \newline \TG \newline \TL }
+\newcommand{\Verificatori}{\MM}
 
 \newcommand{\Approvatore}{\VD}
 
@@ -14,7 +14,7 @@
 
 \newcommand{\pathimg}{../../Immagini/N.O.S.jpg}
 
-\newcommand{\Versionedoc}{2.0}
+\newcommand{\Versionedoc}{3.0}
 
 % UC Counters
 
@@ -80,9 +80,8 @@
 \setcounter{rfzCounter}{0}
 
 \newcommand{\rfun}[2]{
-	\stepcounter{rfCounter}
+	\refstepcounter{rfCounter}
 	\rfuncode{#1}{\therfCounter}{#2}
-	% \textbf{RF#1\therfCounter}\ifthenelse{\equal{#2}{}}{}{\_#2}
 
 	\ifthenelse{\equal{#1}{O}}{\stepcounter{rfoCounter}}
 	{\ifthenelse{\equal{#1}{D}}{\stepcounter{rfdCounter}}
@@ -119,7 +118,7 @@
 \setcounter{rqzCounter}{0}
 
 \newcommand{\rqua}[1]{
-	\stepcounter{rqCounter}
+	\refstepcounter{rqCounter}
 	\rquacode{#1}{\therqCounter}
 
 	\ifthenelse{\equal{#1}{O}}{\stepcounter{rqoCounter}}
@@ -157,7 +156,7 @@
 \setcounter{rvzCounter}{0}
 
 \newcommand{\rvin}[1]{
-	\stepcounter{rvCounter}
+	\refstepcounter{rvCounter}
 	\rvincode{#1}{\thervCounter}
 
 	\ifthenelse{\equal{#1}{O}}{\stepcounter{rvoCounter}}
@@ -195,7 +194,7 @@
 \setcounter{rpzCounter}{0}
 
 \newcommand{\rpre}[1]{
-	\stepcounter{rpCounter}
+	\refstepcounter{rpCounter}
 	\rprecode{#1}{\therpCounter}
 
 	\ifthenelse{\equal{#1}{O}}{\stepcounter{rpoCounter}}

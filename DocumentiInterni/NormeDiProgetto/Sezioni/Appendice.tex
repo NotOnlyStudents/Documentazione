@@ -1,5 +1,6 @@
 \appendix
-\section{SPICE - ISO/IEC 15504}  \label{spice}
+\section{Miglioramento di processo}
+\subsection{SPICE - ISO/IEC 15504}  \label{spice}
 L'ISO/IEC 15504, noto come progetto \textbf{SPICE} (Software Process Improvement and Capability Evaluation), ha come obiettivo quello di sviluppare uno \glo{standard} che consenta valutazioni omogenee di organizzazioni software allo scopo di:
 \begin{itemize}
 	\item Identificare i punti forti, i punti deboli e i rischi delle metodologie utilizzate;
@@ -50,14 +51,14 @@ Ogni attributo viene valutato e ad esso viene assegnato uno dei seguenti livelli
 
 \newpage
 
-\section{Ciclo di Deming - PDCA} \label{PDCA}
+\subsection{Ciclo di Deming - PDCA} \label{PDCA}
 Il ciclo \textbf{PDCA} è un metodo iterativo con l'obiettivo di stabilire un modello per il miglioramento continuo dei processi ed essere garanzia di \glo{qualità} \glo{efficiente} e continuativa.
 A tal fine si individuano quattro passaggi:
 \begin{itemize}
-	\item\textbf{Plan}: pianificazione, si esamina la situazione attuale al fine di determinare esattamente come raggiungere l'obiettivo;
+	\item\textbf{Plan}: pianificazione, si esamina la situazione attuale al fine di determinare esattamente come raggiungere obiettivi specifici di miglioramento definendo attività, scadenze, responsabilità e risorse da impiegare;
 	\item\textbf{Do}: implementazione, si procede a piccoli passi per realizzare quanto previsto durante la pianificazione;
-	\item\textbf{Check}: verifica, vengono raccolti i risultati ottenuti e valutati rispetto agli obiettivi prefissati;
-	\item\textbf{Act}: azione, i problemi e le cause identificate vengono risolte adattando quanto pianificato e infine attuato.
+	\item\textbf{Check}: verifica, vengono raccolti i risultati delle azioni di miglioramento ottenuti e valutati rispetto agli obiettivi prefissati;
+	\item\textbf{Act}: azione, viene consolidato nel way of working quanto ha prodotto effettivi miglioramenti mentre vengono individuati dei modi per migliorare ciò che non ha apportato valore.
 \end{itemize}
 \begin{center}
 \includegraphics[scale=0.25]{Immagini/PDCA.png}
@@ -65,7 +66,8 @@ A tal fine si individuano quattro passaggi:
 \end{center}
 
 \newpage
-\section{Standard ISO/IEC 9126}\label{9126}
+\section{Miglioramento del software}
+\subsection{Standard ISO/IEC 9126}\label{9126}
 L'ISO/IEC 9126 è uno standard internazionale per la valutazione della qualità del software, le norme presenti definiscono le caratteristiche che la determinano e propongono metriche per la misurazione.
 Il modello di qualità software stabilito dallo standard considera sei caratteristiche principali da soddisfare, ovvero:
 \begin{itemize}
@@ -77,18 +79,18 @@ Il modello di qualità software stabilito dallo standard considera sei caratteri
 	\item \textbf{Portabilità}.
 \end{itemize}
 Le caratteristiche elencate possono essere misurate da \textbf{metriche esterne}, \textbf{metriche interne} e \textbf{metriche per la qualità d'uso}.
-\paragraph*{Metriche Esterne}
+\subsubsection*{Metriche esterne}%\linespread{0.5}
 Misurano i comportamenti del prodotto software rilevabili dai test, dall'operatività e dall'osservazione durante la sua esecuzione, in funzione degli obiettivi stabiliti.
-\paragraph*{Metriche Interne}
+\subsubsection*{Metriche interne}
 Si applicano alla documentazione e al prodotto non eseguibile, ad esempio il codice sorgente, durante la progettazione e la codifica. Queste metriche misurano attributi interni del software e forniscono indicazioni sulle caratteristiche esterne del prodotto finale individuando problemi che potrebbero ridurne la qualità.
-\paragraph*{Metriche per la qualità d'uso}
+\subsubsection*{Metriche per la qualità d'uso}
 Misurano il grado con cui il prodotto software permette agli utenti di svolgere le proprie attività con efficacia, produttività, soddisfazione e sicurezza.
 
 \subsection{Elenco delle metriche} \label{Metriche}
 \subsubsection{Metriche per la qualità del processo}
 \begin{itemize}
 	\item  \hyperlink{MSoddRequisiti}{MPR01: Soddisfacimento requisiti obbligatori;}
-	\item \hyperlink{MGulpease}{MPR02: Indice di Gulpease;}
+	\item  \hyperlink{MGulpease}{MPR02: Indice di Gulpease;}
 	\item  \hyperlink{MOrtografia}{MPR03: Indice di correttezza ortografica;}
 	\item  \hyperlink{MBC}{MPR04: Budget at Completion;}
 	\item  \hyperlink{MACWP}{MPR05: Actual Cost of Work Performed;}
@@ -101,11 +103,11 @@ Misurano il grado con cui il prodotto software permette agli utenti di svolgere 
 
 \subsubsection{Metriche per la qualità di prodotto}
 \begin{itemize}
-\item\hyperlink{MCImplementazione}{MPDS01: Completezza dell'implementazione;}
+\item \hyperlink{MCImplementazione}{MPDS01: Completezza dell'implementazione;}
 \item \hyperlink{MErrori}{MPDS02: Densità errori;}
-\item\hyperlink{MCViste}{MPDS03: Tempo di caricamento delle schermate;}
-\item\hyperlink{MFUtilizzo}{MPDS04: Facilità di utilizzo;}
-\item\hyperlink{MFApprendimento}{MPDS05: Facilità di apprendimento;}
+\item \hyperlink{MCViste}{MPDS03: Tempo di caricamento delle schermate;}
+\item \hyperlink{MFUtilizzo}{MPDS04: Facilità di utilizzo;}
+\item \hyperlink{MFApprendimento}{MPDS05: Facilità di apprendimento;}
 \item \hyperlink{MPGerarchia}{MPDS06: Profondità della gerarchia;}
 \item \hyperlink{MSFComprensione}{MPDS07: Facilità di comprensione;}
 \item \hyperlink{MSFunzioni}{MPDS08: Semplicità delle funzioni;}

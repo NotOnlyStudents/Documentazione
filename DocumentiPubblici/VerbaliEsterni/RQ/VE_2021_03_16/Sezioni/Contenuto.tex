@@ -1,0 +1,42 @@
+\section{Informazioni generali}
+\begin{itemize}
+\item \textbf{Luogo:} Incontro \glo{Google Meet};
+\item \textbf{Data:} \Data;
+\item \textbf{Ora:} 17:45 - 18:15;
+\item \textbf{Partecipanti:}
+	\begin{itemize}
+		\item \BL{}; 
+		\item \FF{};
+		\item \MM{};
+		\item \PC{};
+		\item \TG{};
+		\item \TL{};
+		\item \Proponente{}.
+	\end{itemize}
+\item \textbf{Segretario:} \MM{}.
+\end{itemize}
+
+\section{Ordine del giorno}
+\begin{enumerate}
+	\item Consigli su accorgimenti riguardo l'implementazione delle API.
+	\item Organizzazione degli ambienti per il continuous deployment.
+\end{enumerate}
+
+\section{Resoconto}
+\subsection{Consigli su accorgimenti riguardo l'implementazione delle API}
+Il gruppo ha discusso insieme ai proponenti varie proposte sull'implementazione delle API. Il consiglio più importante è stato lo studio del \glo{domain driven design}, prestando attenzione alla separation of concerns durante la progettazione e cercando quindi di suddividere i microservizi per domini, rendendo possibile la distribuzione singola di un microservizio o di un dominio intero. Ci è stato detto di porre la nostra attenzione alla parametrizzazione di alcune variabili che vengono utilizzate più volte come i nomi delle tabelle.
+
+\subsection{Organizzazione degli ambienti per il continuous deployment}
+Essendo il continuous deployment molto importante nello sviluppo di \NomeProgetto, si è discusso su come implementarlo e del significato dei vari ambienti che ci sono stati richiesti. I proponenti ci hanno esposto le loro esperienze ed è stato deciso di dare agli ambienti richiesti il seguente significato:
+\begin{itemize}
+	\item \glo{Locale}: ambiente privato il quale corrisponde allo sviluppo in locale nella propria macchina da lavoro;
+	\item \glo{Testing}: ambiente pubblico dove tutto ciò che è stato caricato nella repository e si trova nel branch develop viene sottoposto ai vari test opportuni;
+	\item \glo{Staging}: ambiente pubblico dove la prossima versione viene caricata per eseguire gli ultimi test e corrisponde a tutto ciò che si trova nel branch main;
+	\item \glo{Production}: ambiente ufficiale della piattaforma, dove viene caricata la nuova versione per renderla accessibile al pubblico. Corrisponde alla creazione di un nuovo tag nel branch main.
+\end{itemize}
+
+\section{Registro delle decisioni}
+\begin{itemize}
+	\item \textbf{VE\_\Data.1} Studio dettagliato del \glo{domain driven design};
+	\item \textbf{VE\_\Data.2} Suddivisione degli ambienti come deciso e avere un approccio \glo{production-ready} durante lo sviluppo.
+\end{itemize}
