@@ -1,7 +1,7 @@
 \newpage
 \section{Frontend}\label{Frontend}
 \subsection{Descrizione generale}
-L'architettura del front end prevede principalmente l'utente che interagisce con la piattaforma attraverso i componenti che costituiscono le pagine della stessa, queste a loro interagiscono con le funzioni previste dai microservizi che comunicano con il back end.
+L'architettura del front end pone come figura principale l'utente che interagisce con la piattaforma attraverso i componenti che costituiscono le schermate della stessa. Queste collaborano ed interagiscono a loro volta con le funzioni previste dai microservizi comunicando con il \glo{back end}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.6]{Immagini/Frontend/fe.png}
@@ -10,13 +10,13 @@ L'architettura del front end prevede principalmente l'utente che interagisce con
 \end{figure}
 Attraverso l'utilizzo di Next.js, vengono utilizzati entrambi i tipi di pre-rendering dei dati: 
 \begin{itemize}
-	\item \textbf{static generation}: il sistema genera le pagine HTML a build time e vengono riusate ad ogni richiesta;
-	\item \textbf{server-side rendering}: il sistema genera le pagine HTML a ogni richiesta.
+	\item \textbf{Static generation:} il sistema genera le pagine \glo{HTML} a build time e vengono riusate ad ogni richiesta;
+	\item \textbf{Server-side rendering:} il sistema genera le pagine HTML a ogni richiesta.
 \end{itemize}
 In \NomeProgetto\ vengono utilizzati i metodi:
 \begin{itemize}
-	\item \textbf{getStaticProps}: utilizzata per il data pre-fetching di tipo static genertion;
-	\item \textbf{getServerSideProps} utilizzata per il data pre-fetching di tipo server-side rendering.
+	\item \textbf{getStaticProps:} utilizzata per il data pre-fetching di tipo static genertion;
+	\item \textbf{getServerSideProps:} utilizzata per il data pre-fetching di tipo server-side rendering.
 \end{itemize}
 \subsection{Diagramma dei package}
 \begin{figure}[H]
@@ -27,7 +27,7 @@ In \NomeProgetto\ vengono utilizzati i metodi:
 \end{figure}
 Il diagramma rappresenta le dipendenze tra le classi che individuano i \glo{microservizi}.
 Il package \textbf{interfaces} contiene tutti i tipi che verranno utilizzati dal frontend.
-La classe \textbf{HTTPRequest} è stata implementata per centralizzare le chiamate \glo{HTTP} e permettere il controllo dei tipi, consiste in un wrapper della libreria nativa fetch andando che ridefinisce i metodi GET, POST, PATCH, PUT e DELETE. Ottiene la variabile d'ambiente contenente l'url del server dal file di configurazione relativo di dotenv, dal costruttore gli verrà passato l'url alla specifica \glo{API} il quale verrà aggiunto all'url precedente e su questo sarà possibile invocare i metodi precedentemente dichiarati.
+La classe \textbf{HTTPRequest} è stata implementata per centralizzare le chiamate \glo{HTTP} e permettere il controllo dei tipi. Consiste in un wrapper della libreria nativa fetch e ridefinisce i metodi GET, POST, PATCH, PUT e DELETE. Ottiene la variabile d'ambiente contenente l'url del server dal file di configurazione relativo di dotenv, dal costruttore gli verrà passato l'url alla specifica \glo{API} il quale verrà aggiunto all'url precedente e su questo sarà possibile invocare i metodi precedentemente dichiarati.
 Il package \textbf{services} rappresenta l'unico punto di collegamento tra i microservizi del backend e il frontend, tramite \glo{API} redatte utilizzando SwaggerHub, i vari servizi al suo interno andranno a invocare HTTPRequest per comunicare con il backend attraverso i metodi definiti.
 I microservizi individuati e utilizzati per il frontend sono:
 \begin{itemize}
@@ -38,7 +38,7 @@ I microservizi individuati e utilizzati per il frontend sono:
 	\item \textbf{Carts.}
 \end{itemize}
 \subsection{Services}
-Ogni package presente all'interno del package services contiene il \glo{microservizio} che, invocando l'HTTPRequest, comunica con il \glo{back end}. Ogni servizio contiene funzioni publiche asincrone, per questo motivo il tipo di ritorno è una Promise.
+Ogni package presente all'interno del package services contiene il \glo{microservizio} che, invocando l'HTTPRequest, comunica con il back end. Ogni servizio contiene funzioni pubbliche asincrone e per questo motivo il tipo di ritorno è una \textbf{Promise<T>}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.5]{Immagini/Frontend/ClassiService.png}
@@ -54,4 +54,3 @@ Per poter procedere con lo sviluppo della parte dei prodotti del frontend parall
 	\caption{Microservizio Product}
 	\label{fig:fe-productservice}
 \end{figure}
-
