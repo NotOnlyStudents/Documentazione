@@ -1,6 +1,6 @@
 \newpage
 \section{Frontend}\label{Frontend}
-\subsection{Descrizione generale}
+\subsection{Descrizione generale}\label{FeDescrizione}
 L'architettura del front end pone come figura principale l'utente che interagisce con la piattaforma attraverso i componenti che costituiscono le schermate della stessa. Queste collaborano ed interagiscono a loro volta con le funzioni previste dai microservizi comunicando con il \glo{back end}.
 \begin{figure}[H]
 	\centering
@@ -37,7 +37,7 @@ I microservizi individuati e utilizzati per il frontend sono:
 	\item \textbf{Orders;}
 	\item \textbf{Carts.}
 \end{itemize}
-\subsection{Services}
+\subsection{Services}}\label{Services}
 Ogni package presente all'interno del package services contiene il \glo{microservizio} che, invocando l'HTTPRequest, comunica con il back end. Ogni servizio contiene funzioni pubbliche asincrone e per questo motivo il tipo di ritorno è una \textbf{Promise<T>}.
 \begin{figure}[H]
 	\centering
@@ -45,7 +45,8 @@ Ogni package presente all'interno del package services contiene il \glo{microser
 	\caption{Classi Service}
 	\label{fig:feService}
 \end{figure}
-\subsubsection{Esempio di funzionamento}
+\newpage
+\subsubsection{Esempio di funzionamento}\label{FeEsempio}
 Di seguito si riporta il diagramma delle classi relativo al funzionamento del microservizio \textbf{product}. Come si può vedere è presente un'interfaccia ProductService che viene implementata dalla classe ProductServiceFetch e ogni suo metodo istanzia un oggetto HTTPRequest per l'API di interesse. È possibile implementare l'interfaccia ProductService diversamente rispetto a quanto rappresentato senza la necessità di modificare il codice utilizzatore, attraverso la modifica della variabile d'ambiente NEXT\_PUBLIC\_SERVICE\_METHOD sarà possibile scegliere quale implementazione utilizzare altrimenti verrà di default selezionata l'implementazione ProductServiceFetch. 
 Per poter procedere con lo sviluppo della parte dei prodotti del frontend parallelamente con il backend, lo sviluppatore ha a disposizione la classe ProductServiceMock la quale ritornerà i dati predefiniti senza dover richiamare il server, basterà impostare la variabile NEXT\_PUBLIC\_SERVICE\_METHOD="mock".
 \begin{figure}[H]
