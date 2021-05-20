@@ -1,40 +1,34 @@
 \section{Accesso alla piattaforma}\label{Accesso}
-All'accesso della piattaforma l'utente visualizza la schermata principale contenente:
+L'utente di \NomeProgetto\ può accedere alla piattaforma sia attraverso un computer sia tramite telefono cellulare. All'accesso della piattaforma l'utente visualizza la schermata principale contenente:
 \begin{enumerate}
 	\item Descrizione dell'azienda;
 	\item Prodotti in evidenza;
 	\item Barra per la ricerca dei prodotti;
-	\item \glo{Icona} del menù.
+	\item \glo{Icona} del carrello e per procedere alla login.
 \end{enumerate} 
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.4]{Immagini/Acquirente/home_primo_accesso.png}
-	\caption{Schermata principale}
-	\label{fig:Home}
-\end{figure}
-Cliccando sull'icona del menù (4) appariranno due icone cliccabili dall'utente per poter visualizzare il proprio carrello o effettuare il login/registrazione.
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.4]{Immagini/Acquirente/home-mobile-open.customer.png}
-	\caption{Schermata principale con menù a tendina}
-	\label{fig:Homeicone}
-\end{figure}
+Selezionando l'icona della login si può procedere all'autenticazione oppure alla registrazione.
 \begin{figure}[h!]
+	\centering
 	\includegraphics[scale=0.7]{Immagini/Acquirente/login.png}\quad
 	\includegraphics[scale=0.6]{Immagini/Acquirente/createAccount.png}
 \end{figure}
 \newpage
 \section{Acquirente}\label{Acquirente}
-La schermata principale visualizzata comprende nuovamente descrizione dell'azienda, prodotti in evidenza e:
-\begin{enumerate}
-	\item \glo{Icona} per accedere al carrello;
-	\item Icona per effettuare il logout.
-\end{enumerate} 
-\begin{figure}[H]
+In seguito all'autenticazione, la schermata visualizzata comprenderà nuovamente le informazioni precedentemente indicate ma saranno visualizzate anche due nuove icone per accedere alla schermata della gestione degli ordini e per accedere alla schermata di gestione delle proprie informazioni personali.
+\begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.25]{Immagini/Acquirente/home.customer.png}
-	\caption{Schermata principale utente autenticato}
-	\label{fig:Homecustomer}
+	\includegraphics[scale=0.4]{Immagini/Acquirente/Home.png}
+	\caption{Schermata principale computer}
+	\label{fig:HomePC}
+\end{figure}
+\newpage
+Per quanto riguarda la versione mobile della piattaforma; per poter visualizzare le voci del menù occorre cliccare l'icona con i tre puntini.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.5]{Immagini/Acquirente/Home Mobile WithoutMenu.png} \quad
+	\includegraphics[scale=0.5]{Immagini/Acquirente/Home Mobile with Menu.png}
+	\caption{Schermata principale mobile}
+	\label{fig:HomeMobile}
 \end{figure}
 \subsection{Visualizzazione specifiche di un prodotto}
 L'acquirente, autenticato sulla piattaforma o come ospite, può visualizzare le specifiche di un prodotto in evidenza cliccando sullo stesso. La schermata alla quale sarà indirizzato comprenderà:
@@ -113,7 +107,7 @@ Premendo sull'icona del carrello presente in ogni schermata è possibile per l'u
 \end{enumerate} 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.25]{Immagini/Acquirente/Cart.JPG}
+	\includegraphics[scale=0.4]{Immagini/Acquirente/cart.customer.png}
 	\caption{Carrello}
 	\label{fig:Carrello}
 \end{figure}
@@ -195,4 +189,42 @@ Per procedere con il pagamento è necessario cliccare sull'apposito bottone, l'u
 	\includegraphics[scale=0.25]{Immagini/Acquirente/payment.checkout.png}
 	\caption{Schermata di riepilogo prima del checkout con icona per procedere con il pagamento}
 	\label{fig:CartCheckout}
+\end{figure}
+\newpage
+\subsection{Visualizzazione ordini}\label{ordiniAcq}
+L'acquirente può accedere alla schermata in cui visualizzare tutti gli ordini effettuati selezionando la seconda icona in alto presente in ogni schermata.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.3]{Immagini/Acquirente/orders.png}
+	\caption{Schermata di riepilogo ordini}
+	\label{fig:Ordini}
+\end{figure}
+In questa schermata l'acquirente può filtrare gli ordini inserendo data di inizio e fine entro le quali si devono trovare gli ordini ricercati.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.3]{Immagini/Acquirente/orders with date filters.png}
+	\caption{Schermata filtro ordini effettuati dentro una data di inizio e di fine}
+	\label{fig:OrdiniData}
+\end{figure}
+Oppure cercare un preciso ordine inserendo il codice identificativo.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.3]{Immagini/Acquirente/orders with search.png}
+	\caption{Schermata ricerca ordine}
+	\label{fig:OrdiniNumero}
+\end{figure}
+\section{Gestione account}\label{ModificaProf}
+L'acquirente può raggiungere le proprie informazioni personali accedendo alla schermata apposita selezionando l'icona con l'utente da qualsiasi punto della piattaforma.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.3]{Immagini/Acquirente/Personal Area.png}
+	\caption{Schermata account}
+	\label{fig:Account}
+\end{figure}
+Da qui è possibile eliminare il proprio account o procedere con la modifica delle informazioni selezionando l'icona a forma di penna.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.3]{Immagini/Acquirente/Change Password.png}
+	\caption{Schermata modifica account}
+	\label{fig:ModificaAccount}
 \end{figure}

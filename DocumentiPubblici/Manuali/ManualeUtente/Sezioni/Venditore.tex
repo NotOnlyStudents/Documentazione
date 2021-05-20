@@ -3,7 +3,7 @@
 Dopo il login, l'utente autenticato come venditore visualizzerà la schermata principale della piattaforma e potrà:
 \begin{enumerate}
 	\item Procedere con l'aggiunta di un nuovo prodotto;
-	\item Visualizzare l'elenco dei prodotti della piattaforma;
+	\item Procedere con la gestione degli ordini;
 	\item Procedere con la gestione delle categorie dei prodotti;
 	\item Procedere alla modifica del proprio account;
 	\item Effettuare il logout.
@@ -13,6 +13,28 @@ Dopo il login, l'utente autenticato come venditore visualizzerà la schermata pr
 	\includegraphics[scale=0.4]{Immagini/Venditore/Header.png}
 	\caption{Funzioni del venditore}
 	\label{fig:FunzioniVenditore}
+\end{figure}
+\subsection{Gestione degli ordini}\label{OrdiniVenditore}
+Dopo l'autenticazione il venditore visualizza nella sua schermata principale la lista degli ordini in gestione. L'utente può accedere alla schermata specifica di gestione degli ordini selezionando l'apposita icona.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{Immagini/Venditore/Orders.png}
+	\caption{Schermata gestione degli ordini}
+	\label{fig:OrdiniVend}
+\end{figure}
+\newpage
+Nella schermata verranno visualizzati tutti gli ordini a carico del venditore, sarà possibile effettuare delle ricerche sugli stessi per visualizzare solo gli ordini non evasi, solo gli ordini effettuati da un determinato cliente oppure gli ordini effettuati dai clienti entro una data di inizio e una data di fine fissate.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{Immagini/Venditore/Orders Customer Filter.png}
+	\caption{Schermata filtro ordine per cliente}
+	\label{fig:OrdiniCliente}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{Immagini/Venditore/Orders Date Filter.png}
+	\caption{Schermata filtro ordine per data}
+	\label{fig:OrdiniDataVend}
 \end{figure}
 \subsection{Visualizzazione elenco prodotti}
 Il venditore può visualizzare tutti i suoi prodotti presenti nella piattaforma, impostando dei filtri per gestire la ricerca. In particolare può rispetto all'acquirente visualizzare i prodotti in evidenza selezionando l'\glo{icona} apposita.
@@ -58,7 +80,7 @@ Per procedere con l'eliminazione di un prodotto, l'utente, dopo aver aperto la s
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.25]{Immagini/Venditore/pdp.sellerdelete.png}
-	\caption{Pagina del prodotto con icona per l'eliminazione}
+	\caption{Schermata del prodotto con icona per l'eliminazione}
 	\label{fig:EliminaP}
 \end{figure}
 \begin{figure}[H]
@@ -68,11 +90,11 @@ Per procedere con l'eliminazione di un prodotto, l'utente, dopo aver aperto la s
 	\label{fig:EliminazioneProdotto}
 \end{figure}
 \subsubsection{Modifica prodotto}
-Per procedere con la modifica di un prodotto, l'utente, dopo aver aperto la schermata di visualizzazione del prodotto che desidera eliminare, deve cliccare sull'icona del cestino e verrà reindirizzato alla pagina di modifica del prodotto.
+Per procedere con la modifica di un prodotto, l'utente, dopo aver aperto la schermata di visualizzazione del prodotto che desidera eliminare, deve cliccare sull'icona del cestino e verrà reindirizzato alla schermata di modifica del prodotto.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.25]{Immagini/Venditore/pdp.sellermodify.png}
-	\caption{Pagina del prodotto con icona per la modifica}
+	\caption{Schermata del prodotto con icona per la modifica}
 	\label{fig:ModificaP}
 \end{figure}
 \begin{figure}[H]
@@ -80,4 +102,28 @@ Per procedere con la modifica di un prodotto, l'utente, dopo aver aperto la sche
 	\includegraphics[scale=0.25]{Immagini/Venditore/pdp-edit.seller.png}
 	\caption{Schermata di modifica prodotto}
 	\label{fig:ModificaProdotto}
+\end{figure}
+\subsection{Gestione delle categorie}\label{categorie}
+All'interno di \NomeProgetto\ il venditore può gestire le categorie alle quali assegnare i prodotti, da qualunque punto all'interno della piattaforma può passare alla schermata per la gestione delle categorie cliccando il bottone apposito.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{Immagini/Venditore/categories.png}
+	\caption{Schermata di gestione categorie}
+	\label{fig:GestioneCategorie}
+\end{figure}
+\subsection{Aggiunta nuova categoria}
+Dalla schermata di gestione delle categorie è possibile per il venditore aggiungere una nuova categoria.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.35]{Immagini/Venditore/Add Category.png}
+	\caption{Schermata di aggiunta categoria}
+	\label{fig:AggiuntaCategoria}
+\end{figure}
+\subsection{Modifica di una categoria}
+Oltre all'aggiunta ed all'eliminazione di una categoria, il venditore può modificarne una già esistente inserita precedentemente; le modifiche si rifletteranno nell'intera piattaforma.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.35]{Immagini/Venditore/edit Category.png}
+	\caption{Schermata di modifica categoria}
+	\label{fig:ModificaCategoria}
 \end{figure}
