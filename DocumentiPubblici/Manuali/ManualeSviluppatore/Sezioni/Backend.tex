@@ -66,7 +66,7 @@ Il microservizio \textbf{products-categories} fornisce le principali funzionalit
 	\item Modifica delle specifiche di un prodotto;
 	\item Inserimento di una nuova categoria per la classificazione dei vari prodotti in vendita.
 \end{itemize}\noindent
-Oltre all'utilizzo come per i successivi microservizi di AWS API Gateway, AWS Lambda e AWS DynamoDB, viene impiegato Amazon S3 bucket per gestire le immagini associate ad un prodotto e Amazon SNS e SQS permettono il controllo della modifica/eliminazione di un prodotto assicurando la corretta validità della quantità disponibile dello stesso.
+Oltre all'utilizzo come per i successivi microservizi di AWS API Gateway, AWS Lambda e AWS DynamoDB, viene impiegato Amazon S3 bucket per gestire le immagini associate ad un prodotto,  Amazon SNS che permette di notificare altri microservizi della modifica ed eliminazione di un prodotto e Amazon SQS che permette di gestire gli eventi in ingresso modificando la quantità disponibile dei prodotti nel caso di acquisto.
 
 \subsubsection{Payments-orders service}
 \begin{figure}[H]
@@ -75,7 +75,7 @@ Oltre all'utilizzo come per i successivi microservizi di AWS API Gateway, AWS La
 	\caption{Payments-orders service}
 	\label{fig:Payment-orders}
 \end{figure}
-Il microservizio \textbf{payments-orders} fornisce le principali funzionalità per gestire il pagamento di un ordine e garantire la storicizzazione degli ordini effettuati. Anche in questo microservizio viene utilizzato Amazon SNS per assicurare il corretto risultato del pagamento, gestito dal servizio esterno Stripe.
+Il microservizio \textbf{payments-orders} fornisce le principali funzionalità per gestire il pagamento di un ordine e garantire la storicizzazione degli ordini effettuati. Anche in questo microservizio viene utilizzato Amazon SNS per notificare l'avvenuto pagamento il quale è gestito dal servizio esterno Stripe.
 
 \subsubsection{Carts service}
 \begin{figure}[H]
@@ -84,7 +84,13 @@ Il microservizio \textbf{payments-orders} fornisce le principali funzionalità p
 	\caption{Carts service}
 	\label{fig:Cart}
 \end{figure}
-Il microservizio \textbf{carts} fornisce le principali funzionalità per gestire il carrello dell'utente assicurando che eventuali modifiche fatte sui suoi prodotti esternamente, ad esempio il venditore modifica il prezzo di un prodotto, si riflettano anche all'interno dei carrelli degli utenti attraverso l'utilizzo di Amazon SNS e SQS.
+Il microservizio \textbf{carts} fornisce le principali funzionalità per gestire il carrello dell'utente ovvero:
+\begin{itemize}
+	\item Modificare la quantità di un prodotto;
+	\item Aggiungere un prodotto;
+	\item Visualizzare l'intero carrello.
+\end{itemize}
+Il micorservizio garantisce che il carrello sia sempre aggiornato su tutti i suoi dispositivi assicurando che eventuali modifiche fatte sui suoi prodotti esternamente, ad esempio il venditore modifica il prezzo di un prodotto, si riflettano anche all'interno dei carrelli degli utenti attraverso l'utilizzo di Amazon SNS e SQS.
 
 \subsubsection{Addresses service}
 \begin{figure}[H]
@@ -93,7 +99,7 @@ Il microservizio \textbf{carts} fornisce le principali funzionalità per gestire
 	\caption{Addresses service}
 	\label{fig:Adresses}
 \end{figure}
-Il microservizio \textbf{addresses} fornisce le principali funzionalità per gestire gli indirizzi di spedizione di un utente come l'aggiunta o la rimozione di un indirizzo. In questo microservizio entrano in gioco solo AWS API Gateway, AWS Lambda e AWS DynamoDB.
+Il microservizio \textbf{addresses} fornisce le principali funzionalità per gestire gli indirizzi di spedizione di un utente come l'aggiunta, la modifica o la rimozione di un indirizzo. In questo microservizio vengono impiegati solo AWS API Gateway, AWS Lambda e AWS DynamoDB.
 
 \subsubsection{Users service}
 \begin{figure}[H]

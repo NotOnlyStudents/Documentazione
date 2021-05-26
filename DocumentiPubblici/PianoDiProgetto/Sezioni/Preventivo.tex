@@ -1,6 +1,6 @@
 \section{Preventivo}
 \label{preventivo}
-Per ogni periodo individuato nella sezione \S\ref{pianificazione} relativa alla pianificazione, si espone un prospetto orario dove sono raccolte le ore che ciascun membro deve svolgere per ruolo.\\Viene successivamente mostrato un prospetto economico che riassume i costi sostenuti per ciascun ruolo.\\
+Per ogni periodo individuato in \S\ref{pianificazione} relativa alla pianificazione, si espone un prospetto orario dove sono raccolte le ore che ciascun membro deve svolgere per ruolo.\\Viene successivamente mostrato un prospetto economico che riassume i costi sostenuti per ciascun ruolo.\\
 Per agevolare la lettura delle tabelle, se un membro del gruppo non ha ricoperto un certo ruolo verrà inserito il simbolo \textbf{-} per indicarne l'assenza.\\Si è poi pensato di utilizzare le seguenti sigle per identificare i ruoli:
 \begin{itemize}
 \item \textbf{Re:} {\Responsabile};
@@ -177,7 +177,7 @@ Il seguente grafico a torta riassume i dati ottenuti:
 \end{figure}
 
 \subsubsection{Specifica dei prospetti}
-Per un maggiore controllo sul periodo di progettazione architetturale, vengono di seguito riportati i prospetti orari ed economici suddivisi per le attività individuate nella sezione \S\ref{progettazione_architetturale}.
+Per un maggiore controllo sul periodo di progettazione architetturale, vengono di seguito riportati i prospetti orari ed economici suddivisi per le attività individuate in \S\ref{progettazione_architetturale}.
 \paragraph{Incremento e verifica documenti}
 \paragraph*{Prospetto orario}
 La distribuzione oraria è la seguente:
@@ -350,7 +350,7 @@ Il seguente grafico a torta riassume i dati ottenuti:
 \end{figure}
 \newpage
 \subsubsection{Specifica dei prospetti}\label{SpecificaPDettaglio}
-Per un maggiore controllo sul periodo di progettazione di dettaglio e codifica, vengono di seguito riportati i prospetti orari ed economici suddivisi per le attività individuate nella sezione \S\ref{IncrementiPDettaglio}. Per ogni incremento si riporta inoltre una tabella per tracciare le ore d'impegno previsto per gli obiettivi da raggiungere durante il periodo periodo.
+Per un maggiore controllo sul periodo di progettazione di dettaglio e codifica, vengono di seguito riportati i prospetti orari ed economici suddivisi per le attività individuate in \S\ref{IncrementiPDettaglio}. Per ogni incremento si riporta inoltre una tabella per tracciare le ore d'impegno previsto per gli obiettivi da raggiungere durante il periodo periodo.
 \paragraph{Incremento 1}
 \paragraph*{Prospetto orario}
 La distribuzione oraria è la seguente:
@@ -620,7 +620,15 @@ Il seguente grafico a torta riassume i dati ottenuti:
 \end{figure}
 \subsubsection{Rimodulazione del volume d'impegno}\label{RimodulazioneOre}
 A causa dei ritardi avuti durante i precedenti periodi, per poter rispettare il preventivo concordato durante la \glo{RR}, si è dovuto procedere ad una rimodulazione dell'impegno orario da impiegare.
-Si è ritenuto ragionevole modificare le ore di lavoro previste per questo periodo ritenendo che le ore pianificate per il periodo di progettazione di dettaglio e collaudo individuate siano necessarie per poter creare un prodotto solido che durante il periodo di validazione verrà solo raffinato. Di seguito si riportano i prospetti, orario ed economico, considerati esclusivamente in relazione con i valori del consutivo ottenuti nei precedenti periodi.
+Si è ritenuto ragionevole modificare le ore di lavoro previste per questo periodo ritenendo che le ore pianificate per il periodo di progettazione di dettaglio e collaudo individuate siano necessarie per poter creare un prodotto solido che durante il periodo di validazione verrà solo raffinato. A partire dai risultati ottenuti in precedenza, si è valutato come procedere per ridurre la spesa del periodo mantenendo comunque uguale il carico di lavoro per ogni componente. Si riportano le motivazioni sulla variazione del carico di lavoro per ogni ruolo:
+\begin{itemize}
+	\item \textbf{Programmatore -8 ore}: considerando quanto è stato realizzando durante il periodo precedente, si è ritenuto di ridurre maggiormente il numero di ore per questo ruolo rispetto agli altri dato che la maggior parte dei requisiti e dei test sono già stati implementati;
+	\item \textbf{Amministratore -4 ore}: le ore previste per il ruolo possono essere ridotte dato che l'uso degli strumenti e il way of working è ormai consolidato;
+	\item \textbf{Responsabile -3 ore}: come per il precedente ruolo, si è ritenuto di poter ridurre le ore di lavoro previste per il questo ruolo dato che il way of working è ormai consolidato, il gruppo conosce come risolvere problemi e dispute interne e i rischi che possono presentarsi sono conosciuti;
+	\item \textbf{Progettista -1 ora}: per questo ruolo la quantità di lavoro prevista è stata ridotta di una sola ora in quanto nonostante tutte le tecnologie siano state utilizzate e il loro uso sia consolidato, le ore preventivate sono state ritenute adeguate al periodo;
+	\item \textbf{Verificatore +2 ore}: essendo questo l'ultimo periodo del progetto, si è ritenuto di aumentare le ore previste per questo ruolo in quanto è di fondamentale importanza che tutto ciò che è stato realizzato e che sarà consegnato sia stato controllato.
+\end{itemize}
+Di seguito si riportano i prospetti, orario ed economico. 
 \subsubsection{Prospetto orario}
 In questo periodo la distribuzione oraria è la seguente:
 \begin{table}[H]
@@ -656,6 +664,113 @@ Il costo per ogni ruolo è il seguente:
 			\textbf{Totale} & \textbf{126} & \textbf{2216} \\ \hline
 		\end{tabular}
 		\caption{Prospetto dei costi per ruoli nel periodo di validazione e collaudo}
+	\end{center}
+\end{table}
+\subsubsection{Specifica dei prospetti}\label{SpecificaValidazione}
+Per un maggiore controllo sul periodo di validazione e collaudo, vengono di seguito riportati i prospetti orari ed economici suddivisi per le attività individuate in \S\ref{IncrementiValidazione}. Per ogni incremento si riporta inoltre una tabella per tracciare le ore d'impegno previsto per gli obiettivi da raggiungere durante il periodo periodo.
+\paragraph{Incremento 1}
+\paragraph*{Prospetto orario}
+La distribuzione oraria è la seguente:
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{ |c c c c c c c c| }
+			\rowcolor{darkblue} 
+			\textcolor{white}{\textbf{Nominativo}} & \textcolor{white}{\textbf{Re}} & \textcolor{white}{\textbf{Am}} & \textcolor{white}{\textbf{An}} & \textcolor{white}{\textbf{Pt}} & \textcolor{white}{\textbf{Pr}} & \textcolor{white}{\textbf{Ve}} & \textcolor{white}{\textbf{Ore Complessive}} \\ \hline
+			\BL 	& -  	& 4  	& - 	& 4 	& - 	& 5 	& 13 \\ \hline
+			\FF 	& 3  	& 3  	& - 	& - 	& 3 	& 4  	& 13 \\ \hline
+			\MM 	& 3 	& - 	& - 	& - 	& 4 	& 6 	& 13 \\ \hline
+			\PC 	& 2 	& -  	& - 	& - 	& 4 	& 7 	& 13 \\ \hline
+			\TG 	& -  	& 4 	& - 	& - 	& 5 	& 4 	& 13 \\ \hline
+			\TL 	& -  	& - 	& - 	& 4 	& 4 	& 5 	& 13 \\ \hline
+			\VD 	& 3  	& -  	& - 	& - 	& 3 	& 7  	& 13 \\ \hline
+			\textbf{Ore totali} & \textbf{11} & \textbf{11} & \textbf{-} & \textbf{8} & \textbf{23} & \textbf{38} & \textbf{91} \\ \hline
+		\end{tabular}
+		\caption{Distribuzione delle ore nel periodo di validazione e collaudo}
+	\end{center}
+\end{table}
+\paragraph*{Prospetto economico}
+Il costo per ogni ruolo è il seguente:
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{ |c c c| }
+			\rowcolor{darkblue} 
+			\textcolor{white}{\textbf{Ruolo}} & \textcolor{white}{\textbf{Ore}} & \textcolor{white}{\textbf{Costo in €}}\\ \hline
+			{\Responsabile} 			& 11 	& 330 \\ \hline
+			{\Amministratore}		 	& 11 	& 220 \\ \hline
+			\textit{Analista} 			& - 	& - \\ \hline
+			\textit{Progettista} 		& 8 	& 176 \\ \hline
+			\textit{Programmatore}  	& 23 	& 345 \\ \hline
+			\textit{Verificatore} 		& 38 	& 570 \\ \hline
+			\textbf{Totale} & \textbf{91} & \textbf{1641} \\ \hline
+		\end{tabular}
+		\caption{Prospetto dei costi per ruoli nel periodo di validazione e collaudo}
+	\end{center}
+\end{table}
+\paragraph*{Tracciamento obiettivi-ore}
+Le ore da impiegare previste per ogni obiettivo sono le seguenti:
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{ |c c| }
+			\rowcolor{darkblue} 
+			\textcolor{white}{\textbf{Obiettivo}}	& \textcolor{white}{\textbf{Ore per il raggiungimento}} \\ \hline
+			{Sviluppo ultimi requisiti domini precedenti} 	& 17 	\\ \hline
+			{Sviluppo requisiti dominio Ordini} 	& 54 	\\ \hline
+			{Aggiornamento documentazione} 			&  20	\\ \hline
+			\textbf{Totale} 						& \textbf{91}  \\ \hline
+		\end{tabular}
+		\caption{Tracciamento obiettivo-ore da impiegare Incremento 1}
+	\end{center}
+\end{table}
+\paragraph{Incremento 2}
+\paragraph*{Prospetto orario}
+La distribuzione oraria è la seguente:
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{ |c c c c c c c c| }
+			\rowcolor{darkblue} 
+			\textcolor{white}{\textbf{Nominativo}} & \textcolor{white}{\textbf{Re}} & \textcolor{white}{\textbf{Am}} & \textcolor{white}{\textbf{An}} & \textcolor{white}{\textbf{Pt}} & \textcolor{white}{\textbf{Pr}} & \textcolor{white}{\textbf{Ve}} & \textcolor{white}{\textbf{Ore Complessive}} \\ \hline
+			\BL 	& -  	& -  	& - 	& - 	& - 	& 5 	& 5 \\ \hline
+			\FF 	& -  	& 1  	& - 	& - 	& 1 	& 3  	& 5 \\ \hline
+			\MM 	& 1 	& - 	& - 	& - 	& - 	& 4  	& 5 \\ \hline
+			\PC 	& 2 	& -  	& - 	& - 	& 2 	& 1 	& 5 \\ \hline
+			\TG 	& -  	& - 	& - 	& - 	& 2 	& 3 	& 5 \\ \hline
+			\TL 	& -  	& - 	& - 	& - 	& - 	& 5 	& 5 \\ \hline
+			\VD 	& -  	& -  	& - 	& - 	& - 	& 5  	& 5 \\ \hline
+			\textbf{Ore totali} & \textbf{3} & \textbf{1} & \textbf{-} & \textbf{-} & \textbf{5} & \textbf{26} & \textbf{35} \\ \hline
+		\end{tabular}
+		\caption{Distribuzione delle ore nel periodo di validazione e collaudo}
+	\end{center}
+\end{table}
+\paragraph*{Prospetto economico}
+Il costo per ogni ruolo è il seguente:
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{ |c c c| }
+			\rowcolor{darkblue} 
+			\textcolor{white}{\textbf{Ruolo}} & \textcolor{white}{\textbf{Ore}} & \textcolor{white}{\textbf{Costo in €}}\\ \hline
+			{\Responsabile} 			& 3 	& 90 \\ \hline
+			{\Amministratore}		 	& 1 	& 20 \\ \hline
+			\textit{Analista} 			& - 	& - \\ \hline
+			\textit{Progettista} 		& -	& - \\ \hline
+			\textit{Programmatore}  	& 5 	& 75 \\ \hline
+			\textit{Verificatore} 		& 26 	& 390 \\ \hline
+			\textbf{Totale} & \textbf{35} & \textbf{575} \\ \hline
+		\end{tabular}
+		\caption{Prospetto dei costi per ruoli nel periodo di validazione e collaudo}
+	\end{center}
+\end{table}
+\paragraph*{Tracciamento obiettivi-ore}
+Le ore da impiegare previste per ogni obiettivo sono le seguenti:
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{ |c c| }
+			\rowcolor{darkblue} 
+			\textcolor{white}{\textbf{Obiettivo}}	& \textcolor{white}{\textbf{Ore per il raggiungimento}} \\ \hline
+			{Test e controlli finali} 	& 27	\\ \hline
+			{Correzione documentazione} 			&  8	\\ \hline
+			\textbf{Totale} 						& \textbf{35}  \\ \hline
+		\end{tabular}
+		\caption{Tracciamento obiettivo-ore da impiegare Incremento 1}
 	\end{center}
 \end{table}
 \newpage
@@ -718,7 +833,7 @@ Il seguente grafico a torta riassume i dati ottenuti:
 
 \subsubsection{Ore rendicontate}
 \myparagraph{Suddivisione del lavoro}
-Nella seguente tabella sono riassunte le ore rendicontate:
+Nella seguente tabella sono riassunte le ore rendicontate prima della rimodulazione oraria effettuata per il periodo di validazione e collaudo indicata in \S\ref{RipianificazioneValidazione}. Le ore rendicontate con la rimodulazione del periodo di validazione è pari a 98 per ciascun componente, si ritiene comunque opportuno presentare la suddivisione oraria stabilita dal preventivo iniziale in quanto la rimodulazione deve essere considerata solo in relazione ai risultati del consuntivo.
 \begin{table}[H]
 	\begin{center}
 		\begin{tabular}{ |c c c c c c c c| }
@@ -730,8 +845,8 @@ Nella seguente tabella sono riassunte le ore rendicontate:
 		\PC 	& 10 	& 4  	& 10	& 11 	& 29	& 36 	& 100 \\ \hline
 		\TG 	& 5  	& 11 	& 10 	& 19 	& 28 	& 27 	& 100 \\ \hline
 		\TL 	& 5  	& 6 	& - 	& 19 	& 32 	& 38 	& 100 \\ \hline
-		\VD 	& 18  	& 12  	& -		& 24 	& 24 	& 24 	& 100 \\ \hline
-		\textbf{Ore totali} & \textbf{53} & \textbf{54} & \textbf{38} & \textbf{174} & \textbf{191} & \textbf{190} & \textbf{700} \\ \hline
+		\VD 	& 18  	& 12  	& -		& 24 	& 24 	& 22 	& 100 \\ \hline
+		\textbf{Ore totali} & \textbf{53} & \textbf{54} & \textbf{38} & \textbf{174} & \textbf{193} & \textbf{188} & \textbf{700} \\ \hline
 	\end{tabular}
 	\caption{Distribuzione delle ore rendicontate}
 	\end{center}
@@ -755,8 +870,8 @@ Il costo totale rendicontato per ogni ruolo è il seguente:
 		{\Amministratore}			& 54 	& 1080 \\ \hline
 		\textit{Analista} 			& 38 	& 950 \\ \hline
 		\textit{Progettista} 		& 174 	& 3828 \\ \hline
-		\textit{Programmatore} 		& 191 	& 2865 \\ \hline
-		\textit{Verificatore} 		& 190 	& 2850 \\ \hline
+		\textit{Programmatore} 		& 193 	& 2895 \\ \hline
+		\textit{Verificatore} 		& 188 	& 2820 \\ \hline
 		\textbf{Totale} & \textbf{700} & \textbf{13163} \\ \hline
 		\end{tabular}
 	\caption{Prospetto delle ore rendicontate}
